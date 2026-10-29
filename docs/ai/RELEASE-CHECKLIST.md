@@ -27,6 +27,8 @@ Do not label an asset ready merely because its JSON parses. Structural validatio
 - [ ] Run `python3 tools/validate_visual_pack.py OUTPUT.zip` and fix any errors.
 - [ ] Run `python3 tools/qualify_asset_zip.py OUTPUT.zip --out QA-DIR` and inspect `contact-*.png` and the receipt.
 - [ ] Write an acceptance JSON with assertions derived from the creator request; execute `python3 tools/ai_acceptance.py OUTPUT.zip --acceptance MY-ACCEPTANCE.json --out QA-DIR` and inspect its output. [Robot](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/character.json) and [potion](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/potion.json) are examples. Never print PASS for unexecuted tests.
+- [ ] Run **rendered-state QA** against the final ZIP using [the visual scenario format](../../tests/visual-scenarios.json) and shared Chromium runner. Cover min/mid/max, distinct states, overlays and loop frames where relevant, and assert actual pixel changes rather than just a valid manifest. See [visual QA guide](VISUAL-RENDER-QA.md).
+- [ ] Include the browser screenshots and test report. If browser testing cannot run, report **NOT RUN**, never PASS.
 - [ ] Re-import the final ZIP into the builder and check preset/state behavior and **actual visual response**, then export/reimport and compare at least one fixed-time preview.
 - [ ] Hand off the ZIP, a brief contents description and a truthful QA receipt.
 

@@ -1,57 +1,42 @@
 {
-  "version": "0.12.0",
-  "release": "Meter visual fix + AI production pipelines",
-  "repository_base_head": "63459b8e02e1ab3830e72d6f3f278a2831986d93",
+  "version": "0.13.0",
+  "release": "Rendered-state visual QA and AI release gate",
+  "repository_base_head": "4a553b2add4afa406e68c66b61dab7f61fb0ebf0",
   "tests": {
     "python_unittest": {
       "result": "PASS",
-      "count": 33
+      "count": 38
     },
-    "javascript_checks": {
-      "result": "PASS",
-      "suites": [
-        "browser-search",
-        "builder-contract",
-        "timeline-core",
-        "collections-interaction",
-        "slots-presets",
-        "visual-core"
-      ]
+    "run_all": {
+      "result": "PASS"
     },
-    "icon_validation": {
+    "existing_icon_validation": {
       "result": "PASS",
       "icons": 2073
     },
-    "hud_acceptance": {
+    "javascript_contracts": {
       "result": "PASS",
-      "checks": 8
+      "suites": 6
     },
-    "hud_chromium_pixel_test": {
+    "chromium_visual_matrix": {
       "result": "PASS",
-      "input_to_green_pixels": {
-        "0": 0,
-        "50": 2462,
-        "100": 5276
-      }
+      "scenarios": 5,
+      "assertions": 14,
+      "evidence": "tests/browser_visual_matrix.py generates PNGs and report.json"
     },
-    "full_RUN_ALL": {
-      "result": "NOT COMPLETED",
-      "detail": "Execution timeout in this environment in late acceptance phase; unit/JavaScript/individual HUD and character/potion acceptance checks completed separately."
+    "github_pages_deployment": {
+      "result": "NOT YET RUN",
+      "description": "New CI visual QA job will execute on first published push; successful local Chromium QA does not establish hosted CI result."
     },
-    "hosted_pages_deployment": {
-      "result": "NOT RUN",
-      "detail": "Release not pushed to GitHub."
-    },
-    "visual_semantic_review": {
-      "result": "NOT VERIFIED AUTOMATICALLY"
+    "artistic_semantic_review": {
+      "result": "NOT VERIFIED BY AUTOMATION"
     }
   },
   "changes": [
-    "UI renderer normalize numeric inputs using declared min/max",
-    "Interactive HUD frame-fill-thumb layer order",
-    "Shared visual-core.js with pure unit normalization",
-    "Typed GUI acceptance assertions incl layer order, event/output source",
-    "Real Chromium 0/50/100 pixel regression tool",
-    "Category-specific agent production pipelines and release gate"
+    "Generic Chromium scenario runner with actual RGBA image comparisons, click/input/preset/state interaction",
+    "Five JSON scenario fixtures and captured pixel proof for HUD, robot, icon, glass/rain and potions",
+    "Negative and schema tests for visual test format",
+    "AI release guide and checklist, static-site link rewriting for QA spec",
+    "GitHub Actions visual QA gate, screenshots retained as uploaded artifacts, original icons untouched"
   ]
 }

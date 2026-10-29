@@ -24,3 +24,5 @@ Host application owns actual pointer/keyboard/game input. The manifest must not 
 10. Export the final ZIP; reopen it and verify behavior, geometry, licensing and dependencies before claiming READY.
 
 Reference test: `examples/acceptance/interactive-hud.json` (request-specific assertions) and `tests/visual-core.cjs` (normalization + layer order regression). These support but do not replace browser visual QA.
+
+For a machine-verifiable preview, extend [visual scenarios](../../../tests/visual-scenarios.json) with input samples and pixel/output assertions. Run `python3 tests/browser_visual_matrix.py --spec tests/visual-scenarios.json --out QA-DIR` after building the site. Include min/mid/max; check changing fill and output value.

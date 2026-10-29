@@ -27,3 +27,5 @@ Contract source: [`examples/character-animations/manifest.json`](https://github.
 13. Preserve contact sheets, full motion previews and failure/correction evidence.
 14. Verify provenance, licensing, texture dependencies and ZIP integrity.
 15. Release only with passing gates; else mark **NEEDS FIXES** and repeat affected validation.
+
+The shared [browser visual matrix](../../../tests/visual-scenarios.json) captures real icon/character frames, state changes and exact loop repeats. Add cases for all requested states and motion; inspect adjacent-frame and seam quality visually as well as with automated differences.

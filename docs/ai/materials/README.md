@@ -19,3 +19,5 @@ The same approach works for glass, water, smoke, weather, fire, backgrounds, gam
 4. Inspect each source region and transitions/loops (including the seam) at intended scale.
 5. Validate references, no unintended occlusion, frame timing and compatibility contracts.
 6. Export, reimport and compare fixed-state preview pixels; record QA evidence.
+
+For layered visual effects, add [visual render scenarios](../../../tests/visual-scenarios.json) covering base alone, each overlay independently, combined states and successive frames. A valid manifest alone is insufficient.

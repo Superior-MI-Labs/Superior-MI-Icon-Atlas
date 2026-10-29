@@ -4,6 +4,22 @@
 
 [Browse the icon gallery](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Manifest index](manifest.json) · [Architecture](docs/ARCHITECTURE.md) · [Artwork policy](docs/ARTWORK-POLICY.md)
 
+## v0.13.0 — Rendered-state QA matrix (AI release gate)
+
+- **Actual Chromium canvas testing:** five scenarios verify interactive HUD 0/50/100 and reported outputs, robot idle/walk/loop, animated icon frames/loop, independent glass damage/rain layers, and Health/Mana/Poison presets with animated mana.
+- **Reusable, no-code scenario specification:** `tests/visual-scenarios.json` defines asset ZIP, sampled inputs, state, preset and time plus explicit pixel/output assertions; `tests/browser_visual_matrix.py` renders the real builder and saves PNG evidence and `report.json`.
+- **Negative coverage:** tests reject false claims (e.g., declaring different pictures identical), malformed rules, missing sample references and invalid checks.
+- **AI QA workflow:** [short guide](docs/ai/VISUAL-RENDER-QA.md) and updated [release checklist](docs/ai/RELEASE-CHECKLIST.md) direct AI creators to run actual visual-state tests, not just parse manifests.
+- **GitHub Pages gate:** GitHub Actions installs Chromium via Playwright, runs the visual matrix before publication, and uploads screenshot evidence even if a test fails. Client-side builder remains local-first; all original icon IDs and images are unchanged.
+
+```bash
+bash RUN-ALL.sh                   # existing schema, texture, icon and JavaScript gates
+python3 tests/browser_visual_matrix.py --spec tests/visual-scenarios.json --out /tmp/visual-qa
+# The second command requires Playwright + Chromium. Install instructions: docs/ai/VISUAL-RENDER-QA.md.
+```
+
+**Interpretation:** Render-state PASS proves these requested pixel/state relationships for the tested fixtures. It does **not** certify visual quality, animation naturalness, source rights, or untested private ZIPs. Each AI-generated pack needs its own request-specific visual scenarios and human/AI visual review.
+
 ## v0.12.0 — GUI visibility fix + AI production pipelines
 
 - **Fixed interactive energy meter:** numeric range values are normalized for clip/position; a meter draws frame → fill → movable thumb, so changing 0/50/100 produces actual visual differences instead of a permanently empty or full bar.

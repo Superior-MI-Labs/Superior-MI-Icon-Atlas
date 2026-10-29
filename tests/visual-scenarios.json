@@ -1,0 +1,84 @@
+{
+  "schema": "smi-visual-scenarios/1",
+  "description": "Request-specific browser rendering gates. Every test uses actual builder Canvas pixels, not schema-only assertions.",
+  "cases": [
+    {
+      "id": "hud-meter-range",
+      "pack": "interactive-hud.zip",
+      "preview_name": "Interactive energy meter",
+      "samples": [
+        {"id":"empty", "inputs":{"value":0}},
+        {"id":"half", "inputs":{"value":50}},
+        {"id":"full", "inputs":{"value":100}}
+      ],
+      "assertions": [
+        {"type":"green_increases", "samples":["empty","half","full"], "min_step":500},
+        {"type":"output_equals", "sample":"half", "field":"value", "equals":50},
+        {"type":"different", "a":"empty", "b":"full", "min_changed_pixels":1000}
+      ]
+    },
+    {
+      "id": "character-states-and-walk",
+      "pack": "character-animations.zip",
+      "preview_name": "Robot animation states",
+      "samples": [
+        {"id":"idle", "state":"idle", "time_ms":0},
+        {"id":"walk-start", "state":"walk", "time_ms":0},
+        {"id":"walk-next", "state":"walk", "time_ms":140},
+        {"id":"walk-loop", "state":"walk", "time_ms":500}
+      ],
+      "assertions": [
+        {"type":"different", "a":"idle", "b":"walk-start", "min_changed_pixels":20},
+        {"type":"different", "a":"walk-start", "b":"walk-next", "min_changed_pixels":20},
+        {"type":"same", "a":"walk-start", "b":"walk-loop", "max_changed_pixels":0}
+      ]
+    },
+    {
+      "id":"animated-icon-frames",
+      "pack":"animated-icons.zip",
+      "preview_name":"Looping pulse",
+      "samples":[
+        {"id":"frame-a", "time_ms":0},
+        {"id":"frame-b", "time_ms":200},
+        {"id":"repeat", "time_ms":500}
+      ],
+      "assertions":[
+        {"type":"different", "a":"frame-a", "b":"frame-b", "min_changed_pixels":30},
+        {"type":"same", "a":"frame-a", "b":"repeat", "max_changed_pixels":0}
+      ]
+    },
+    {
+      "id":"glass-layer-controls",
+      "pack":"starter-pack.zip",
+      "preview_name":"Reactive glass and rain",
+      "asset":"demo.glass.panel",
+      "samples":[
+        {"id":"clear", "inputs":{"damage":"intact", "raining":false},"time_ms":0},
+        {"id":"cracked", "inputs":{"damage":"shattered", "raining":false},"time_ms":0},
+        {"id":"wet-a", "inputs":{"damage":"shattered", "raining":true},"time_ms":0},
+        {"id":"wet-b", "inputs":{"damage":"shattered", "raining":true},"time_ms":270}
+      ],
+      "assertions":[
+        {"type":"different", "a":"clear", "b":"cracked", "min_changed_pixels":30},
+        {"type":"different", "a":"cracked", "b":"wet-a", "min_changed_pixels":30},
+        {"type":"different", "a":"wet-a", "b":"wet-b", "min_changed_pixels":30}
+      ]
+    },
+    {
+      "id":"potion-presets",
+      "pack":"potions-collection.zip",
+      "preview_name":"Potion bottle with compatible fluids",
+      "samples":[
+        {"id":"health", "preset":"Health", "time_ms":0},
+        {"id":"mana-a", "preset":"Mana", "time_ms":0},
+        {"id":"mana-b", "preset":"Mana", "time_ms":200},
+        {"id":"poison", "preset":"Poison", "time_ms":0}
+      ],
+      "assertions":[
+        {"type":"different", "a":"health", "b":"mana-a", "min_changed_pixels":30},
+        {"type":"different", "a":"mana-a", "b":"mana-b", "min_changed_pixels":10},
+        {"type":"different", "a":"mana-a", "b":"poison", "min_changed_pixels":30}
+      ]
+    }
+  ]
+}

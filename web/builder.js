@@ -337,7 +337,7 @@
     $('asset-count').textContent=results.length+' shown / '+library.size.toLocaleString();
     const list=$('asset-list');list.replaceChildren();
     for(const a of results){
-      const btn=document.createElement('button');btn.type='button';btn.className='asset-entry';btn.setAttribute('aria-current',String(a.id===ui.selected));
+      const btn=document.createElement('button');btn.type='button';btn.className='asset-entry';btn.dataset.assetId=a.id;btn.setAttribute('aria-current',String(a.id===ui.selected));
       if(a.kind==='region'){const thumb=document.createElement('canvas');thumb.width=40;thumb.height=40;thumb.setAttribute('aria-hidden','true');thumb.style.cssText='flex:none;width:40px;height:40px;background:#243647;border-radius:5px';btn.append(thumb);imageFor(a.texture).then(im=>{const r=a.rect_px;const c=thumb.getContext('2d'),scale=Math.min(40/r[2],40/r[3]);c.clearRect(0,0,40,40);c.drawImage(im,...r,(40-r[2]*scale)/2,(40-r[3]*scale)/2,r[2]*scale,r[3]*scale);}).catch(()=>{});}
       const label=document.createElement('span');label.className='item-label';const strong=document.createElement('strong');strong.textContent=metaName(a);const small=document.createElement('small');small.textContent=a.kind+' · '+(a.source||'pack');label.append(strong,small);btn.append(label);
       btn.addEventListener('click',()=>{selectAsset(a.id);refreshList();renderControlPanel();});list.append(btn);

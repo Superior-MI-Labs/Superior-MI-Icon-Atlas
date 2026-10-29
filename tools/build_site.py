@@ -36,7 +36,14 @@ def build(dest:Path|None=None):
         rel=guide.relative_to(ROOT/'docs'/'ai')
         target=dest/'ai'/rel
         target.parent.mkdir(parents=True,exist_ok=True)
-        shutil.copy2(guide,target)
+        # Source docs link to repo tests; hosted docs link to bundled QA examples.
+        # Rewrite derived docs only, never modify the authored source links.
+        content=guide.read_text(encoding='utf-8')
+        source_ref=('../../../tests/visual-scenarios.json' if len(rel.parts)>1 else '../../tests/visual-scenarios.json')
+        hosted_ref=('../../qa/visual-scenarios.json' if len(rel.parts)>1 else '../qa/visual-scenarios.json')
+        target.write_text(content.replace(source_ref,hosted_ref),encoding='utf-8')
+    (dest/'qa').mkdir(exist_ok=True)
+    shutil.copy2(ROOT/'tests'/'visual-scenarios.json',dest/'qa'/'visual-scenarios.json')
     (dest/'templates').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'web'/'templates'/'authoring-grids.zip',dest/'templates'/'authoring-grids.zip')
     (dest/'demo').mkdir(exist_ok=True)

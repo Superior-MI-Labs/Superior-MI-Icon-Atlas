@@ -23,3 +23,5 @@ python3 tools/ai_acceptance.py YOUR-PACK.zip --acceptance YOUR-ACCEPTANCE.json -
 **Resources:** [Examples by task](INDEX.md) · [Manifest contract](FORMAT-API.md) · [Final checklist](RELEASE-CHECKLIST.md). Keep the creator's actual request primary. Do not consume context reading irrelevant recipes.
 
 **Interactive asset release gate:** verify actual visible state changes (e.g. 0/50/100) and not only output text; see the GUI recipe and acceptance example.
+
+Before delivery, also run the [rendered-state QA guide](VISUAL-RENDER-QA.md) if your asset has animation, layers, states or user-controlled appearance. If Chromium cannot render, disclose NOT RUN; structural checks cannot replace it.
