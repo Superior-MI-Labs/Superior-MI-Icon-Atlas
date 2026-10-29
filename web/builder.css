@@ -18,3 +18,23 @@
 .keyframe-dot{position:absolute;top:2px;transform:translateX(-50%);background:#a9d4ff;border:1px solid #0e2438;border-radius:3px;width:8px;height:8px}
 .layer-entry.selected{border-color:#a7c6ee;box-shadow:inset 0 0 0 1px #587fb3}
 .layer-entry .select-layer{padding:4px 8px;text-align:left;max-width:100%}
+
+/* AI-first collection shelf. Existing timeline and manual composition stay available below. */
+.bag-shelf{border:1px solid var(--border);border-radius:14px;padding:17px;margin:16px 0;background:var(--surface);display:grid;gap:12px}
+.bag-shelf-head,.bag-shelf-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.bag-shelf-head h2{margin:0;font-size:21px}.bag-shelf-head h2 span{font-size:12px;font-weight:400;margin-left:8px}
+.bag-persist{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.bag-drop{border:2px dashed #566b83;border-radius:12px;padding:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:5px;background:#13253a;transition:background .12s,border-color .12s}
+.bag-drop strong{font-size:15px}.bag-drop span{font-size:12px;color:var(--muted)}.bag-drop.drag-active{background:#264466;border-color:#8ecaff}
+.bag-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.bag-card{border:1px solid #425772;border-radius:10px;padding:11px;display:grid;gap:5px;background:#16283b;min-width:0}
+.bag-card.is-open{border-color:#88bbef;background:#213953}
+.bag-card strong{font-size:13px;overflow-wrap:anywhere}.bag-card small{color:var(--muted);font-size:11px}.bag-buttons{display:flex;gap:5px;flex-wrap:wrap}.bag-buttons button{font-size:12px;padding:5px 8px}
+#bag-group{max-width:280px;min-width:170px;font-size:12px}.bag-shelf-foot{justify-content:flex-start}.bag-shelf-foot #bag-summary{margin-right:auto}
+@media(max-width:650px){.bag-shelf{padding:12px}.bag-drop{padding:14px}}
+
+/* Keep the AI-first preview simple; precision tools remain available on demand. */
+.advanced-panel {border:1px solid var(--border);border-radius:10px;margin-top:12px;padding:10px;background:rgba(6,15,27,.34)}
+.advanced-panel>summary {cursor:pointer;font-size:13px;font-weight:650;padding:4px;color:var(--accent)}
+.advanced-panel[open]>summary {margin-bottom:12px}
+#input-controls {margin:12px 0}

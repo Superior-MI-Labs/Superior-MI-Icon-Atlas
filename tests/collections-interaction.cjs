@@ -1,0 +1,31 @@
+'use strict';
+const assert=require('node:assert/strict');
+const C=require('../web/collection-core.js');
+const I=require('../web/interaction-core.js');
+function pack(n){return {schema:'smi-visual-pack/1',pack_id:'smi.demo.pack'+n,version:'1.0.0',license:'CC0-1.0',textures:{main:{path:'textures/sheet.png',width_px:96,height_px:96}},assets:[{id:'smi.demo.frame'+n,kind:'region',texture:'main',rect_px:[0,0,96,96],name:'Frame '+n}]};}
+const defs=Array.from({length:20},(_,i)=>({path:`packs/p${i}/manifest.json`,pack:pack(i)}));
+// Cross-manifest composite, full set of 20 sheets. Should not stop at 12.
+defs[19].pack.assets.push({id:'smi.demo.character',kind:'composition',name:'Multi-sheet character',size_px:[96,96],layers:[{id:'body',asset:'smi.demo.frame0'},{id:'accessory',asset:'smi.demo.frame19'}]});
+const index={schema:'smi-visual-collection/1',collection_id:'smi.demo.animations',name:'Character Animation Bag',version:'1.0.0',entry_asset:'smi.demo.character',packs:defs.map((d,i)=>({manifest:d.path,label:'Animation '+i,category:'character'}))};
+const {pack:resolved,bag}=C.resolveCollection(index,defs);
+assert.equal(bag.groups.length,20);assert.equal(bag.assetIds.length,21);assert.equal(bag.textureCount,20);assert.equal(bag.entry,'smi.demo.character');
+assert.equal(resolved.assets.find(a=>a.id==='smi.demo.frame0').texture,'p0_main');
+assert.equal(resolved.textures.p0_main.path,'packs/p0/textures/sheet.png');
+assert.deepEqual(resolved.assets.find(a=>a.id==='smi.demo.character').layers.map(l=>l.asset),['smi.demo.frame0','smi.demo.frame19']);
+assert.throws(()=>C.resolveCollection({...index,packs:index.packs.slice(1)},defs),/does not list all/);
+assert.throws(()=>C.resolveCollection(null,[...defs,{path:'packs/bad/manifest.json',pack:{...pack(0),pack_id:'other'}}]),/Duplicate or invalid asset ID/);
+assert.throws(()=>C.resolveCollection(null,[{path:'../bad.json',pack:pack(0)}]),/unsafe/);
+assert.throws(()=>C.resolveCollection(null,[{path:'a/manifest.json',pack:{...pack(0),assets:[{id:'smi.unknown.composition',kind:'composition',size_px:[96,96],layers:[{id:'x',asset:'smi.missing'}]}]}}]),/Unknown collection reference/);
+const toggle={id:'smi.demo.toggle',kind:'composition',size_px:[96,96],layers:[{id:'l',asset:'smi.demo.frame0'}],inputs:{enabled:{type:'boolean',default:false}},behavior:{role:'toggle',outputs:{checked:{from_input:'enabled'}},on:{activate:[{op:'toggle',input:'enabled'},{op:'emit',event:'changed'}]}}};
+assert.deepEqual(I.check(toggle),[]);
+const on=I.dispatch(toggle,{},'activate');assert.equal(on.outputs.checked,true);assert.deepEqual(on.events,[{name:'changed',values:{checked:true}}]);
+assert.equal(I.dispatch(toggle,on.values,'activate').outputs.checked,false);
+const slider={id:'smi.demo.slider',kind:'composition',inputs:{value:{type:'number',default:10,min:0,max:100}},behavior:{role:'slider',outputs:{value:{from_input:'value',unit:'percent'}},on:{set_value:[{op:'set',input:'value',source:'event.value'},{op:'emit',event:'value_changed'}]}}};
+assert.deepEqual(I.check(slider),[]);
+assert.equal(I.dispatch(slider,{},'set_value',{value:12}).outputs.value,12);
+assert.throws(()=>I.dispatch(slider,{},'set_value',{value:200}),/invalid/);
+assert.ok(I.check({...slider,behavior:{role:'slider',outputs:{nope:{from_input:'absent'}}}}).length);
+assert.ok(I.check({...slider,behavior:{on:{activate:[{op:'evil_script',source:'javascript:alert(1)'}]}}}).length);
+const actor={inputs:{animation:{type:'enum',default:'idle',values:['idle','attack','hurt']}},behavior:{role:'actor',outputs:{state:{from_input:'animation'}},on:{hit:[{op:'set',input:'animation',value:'hurt'},{op:'emit',event:'state_changed'}]}}};
+assert.equal(I.dispatch(actor,{},'hit').outputs.state,'hurt');
+console.log('Collections / interactions: PASS; 20 manifests, cross-sheet composition, typed toggle/slider/actor events');

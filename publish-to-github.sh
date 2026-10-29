@@ -4,8 +4,8 @@ set -Eeuo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REMOTE="${SMI_ATLAS_REMOTE:-https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas.git}"
 # Reviewed live main head at the beginning of this audit. Refuse to discard later edits.
-EXPECTED_HEAD="${SMI_EXPECTED_HEAD:-b1debc18a1a29d916879ef0f8eee1cc139842800}"
-LOG="$HOME/Downloads/visual-atlas-v0.7.0-publish.log"
+EXPECTED_HEAD="${SMI_EXPECTED_HEAD:-83b18f635d3bd9073f33f2d30d28d8be3dca065f}"
+LOG="$HOME/Downloads/visual-atlas-v0.10.0-publish.log"
 export GIT_PAGER=cat PAGER=cat
 mkdir -p "$(dirname "$LOG")"
 command -v git >/dev/null || { echo 'ERROR: git is required' >&2; exit 1; }
@@ -49,7 +49,7 @@ find "$TMP/repo" -type f -name '*.pyc' -delete
   git diff --cached --check
   if git diff --cached --quiet; then echo 'Already current; nothing to publish.';exit 0;fi
   git --no-pager diff --cached --stat
-  git -c user.name='Superior MI Labs' -c user.email='superior.mi.labs@gmail.com' commit -m 'feat: local-first Visual Atlas builder and portable asset pack workflow v0.7.0'
+  git -c user.name='Superior MI Labs' -c user.email='superior.mi.labs@gmail.com' commit -m 'feat: Visual Atlas v0.10 AI handoff, authoring grids, and per-region visual QA'
   git push origin main
 )
 echo 'Published. GitHub Pages workflow will deploy automatically from main.'

@@ -4,6 +4,51 @@
 
 [Browse the icon gallery](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Manifest index](manifest.json) · [Architecture](docs/ARCHITECTURE.md) · [Artwork policy](docs/ARTWORK-POLICY.md)
 
+## v0.10.0 — AI production kit, exact-grid starters and visual QA
+
+- **Short AI handoff:** [AI guide](web/ai-guide.html) links to [START-HERE](docs/ai/START-HERE.md), [pixel/animation QA](docs/ai/QA-CHECKLIST.md), [working templates](docs/ai/TEMPLATES.md) and [compact prompt examples](docs/ai/PROMPT-EXAMPLES.md). Instructions are progressive, not pasted into one enormous prompt.
+- **Creator intent:** the AI reconstructs a faithful structured brief from the conversation, honors constraints, chooses a working template, creates textures, and reports actual tests.
+- **Authoring layouts:** downloadable blank textures and guide overlays for 24×8 icons, 8×4 sprites, and freeform UI. These are **packing destinations, not inferred grids in generated artwork**.
+- **Per-region pixel QA:** `tools/qualify_asset_zip.py` scans all regions in a pack/collection, reports real alpha bounds and pixel hashes, flags empty and border-touch crops, and produces labeled contact sheets. It uses the existing structural ZIP and manifest validator and does not claim to understand semantics.
+- **Honest release receipt:** automated PASS means structurally ready for **visual review**, not a guarantee that artwork is correct, rights-cleared or animations look good. Every crop must still be inspected by the creator/AI with genuine visual access.
+- **No changes** to existing 2,073 icon pixels or IDs; v0.9 slots/presets and older pack formats remain supported.
+
+```bash
+bash RUN-ALL.sh
+python3 tools/qualify_asset_zip.py web/demo/potions-collection.zip --out /tmp/potion-qa
+# contact sheets + qa-report.json + qa-receipt.txt
+```
+
+## v0.9.0 — Compatible slots, automatic presets, and a multi-pack template
+
+- **One working template system:** composition layers can reference named compatible slots. Versioned interfaces define expected logical dimensions; permitted replacements explicitly implement those contracts. This works across manifests within one ZIP collection.
+- **AI-first defaults:** opening the Potion Lab example automatically previews the bottle. Select `Health`, `Mana` (animated blue), or `Poison` from a generated preset selector. Manual layer edits are not needed.
+- **Portable export:** a selected composition ZIP includes the **entire declared slot-option dependency closure**, including animation frames, interface definitions, textures and license notices. Private bags keep interface metadata isolated so different bags cannot override each other's contracts.
+- **Compatibility:** existing `smi-visual-pack/1` ZIPs, `smi-visual-collection/1` collections, and all **2,073 public icon IDs** continue to work without migration.
+- **Validation:** Python and JavaScript reject incompatible replacements, missing/invalid slot options, wrong interface versions, invalid preset values, and missing references. Includes new [AI creation docs](docs/SLOTS-PRESETS.md) and a real self-contained [Potion Lab template ZIP](web/demo/potions-collection.zip).
+- **Limits:** compatibility tests validate declared geometry and references, not the artistic fit of independently created drawings. No automatically inferred cross-pack compatibility or host-side pointer handling is claimed.
+
+## v0.8.0 — Multi-manifest collection bags + typed interaction contract
+
+- **One ZIP = one private collection**, with an optional `collection.json` index, up to 96 `smi-visual-pack/1` manifests, and cross-manifest asset references. No special 12-manifest cap.
+- **My Bag**: drag-and-drop ZIP import; one card per collection; open, filter by manifest group, download original ZIP or remove. Optional explicit IndexedDB local storage; otherwise session-only. No user asset upload endpoint.
+- **Generic interaction contracts**: assets may declare semantic roles (button/toggle/slider/actor), typed inputs, events, restricted set/toggle/emit actions, and read-only outputs. The host application handles actual pointer/game input and consumes events.
+- **Local-first validation**: JSON Schema for both manifest and collection index; cross-pack dependency graph, geometry, event binding and ZIP entry safety checks. The existing 2,073 source icons remain unchanged.
+- **Export round-trip**: the builder removes transient My Bag bookkeeping from the authored output; export passes the standalone pack validator.
+- **Known scope limit**: the builder shows action buttons and typed controls, but does not yet implement native on-canvas pointer capture/drag interfaces, automatic template slot swapping, user-authored persistence sync, or a full animation state-machine engine.
+
+### Collection ZIP layout
+
+```text
+collection.json                      # optional smi-visual-collection/1 index
+packs/character/manifest.json        # smi-visual-pack/1, asset definitions
+packs/character/textures/body.png
+packs/hud/manifest.json
+packs/hud/textures/gui.png
+```
+
+The root index names each manifest and may set the default `entry_asset`. Asset IDs are globally unique within a ZIP; the same asset can be referenced from a different manifest in the same collection. A one-manifest ZIP from v0.7 remains valid.
+
 ## v0.7.0 — Keyframe timeline, frame exports and reliable publisher
 
 - **Fixed Linux publisher:** the previous v0.6.0 script attempted the Python test suite before installing `jsonschema`; `RUN-ALL.sh` now installs missing Pillow/jsonschema into an isolated reusable venv and executes the full required tests before any Git operation.

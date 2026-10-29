@@ -40,6 +40,29 @@
       "items": {
         "$ref": "#/$defs/asset"
       }
+    },
+    "interfaces": {
+      "type": "object",
+      "maxProperties": 256,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "size_px",
+          "allow_scale"
+        ],
+        "properties": {
+          "size_px": {
+            "$ref": "#/$defs/size2"
+          },
+          "allow_scale": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
     }
   },
   "$defs": {
@@ -295,8 +318,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "id",
-        "asset"
+        "id"
       ],
       "properties": {
         "id": {
@@ -360,8 +382,33 @@
           "items": {
             "$ref": "#/$defs/track"
           }
+        },
+        "slot": {
+          "$ref": "#/$defs/nonblank"
         }
-      }
+      },
+      "oneOf": [
+        {
+          "required": [
+            "asset"
+          ],
+          "not": {
+            "required": [
+              "slot"
+            ]
+          }
+        },
+        {
+          "required": [
+            "slot"
+          ],
+          "not": {
+            "required": [
+              "asset"
+            ]
+          }
+        }
+      ]
     },
     "asset": {
       "type": "object",
@@ -474,6 +521,82 @@
           "type": "integer",
           "minimum": 1,
           "maximum": 600000
+        },
+        "behavior": {
+          "$ref": "#/$defs/behavior"
+        },
+        "implements": {
+          "type": "array",
+          "maxItems": 16,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonblank"
+          }
+        },
+        "slots": {
+          "type": "object",
+          "maxProperties": 64,
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "accepts",
+              "default",
+              "options"
+            ],
+            "properties": {
+              "accepts": {
+                "$ref": "#/$defs/nonblank"
+              },
+              "default": {
+                "$ref": "#/$defs/nonblank"
+              },
+              "options": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 128,
+                "uniqueItems": true,
+                "items": {
+                  "$ref": "#/$defs/nonblank"
+                }
+              },
+              "label": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "presets": {
+          "type": "object",
+          "maxProperties": 100,
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "slots": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/$defs/nonblank"
+                }
+              },
+              "inputs": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": [
+                    "boolean",
+                    "number",
+                    "string"
+                  ]
+                }
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "default_preset": {
+          "$ref": "#/$defs/nonblank"
         }
       },
       "allOf": [
@@ -603,6 +726,144 @@
           }
         }
       }
+    },
+    "behavior": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "enum": [
+            "generic",
+            "button",
+            "toggle",
+            "slider",
+            "meter",
+            "actor",
+            "select"
+          ]
+        },
+        "outputs": {
+          "type": "object",
+          "maxProperties": 24,
+          "patternProperties": {
+            "^[a-z][a-z0-9_]{0,63}$": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "from_input"
+              ],
+              "properties": {
+                "from_input": {
+                  "$ref": "#/$defs/nonblank"
+                },
+                "unit": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "on": {
+          "type": "object",
+          "maxProperties": 32,
+          "patternProperties": {
+            "^[a-z][a-z0-9_]{0,63}$": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 12,
+              "items": {
+                "$ref": "#/$defs/interaction_action"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "interaction_action": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "input"
+          ],
+          "properties": {
+            "op": {
+              "const": "toggle"
+            },
+            "input": {
+              "$ref": "#/$defs/nonblank"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "input"
+          ],
+          "properties": {
+            "op": {
+              "const": "set"
+            },
+            "input": {
+              "$ref": "#/$defs/nonblank"
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean"
+              ]
+            },
+            "source": {
+              "const": "event.value"
+            }
+          },
+          "oneOf": [
+            {
+              "required": [
+                "value"
+              ],
+              "not": {
+                "required": [
+                  "source"
+                ]
+              }
+            },
+            {
+              "required": [
+                "source"
+              ],
+              "not": {
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "event"
+          ],
+          "properties": {
+            "op": {
+              "const": "emit"
+            },
+            "event": {
+              "$ref": "#/$defs/nonblank"
+            }
+          }
+        }
+      ]
     }
   }
 }

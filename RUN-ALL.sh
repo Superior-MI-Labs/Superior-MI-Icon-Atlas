@@ -28,10 +28,14 @@ fi
 "$PY" atlasctl.py validate --deep
 "$PY" -m unittest discover -s tests -p 'test_*.py' -v
 "$PY" tools/validate_visual_pack.py web/demo/starter-pack.zip
+"$PY" tools/validate_visual_pack.py web/demo/potions-collection.zip
+"$PY" tools/qualify_asset_zip.py web/demo/potions-collection.zip --out "${TMPDIR:-/tmp}/smi-visual-atlas-potions-qa"
 if command -v node >/dev/null 2>&1; then
-  for f in web/app.js web/builder.js web/timeline-core.js; do node --check "$f"; done
+  for f in web/app.js web/builder.js web/timeline-core.js web/collection-core.js web/bag-store.js web/interaction-core.js web/slot-core.js; do node --check "$f"; done
   node tests/browser-search.cjs
   node tests/builder-contract.cjs
   node tests/timeline-core.cjs
+  node tests/collections-interaction.cjs
+  node tests/slots-presets.cjs
 else echo 'WARNING: Node tests unavailable (Node not installed). GitHub CI will run these tests.'; fi
 printf '\nPASS: All locally available validations. Run: bash RUN-LOCALLY.sh\n'

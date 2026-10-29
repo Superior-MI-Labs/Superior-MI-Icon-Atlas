@@ -19,7 +19,7 @@ def build(dest:Path|None=None):
     if dest==ROOT or ROOT in dest.parents and 'sheets' in dest.parts:
         raise ValueError('Refusing to build over source')
     dest.mkdir(parents=True,exist_ok=True)
-    for name in ('index.html','styles.css','app.js','builder.html','builder.css','timeline-core.js','builder.js','ai-guide.html'):
+    for name in ('index.html','styles.css','app.js','builder.html','builder.css','timeline-core.js','collection-core.js','bag-store.js','interaction-core.js','slot-core.js','builder.js','ai-guide.html'):
         shutil.copy2(ROOT/'web'/name,dest/name)
     vendor=ROOT/'web'/'vendor'
     if not (vendor/'jszip.min.js').is_file() or not (vendor/'JSZip-LICENSE.md').is_file(): raise ValueError('Missing bundled offline ZIP library')
@@ -28,8 +28,16 @@ def build(dest:Path|None=None):
     shutil.copy2(vendor/'JSZip-LICENSE.md',dest/'vendor'/'JSZip-LICENSE.md')
     (dest/'schemas').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'schemas'/'smi-visual-pack-v1.schema.json',dest/'schemas'/'smi-visual-pack-v1.schema.json')
+    shutil.copy2(ROOT/'schemas'/'smi-visual-collection-v1.schema.json',dest/'schemas'/'smi-visual-collection-v1.schema.json')
+    # One canonical AI handoff split into short, versioned references.
+    (dest/'ai').mkdir(exist_ok=True)
+    for guide in sorted((ROOT/'docs'/'ai').glob('*.md')):
+        shutil.copy2(guide,dest/'ai'/guide.name)
+    (dest/'templates').mkdir(exist_ok=True)
+    shutil.copy2(ROOT/'web'/'templates'/'authoring-grids.zip',dest/'templates'/'authoring-grids.zip')
     (dest/'demo').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'web'/'demo'/'starter-pack.zip',dest/'demo'/'starter-pack.zip')
+    shutil.copy2(ROOT/'web'/'demo'/'potions-collection.zip',dest/'demo'/'potions-collection.zip')
     src_files=['manifest.json','LICENSE','NOTICE.md']
     registry=json.loads((ROOT/'manifest.json').read_text(encoding='utf-8'))
     src_files.extend(ref['manifest'] for ref in registry['sheets'])

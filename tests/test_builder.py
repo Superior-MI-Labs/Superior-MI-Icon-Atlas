@@ -12,7 +12,7 @@ class BuilderContractTests(unittest.TestCase):
     def test_offline_site_contains_builder_and_demo(self):
         with tempfile.TemporaryDirectory() as temp:
             build(Path(temp))
-            for rel in ('builder.html','builder.css','builder.js','timeline-core.js','ai-guide.html','vendor/jszip.min.js','vendor/JSZip-LICENSE.md','demo/starter-pack.zip'):
+            for rel in ('builder.html','builder.css','builder.js','timeline-core.js','collection-core.js','bag-store.js','interaction-core.js','schemas/smi-visual-collection-v1.schema.json','ai-guide.html','vendor/jszip.min.js','vendor/JSZip-LICENSE.md','demo/starter-pack.zip'):
                 self.assertTrue((Path(temp)/rel).is_file(),rel)
             html=(Path(temp)/'builder.html').read_text()
             self.assertIn('Import ZIP',html)
@@ -23,6 +23,7 @@ class BuilderContractTests(unittest.TestCase):
             self.assertNotIn('https://cdn.',html)
     def test_schema_validation_and_dependency_graph(self):
         self.assertEqual(check(ROOT/'web/demo/starter-pack.zip'),[])
+        self.assertEqual(check(ROOT/'web/demo/potions-collection.zip'),[])
 
     def test_keyframe_demo_roundtrips_schema(self):
         with ZipFile(ROOT/'web/demo/starter-pack.zip') as z:
@@ -31,6 +32,7 @@ class BuilderContractTests(unittest.TestCase):
             self.assertTrue(animated,'Demo must prove authored keyframes')
             self.assertEqual(animated[0]['duration_ms'],2000)
         self.assertEqual(check(ROOT/'web/demo/starter-pack.zip'),[])
+        self.assertEqual(check(ROOT/'web/demo/potions-collection.zip'),[])
 
     def test_reject_bad_keyframe_order_and_values(self):
         import io
@@ -40,6 +42,16 @@ class BuilderContractTests(unittest.TestCase):
         unordered=[{'property':'x','keyframes':[{'time_ms':150,'value':2},{'time_ms':100,'value':3}]}]
         self.assertTrue(validate_tracks(unordered,200,'unordered'))
         self.assertFalse(validate_tracks([{'property':'x','keyframes':[{'time_ms':0,'value':0},{'time_ms':100,'value':20}]}],200,'valid'))
+
+    def test_demo_pack_exposes_typed_interaction_contracts(self):
+        with ZipFile(ROOT/'web/demo/starter-pack.zip') as z:
+            pack=json.loads(z.read('manifest.json'))
+        ids={a['id']:a for a in pack['assets']}
+        self.assertEqual(ids['demo.slider']['behavior']['role'],'slider')
+        self.assertEqual(ids['demo.icon.layered']['behavior']['role'],'toggle')
+        self.assertIn('hit',ids['demo.glass.panel']['behavior']['on'])
+        self.assertEqual(check(ROOT/'web/demo/starter-pack.zip'),[])
+        self.assertEqual(check(ROOT/'web/demo/potions-collection.zip'),[])
 
     def test_demo_pack_contains_real_valid_textures(self):
         z=ROOT/'web/demo/starter-pack.zip'

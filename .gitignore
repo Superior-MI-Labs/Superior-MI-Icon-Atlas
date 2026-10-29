@@ -12,3 +12,7 @@ __pycache__/
 
 # Ship the locally usable demo pack. Release ZIPs remain ignored.
 !web/demo/starter-pack.zip
+!web/demo/potions-collection.zip
+
+# Template grid ZIP is a published starter resource.
+!web/templates/authoring-grids.zip
