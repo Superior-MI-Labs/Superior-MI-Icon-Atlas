@@ -2,30 +2,21 @@ name: Publish Icon Atlas
 on:
   push:
     branches: [main]
-    paths:
-      - 'manifest.json'
-      - 'sheets/**'
-      - 'web/**'
-      - 'tools/build_site.py'
-      - 'tests/test_site.py'
   workflow_dispatch:
-
 permissions:
   contents: read
-
 concurrency:
   group: github-pages
   cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build and validate static catalog
-        run: |
-          python3 tools/build_site.py
-          python3 -m unittest discover -s tests -p 'test_site.py' -v
+      - name: Build static catalog from manifest
+        run: python3 tools/build_site.py
+      - name: Validate catalog and sprite geometry
+        run: python3 -m unittest discover -s tests -p 'test_site.py' -v
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

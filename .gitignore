@@ -7,4 +7,5 @@ __pycache__/
 *.zip
 *.tmp
 *.bak-*
+# Generated catalog; GitHub Actions rebuilds it from manifest + web/.
 /site/

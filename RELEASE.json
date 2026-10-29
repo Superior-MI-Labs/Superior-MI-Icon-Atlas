@@ -1,24 +1,8 @@
 {
-  "name": "Superior MI Icon Atlas",
-  "repo": "Superior-MI-Labs/Superior-MI-Icon-Atlas",
-  "version": "0.2.0",
-  "pack": "original-starter",
-  "release_status": "review-candidate",
-  "count": {
-    "assets": 192,
-    "concepts": 64,
-    "sheets": 1
-  },
-  "license": "Apache-2.0",
-  "original_only": true,
-  "historical_v10_research_pack_included": false,
-  "linux_default": "${XDG_DATA_HOME:-$HOME/.local/share}/superior-mi/icon-atlas",
-  "windows_default": "%LOCALAPPDATA%\\SuperiorMILabs\\icon-atlas",
-  "features": [
-    "static-github-pages-browser",
-    "manifest-id-png-downloads",
-    "per-icon-deep-links",
-    "offline-shared-browser",
-    "optional-browser-tint"
-  ]
+  "version": "0.3.0",
+  "status": "artwork-review",
+  "sheets": 10,
+  "icon_positions": 1920,
+  "manifest": "manifest.json",
+  "license": "Apache-2.0 (code), images pending art review"
 }

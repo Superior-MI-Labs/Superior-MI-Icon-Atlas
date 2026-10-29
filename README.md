@@ -1,72 +1,54 @@
 # Superior MI Icon Atlas
 
-**A reusable, searchable visual vocabulary for software and real-world systems.**
+A searchable, downloadable collection of **1,920 white-on-transparent monoline icon candidates** arranged in ten **24×8 RGBA texture sheets**. Every cell is **96×96 px** and can be independently cropped or recolored. Project by [Superior MI Labs](https://github.com/Superior-MI-Labs).
 
-[Browse the icon catalog](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Installation](#installation) · [Contributing](#contributing) · [Licensing](#licensing)
+> **Artwork-review release (v0.3.0).** These were generated as conceptual sheets and technically normalized. Their IDs describe the category and grid location, **not yet verified semantics**. Some icons may be repeated or visually imperfect. They are not ready for claims of bespoke originality or semantic completeness.
 
-> **Publication status:** Source import and GitHub Pages deployment are being prepared. The public catalog link becomes available after the site is deployed successfully. This repository must not be mistaken for the older third-party research collection.
+## Browse and download
 
-## About
+[Open the GitHub Pages browser](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/). Select a category, inspect a cell, optionally tint the foreground, and download a **transparent PNG**. Filenames always match the manifest ID, such as `icons.concept.programming.r00c00.png`.
 
-Icon Atlas is an open icon system for **Superior MI Labs** and independent developers. A single manifest describes each icon's canonical ID, subject hierarchy, search vocabulary, visual style, licensing provenance, texture-sheet location and precise crop coordinates.
+The browser is generated from **one source of truth**, [`manifest.json`](manifest.json). The PNG texture, foreground tint alpha and optional solid-black outline are stored separately. Checkerboards exist only in previews.
 
-The current original-artwork starter, **v0.2.0**, contains **64 independently constructed concepts** expressed as **192 symbols** (symbol, badge and tile variants). They use a 24 × 8 RGBA sprite atlas with 96 × 96 pixel cells. The production sheet is transparent, with separately tintable grayscale foregrounds and solid-black outlines.
-
-The larger historical experimental library (20,325 assets, including third-party drawings) is **not** part of the clean-original public starter.
-
-## Features
-
-- Search by words, abbreviations, concepts and explicit synonyms.
-- Browse by category and visual variant.
-- Preview each icon before downloading.
-- Download an individual transparent PNG, cropped from the source atlas.
-- **Exact manifest naming for downloads**, e.g. `icons.original.programming.bug.symbol.png`.
-- Recolor the foreground without recoloring the black outline.
-- Reference stable IDs in software without copying a separate registry into every application.
-- Rebuild the static browser for GitHub Pages with Python; no server, database or NPM dependency.
-
-## Installation
-
-Linux (user-wide shared assets):
+## Quick start
 
 ```bash
-python3 tools/install.py
-# Installs under ~/.local/share/superior-mi/icon-atlas/
-```
-
-Windows:
-
-```powershell
-py -3 tools/install.py
-# Installs under %LOCALAPPDATA%\SuperiorMILabs\icon-atlas\
-```
-
-Clone and keep your source wherever you develop; the installer handles the shared runtime location. Run `python3 tools/install.py --show-path` to inspect the destination. Use `--upgrade` for a backup-protected update.
-
-## Development
-
-The **manifest is authoritative**, not an independently maintained UI catalog. The Python build tools generate textures and the searchable website from the same source. To build and test from a complete source checkout:
-
-```bash
-python3 -m pip install -r requirements-build.txt
-python3 tools/build_original.py
 python3 tools/build_site.py
+python3 -m unittest discover -s tests -p 'test_site.py' -v
 python3 atlasctl.py validate
-python3 -m unittest discover -s tests -v
+python3 atlasctl.py search hardware
+python3 atlasctl.py crop icons.concept.programming.r00c00 --out function-candidate.png
+# Pillow needed for crop/tint and deep validation
+python3 -m pip install Pillow
+python3 atlasctl.py validate --deep
 ```
 
-A successful GitHub Pages deployment is served at `https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/`. See the site workflow and publishing instructions in the source release.
+For local browsing: `cd site && python3 -m http.server 8000`, then open <http://localhost:8000>.
 
-## Stable asset contract
+## Structure
 
-Each icon's manifest record includes its immutable ID, concept, display name, style, semantic tags, source/provenance, exact pixel rectangle and atlas location. UI code resolves the icon ID to artwork; it **does not** generate a new graph node, type, method or operation. Unknown IDs should use the application's existing fallback icon.
+- `manifest.json` — canonical IDs, categories, grid cell/pixel rectangles, UVs, tags, geometry, and provenance.
+- `sheets/<category>/atlas.png` — production white RGBA texture.
+- `sheets/<category>/foreground-mask.png` — tintable alpha mask.
+- `sheets/<category>/black-outline.png` — independent optional black outline.
+- `web/` — browser source; `site/` generated by `tools/build_site.py`.
+- `.github/workflows/pages.yml` — automatic GitHub Pages publishing on each `main` push.
+- `atlasctl.py` — search, inspect, crop, recolor, validate.
 
-## Licensing
+## Provenance and quality
 
-Original code and original starter artwork are intended to be released under **Apache License 2.0**, subject to their documented visual review. Third-party icons and trademarked logos are not silently relicensed as our work. Consult `LICENSE`, `NOTICE.md` and artwork provenance before exporting future icon packs.
+This revision **replaces** the previous 192-icon starter artwork on the active branch. It does not include Material Design or Font Awesome assets. The new raster designs are generated candidates; independence from other works and suitability for release still need review. Avoid assigning names like `bug` or `database` solely from a small unverified pictogram.
 
-## Contributing
+## License
 
-New contributions should improve recognition and discoverability, not just increase counts. Use semantic canonical IDs, add everyday synonyms (e.g. *image*, *picture*, *photo*), record provenance, test exact 96 × 96 crops and transparent alpha, and avoid reusing third-party paths without explicit licensing review.
+The project's original code and metadata are provided under Apache-2.0. Artwork is marked review-stage in the manifest; see [NOTICE](NOTICE.md) and [artwork policy](docs/ARTWORK-POLICY.md). Do not interpret an Apache code license as a guarantee of exclusive ownership of generated artwork.
 
-Maintained by [Superior MI Labs](https://github.com/Superior-MI-Labs).
+
+## Safe publishing (v0.3.1)
+
+Extract the downloaded ZIP, then execute `bash publish-to-github.sh` from the extracted folder.
+The script runs tests from the correct directory, clones the repository to a temporary
+workspace, replaces the obsolete catalog, commits, and pushes without force.
+Do not run `set -euo pipefail` directly in your interactive terminal.
+For a durable log, run the publisher inside a separate `bash` process with output piped
+through `tee` (see the publishing instructions supplied with this release).
