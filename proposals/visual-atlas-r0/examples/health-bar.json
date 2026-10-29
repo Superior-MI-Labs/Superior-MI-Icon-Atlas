@@ -1,0 +1,85 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.demo.health-bar",
+  "version": "0.1.0",
+  "textures": {
+    "hud": {
+      "path": "textures/hud.png",
+      "width_px": 512,
+      "height_px": 128
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.hud.health.frame",
+      "kind": "region",
+      "texture": "hud",
+      "rect_px": [
+        0,
+        0,
+        320,
+        40
+      ],
+      "nine_slice_px": [
+        14,
+        10,
+        14,
+        10
+      ]
+    },
+    {
+      "id": "smi.hud.health.fill",
+      "kind": "region",
+      "texture": "hud",
+      "rect_px": [
+        0,
+        48,
+        300,
+        24
+      ]
+    },
+    {
+      "id": "smi.hud.health.bar",
+      "kind": "composition",
+      "name": "Health bar",
+      "tags": [
+        "health",
+        "progress",
+        "status",
+        "meter",
+        "hud"
+      ],
+      "size_px": [
+        320,
+        40
+      ],
+      "inputs": {
+        "health": {
+          "type": "number",
+          "default": 0.75,
+          "min": 0,
+          "max": 1
+        }
+      },
+      "layers": [
+        {
+          "id": "fill",
+          "asset": "smi.hud.health.fill",
+          "offset_px": [
+            10,
+            8
+          ],
+          "clip": {
+            "input": "health",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "frame",
+          "asset": "smi.hud.health.frame"
+        }
+      ]
+    }
+  ]
+}

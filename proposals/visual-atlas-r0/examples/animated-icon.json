@@ -1,0 +1,127 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.demo.animated-icon",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "textures": {
+    "main": {
+      "path": "textures/shield.png",
+      "width_px": 512,
+      "height_px": 256,
+      "alpha": "straight",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.icon.shield.base",
+      "kind": "region",
+      "texture": "main",
+      "rect_px": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "name": "Shield"
+    },
+    {
+      "id": "smi.icon.shield.glow-a",
+      "kind": "region",
+      "texture": "main",
+      "rect_px": [
+        96,
+        0,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.icon.shield.glow-b",
+      "kind": "region",
+      "texture": "main",
+      "rect_px": [
+        192,
+        0,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.icon.shield.badge",
+      "kind": "region",
+      "texture": "main",
+      "rect_px": [
+        288,
+        0,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.icon.shield.pulse",
+      "kind": "sequence",
+      "default_fps": 8,
+      "playback": "loop",
+      "frames": [
+        {
+          "asset": "smi.icon.shield.glow-a"
+        },
+        {
+          "asset": "smi.icon.shield.glow-b"
+        },
+        {
+          "asset": "smi.icon.shield.glow-a",
+          "duration_ms": 200
+        }
+      ]
+    },
+    {
+      "id": "smi.icon.shield.interactive",
+      "kind": "composition",
+      "name": "Animated shield icon",
+      "tags": [
+        "shield",
+        "animated",
+        "status",
+        "notification"
+      ],
+      "size_px": [
+        96,
+        96
+      ],
+      "inputs": {
+        "active": {
+          "type": "boolean",
+          "default": false
+        },
+        "notification": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "layers": [
+        {
+          "id": "body",
+          "asset": "smi.icon.shield.base"
+        },
+        {
+          "id": "glow",
+          "asset": "smi.icon.shield.pulse",
+          "visible_when": {
+            "input": "active",
+            "equals": true
+          }
+        },
+        {
+          "id": "badge",
+          "asset": "smi.icon.shield.badge",
+          "visible_when": {
+            "input": "notification",
+            "equals": true
+          }
+        }
+      ]
+    }
+  ]
+}
