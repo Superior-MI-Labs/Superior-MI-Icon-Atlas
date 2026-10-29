@@ -1,0 +1,6165 @@
+{
+  "schema": "smi-icon-atlas-sheet/1",
+  "sheet": {
+    "id": "icons.monoline.fantasy-gaming-00.24x8",
+    "path": "sheets/fantasy-gaming-00/atlas.png",
+    "foreground_mask": "sheets/fantasy-gaming-00/atlas.png",
+    "black_outline": "sheets/fantasy-gaming-00/black-outline.png",
+    "preview": "sheets/fantasy-gaming-00/inspection-preview.png",
+    "width_px": 2304,
+    "height_px": 768,
+    "cell_px": 96,
+    "columns": 24,
+    "rows": 8,
+    "domain": "fantasy-gaming",
+    "sha256": "65118b00e9835a4a66321d8d892562877baddc35abfa9d69a98dab13f1118211",
+    "style": "white-geometric-monoline",
+    "variant": "monoline"
+  },
+  "icons": [
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i00",
+      "cell": [
+        0,
+        0
+      ],
+      "crop_rgba_sha256": "15a272bdad6c733fb9ca909f91086fcbf3c11969f1595386094d993040d55f2e",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          14,
+          14,
+          65,
+          66
+        ],
+        "region": [
+          13,
+          0,
+          66,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i01",
+      "cell": [
+        1,
+        0
+      ],
+      "crop_rgba_sha256": "b18965a6e2ec7b4ff5f1a5337e199f8036481a708025e45721a7c917989db2c8",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          94,
+          23,
+          70,
+          53
+        ],
+        "region": [
+          94,
+          0,
+          71,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i02",
+      "cell": [
+        2,
+        0
+      ],
+      "crop_rgba_sha256": "a227a1bbc08d4e1a61231f060459b0f05b4fd4df49b07ca6c1336594b547389a",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          182,
+          13,
+          61,
+          69
+        ],
+        "region": [
+          182,
+          0,
+          61,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i03",
+      "cell": [
+        3,
+        0
+      ],
+      "crop_rgba_sha256": "569bffca03a74ec98a94a672456c31114b976f41b8b8555cedbbb55cdb460324",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          269,
+          14,
+          52,
+          68
+        ],
+        "region": [
+          269,
+          0,
+          52,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i04",
+      "cell": [
+        4,
+        0
+      ],
+      "crop_rgba_sha256": "45839f00e0389fb4d278a756d79881b0889cd99ecb2d9ff97449d49aa8875634",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          343,
+          14,
+          63,
+          67
+        ],
+        "region": [
+          343,
+          0,
+          63,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i05",
+      "cell": [
+        5,
+        0
+      ],
+      "crop_rgba_sha256": "d55321cf0e147951724508786bbca63b3f84122b4f8dac271867e29f42e452a5",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          424,
+          14,
+          62,
+          68
+        ],
+        "region": [
+          424,
+          0,
+          62,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i06",
+      "cell": [
+        6,
+        0
+      ],
+      "crop_rgba_sha256": "a1397196709e790fbe804eb4cb1eee96619a4310f66aae39fc1ac43060560a79",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          504,
+          14,
+          66,
+          68
+        ],
+        "region": [
+          504,
+          0,
+          66,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i07",
+      "cell": [
+        7,
+        0
+      ],
+      "crop_rgba_sha256": "414693a3bde31195f8fa6fb90570158d993447fb1bf7a4eed5755bd1744bd1d8",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          585,
+          25,
+          70,
+          49
+        ],
+        "region": [
+          585,
+          0,
+          70,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i08",
+      "cell": [
+        8,
+        0
+      ],
+      "crop_rgba_sha256": "c2bb42666fa2e50439250cd94b10b3190cd681350e942a81f77ff255bcda788c",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          669,
+          26,
+          70,
+          44
+        ],
+        "region": [
+          669,
+          0,
+          71,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i09",
+      "cell": [
+        9,
+        0
+      ],
+      "crop_rgba_sha256": "2fd3bcef6d9a59728d6d0211c8ba42a4707b8da5979837e60b4e87da9939bf2e",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          761,
+          13,
+          57,
+          69
+        ],
+        "region": [
+          760,
+          0,
+          58,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i10",
+      "cell": [
+        10,
+        0
+      ],
+      "crop_rgba_sha256": "3a2e4b8ad7d90e368442b45cd624cb371593c4478496bc38ac29d794440f17dc",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          839,
+          25,
+          72,
+          48
+        ],
+        "region": [
+          839,
+          0,
+          72,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i11",
+      "cell": [
+        11,
+        0
+      ],
+      "crop_rgba_sha256": "04e13c671a624b2f22bcb210c336f05261e6134855032d86251c8b8c28422365",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          936,
+          14,
+          48,
+          68
+        ],
+        "region": [
+          936,
+          0,
+          48,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i12",
+      "cell": [
+        12,
+        0
+      ],
+      "crop_rgba_sha256": "57bac957c5b73e21187d8d0eddce8623762f179d610bfb02e9f987822866227a",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1010,
+          15,
+          67,
+          66
+        ],
+        "region": [
+          1010,
+          0,
+          67,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i13",
+      "cell": [
+        13,
+        0
+      ],
+      "crop_rgba_sha256": "6582dced1cb1cb07106b57afa55118678ba4a858c71b598ede157efa36dcf7aa",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1095,
+          21,
+          67,
+          56
+        ],
+        "region": [
+          1095,
+          0,
+          67,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i14",
+      "cell": [
+        14,
+        0
+      ],
+      "crop_rgba_sha256": "7149120c359541f56df87c20aa21ffba91268a76ea810c7e348903a4d87fb42a",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1178,
+          25,
+          68,
+          47
+        ],
+        "region": [
+          1178,
+          0,
+          68,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i15",
+      "cell": [
+        15,
+        0
+      ],
+      "crop_rgba_sha256": "0d6bb0a01684268d993d11d9fb35d3c13a462f17cc294c36a09d4a6de2b23ee5",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1261,
+          24,
+          68,
+          49
+        ],
+        "region": [
+          1261,
+          0,
+          68,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i16",
+      "cell": [
+        16,
+        0
+      ],
+      "crop_rgba_sha256": "c52f8dd23f060ef3c6ad2302d851e0a87f237c0b480fbbbffcb686aee577211d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1344,
+          16,
+          71,
+          63
+        ],
+        "region": [
+          1344,
+          0,
+          71,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i17",
+      "cell": [
+        17,
+        0
+      ],
+      "crop_rgba_sha256": "9437de98d2ab99afd1972617393a299dd3e04307e8904c7b002abfb8744db4d8",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1434,
+          16,
+          23,
+          63
+        ],
+        "region": [
+          1434,
+          0,
+          24,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i18",
+      "cell": [
+        18,
+        0
+      ],
+      "crop_rgba_sha256": "e658d70750f7ef23be7299e439e33f6bcc41de84d3b9d34aef50367426100c9d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1474,
+          16,
+          23,
+          63
+        ],
+        "region": [
+          1474,
+          0,
+          23,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i19",
+      "cell": [
+        19,
+        0
+      ],
+      "crop_rgba_sha256": "9c7e003d14be79c705b3912ee65028c654fd9774e2be4ad31b668ee2be414d80",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1517,
+          26,
+          68,
+          45
+        ],
+        "region": [
+          1517,
+          0,
+          69,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i20",
+      "cell": [
+        20,
+        0
+      ],
+      "crop_rgba_sha256": "53bb0a44a45c760e390d7d1427d6c366c1253bca375ba27f5b8561da37fcb4e4",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1602,
+          15,
+          66,
+          66
+        ],
+        "region": [
+          1602,
+          0,
+          66,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i21",
+      "cell": [
+        21,
+        0
+      ],
+      "crop_rgba_sha256": "f899bb7853ee264c01f579e9910f218a8a9c93b091ccc2980d9bfcfcca5fbe83",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1690,
+          25,
+          58,
+          45
+        ],
+        "region": [
+          1690,
+          0,
+          58,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i22",
+      "cell": [
+        22,
+        0
+      ],
+      "crop_rgba_sha256": "bf7a5355bd86b6034ca770c31c9d9b98f5846524e896544a61481c8c38850983",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1770,
+          18,
+          62,
+          57
+        ],
+        "region": [
+          1770,
+          0,
+          63,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i23",
+      "cell": [
+        23,
+        0
+      ],
+      "crop_rgba_sha256": "b3197618fdb7869725bf681ab67d9c5b66ea60e8345b37d86a3c2a24898a98aa",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1849,
+          16,
+          65,
+          64
+        ],
+        "region": [
+          1849,
+          0,
+          65,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i24",
+      "cell": [
+        0,
+        1
+      ],
+      "crop_rgba_sha256": "b7b8c3b68babfcc3166d21f01e16719a10c088f2f3c9a66d0f5e7f79d84f6d96",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1929,
+          16,
+          65,
+          65
+        ],
+        "region": [
+          1929,
+          0,
+          66,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i25",
+      "cell": [
+        1,
+        1
+      ],
+      "crop_rgba_sha256": "36c36bd43af00b08fcadc444a0015d0202c76791825ecc5f10857cc73d827724",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          2021,
+          14,
+          47,
+          68
+        ],
+        "region": [
+          2021,
+          0,
+          47,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r00i26",
+      "cell": [
+        2,
+        1
+      ],
+      "crop_rgba_sha256": "fdbaa8334dfb6eec34e4951a22de5c24bdf85f6e17f7e88522043ab544ce6082",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          2093,
+          15,
+          65,
+          66
+        ],
+        "region": [
+          2093,
+          0,
+          65,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i00",
+      "cell": [
+        3,
+        1
+      ],
+      "crop_rgba_sha256": "1459b6f08df7794939943550046291020dbc73d8138802894e039acdd9b49bff",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          13,
+          107,
+          67,
+          61
+        ],
+        "region": [
+          13,
+          91,
+          67,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i01",
+      "cell": [
+        4,
+        1
+      ],
+      "crop_rgba_sha256": "e2fcedbd0e27c451a890c16d07299621e1b76287fd381ed6d37927cc2cd11085",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          95,
+          107,
+          68,
+          62
+        ],
+        "region": [
+          95,
+          91,
+          68,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i02",
+      "cell": [
+        5,
+        1
+      ],
+      "crop_rgba_sha256": "5f143dbbfe1b52d7fc6c3b0c7b28058dc517d703e0e47526b4e0e5c16ebe95a8",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          179,
+          107,
+          69,
+          62
+        ],
+        "region": [
+          178,
+          91,
+          70,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i03",
+      "cell": [
+        6,
+        1
+      ],
+      "crop_rgba_sha256": "50efdc521c27651d64b380b3ce493c7b3b80ba5b9efdecf05ba4be97fc00ceea",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          270,
+          105,
+          50,
+          67
+        ],
+        "region": [
+          270,
+          91,
+          50,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i04",
+      "cell": [
+        7,
+        1
+      ],
+      "crop_rgba_sha256": "545f8caf617892c60858ecbb775a84dbae1d27be51e53c4a2cc145295fba6a98",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          352,
+          106,
+          46,
+          66
+        ],
+        "region": [
+          351,
+          91,
+          47,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i05",
+      "cell": [
+        8,
+        1
+      ],
+      "crop_rgba_sha256": "d039febdb42a470dd0b070706e853d325fe1d69a46583dc204c1370497856845",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          425,
+          105,
+          60,
+          67
+        ],
+        "region": [
+          425,
+          91,
+          60,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i06",
+      "cell": [
+        9,
+        1
+      ],
+      "crop_rgba_sha256": "d4472f7de83e2364f72f32e9e49490e36d72697528aa27e4f2b06df04aa5b9ca",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          507,
+          105,
+          61,
+          68
+        ],
+        "region": [
+          507,
+          91,
+          61,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i07",
+      "cell": [
+        10,
+        1
+      ],
+      "crop_rgba_sha256": "fa1cabf4a96bccff9a1ff320860c9cfe64c654ace26071b82460c973fe6ffc64",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          586,
+          106,
+          70,
+          66
+        ],
+        "region": [
+          586,
+          91,
+          70,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i08",
+      "cell": [
+        11,
+        1
+      ],
+      "crop_rgba_sha256": "24adc1fee3bd59fbafdbe9d81cba92f0543fdd7df3152d21c0f409ed421c7b73",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          670,
+          105,
+          69,
+          68
+        ],
+        "region": [
+          670,
+          91,
+          69,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i09",
+      "cell": [
+        12,
+        1
+      ],
+      "crop_rgba_sha256": "3052ff9ecf2eb02d132a65c4c53008178fc17259a725f73bba042d53b5d6fc21",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          758,
+          105,
+          67,
+          68
+        ],
+        "region": [
+          758,
+          91,
+          67,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i10",
+      "cell": [
+        13,
+        1
+      ],
+      "crop_rgba_sha256": "0bf3666f5b6e0c4ddd38cee1a1d7acf0a6c39e5d5f263e9fd10269eee52a66d5",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          844,
+          107,
+          65,
+          64
+        ],
+        "region": [
+          844,
+          91,
+          65,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i11",
+      "cell": [
+        14,
+        1
+      ],
+      "crop_rgba_sha256": "2fb6c76e1f58c9ba777a1fc5a62cd82dc80fa1da60ec16f90ee8125b5140767b",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          929,
+          107,
+          64,
+          63
+        ],
+        "region": [
+          929,
+          91,
+          64,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i12",
+      "cell": [
+        15,
+        1
+      ],
+      "crop_rgba_sha256": "3d4e3323ab3b0fc1e55a3d9efce52cfce9bf904ab0f6e5f27d362b5e2141c97c",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1011,
+          106,
+          59,
+          64
+        ],
+        "region": [
+          1011,
+          91,
+          59,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i13",
+      "cell": [
+        16,
+        1
+      ],
+      "crop_rgba_sha256": "935343681b7eaf7b4ca664965d005fc74f9a7caa87071dcaaf5b0e6bf80d4170",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1098,
+          105,
+          55,
+          68
+        ],
+        "region": [
+          1098,
+          91,
+          55,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i14",
+      "cell": [
+        17,
+        1
+      ],
+      "crop_rgba_sha256": "15f0e467d18575446c3054b32403f8247b6107e1b03cd86799004d94db22d4db",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1186,
+          106,
+          52,
+          66
+        ],
+        "region": [
+          1186,
+          91,
+          52,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i15",
+      "cell": [
+        18,
+        1
+      ],
+      "crop_rgba_sha256": "ca8cc51799f5725c845094560cdfece9e0a3305f1d37289b9011f9501559f02e",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1265,
+          105,
+          62,
+          67
+        ],
+        "region": [
+          1265,
+          91,
+          62,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i16",
+      "cell": [
+        19,
+        1
+      ],
+      "crop_rgba_sha256": "baa4c58ac57eb9745f49fea1fa350227623ff95e0fcd78d2484ecb495ef620de",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1350,
+          107,
+          57,
+          62
+        ],
+        "region": [
+          1350,
+          91,
+          58,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i17",
+      "cell": [
+        20,
+        1
+      ],
+      "crop_rgba_sha256": "4fb1747f56911bb70633a85ef306924c3a36bcaf32dafbd6812201ffcce4e763",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1433,
+          105,
+          67,
+          68
+        ],
+        "region": [
+          1432,
+          91,
+          68,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i18",
+      "cell": [
+        21,
+        1
+      ],
+      "crop_rgba_sha256": "cddb3b209e951f5ca8160b9c1c95abda1dd9784780bc66b90216b3b5f8db95b1",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1525,
+          107,
+          57,
+          62
+        ],
+        "region": [
+          1525,
+          91,
+          57,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i19",
+      "cell": [
+        22,
+        1
+      ],
+      "crop_rgba_sha256": "9e5e9b200b6928847221b75aeca7821209ca243da12139bdc05473f0cf22fc7d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1605,
+          105,
+          61,
+          67
+        ],
+        "region": [
+          1605,
+          91,
+          61,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i20",
+      "cell": [
+        23,
+        1
+      ],
+      "crop_rgba_sha256": "b5e5cb06a0649caeeaf25be2e1531186e3525a7e6777009afdedc35e540e3834",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1689,
+          105,
+          60,
+          67
+        ],
+        "region": [
+          1689,
+          91,
+          60,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i21",
+      "cell": [
+        0,
+        2
+      ],
+      "crop_rgba_sha256": "3c4222951772de090d31da06b3ff67df9f35ca1f068f788ec5dbea04d74ff8f7",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1771,
+          105,
+          78,
+          67
+        ],
+        "region": [
+          1771,
+          91,
+          78,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i22",
+      "cell": [
+        1,
+        2
+      ],
+      "crop_rgba_sha256": "5f51bca817afc38f49e8f30711bfaf9ce5e69cf42fc8af5ccefe0466cb17e172",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1881,
+          106,
+          74,
+          67
+        ],
+        "region": [
+          1881,
+          91,
+          74,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i23",
+      "cell": [
+        2,
+        2
+      ],
+      "crop_rgba_sha256": "83d78716de1cdd55dc6671ebfd3cfa35974240da147a4335e8572a8f1cff8572",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1987,
+          105,
+          75,
+          67
+        ],
+        "region": [
+          1986,
+          91,
+          76,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i24",
+      "cell": [
+        3,
+        2
+      ],
+      "crop_rgba_sha256": "7af43138fc918ebd631efabbf1deaadb5dd22dde52c4e421c491548a60d8dcfa",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          2086,
+          106,
+          71,
+          66
+        ],
+        "region": [
+          2086,
+          91,
+          72,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i00",
+      "cell": [
+        4,
+        2
+      ],
+      "crop_rgba_sha256": "c471ff84fd5b0ab32ca6333328e8311e74b71948119f6e90fe7821849383ea25",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          20,
+          199,
+          54,
+          70
+        ],
+        "region": [
+          20,
+          181,
+          54,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i01",
+      "cell": [
+        5,
+        2
+      ],
+      "crop_rgba_sha256": "b747f4b00db6558855302bbae2e3f24e2384608459bdded0fbb72ef906309cd0",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          103,
+          199,
+          53,
+          70
+        ],
+        "region": [
+          103,
+          181,
+          53,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i02",
+      "cell": [
+        6,
+        2
+      ],
+      "crop_rgba_sha256": "d9d5f56be7aaa35e499aa9f840e5930ef2fccca522fa6839f1c57d9f525ba248",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          185,
+          199,
+          56,
+          70
+        ],
+        "region": [
+          184,
+          181,
+          57,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i03",
+      "cell": [
+        7,
+        2
+      ],
+      "crop_rgba_sha256": "97ed93f1b48e3501096aa9657769e7bc817a03c64f174a036e4de113d5a5b43e",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          278,
+          199,
+          35,
+          70
+        ],
+        "region": [
+          278,
+          181,
+          35,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i04",
+      "cell": [
+        8,
+        2
+      ],
+      "crop_rgba_sha256": "0106fea4cff8db667ffbf8dab3e0bf9d0e99eb34c8962eafec0e3355dadce20d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          356,
+          199,
+          39,
+          70
+        ],
+        "region": [
+          356,
+          181,
+          39,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i05",
+      "cell": [
+        9,
+        2
+      ],
+      "crop_rgba_sha256": "4294246a13284911266ad0e04adfb25c27c2f94c0f9c49b0fa60a8578e39435d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          424,
+          198,
+          62,
+          69
+        ],
+        "region": [
+          424,
+          181,
+          62,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i06",
+      "cell": [
+        10,
+        2
+      ],
+      "crop_rgba_sha256": "4b02636b66c3449b6084d704d97538ff2f483f79d594ee3df5b51aa312f9ce63",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          503,
+          200,
+          69,
+          66
+        ],
+        "region": [
+          503,
+          181,
+          69,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i07",
+      "cell": [
+        11,
+        2
+      ],
+      "crop_rgba_sha256": "290c0a7d0bac6c72a821705987411a2f36d0fb95c485a0b4c0605fd1de73ce26",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          594,
+          199,
+          50,
+          69
+        ],
+        "region": [
+          593,
+          181,
+          51,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i08",
+      "cell": [
+        12,
+        2
+      ],
+      "crop_rgba_sha256": "849a4ac81064f3b9258599dbf2592ee4a8e318c5e91c6dde4c8054ed7e66cf46",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          670,
+          198,
+          70,
+          69
+        ],
+        "region": [
+          670,
+          181,
+          70,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i09",
+      "cell": [
+        13,
+        2
+      ],
+      "crop_rgba_sha256": "8a71e5eb53148100b0d67b59d7bce1dfbe69b1ba869be2d8b37d6fde1821eb6b",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          761,
+          198,
+          61,
+          70
+        ],
+        "region": [
+          760,
+          181,
+          62,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i10",
+      "cell": [
+        14,
+        2
+      ],
+      "crop_rgba_sha256": "58eb3403287629d02a5955dabea26e8f71faaec6836089a1b6e565bd165373ef",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          841,
+          202,
+          69,
+          64
+        ],
+        "region": [
+          841,
+          181,
+          69,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i11",
+      "cell": [
+        15,
+        2
+      ],
+      "crop_rgba_sha256": "fa0fb60a1c38d4080df4804e8aa1a7a40421b068f1d4beb2e3ccfdfacb63ec9d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          926,
+          200,
+          68,
+          67
+        ],
+        "region": [
+          926,
+          181,
+          68,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i12",
+      "cell": [
+        16,
+        2
+      ],
+      "crop_rgba_sha256": "77beb566d904db08656f86e8a05e51895df380327a5b6bd1f9deaa2fdc1a1680",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1011,
+          208,
+          64,
+          54
+        ],
+        "region": [
+          1011,
+          181,
+          64,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i13",
+      "cell": [
+        17,
+        2
+      ],
+      "crop_rgba_sha256": "5031a34601fa0fc7e0646c7adb037418ec4d101cda98b550f66b1a97b918e3d8",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1096,
+          208,
+          65,
+          50
+        ],
+        "region": [
+          1096,
+          181,
+          65,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i14",
+      "cell": [
+        18,
+        2
+      ],
+      "crop_rgba_sha256": "8f04f9addddb1f28554f1eed2f0020210ab8bb2902e67a08429dccc36d4bae90",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1179,
+          201,
+          65,
+          65
+        ],
+        "region": [
+          1179,
+          181,
+          65,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i15",
+      "cell": [
+        19,
+        2
+      ],
+      "crop_rgba_sha256": "06bb4f87d45408bf4b007e4d840ee1c5fc44d3102f168a25e3b00f44a8bfdda3",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1270,
+          200,
+          51,
+          67
+        ],
+        "region": [
+          1270,
+          181,
+          51,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i16",
+      "cell": [
+        20,
+        2
+      ],
+      "crop_rgba_sha256": "89790a86780188bdec39b65a79066f375b089e8125ecb5b49c50082d0c465c92",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1347,
+          200,
+          64,
+          67
+        ],
+        "region": [
+          1347,
+          181,
+          64,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i17",
+      "cell": [
+        21,
+        2
+      ],
+      "crop_rgba_sha256": "1af1386fcde70c31d12bf9b9882f714ed859f847de01edc3264c10f9fa8a7fa2",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1433,
+          197,
+          66,
+          71
+        ],
+        "region": [
+          1433,
+          181,
+          66,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i18",
+      "cell": [
+        22,
+        2
+      ],
+      "crop_rgba_sha256": "b92a747a08004e38dcc9b3f3523701a8d7c30be4c1a931dc214041ebcc382077",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1522,
+          200,
+          59,
+          69
+        ],
+        "region": [
+          1522,
+          181,
+          59,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i19",
+      "cell": [
+        23,
+        2
+      ],
+      "crop_rgba_sha256": "e65766f51e9a87790ca04972fd441cac883b0e96a47f5c6fb846bfa0b117765d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1606,
+          198,
+          60,
+          70
+        ],
+        "region": [
+          1606,
+          181,
+          60,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i20",
+      "cell": [
+        0,
+        3
+      ],
+      "crop_rgba_sha256": "57b797d6e484d1d4ab20a9c40f7fa94835e0a85fb248953ea61cc10675c90b7f",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1695,
+          200,
+          81,
+          67
+        ],
+        "region": [
+          1695,
+          181,
+          81,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i21",
+      "cell": [
+        1,
+        3
+      ],
+      "crop_rgba_sha256": "00708fe01fed984b0ec48aff1bcf1175a9087ca360b117b3afd87fb0fa9f6687",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1803,
+          200,
+          69,
+          67
+        ],
+        "region": [
+          1803,
+          181,
+          69,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i22",
+      "cell": [
+        2,
+        3
+      ],
+      "crop_rgba_sha256": "26f0e63976e7029eda0ea7033d41f9541ee03f668f3f107bb43bcb4ab368fe4d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1901,
+          200,
+          68,
+          67
+        ],
+        "region": [
+          1901,
+          181,
+          69,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i23",
+      "cell": [
+        3,
+        3
+      ],
+      "crop_rgba_sha256": "f1a631db390d976470939d049ba1b3b0c464d0a5f2eb07e2094da0ee1c417ef1",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          2008,
+          199,
+          47,
+          70
+        ],
+        "region": [
+          2008,
+          181,
+          47,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r02i24",
+      "cell": [
+        4,
+        3
+      ],
+      "crop_rgba_sha256": "ae19359f9b8db40abb1ac4d1dca5fb969714a25998a23c5c2c4eed052fb04173",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          2091,
+          200,
+          61,
+          68
+        ],
+        "region": [
+          2091,
+          181,
+          61,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i00",
+      "cell": [
+        5,
+        3
+      ],
+      "crop_rgba_sha256": "317ebfc99910556ac7c7fff910734c6d95948d726edcc39b811565ce768dd0d2",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          13,
+          294,
+          66,
+          65
+        ],
+        "region": [
+          12,
+          275,
+          67,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i01",
+      "cell": [
+        6,
+        3
+      ],
+      "crop_rgba_sha256": "299820eeee5bc13bc6649a2edd71fbe2e68929d21df006cdd4f07f2a40834e2e",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          97,
+          294,
+          66,
+          65
+        ],
+        "region": [
+          97,
+          275,
+          66,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i02",
+      "cell": [
+        7,
+        3
+      ],
+      "crop_rgba_sha256": "600919337badc4e054f3539e7f65820801181d2746fd022d0dbcc450246ff958",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          187,
+          292,
+          52,
+          68
+        ],
+        "region": [
+          187,
+          275,
+          52,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i03",
+      "cell": [
+        8,
+        3
+      ],
+      "crop_rgba_sha256": "6199358416b1ac51349c7ff1d5bc869733cd502ef815d040f7784f30ead0d9bb",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          263,
+          292,
+          65,
+          68
+        ],
+        "region": [
+          263,
+          275,
+          65,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i04",
+      "cell": [
+        9,
+        3
+      ],
+      "crop_rgba_sha256": "b55ac81f74f0d8a83a75bf5979b37f7908566505cfeb272f76f3defd3f79faa3",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          359,
+          292,
+          42,
+          68
+        ],
+        "region": [
+          358,
+          275,
+          43,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i05",
+      "cell": [
+        10,
+        3
+      ],
+      "crop_rgba_sha256": "0b4dfa7652d08348c18b683157f76a5e51197c038a2c1f5ffd38c0289c3cb925",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          431,
+          293,
+          47,
+          66
+        ],
+        "region": [
+          431,
+          275,
+          47,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i06",
+      "cell": [
+        11,
+        3
+      ],
+      "crop_rgba_sha256": "d1c9e81154933aa22ee9dfa4bc056849ca2a4e4f369b67f7a9fa6883e9726d8f",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          505,
+          292,
+          63,
+          68
+        ],
+        "region": [
+          505,
+          275,
+          63,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i07",
+      "cell": [
+        12,
+        3
+      ],
+      "crop_rgba_sha256": "17cae2f6c3f79b621a7f6cdb38c5d64984f021aa0ec86b4978180e3d19eb9b3d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          587,
+          293,
+          62,
+          68
+        ],
+        "region": [
+          587,
+          275,
+          62,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i08",
+      "cell": [
+        13,
+        3
+      ],
+      "crop_rgba_sha256": "6c14c647bfc05cdb12edb408cf7cfeb5430152efe110e9a95c86ad6dbea2a62d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          671,
+          292,
+          65,
+          68
+        ],
+        "region": [
+          671,
+          275,
+          65,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i09",
+      "cell": [
+        14,
+        3
+      ],
+      "crop_rgba_sha256": "baa50180bcf13854dcef9b246f1349aeb59ed293fe7dceb384965e58657a3da3",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          759,
+          294,
+          63,
+          65
+        ],
+        "region": [
+          759,
+          275,
+          63,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i10",
+      "cell": [
+        15,
+        3
+      ],
+      "crop_rgba_sha256": "908109922d35df3cfe4ef497a99ddcbfe692bdd0c86372c6f57adc0b214278b3",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          852,
+          294,
+          47,
+          65
+        ],
+        "region": [
+          852,
+          275,
+          47,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i11",
+      "cell": [
+        16,
+        3
+      ],
+      "crop_rgba_sha256": "f94d4ee9278f3b434ea4afe2380f1557907e5b7d44e0e5ed484d758e3f7992f6",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          928,
+          293,
+          62,
+          66
+        ],
+        "region": [
+          928,
+          275,
+          62,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i12",
+      "cell": [
+        17,
+        3
+      ],
+      "crop_rgba_sha256": "285ade5d4f02bb9ea30c58b450a6ec4541fbb5ea809769d63c0e21d25cc2312b",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1010,
+          298,
+          66,
+          58
+        ],
+        "region": [
+          1010,
+          275,
+          67,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i13",
+      "cell": [
+        18,
+        3
+      ],
+      "crop_rgba_sha256": "e9e33f193e2a3f413533f9bb9289f267d49842036d8fe79b169e6f69ebfe2ff5",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1097,
+          293,
+          61,
+          67
+        ],
+        "region": [
+          1097,
+          275,
+          61,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i14",
+      "cell": [
+        19,
+        3
+      ],
+      "crop_rgba_sha256": "c7989003af13e7170a253a4ebda5b1f980287d1dadfb81bd17063d99d6e0e16f",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1179,
+          293,
+          61,
+          67
+        ],
+        "region": [
+          1179,
+          275,
+          61,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i15",
+      "cell": [
+        20,
+        3
+      ],
+      "crop_rgba_sha256": "c46cbd1c5e065fb68cdc401e2607c6c213ee0a7eb417f2e9a06c4eab7441422a",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1266,
+          293,
+          59,
+          66
+        ],
+        "region": [
+          1266,
+          275,
+          59,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i16",
+      "cell": [
+        21,
+        3
+      ],
+      "crop_rgba_sha256": "7d62e5d0680b8584ea68467906626df3cac981e529a9f9631524d45c60085fa2",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1347,
+          293,
+          64,
+          65
+        ],
+        "region": [
+          1347,
+          275,
+          64,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i17",
+      "cell": [
+        22,
+        3
+      ],
+      "crop_rgba_sha256": "3d809d2daf883d2ab7bd9c6e5e9bfa4d922c01e2eaab3145fa76efb6c08f11ce",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1433,
+          294,
+          65,
+          65
+        ],
+        "region": [
+          1433,
+          275,
+          65,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i18",
+      "cell": [
+        23,
+        3
+      ],
+      "crop_rgba_sha256": "09f12593e2b8bb4040a34c99cf0d059ad1edfa536334de2f85c8889c6773c9fe",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1520,
+          294,
+          63,
+          66
+        ],
+        "region": [
+          1520,
+          275,
+          63,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i19",
+      "cell": [
+        0,
+        4
+      ],
+      "crop_rgba_sha256": "f6fd634bfd2188805c1a0a26956c407eadb35365494fb6e4689b0426235ea1a4",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1605,
+          294,
+          64,
+          66
+        ],
+        "region": [
+          1605,
+          275,
+          64,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i20",
+      "cell": [
+        1,
+        4
+      ],
+      "crop_rgba_sha256": "4c428c3760993113eb5a97b1b2bd580fae47de0ebaa492ec501f897039fd9f94",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1694,
+          294,
+          69,
+          66
+        ],
+        "region": [
+          1694,
+          275,
+          69,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i21",
+      "cell": [
+        2,
+        4
+      ],
+      "crop_rgba_sha256": "5c60e0b0fbc1df382c77217e2b4b67027b709bd8d16bdda585c53bb27ae21484",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1786,
+          299,
+          82,
+          56
+        ],
+        "region": [
+          1786,
+          275,
+          82,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i22",
+      "cell": [
+        3,
+        4
+      ],
+      "crop_rgba_sha256": "b0ac19b568b5ac2660165e41fc698ace69cdf93585ec44d329958572b776e6ee",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1892,
+          293,
+          60,
+          67
+        ],
+        "region": [
+          1892,
+          275,
+          60,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i23",
+      "cell": [
+        4,
+        4
+      ],
+      "crop_rgba_sha256": "29ad2f5619a402294e69ed47c21b8b26230d6bfad6879b311ad4b71304879078",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1976,
+          294,
+          88,
+          65
+        ],
+        "region": [
+          1976,
+          275,
+          88,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r03i24",
+      "cell": [
+        5,
+        4
+      ],
+      "crop_rgba_sha256": "6352211f600ca8b67d2b7487f9657d5f785d6926691555ff7db2eaa7b30296de",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          2084,
+          298,
+          75,
+          57
+        ],
+        "region": [
+          2084,
+          275,
+          76,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i00",
+      "cell": [
+        6,
+        4
+      ],
+      "crop_rgba_sha256": "dfe4f3221d70f4934b8ea1cfcbd7d896230547acbde8d7a3307ff3ee24034c17",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          12,
+          391,
+          72,
+          65
+        ],
+        "region": [
+          12,
+          367,
+          72,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i01",
+      "cell": [
+        7,
+        4
+      ],
+      "crop_rgba_sha256": "e65a1b10d43872272d10aef25d1211abbf2c7851f27d4646f9ce16e6b6e354c8",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          97,
+          390,
+          55,
+          68
+        ],
+        "region": [
+          97,
+          367,
+          55,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i02",
+      "cell": [
+        8,
+        4
+      ],
+      "crop_rgba_sha256": "85fa4d7f8efdfa7f7d6ee33af936fd4a51cd18e815039d664c4b2859a4f40cb5",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          164,
+          390,
+          65,
+          67
+        ],
+        "region": [
+          164,
+          367,
+          65,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i03",
+      "cell": [
+        9,
+        4
+      ],
+      "crop_rgba_sha256": "3b24d9323ff93c5a2d4f804619b00c70475d748750f81ed075ae288007f2130b",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          241,
+          390,
+          77,
+          67
+        ],
+        "region": [
+          241,
+          367,
+          77,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i04",
+      "cell": [
+        10,
+        4
+      ],
+      "crop_rgba_sha256": "7932241d9da0ed982055b2311e28f227aee434bcb7573b0aaa2f4cdb9439c657",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          332,
+          391,
+          73,
+          65
+        ],
+        "region": [
+          332,
+          367,
+          73,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i05",
+      "cell": [
+        11,
+        4
+      ],
+      "crop_rgba_sha256": "af706f20a1c0af6d2df6e29d24f498424b953d75119da846bac333546c9ce48c",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          419,
+          389,
+          63,
+          67
+        ],
+        "region": [
+          419,
+          367,
+          63,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i06",
+      "cell": [
+        12,
+        4
+      ],
+      "crop_rgba_sha256": "5851fe444a55c8c65d845cf42be57c627f11dc85ac15c0ad5412d160c2d93b6f",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          496,
+          390,
+          72,
+          66
+        ],
+        "region": [
+          496,
+          367,
+          72,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i07",
+      "cell": [
+        13,
+        4
+      ],
+      "crop_rgba_sha256": "7123e850ce619b28377bf1c2d6d1e39d788ea5646fad5016b8555fea4ce1f8f5",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          588,
+          388,
+          59,
+          70
+        ],
+        "region": [
+          588,
+          367,
+          59,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i08",
+      "cell": [
+        14,
+        4
+      ],
+      "crop_rgba_sha256": "d3cd8fa685eef4173ea2a6c9c91e90d582c154ad75e0b4b0ced62afeaf1189ac",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          665,
+          390,
+          74,
+          66
+        ],
+        "region": [
+          665,
+          367,
+          74,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i09",
+      "cell": [
+        15,
+        4
+      ],
+      "crop_rgba_sha256": "0c2d39c5180da44aa0407f5cf606b6030d8ca4936a649f6dfd8a3ac4b04c5518",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          753,
+          390,
+          70,
+          66
+        ],
+        "region": [
+          753,
+          367,
+          71,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i10",
+      "cell": [
+        16,
+        4
+      ],
+      "crop_rgba_sha256": "6ccbd74bd7448e21411bcbdfbfbc51b700a74886520539b995924838bb05be04",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          839,
+          390,
+          71,
+          66
+        ],
+        "region": [
+          839,
+          367,
+          71,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i11",
+      "cell": [
+        17,
+        4
+      ],
+      "crop_rgba_sha256": "7c16333a04497427d7f89ff8076a35ae216d18631604d4c348c1491ca9ceae65",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          925,
+          390,
+          69,
+          67
+        ],
+        "region": [
+          924,
+          367,
+          70,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i12",
+      "cell": [
+        18,
+        4
+      ],
+      "crop_rgba_sha256": "bf180609b802f1bc19422e7e8557f84b3fa63710ee5740fa9d60382246534e5f",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1020,
+          387,
+          44,
+          72
+        ],
+        "region": [
+          1020,
+          367,
+          45,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i13",
+      "cell": [
+        19,
+        4
+      ],
+      "crop_rgba_sha256": "6fbba10f2925c81cdf74145a4c792dd66acda95371a4a03092b421c0829d407d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1092,
+          402,
+          70,
+          42
+        ],
+        "region": [
+          1092,
+          367,
+          70,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i14",
+      "cell": [
+        20,
+        4
+      ],
+      "crop_rgba_sha256": "6f5b2cc53bfa17b450dac7737be116aa7eb8b0638bf0401bca13d4dddf320f3a",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1179,
+          403,
+          67,
+          47
+        ],
+        "region": [
+          1179,
+          367,
+          67,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i15",
+      "cell": [
+        21,
+        4
+      ],
+      "crop_rgba_sha256": "60e5a1a1ac454490932277f805b1841d6290137a3dbc32ebcd912b7ad4b57da5",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1262,
+          390,
+          67,
+          66
+        ],
+        "region": [
+          1262,
+          367,
+          67,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i16",
+      "cell": [
+        22,
+        4
+      ],
+      "crop_rgba_sha256": "8e940c1360ab5144dfe73d638feee72cdd14b8959040becca8e10bc5d7f078a3",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1347,
+          390,
+          73,
+          67
+        ],
+        "region": [
+          1347,
+          367,
+          74,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i17",
+      "cell": [
+        23,
+        4
+      ],
+      "crop_rgba_sha256": "8d24f7a45467ffc6b43444b9f43a2adc5f08e31d8fe56e9c8177844b9d1d963f",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1441,
+          389,
+          62,
+          69
+        ],
+        "region": [
+          1441,
+          367,
+          62,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i18",
+      "cell": [
+        0,
+        5
+      ],
+      "crop_rgba_sha256": "4ba4685674675c8b1123ba0f16538f00797c23119f44127dd0f575d2cd91cd8d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1530,
+          389,
+          57,
+          68
+        ],
+        "region": [
+          1530,
+          367,
+          57,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i19",
+      "cell": [
+        1,
+        5
+      ],
+      "crop_rgba_sha256": "8169306f2bf7fe02bf40f52f84618bfc1fde944f32bfcf9bbf4a6eed63cb2c53",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1622,
+          389,
+          64,
+          68
+        ],
+        "region": [
+          1622,
+          367,
+          64,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i20",
+      "cell": [
+        2,
+        5
+      ],
+      "crop_rgba_sha256": "58f3e58dc9cc0913e9f4d122a51270ca2e47bcddd547df6bfbee6fc93a21accd",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1719,
+          389,
+          57,
+          69
+        ],
+        "region": [
+          1719,
+          367,
+          57,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i21",
+      "cell": [
+        3,
+        5
+      ],
+      "crop_rgba_sha256": "224c0970908a8eb404dda8f7984b9a30607bc4f71fee49b489eefd118365ef6b",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1803,
+          390,
+          84,
+          56
+        ],
+        "region": [
+          1803,
+          367,
+          84,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i22",
+      "cell": [
+        4,
+        5
+      ],
+      "crop_rgba_sha256": "56b07f5275bc41cfcc8ecbfb1b1e97e86e48a0d9e124a8a3794ee116438a1f86",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1911,
+          399,
+          68,
+          48
+        ],
+        "region": [
+          1911,
+          367,
+          68,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i23",
+      "cell": [
+        5,
+        5
+      ],
+      "crop_rgba_sha256": "2d2544c6296040cad0636ac901019b802e0cc74e75782951463ef0ef6e792098",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          2003,
+          391,
+          66,
+          64
+        ],
+        "region": [
+          2003,
+          367,
+          66,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r04i24",
+      "cell": [
+        6,
+        5
+      ],
+      "crop_rgba_sha256": "1da8695e1c99fed554f1e21c64ad75360559060fb2a6890f531beb5e9c677c7b",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          2093,
+          390,
+          65,
+          68
+        ],
+        "region": [
+          2093,
+          367,
+          65,
+          96
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i00",
+      "cell": [
+        7,
+        5
+      ],
+      "crop_rgba_sha256": "71f86e186a721f12e1590e75cd29de407c3a11f43368bcadd8b729b650b3b3b3",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          15,
+          477,
+          69,
+          66
+        ],
+        "region": [
+          15,
+          463,
+          69,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i01",
+      "cell": [
+        8,
+        5
+      ],
+      "crop_rgba_sha256": "deed59d05e92e6d7890623de6351bdca033ca4ce947218827ebab930a61f4771",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          102,
+          478,
+          63,
+          65
+        ],
+        "region": [
+          102,
+          463,
+          63,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i02",
+      "cell": [
+        9,
+        5
+      ],
+      "crop_rgba_sha256": "cd5a7c63a3661a542d1446d290d2ad96e36380f1a590f0656763ca1ca438c40c",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          183,
+          483,
+          68,
+          57
+        ],
+        "region": [
+          183,
+          463,
+          68,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i03",
+      "cell": [
+        10,
+        5
+      ],
+      "crop_rgba_sha256": "250cd5fab0253900aeb9e63097d7fa992463b170c2d8885871ae685adc03be33",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          265,
+          480,
+          71,
+          62
+        ],
+        "region": [
+          265,
+          463,
+          72,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i04",
+      "cell": [
+        11,
+        5
+      ],
+      "crop_rgba_sha256": "f7105fc40431c5eef714b36694e81bfdb998519a8be26f3849441963f38ecae6",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          352,
+          478,
+          58,
+          64
+        ],
+        "region": [
+          352,
+          463,
+          58,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i05",
+      "cell": [
+        12,
+        5
+      ],
+      "crop_rgba_sha256": "d04231a27c198919e31a39b268dee861602f594c143ea66f9c4fc6d36c71bb33",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          428,
+          478,
+          62,
+          64
+        ],
+        "region": [
+          428,
+          463,
+          62,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i06",
+      "cell": [
+        13,
+        5
+      ],
+      "crop_rgba_sha256": "60a8c4c3e4cba7dcaed737f627524e6ff825483c2f60529d9645dd1d9caa9eaf",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          505,
+          481,
+          67,
+          59
+        ],
+        "region": [
+          505,
+          463,
+          67,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i07",
+      "cell": [
+        14,
+        5
+      ],
+      "crop_rgba_sha256": "5799ce47a764ea25dafc8d903288638da0a0e46fecf5280039d9351179c14d42",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          590,
+          477,
+          59,
+          66
+        ],
+        "region": [
+          590,
+          463,
+          59,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i08",
+      "cell": [
+        15,
+        5
+      ],
+      "crop_rgba_sha256": "d734a6d1287bd066a42e2586f55c83d653751f76fd4b0bae73b2abe49412b2aa",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          668,
+          479,
+          65,
+          62
+        ],
+        "region": [
+          668,
+          463,
+          65,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i09",
+      "cell": [
+        16,
+        5
+      ],
+      "crop_rgba_sha256": "77322ffe31d2969a6afc0811107c0f637cc6293bfc87a159d266d6043b95dd0c",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          750,
+          477,
+          59,
+          67
+        ],
+        "region": [
+          750,
+          463,
+          59,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i10",
+      "cell": [
+        17,
+        5
+      ],
+      "crop_rgba_sha256": "fc5c81d43a1cc5e6ec2c3d0e917c2bf2a538b064307e939dfff8a36607910c2f",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          828,
+          479,
+          72,
+          63
+        ],
+        "region": [
+          828,
+          463,
+          73,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i11",
+      "cell": [
+        18,
+        5
+      ],
+      "crop_rgba_sha256": "c4ca6822afd9c98d798674444ced0075b0c98399ce05f0b24ee961c82358be3a",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          918,
+          480,
+          65,
+          63
+        ],
+        "region": [
+          918,
+          463,
+          65,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i12",
+      "cell": [
+        19,
+        5
+      ],
+      "crop_rgba_sha256": "568bbd9fe0c8df58345b27e097a36e3abeda107e9eecb6084a7ca19823cb6a73",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1000,
+          478,
+          68,
+          64
+        ],
+        "region": [
+          1000,
+          463,
+          69,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i13",
+      "cell": [
+        20,
+        5
+      ],
+      "crop_rgba_sha256": "2138120081ce82c1631e7fd9636996fe5eae4d723d272e6b8ab3260187e8ee3c",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1084,
+          480,
+          78,
+          62
+        ],
+        "region": [
+          1084,
+          463,
+          78,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i14",
+      "cell": [
+        21,
+        5
+      ],
+      "crop_rgba_sha256": "0e522cd84ceae9ffb76374e9524e13fc219ec6e865af0e00cda5641f441eb49e",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1179,
+          486,
+          69,
+          49
+        ],
+        "region": [
+          1179,
+          463,
+          69,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i15",
+      "cell": [
+        22,
+        5
+      ],
+      "crop_rgba_sha256": "0bf8d2f724c90689a8201c76648242a53cdc328c6a1721389ba2412b518fa84a",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1267,
+          478,
+          84,
+          59
+        ],
+        "region": [
+          1267,
+          463,
+          84,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i16",
+      "cell": [
+        23,
+        5
+      ],
+      "crop_rgba_sha256": "b6e207fb64698c609fa74a08748803df1971eefe06379b2cc547f9965bf659ca",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1367,
+          480,
+          67,
+          61
+        ],
+        "region": [
+          1367,
+          463,
+          67,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i17",
+      "cell": [
+        0,
+        6
+      ],
+      "crop_rgba_sha256": "0699bd56a69202adf7e8ca71d7ba4cd457cfbe6ed98ef9336fdead4ad3ad5f2c",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1448,
+          477,
+          69,
+          66
+        ],
+        "region": [
+          1448,
+          463,
+          69,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i18",
+      "cell": [
+        1,
+        6
+      ],
+      "crop_rgba_sha256": "6076a2a86ad44d629975e7245dd3998adf3956c194a1a6212cf49fded0e6a8de",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1530,
+          479,
+          79,
+          61
+        ],
+        "region": [
+          1530,
+          463,
+          79,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i19",
+      "cell": [
+        2,
+        6
+      ],
+      "crop_rgba_sha256": "b566fb9bdcb7b43382907bbf16681d7c9cffa78e9571050b089807e4d5552c06",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1627,
+          477,
+          58,
+          66
+        ],
+        "region": [
+          1627,
+          463,
+          58,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i20",
+      "cell": [
+        3,
+        6
+      ],
+      "crop_rgba_sha256": "af0035b98af4231618a4362d058b259ced8fe6ccfa87a3cdf6babe642b64820d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1706,
+          488,
+          65,
+          47
+        ],
+        "region": [
+          1706,
+          463,
+          65,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i21",
+      "cell": [
+        4,
+        6
+      ],
+      "crop_rgba_sha256": "9f5dfc1b493113d60fd99af38c2e248ae121c8d2dde2c1dbbedbf99bd0d42974",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1785,
+          483,
+          66,
+          54
+        ],
+        "region": [
+          1785,
+          463,
+          66,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i22",
+      "cell": [
+        5,
+        6
+      ],
+      "crop_rgba_sha256": "a8d0e6ce01f2e0212090d5a37c8e500ff30c9d2aed3246af2ab98347a0cc0643",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1866,
+          479,
+          63,
+          62
+        ],
+        "region": [
+          1865,
+          463,
+          65,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i23",
+      "cell": [
+        6,
+        6
+      ],
+      "crop_rgba_sha256": "bcb2eb96c6972f8fb59970f1f63976c1219c04240d162735fd04ea91cc8d4a04",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1944,
+          480,
+          61,
+          63
+        ],
+        "region": [
+          1944,
+          463,
+          61,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i24",
+      "cell": [
+        7,
+        6
+      ],
+      "crop_rgba_sha256": "18a56e29317599c0ef2927607ef3acec90cf16bc9976676ec3eb67535b2d1c7e",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          2025,
+          478,
+          52,
+          65
+        ],
+        "region": [
+          2024,
+          463,
+          53,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r05i25",
+      "cell": [
+        8,
+        6
+      ],
+      "crop_rgba_sha256": "1d218d77d009dbfa25620f3dcb52b5efeac996bca8bfa48f6280aad265188a68",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          2096,
+          479,
+          62,
+          61
+        ],
+        "region": [
+          2096,
+          463,
+          62,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i00",
+      "cell": [
+        9,
+        6
+      ],
+      "crop_rgba_sha256": "b37446afb9d55128d13676d573ee2f32118f89bcf5d54bf0f6258f030bca2c61",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          20,
+          561,
+          62,
+          68
+        ],
+        "region": [
+          20,
+          549,
+          62,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i01",
+      "cell": [
+        10,
+        6
+      ],
+      "crop_rgba_sha256": "da5a7653ea309ecd40bca63b9cfc73326b078580177370e74a02210d96f2f3c8",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          102,
+          562,
+          62,
+          66
+        ],
+        "region": [
+          102,
+          549,
+          62,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i02",
+      "cell": [
+        11,
+        6
+      ],
+      "crop_rgba_sha256": "509ecffaae3defabd373d6a553f3b39b8e0d9b4057c493552b61fec3eb3d5768",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          184,
+          562,
+          65,
+          67
+        ],
+        "region": [
+          184,
+          549,
+          65,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i03",
+      "cell": [
+        12,
+        6
+      ],
+      "crop_rgba_sha256": "b9cc7989e1437953bac498dc8ab56e56e110b87c22a1dd5b75a2979b6570a620",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          270,
+          562,
+          55,
+          67
+        ],
+        "region": [
+          270,
+          549,
+          55,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i04",
+      "cell": [
+        13,
+        6
+      ],
+      "crop_rgba_sha256": "b263ea5ff1e82b3ea46fbbafa8bcbd14828fb48e7d5ffd41331bcdd0b9d9170e",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          347,
+          562,
+          59,
+          66
+        ],
+        "region": [
+          347,
+          549,
+          59,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i05",
+      "cell": [
+        14,
+        6
+      ],
+      "crop_rgba_sha256": "5339dc8228889db7ddd13cdad772607373c70e0b426adbc6019f3b0fc2ad6443",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          425,
+          562,
+          64,
+          65
+        ],
+        "region": [
+          424,
+          549,
+          66,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i06",
+      "cell": [
+        15,
+        6
+      ],
+      "crop_rgba_sha256": "b01c6a7bca2dc755300a3280c7cef9c78e7583390d7a2ba7c9eb983deaf7ac50",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          508,
+          564,
+          63,
+          62
+        ],
+        "region": [
+          508,
+          549,
+          63,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i07",
+      "cell": [
+        16,
+        6
+      ],
+      "crop_rgba_sha256": "51c85fc16c8d51a85a1d4b022695822395dad629f47312f49f19d32b84505a50",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          590,
+          562,
+          59,
+          67
+        ],
+        "region": [
+          590,
+          549,
+          59,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i08",
+      "cell": [
+        17,
+        6
+      ],
+      "crop_rgba_sha256": "e9601b117077a10ec12ff3eb8ba6490972d00c4ebc603ecd11901dc470e59372",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          666,
+          570,
+          71,
+          48
+        ],
+        "region": [
+          666,
+          549,
+          72,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i09",
+      "cell": [
+        18,
+        6
+      ],
+      "crop_rgba_sha256": "07b901ea302b19e0844c5283224062fe6fc8d39ae924028b523fad365d3d4540",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          757,
+          564,
+          66,
+          63
+        ],
+        "region": [
+          757,
+          549,
+          67,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i10",
+      "cell": [
+        19,
+        6
+      ],
+      "crop_rgba_sha256": "aabacd7af1314178fe8a0c3c0c90b38ada3d7469daa13caf1801e86eb175530f",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          848,
+          564,
+          60,
+          63
+        ],
+        "region": [
+          848,
+          549,
+          60,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i11",
+      "cell": [
+        20,
+        6
+      ],
+      "crop_rgba_sha256": "656891d7372536f01a612defd8d126dbe3c71a9c9f6ee407cde93c65d93fb860",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          937,
+          562,
+          47,
+          67
+        ],
+        "region": [
+          937,
+          549,
+          47,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i12",
+      "cell": [
+        21,
+        6
+      ],
+      "crop_rgba_sha256": "05b4ea521cc1ed6aaf759ed1e5fbf2029bca8cdfe2221996749d6550529d0a1e",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1012,
+          563,
+          63,
+          63
+        ],
+        "region": [
+          1012,
+          549,
+          64,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i13",
+      "cell": [
+        22,
+        6
+      ],
+      "crop_rgba_sha256": "1f163c60fa8eb8699227d9e0f9ea2bae5a434bdc205f2ddca98be7213fcaf612",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1098,
+          566,
+          56,
+          59
+        ],
+        "region": [
+          1098,
+          549,
+          56,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i14",
+      "cell": [
+        23,
+        6
+      ],
+      "crop_rgba_sha256": "42a5c7dd3970a52564a8134c559e88d50f4e720615fca957754f1507c555f00f",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1185,
+          567,
+          57,
+          56
+        ],
+        "region": [
+          1185,
+          549,
+          57,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i15",
+      "cell": [
+        0,
+        7
+      ],
+      "crop_rgba_sha256": "1c1c74ecaf6db75a2f4055238e65ed77ef944eccc71a0b2dd738a66c1ae7f693",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1273,
+          565,
+          50,
+          60
+        ],
+        "region": [
+          1272,
+          549,
+          51,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i16",
+      "cell": [
+        1,
+        7
+      ],
+      "crop_rgba_sha256": "09f6224da15a8c707cdbc9f3a5efdc2dffdfb0db2eeeac74fdf944e393badcdc",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1356,
+          567,
+          21,
+          57
+        ],
+        "region": [
+          1356,
+          549,
+          21,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i17",
+      "cell": [
+        2,
+        7
+      ],
+      "crop_rgba_sha256": "f35f4828560bae7994c97c9c9f804c28a6163dec10c55840d3587f76c43f9e94",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1382,
+          567,
+          21,
+          57
+        ],
+        "region": [
+          1382,
+          549,
+          21,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i18",
+      "cell": [
+        3,
+        7
+      ],
+      "crop_rgba_sha256": "313907cf3bfb5f2422900414d19899c4f59c875652895536f8efb3ba10faf47d",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1435,
+          567,
+          56,
+          57
+        ],
+        "region": [
+          1435,
+          549,
+          56,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i19",
+      "cell": [
+        4,
+        7
+      ],
+      "crop_rgba_sha256": "5e19c2f67eb78300ab3dce4b362116d66ca473ade4feb2bec533ac1618135e2a",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1522,
+          567,
+          53,
+          56
+        ],
+        "region": [
+          1522,
+          549,
+          53,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i20",
+      "cell": [
+        5,
+        7
+      ],
+      "crop_rgba_sha256": "9f6c5da7a0655f7e919b6ac8e68f34910742013975fa6d7155248a1e9d08935a",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1603,
+          564,
+          62,
+          62
+        ],
+        "region": [
+          1603,
+          549,
+          62,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i21",
+      "cell": [
+        6,
+        7
+      ],
+      "crop_rgba_sha256": "c178c0acf3e5a7dd1be1bdd10b1388a1d78542716747d4c3bd46e6ae4f702032",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1685,
+          573,
+          78,
+          50
+        ],
+        "region": [
+          1685,
+          549,
+          78,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i22",
+      "cell": [
+        7,
+        7
+      ],
+      "crop_rgba_sha256": "e1936a6dd21750cc5957b0d7b3345300109149527bbe263d4ee2f9f2f13974b7",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1784,
+          575,
+          86,
+          48
+        ],
+        "region": [
+          1784,
+          549,
+          86,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i23",
+      "cell": [
+        8,
+        7
+      ],
+      "crop_rgba_sha256": "e50d8d63b40876a588eecd6bf8c6702c9143b0aee260c5985e6676cccf98d574",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1892,
+          563,
+          63,
+          66
+        ],
+        "region": [
+          1892,
+          549,
+          63,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i24",
+      "cell": [
+        9,
+        7
+      ],
+      "crop_rgba_sha256": "52a66e6e911624f5e575a5cdfbb2bd7abc3a24c0ecbae69d0fe1e38145b312f4",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1986,
+          563,
+          59,
+          65
+        ],
+        "region": [
+          1986,
+          549,
+          59,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r06i25",
+      "cell": [
+        10,
+        7
+      ],
+      "crop_rgba_sha256": "c6402b55bbd6c9dc11584fb85c805cce550c3b0e3973bf552881369e341e01ab",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          2085,
+          568,
+          59,
+          56
+        ],
+        "region": [
+          2085,
+          549,
+          59,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i00",
+      "cell": [
+        11,
+        7
+      ],
+      "crop_rgba_sha256": "30356529656b04fbc746b5fdcb9436323b5ffbc41d0f91d5752799ca19993e93",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          15,
+          646,
+          65,
+          62
+        ],
+        "region": [
+          15,
+          635,
+          65,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i01",
+      "cell": [
+        12,
+        7
+      ],
+      "crop_rgba_sha256": "ca1eea912e958ab4960f9962fde141b1bd6e0b58d8ee45331a9b989010df28bc",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          97,
+          646,
+          65,
+          63
+        ],
+        "region": [
+          97,
+          635,
+          65,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i02",
+      "cell": [
+        13,
+        7
+      ],
+      "crop_rgba_sha256": "b65f28e796025f5f2f3e15adeb7535343b568b6cf39d9883d5c9fbed8d505a06",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          186,
+          648,
+          45,
+          58
+        ],
+        "region": [
+          186,
+          635,
+          45,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i03",
+      "cell": [
+        14,
+        7
+      ],
+      "crop_rgba_sha256": "a7b6fe6aaee6077588e3bd48bfb1579877499e20268b6c43de311069fccd90f1",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          259,
+          648,
+          57,
+          59
+        ],
+        "region": [
+          259,
+          635,
+          57,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i04",
+      "cell": [
+        15,
+        7
+      ],
+      "crop_rgba_sha256": "d7fc7f0b35020f84a6e68592173a05ae2d0331db610e0e54a1a89adbab94ab73",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          338,
+          646,
+          65,
+          62
+        ],
+        "region": [
+          338,
+          635,
+          65,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i05",
+      "cell": [
+        16,
+        7
+      ],
+      "crop_rgba_sha256": "e16dd2946046b7e655d87938ec580cc96dba80a189d4e1e89acf188db212b726",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          421,
+          647,
+          64,
+          62
+        ],
+        "region": [
+          421,
+          635,
+          65,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i06",
+      "cell": [
+        17,
+        7
+      ],
+      "crop_rgba_sha256": "cb9ba195f9b68fb405048d8662753186cff7c45a07d01238897871b06147b082",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          503,
+          645,
+          65,
+          65
+        ],
+        "region": [
+          503,
+          635,
+          65,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i07",
+      "cell": [
+        18,
+        7
+      ],
+      "crop_rgba_sha256": "b2c22ebab86bdf10ddd2350efb510dccbc5e93c9a6152611828d4a8705b936a7",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          588,
+          646,
+          57,
+          63
+        ],
+        "region": [
+          588,
+          635,
+          57,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i08",
+      "cell": [
+        19,
+        7
+      ],
+      "crop_rgba_sha256": "4ac47034bac36677d1d3e3c17fb2ff641dc6c24144e785d502025694700feb9f",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          667,
+          647,
+          61,
+          61
+        ],
+        "region": [
+          667,
+          635,
+          61,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i09",
+      "cell": [
+        20,
+        7
+      ],
+      "crop_rgba_sha256": "f8477e36c977c5ebee86dadb5cc8f69c980d8600b0be77b0264319cfa4498f64",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          753,
+          661,
+          72,
+          45
+        ],
+        "region": [
+          753,
+          635,
+          72,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i10",
+      "cell": [
+        21,
+        7
+      ],
+      "crop_rgba_sha256": "372647c710b3cea1e75e9f2f58aadcf4324eefe41a16945be43d456f89a59ee5",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          846,
+          646,
+          65,
+          65
+        ],
+        "region": [
+          846,
+          635,
+          65,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i11",
+      "cell": [
+        22,
+        7
+      ],
+      "crop_rgba_sha256": "99493136981e610bfb7e8af1d9a231fdcf89b19e457bb2f64c3d168ad8594f67",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          932,
+          646,
+          59,
+          63
+        ],
+        "region": [
+          931,
+          635,
+          60,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r07i12",
+      "cell": [
+        23,
+        7
+      ],
+      "crop_rgba_sha256": "fa509982d9d59ef4ead339b14c6072027ef35b20f1c60ca617c7d0889a584cdd",
+      "source": {
+        "file": "monochrome_rpg_icon_sprite_sheet.png",
+        "bbox": [
+          1011,
+          646,
+          65,
+          63
+        ],
+        "region": [
+          1011,
+          635,
+          66,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    }
+  ]
+}

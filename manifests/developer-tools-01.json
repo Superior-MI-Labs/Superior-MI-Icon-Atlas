@@ -1,0 +1,501 @@
+{
+  "schema": "smi-icon-atlas-sheet/1",
+  "sheet": {
+    "id": "icons.monoline.developer-tools-01.24x8",
+    "path": "sheets/developer-tools-01/atlas.png",
+    "foreground_mask": "sheets/developer-tools-01/atlas.png",
+    "black_outline": "sheets/developer-tools-01/black-outline.png",
+    "preview": "sheets/developer-tools-01/inspection-preview.png",
+    "width_px": 2304,
+    "height_px": 768,
+    "cell_px": 96,
+    "columns": 24,
+    "rows": 8,
+    "domain": "developer-tools",
+    "sha256": "7ae278c939bcb59abfdae586eb6d689400f6bf4aaf0f7425dc3df48ab35013dd",
+    "style": "white-geometric-monoline",
+    "variant": "monoline"
+  },
+  "icons": [
+    {
+      "id": "icons.candidate.developer-tools.r07i11",
+      "cell": [
+        0,
+        0
+      ],
+      "crop_rgba_sha256": "4cbb182e289220cacd7d9232169569276e4e9a620164a315c9c24037becbe195",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          945,
+          655,
+          46,
+          57
+        ],
+        "region": [
+          944,
+          646,
+          47,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i12",
+      "cell": [
+        1,
+        0
+      ],
+      "crop_rgba_sha256": "b34408b1126af8849c3199840c0f3388f16395b53826b91b2119580a692890fd",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1020,
+          651,
+          54,
+          61
+        ],
+        "region": [
+          1020,
+          646,
+          55,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i13",
+      "cell": [
+        2,
+        0
+      ],
+      "crop_rgba_sha256": "24a890703eb9b99f89c858c43d6d5ba243b96d275297d2b395e0befab5fdba1d",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1095,
+          652,
+          67,
+          56
+        ],
+        "region": [
+          1095,
+          646,
+          67,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i14",
+      "cell": [
+        3,
+        0
+      ],
+      "crop_rgba_sha256": "16910de8d20e48dd15aa0f4c5172b43617c1ff331d26eadc3c6854e09099349d",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1180,
+          655,
+          61,
+          56
+        ],
+        "region": [
+          1180,
+          646,
+          62,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i15",
+      "cell": [
+        4,
+        0
+      ],
+      "crop_rgba_sha256": "67837dac51364a7c97ba4040d5c5629c3dbc630a763144e5cb4070c983e689f1",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1259,
+          659,
+          62,
+          55
+        ],
+        "region": [
+          1258,
+          646,
+          63,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i16",
+      "cell": [
+        5,
+        0
+      ],
+      "crop_rgba_sha256": "fdee061013add2778a3d0e6d2b1f8f649ff04cbfc72557357d5dd848cd7ce1f4",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1342,
+          657,
+          54,
+          57
+        ],
+        "region": [
+          1342,
+          646,
+          54,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i17",
+      "cell": [
+        6,
+        0
+      ],
+      "crop_rgba_sha256": "668aaa711c0abec06a46009b71bede73c493eb466a5b35ac3e38e1e0e51622d8",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1426,
+          658,
+          56,
+          56
+        ],
+        "region": [
+          1426,
+          646,
+          56,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i18",
+      "cell": [
+        7,
+        0
+      ],
+      "crop_rgba_sha256": "a173b1e44ca5d012d482885f298d7f3c41b45a26accb396b8869b6d9e53c6722",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1509,
+          655,
+          54,
+          59
+        ],
+        "region": [
+          1509,
+          646,
+          54,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i19",
+      "cell": [
+        8,
+        0
+      ],
+      "crop_rgba_sha256": "d46b2b6ac134759caff4772ea4d3920ffbbbd246aa5807e5a37c7763a4cc5ab6",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1592,
+          653,
+          55,
+          62
+        ],
+        "region": [
+          1592,
+          646,
+          56,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i20",
+      "cell": [
+        9,
+        0
+      ],
+      "crop_rgba_sha256": "e1c3c297d17828fb3d74d77f637a15ca3318ad111fba1d2cd214690caeb49d37",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1671,
+          659,
+          56,
+          51
+        ],
+        "region": [
+          1671,
+          646,
+          56,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i21",
+      "cell": [
+        10,
+        0
+      ],
+      "crop_rgba_sha256": "6e5c7481ddab7e64667aa56c61bc77c740d346d9c46fd1ff7e68de8fcfe86920",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1755,
+          659,
+          54,
+          52
+        ],
+        "region": [
+          1755,
+          646,
+          55,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i22",
+      "cell": [
+        11,
+        0
+      ],
+      "crop_rgba_sha256": "e9e779dd4442c3456b8cf375243331a500b3655624d18c8828e4a1a9ea41a5ca",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1839,
+          656,
+          56,
+          58
+        ],
+        "region": [
+          1839,
+          646,
+          56,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i23",
+      "cell": [
+        12,
+        0
+      ],
+      "crop_rgba_sha256": "b36ad88eb05220a8c20cd3182386807e3465994ef0d605f93a12b0359c6f9973",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1917,
+          656,
+          60,
+          59
+        ],
+        "region": [
+          1917,
+          646,
+          60,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i24",
+      "cell": [
+        13,
+        0
+      ],
+      "crop_rgba_sha256": "fa72c1c4e1d58202dedf5200b5a58f59fa114b4f50cc5e1a22c49863a9100f53",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1999,
+          657,
+          51,
+          57
+        ],
+        "region": [
+          1998,
+          646,
+          52,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i25",
+      "cell": [
+        14,
+        0
+      ],
+      "crop_rgba_sha256": "bd72150f1941c3fcc0b818c53eb1cb25316826c70461d82dae1aa3a75fbb7ce3",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          2079,
+          656,
+          55,
+          59
+        ],
+        "region": [
+          2079,
+          646,
+          55,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    }
+  ]
+}

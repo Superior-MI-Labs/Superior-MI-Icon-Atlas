@@ -1,0 +1,7329 @@
+{
+  "schema": "smi-icon-atlas-sheet/1",
+  "sheet": {
+    "id": "icons.monoline.files-media-00.24x8",
+    "path": "sheets/files-media-00/atlas.png",
+    "foreground_mask": "sheets/files-media-00/atlas.png",
+    "black_outline": "sheets/files-media-00/black-outline.png",
+    "preview": "sheets/files-media-00/inspection-preview.png",
+    "width_px": 2304,
+    "height_px": 768,
+    "cell_px": 96,
+    "columns": 24,
+    "rows": 8,
+    "domain": "files-media",
+    "sha256": "4856fb1dbe678c256f549a9ae6a35238e960a2eea2530962a4896b7a2969ba9c",
+    "style": "white-geometric-monoline",
+    "variant": "monoline"
+  },
+  "icons": [
+    {
+      "id": "icons.candidate.files-media.r00i00",
+      "cell": [
+        0,
+        0
+      ],
+      "crop_rgba_sha256": "1e5d7651f3d5e064500ddfb06c921e065cf1d898b2c657902ff05904e434f031",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          22,
+          27,
+          55,
+          65
+        ],
+        "region": [
+          22,
+          0,
+          55,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Blank file",
+        "tags": [
+          "file",
+          "blank",
+          "document"
+        ],
+        "subjects": [
+          "files.general"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i01",
+      "cell": [
+        1,
+        0
+      ],
+      "crop_rgba_sha256": "a1c9ddf85acadc95a6945b597b54b454d597ffc111c062b61fe972d0e299c270",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          94,
+          26,
+          56,
+          67
+        ],
+        "region": [
+          94,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Text document",
+        "tags": [
+          "text",
+          "document",
+          "file",
+          "lines"
+        ],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i02",
+      "cell": [
+        2,
+        0
+      ],
+      "crop_rgba_sha256": "d169db4ce2abdce96f6890482c9e6d2f15452dc14066f8914c4c1da0c5d7476e",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          166,
+          27,
+          55,
+          66
+        ],
+        "region": [
+          165,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Document with lines",
+        "tags": [
+          "file",
+          "text",
+          "document"
+        ],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i03",
+      "cell": [
+        3,
+        0
+      ],
+      "crop_rgba_sha256": "076f5cb68811b929cbd5a7d7396af4d163342a06a3d7febc2bb2af77d893baa5",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          238,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          238,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Listed document",
+        "tags": [
+          "file",
+          "list",
+          "bullets"
+        ],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i04",
+      "cell": [
+        4,
+        0
+      ],
+      "crop_rgba_sha256": "39db1c95896552d261090b4ea3d8c0f133d9faf756ca1d099388c0298c56da9d",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          311,
+          26,
+          56,
+          67
+        ],
+        "region": [
+          311,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Approved file",
+        "tags": [
+          "file",
+          "approved",
+          "check",
+          "verified"
+        ],
+        "subjects": [
+          "files.actions"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i05",
+      "cell": [
+        5,
+        0
+      ],
+      "crop_rgba_sha256": "1b8d8ac90fd97ea1d7a1b22b323873cbae134681e03890d651dad68dfcbd014e",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          383,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          383,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Rejected file",
+        "tags": [
+          "file",
+          "reject",
+          "remove",
+          "delete"
+        ],
+        "subjects": [
+          "files.actions"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i06",
+      "cell": [
+        6,
+        0
+      ],
+      "crop_rgba_sha256": "f7c5e1d3f001ce90a954c7b2944667e87363fec024eb825b1630ef09ba3031ff",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          456,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          456,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Text file",
+        "tags": [
+          "text file",
+          "document",
+          "plain text"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.formats"
+        ],
+        "concept_id": "files.formats.text-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i07",
+      "cell": [
+        7,
+        0
+      ],
+      "crop_rgba_sha256": "cd8833a86868d01e34b409f005e57a4f17293eb091b7254c696d94b525975de8",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          528,
+          27,
+          57,
+          66
+        ],
+        "region": [
+          528,
+          0,
+          57,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "New file",
+        "tags": [
+          "file",
+          "new",
+          "add",
+          "create"
+        ],
+        "subjects": [
+          "files.actions"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i08",
+      "cell": [
+        8,
+        0
+      ],
+      "crop_rgba_sha256": "5345b725de3ded909122647cb9631f3f5f34bb0cf4773b546f07a3b1b1a4772e",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          601,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          601,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Remove file",
+        "tags": [
+          "file",
+          "remove",
+          "minus"
+        ],
+        "subjects": [
+          "files.actions"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i09",
+      "cell": [
+        9,
+        0
+      ],
+      "crop_rgba_sha256": "76790c2faa8aa5dcbc60061e68925021d72115a2eb6e09738778e0db969eada4",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          673,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          673,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Edit file",
+        "tags": [
+          "file",
+          "edit",
+          "pencil"
+        ],
+        "subjects": [
+          "files.actions"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i10",
+      "cell": [
+        10,
+        0
+      ],
+      "crop_rgba_sha256": "f057c8acffced03fb30643eb772eea8fae6093c995481c84a36573ab9f1d6939",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          745,
+          27,
+          55,
+          66
+        ],
+        "region": [
+          745,
+          0,
+          55,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Drawing file",
+        "tags": [
+          "drawing file",
+          "illustration",
+          "paint",
+          "file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.formats"
+        ],
+        "concept_id": "files.formats.drawing-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i11",
+      "cell": [
+        11,
+        0
+      ],
+      "crop_rgba_sha256": "35a61207e698ea31eee51f84f7b1e62c7714c90af70641f04118d11acffb579f",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          815,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          815,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Search file",
+        "tags": [
+          "file",
+          "search",
+          "find",
+          "magnifier"
+        ],
+        "subjects": [
+          "files.actions"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i12",
+      "cell": [
+        12,
+        0
+      ],
+      "crop_rgba_sha256": "183bee05e810ab38c6baa920a001ac5ab5735612706d032b46403597c0de5b2b",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          886,
+          27,
+          55,
+          66
+        ],
+        "region": [
+          886,
+          0,
+          55,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "File",
+        "tags": [
+          "file",
+          "blank document",
+          "plain file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i13",
+      "cell": [
+        13,
+        0
+      ],
+      "crop_rgba_sha256": "86a6dcd727e5a346a5660362f47de44d35858d19be28b7796c06f66c67abfcf6",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          957,
+          27,
+          55,
+          66
+        ],
+        "region": [
+          957,
+          0,
+          55,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Locked file",
+        "tags": [
+          "file",
+          "lock",
+          "secure",
+          "protected"
+        ],
+        "subjects": [
+          "files.security"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i14",
+      "cell": [
+        14,
+        0
+      ],
+      "crop_rgba_sha256": "96e9a5f8815f4b6288adde29cf1575b6fb1c7c7cae15e305b9efe4d73d49865f",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1028,
+          27,
+          55,
+          66
+        ],
+        "region": [
+          1028,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i15",
+      "cell": [
+        15,
+        0
+      ],
+      "crop_rgba_sha256": "c58299b20b85294ff916b82112c4b3df481ee280a5595e1cc3a3750436df4dee",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1100,
+          27,
+          55,
+          66
+        ],
+        "region": [
+          1099,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Favorite file",
+        "tags": [
+          "file",
+          "favorite",
+          "star"
+        ],
+        "subjects": [
+          "files.actions"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i16",
+      "cell": [
+        16,
+        0
+      ],
+      "crop_rgba_sha256": "e44519dfb21bfe1c9667a2779a15d5d8d34d33f4d5a363d70967a2b58c2d4903",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1170,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          1170,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Favorite file",
+        "tags": [
+          "favorite file",
+          "document",
+          "heart",
+          "liked file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.favorite-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i17",
+      "cell": [
+        17,
+        0
+      ],
+      "crop_rgba_sha256": "8ad157a923d198cf03d8f2d42d981f048ba649fa7c57fd732cc0dd1ec4ee333c",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1241,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          1241,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i18",
+      "cell": [
+        18,
+        0
+      ],
+      "crop_rgba_sha256": "9a9b317ff8c4f5594f937382953f753d0adab671207795eef83c9571b71cdefb",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1312,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          1311,
+          0,
+          57,
+          100
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i19",
+      "cell": [
+        19,
+        0
+      ],
+      "crop_rgba_sha256": "3826fbac8d6f586cbfdf1d8c1016b9b5f5766f77e7deb76f710fc2b7ec8fd66d",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1382,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          1382,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Search file",
+        "tags": [
+          "search file",
+          "document find",
+          "inspect",
+          "search document"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.actions"
+        ],
+        "concept_id": "files.actions.search-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i20",
+      "cell": [
+        20,
+        0
+      ],
+      "crop_rgba_sha256": "c2760208f08c70f5385fe7519620ea63bf562afb530034df903deb398e810158",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1452,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          1452,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i21",
+      "cell": [
+        21,
+        0
+      ],
+      "crop_rgba_sha256": "d4650aacbac1f1bbbacb665d2a28c74210d041151f75e54eba1f688b6633f986",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1522,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          1522,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Settings file",
+        "tags": [
+          "settings file",
+          "configuration",
+          "config",
+          "document settings"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.config"
+        ],
+        "concept_id": "files.config.settings-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i22",
+      "cell": [
+        22,
+        0
+      ],
+      "crop_rgba_sha256": "66326df3b859edf0558b440f601bda64b4a3586f7c113cc3be8d48d29f561a21",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1594,
+          27,
+          55,
+          66
+        ],
+        "region": [
+          1594,
+          0,
+          55,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Source code file",
+        "tags": [
+          "source code file",
+          "source",
+          "code brackets",
+          "programming"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.source"
+        ],
+        "concept_id": "files.source.source-code-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i23",
+      "cell": [
+        23,
+        0
+      ],
+      "crop_rgba_sha256": "97dd3e6bc9c1e268a191cd48df19084f8ccc739902836674b5fa8e0591750bb3",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1665,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          1665,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Code file",
+        "tags": [
+          "code file",
+          "source",
+          "code brackets",
+          "programming"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.source"
+        ],
+        "concept_id": "files.source.code-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i24",
+      "cell": [
+        0,
+        1
+      ],
+      "crop_rgba_sha256": "008f19d9e6e0862b67104815b75cc895903e839b71b255d76e84b968acd1614a",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1737,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          1737,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Braces file",
+        "tags": [
+          "braces file",
+          "json",
+          "object",
+          "code file",
+          "curly brackets"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.source"
+        ],
+        "concept_id": "files.source.braces-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i25",
+      "cell": [
+        1,
+        1
+      ],
+      "crop_rgba_sha256": "0594a024d7cd24c0feb76a4c1dc77bb397f347be118dbb80716cf1f1e470c4e2",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1809,
+          27,
+          55,
+          66
+        ],
+        "region": [
+          1809,
+          0,
+          55,
+          100
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i26",
+      "cell": [
+        2,
+        1
+      ],
+      "crop_rgba_sha256": "5b82127ff4390f678a3ed185a2c94d2e8b80dafb17789d6a78d0f0e406bc43a5",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1880,
+          27,
+          55,
+          66
+        ],
+        "region": [
+          1880,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "File",
+        "tags": [
+          "file",
+          "document",
+          "blank file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i27",
+      "cell": [
+        3,
+        1
+      ],
+      "crop_rgba_sha256": "d33e48b62cf0e2c53716c36abcce7c83d469eac1f38bcdae2799db8dbfa2e5a0",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1951,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          1951,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i28",
+      "cell": [
+        4,
+        1
+      ],
+      "crop_rgba_sha256": "532c2e77e8837cb8f28b6acb3e5031a61e71fc2f3546214aa00451cee5c58855",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2023,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          2023,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Music file",
+        "tags": [
+          "music file",
+          "audio",
+          "sound",
+          "note",
+          "mp3"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.music-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r00i29",
+      "cell": [
+        5,
+        1
+      ],
+      "crop_rgba_sha256": "2bfe2f7dcdbaf62352b216858a8f057a0e8014129888a2b271cf149353a4bbe1",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2095,
+          27,
+          56,
+          66
+        ],
+        "region": [
+          2095,
+          0,
+          56,
+          100
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Video file",
+        "tags": [
+          "video file",
+          "movie",
+          "play",
+          "media file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.video-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i00",
+      "cell": [
+        6,
+        1
+      ],
+      "crop_rgba_sha256": "fdc4ecd51959e62b388b7644284683b63fcb7557751a3f85ff4e8c20fa6beb49",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          22,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          22,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Film file",
+        "tags": [
+          "film file",
+          "movie",
+          "video",
+          "filmstrip"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.film-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i01",
+      "cell": [
+        7,
+        1
+      ],
+      "crop_rgba_sha256": "a4f99725a9a0533e0cf776965bb4abe8591d995aa1f5df7f0438d7f947ef69b4",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          94,
+          121,
+          55,
+          65
+        ],
+        "region": [
+          94,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i02",
+      "cell": [
+        8,
+        1
+      ],
+      "crop_rgba_sha256": "6f686c621b83a214bf17cd1a8fbe9e34c7b7e519abea091e420f942d9134f3e3",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          166,
+          121,
+          55,
+          65
+        ],
+        "region": [
+          165,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Chart file",
+        "tags": [
+          "chart file",
+          "analytics",
+          "bar graph",
+          "report"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.chart-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i03",
+      "cell": [
+        9,
+        1
+      ],
+      "crop_rgba_sha256": "af7ad374d5c3fc6bfc4581c3f762b2a921882615fa4f5390be7c60454a2bcb25",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          238,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          238,
+          100,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Pie chart file",
+        "tags": [
+          "pie chart file",
+          "statistics",
+          "analytics",
+          "report"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.pie-chart-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i04",
+      "cell": [
+        10,
+        1
+      ],
+      "crop_rgba_sha256": "71812e12c35a7407f15c57647a1b33c43944dffb5d9dc0c3b4e682dad28b8759",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          311,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          311,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "art_status": "candidate",
+        "name": "Music file",
+        "tags": [
+          "music",
+          "audio",
+          "file",
+          "note",
+          "sound"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.audio"
+        ],
+        "concept_id": "files.audio",
+        "evidence": "human-visual-review"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i05",
+      "cell": [
+        11,
+        1
+      ],
+      "crop_rgba_sha256": "1037ee9380152c0ad2ca5b76ebe9063c710403fe873282127f68c08f77575696",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          383,
+          121,
+          57,
+          65
+        ],
+        "region": [
+          383,
+          100,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "art_status": "candidate",
+        "name": "Video file",
+        "tags": [
+          "video",
+          "film",
+          "movie",
+          "media",
+          "play",
+          "file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.video"
+        ],
+        "concept_id": "files.video",
+        "evidence": "human-visual-review"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i06",
+      "cell": [
+        12,
+        1
+      ],
+      "crop_rgba_sha256": "2dec172a92e14688b8b8998afdd800b2422129eb022a68e715c6a57ba7c416ea",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          456,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          456,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "art_status": "candidate",
+        "name": "Filmstrip file",
+        "tags": [
+          "video",
+          "film",
+          "filmstrip",
+          "movie",
+          "file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.video"
+        ],
+        "concept_id": "files.video",
+        "evidence": "human-visual-review"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i07",
+      "cell": [
+        13,
+        1
+      ],
+      "crop_rgba_sha256": "1692db839b44f1f013d4baa1b6d57c3f79d630b6418c6ea837110c69cc4d2204",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          528,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          528,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i08",
+      "cell": [
+        14,
+        1
+      ],
+      "crop_rgba_sha256": "9d7ffce9af4de048bf4ff11fc6361c84ab09d956125013118ca9cb6c37cad135",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          601,
+          121,
+          55,
+          65
+        ],
+        "region": [
+          601,
+          100,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "art_status": "candidate",
+        "name": "Chart file",
+        "tags": [
+          "chart",
+          "graph",
+          "bar chart",
+          "statistics",
+          "data",
+          "file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.data"
+        ],
+        "concept_id": "files.chart",
+        "evidence": "human-visual-review"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i09",
+      "cell": [
+        15,
+        1
+      ],
+      "crop_rgba_sha256": "9a9b454379e020c11755272aef3f6426f3684dfb0ca3582cf3e8d0318cdbdd4f",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          673,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          673,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i10",
+      "cell": [
+        16,
+        1
+      ],
+      "crop_rgba_sha256": "81984afff23a1fff1ca7b6922e804871bfb90598c1c911b979ac9ca0c6855738",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          745,
+          121,
+          55,
+          65
+        ],
+        "region": [
+          745,
+          100,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i11",
+      "cell": [
+        17,
+        1
+      ],
+      "crop_rgba_sha256": "0db336f6dec12d53a322387e651f08d62212c1905041a1c7b2ff081b1abc7713",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          816,
+          121,
+          54,
+          65
+        ],
+        "region": [
+          816,
+          100,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Attachment file",
+        "tags": [
+          "attachment file",
+          "paperclip",
+          "attached document"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.actions"
+        ],
+        "concept_id": "files.actions.attachment-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i12",
+      "cell": [
+        18,
+        1
+      ],
+      "crop_rgba_sha256": "2cb8eb7718ff15bd294ed1c61313ae3323cd674f49639dca6b6b65809d95418f",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          886,
+          121,
+          55,
+          65
+        ],
+        "region": [
+          886,
+          100,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Picture file",
+        "tags": [
+          "picture file",
+          "image",
+          "photo",
+          "photograph",
+          "graphic"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.picture-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i13",
+      "cell": [
+        19,
+        1
+      ],
+      "crop_rgba_sha256": "28b88a0dc45e28aabfa1e50838fe74efab003fba66b8cb55e9e30d9ba945e0b5",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          957,
+          121,
+          55,
+          65
+        ],
+        "region": [
+          957,
+          100,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Font file",
+        "tags": [
+          "font file",
+          "typeface",
+          "letter a",
+          "fonts"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.formats"
+        ],
+        "concept_id": "files.formats.font-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i14",
+      "cell": [
+        20,
+        1
+      ],
+      "crop_rgba_sha256": "a8eb4d3922521ff414b547207166d8d38d93fb75c18f900ba987297572f6bd00",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1028,
+          121,
+          55,
+          65
+        ],
+        "region": [
+          1028,
+          100,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Text file",
+        "tags": [
+          "text file",
+          "typeface",
+          "letter t",
+          "fonts"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.formats"
+        ],
+        "concept_id": "files.formats.text-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i15",
+      "cell": [
+        21,
+        1
+      ],
+      "crop_rgba_sha256": "75d34ce3a7d4112aa2aecdd90a02bfc61eb341099552f5ac75ee172a354bdedc",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1100,
+          121,
+          54,
+          65
+        ],
+        "region": [
+          1099,
+          100,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Typography file",
+        "tags": [
+          "typography file",
+          "font",
+          "letters",
+          "typeface"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.formats"
+        ],
+        "concept_id": "files.formats.typography-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i16",
+      "cell": [
+        22,
+        1
+      ],
+      "crop_rgba_sha256": "8dd034ffdc8f0dc77aa5cf52675c711c8c14fb6a1503462d95062a9dc0ccd86b",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1171,
+          121,
+          55,
+          65
+        ],
+        "region": [
+          1170,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Layers file",
+        "tags": [
+          "layers file",
+          "stack",
+          "design layers"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.formats"
+        ],
+        "concept_id": "files.formats.layers-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i17",
+      "cell": [
+        23,
+        1
+      ],
+      "crop_rgba_sha256": "a36aece5f2841dc89010c93e78093b28ec5a6c817af6674504ad8473c77ec73d",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1241,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          1241,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i18",
+      "cell": [
+        0,
+        2
+      ],
+      "crop_rgba_sha256": "77b33e53c6a3f3cc01f1e427f10f03eb0fbd7695fa49b4ee5e2c4c95d06990d2",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1312,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          1312,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "art_status": "candidate",
+        "name": "Image document",
+        "tags": [
+          "image",
+          "picture",
+          "photo",
+          "file",
+          "graphic"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.images"
+        ],
+        "concept_id": "files.image",
+        "evidence": "human-visual-review"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i19",
+      "cell": [
+        1,
+        2
+      ],
+      "crop_rgba_sha256": "64418fe1ce1c753ee6290866dc216aba272bccb3b1e88497bd3aa6a4f65e4c6c",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1382,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          1382,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i20",
+      "cell": [
+        2,
+        2
+      ],
+      "crop_rgba_sha256": "0f2720833e41c431c2a58462bed41f39c5d6e424b0aa625aafeb8d00d6987aef",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1452,
+          121,
+          55,
+          65
+        ],
+        "region": [
+          1452,
+          100,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i21",
+      "cell": [
+        3,
+        2
+      ],
+      "crop_rgba_sha256": "bf54b52d0c383300232e236d20fd63657ee8c4c15d6822f386ad08f326ecf0c8",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1522,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          1522,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i22",
+      "cell": [
+        4,
+        2
+      ],
+      "crop_rgba_sha256": "d81ddb321fbedb4000ac6bf855c404441c3d6f72b7aa0256bc66a5db8d287f7a",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1594,
+          122,
+          55,
+          64
+        ],
+        "region": [
+          1594,
+          100,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i23",
+      "cell": [
+        5,
+        2
+      ],
+      "crop_rgba_sha256": "b40fcacdfbee8b3184b6ee02260748a2c43f51b2ac9484bc1c911280c9541b3c",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1665,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          1665,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i24",
+      "cell": [
+        6,
+        2
+      ],
+      "crop_rgba_sha256": "2e29cde83a17f6dc171183bc8d128341a18b2456dc2d9d604e2fc21829fad10c",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1736,
+          122,
+          57,
+          64
+        ],
+        "region": [
+          1736,
+          100,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Folded map",
+        "tags": [
+          "folded map",
+          "map",
+          "cartography",
+          "navigation"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geo.maps"
+        ],
+        "concept_id": "geo.maps.folded-map",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i25",
+      "cell": [
+        7,
+        2
+      ],
+      "crop_rgba_sha256": "de1f2bbd00c4070601753b8bd6be4f47a25152e73f8e02f5ac0de1168c0df2fd",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1810,
+          121,
+          54,
+          65
+        ],
+        "region": [
+          1809,
+          100,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i26",
+      "cell": [
+        8,
+        2
+      ],
+      "crop_rgba_sha256": "ef3d757c9025a74c820ce55d5f29dd95f99801b7999833c034b6e93543f0f972",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1881,
+          121,
+          53,
+          65
+        ],
+        "region": [
+          1880,
+          100,
+          54,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Database",
+        "tags": [
+          "database",
+          "sql",
+          "data storage",
+          "db"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.storage"
+        ],
+        "concept_id": "data.storage.database",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i27",
+      "cell": [
+        9,
+        2
+      ],
+      "crop_rgba_sha256": "2240726f054700523c4dc89734d306bf32f1fb9564b084a38c3f169f72da9ed4",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1952,
+          121,
+          54,
+          65
+        ],
+        "region": [
+          1952,
+          100,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i28",
+      "cell": [
+        10,
+        2
+      ],
+      "crop_rgba_sha256": "ecdd6710133e2b0039a95cd44f9580300eebb336296c4bcdaae33f3cfa708406",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2023,
+          121,
+          56,
+          65
+        ],
+        "region": [
+          2023,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r01i29",
+      "cell": [
+        11,
+        2
+      ],
+      "crop_rgba_sha256": "4ff361aba03ad243f4d0ecd35c131c79ef7efe700670aa74b7b7a072f7b5f470",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2095,
+          121,
+          55,
+          65
+        ],
+        "region": [
+          2095,
+          100,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i00",
+      "cell": [
+        12,
+        2
+      ],
+      "crop_rgba_sha256": "a7c553fcfde527f9324781685489bd8d6e58894b302d1946cfe0f5cd58c4fe4f",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          20,
+          220,
+          60,
+          59
+        ],
+        "region": [
+          20,
+          193,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Picture",
+        "tags": [
+          "picture",
+          "image",
+          "photo",
+          "landscape",
+          "photograph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.picture",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i01",
+      "cell": [
+        13,
+        2
+      ],
+      "crop_rgba_sha256": "97bba1d52861339f6f91eeadc2e6695b6df6bcd3ee835e2dcbaf863626cbb309",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          90,
+          219,
+          61,
+          62
+        ],
+        "region": [
+          90,
+          193,
+          62,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Image stack",
+        "tags": [
+          "image stack",
+          "pictures",
+          "photos",
+          "gallery",
+          "album"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.image-stack",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i02",
+      "cell": [
+        14,
+        2
+      ],
+      "crop_rgba_sha256": "84a9eb9179275e5f952e29a40ba7b9e3b7d5524419bcc5baa9d16c8366abd779",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          163,
+          220,
+          60,
+          59
+        ],
+        "region": [
+          163,
+          193,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Picture",
+        "tags": [
+          "picture",
+          "image",
+          "photo",
+          "landscape",
+          "photograph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.picture",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i03",
+      "cell": [
+        15,
+        2
+      ],
+      "crop_rgba_sha256": "d2722daaa5133cd277f0eafa7b7a36085d24657abac9e68de84c291940f27935",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          235,
+          220,
+          60,
+          59
+        ],
+        "region": [
+          235,
+          193,
+          61,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Picture",
+        "tags": [
+          "picture",
+          "image",
+          "photo",
+          "landscape",
+          "photograph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.picture",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i04",
+      "cell": [
+        16,
+        2
+      ],
+      "crop_rgba_sha256": "4eda31a5821fdd9eabc46c9b345817ec8e9310d8c3003509750749b5b763785c",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          308,
+          220,
+          60,
+          60
+        ],
+        "region": [
+          308,
+          193,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Picture",
+        "tags": [
+          "picture",
+          "image",
+          "photo",
+          "landscape",
+          "photograph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.picture",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i05",
+      "cell": [
+        17,
+        2
+      ],
+      "crop_rgba_sha256": "c207a83384fb4619e847ae77351ea9691e5beb7a4bf36c4bcf2c94081c8e60a6",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          380,
+          220,
+          61,
+          60
+        ],
+        "region": [
+          380,
+          193,
+          61,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Picture",
+        "tags": [
+          "picture",
+          "image",
+          "photo",
+          "landscape",
+          "photograph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.picture",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i06",
+      "cell": [
+        18,
+        2
+      ],
+      "crop_rgba_sha256": "057be645a32922a1f1bb25211d245653518c49fd0e8300c2c31dbf177bebeb57",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          453,
+          220,
+          60,
+          60
+        ],
+        "region": [
+          453,
+          193,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Picture",
+        "tags": [
+          "picture",
+          "image",
+          "photo",
+          "landscape",
+          "photograph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.picture",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i07",
+      "cell": [
+        19,
+        2
+      ],
+      "crop_rgba_sha256": "bac73f8749e2eee6d95ce871fd261807bb507a138d35c6d1abe947ebf3d33b4a",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          526,
+          221,
+          60,
+          59
+        ],
+        "region": [
+          526,
+          193,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Picture gallery",
+        "tags": [
+          "picture gallery",
+          "image",
+          "photos",
+          "album",
+          "photographs"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.picture-gallery",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i08",
+      "cell": [
+        20,
+        2
+      ],
+      "crop_rgba_sha256": "ed78a7462f79f85cbff9359d0164e8d00623a4863dd512259d54151adf379508",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          599,
+          220,
+          58,
+          60
+        ],
+        "region": [
+          599,
+          193,
+          58,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i09",
+      "cell": [
+        21,
+        2
+      ],
+      "crop_rgba_sha256": "42991ae415763a0f36672bb46c7688d793b25d2d1b8f40fb686e81d660d28d68",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          671,
+          220,
+          59,
+          59
+        ],
+        "region": [
+          671,
+          193,
+          59,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Vector path",
+        "tags": [
+          "vector path",
+          "bezier curve",
+          "pen tool",
+          "svg"
+        ],
+        "aliases": [],
+        "subjects": [
+          "design.vector"
+        ],
+        "concept_id": "design.vector.vector-path",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i10",
+      "cell": [
+        22,
+        2
+      ],
+      "crop_rgba_sha256": "c0364cb6c97a403e8dcf49b89434440875ab8ae9b5774dff6690b3e147f79427",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          743,
+          220,
+          57,
+          52
+        ],
+        "region": [
+          743,
+          193,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i11",
+      "cell": [
+        23,
+        2
+      ],
+      "crop_rgba_sha256": "6068b634c59e0e5f948f94180937e86af56a1726469436dc82e7b911d148c8db",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          813,
+          220,
+          59,
+          60
+        ],
+        "region": [
+          813,
+          193,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Palette",
+        "tags": [
+          "palette",
+          "colors",
+          "paint",
+          "art",
+          "swatches"
+        ],
+        "aliases": [],
+        "subjects": [
+          "design.color"
+        ],
+        "concept_id": "design.color.palette",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i12",
+      "cell": [
+        0,
+        3
+      ],
+      "crop_rgba_sha256": "0478f036120bd051e902e3f64de9640551e58562c02a62981cc2e543afc40526",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          884,
+          220,
+          57,
+          58
+        ],
+        "region": [
+          884,
+          193,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "art_status": "candidate",
+        "name": "Picture",
+        "tags": [
+          "picture",
+          "image",
+          "photo",
+          "photograph",
+          "landscape",
+          "graphic"
+        ],
+        "aliases": [
+          "Image file"
+        ],
+        "subjects": [
+          "files.images"
+        ],
+        "concept_id": "files.image",
+        "evidence": "human-visual-review"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i13",
+      "cell": [
+        1,
+        3
+      ],
+      "crop_rgba_sha256": "999d479c02663e0593a1419da107fc466b5a4e088a12d38dff1c7e98fd8e5900",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          955,
+          220,
+          57,
+          61
+        ],
+        "region": [
+          955,
+          193,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "art_status": "candidate",
+        "name": "Picture gallery",
+        "tags": [
+          "picture",
+          "gallery",
+          "photo",
+          "photos",
+          "image",
+          "album"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.images"
+        ],
+        "concept_id": "files.gallery",
+        "evidence": "human-visual-review"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i14",
+      "cell": [
+        2,
+        3
+      ],
+      "crop_rgba_sha256": "76edfe590f8818c130212c6a50ded5c7ca027a5457c741b06714681513948611",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1026,
+          221,
+          56,
+          58
+        ],
+        "region": [
+          1026,
+          193,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i15",
+      "cell": [
+        3,
+        3
+      ],
+      "crop_rgba_sha256": "0c03123714ab452e48a0f3b5110a6f14de1ed0abedee64a2fed0bb6f86d9574f",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1096,
+          222,
+          60,
+          56
+        ],
+        "region": [
+          1096,
+          193,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Picture",
+        "tags": [
+          "picture",
+          "image",
+          "photo",
+          "landscape"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.picture",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i16",
+      "cell": [
+        4,
+        3
+      ],
+      "crop_rgba_sha256": "1217fc600dd5020c1d7121f84c54b27e30639918f4e6d237a913c4ec81679ab4",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1168,
+          222,
+          60,
+          57
+        ],
+        "region": [
+          1168,
+          193,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Picture",
+        "tags": [
+          "picture",
+          "image",
+          "photo",
+          "landscape"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.picture",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i17",
+      "cell": [
+        5,
+        3
+      ],
+      "crop_rgba_sha256": "ed14c8eb31cedeb88d33adb19a107f7239931b0163e799f908d726239bc7d70f",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1241,
+          221,
+          56,
+          59
+        ],
+        "region": [
+          1241,
+          193,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i18",
+      "cell": [
+        6,
+        3
+      ],
+      "crop_rgba_sha256": "d58208793ea1a911d0712bea10908306bccff5bfc7e5b3814a5540be6465ab7b",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1312,
+          220,
+          55,
+          60
+        ],
+        "region": [
+          1311,
+          193,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i19",
+      "cell": [
+        7,
+        3
+      ],
+      "crop_rgba_sha256": "054d15f0f0ca2e787d475c462f9906cc16145800d49f1634aa9fd53775dcd489",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1382,
+          220,
+          54,
+          61
+        ],
+        "region": [
+          1382,
+          193,
+          54,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Flower",
+        "tags": [
+          "flower",
+          "floral",
+          "bloom",
+          "plant"
+        ],
+        "aliases": [],
+        "subjects": [
+          "nature.plants"
+        ],
+        "concept_id": "nature.plants.flower",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i20",
+      "cell": [
+        8,
+        3
+      ],
+      "crop_rgba_sha256": "2fb75002eceee13c4cc5720da559896ca60cd42a95fc79375380309013e35d3b",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1451,
+          220,
+          56,
+          59
+        ],
+        "region": [
+          1451,
+          193,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Leaf",
+        "tags": [
+          "leaf",
+          "foliage",
+          "plant",
+          "nature"
+        ],
+        "aliases": [],
+        "subjects": [
+          "nature.plants"
+        ],
+        "concept_id": "nature.plants.leaf",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i21",
+      "cell": [
+        9,
+        3
+      ],
+      "crop_rgba_sha256": "55777ab506442d453538a92e2476ac08ceababdcec070720d167af59765f2967",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1520,
+          222,
+          60,
+          57
+        ],
+        "region": [
+          1520,
+          193,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Diamond",
+        "tags": [
+          "diamond",
+          "gem",
+          "precious stone",
+          "jewel"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geometry.shapes"
+        ],
+        "concept_id": "geometry.shapes.diamond",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i22",
+      "cell": [
+        10,
+        3
+      ],
+      "crop_rgba_sha256": "d65efaf51b2c87b1fda9be6a68dd5da31d54ed02cf88b61e255c32940cf6fac4",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1592,
+          220,
+          59,
+          60
+        ],
+        "region": [
+          1592,
+          193,
+          59,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i23",
+      "cell": [
+        11,
+        3
+      ],
+      "crop_rgba_sha256": "95a77abe8272e6a74dc248904475637942874d65c37c072f050236963805fff1",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1664,
+          220,
+          59,
+          60
+        ],
+        "region": [
+          1663,
+          193,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Aperture",
+        "tags": [
+          "aperture",
+          "camera lens",
+          "shutter",
+          "photography"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.photography"
+        ],
+        "concept_id": "media.photography.aperture",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i24",
+      "cell": [
+        12,
+        3
+      ],
+      "crop_rgba_sha256": "9509bc742be655efc34b9333af95ee682238e76f9cc914675cec40f911e1baf9",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1735,
+          220,
+          59,
+          60
+        ],
+        "region": [
+          1735,
+          193,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i25",
+      "cell": [
+        13,
+        3
+      ],
+      "crop_rgba_sha256": "02d85ac42d0468ba8c509675c5476993a007e5560e131b1c280f4d0d8c180658",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1812,
+          220,
+          48,
+          60
+        ],
+        "region": [
+          1812,
+          193,
+          48,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Droplet",
+        "tags": [
+          "droplet",
+          "water",
+          "liquid",
+          "drop"
+        ],
+        "aliases": [],
+        "subjects": [
+          "nature.water"
+        ],
+        "concept_id": "nature.water.droplet",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i26",
+      "cell": [
+        14,
+        3
+      ],
+      "crop_rgba_sha256": "fa08d20e1db4c6de73d00f8428aba248beee39c605e80dc4406252336becd34b",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1878,
+          220,
+          58,
+          59
+        ],
+        "region": [
+          1878,
+          193,
+          58,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Eyedropper",
+        "tags": [
+          "eyedropper",
+          "color picker",
+          "pipette",
+          "sample color"
+        ],
+        "aliases": [],
+        "subjects": [
+          "design.color"
+        ],
+        "concept_id": "design.color.eyedropper",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i27",
+      "cell": [
+        15,
+        3
+      ],
+      "crop_rgba_sha256": "22d81f8b797b0c66fc9308dfd3fdef89b0b1893475566a69571303d1718123ac",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1951,
+          221,
+          56,
+          58
+        ],
+        "region": [
+          1951,
+          193,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Focus frame",
+        "tags": [
+          "focus frame",
+          "target",
+          "camera focus",
+          "select"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.photography"
+        ],
+        "concept_id": "media.photography.focus-frame",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i28",
+      "cell": [
+        16,
+        3
+      ],
+      "crop_rgba_sha256": "b45b8b9b1d364ac10e646cbf4d070ba09ba9683afcca938efce49accdf4a9531",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2023,
+          220,
+          55,
+          59
+        ],
+        "region": [
+          2023,
+          193,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Camera focus",
+        "tags": [
+          "camera focus",
+          "lens",
+          "focus",
+          "autofocus"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.photography"
+        ],
+        "concept_id": "media.photography.camera-focus",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r02i29",
+      "cell": [
+        17,
+        3
+      ],
+      "crop_rgba_sha256": "da2a0a61dfa5cfff4b7c87c4121114c0350953d6e995fc2ea083e3ef2f4b2f06",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2097,
+          221,
+          53,
+          57
+        ],
+        "region": [
+          2097,
+          193,
+          53,
+          93
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Sparkles",
+        "tags": [
+          "sparkles",
+          "effects",
+          "shine",
+          "stars",
+          "magic"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.symbols"
+        ],
+        "concept_id": "ui.symbols.sparkles",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i00",
+      "cell": [
+        18,
+        3
+      ],
+      "crop_rgba_sha256": "b702a938ce498e552a02098d78d54e5cdd5eaee5af0709958f1c8f4b9489043c",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          23,
+          315,
+          54,
+          61
+        ],
+        "region": [
+          23,
+          286,
+          54,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Musical notes",
+        "tags": [
+          "musical notes",
+          "music",
+          "audio",
+          "sound",
+          "song"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.musical-notes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i01",
+      "cell": [
+        19,
+        3
+      ],
+      "crop_rgba_sha256": "7d92fedfd6b0e93d1ba025447465de8d4a485f3aa59d541b02793579c0d71363",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          92,
+          315,
+          55,
+          57
+        ],
+        "region": [
+          92,
+          286,
+          55,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Music",
+        "tags": [
+          "music",
+          "audio",
+          "notes",
+          "song",
+          "sound"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.music",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i02",
+      "cell": [
+        20,
+        3
+      ],
+      "crop_rgba_sha256": "24ec1edf509afd4d887c8c7ac8f58fd8375e38b84d0c25c733e836c824b8ba3f",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          165,
+          318,
+          57,
+          55
+        ],
+        "region": [
+          165,
+          286,
+          57,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Waveform",
+        "tags": [
+          "waveform",
+          "audio",
+          "soundwave",
+          "sound",
+          "signal"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.waveform",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i03",
+      "cell": [
+        21,
+        3
+      ],
+      "crop_rgba_sha256": "798407ec0d4197ae499171a980eeaaf55066a347bebae9c83f76df741005ddbb",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          238,
+          320,
+          56,
+          49
+        ],
+        "region": [
+          237,
+          286,
+          57,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Equalizer",
+        "tags": [
+          "equalizer",
+          "audio levels",
+          "sound",
+          "mixer"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.equalizer",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i04",
+      "cell": [
+        22,
+        3
+      ],
+      "crop_rgba_sha256": "ed9f323b521e3e8f5b3f599a0ea548204bb95a1ba53b64d2ebdf868319ef8dfa",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          319,
+          315,
+          40,
+          61
+        ],
+        "region": [
+          319,
+          286,
+          40,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Microphone",
+        "tags": [
+          "microphone",
+          "audio recording",
+          "voice",
+          "speech"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.microphone",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i05",
+      "cell": [
+        23,
+        3
+      ],
+      "crop_rgba_sha256": "63a96df98e25375aa5ff0818ce61255b91c49ca908b8a399ba37b04af81007a9",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          390,
+          315,
+          40,
+          61
+        ],
+        "region": [
+          390,
+          286,
+          40,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Microphone",
+        "tags": [
+          "microphone",
+          "audio recording",
+          "voice",
+          "speech"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.microphone",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i06",
+      "cell": [
+        0,
+        4
+      ],
+      "crop_rgba_sha256": "c1366ad52411bfaec7f757f40a7afa54de2dae70f0dee99a1cc0afce3ad55593",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          453,
+          320,
+          59,
+          51
+        ],
+        "region": [
+          453,
+          286,
+          59,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Volume up",
+        "tags": [
+          "volume up",
+          "speaker",
+          "sound",
+          "louder",
+          "audio"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.volume-up",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i07",
+      "cell": [
+        1,
+        4
+      ],
+      "crop_rgba_sha256": "b298112b4c86af8e9952bdebb13a3703ea5b666e0aa7a65edf70b3e66a1f3cc3",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          526,
+          320,
+          59,
+          51
+        ],
+        "region": [
+          526,
+          286,
+          59,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Volume down",
+        "tags": [
+          "volume down",
+          "speaker",
+          "quiet",
+          "sound",
+          "audio"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.volume-down",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i08",
+      "cell": [
+        2,
+        4
+      ],
+      "crop_rgba_sha256": "24c29d328dd39a996618e65a9315c94f10de1b8a547cf89dde858aaf0e5f524f",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          600,
+          320,
+          56,
+          51
+        ],
+        "region": [
+          600,
+          286,
+          56,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Mute",
+        "tags": [
+          "mute",
+          "silent",
+          "no sound",
+          "speaker off"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.mute",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i09",
+      "cell": [
+        3,
+        4
+      ],
+      "crop_rgba_sha256": "1f3867ac473964103baf8f51da615009d836b5267b369d8bd66c1fb96f46cdb2",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          674,
+          317,
+          52,
+          56
+        ],
+        "region": [
+          674,
+          286,
+          52,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Mute",
+        "tags": [
+          "mute",
+          "silent",
+          "no sound",
+          "speaker off"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.mute",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i10",
+      "cell": [
+        4,
+        4
+      ],
+      "crop_rgba_sha256": "e1709922bb59f4f76dd43230e78028d672a045837779b88632019ca669b9068d",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          745,
+          315,
+          55,
+          57
+        ],
+        "region": [
+          745,
+          286,
+          55,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Headphones",
+        "tags": [
+          "headphones",
+          "listen",
+          "audio",
+          "headset"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.audio"
+        ],
+        "concept_id": "hardware.audio.headphones",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i11",
+      "cell": [
+        5,
+        4
+      ],
+      "crop_rgba_sha256": "ade0c86758b23e58e76c4ccbed82d81c7030a807fba0a35504c23ea612bfdc64",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          812,
+          315,
+          60,
+          60
+        ],
+        "region": [
+          812,
+          286,
+          61,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Disc",
+        "tags": [
+          "disc",
+          "cd",
+          "dvd",
+          "optical media"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.storage"
+        ],
+        "concept_id": "hardware.storage.disc",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i12",
+      "cell": [
+        6,
+        4
+      ],
+      "crop_rgba_sha256": "9b74e08d28e696b9733ed0e8de4fc34edf845fe1c906ab3c1282f5d8db0397f9",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          884,
+          315,
+          58,
+          57
+        ],
+        "region": [
+          883,
+          286,
+          59,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Radio",
+        "tags": [
+          "radio",
+          "broadcast",
+          "tuner",
+          "wireless audio"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.radio",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i13",
+      "cell": [
+        7,
+        4
+      ],
+      "crop_rgba_sha256": "b1a8fb9f06ee21977753b2ebab0e68cabd11d16cbfc7b5bb37e8902fbb2ea501",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          954,
+          315,
+          60,
+          60
+        ],
+        "region": [
+          954,
+          286,
+          60,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Disc",
+        "tags": [
+          "disc",
+          "cd",
+          "dvd",
+          "optical media"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.storage"
+        ],
+        "concept_id": "hardware.storage.disc",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i14",
+      "cell": [
+        8,
+        4
+      ],
+      "crop_rgba_sha256": "01f8e813678d0c41e3bef1702991eb89124ba082ca8c8a0933463c22bed97660",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1025,
+          315,
+          60,
+          60
+        ],
+        "region": [
+          1025,
+          286,
+          60,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Disc",
+        "tags": [
+          "disc",
+          "cd",
+          "dvd",
+          "optical media"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.storage"
+        ],
+        "concept_id": "hardware.storage.disc",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i15",
+      "cell": [
+        9,
+        4
+      ],
+      "crop_rgba_sha256": "59a23a90892e780ccc2be8eba08fb0aee7e219534c989ea017a14b105de4469a",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1096,
+          319,
+          60,
+          53
+        ],
+        "region": [
+          1096,
+          286,
+          60,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Video player",
+        "tags": [
+          "video player",
+          "play",
+          "media player",
+          "movie"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.video"
+        ],
+        "concept_id": "media.video.video-player",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i16",
+      "cell": [
+        10,
+        4
+      ],
+      "crop_rgba_sha256": "b59994cb9f3b92e879173be9977424590afa66ed0985e722bd4e5ab5f2f4a57a",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1168,
+          323,
+          60,
+          44
+        ],
+        "region": [
+          1168,
+          286,
+          60,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Video camera",
+        "tags": [
+          "video camera",
+          "camcorder",
+          "record video",
+          "filming"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.video"
+        ],
+        "concept_id": "media.video.video-camera",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i17",
+      "cell": [
+        11,
+        4
+      ],
+      "crop_rgba_sha256": "35690b80112627b5f5de1c0590ea325c26e4111215769563b83d2b8edc5b0749",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1243,
+          315,
+          52,
+          61
+        ],
+        "region": [
+          1243,
+          286,
+          52,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Filmstrip",
+        "tags": [
+          "filmstrip",
+          "film",
+          "movie",
+          "video frame"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.video"
+        ],
+        "concept_id": "media.video.filmstrip",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i18",
+      "cell": [
+        12,
+        4
+      ],
+      "crop_rgba_sha256": "3a03f69bc27fe0e5296402afd39b88f7a9f4d5b10f5efc01b8aea76d01437ba0",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1310,
+          315,
+          58,
+          57
+        ],
+        "region": [
+          1310,
+          286,
+          58,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Clapperboard",
+        "tags": [
+          "clapperboard",
+          "movie",
+          "film",
+          "cinema",
+          "production"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.video"
+        ],
+        "concept_id": "media.video.clapperboard",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i19",
+      "cell": [
+        13,
+        4
+      ],
+      "crop_rgba_sha256": "7e7e9efbe42b4733b149b6897d704625c3e01ef1f8e3d8bfb6266c7c45b9a3bd",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1380,
+          315,
+          58,
+          57
+        ],
+        "region": [
+          1380,
+          286,
+          59,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Favorite media",
+        "tags": [
+          "favorite media",
+          "star",
+          "favorites",
+          "collection"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.video"
+        ],
+        "concept_id": "media.video.favorite-media",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i20",
+      "cell": [
+        14,
+        4
+      ],
+      "crop_rgba_sha256": "51d6885e96985211f841a78fc403fe7a4c7909e771b05c3c36739532161be309",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1450,
+          321,
+          58,
+          48
+        ],
+        "region": [
+          1450,
+          286,
+          58,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Closed captions",
+        "tags": [
+          "closed captions",
+          "subtitles",
+          "cc",
+          "accessibility"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.video"
+        ],
+        "concept_id": "media.video.closed-captions",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i21",
+      "cell": [
+        15,
+        4
+      ],
+      "crop_rgba_sha256": "e8ebb0a5bdd7846b9920b473c858fa3c3d4c9aef506d5086a6519d4e03e8e627",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1521,
+          320,
+          57,
+          49
+        ],
+        "region": [
+          1520,
+          286,
+          59,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Subtitles",
+        "tags": [
+          "subtitles",
+          "captions",
+          "text track"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.video"
+        ],
+        "concept_id": "media.video.subtitles",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i22",
+      "cell": [
+        16,
+        4
+      ],
+      "crop_rgba_sha256": "561a306169419eaa945076f57a5aa256ac5aef3fe02712259cfe019dc5894ed6",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1594,
+          320,
+          55,
+          50
+        ],
+        "region": [
+          1594,
+          286,
+          55,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Audio equalizer",
+        "tags": [
+          "audio equalizer",
+          "sound mixer",
+          "levels",
+          "audio"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.audio-equalizer",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i23",
+      "cell": [
+        17,
+        4
+      ],
+      "crop_rgba_sha256": "55da5095505a32ea5c655215814784d9bc01d1c463ad429419086ff1705656c4",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1664,
+          321,
+          58,
+          47
+        ],
+        "region": [
+          1664,
+          286,
+          58,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Broadcast",
+        "tags": [
+          "broadcast",
+          "wireless",
+          "streaming",
+          "radio waves"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.wireless"
+        ],
+        "concept_id": "network.wireless.broadcast",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i24",
+      "cell": [
+        18,
+        4
+      ],
+      "crop_rgba_sha256": "0faef83dc3722de67818d18273b661f06269ec6634001f701e1a2a0d115098d7",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1738,
+          315,
+          54,
+          60
+        ],
+        "region": [
+          1738,
+          286,
+          54,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Podcast",
+        "tags": [
+          "podcast",
+          "radio",
+          "audio broadcast",
+          "stream"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.podcast",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i25",
+      "cell": [
+        19,
+        4
+      ],
+      "crop_rgba_sha256": "55d765ddd519d5223748ca0b0a1c03c963199b7105a25048c1f1bf54963d7aea",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1814,
+          315,
+          44,
+          61
+        ],
+        "region": [
+          1814,
+          286,
+          44,
+          95
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i26",
+      "cell": [
+        20,
+        4
+      ],
+      "crop_rgba_sha256": "374a0de10c5d65946fa6418e4da3ba81056eaca024064f365a09d968474900a6",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1884,
+          315,
+          48,
+          61
+        ],
+        "region": [
+          1884,
+          286,
+          49,
+          95
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i27",
+      "cell": [
+        21,
+        4
+      ],
+      "crop_rgba_sha256": "38d06660151430fba181c345030fe857dffdd86de0804409868ba8126634d3a9",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1952,
+          314,
+          54,
+          62
+        ],
+        "region": [
+          1952,
+          286,
+          54,
+          95
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i28",
+      "cell": [
+        22,
+        4
+      ],
+      "crop_rgba_sha256": "21e9d1a86061e2eda68f51e431606c9b02a6a9333ec05a60c2851263b465ad01",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2023,
+          314,
+          54,
+          62
+        ],
+        "region": [
+          2023,
+          286,
+          54,
+          95
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r03i29",
+      "cell": [
+        23,
+        4
+      ],
+      "crop_rgba_sha256": "446920d991c4a33f93fb841409e66f7e5a4c630e4e23a10bc989ddb2613a1ab0",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2092,
+          315,
+          60,
+          60
+        ],
+        "region": [
+          2092,
+          286,
+          60,
+          95
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i00",
+      "cell": [
+        0,
+        5
+      ],
+      "crop_rgba_sha256": "4bccb7c9d3d744dcc1a660c731b150bc0f5e8c04db4c4e8e0aeb518a38e6b9a7",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          21,
+          410,
+          57,
+          63
+        ],
+        "region": [
+          21,
+          381,
+          57,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i01",
+      "cell": [
+        1,
+        5
+      ],
+      "crop_rgba_sha256": "5515b6f99f45e752f0a6ae74d0a2f32468c0d5070caaf55aab2f16c1ef7f7c9e",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          90,
+          414,
+          61,
+          56
+        ],
+        "region": [
+          90,
+          381,
+          62,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i02",
+      "cell": [
+        2,
+        5
+      ],
+      "crop_rgba_sha256": "f3c0c10c8147f54d58a9788a8e557f45e91b037a1551633bdf67c5df49b0e3c0",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          167,
+          410,
+          54,
+          63
+        ],
+        "region": [
+          167,
+          381,
+          54,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i03",
+      "cell": [
+        3,
+        5
+      ],
+      "crop_rgba_sha256": "122281d3ee35fcbfb9307ce98867fff4a07cfa4d42d1e06a30c17b05ccf88fc0",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          244,
+          410,
+          44,
+          63
+        ],
+        "region": [
+          243,
+          381,
+          45,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i04",
+      "cell": [
+        4,
+        5
+      ],
+      "crop_rgba_sha256": "60e44db286c264c1891c9f92f5aaab562073a3ccd89df6d52e786a2cefefd3c7",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          308,
+          411,
+          60,
+          60
+        ],
+        "region": [
+          308,
+          381,
+          60,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i05",
+      "cell": [
+        5,
+        5
+      ],
+      "crop_rgba_sha256": "ce0314423650b30b166e990226314793289ae8a110ba3f9c59279a10c77e16c4",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          383,
+          410,
+          56,
+          63
+        ],
+        "region": [
+          383,
+          381,
+          56,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i06",
+      "cell": [
+        6,
+        5
+      ],
+      "crop_rgba_sha256": "424a8251980a3e713cfe507d6f138c3ef6092ea7b9bdd8ac483bcf82aa8e55f5",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          455,
+          409,
+          57,
+          64
+        ],
+        "region": [
+          455,
+          381,
+          57,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i07",
+      "cell": [
+        7,
+        5
+      ],
+      "crop_rgba_sha256": "e36ef9823ab34fb594dda41fa5ea3a9993b3e6fb3356dbc95b0a712103d20ddf",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          529,
+          410,
+          55,
+          63
+        ],
+        "region": [
+          529,
+          381,
+          55,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i08",
+      "cell": [
+        8,
+        5
+      ],
+      "crop_rgba_sha256": "ca36a213d67998a8e02cff962820982d3712c02f0bbe7ff5f8da92716888abee",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          598,
+          416,
+          60,
+          52
+        ],
+        "region": [
+          598,
+          381,
+          60,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i09",
+      "cell": [
+        9,
+        5
+      ],
+      "crop_rgba_sha256": "b260bc0fb8ec50a68a48f100b3f943399f8664e3fbccd5a719bf1377b2b61ae4",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          670,
+          418,
+          61,
+          49
+        ],
+        "region": [
+          670,
+          381,
+          61,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i10",
+      "cell": [
+        10,
+        5
+      ],
+      "crop_rgba_sha256": "b98a0b09cf6d1b981cef7246f71d26f51b9ad8d290d49135814ebb66cb2196aa",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          745,
+          410,
+          55,
+          63
+        ],
+        "region": [
+          745,
+          381,
+          55,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i11",
+      "cell": [
+        11,
+        5
+      ],
+      "crop_rgba_sha256": "640407a52ad8168f7567c3eac26fde01d44a19584aa6b6ee58559e41eb5f9bfd",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          814,
+          409,
+          56,
+          64
+        ],
+        "region": [
+          814,
+          381,
+          56,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i12",
+      "cell": [
+        12,
+        5
+      ],
+      "crop_rgba_sha256": "90008c7c3cba5a534f1e6e43ccb6f340480408ed992bccb175b89d6dbb54f009",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          885,
+          409,
+          57,
+          64
+        ],
+        "region": [
+          885,
+          381,
+          57,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i13",
+      "cell": [
+        13,
+        5
+      ],
+      "crop_rgba_sha256": "fafc35a535653d7938d6545bb7e1c707f342ba747cb27323adf2e9c6c44cb895",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          958,
+          411,
+          54,
+          62
+        ],
+        "region": [
+          957,
+          381,
+          55,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i14",
+      "cell": [
+        14,
+        5
+      ],
+      "crop_rgba_sha256": "8474ce25b794a1a80e07cbb4176cf7189c59a68a49159a719cd17065f20b11f9",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1030,
+          408,
+          50,
+          65
+        ],
+        "region": [
+          1030,
+          381,
+          51,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i15",
+      "cell": [
+        15,
+        5
+      ],
+      "crop_rgba_sha256": "a86ba6e4c6d95dd11adc3e26e1ac8ef94ad452d30460679884645cb45e24eae3",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1102,
+          408,
+          50,
+          65
+        ],
+        "region": [
+          1102,
+          381,
+          50,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i16",
+      "cell": [
+        16,
+        5
+      ],
+      "crop_rgba_sha256": "9c12fb266b4757787ad125e036042ffafc094a3c86f9f79fe8aa6a06d0d388c0",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1173,
+          408,
+          51,
+          65
+        ],
+        "region": [
+          1173,
+          381,
+          51,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i17",
+      "cell": [
+        17,
+        5
+      ],
+      "crop_rgba_sha256": "e45034842c1b84b34c8c908218a740809135e3109073fa481b42b203092dc5e9",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1242,
+          408,
+          53,
+          65
+        ],
+        "region": [
+          1242,
+          381,
+          53,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i18",
+      "cell": [
+        18,
+        5
+      ],
+      "crop_rgba_sha256": "ad855e8475100ed46621dd59b48b77397fff0f306f53459c71b6499f9dc67c2a",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1312,
+          410,
+          56,
+          63
+        ],
+        "region": [
+          1312,
+          381,
+          56,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i19",
+      "cell": [
+        19,
+        5
+      ],
+      "crop_rgba_sha256": "4350342868e6d1acd5b20a136b8666f7fb5fd0d7640d4531a972e84e5c0af3c0",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1382,
+          410,
+          56,
+          63
+        ],
+        "region": [
+          1382,
+          381,
+          56,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i20",
+      "cell": [
+        20,
+        5
+      ],
+      "crop_rgba_sha256": "a49bb9b71490b99b353590b02e41107de2c1f6804169af83e1b8b6073c89cde1",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1449,
+          414,
+          61,
+          54
+        ],
+        "region": [
+          1449,
+          381,
+          61,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i21",
+      "cell": [
+        21,
+        5
+      ],
+      "crop_rgba_sha256": "cbff5c6e35b650f0c115962dbc496da4bafb6361957cfa939c4914695a1cc63e",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1522,
+          411,
+          57,
+          62
+        ],
+        "region": [
+          1522,
+          381,
+          58,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i22",
+      "cell": [
+        22,
+        5
+      ],
+      "crop_rgba_sha256": "49ba24259d1afe3512502ceaff33c4f42549fc6068024a5937ff9f4bd1d7f8cf",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1595,
+          410,
+          53,
+          63
+        ],
+        "region": [
+          1595,
+          381,
+          53,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i23",
+      "cell": [
+        23,
+        5
+      ],
+      "crop_rgba_sha256": "e73fdfbd8e361f094fbfbf6c0effc6fd902775415112dbd83d0fccbe30505114",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1663,
+          415,
+          60,
+          52
+        ],
+        "region": [
+          1663,
+          381,
+          60,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i24",
+      "cell": [
+        0,
+        6
+      ],
+      "crop_rgba_sha256": "1e9a95018088345e322fcb05d2ee3e6e844e45c8eab6ca28f9834e8cf97d433d",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1740,
+          410,
+          51,
+          63
+        ],
+        "region": [
+          1740,
+          381,
+          51,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i25",
+      "cell": [
+        1,
+        6
+      ],
+      "crop_rgba_sha256": "9190362a7274f540c65c317e2f731344724566fc6c5136515e03e856eba579f1",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1812,
+          410,
+          50,
+          63
+        ],
+        "region": [
+          1811,
+          381,
+          51,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i26",
+      "cell": [
+        2,
+        6
+      ],
+      "crop_rgba_sha256": "1f248f9bed4d83c9d0016a84924a318d96d5ada8d606e0364900eb485bb72dae",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1878,
+          415,
+          58,
+          53
+        ],
+        "region": [
+          1878,
+          381,
+          58,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i27",
+      "cell": [
+        3,
+        6
+      ],
+      "crop_rgba_sha256": "2eff89adb9418e1ce10d26f39475b81127fc037c3114d4ec6f6af8b3776115b3",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1949,
+          418,
+          60,
+          49
+        ],
+        "region": [
+          1949,
+          381,
+          60,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i28",
+      "cell": [
+        4,
+        6
+      ],
+      "crop_rgba_sha256": "65ea986955546c056bb512c01830b86798c9bac7a61ee0e3ade8931e09a24370",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2023,
+          410,
+          56,
+          63
+        ],
+        "region": [
+          2022,
+          381,
+          57,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r04i29",
+      "cell": [
+        5,
+        6
+      ],
+      "crop_rgba_sha256": "30480cc0568d2a2c75d5abf21839424eeecad5454b13a4b30ec87f2047113d5d",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2092,
+          418,
+          60,
+          47
+        ],
+        "region": [
+          2092,
+          381,
+          60,
+          98
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i00",
+      "cell": [
+        6,
+        6
+      ],
+      "crop_rgba_sha256": "bb71a72ecbaf3c27bc5eca70c4350bc9df66e15d8a074dce9a6e7f594a8699d3",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          22,
+          507,
+          55,
+          60
+        ],
+        "region": [
+          22,
+          479,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i01",
+      "cell": [
+        7,
+        6
+      ],
+      "crop_rgba_sha256": "157b62175f9a482c5ec9f811c38a07d58aa2433b062c11e924655e224eb5e1fe",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          94,
+          507,
+          55,
+          59
+        ],
+        "region": [
+          94,
+          479,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i02",
+      "cell": [
+        8,
+        6
+      ],
+      "crop_rgba_sha256": "390964a61f3c6a3e7b2092575adedae0075ae577ceedf61a5b1cdf8e2b7ca6be",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          167,
+          507,
+          53,
+          59
+        ],
+        "region": [
+          167,
+          479,
+          53,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i03",
+      "cell": [
+        9,
+        6
+      ],
+      "crop_rgba_sha256": "4ea9b3c5a10446e06abdda000205c98d2089751fa86c982439dadcb9df693ce5",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          238,
+          507,
+          55,
+          58
+        ],
+        "region": [
+          238,
+          479,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i04",
+      "cell": [
+        10,
+        6
+      ],
+      "crop_rgba_sha256": "7d20834dae4131cae1baf1cbaae41b3543c32cae41210a8f96072b7754e24e4e",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          310,
+          507,
+          57,
+          59
+        ],
+        "region": [
+          310,
+          479,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i05",
+      "cell": [
+        11,
+        6
+      ],
+      "crop_rgba_sha256": "31f6c5f92b6fd2410636c5c4365dac13de5b1a80896cf89cf8ab4c4c7905f3fa",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          381,
+          507,
+          59,
+          60
+        ],
+        "region": [
+          380,
+          479,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i06",
+      "cell": [
+        12,
+        6
+      ],
+      "crop_rgba_sha256": "185f49445eb5e8ffcfe3254619bcff2241a321de47198b6ab72e3fe5f426bd27",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          453,
+          507,
+          60,
+          60
+        ],
+        "region": [
+          453,
+          479,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i07",
+      "cell": [
+        13,
+        6
+      ],
+      "crop_rgba_sha256": "42a71f9ed06698c41851b95ac7d6f64cc3064e7edda5613a0e91c619c620fb6b",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          527,
+          507,
+          57,
+          59
+        ],
+        "region": [
+          527,
+          479,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i08",
+      "cell": [
+        14,
+        6
+      ],
+      "crop_rgba_sha256": "2bd12495e5b294a278b0617b2e2f18491c02151c545398be8f556605b975b5b4",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          601,
+          507,
+          56,
+          59
+        ],
+        "region": [
+          600,
+          479,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i09",
+      "cell": [
+        15,
+        6
+      ],
+      "crop_rgba_sha256": "4d1620225ab86c23a16e0fe996aef3c67fb489368e4385f7c822a6f52ea038d8",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          672,
+          507,
+          57,
+          59
+        ],
+        "region": [
+          672,
+          479,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i10",
+      "cell": [
+        16,
+        6
+      ],
+      "crop_rgba_sha256": "b016b7bc6ac1d0abb006e952e511db3a9c5636fac0062494ce636c7d2799280b",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          746,
+          507,
+          52,
+          60
+        ],
+        "region": [
+          746,
+          479,
+          52,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i11",
+      "cell": [
+        17,
+        6
+      ],
+      "crop_rgba_sha256": "72b10b25617b09f71884d4dad4624091592cff11a971d894ab143979d543433f",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          814,
+          507,
+          57,
+          59
+        ],
+        "region": [
+          814,
+          479,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i12",
+      "cell": [
+        18,
+        6
+      ],
+      "crop_rgba_sha256": "f983d5d9e96b0b4047e41907ebe730fad91dd644ed092185189a31286af5623c",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          885,
+          506,
+          56,
+          60
+        ],
+        "region": [
+          885,
+          479,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i13",
+      "cell": [
+        19,
+        6
+      ],
+      "crop_rgba_sha256": "a14a597faab0963d025afbf188ed1cbda8cda3aca464434c7f78e764af26f224",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          956,
+          507,
+          56,
+          60
+        ],
+        "region": [
+          956,
+          479,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i14",
+      "cell": [
+        20,
+        6
+      ],
+      "crop_rgba_sha256": "b2439d63bab7459b258bdddef69d3e26c169f0bab207adbf3e510cfef7d89f7b",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1025,
+          508,
+          59,
+          57
+        ],
+        "region": [
+          1025,
+          479,
+          59,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i15",
+      "cell": [
+        21,
+        6
+      ],
+      "crop_rgba_sha256": "610981f82bec460691bda2780f6bdfa8892114f434ae90110a51bbbc38c9a066",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1097,
+          507,
+          59,
+          59
+        ],
+        "region": [
+          1096,
+          479,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i16",
+      "cell": [
+        22,
+        6
+      ],
+      "crop_rgba_sha256": "e81126dcf464a62a3a848a5bd0c46ce79496e437308434b05e75e2c1bd35ef43",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1168,
+          508,
+          59,
+          56
+        ],
+        "region": [
+          1168,
+          479,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i17",
+      "cell": [
+        23,
+        6
+      ],
+      "crop_rgba_sha256": "8eaebaef09d89104d4fb1d75af009d6a20717a3cc7e3e99f6f64410d568040b1",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1240,
+          507,
+          57,
+          59
+        ],
+        "region": [
+          1240,
+          479,
+          58,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i18",
+      "cell": [
+        0,
+        7
+      ],
+      "crop_rgba_sha256": "3d6611c43b9d2c40fdfe7176e7b5cb8b4be68cc19bf99cb8aa465a77bfeb61c4",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1310,
+          507,
+          58,
+          59
+        ],
+        "region": [
+          1310,
+          479,
+          58,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i19",
+      "cell": [
+        1,
+        7
+      ],
+      "crop_rgba_sha256": "434cff7602e3c9d5936a16920edf2a720965cfb634c313444102aedee7b8ffba",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1382,
+          506,
+          55,
+          61
+        ],
+        "region": [
+          1382,
+          479,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i20",
+      "cell": [
+        2,
+        7
+      ],
+      "crop_rgba_sha256": "691eba9e12751572c7236c66bd14cf87227cc0c3f7dc213a90bce9e489a94a9b",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1454,
+          506,
+          52,
+          61
+        ],
+        "region": [
+          1454,
+          479,
+          52,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i21",
+      "cell": [
+        3,
+        7
+      ],
+      "crop_rgba_sha256": "5602866ec445dfbcab0988d84169554913755c26b467f276ade5bdd022b8df9e",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1522,
+          507,
+          55,
+          59
+        ],
+        "region": [
+          1522,
+          479,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i22",
+      "cell": [
+        4,
+        7
+      ],
+      "crop_rgba_sha256": "2df54ffd0d4496d6bc5d58fc57416265f38293ca48a38600e0931bc1e5704724",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1600,
+          507,
+          46,
+          60
+        ],
+        "region": [
+          1600,
+          479,
+          47,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i23",
+      "cell": [
+        5,
+        7
+      ],
+      "crop_rgba_sha256": "af4464d1758880d38c60730b83567ede0cd12afd9056df3207c870bf56c45528",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1666,
+          507,
+          54,
+          58
+        ],
+        "region": [
+          1666,
+          479,
+          54,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i24",
+      "cell": [
+        6,
+        7
+      ],
+      "crop_rgba_sha256": "0c1747b614c9c6cbeb1d8880018aae67ac19a711e0b5c09b23406c6995f0d549",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1737,
+          507,
+          55,
+          58
+        ],
+        "region": [
+          1737,
+          479,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i25",
+      "cell": [
+        7,
+        7
+      ],
+      "crop_rgba_sha256": "9a6a9cc507d035bf6a7f2bc0020546335b267386cb051e08fa429fa745e574b3",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1810,
+          507,
+          51,
+          60
+        ],
+        "region": [
+          1810,
+          479,
+          51,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i26",
+      "cell": [
+        8,
+        7
+      ],
+      "crop_rgba_sha256": "cf6100c953311659ae4c584da149bddb4911c606b2d18ed9aa9c77115a920270",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1881,
+          507,
+          52,
+          59
+        ],
+        "region": [
+          1881,
+          479,
+          52,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i27",
+      "cell": [
+        9,
+        7
+      ],
+      "crop_rgba_sha256": "c65aa3090fcd6827aff686ded5e44eb4276a8a6eb20c60fadb1ad50a522179d9",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          1951,
+          508,
+          56,
+          57
+        ],
+        "region": [
+          1951,
+          479,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i28",
+      "cell": [
+        10,
+        7
+      ],
+      "crop_rgba_sha256": "50795417c55044fc6d5d0f429447235a28705b92714418ee16b05f6b1a6d1bb0",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2023,
+          507,
+          55,
+          60
+        ],
+        "region": [
+          2023,
+          479,
+          55,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r05i29",
+      "cell": [
+        11,
+        7
+      ],
+      "crop_rgba_sha256": "4625be57254e183d1cb3455ebd946ac95641fb98f8e08430dfc124839f9ee460",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          2094,
+          507,
+          57,
+          60
+        ],
+        "region": [
+          2094,
+          479,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i00",
+      "cell": [
+        12,
+        7
+      ],
+      "crop_rgba_sha256": "7734c59f44842a933b7913ba9663c0c7027da5a36ea1c03c580b4092fcf8485d",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          20,
+          601,
+          59,
+          47
+        ],
+        "region": [
+          20,
+          572,
+          59,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i01",
+      "cell": [
+        13,
+        7
+      ],
+      "crop_rgba_sha256": "90171bd8710cdef045eda368516c3be39dfdd617aaf27d2d4bab963dbacc4f54",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          91,
+          601,
+          59,
+          47
+        ],
+        "region": [
+          91,
+          572,
+          59,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i02",
+      "cell": [
+        14,
+        7
+      ],
+      "crop_rgba_sha256": "162f292408c570a1fd5cc776cb9e660312691ef7d42a0ec9b6661e739f3c189f",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          164,
+          601,
+          58,
+          47
+        ],
+        "region": [
+          164,
+          572,
+          58,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i03",
+      "cell": [
+        15,
+        7
+      ],
+      "crop_rgba_sha256": "41f2bc6e9969e5a2393ebcce960a2df66418a833989d429818ae2dd7d0babdfc",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          236,
+          601,
+          58,
+          47
+        ],
+        "region": [
+          236,
+          572,
+          58,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i04",
+      "cell": [
+        16,
+        7
+      ],
+      "crop_rgba_sha256": "16f8feff0e0288918adfd0f72b8180aae22733dd248fc22cf0cbe442a71e3360",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          308,
+          601,
+          59,
+          48
+        ],
+        "region": [
+          308,
+          572,
+          59,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i05",
+      "cell": [
+        17,
+        7
+      ],
+      "crop_rgba_sha256": "e5a39c4bcc5e47483fbb7a855b083ea6de3b5b6d2aa172a30105c84ec35230fa",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          380,
+          601,
+          60,
+          47
+        ],
+        "region": [
+          380,
+          572,
+          60,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i06",
+      "cell": [
+        18,
+        7
+      ],
+      "crop_rgba_sha256": "06355f34f7b5759c2a3910b024f1063943efb7021b004aa2439c5fcc01d4eee1",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          454,
+          601,
+          59,
+          48
+        ],
+        "region": [
+          454,
+          572,
+          59,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i07",
+      "cell": [
+        19,
+        7
+      ],
+      "crop_rgba_sha256": "990a06201d5b5a843eeb2569dc0f6b6352eaa33f2fb9bdd1008dc231faa7bfb7",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          526,
+          601,
+          59,
+          47
+        ],
+        "region": [
+          526,
+          572,
+          59,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i08",
+      "cell": [
+        20,
+        7
+      ],
+      "crop_rgba_sha256": "dcce109dfe8f5690a5f4491dabc323e8cffa3cedc067cdc667ac36f5cae4444e",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          599,
+          601,
+          59,
+          48
+        ],
+        "region": [
+          599,
+          572,
+          59,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i09",
+      "cell": [
+        21,
+        7
+      ],
+      "crop_rgba_sha256": "0b56c3f715ce3382df06466727ec9ecace3f8d51e54317b941057354c5784def",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          670,
+          601,
+          60,
+          48
+        ],
+        "region": [
+          670,
+          572,
+          60,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i10",
+      "cell": [
+        22,
+        7
+      ],
+      "crop_rgba_sha256": "6137f90394f12b3a17bf107ce9ed2e5b952e27a5aa4f3704c8a606f68f35c9f6",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          742,
+          601,
+          58,
+          47
+        ],
+        "region": [
+          742,
+          572,
+          58,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.files-media.r06i11",
+      "cell": [
+        23,
+        7
+      ],
+      "crop_rgba_sha256": "485e91840b799eed0c1f2e7b026851b93eb7753fe21df97086f702531efad646",
+      "source": {
+        "file": "monochrome_file_and_media_icon_atlas.png",
+        "bbox": [
+          813,
+          601,
+          59,
+          46
+        ],
+        "region": [
+          813,
+          572,
+          59,
+          85
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    }
+  ]
+}

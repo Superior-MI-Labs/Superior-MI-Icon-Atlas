@@ -1,45 +1,69 @@
 # Superior MI Icon Atlas
 
-**v0.3.2 · Source-alignment repair · 2,073 candidate icons · 20 real 24×8 texture atlases**
+**Reusable transparent icon atlases, a typed manifest vocabulary, and a searchable static browser.**
 
-[Browse the Icon Atlas](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) | [Manifest](manifest.json) | [QA report](SOURCE-ALIGNMENT-AUDIT.json)
+[Browse the icon gallery](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Manifest index](manifest.json) · [Architecture](docs/ARCHITECTURE.md) · [Artwork policy](docs/ARTWORK-POLICY.md)
 
-This release **replaces the broken v0.3.1 crops**. The ten AI-generated source images had different symbol counts (about 24 to 30 symbols per row) and sometimes different row offsets. Previous code assumed each source was already a perfectly aligned 24×8 grid. Consequently it sliced through icons, placing glyph fragments from adjacent symbols into the same tile.
+## v0.5.0 — Visual curation and search precision
 
-## Correct pipeline
+- **2,073 original candidate icon positions** in **20 real 24×8 sheets**, each 2304×768 with 96×96 cells.
+- **White monoline artwork on transparent RGBA**; recolor using the alpha of the atlas itself while keeping black outlines separate.
+- **Per-sheet authored manifests**, with one small `manifest.json` index; browser search data is generated, not manually edited.
+- **734 visually reviewed symbols**, including `Flame`, `Picture`, `Lambda`, `Terminal`, `Folder`, and common file actions. The other **1,339** remain unreviewed candidates, not falsely described.
+- **One stable icon ID per crop**. Concept IDs, display names, aliases and search tags may be curated without moving geometry or changing candidate IDs.
+- Search expands curated synonyms (`fire` / `flame`, `picture` / `image` / `photo`), ranks meaningful names before generic categories, and supports automatically populated style, subject, domain, and review filters.
 
-1. Detect actual source row separators using foreground-alpha valleys.
-2. Identify complete individual symbols within each row; use the verified 24-column segmentation for the first seven programming rows.
-3. Crop each source icon at its own detected bounding box; leave 6px safe padding.
-4. Scale each symbol independently into a true 96×96 output cell.
-5. Pack into new 24×8 textures; do not equate source grid coordinates with destination grid coordinates.
-6. Record **source_file, source_region_px, source_bbox_px** and exact output sheet/cell/rect in the manifest.
-7. Validate real pixels (transparent 5px borders, alpha coverage, pure-white foreground, individual crop SHA), not only whole-image checksums.
+![Sample of visually identified icons](docs/curated-samples.png)
 
-All final `atlas.png` files use transparent RGBA, white tintable strokes, and no embedded grid. `inspection-preview.png` is the only dark checkerboard.
-
-## Search and download
-
-The static GitHub Pages browser derives its index from `manifest.json`; it downloads cropped 96×96 transparent PNG assets named exactly `{icon-id}.png`. Color tint is applied through the separate `foreground-mask.png` and `black-outline.png` layers. Every asset may be downloaded individually.
-
-**Important:** Names describe source positions, not verified semantic meanings. These are artwork *candidates* and may include visually similar or malformed drawings. We intentionally avoid inventing labels and tags. The source register and provenance let us replace any candidate later.
-
-## Build and test
+### Quick start
 
 ```bash
 python3 -m pip install -r requirements-test.txt
 python3 atlasctl.py validate --deep
-python3 -m unittest discover -s tests -p 'test_site.py' -v
+python3 atlasctl.py search flame
+python3 atlasctl.py search picture --status reviewed
+python3 atlasctl.py info icons.candidate.programming.r04i19
+python3 atlasctl.py crop icons.candidate.programming.r04i19 --out flame.png
+python3 atlasctl.py tint icons.candidate.programming.r04i19 --color '#4B9CFF' --out flame-blue.png
+python3 tools/build_site.py
+python3 -m http.server 8000 --directory site
+```
+
+Navigate to `http://127.0.0.1:8000/` for local browsing. GitHub Pages builds from the same files on pushes to `main`.
+
+### Where the files live
+
+- `manifest.json` — compact authoritative index and shared style/search vocabulary.
+- `manifests/<sheet>.json` — **only authored icon metadata** for that sheet: ID, source, cell, crop checksum, review status, names, aliases, tags and subjects.
+- `sheets/<sheet>/atlas.png` — production white transparent atlas; foreground alpha also acts as its tint mask.
+- `sheets/<sheet>/black-outline.png` — optional overlay for tinted rendering.
+- `sheets/<sheet>/inspection-preview.png` — review-only image; **never render as a production texture**.
+- `source-images/` — retained original research images for provenance, **not live atlas assets**.
+- `atlasctl.py` — manifest loader, validation, search, crop and tint tooling.
+- `tools/review_icon.py` — modifies the one owning sheet manifest (no parallel search registry).
+- `tools/audit_repo.py` — on-demand duplicate/reference and backlog report.
+- `tools/build_site.py` — generates browser data; `site/` is a build output and is not committed.
+- `docs/ARCHITECTURE.md` — downstream usage contract and alternatives considered.
+
+### Name an icon after visual inspection
+
+```bash
+python3 tools/review_icon.py icons.candidate.programming.r04i19 \
+  --name Flame --tags 'fire,flame,blaze,burn,heat' \
+  --subjects nature.fire --concept nature.flame
 python3 tools/build_site.py
 ```
 
-## Install paths
+Only confirmed visible properties should be used as search tags. A generic source row, filename, or neighboring image does **not** prove visual meaning.
 
-Linux (per-user): `~/.local/share/superior-mi/icon-atlas/`.
-Windows (per-user): `%LOCALAPPDATA%\SuperiorMILabs\IconAtlas\`.
+### Compatibility and licensing
 
-This is a static asset library, not a new source of truth for Studio's node semantics. The authoritative contract is the manifest and its immutable asset IDs. An intentionally changed crop may require versioning; an old location-based candidate ID must not be silently assigned a newly guessed meaning.
+This is **schema v3**, a breaking catalog-layout change from the old 3.3 MB v2 manifest. Existing icon IDs, source atlases, crop rectangles and crop hashes are preserved. Consumers should iterate `manifest.json → sheets[].manifest → icons[]`; see [architecture and migration contract](docs/ARCHITECTURE.md).
 
-## Ownership and licensing
+The Apache-2.0 root license applies to project code and metadata. Art assets were generated for this project; their **visual quality and provenance remain under review**, so do not treat an unreviewed icon as a guaranteed original, publication-cleared illustration. The historical third-party research pack is not included.
 
-The source images for this experimental rebuild were generated for Superior MI Labs, not copied from Font Awesome or Material Design vector paths. The root Apache-2.0 license governs the project code, metadata, and project-generated assets. The artworks still require visual and provenance review before a definitive original-artwork release. No legacy mixed-license packs are bundled.
+## Visual-review progress (v0.5)
+
+734 of 2,073 icons now have inspected visual names, narrowly scoped subjects and useful search tags. This patch adds 685 visual reviews across programming-adjacent tools, networking, hardware, data/AI, files/media and UI controls. The remaining 1,339 are explicitly unreviewed and have no invented semantic tags. Visual labeling does not confer legal or artwork-clearance status.
+
+Search scores direct token matches above related-word matches to prevent a broad synonym like `heat` from returning unrelated hardware when looking for `fire`. Exact asset IDs and crops are unchanged.

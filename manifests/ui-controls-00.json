@@ -1,0 +1,7371 @@
+{
+  "schema": "smi-icon-atlas-sheet/1",
+  "sheet": {
+    "id": "icons.monoline.ui-controls-00.24x8",
+    "path": "sheets/ui-controls-00/atlas.png",
+    "foreground_mask": "sheets/ui-controls-00/atlas.png",
+    "black_outline": "sheets/ui-controls-00/black-outline.png",
+    "preview": "sheets/ui-controls-00/inspection-preview.png",
+    "width_px": 2304,
+    "height_px": 768,
+    "cell_px": 96,
+    "columns": 24,
+    "rows": 8,
+    "domain": "ui-controls",
+    "sha256": "8243c3ad4dbafc4dfd5f9b8ba09ba1d3352c87c72d9fc0f7d64fd830440a59c8",
+    "style": "white-geometric-monoline",
+    "variant": "monoline"
+  },
+  "icons": [
+    {
+      "id": "icons.candidate.ui-controls.r00i00",
+      "cell": [
+        0,
+        0
+      ],
+      "crop_rgba_sha256": "15f51aa331c1e61611189e2266d9e5b8fe8af1a5852bc687e107e74ce94979d8",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          27,
+          35,
+          46,
+          55
+        ],
+        "region": [
+          27,
+          0,
+          46,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cursor",
+        "tags": [
+          "cursor",
+          "mouse pointer",
+          "select",
+          "arrow"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.pointer"
+        ],
+        "concept_id": "ui.pointer.cursor",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i01",
+      "cell": [
+        1,
+        0
+      ],
+      "crop_rgba_sha256": "0d2f01e514a56bef7327717602553a47e12eb0b99924ab0ddfe25cd92c22b65c",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          99,
+          35,
+          51,
+          54
+        ],
+        "region": [
+          99,
+          0,
+          51,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Click cursor",
+        "tags": [
+          "click cursor",
+          "mouse click",
+          "pointer",
+          "selection"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.pointer"
+        ],
+        "concept_id": "ui.pointer.click-cursor",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i02",
+      "cell": [
+        2,
+        0
+      ],
+      "crop_rgba_sha256": "f565d282489cdd187dce926d9421374759b98a17e04187787b9455186e608fb8",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          178,
+          34,
+          46,
+          57
+        ],
+        "region": [
+          178,
+          0,
+          46,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Tap",
+        "tags": [
+          "tap",
+          "touch",
+          "press",
+          "click"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.pointer"
+        ],
+        "concept_id": "ui.pointer.tap",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i03",
+      "cell": [
+        3,
+        0
+      ],
+      "crop_rgba_sha256": "af792d063b93f9fa735d826a318f58c8637320289751f73deb20c776c302ef3a",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          257,
+          34,
+          43,
+          57
+        ],
+        "region": [
+          257,
+          0,
+          44,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Tap target",
+        "tags": [
+          "tap target",
+          "touch",
+          "press",
+          "click"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.pointer"
+        ],
+        "concept_id": "ui.pointer.tap-target",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i04",
+      "cell": [
+        4,
+        0
+      ],
+      "crop_rgba_sha256": "8399e03a43325c72b82fad6a8f58f00d7dc0185f5de92dc955621360d70e74a8",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          333,
+          34,
+          43,
+          57
+        ],
+        "region": [
+          333,
+          0,
+          43,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Tap target",
+        "tags": [
+          "tap target",
+          "touch",
+          "press",
+          "click"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.pointer"
+        ],
+        "concept_id": "ui.pointer.tap-target",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i05",
+      "cell": [
+        5,
+        0
+      ],
+      "crop_rgba_sha256": "c8d4c9afbd5dc74d4106ceaf66f82ab7daa3be7b77c068bf7bfb4af5bc876420",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          409,
+          34,
+          43,
+          58
+        ],
+        "region": [
+          409,
+          0,
+          43,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Tap target",
+        "tags": [
+          "tap target",
+          "touch",
+          "press",
+          "click"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.pointer"
+        ],
+        "concept_id": "ui.pointer.tap-target",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i06",
+      "cell": [
+        6,
+        0
+      ],
+      "crop_rgba_sha256": "cd09c83867141cdb1768b15a106ca3e0c31d6a488148de1cbed916b5da3a1168",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          479,
+          34,
+          56,
+          56
+        ],
+        "region": [
+          479,
+          0,
+          56,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Move",
+        "tags": [
+          "move",
+          "drag",
+          "pan",
+          "four arrows"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.navigation"
+        ],
+        "concept_id": "ui.navigation.move",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i07",
+      "cell": [
+        7,
+        0
+      ],
+      "crop_rgba_sha256": "56a2910a8954b912caf82d4a1815872b17da570553917b63c7d651aa4bb86e6d",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          557,
+          34,
+          53,
+          57
+        ],
+        "region": [
+          556,
+          0,
+          54,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Hand",
+        "tags": [
+          "hand",
+          "pan",
+          "drag",
+          "grab"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.navigation"
+        ],
+        "concept_id": "ui.navigation.hand",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i08",
+      "cell": [
+        8,
+        0
+      ],
+      "crop_rgba_sha256": "65fd0c3e379b87e6d9b06d250e242db0cdce6e8ff7c41c39a3d243f864cc8659",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          633,
+          35,
+          56,
+          55
+        ],
+        "region": [
+          633,
+          0,
+          56,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Move",
+        "tags": [
+          "move",
+          "drag",
+          "pan",
+          "four arrows"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.navigation"
+        ],
+        "concept_id": "ui.navigation.move",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i09",
+      "cell": [
+        9,
+        0
+      ],
+      "crop_rgba_sha256": "bc49732a7de7d6d52474705110a6d34eeedfaf4052f900cab735b054e868dbbd",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          711,
+          35,
+          54,
+          55
+        ],
+        "region": [
+          711,
+          0,
+          54,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Selection marquee",
+        "tags": [
+          "selection marquee",
+          "rectangle select",
+          "dashed selection"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.selection"
+        ],
+        "concept_id": "ui.selection.selection-marquee",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i10",
+      "cell": [
+        10,
+        0
+      ],
+      "crop_rgba_sha256": "c2375ded92d0d76a3f8bcf0f12cf53fe3c6e6868c6e73827e1dbe2d698272ca3",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          789,
+          36,
+          53,
+          54
+        ],
+        "region": [
+          788,
+          0,
+          54,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Selection marquee",
+        "tags": [
+          "selection marquee",
+          "rectangle select",
+          "dashed selection"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.selection"
+        ],
+        "concept_id": "ui.selection.selection-marquee",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i11",
+      "cell": [
+        11,
+        0
+      ],
+      "crop_rgba_sha256": "2db5fce7305caaf1fc499b481b6d65f8ae269ced9a8fba34dd243b13bed61d11",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          865,
+          35,
+          52,
+          54
+        ],
+        "region": [
+          865,
+          0,
+          52,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Lasso",
+        "tags": [
+          "lasso",
+          "freehand select",
+          "selection"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.selection"
+        ],
+        "concept_id": "ui.selection.lasso",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i12",
+      "cell": [
+        12,
+        0
+      ],
+      "crop_rgba_sha256": "5e809ce2b46b30ea251c09bfb815dc0887edfd6e17b6385d6da42344fec291a5",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          944,
+          35,
+          51,
+          54
+        ],
+        "region": [
+          944,
+          0,
+          51,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Magic wand",
+        "tags": [
+          "magic wand",
+          "auto select",
+          "magic select"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.selection"
+        ],
+        "concept_id": "ui.selection.magic-wand",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i13",
+      "cell": [
+        13,
+        0
+      ],
+      "crop_rgba_sha256": "df071d7bb96da6a8f8d085ef04abbccad84e082ead0478b1301b87de57d507a4",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1019,
+          36,
+          53,
+          54
+        ],
+        "region": [
+          1019,
+          0,
+          53,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Eyedropper",
+        "tags": [
+          "eyedropper",
+          "color picker",
+          "pipette"
+        ],
+        "aliases": [],
+        "subjects": [
+          "design.color"
+        ],
+        "concept_id": "design.color.eyedropper",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i14",
+      "cell": [
+        14,
+        0
+      ],
+      "crop_rgba_sha256": "29fde28f89fce76ca7f7c2e2902a33bb4e406af8d514bb0eccc2e47f6d6e0ccd",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1097,
+          34,
+          56,
+          57
+        ],
+        "region": [
+          1097,
+          0,
+          56,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Crop",
+        "tags": [
+          "crop",
+          "crop tool",
+          "trim image"
+        ],
+        "aliases": [],
+        "subjects": [
+          "design.edit"
+        ],
+        "concept_id": "design.edit.crop",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i15",
+      "cell": [
+        15,
+        0
+      ],
+      "crop_rgba_sha256": "ca23d2d1ab6cbfab523a1c2a5a1c3a27df5c849c37823e65336e327d6d2a6d1d",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1176,
+          35,
+          53,
+          54
+        ],
+        "region": [
+          1176,
+          0,
+          53,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Zoom in",
+        "tags": [
+          "zoom in",
+          "magnify",
+          "plus search",
+          "increase zoom"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.zoom"
+        ],
+        "concept_id": "ui.zoom.zoom-in",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i16",
+      "cell": [
+        16,
+        0
+      ],
+      "crop_rgba_sha256": "5b68995dfa9201b75fc401fc25b18e62cb6b6a4868d5110374a37e09c8c8f223",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1253,
+          35,
+          53,
+          55
+        ],
+        "region": [
+          1252,
+          0,
+          54,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Zoom out",
+        "tags": [
+          "zoom out",
+          "magnify",
+          "minus",
+          "reduce zoom"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.zoom"
+        ],
+        "concept_id": "ui.zoom.zoom-out",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i17",
+      "cell": [
+        17,
+        0
+      ],
+      "crop_rgba_sha256": "6529739e6b78f4546bddc38bf1cd302dfb0582921c91e3de06147834abae25b4",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1330,
+          35,
+          24,
+          55
+        ],
+        "region": [
+          1330,
+          0,
+          24,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Focus frame",
+        "tags": [
+          "focus frame",
+          "scan",
+          "crop",
+          "viewfinder"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.selection"
+        ],
+        "concept_id": "ui.selection.focus-frame",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i18",
+      "cell": [
+        18,
+        0
+      ],
+      "crop_rgba_sha256": "804db3d0fa71be2b685676e7e4c48dee91f251f34246744f006310ba35555513",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1360,
+          35,
+          24,
+          55
+        ],
+        "region": [
+          1360,
+          0,
+          24,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Focus frame",
+        "tags": [
+          "focus frame",
+          "scan",
+          "crop",
+          "viewfinder"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.selection"
+        ],
+        "concept_id": "ui.selection.focus-frame",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i19",
+      "cell": [
+        19,
+        0
+      ],
+      "crop_rgba_sha256": "dd3be8d948d58be29ffaa4a346433e95f66f411c193fb37a394bdadf726dd9a3",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1407,
+          35,
+          53,
+          54
+        ],
+        "region": [
+          1407,
+          0,
+          53,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Search",
+        "tags": [
+          "search",
+          "find",
+          "magnifying glass",
+          "lookup"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.search",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i20",
+      "cell": [
+        20,
+        0
+      ],
+      "crop_rgba_sha256": "cef416d187c1372444e11a5e90624d424005b3a084bac9d6e5029f067b0f2308",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1486,
+          36,
+          21,
+          52
+        ],
+        "region": [
+          1486,
+          0,
+          21,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Focus frame",
+        "tags": [
+          "focus frame",
+          "scan",
+          "selection",
+          "viewfinder"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.selection"
+        ],
+        "concept_id": "ui.selection.focus-frame",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i21",
+      "cell": [
+        21,
+        0
+      ],
+      "crop_rgba_sha256": "d8cf34abd57d5fbf2e1d83c7448761c0f88787bab0c5b5eca3fa9119574cae8b",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1517,
+          36,
+          21,
+          52
+        ],
+        "region": [
+          1516,
+          0,
+          22,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Focus frame",
+        "tags": [
+          "focus frame",
+          "scan",
+          "selection",
+          "viewfinder"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.selection"
+        ],
+        "concept_id": "ui.selection.focus-frame",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i22",
+      "cell": [
+        22,
+        0
+      ],
+      "crop_rgba_sha256": "dd2f57b8b5d28eb611e591a2496a95a795139b779bcbe59694c522e540aed88c",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1563,
+          36,
+          51,
+          52
+        ],
+        "region": [
+          1563,
+          0,
+          52,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Add",
+        "tags": [
+          "add",
+          "plus",
+          "insert",
+          "new"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.add",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i23",
+      "cell": [
+        23,
+        0
+      ],
+      "crop_rgba_sha256": "85d9b3679d966d317825618a0e20fe79c6f40d48b48ddb99a11348d414150e6f",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1640,
+          36,
+          52,
+          52
+        ],
+        "region": [
+          1639,
+          0,
+          53,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Remove",
+        "tags": [
+          "remove",
+          "minus",
+          "subtract",
+          "delete"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.remove",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i24",
+      "cell": [
+        0,
+        1
+      ],
+      "crop_rgba_sha256": "dd55315b83b96f29c105efb771958f2aa990f726c8934c5972a68baa78d58c08",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1717,
+          36,
+          51,
+          53
+        ],
+        "region": [
+          1716,
+          0,
+          53,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Close",
+        "tags": [
+          "close",
+          "cross",
+          "x",
+          "cancel",
+          "dismiss"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.close",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i25",
+      "cell": [
+        1,
+        1
+      ],
+      "crop_rgba_sha256": "18a944fafde3d1e3a209b45cd69ae67ebd979ef9c8f7119b7588ca04004a5f7e",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1794,
+          36,
+          51,
+          52
+        ],
+        "region": [
+          1793,
+          0,
+          52,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Minus",
+        "tags": [
+          "minus",
+          "subtract",
+          "remove"
+        ],
+        "aliases": [],
+        "subjects": [
+          "math.operators"
+        ],
+        "concept_id": "math.operators.minus",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i26",
+      "cell": [
+        2,
+        1
+      ],
+      "crop_rgba_sha256": "69f57dafe194c40bb467a4448511825f54f80ca938a450a9ecc34a03333009aa",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1870,
+          36,
+          51,
+          52
+        ],
+        "region": [
+          1869,
+          0,
+          52,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Selection marquee",
+        "tags": [
+          "selection marquee",
+          "rectangle select",
+          "dashed selection"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.selection"
+        ],
+        "concept_id": "ui.selection.selection-marquee",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i27",
+      "cell": [
+        3,
+        1
+      ],
+      "crop_rgba_sha256": "0576cd446f426728c821017d7ecd263ced5914a3a21cd3b90c7218b25ad15d5e",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1946,
+          36,
+          52,
+          52
+        ],
+        "region": [
+          1946,
+          0,
+          52,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Add",
+        "tags": [
+          "add",
+          "plus",
+          "new",
+          "insert"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.add",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i28",
+      "cell": [
+        4,
+        1
+      ],
+      "crop_rgba_sha256": "acd5bb1a573ff0dcc66e8be1129864126ff8ce915c64f664c9930dea17a7835e",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2023,
+          36,
+          52,
+          52
+        ],
+        "region": [
+          2023,
+          0,
+          52,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Remove",
+        "tags": [
+          "remove",
+          "minus",
+          "delete",
+          "subtract"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.remove",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r00i29",
+      "cell": [
+        5,
+        1
+      ],
+      "crop_rgba_sha256": "11f9b711f651885a063d724e4c493d52530b183b9893a89c54b2f4aee997601a",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2099,
+          36,
+          52,
+          52
+        ],
+        "region": [
+          2099,
+          0,
+          52,
+          96
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Check",
+        "tags": [
+          "check",
+          "confirm",
+          "done",
+          "complete"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.status"
+        ],
+        "concept_id": "ui.status.check",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i00",
+      "cell": [
+        6,
+        1
+      ],
+      "crop_rgba_sha256": "3033a754884dede25ef9bdf3bf673b8165a63b6206ef2dd970668d0f32439275",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          20,
+          127,
+          59,
+          53
+        ],
+        "region": [
+          20,
+          96,
+          59,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Window",
+        "tags": [
+          "window",
+          "app",
+          "browser window",
+          "dialog"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.windows"
+        ],
+        "concept_id": "ui.windows.window",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i01",
+      "cell": [
+        7,
+        1
+      ],
+      "crop_rgba_sha256": "ef5fc2d8ea3e19c26619a221136ec706fb6b657f63c23fa19ae3e31702b14201",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          104,
+          123,
+          41,
+          60
+        ],
+        "region": [
+          104,
+          96,
+          41,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Rectangle",
+        "tags": [
+          "rectangle",
+          "shape",
+          "square",
+          "box"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geometry.shapes"
+        ],
+        "concept_id": "geometry.shapes.rectangle",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i02",
+      "cell": [
+        8,
+        1
+      ],
+      "crop_rgba_sha256": "ce44e0e4abe562b2e162323a8242fde2b40c75991aa1809dd4958e0f676d455e",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          176,
+          123,
+          49,
+          63
+        ],
+        "region": [
+          176,
+          96,
+          49,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Rectangle",
+        "tags": [
+          "rectangle",
+          "shape",
+          "square",
+          "box"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geometry.shapes"
+        ],
+        "concept_id": "geometry.shapes.rectangle",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i03",
+      "cell": [
+        9,
+        1
+      ],
+      "crop_rgba_sha256": "555b13b563f724862eb103051a0f3338aef96ba4b4490dec27ae1b807877cb47",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          247,
+          127,
+          63,
+          56
+        ],
+        "region": [
+          246,
+          96,
+          64,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Monitor",
+        "tags": [
+          "monitor",
+          "screen",
+          "desktop",
+          "display"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.display"
+        ],
+        "concept_id": "hardware.display.monitor",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i04",
+      "cell": [
+        10,
+        1
+      ],
+      "crop_rgba_sha256": "882c175a5bd93426b7f91348bf6818118ddd248aa95aa338dbc1e5dc55a294ee",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          325,
+          127,
+          61,
+          56
+        ],
+        "region": [
+          325,
+          96,
+          61,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Window",
+        "tags": [
+          "window",
+          "app",
+          "browser",
+          "dialog"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.windows"
+        ],
+        "concept_id": "ui.windows.window",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i05",
+      "cell": [
+        11,
+        1
+      ],
+      "crop_rgba_sha256": "0a2504720ba9f15a4fd33a921e4bd1e7b7b869d8cb0d0a66eb6377b181e40553",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          402,
+          127,
+          58,
+          56
+        ],
+        "region": [
+          402,
+          96,
+          58,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Two columns",
+        "tags": [
+          "two columns",
+          "split pane",
+          "layout",
+          "column"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layout"
+        ],
+        "concept_id": "ui.layout.two-columns",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i06",
+      "cell": [
+        12,
+        1
+      ],
+      "crop_rgba_sha256": "5340b50772854f56b083d1e67cd4f3d7086f99e50021b7d0bc69a5807d234ba7",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          479,
+          127,
+          57,
+          56
+        ],
+        "region": [
+          479,
+          96,
+          57,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Three columns",
+        "tags": [
+          "three columns",
+          "layout",
+          "column",
+          "grid"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layout"
+        ],
+        "concept_id": "ui.layout.three-columns",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i07",
+      "cell": [
+        13,
+        1
+      ],
+      "crop_rgba_sha256": "fab269e38cf83bc6ebbe0ab29d8c40e42dfb14bab00f56d3824a921c52e9850a",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          556,
+          127,
+          57,
+          56
+        ],
+        "region": [
+          555,
+          96,
+          58,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Three rows",
+        "tags": [
+          "three rows",
+          "layout",
+          "rows",
+          "panels"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layout"
+        ],
+        "concept_id": "ui.layout.three-rows",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i08",
+      "cell": [
+        14,
+        1
+      ],
+      "crop_rgba_sha256": "33b1049b127906c22e40478f68510918c007938ad3d6cbf3e2ecf1cf483ddcb4",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          638,
+          130,
+          47,
+          49
+        ],
+        "region": [
+          638,
+          96,
+          47,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Three columns",
+        "tags": [
+          "three columns",
+          "layout",
+          "column",
+          "grid"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layout"
+        ],
+        "concept_id": "ui.layout.three-columns",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i09",
+      "cell": [
+        15,
+        1
+      ],
+      "crop_rgba_sha256": "aec9bfb282235aae9a765aa8641ddcacd6a2b3fb3da4d36d648d4929b737282a",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          710,
+          127,
+          56,
+          56
+        ],
+        "region": [
+          710,
+          96,
+          56,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Sidebar layout",
+        "tags": [
+          "sidebar layout",
+          "layout",
+          "panel",
+          "sidebar"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layout"
+        ],
+        "concept_id": "ui.layout.sidebar-layout",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i10",
+      "cell": [
+        16,
+        1
+      ],
+      "crop_rgba_sha256": "ef512dc278e2ea005d35ee5f2d9409c22d7e28452136aaa67c4576df8e80cad5",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          787,
+          127,
+          56,
+          56
+        ],
+        "region": [
+          786,
+          96,
+          57,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Three rows",
+        "tags": [
+          "three rows",
+          "layout",
+          "rows",
+          "panels"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layout"
+        ],
+        "concept_id": "ui.layout.three-rows",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i11",
+      "cell": [
+        17,
+        1
+      ],
+      "crop_rgba_sha256": "6c076bab61cdd9787d6c35cd8ca9b900c52d8db31bcf8af2926d7ed03cf4ea15",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          864,
+          127,
+          55,
+          56
+        ],
+        "region": [
+          864,
+          96,
+          55,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Copy",
+        "tags": [
+          "copy",
+          "duplicate",
+          "overlapping squares"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.copy",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i12",
+      "cell": [
+        18,
+        1
+      ],
+      "crop_rgba_sha256": "1fe1018ef89a4a2ccc956483e0477a5eec324b4ccce205530ab05f7e87658667",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          943,
+          129,
+          51,
+          51
+        ],
+        "region": [
+          943,
+          96,
+          51,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Link",
+        "tags": [
+          "link",
+          "chain",
+          "hyperlink",
+          "connect"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.links"
+        ],
+        "concept_id": "network.links.link",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i13",
+      "cell": [
+        19,
+        1
+      ],
+      "crop_rgba_sha256": "869ed162501de317a958ca467152e956204fafed76761ccc6e5100308fc1f93f",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1019,
+          129,
+          53,
+          52
+        ],
+        "region": [
+          1019,
+          96,
+          53,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Link",
+        "tags": [
+          "link",
+          "chain",
+          "hyperlink",
+          "connect"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.links"
+        ],
+        "concept_id": "network.links.link",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i14",
+      "cell": [
+        20,
+        1
+      ],
+      "crop_rgba_sha256": "f163f831c76377c7e37924d338eb301ff6422f2ebad2fc3e9f43a95d1a18d020",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1100,
+          127,
+          52,
+          53
+        ],
+        "region": [
+          1100,
+          96,
+          52,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Open external",
+        "tags": [
+          "open external",
+          "external link",
+          "open in new",
+          "launch"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.navigation"
+        ],
+        "concept_id": "ui.navigation.open-external",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i15",
+      "cell": [
+        21,
+        1
+      ],
+      "crop_rgba_sha256": "e3b103c03dac60dcd01880ea4ae69923e4f648d7970bcf422d3f5801fec53984",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1177,
+          129,
+          50,
+          51
+        ],
+        "region": [
+          1177,
+          96,
+          51,
+          95
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i16",
+      "cell": [
+        22,
+        1
+      ],
+      "crop_rgba_sha256": "45a5e2ebf4d2dade0dd55051fdd3f3cc268f22083bd422f4473a53ad5e6daa79",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1254,
+          130,
+          50,
+          50
+        ],
+        "region": [
+          1254,
+          96,
+          50,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "App grid",
+        "tags": [
+          "app grid",
+          "tiles",
+          "applications",
+          "grid"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layout"
+        ],
+        "concept_id": "ui.layout.app-grid",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i17",
+      "cell": [
+        23,
+        1
+      ],
+      "crop_rgba_sha256": "c3527a7b57d584358a67220d14bbf5c63ab2f1b39e083fff4eacae78e12df355",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1409,
+          129,
+          49,
+          51
+        ],
+        "region": [
+          1409,
+          96,
+          49,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Grid dots",
+        "tags": [
+          "grid dots",
+          "tiles",
+          "menu",
+          "apps"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layout"
+        ],
+        "concept_id": "ui.layout.grid-dots",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i18",
+      "cell": [
+        0,
+        2
+      ],
+      "crop_rgba_sha256": "5e601aa1109c5efba3988693166193cfcd0b808679a44d48d77c61bcc44d891d",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1490,
+          129,
+          44,
+          51
+        ],
+        "region": [
+          1489,
+          96,
+          45,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "List",
+        "tags": [
+          "list",
+          "stack",
+          "rows",
+          "vertical items"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layout"
+        ],
+        "concept_id": "ui.layout.list",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i19",
+      "cell": [
+        1,
+        2
+      ],
+      "crop_rgba_sha256": "444dc575f218e8995373fcc72e99f3edaa18270663efce8ee624c358a084061c",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1567,
+          129,
+          44,
+          51
+        ],
+        "region": [
+          1567,
+          96,
+          45,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "List",
+        "tags": [
+          "list",
+          "stack",
+          "rows",
+          "vertical items"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layout"
+        ],
+        "concept_id": "ui.layout.list",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i20",
+      "cell": [
+        2,
+        2
+      ],
+      "crop_rgba_sha256": "fae9b6affc1e0e586e4e6cc7af3d9396d6a69b78b22ed13a8d0a0e07a0b4254a",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1640,
+          128,
+          52,
+          54
+        ],
+        "region": [
+          1640,
+          96,
+          52,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Layers",
+        "tags": [
+          "layers",
+          "stack",
+          "layer order"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layers"
+        ],
+        "concept_id": "ui.layers.layers",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i21",
+      "cell": [
+        3,
+        2
+      ],
+      "crop_rgba_sha256": "9cf3142fb38dd2020cf81cba2eb820230a9a6aa0a1d20f2bf9d234a018796091",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1716,
+          124,
+          54,
+          58
+        ],
+        "region": [
+          1716,
+          96,
+          54,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Add layer",
+        "tags": [
+          "add layer",
+          "layers",
+          "new layer",
+          "plus"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layers"
+        ],
+        "concept_id": "ui.layers.add-layer",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i22",
+      "cell": [
+        4,
+        2
+      ],
+      "crop_rgba_sha256": "cb6cd5fca91ea10037da9e3f628f04ace13730061deaf4ce3d5b5ed8e29ce536",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1793,
+          127,
+          53,
+          55
+        ],
+        "region": [
+          1793,
+          96,
+          53,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Copy",
+        "tags": [
+          "copy",
+          "duplicate",
+          "overlapping squares"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.copy",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i23",
+      "cell": [
+        5,
+        2
+      ],
+      "crop_rgba_sha256": "da9f53ddf1c012704dadb1bf0a8c92831f277ce841a991009fd1cb0ec370abfa",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1870,
+          126,
+          52,
+          57
+        ],
+        "region": [
+          1869,
+          96,
+          53,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Layers",
+        "tags": [
+          "layers",
+          "stack",
+          "layer order"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layers"
+        ],
+        "concept_id": "ui.layers.layers",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i24",
+      "cell": [
+        6,
+        2
+      ],
+      "crop_rgba_sha256": "43a50136f76e23c2355f5895efe780039f64a811044cc9f109510c3fa7962404",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1946,
+          127,
+          52,
+          57
+        ],
+        "region": [
+          1946,
+          96,
+          53,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Copy",
+        "tags": [
+          "copy",
+          "duplicate",
+          "overlapping squares"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.copy",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i25",
+      "cell": [
+        7,
+        2
+      ],
+      "crop_rgba_sha256": "7b9bc27e28085229267428f7fb1905ad879f94958a2dc2e2b1cfea0ad63b0f72",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2022,
+          126,
+          55,
+          57
+        ],
+        "region": [
+          2022,
+          96,
+          55,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Copy",
+        "tags": [
+          "copy",
+          "duplicate",
+          "overlapping squares"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.copy",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r01i26",
+      "cell": [
+        8,
+        2
+      ],
+      "crop_rgba_sha256": "6d2d9723ea8200da2ea6e5476ef07318321d33bcc79872c0a113c12b925f2848",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2099,
+          126,
+          53,
+          57
+        ],
+        "region": [
+          2099,
+          96,
+          53,
+          95
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cube",
+        "tags": [
+          "cube",
+          "3d",
+          "box",
+          "object"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geometry.shapes"
+        ],
+        "concept_id": "geometry.shapes.cube",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i00",
+      "cell": [
+        9,
+        2
+      ],
+      "crop_rgba_sha256": "700f448c265b41d3d864f4170d34453307e3b5fcb0e092d0eaffebb8c23a6c9f",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          25,
+          223,
+          48,
+          58
+        ],
+        "region": [
+          25,
+          191,
+          48,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Align left",
+        "tags": [
+          "align left",
+          "alignment",
+          "left aligned",
+          "layout"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.alignment"
+        ],
+        "concept_id": "ui.alignment.align-left",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i01",
+      "cell": [
+        10,
+        2
+      ],
+      "crop_rgba_sha256": "3080153f80fed76339f73f28e98ea13b2b70dd24e4e13b5b0fae4c1653798568",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          105,
+          223,
+          39,
+          58
+        ],
+        "region": [
+          105,
+          191,
+          39,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Signpost",
+        "tags": [
+          "signpost",
+          "directions",
+          "wayfinding",
+          "signs"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geo.navigation"
+        ],
+        "concept_id": "geo.navigation.signpost",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i02",
+      "cell": [
+        11,
+        2
+      ],
+      "crop_rgba_sha256": "a4439eaba34c7817b3c0e30160d122d4a461d33edee6c8dcba72d4911fc17756",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          174,
+          223,
+          49,
+          58
+        ],
+        "region": [
+          174,
+          191,
+          49,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Align right",
+        "tags": [
+          "align right",
+          "alignment",
+          "right aligned",
+          "layout"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.alignment"
+        ],
+        "concept_id": "ui.alignment.align-right",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i03",
+      "cell": [
+        12,
+        2
+      ],
+      "crop_rgba_sha256": "5fef2a78be24c484d1ea7182b401033010fc801b3478bd2fb9461c8848e42d3f",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          250,
+          226,
+          54,
+          52
+        ],
+        "region": [
+          250,
+          191,
+          54,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Align top",
+        "tags": [
+          "align top",
+          "alignment",
+          "top aligned",
+          "layout"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.alignment"
+        ],
+        "concept_id": "ui.alignment.align-top",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i04",
+      "cell": [
+        13,
+        2
+      ],
+      "crop_rgba_sha256": "c4c0a9fee3d3eb2dbbfa1fc8569d757e8d5a748c535c3bf20c60a14feb355518",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          326,
+          234,
+          58,
+          37
+        ],
+        "region": [
+          326,
+          191,
+          58,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Center align",
+        "tags": [
+          "center align",
+          "alignment",
+          "center aligned",
+          "layout"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.alignment"
+        ],
+        "concept_id": "ui.alignment.center-align",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i05",
+      "cell": [
+        14,
+        2
+      ],
+      "crop_rgba_sha256": "8a19bca6f0cab2f22dbda04759128e6edf41170c77b83ca0465199363b0cfc94",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          404,
+          230,
+          53,
+          49
+        ],
+        "region": [
+          404,
+          191,
+          53,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Align bottom",
+        "tags": [
+          "align bottom",
+          "alignment",
+          "bottom aligned",
+          "layout"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.alignment"
+        ],
+        "concept_id": "ui.alignment.align-bottom",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i06",
+      "cell": [
+        15,
+        2
+      ],
+      "crop_rgba_sha256": "82bb383e251b68ce009f6d3d0b29a2e823c77ec87568d3ef9c232450d5203537",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          483,
+          232,
+          49,
+          41
+        ],
+        "region": [
+          483,
+          191,
+          49,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Distribute horizontally",
+        "tags": [
+          "distribute horizontally",
+          "spacing",
+          "align",
+          "even distribution"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.alignment"
+        ],
+        "concept_id": "ui.alignment.distribute-horizontally",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i07",
+      "cell": [
+        16,
+        2
+      ],
+      "crop_rgba_sha256": "b78116813d8690278444975f534db333d18dbc2bc8b3f89c264a967f617d2a8c",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          567,
+          224,
+          35,
+          57
+        ],
+        "region": [
+          566,
+          191,
+          36,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Resize vertically",
+        "tags": [
+          "resize vertically",
+          "vertical resize",
+          "height"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.sizing"
+        ],
+        "concept_id": "ui.sizing.resize-vertically",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i08",
+      "cell": [
+        17,
+        2
+      ],
+      "crop_rgba_sha256": "f63c2a733ce827b34fcf4250a91965b458296ac6ffd286bf866b612929c998a4",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          642,
+          227,
+          38,
+          51
+        ],
+        "region": [
+          642,
+          191,
+          38,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Sliders",
+        "tags": [
+          "sliders",
+          "adjust",
+          "controls",
+          "tune"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.sliders",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i09",
+      "cell": [
+        18,
+        2
+      ],
+      "crop_rgba_sha256": "f94c485d07a32d82ec376452fe8bb8a17cf5c39fc0df7ea8b0fa0beb7b48d0d0",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          711,
+          231,
+          54,
+          43
+        ],
+        "region": [
+          711,
+          191,
+          54,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Distribute grid",
+        "tags": [
+          "distribute grid",
+          "grid layout",
+          "spacing"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.alignment"
+        ],
+        "concept_id": "ui.alignment.distribute-grid",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i10",
+      "cell": [
+        19,
+        2
+      ],
+      "crop_rgba_sha256": "e5396bfa2dd456ad27919dc19a627993bc9d8d74c11eae9cc6a23ac0e8521c9d",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          798,
+          224,
+          33,
+          57
+        ],
+        "region": [
+          798,
+          191,
+          33,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Resize vertically",
+        "tags": [
+          "resize vertically",
+          "vertical resize",
+          "height"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.sizing"
+        ],
+        "concept_id": "ui.sizing.resize-vertically",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i11",
+      "cell": [
+        20,
+        2
+      ],
+      "crop_rgba_sha256": "e9e75331ca6899064ba0091b8c1aae79b5da6c49b97043e8dba3d38ed3e3863f",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          872,
+          225,
+          38,
+          56
+        ],
+        "region": [
+          872,
+          191,
+          38,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Adjust spacing",
+        "tags": [
+          "adjust spacing",
+          "line spacing",
+          "align",
+          "indent"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.alignment"
+        ],
+        "concept_id": "ui.alignment.adjust-spacing",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i12",
+      "cell": [
+        21,
+        2
+      ],
+      "crop_rgba_sha256": "92864e54046e150528ce77d8d660ead02030acf8801c0fbc7ccec978f7b6bc84",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          943,
+          230,
+          51,
+          45
+        ],
+        "region": [
+          943,
+          191,
+          51,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Distribute grid",
+        "tags": [
+          "distribute grid",
+          "grid spacing",
+          "alignment"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.alignment"
+        ],
+        "concept_id": "ui.alignment.distribute-grid",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i13",
+      "cell": [
+        22,
+        2
+      ],
+      "crop_rgba_sha256": "be6f794baf7671952fd4bc97e6af4bf0afd511b6f2fa1b11848c41d286cc0c37",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1028,
+          226,
+          35,
+          53
+        ],
+        "region": [
+          1028,
+          191,
+          35,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Stretch vertically",
+        "tags": [
+          "stretch vertically",
+          "height",
+          "resizing"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.sizing"
+        ],
+        "concept_id": "ui.sizing.stretch-vertically",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i14",
+      "cell": [
+        23,
+        2
+      ],
+      "crop_rgba_sha256": "01eefe5b9f2d1733427f79ce9b99be4974a3db3ba92bb559541f8b3a881762d2",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1101,
+          226,
+          49,
+          54
+        ],
+        "region": [
+          1100,
+          191,
+          50,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Text",
+        "tags": [
+          "text",
+          "type",
+          "typography",
+          "letter"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.text",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i15",
+      "cell": [
+        0,
+        3
+      ],
+      "crop_rgba_sha256": "34e2c7ede4677cf5cdd0acb93ed7b19f2809e8276bc512a7bdee4d0cc52993ad",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1179,
+          231,
+          49,
+          42
+        ],
+        "region": [
+          1179,
+          191,
+          50,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Heading H1",
+        "tags": [
+          "heading h1",
+          "heading",
+          "title",
+          "large text"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.heading-h1",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i16",
+      "cell": [
+        1,
+        3
+      ],
+      "crop_rgba_sha256": "336c5d084d5824318e95e4ee25851386031c1a2cded09cd05bdafd8a34cfe5dc",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1259,
+          228,
+          40,
+          47
+        ],
+        "region": [
+          1259,
+          191,
+          41,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Paragraph mark",
+        "tags": [
+          "paragraph mark",
+          "pilcrow",
+          "paragraph",
+          "text"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.paragraph-mark",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i17",
+      "cell": [
+        2,
+        3
+      ],
+      "crop_rgba_sha256": "7a831b57912d1ebb80e95fac5cb54f31410c41e8ac7bb22266f6f3de1c11d210",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1332,
+          229,
+          51,
+          47
+        ],
+        "region": [
+          1331,
+          191,
+          52,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Align left",
+        "tags": [
+          "align left",
+          "left aligned",
+          "text alignment"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.align-left",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i18",
+      "cell": [
+        3,
+        3
+      ],
+      "crop_rgba_sha256": "1d81a45546a749a3513b618feb7fc97dba52fbebe294ae3c5cecaa4488afce7e",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1409,
+          229,
+          50,
+          46
+        ],
+        "region": [
+          1409,
+          191,
+          50,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Bullet list",
+        "tags": [
+          "bullet list",
+          "unordered list",
+          "list items"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.bullet-list",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i19",
+      "cell": [
+        4,
+        3
+      ],
+      "crop_rgba_sha256": "eab1ccee4bf745c450a4198cb015e8932179aebc3e05ae84971b3a0c86b394c2",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1486,
+          229,
+          50,
+          47
+        ],
+        "region": [
+          1486,
+          191,
+          50,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "List",
+        "tags": [
+          "list",
+          "bullets",
+          "list items"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.list",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i20",
+      "cell": [
+        5,
+        3
+      ],
+      "crop_rgba_sha256": "e7bc56338d2888a08bd74feb148cca001608b0fefdbcb37a8670e2a6f3ac54c8",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1571,
+          233,
+          38,
+          32
+        ],
+        "region": [
+          1571,
+          191,
+          39,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Quote",
+        "tags": [
+          "quote",
+          "quotation",
+          "citation",
+          "quotes"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.quote",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i21",
+      "cell": [
+        6,
+        3
+      ],
+      "crop_rgba_sha256": "d8d06b31281a9bfe9601d7f38604062c50e292604fe66e97f9f85418dc5faeb4",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1641,
+          235,
+          49,
+          34
+        ],
+        "region": [
+          1641,
+          191,
+          49,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Typography",
+        "tags": [
+          "typography",
+          "typeface",
+          "fonts",
+          "letters"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.typography",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i22",
+      "cell": [
+        7,
+        3
+      ],
+      "crop_rgba_sha256": "e633a537265150f1693bf1dbc358b06fa5f8fe7195f6ebc818baed07e59faf1e",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1722,
+          226,
+          39,
+          52
+        ],
+        "region": [
+          1722,
+          191,
+          39,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Line spacing",
+        "tags": [
+          "line spacing",
+          "vertical spacing",
+          "leading",
+          "text"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.line-spacing",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i23",
+      "cell": [
+        8,
+        3
+      ],
+      "crop_rgba_sha256": "30f07f349bc901f7d5dc920c3cf6fa11e9171712ee32296c149c9758b2cafebd",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1794,
+          239,
+          51,
+          27
+        ],
+        "region": [
+          1794,
+          191,
+          51,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Horizontal spacing",
+        "tags": [
+          "horizontal spacing",
+          "width",
+          "letter spacing"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.horizontal-spacing",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i24",
+      "cell": [
+        9,
+        3
+      ],
+      "crop_rgba_sha256": "96877a003f4a399790a457762da04593dc6026b1a1b1b76fab945761cd59d21e",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1869,
+          238,
+          52,
+          27
+        ],
+        "region": [
+          1869,
+          191,
+          53,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Font size",
+        "tags": [
+          "font size",
+          "text scale",
+          "typography"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.font-size",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i25",
+      "cell": [
+        10,
+        3
+      ],
+      "crop_rgba_sha256": "6473a4b65ac659eb5bbb5a2572ea4b15672b05bab85a6e99101e90fd8ae2d66e",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1947,
+          227,
+          50,
+          52
+        ],
+        "region": [
+          1947,
+          191,
+          50,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Underline",
+        "tags": [
+          "underline",
+          "underlined text",
+          "formatting"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.underline",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i26",
+      "cell": [
+        11,
+        3
+      ],
+      "crop_rgba_sha256": "697b948fd60675d5b5f236a8ff5504feb601212d9bd0d6fb60fb3c3bf37a427c",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2025,
+          230,
+          50,
+          45
+        ],
+        "region": [
+          2025,
+          191,
+          50,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Increase text size",
+        "tags": [
+          "increase text size",
+          "grow font",
+          "large text"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.typography"
+        ],
+        "concept_id": "ui.typography.increase-text-size",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r02i27",
+      "cell": [
+        12,
+        3
+      ],
+      "crop_rgba_sha256": "4e33f5b575b27cecdb7e8370e7e076b3869fdc302aea1b20f4eb7758e07749b2",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2098,
+          225,
+          54,
+          55
+        ],
+        "region": [
+          2098,
+          191,
+          54,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Resize handles",
+        "tags": [
+          "resize handles",
+          "selection box",
+          "transform",
+          "bounding box"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.selection"
+        ],
+        "concept_id": "ui.selection.resize-handles",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i00",
+      "cell": [
+        13,
+        3
+      ],
+      "crop_rgba_sha256": "0dacf96c9f457f4c82cd8a936e77f79f58b62b7ed9689b81ea59dffaacc18561",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          20,
+          330,
+          62,
+          44
+        ],
+        "region": [
+          19,
+          285,
+          63,
+          101
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Button",
+        "tags": [
+          "button",
+          "rectangle",
+          "control"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.button",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i01",
+      "cell": [
+        14,
+        3
+      ],
+      "crop_rgba_sha256": "730ea69b20bc03fc7d617535f6cbef9e571fb88fc7cc62a716661a283e2abdc5",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          92,
+          332,
+          66,
+          40
+        ],
+        "region": [
+          92,
+          285,
+          67,
+          101
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Button",
+        "tags": [
+          "button",
+          "rectangle",
+          "control"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.button",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i02",
+      "cell": [
+        15,
+        3
+      ],
+      "crop_rgba_sha256": "6621f8f80d18c41c529f7d6c02dceb74ee6e361b1dc2a642e9e43e89ccc6bb70",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          169,
+          327,
+          67,
+          52
+        ],
+        "region": [
+          169,
+          285,
+          67,
+          101
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Text field",
+        "tags": [
+          "text field",
+          "input",
+          "edit box",
+          "form field"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.text-field",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i03",
+      "cell": [
+        16,
+        3
+      ],
+      "crop_rgba_sha256": "fb1156c62bd2147b518da9afea1d07f19489a5098877c81f39974497cb171289",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          252,
+          327,
+          51,
+          52
+        ],
+        "region": [
+          251,
+          285,
+          52,
+          101
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Checkbox checked",
+        "tags": [
+          "checkbox checked",
+          "checked",
+          "selected",
+          "confirm"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.checkbox-checked",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i04",
+      "cell": [
+        17,
+        3
+      ],
+      "crop_rgba_sha256": "960ec5b9bb6eea422ce6e88adec7f614c6365b44ac9dab4b7f14c47cc15fda36",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          329,
+          327,
+          50,
+          51
+        ],
+        "region": [
+          329,
+          285,
+          50,
+          101
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Checkbox",
+        "tags": [
+          "checkbox",
+          "box",
+          "unchecked",
+          "form field"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.checkbox",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i05",
+      "cell": [
+        18,
+        3
+      ],
+      "crop_rgba_sha256": "65e5274fa34fa61b74bc9cb525d464df49e400b9e242d7360d77c747fb937eac",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          405,
+          327,
+          51,
+          52
+        ],
+        "region": [
+          405,
+          285,
+          51,
+          101
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Radio selected",
+        "tags": [
+          "radio selected",
+          "radio button",
+          "selected",
+          "choice"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.radio-selected",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i06",
+      "cell": [
+        19,
+        3
+      ],
+      "crop_rgba_sha256": "8c6446de52cae7091b8ebad42fcfa43483385036661d659b315b6dfc946e16a1",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          482,
+          327,
+          50,
+          52
+        ],
+        "region": [
+          482,
+          285,
+          51,
+          101
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Radio button",
+        "tags": [
+          "radio button",
+          "radio",
+          "unselected",
+          "choice"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.radio-button",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i07",
+      "cell": [
+        20,
+        3
+      ],
+      "crop_rgba_sha256": "9e918523a64060a88a88be4ec6fee46ed92e39269ba86003ac4d587d90326d15",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          556,
+          334,
+          58,
+          38
+        ],
+        "region": [
+          556,
+          285,
+          58,
+          101
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Toggle switch",
+        "tags": [
+          "toggle switch",
+          "switch",
+          "on off",
+          "toggle"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.toggle-switch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i08",
+      "cell": [
+        21,
+        3
+      ],
+      "crop_rgba_sha256": "942176039e507601d26af91f745e4ed52198785f19188bf69aaa2be469490870",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          631,
+          339,
+          61,
+          27
+        ],
+        "region": [
+          631,
+          285,
+          61,
+          101
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Slider",
+        "tags": [
+          "slider",
+          "range control",
+          "value control"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.slider",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i09",
+      "cell": [
+        22,
+        3
+      ],
+      "crop_rgba_sha256": "fe0ac02462b0c18837168ceb33446d5af77afc77d59038353a0576a3d2e64579",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          704,
+          328,
+          68,
+          50
+        ],
+        "region": [
+          704,
+          285,
+          68,
+          101
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Dropdown",
+        "tags": [
+          "dropdown",
+          "select",
+          "menu",
+          "combobox"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.dropdown",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i10",
+      "cell": [
+        23,
+        3
+      ],
+      "crop_rgba_sha256": "392d171fc1d49c8bb0e574e2da23162c86a3e4033f484d023f3659162dac9fc0",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          783,
+          334,
+          68,
+          38
+        ],
+        "region": [
+          782,
+          285,
+          69,
+          101
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Split button",
+        "tags": [
+          "split button",
+          "segmented",
+          "button group"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.split-button",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i11",
+      "cell": [
+        0,
+        4
+      ],
+      "crop_rgba_sha256": "a1c9f0cd2d43df4007dfb4e84a85e95866a5f8163e17821d6773238c28ecd57d",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          869,
+          331,
+          45,
+          43
+        ],
+        "region": [
+          869,
+          285,
+          45,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i12",
+      "cell": [
+        1,
+        4
+      ],
+      "crop_rgba_sha256": "2bbf1fa627f09f0706b7b8c9510bbbc889103f868748749b71fef489e764edf5",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          945,
+          345,
+          47,
+          16
+        ],
+        "region": [
+          944,
+          285,
+          48,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i13",
+      "cell": [
+        2,
+        4
+      ],
+      "crop_rgba_sha256": "31751c2eb700850d7c18624ca71f623499c2566469a09ead628803e5f35de789",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1096,
+          336,
+          59,
+          34
+        ],
+        "region": [
+          1096,
+          285,
+          59,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i14",
+      "cell": [
+        3,
+        4
+      ],
+      "crop_rgba_sha256": "561f2f1ea8f257fa11b0d2304890d621abef94535a81d5253489f3bd756b882d",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1172,
+          326,
+          62,
+          54
+        ],
+        "region": [
+          1172,
+          285,
+          62,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i15",
+      "cell": [
+        4,
+        4
+      ],
+      "crop_rgba_sha256": "1932ec285fa56a7dabbb77ea2f9633c1595a4c9c4e1216d420c8c2e6417b4c24",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1249,
+          326,
+          61,
+          55
+        ],
+        "region": [
+          1249,
+          285,
+          61,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i16",
+      "cell": [
+        5,
+        4
+      ],
+      "crop_rgba_sha256": "8e567c679463f34b2530d5118165ce52b9dae7073fad9429de4840d1f9108f9a",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1327,
+          326,
+          60,
+          55
+        ],
+        "region": [
+          1327,
+          285,
+          60,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i17",
+      "cell": [
+        6,
+        4
+      ],
+      "crop_rgba_sha256": "4f75042d6e9f279c116a1ecc025a38bfe89465f33680dae6af80a58d93f0a826",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1407,
+          326,
+          55,
+          55
+        ],
+        "region": [
+          1407,
+          285,
+          55,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i18",
+      "cell": [
+        7,
+        4
+      ],
+      "crop_rgba_sha256": "72332ddda2802222e4723d45194c9d54892b93c78585e29befa0797e63969cfc",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1483,
+          330,
+          57,
+          48
+        ],
+        "region": [
+          1483,
+          285,
+          57,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i19",
+      "cell": [
+        8,
+        4
+      ],
+      "crop_rgba_sha256": "1cc8a4b3072f947ab9bbd3614fbee40c44588c279069661f5b3648e9fd09b9a8",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1561,
+          328,
+          56,
+          52
+        ],
+        "region": [
+          1561,
+          285,
+          56,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i20",
+      "cell": [
+        9,
+        4
+      ],
+      "crop_rgba_sha256": "cf1f6e7a0d3b8ec48d1f821bb93cb9f950745f19cfbf9166bdbc33941eebc2eb",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1640,
+          328,
+          52,
+          52
+        ],
+        "region": [
+          1640,
+          285,
+          52,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i21",
+      "cell": [
+        10,
+        4
+      ],
+      "crop_rgba_sha256": "26331b061fddb2d3a6634da987caba3698f56295e32baa028982e912e496472b",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1717,
+          328,
+          49,
+          51
+        ],
+        "region": [
+          1717,
+          285,
+          50,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i22",
+      "cell": [
+        11,
+        4
+      ],
+      "crop_rgba_sha256": "14410e6c6df69a6c070fb44de5273a709d7963a8045ca1c87442bcb7e42fd465",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1794,
+          327,
+          50,
+          54
+        ],
+        "region": [
+          1793,
+          285,
+          51,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i23",
+      "cell": [
+        12,
+        4
+      ],
+      "crop_rgba_sha256": "8702207d17aad77beacd0c646ca9899a37fef9fd9d5b879dca5f1e54dbb534a1",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1870,
+          327,
+          51,
+          52
+        ],
+        "region": [
+          1870,
+          285,
+          51,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i24",
+      "cell": [
+        13,
+        4
+      ],
+      "crop_rgba_sha256": "2b86e916f674ee35468e4456a81ba9b93277845c5e3eed280265312825a401d7",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1945,
+          326,
+          54,
+          54
+        ],
+        "region": [
+          1945,
+          285,
+          54,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i25",
+      "cell": [
+        14,
+        4
+      ],
+      "crop_rgba_sha256": "332c18e1813c436dab8be351867390ec8127c8d5eb58c22033aa980aa9f679c4",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2023,
+          326,
+          53,
+          54
+        ],
+        "region": [
+          2023,
+          285,
+          53,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i26",
+      "cell": [
+        15,
+        4
+      ],
+      "crop_rgba_sha256": "e47031a0a009146f486164a152b3410eb2cc0832b72666c9122b57fa718a9ea0",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2101,
+          328,
+          20,
+          50
+        ],
+        "region": [
+          2101,
+          285,
+          20,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r03i27",
+      "cell": [
+        16,
+        4
+      ],
+      "crop_rgba_sha256": "4f0e498493b083fb94fa56983544df7b991ff1f3381bfe171e3ac9ed5b8d42a4",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2131,
+          328,
+          20,
+          50
+        ],
+        "region": [
+          2131,
+          285,
+          20,
+          101
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i00",
+      "cell": [
+        17,
+        4
+      ],
+      "crop_rgba_sha256": "3975785339f0896bea0f0f708d48eec35eab7db7f63075524e63c7892f3f5dbe",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          21,
+          423,
+          55,
+          54
+        ],
+        "region": [
+          20,
+          386,
+          56,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i01",
+      "cell": [
+        18,
+        4
+      ],
+      "crop_rgba_sha256": "04e2b3fd06a2bca0d88de6bcdb489ee96013ada458d92a290770f9ce136aabc5",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          96,
+          425,
+          56,
+          51
+        ],
+        "region": [
+          96,
+          386,
+          56,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i02",
+      "cell": [
+        19,
+        4
+      ],
+      "crop_rgba_sha256": "f8cbe582e4c08c944cc91280d8643c2e55772040c5efcc6465e50303e7951bee",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          172,
+          423,
+          57,
+          55
+        ],
+        "region": [
+          172,
+          386,
+          57,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i03",
+      "cell": [
+        20,
+        4
+      ],
+      "crop_rgba_sha256": "02c86d9779bee84de51e8196dd9372d8253dffc1b3595a3824d05aacb6520057",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          252,
+          423,
+          50,
+          54
+        ],
+        "region": [
+          252,
+          386,
+          50,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i04",
+      "cell": [
+        21,
+        4
+      ],
+      "crop_rgba_sha256": "b1006fb46b7b46683df43f629cec5c28dc60ac9b17bfa47e62cebde2ae5bcc66",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          328,
+          426,
+          54,
+          49
+        ],
+        "region": [
+          328,
+          386,
+          54,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i05",
+      "cell": [
+        22,
+        4
+      ],
+      "crop_rgba_sha256": "50a8cd06e9d79be55ce44c6cd4e10feb8d5ab3e63728514f867e42e483f52067",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          407,
+          425,
+          47,
+          50
+        ],
+        "region": [
+          407,
+          386,
+          47,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i06",
+      "cell": [
+        23,
+        4
+      ],
+      "crop_rgba_sha256": "b0f3aa21b1c6b7a4a7278c672bfb261a839dc3a99dd1194c49d92cd33759230b",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          490,
+          420,
+          34,
+          57
+        ],
+        "region": [
+          490,
+          386,
+          35,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i07",
+      "cell": [
+        0,
+        5
+      ],
+      "crop_rgba_sha256": "c0a16a6cce7f10fb2a652a0cb7517d5d9f6fb8c522a4166fb3057e990f862e9b",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          558,
+          425,
+          53,
+          51
+        ],
+        "region": [
+          557,
+          386,
+          54,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i08",
+      "cell": [
+        1,
+        5
+      ],
+      "crop_rgba_sha256": "d300bb959b49c0a92dc7b356476f262f4f677e04a70555560bebf81c46354f36",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          633,
+          425,
+          56,
+          50
+        ],
+        "region": [
+          633,
+          386,
+          57,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i09",
+      "cell": [
+        2,
+        5
+      ],
+      "crop_rgba_sha256": "342519e73599c1af4839784dc47a87cbc7f340d6af8bbdac083cd56443373ccc",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          710,
+          422,
+          56,
+          57
+        ],
+        "region": [
+          710,
+          386,
+          56,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i10",
+      "cell": [
+        3,
+        5
+      ],
+      "crop_rgba_sha256": "02faa1d732c45ea6359401187e4c45adcf575f2cdaa99baa1ef863202e0fed5e",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          789,
+          421,
+          60,
+          59
+        ],
+        "region": [
+          789,
+          386,
+          60,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i11",
+      "cell": [
+        4,
+        5
+      ],
+      "crop_rgba_sha256": "1ef4ee0c173ac3a95602307814cb4a98bc7facb7543ae8c60cbde0e07263157a",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          866,
+          423,
+          55,
+          55
+        ],
+        "region": [
+          866,
+          386,
+          55,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i12",
+      "cell": [
+        5,
+        5
+      ],
+      "crop_rgba_sha256": "cb698dcfbaca1bb641caf0ccce724cd07d5e5a9494cbb20f9df58afc82898608",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          946,
+          423,
+          37,
+          55
+        ],
+        "region": [
+          946,
+          386,
+          37,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i13",
+      "cell": [
+        6,
+        5
+      ],
+      "crop_rgba_sha256": "392f4915c824162a34556b44a117a5a74310dbb71248e4c0aec7d8ade5bdc402",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1010,
+          421,
+          61,
+          57
+        ],
+        "region": [
+          1010,
+          386,
+          61,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i14",
+      "cell": [
+        7,
+        5
+      ],
+      "crop_rgba_sha256": "77743d82fa4cc698013c9cb0a5f76fca95c1eb9bdfd8283c7debe8f7e6dd1e2e",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1096,
+          422,
+          56,
+          57
+        ],
+        "region": [
+          1096,
+          386,
+          56,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i15",
+      "cell": [
+        8,
+        5
+      ],
+      "crop_rgba_sha256": "5212654547b43d3b812e7bb60afc77637cf8926529366fca74d611e5729351dd",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1178,
+          425,
+          51,
+          52
+        ],
+        "region": [
+          1178,
+          386,
+          51,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i16",
+      "cell": [
+        9,
+        5
+      ],
+      "crop_rgba_sha256": "66c4ad2cf9bba901e010cd03e081513aadf523c527f2be8cd2fee0cea10941f2",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1256,
+          425,
+          53,
+          54
+        ],
+        "region": [
+          1255,
+          386,
+          54,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i17",
+      "cell": [
+        10,
+        5
+      ],
+      "crop_rgba_sha256": "4840dd9eb409f379d147eca4c7f04eb26fd7aab261cd6f930914b6dd2ab77e00",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1332,
+          425,
+          54,
+          54
+        ],
+        "region": [
+          1332,
+          386,
+          54,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i18",
+      "cell": [
+        11,
+        5
+      ],
+      "crop_rgba_sha256": "9a358e0a16d50694673dc0f4cfeb2826a0ec5803c88210425a52e69b65618a76",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1410,
+          425,
+          54,
+          55
+        ],
+        "region": [
+          1410,
+          386,
+          54,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i19",
+      "cell": [
+        12,
+        5
+      ],
+      "crop_rgba_sha256": "c0c05edce6c6d38c979b2481d0924e95fce6fb629d5d1077a3070ea2d8c55816",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1488,
+          426,
+          52,
+          52
+        ],
+        "region": [
+          1488,
+          386,
+          52,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i20",
+      "cell": [
+        13,
+        5
+      ],
+      "crop_rgba_sha256": "73d2d67fb83c37150879c8802628cd42335de41b15703ee06e573727486bc83d",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1564,
+          427,
+          50,
+          50
+        ],
+        "region": [
+          1564,
+          386,
+          51,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i21",
+      "cell": [
+        14,
+        5
+      ],
+      "crop_rgba_sha256": "07c51c53ce7bec5fac725701d21f9afd2efbf89bf6506e64812fcfcd85324f71",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1640,
+          427,
+          50,
+          50
+        ],
+        "region": [
+          1640,
+          386,
+          50,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i22",
+      "cell": [
+        15,
+        5
+      ],
+      "crop_rgba_sha256": "1f94f0e4073c776e1549477f289d20880dffd6803258195c795e79080d3d1477",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1715,
+          426,
+          53,
+          53
+        ],
+        "region": [
+          1715,
+          386,
+          53,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i23",
+      "cell": [
+        16,
+        5
+      ],
+      "crop_rgba_sha256": "d59ef89fe016db4e2a9c367a70a2ab2e3c48b0081e098e96805059076bb75f8f",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1794,
+          430,
+          53,
+          45
+        ],
+        "region": [
+          1794,
+          386,
+          53,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i24",
+      "cell": [
+        17,
+        5
+      ],
+      "crop_rgba_sha256": "086e537048820a8c93f352ad013090f70535323d1761a65f85c3561e85e21718",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1871,
+          428,
+          54,
+          47
+        ],
+        "region": [
+          1871,
+          386,
+          54,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i25",
+      "cell": [
+        18,
+        5
+      ],
+      "crop_rgba_sha256": "d86d9d1a845a7be8eb201b749fac7c8cdac917201395cd7519580c7435406de5",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1948,
+          427,
+          49,
+          49
+        ],
+        "region": [
+          1948,
+          386,
+          49,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i26",
+      "cell": [
+        19,
+        5
+      ],
+      "crop_rgba_sha256": "cf5a03d31a5477da031d251e5d89a7f574d9a7381755b84ea979cb796a14b736",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2026,
+          429,
+          46,
+          46
+        ],
+        "region": [
+          2026,
+          386,
+          46,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r04i27",
+      "cell": [
+        20,
+        5
+      ],
+      "crop_rgba_sha256": "2f97a30a40e956213c2e8f558aa1107587fcb67b155bcfb72bb7c2950b7c8d43",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2094,
+          421,
+          57,
+          58
+        ],
+        "region": [
+          2094,
+          386,
+          58,
+          97
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i00",
+      "cell": [
+        21,
+        5
+      ],
+      "crop_rgba_sha256": "c1fe72fa25689dbc849e25b374a1781400ba78a0609d6ff3ee4bdc07369755f5",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          24,
+          508,
+          49,
+          60
+        ],
+        "region": [
+          24,
+          483,
+          49,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i01",
+      "cell": [
+        22,
+        5
+      ],
+      "crop_rgba_sha256": "15d33e465625b132c031ea4d5eef45bfef3c15e4ee386283ab260aec6ee4c7d3",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          95,
+          513,
+          59,
+          55
+        ],
+        "region": [
+          95,
+          483,
+          59,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i02",
+      "cell": [
+        23,
+        5
+      ],
+      "crop_rgba_sha256": "ae9df58d9f348b12f071c4fd73665656e5a055dcf3f1638440491b3eeaafb436",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          169,
+          515,
+          65,
+          47
+        ],
+        "region": [
+          169,
+          483,
+          65,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i03",
+      "cell": [
+        0,
+        6
+      ],
+      "crop_rgba_sha256": "94845231efa01087b1a0be44cb0a6ffda1887297e25c07461ed3c2ba029304f4",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          250,
+          510,
+          59,
+          59
+        ],
+        "region": [
+          250,
+          483,
+          60,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i04",
+      "cell": [
+        1,
+        6
+      ],
+      "crop_rgba_sha256": "2586cc865dcf2d715f6a2b82efcf5208214531d828f2a578b80a5169c31d86cd",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          338,
+          516,
+          41,
+          45
+        ],
+        "region": [
+          338,
+          483,
+          41,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i05",
+      "cell": [
+        2,
+        6
+      ],
+      "crop_rgba_sha256": "a97238146ae06df21267096f9cfc90b722fac47469dd6a63e384c02b85d6b388",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          406,
+          514,
+          51,
+          52
+        ],
+        "region": [
+          405,
+          483,
+          52,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i06",
+      "cell": [
+        3,
+        6
+      ],
+      "crop_rgba_sha256": "893810d74a63a59db504a8d367dcebb751870265dc10a4fbeeb32a4c129520ca",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          481,
+          513,
+          54,
+          54
+        ],
+        "region": [
+          481,
+          483,
+          54,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i07",
+      "cell": [
+        4,
+        6
+      ],
+      "crop_rgba_sha256": "4c25dc7be254c19036f4ca6ea8e16195a30be4c48829002e1bb9732e67c497f1",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          556,
+          513,
+          54,
+          52
+        ],
+        "region": [
+          556,
+          483,
+          54,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i08",
+      "cell": [
+        5,
+        6
+      ],
+      "crop_rgba_sha256": "8acc02470044c1202155da0a077eb55e8509fa848d5e5d24fccb70685ded948c",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          634,
+          512,
+          54,
+          55
+        ],
+        "region": [
+          634,
+          483,
+          55,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i09",
+      "cell": [
+        6,
+        6
+      ],
+      "crop_rgba_sha256": "f4558824982339a39a701ab1ce0dd6ff63373f04f511e20705f4282ed842ad9d",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          711,
+          513,
+          55,
+          54
+        ],
+        "region": [
+          710,
+          483,
+          56,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i10",
+      "cell": [
+        7,
+        6
+      ],
+      "crop_rgba_sha256": "f69ca8933ec726a5d0ac8f7e76fba54edb36e0806371491688ce6a19e9fc6499",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          788,
+          515,
+          55,
+          51
+        ],
+        "region": [
+          788,
+          483,
+          55,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i11",
+      "cell": [
+        8,
+        6
+      ],
+      "crop_rgba_sha256": "6f5f87c6b79dd0c2dae1e8b62ac803ccea181e8cac28fa2996055ca2e9037fe7",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          867,
+          513,
+          51,
+          55
+        ],
+        "region": [
+          867,
+          483,
+          51,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i12",
+      "cell": [
+        9,
+        6
+      ],
+      "crop_rgba_sha256": "9cca443ff2c1c1b66bba102cfdd23bca7929881074b0129b4ab8a5a9a95eee76",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          941,
+          512,
+          56,
+          56
+        ],
+        "region": [
+          941,
+          483,
+          56,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i13",
+      "cell": [
+        10,
+        6
+      ],
+      "crop_rgba_sha256": "94785d7156f93b3821ead6a5f983588d66e3038f4425484479a0ca27b4030cf4",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1014,
+          508,
+          64,
+          61
+        ],
+        "region": [
+          1014,
+          483,
+          65,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i14",
+      "cell": [
+        11,
+        6
+      ],
+      "crop_rgba_sha256": "f71c2e5cf6da0d281c572e0155407c99982e2e5f25954e2506ddbff4a828fd11",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1092,
+          516,
+          58,
+          46
+        ],
+        "region": [
+          1092,
+          483,
+          58,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i15",
+      "cell": [
+        12,
+        6
+      ],
+      "crop_rgba_sha256": "629f073c9e6514c9650799ba6d5cf702c6f04a38ff47fdba5dad4f98b6c8dbed",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1169,
+          510,
+          58,
+          57
+        ],
+        "region": [
+          1169,
+          483,
+          59,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i16",
+      "cell": [
+        13,
+        6
+      ],
+      "crop_rgba_sha256": "a151fb7713eedea74e4eabbde0269f0488a1dce11d02a924620451e4d2d5815f",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1251,
+          513,
+          57,
+          54
+        ],
+        "region": [
+          1251,
+          483,
+          57,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i17",
+      "cell": [
+        14,
+        6
+      ],
+      "crop_rgba_sha256": "20af578420aedb6235a8b956306f0d9770a90ce2958b75e6df3296e245197c4d",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1330,
+          515,
+          50,
+          49
+        ],
+        "region": [
+          1330,
+          483,
+          51,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i18",
+      "cell": [
+        15,
+        6
+      ],
+      "crop_rgba_sha256": "d21d24a6b692a2f3636eb5ebd90d8ad4ee43548ece14b85b64882e9ab1ad0b5c",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1411,
+          511,
+          41,
+          52
+        ],
+        "region": [
+          1411,
+          483,
+          42,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i19",
+      "cell": [
+        16,
+        6
+      ],
+      "crop_rgba_sha256": "e96a23a47ef221a12341803db03f7b127b5374b094c44a86a9dcebf26ecc78b5",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1484,
+          514,
+          55,
+          47
+        ],
+        "region": [
+          1484,
+          483,
+          55,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i20",
+      "cell": [
+        17,
+        6
+      ],
+      "crop_rgba_sha256": "d3963246cc1e194f987451758398f9bf123309035a68aa7beaba70a2ee6f60ab",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1560,
+          511,
+          53,
+          54
+        ],
+        "region": [
+          1560,
+          483,
+          53,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i21",
+      "cell": [
+        18,
+        6
+      ],
+      "crop_rgba_sha256": "2618691fcda6d01031548190379092acf4fe079a093cbdd65fbf2742c1071a97",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1637,
+          515,
+          58,
+          49
+        ],
+        "region": [
+          1636,
+          483,
+          59,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i22",
+      "cell": [
+        19,
+        6
+      ],
+      "crop_rgba_sha256": "d294854442198852c77a485c8b25e4e7e3506d96112042f408f20b59565fb214",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1717,
+          512,
+          56,
+          53
+        ],
+        "region": [
+          1717,
+          483,
+          57,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i23",
+      "cell": [
+        20,
+        6
+      ],
+      "crop_rgba_sha256": "6e6576a3d7beae6a7cdf009251a3b0a8895530fd7a2623af66ddf4d0be4db825",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1800,
+          509,
+          47,
+          58
+        ],
+        "region": [
+          1799,
+          483,
+          48,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i24",
+      "cell": [
+        21,
+        6
+      ],
+      "crop_rgba_sha256": "890bcf7b57f3ae6241bbd5f391b02c3229bd5fc3030ac173a538fab46c89037d",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1875,
+          514,
+          54,
+          49
+        ],
+        "region": [
+          1875,
+          483,
+          54,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i25",
+      "cell": [
+        22,
+        6
+      ],
+      "crop_rgba_sha256": "6ae0064d18138df2b3228638ff99182c98fa4d9f686e8da04a31ce69f240f7bc",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1954,
+          510,
+          44,
+          56
+        ],
+        "region": [
+          1954,
+          483,
+          44,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i26",
+      "cell": [
+        23,
+        6
+      ],
+      "crop_rgba_sha256": "0e21c7002c6c9c40a5469ff1bc9a3ed0d743f418975a9dcbd1c2677247485feb",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2029,
+          510,
+          44,
+          56
+        ],
+        "region": [
+          2029,
+          483,
+          44,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r05i27",
+      "cell": [
+        0,
+        7
+      ],
+      "crop_rgba_sha256": "b83341b72f35713bce4c443896e473c43781a6b45e9133e70ecd2dea53d9ee8a",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          2103,
+          511,
+          49,
+          55
+        ],
+        "region": [
+          2103,
+          483,
+          49,
+          89
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i00",
+      "cell": [
+        1,
+        7
+      ],
+      "crop_rgba_sha256": "41b7103e84c2866b9b4efd9e0177eb42fc25da61ac1e028f3a68142421b88187",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          22,
+          591,
+          52,
+          51
+        ],
+        "region": [
+          22,
+          572,
+          52,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i01",
+      "cell": [
+        2,
+        7
+      ],
+      "crop_rgba_sha256": "2cb2bffed3d9fb89c9aff66bd9a4f065ae1e6fc1deccc704e5aa080c9ab3bbec",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          98,
+          591,
+          52,
+          51
+        ],
+        "region": [
+          98,
+          572,
+          53,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i02",
+      "cell": [
+        3,
+        7
+      ],
+      "crop_rgba_sha256": "13dc0aa960dd9d5c7c984e2bfaf33fa32b9f9a3f84b54052910c1744ef8fc3f6",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          174,
+          593,
+          52,
+          49
+        ],
+        "region": [
+          173,
+          572,
+          53,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i03",
+      "cell": [
+        4,
+        7
+      ],
+      "crop_rgba_sha256": "82e162ddb7379829adf7aae78d550918cd6eb252978efdaa5bd0cc8806f1efea",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          252,
+          593,
+          52,
+          49
+        ],
+        "region": [
+          252,
+          572,
+          52,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i04",
+      "cell": [
+        5,
+        7
+      ],
+      "crop_rgba_sha256": "139caf2f20bebb9a48ad26d1840483154e44c64fcb8b69f613798a5a1d83153c",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          331,
+          594,
+          50,
+          47
+        ],
+        "region": [
+          331,
+          572,
+          50,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i05",
+      "cell": [
+        6,
+        7
+      ],
+      "crop_rgba_sha256": "76964e2e5eeee002da33e0b11b140f31ef5f668f4763cc87d8f8108db080a6fb",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          409,
+          595,
+          45,
+          46
+        ],
+        "region": [
+          409,
+          572,
+          46,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i06",
+      "cell": [
+        7,
+        7
+      ],
+      "crop_rgba_sha256": "9c8ce048956c5559202401a61617f5cd04dd5a8ec9b7f7c5d4774cec424010af",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          484,
+          595,
+          48,
+          46
+        ],
+        "region": [
+          484,
+          572,
+          48,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i07",
+      "cell": [
+        8,
+        7
+      ],
+      "crop_rgba_sha256": "da60fc01271cd20c724194289adf33d88c4824a1a42f596e7910cbf9376cd7f2",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          560,
+          592,
+          50,
+          50
+        ],
+        "region": [
+          560,
+          572,
+          50,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i08",
+      "cell": [
+        9,
+        7
+      ],
+      "crop_rgba_sha256": "bab7a221502ca751b6bf55e4d895f4e958a9ebc43295806d3be9472d6c60a7c3",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          637,
+          594,
+          48,
+          47
+        ],
+        "region": [
+          637,
+          572,
+          48,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i09",
+      "cell": [
+        10,
+        7
+      ],
+      "crop_rgba_sha256": "f8cd036cb814e2d90e3bcecca299afcd250f6faf4d59d8df84b70bb675537a1e",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          723,
+          598,
+          35,
+          40
+        ],
+        "region": [
+          723,
+          572,
+          35,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i10",
+      "cell": [
+        11,
+        7
+      ],
+      "crop_rgba_sha256": "97a5ad3a356948494e16c777807f0d20ecfde4791f84ad7d0cfeff5e894f2a70",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          794,
+          597,
+          41,
+          41
+        ],
+        "region": [
+          794,
+          572,
+          41,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i11",
+      "cell": [
+        12,
+        7
+      ],
+      "crop_rgba_sha256": "761cb74213e50fdf304afebaafbbed303d176cbcfdcce4bfb15efc868356a26a",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          871,
+          598,
+          39,
+          39
+        ],
+        "region": [
+          871,
+          572,
+          40,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i12",
+      "cell": [
+        13,
+        7
+      ],
+      "crop_rgba_sha256": "4ac3a1cec13f178e9bdca83ec8e1c2bee66a29d74202d2706e71a3f2b415869f",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          946,
+          601,
+          46,
+          34
+        ],
+        "region": [
+          946,
+          572,
+          46,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i13",
+      "cell": [
+        14,
+        7
+      ],
+      "crop_rgba_sha256": "610706c3f539957c678719b9df5ec0b3628947628fc78ad87b2770f89977e0e5",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1023,
+          601,
+          45,
+          34
+        ],
+        "region": [
+          1023,
+          572,
+          45,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i14",
+      "cell": [
+        15,
+        7
+      ],
+      "crop_rgba_sha256": "8bf164d7ddd6ae037a40c7d25946cf5598d12059957317fd9e750aaee80c73c1",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1101,
+          594,
+          43,
+          48
+        ],
+        "region": [
+          1101,
+          572,
+          43,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i15",
+      "cell": [
+        16,
+        7
+      ],
+      "crop_rgba_sha256": "edc228c82a735daa4c27c4fd308d33bf2d4e5a9a54cfbf569957d39e03b35c8b",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1178,
+          596,
+          47,
+          45
+        ],
+        "region": [
+          1178,
+          572,
+          47,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i16",
+      "cell": [
+        17,
+        7
+      ],
+      "crop_rgba_sha256": "164280f4b0bed6251a430e028ba91ebb54c4283cd3a002924d80514ee30628dd",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1256,
+          596,
+          47,
+          45
+        ],
+        "region": [
+          1256,
+          572,
+          47,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i17",
+      "cell": [
+        18,
+        7
+      ],
+      "crop_rgba_sha256": "a83032bd12e87a5d17561b92dcb63db4428c568f15e27e81091dde8de7b7ed4f",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1332,
+          598,
+          50,
+          42
+        ],
+        "region": [
+          1331,
+          572,
+          52,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i18",
+      "cell": [
+        19,
+        7
+      ],
+      "crop_rgba_sha256": "48ec6277a5d276ab2d7005b5bef2025af707a197d0de23550cb67528cb6e8e82",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1409,
+          598,
+          50,
+          41
+        ],
+        "region": [
+          1409,
+          572,
+          51,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i19",
+      "cell": [
+        20,
+        7
+      ],
+      "crop_rgba_sha256": "67ff01afcbb8780c309b1611c2ae8217e9af808810f65be757fc415c34b97f88",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1489,
+          594,
+          43,
+          48
+        ],
+        "region": [
+          1489,
+          572,
+          43,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i20",
+      "cell": [
+        21,
+        7
+      ],
+      "crop_rgba_sha256": "bfd3dc14d84b5d2029e4bd938bab323ce49f4c365ef846a51f61d0350787a347",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1565,
+          601,
+          48,
+          34
+        ],
+        "region": [
+          1565,
+          572,
+          48,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i21",
+      "cell": [
+        22,
+        7
+      ],
+      "crop_rgba_sha256": "b136619e47ae604d6edac6ceb692c32d67610913007c355d78932ee460813754",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1642,
+          601,
+          49,
+          34
+        ],
+        "region": [
+          1642,
+          572,
+          49,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.ui-controls.r06i22",
+      "cell": [
+        23,
+        7
+      ],
+      "crop_rgba_sha256": "2a709690370e16de50f64d5ccae46745bde341c642207d0feb08d10333bf8d0b",
+      "source": {
+        "file": "monochrome_ui_icon_grid_sheet.png",
+        "bbox": [
+          1718,
+          596,
+          51,
+          44
+        ],
+        "region": [
+          1718,
+          572,
+          51,
+          74
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    }
+  ]
+}

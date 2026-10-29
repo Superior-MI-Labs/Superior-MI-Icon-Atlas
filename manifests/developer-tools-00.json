@@ -1,0 +1,7302 @@
+{
+  "schema": "smi-icon-atlas-sheet/1",
+  "sheet": {
+    "id": "icons.monoline.developer-tools-00.24x8",
+    "path": "sheets/developer-tools-00/atlas.png",
+    "foreground_mask": "sheets/developer-tools-00/atlas.png",
+    "black_outline": "sheets/developer-tools-00/black-outline.png",
+    "preview": "sheets/developer-tools-00/inspection-preview.png",
+    "width_px": 2304,
+    "height_px": 768,
+    "cell_px": 96,
+    "columns": 24,
+    "rows": 8,
+    "domain": "developer-tools",
+    "sha256": "b38cb84b18e8862eb94b46dbe3ac4ed2e836b3ef9da47afde35f8002838cb4f2",
+    "style": "white-geometric-monoline",
+    "variant": "monoline"
+  },
+  "icons": [
+    {
+      "id": "icons.candidate.developer-tools.r00i00",
+      "cell": [
+        0,
+        0
+      ],
+      "crop_rgba_sha256": "9201dab74748476f6d2b35464fb0960b27778e1ca2ea916f73dd1871fc21dc32",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          33,
+          57,
+          65,
+          58
+        ],
+        "region": [
+          33,
+          0,
+          65,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Code brackets",
+        "tags": [
+          "code brackets",
+          "source",
+          "markup",
+          "programming",
+          "angle brackets"
+        ],
+        "aliases": [],
+        "subjects": [
+          "programming.syntax"
+        ],
+        "concept_id": "programming.syntax.code-brackets",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i01",
+      "cell": [
+        1,
+        0
+      ],
+      "crop_rgba_sha256": "4204b22d87215b2633949ed40d977f7456251b31d28a65e86e5f8e6b188a66f6",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          121,
+          52,
+          56,
+          67
+        ],
+        "region": [
+          121,
+          0,
+          56,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "File",
+        "tags": [
+          "file",
+          "document",
+          "blank file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i02",
+      "cell": [
+        2,
+        0
+      ],
+      "crop_rgba_sha256": "577815a981c94a88b05fad659f69cd82d45b3391ac52c53acc061f8e0fe431e8",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          199,
+          59,
+          67,
+          55
+        ],
+        "region": [
+          199,
+          0,
+          67,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Folder",
+        "tags": [
+          "folder",
+          "directory",
+          "open directory"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.folders"
+        ],
+        "concept_id": "files.folders.folder",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i03",
+      "cell": [
+        3,
+        0
+      ],
+      "crop_rgba_sha256": "5e5c7e27779a39358b3f7abb146227db397c4b83f1188fe73d41f88972dff869",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          284,
+          59,
+          66,
+          55
+        ],
+        "region": [
+          284,
+          0,
+          66,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Folder open",
+        "tags": [
+          "folder open",
+          "directory",
+          "open folder"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.folders"
+        ],
+        "concept_id": "files.folders.folder-open",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i04",
+      "cell": [
+        4,
+        0
+      ],
+      "crop_rgba_sha256": "f75c471b885bf805eba9abfa29ebbaba0e302c93f8c3b4ab90b600e986c0e6b6",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          369,
+          55,
+          60,
+          62
+        ],
+        "region": [
+          368,
+          0,
+          61,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Save",
+        "tags": [
+          "save",
+          "floppy disk",
+          "save file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.save",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i05",
+      "cell": [
+        5,
+        0
+      ],
+      "crop_rgba_sha256": "4f273b693940bf4963829524f359f54e0891a9d4d3d022af19a6f7109d782945",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          450,
+          56,
+          61,
+          61
+        ],
+        "region": [
+          450,
+          0,
+          61,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Pencil",
+        "tags": [
+          "pencil",
+          "edit",
+          "write",
+          "draw"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.pencil",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i06",
+      "cell": [
+        6,
+        0
+      ],
+      "crop_rgba_sha256": "f9ea00e120062798b5317f46ba3e9c8fd3a67e7716baa2bebdaa422b0b8c48d2",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          531,
+          57,
+          64,
+          57
+        ],
+        "region": [
+          530,
+          0,
+          65,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Terminal",
+        "tags": [
+          "terminal",
+          "command line",
+          "console",
+          "shell",
+          "cli"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.terminal"
+        ],
+        "concept_id": "developer.terminal.terminal",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i07",
+      "cell": [
+        7,
+        0
+      ],
+      "crop_rgba_sha256": "7f7bd7c1bd848746afb2f7fc9196a3b6014831bfb8004b2a4a5abf1ac3d28c30",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          617,
+          57,
+          64,
+          57
+        ],
+        "region": [
+          616,
+          0,
+          65,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Terminal",
+        "tags": [
+          "terminal",
+          "command line",
+          "console",
+          "shell",
+          "cli"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.terminal"
+        ],
+        "concept_id": "developer.terminal.terminal",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i08",
+      "cell": [
+        8,
+        0
+      ],
+      "crop_rgba_sha256": "919c39da9bf7148988e73245b10df64d288d4a18b5aac7e9fd38797ba16f6c13",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          700,
+          57,
+          64,
+          57
+        ],
+        "region": [
+          700,
+          0,
+          64,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Application window",
+        "tags": [
+          "application window",
+          "browser window",
+          "app window"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.windows"
+        ],
+        "concept_id": "ui.windows.application-window",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i09",
+      "cell": [
+        9,
+        0
+      ],
+      "crop_rgba_sha256": "08fe79f7f06068116a1ec5a1a6835bf7829260dc1e043bbacb205122ee753477",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          780,
+          54,
+          62,
+          62
+        ],
+        "region": [
+          780,
+          0,
+          62,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Search",
+        "tags": [
+          "search",
+          "find",
+          "magnifying glass",
+          "lookup"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.search",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i10",
+      "cell": [
+        10,
+        0
+      ],
+      "crop_rgba_sha256": "da641a4f0e0706fba13c55797a70a8d57e31e45baf9c927d0029fc502de8db7a",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          864,
+          55,
+          55,
+          61
+        ],
+        "region": [
+          864,
+          0,
+          56,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Duplicate",
+        "tags": [
+          "duplicate",
+          "copy",
+          "overlapping squares"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.duplicate",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i11",
+      "cell": [
+        11,
+        0
+      ],
+      "crop_rgba_sha256": "774ff28349951e571648c9146ea9012fbb5e7b66ec980d61d72a765c75e95b58",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          944,
+          53,
+          54,
+          65
+        ],
+        "region": [
+          944,
+          0,
+          54,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Clipboard",
+        "tags": [
+          "clipboard",
+          "paste",
+          "copy clipboard"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.clipboard",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i12",
+      "cell": [
+        12,
+        0
+      ],
+      "crop_rgba_sha256": "5355ed91773821b5165293e51e04fbc8eea3dd3888b1e75e7345dcc3a6f8778d",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1022,
+          54,
+          57,
+          62
+        ],
+        "region": [
+          1022,
+          0,
+          57,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Copy",
+        "tags": [
+          "copy",
+          "duplicate",
+          "two squares"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.copy",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i13",
+      "cell": [
+        13,
+        0
+      ],
+      "crop_rgba_sha256": "1a0a6489fb037d4b46e7ca264232321579786c724111db549c3e55d4b3ba8818",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1104,
+          54,
+          51,
+          63
+        ],
+        "region": [
+          1104,
+          0,
+          51,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Clipboard",
+        "tags": [
+          "clipboard",
+          "paste",
+          "copy clipboard"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.clipboard",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i14",
+      "cell": [
+        14,
+        0
+      ],
+      "crop_rgba_sha256": "cfcebe36cd93b931a16cce95dce9ad6dddbf58859ba8d51ecc2e07bfa79a8f35",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1180,
+          54,
+          61,
+          63
+        ],
+        "region": [
+          1180,
+          0,
+          61,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Trash",
+        "tags": [
+          "trash",
+          "delete",
+          "remove",
+          "bin"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.trash",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i15",
+      "cell": [
+        15,
+        0
+      ],
+      "crop_rgba_sha256": "490ea8e1d398ca3e5eacdf1a8ebd231f9508c58b4497943493caca6d1d93f080",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1265,
+          57,
+          54,
+          55
+        ],
+        "region": [
+          1265,
+          0,
+          54,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Undo",
+        "tags": [
+          "undo",
+          "back",
+          "reverse",
+          "curved arrow"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.undo",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i16",
+      "cell": [
+        16,
+        0
+      ],
+      "crop_rgba_sha256": "f3278ed46cd29d536d42a87940d32ab59a1988cafb572b2ad03c88d00bd6ed6c",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1344,
+          57,
+          54,
+          55
+        ],
+        "region": [
+          1344,
+          0,
+          55,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Redo",
+        "tags": [
+          "redo",
+          "forward",
+          "reapply",
+          "curved arrow"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.redo",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i17",
+      "cell": [
+        17,
+        0
+      ],
+      "crop_rgba_sha256": "2691a92a4b51c4114aaa6577aa8521165ed4bc9e63f7a616d32e43a0f5dda079",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1423,
+          55,
+          63,
+          62
+        ],
+        "region": [
+          1423,
+          0,
+          63,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Settings",
+        "tags": [
+          "settings",
+          "gear",
+          "cog",
+          "configuration"
+        ],
+        "aliases": [],
+        "subjects": [
+          "software.settings"
+        ],
+        "concept_id": "software.settings.settings",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i18",
+      "cell": [
+        18,
+        0
+      ],
+      "crop_rgba_sha256": "22eff16f33dd10acf67ab95784d79c62bde45ff8b4f01693340d91ba495c65c6",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1507,
+          57,
+          59,
+          58
+        ],
+        "region": [
+          1507,
+          0,
+          59,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Sliders",
+        "tags": [
+          "sliders",
+          "adjust",
+          "tune",
+          "settings",
+          "controls"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.sliders",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i19",
+      "cell": [
+        19,
+        0
+      ],
+      "crop_rgba_sha256": "e3b1e00d71d4e98844b3430026e246d187cbe29e5f9e4a413f1b6159701ab152",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1587,
+          55,
+          62,
+          62
+        ],
+        "region": [
+          1587,
+          0,
+          62,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Wrench",
+        "tags": [
+          "wrench",
+          "repair",
+          "tool",
+          "maintenance"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.tools"
+        ],
+        "concept_id": "hardware.tools.wrench",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i20",
+      "cell": [
+        20,
+        0
+      ],
+      "crop_rgba_sha256": "5b0212d33dd912955cbe2912030803dae8ee48324844981b2e150203256c55bc",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1667,
+          54,
+          60,
+          63
+        ],
+        "region": [
+          1666,
+          0,
+          61,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Hammer",
+        "tags": [
+          "hammer",
+          "build",
+          "tool"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.tools"
+        ],
+        "concept_id": "hardware.tools.hammer",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i21",
+      "cell": [
+        21,
+        0
+      ],
+      "crop_rgba_sha256": "ca3b375da4e33ee200e90d192e42eb3034623a40f940422b60cd25fdab3bd32d",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1745,
+          55,
+          65,
+          62
+        ],
+        "region": [
+          1745,
+          0,
+          65,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Hammer",
+        "tags": [
+          "hammer",
+          "build",
+          "tool"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.tools"
+        ],
+        "concept_id": "hardware.tools.hammer",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i22",
+      "cell": [
+        22,
+        0
+      ],
+      "crop_rgba_sha256": "1149e73dcff3110fb64eb2d8a793af037991fec1b9a7f372770617a50ede8bc7",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1845,
+          57,
+          46,
+          59
+        ],
+        "region": [
+          1845,
+          0,
+          47,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Play",
+        "tags": [
+          "play",
+          "start",
+          "run",
+          "execute"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.media"
+        ],
+        "concept_id": "ui.media.play",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i23",
+      "cell": [
+        23,
+        0
+      ],
+      "crop_rgba_sha256": "fe344cc365609102c8d7085ead415cb4996df6126c1a0f5f452cc71e3d04d9d0",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1919,
+          58,
+          57,
+          56
+        ],
+        "region": [
+          1919,
+          0,
+          57,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Stop",
+        "tags": [
+          "stop",
+          "halt",
+          "terminate"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.media"
+        ],
+        "concept_id": "ui.media.stop",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i24",
+      "cell": [
+        0,
+        1
+      ],
+      "crop_rgba_sha256": "5fad3fee60493d71f8956bdb27e737fdca4ea2c17ad12dacc5ff7cd5d6030a4e",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1996,
+          55,
+          59,
+          60
+        ],
+        "region": [
+          1996,
+          0,
+          59,
+          123
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Bug",
+        "tags": [
+          "bug",
+          "debug",
+          "defect",
+          "insect"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.debugging"
+        ],
+        "concept_id": "developer.debugging.bug",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r00i25",
+      "cell": [
+        1,
+        1
+      ],
+      "crop_rgba_sha256": "5a6a3eca7a5097680dfe2c63ab8e811e4105cbc4d290f958f2fd6b7161ff7e5b",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          2075,
+          55,
+          61,
+          62
+        ],
+        "region": [
+          2075,
+          0,
+          61,
+          123
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i00",
+      "cell": [
+        2,
+        1
+      ],
+      "crop_rgba_sha256": "c0b1ffd41ff9156a05c75587d061992141ff6c33c8aa264494475ec5e4f2202b",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          35,
+          138,
+          60,
+          59
+        ],
+        "region": [
+          35,
+          123,
+          60,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Bug",
+        "tags": [
+          "bug",
+          "debug",
+          "defect",
+          "insect"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.debugging"
+        ],
+        "concept_id": "developer.debugging.bug",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i01",
+      "cell": [
+        3,
+        1
+      ],
+      "crop_rgba_sha256": "05bfde317dc541d14af9e704261b99ebc113afb9bb70096e82f90aeab5afea95",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          119,
+          139,
+          59,
+          59
+        ],
+        "region": [
+          119,
+          123,
+          60,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Record",
+        "tags": [
+          "record",
+          "capture",
+          "record circle"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.media"
+        ],
+        "concept_id": "ui.media.record",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i02",
+      "cell": [
+        4,
+        1
+      ],
+      "crop_rgba_sha256": "86504ee5515e0d823af6028e3401a88d6b6a2f72b344c03a762c4f7ec58a6181",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          215,
+          139,
+          44,
+          58
+        ],
+        "region": [
+          215,
+          123,
+          44,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Play",
+        "tags": [
+          "play",
+          "start",
+          "run",
+          "execute"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.media"
+        ],
+        "concept_id": "ui.media.play",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i03",
+      "cell": [
+        5,
+        1
+      ],
+      "crop_rgba_sha256": "9b4b5513f6f03b2c8a0385db0a06322cb91ee3eb78fef109365466518c9b94f5",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          285,
+          138,
+          60,
+          60
+        ],
+        "region": [
+          285,
+          123,
+          61,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Pause",
+        "tags": [
+          "pause",
+          "suspend",
+          "hold"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.media"
+        ],
+        "concept_id": "ui.media.pause",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i04",
+      "cell": [
+        6,
+        1
+      ],
+      "crop_rgba_sha256": "4d4a82ea2439c000c64eb9908a1b972ebda71494a284a0baed481e88610b5b76",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          371,
+          141,
+          51,
+          53
+        ],
+        "region": [
+          370,
+          123,
+          52,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Enter",
+        "tags": [
+          "enter",
+          "sign in",
+          "arrow into line"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.navigation"
+        ],
+        "concept_id": "ui.navigation.enter",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i05",
+      "cell": [
+        7,
+        1
+      ],
+      "crop_rgba_sha256": "1ec43f0a6e12cbb8ffc804f975ed79bca26c7b1f031fb49335cfbd48b93a2a77",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          454,
+          139,
+          54,
+          53
+        ],
+        "region": [
+          454,
+          123,
+          54,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Download",
+        "tags": [
+          "download",
+          "save",
+          "down arrow",
+          "transfer"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.download",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i06",
+      "cell": [
+        8,
+        1
+      ],
+      "crop_rgba_sha256": "80f040d7869e2c30cea67792e649fcab3d3e28fd4c3084467df1647be5f266b2",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          537,
+          141,
+          54,
+          52
+        ],
+        "region": [
+          537,
+          123,
+          54,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Upload",
+        "tags": [
+          "upload",
+          "up arrow",
+          "send file",
+          "transfer"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.upload",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i07",
+      "cell": [
+        9,
+        1
+      ],
+      "crop_rgba_sha256": "06dab1cdea4594968293b022628a4d170035de3f39fc068dd30c0e7102902d1e",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          622,
+          143,
+          57,
+          50
+        ],
+        "region": [
+          622,
+          123,
+          57,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Fast forward",
+        "tags": [
+          "fast forward",
+          "skip",
+          "advance",
+          "next"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.media"
+        ],
+        "concept_id": "ui.media.fast-forward",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i08",
+      "cell": [
+        10,
+        1
+      ],
+      "crop_rgba_sha256": "5422658ff000603f4027170e34a89328cb7a1d61e4aa177222a87a57adfc0912",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          700,
+          143,
+          57,
+          50
+        ],
+        "region": [
+          700,
+          123,
+          57,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Rewind",
+        "tags": [
+          "rewind",
+          "backward",
+          "previous",
+          "skip back"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.media"
+        ],
+        "concept_id": "ui.media.rewind",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i09",
+      "cell": [
+        11,
+        1
+      ],
+      "crop_rgba_sha256": "0eca208c7b1aa5c081c952bc7b003295d29089af9711f0f6d92a6b7d87efd1b8",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          778,
+          146,
+          64,
+          47
+        ],
+        "region": [
+          778,
+          123,
+          64,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Eye",
+        "tags": [
+          "eye",
+          "visibility",
+          "preview",
+          "view"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.eye",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i10",
+      "cell": [
+        12,
+        1
+      ],
+      "crop_rgba_sha256": "f9957662528e3f81f0ff15dd8bfcbd47c84bcaed8760022427191c109878037a",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          861,
+          139,
+          60,
+          60
+        ],
+        "region": [
+          861,
+          123,
+          60,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Layers",
+        "tags": [
+          "layers",
+          "stack",
+          "stacked sheets"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.layers"
+        ],
+        "concept_id": "ui.layers.layers",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i11",
+      "cell": [
+        13,
+        1
+      ],
+      "crop_rgba_sha256": "f5b153e1c0eb7db6021487d401548d644e54ec819fa9861d49465f2519a4071b",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          944,
+          138,
+          55,
+          62
+        ],
+        "region": [
+          944,
+          123,
+          55,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Database",
+        "tags": [
+          "database",
+          "data storage",
+          "sql",
+          "db"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.storage"
+        ],
+        "concept_id": "data.storage.database",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i12",
+      "cell": [
+        14,
+        1
+      ],
+      "crop_rgba_sha256": "1c93e4d259e84328025a70b0bad8b739d289a014262f30305b53df9cc4925648",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1025,
+          140,
+          57,
+          57
+        ],
+        "region": [
+          1025,
+          123,
+          57,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Table grid",
+        "tags": [
+          "table grid",
+          "spreadsheet",
+          "table",
+          "cells"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.tables"
+        ],
+        "concept_id": "data.tables.table-grid",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i13",
+      "cell": [
+        15,
+        1
+      ],
+      "crop_rgba_sha256": "19b2f35b1f875425a4668bb0525a8821d6bc16b9875495856b900379f6a47eb4",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1106,
+          142,
+          53,
+          54
+        ],
+        "region": [
+          1105,
+          123,
+          54,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Bar chart",
+        "tags": [
+          "bar chart",
+          "statistics",
+          "histogram",
+          "analytics"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.bar-chart",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i14",
+      "cell": [
+        16,
+        1
+      ],
+      "crop_rgba_sha256": "ef0bfafecad8c4b5f393278868a8d4130dd72fced9b36dd137082bac368e4360",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1181,
+          140,
+          60,
+          57
+        ],
+        "region": [
+          1181,
+          123,
+          60,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Line chart",
+        "tags": [
+          "line chart",
+          "trend",
+          "analytics",
+          "graph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.line-chart",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i15",
+      "cell": [
+        17,
+        1
+      ],
+      "crop_rgba_sha256": "fa572986acfc74788270c922e6ead82fc7a35d7cf268828f7ae070471ae82adc",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1261,
+          139,
+          60,
+          59
+        ],
+        "region": [
+          1261,
+          123,
+          60,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Pie chart",
+        "tags": [
+          "pie chart",
+          "statistics",
+          "portion",
+          "analytics"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.pie-chart",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i16",
+      "cell": [
+        18,
+        1
+      ],
+      "crop_rgba_sha256": "959dd9928781ed66de5167c5b17e3e0c902fd1786316de35f9dde908134002da",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1341,
+          142,
+          61,
+          54
+        ],
+        "region": [
+          1341,
+          123,
+          62,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Pulse",
+        "tags": [
+          "pulse",
+          "heartbeat",
+          "signal",
+          "waveform",
+          "activity"
+        ],
+        "aliases": [],
+        "subjects": [
+          "monitoring.signals"
+        ],
+        "concept_id": "monitoring.signals.pulse",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i17",
+      "cell": [
+        19,
+        1
+      ],
+      "crop_rgba_sha256": "c5b5aee8c137fc309cd7ef6157a62b3031b649f2e559c39392d8b1ee141473dc",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1423,
+          149,
+          62,
+          42
+        ],
+        "region": [
+          1423,
+          123,
+          62,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Gauge",
+        "tags": [
+          "gauge",
+          "speed",
+          "speedometer",
+          "meter"
+        ],
+        "aliases": [],
+        "subjects": [
+          "monitoring.metrics"
+        ],
+        "concept_id": "monitoring.metrics.gauge",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i18",
+      "cell": [
+        20,
+        1
+      ],
+      "crop_rgba_sha256": "ab8b088c2ff30c1085ea8f78d45e9928b5e0873409adbce13688e1d9cd5fe459",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1504,
+          141,
+          63,
+          49
+        ],
+        "region": [
+          1504,
+          123,
+          64,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Gauge",
+        "tags": [
+          "gauge",
+          "speed",
+          "speedometer",
+          "meter"
+        ],
+        "aliases": [],
+        "subjects": [
+          "monitoring.metrics"
+        ],
+        "concept_id": "monitoring.metrics.gauge",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i19",
+      "cell": [
+        21,
+        1
+      ],
+      "crop_rgba_sha256": "8f81abf9c92efe59218a099a4b598753d251addb6e8ae22bac9529eee51649e0",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1591,
+          140,
+          53,
+          59
+        ],
+        "region": [
+          1591,
+          123,
+          53,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Flame",
+        "tags": [
+          "flame",
+          "fire",
+          "burn",
+          "heat",
+          "blaze"
+        ],
+        "aliases": [],
+        "subjects": [
+          "nature.fire"
+        ],
+        "concept_id": "nature.fire.flame",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i20",
+      "cell": [
+        22,
+        1
+      ],
+      "crop_rgba_sha256": "654603b65ef5f9ecc04bcbfd3bfd979ad718f113a22d7f292b0d0f735ddd8dda",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1671,
+          142,
+          54,
+          57
+        ],
+        "region": [
+          1670,
+          123,
+          55,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Flask",
+        "tags": [
+          "flask",
+          "laboratory",
+          "test",
+          "experiment",
+          "chemistry"
+        ],
+        "aliases": [],
+        "subjects": [
+          "science.lab"
+        ],
+        "concept_id": "science.lab.flask",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i21",
+      "cell": [
+        23,
+        1
+      ],
+      "crop_rgba_sha256": "91c843eaf6fd41587a451755d00c343b57fc5fa3517c9c5d5a9e076047c6623c",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1747,
+          142,
+          63,
+          54
+        ],
+        "region": [
+          1747,
+          123,
+          63,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Checklist",
+        "tags": [
+          "checklist",
+          "todo",
+          "tasks",
+          "checkmarks"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.tasks"
+        ],
+        "concept_id": "ui.tasks.checklist",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i22",
+      "cell": [
+        0,
+        2
+      ],
+      "crop_rgba_sha256": "0095d55c1760f38f40c5544f22527ac7f001ce7e364ee50e7d544ffd511805ad",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1837,
+          140,
+          56,
+          58
+        ],
+        "region": [
+          1837,
+          123,
+          56,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Check box",
+        "tags": [
+          "check box",
+          "complete",
+          "selected",
+          "checkbox"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.check-box",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i23",
+      "cell": [
+        1,
+        2
+      ],
+      "crop_rgba_sha256": "247856c0cff562c53e4727adcc7628b155d6b346064630aab086d9701a96b331",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1919,
+          140,
+          58,
+          59
+        ],
+        "region": [
+          1919,
+          123,
+          58,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i24",
+      "cell": [
+        2,
+        2
+      ],
+      "crop_rgba_sha256": "1273a282498562e6f6bbf9b988097a73f9db4a8668d027ac2d42252ea3b1de4c",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1997,
+          140,
+          57,
+          59
+        ],
+        "region": [
+          1996,
+          123,
+          58,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r01i25",
+      "cell": [
+        3,
+        2
+      ],
+      "crop_rgba_sha256": "0a5ed6dfcbeb077fa462d28d6008881b16707627ad548e34bb2eb9b2297eb530",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          2082,
+          146,
+          47,
+          47
+        ],
+        "region": [
+          2082,
+          123,
+          48,
+          81
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Close",
+        "tags": [
+          "close",
+          "dismiss",
+          "cancel",
+          "x symbol"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.close",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i00",
+      "cell": [
+        4,
+        2
+      ],
+      "crop_rgba_sha256": "41faa958b8da19fed8e5d5dad623a330b980229751773aad00d09a0dff4da0bc",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          36,
+          224,
+          53,
+          65
+        ],
+        "region": [
+          35,
+          204,
+          55,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Branch",
+        "tags": [
+          "branch",
+          "git",
+          "version control",
+          "repository",
+          "commit"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.version-control"
+        ],
+        "concept_id": "developer.version-control.branch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i01",
+      "cell": [
+        5,
+        2
+      ],
+      "crop_rgba_sha256": "9200e3396565924cb80a44ba00613955e307afe6f45e60695fc07c3a535b1280",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          120,
+          224,
+          55,
+          62
+        ],
+        "region": [
+          120,
+          204,
+          55,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Branch",
+        "tags": [
+          "branch",
+          "git",
+          "version control",
+          "repository",
+          "commit"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.version-control"
+        ],
+        "concept_id": "developer.version-control.branch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i02",
+      "cell": [
+        6,
+        2
+      ],
+      "crop_rgba_sha256": "c19688762758acfc13bde7e50ae21952ee6ba819a2fba576d17afe8c22ef9fb6",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          197,
+          237,
+          66,
+          33
+        ],
+        "region": [
+          197,
+          204,
+          66,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Slider",
+        "tags": [
+          "slider",
+          "adjust",
+          "value control",
+          "range"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.slider",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i03",
+      "cell": [
+        7,
+        2
+      ],
+      "crop_rgba_sha256": "8c8e2b539784be1afcfd8b26d63787d13b2b2656fce068a7c3f556421cc1f283",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          285,
+          224,
+          57,
+          57
+        ],
+        "region": [
+          285,
+          204,
+          57,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Download",
+        "tags": [
+          "download",
+          "down arrow",
+          "save",
+          "export"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.download",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i04",
+      "cell": [
+        8,
+        2
+      ],
+      "crop_rgba_sha256": "b72fa3e6864a5897dc93afc4273032be0dcb715ab84a558eb21d1eb754449817",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          368,
+          226,
+          57,
+          53
+        ],
+        "region": [
+          368,
+          204,
+          57,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Upload",
+        "tags": [
+          "upload",
+          "up arrow",
+          "send",
+          "import"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.upload",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i05",
+      "cell": [
+        9,
+        2
+      ],
+      "crop_rgba_sha256": "eae3eee950c8e0a505ec293f55c8608901c5010dbc78b1c9455936ebf217596d",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          448,
+          226,
+          56,
+          59
+        ],
+        "region": [
+          448,
+          204,
+          56,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Branch",
+        "tags": [
+          "branch",
+          "git",
+          "version control",
+          "repository"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.version-control"
+        ],
+        "concept_id": "developer.version-control.branch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i06",
+      "cell": [
+        10,
+        2
+      ],
+      "crop_rgba_sha256": "065f8197d62dca5434f759b3f9c5bc91623be21b777e6c76d3a1baf5876294bc",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          531,
+          226,
+          58,
+          61
+        ],
+        "region": [
+          530,
+          204,
+          59,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Branch",
+        "tags": [
+          "branch",
+          "git",
+          "version control",
+          "repository"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.version-control"
+        ],
+        "concept_id": "developer.version-control.branch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i07",
+      "cell": [
+        11,
+        2
+      ],
+      "crop_rgba_sha256": "e5ac52e088aba59a92ddb6f7561dad0d5dd109f67ae16770063e1dec00207261",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          613,
+          226,
+          58,
+          60
+        ],
+        "region": [
+          613,
+          204,
+          58,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Branch",
+        "tags": [
+          "branch",
+          "git",
+          "version control",
+          "repository"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.version-control"
+        ],
+        "concept_id": "developer.version-control.branch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i08",
+      "cell": [
+        12,
+        2
+      ],
+      "crop_rgba_sha256": "5454b67afe2546c8cf969269bc82b2847401d92db681d03aa5015e5be4770f30",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          699,
+          227,
+          55,
+          61
+        ],
+        "region": [
+          699,
+          204,
+          55,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Swap horizontal",
+        "tags": [
+          "swap horizontal",
+          "exchange",
+          "reverse",
+          "left right arrows"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.swap-horizontal",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i09",
+      "cell": [
+        13,
+        2
+      ],
+      "crop_rgba_sha256": "830a07694aeca3c47784a78d9e99d9f886e420930444bf726fbc4a468fe6e352",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          776,
+          227,
+          62,
+          63
+        ],
+        "region": [
+          775,
+          204,
+          63,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Calculator",
+        "tags": [
+          "calculator",
+          "math",
+          "arithmetic"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.devices"
+        ],
+        "concept_id": "hardware.devices.calculator",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i10",
+      "cell": [
+        14,
+        2
+      ],
+      "crop_rgba_sha256": "1fd3e1e9c4c0742b3f641fda84e6d2a212cc43ad15bc5e8fd0e9cb6576e25438",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          857,
+          227,
+          54,
+          63
+        ],
+        "region": [
+          857,
+          204,
+          54,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "File",
+        "tags": [
+          "file",
+          "document",
+          "text file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i11",
+      "cell": [
+        15,
+        2
+      ],
+      "crop_rgba_sha256": "c196b5e6e89ecc2e4b2fef43c855936e80ff4eb610aebc1a7b6b32df4f2db6f4",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          943,
+          227,
+          55,
+          64
+        ],
+        "region": [
+          943,
+          204,
+          55,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "File",
+        "tags": [
+          "file",
+          "document",
+          "text file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i12",
+      "cell": [
+        16,
+        2
+      ],
+      "crop_rgba_sha256": "bc96035b46f322bda9202760656a5660fd2e9115460a20dac7bd08fe64510af5",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1024,
+          231,
+          57,
+          59
+        ],
+        "region": [
+          1024,
+          204,
+          57,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Tag",
+        "tags": [
+          "tag",
+          "label",
+          "price tag",
+          "category"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.metadata"
+        ],
+        "concept_id": "ui.metadata.tag",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i13",
+      "cell": [
+        17,
+        2
+      ],
+      "crop_rgba_sha256": "05ce957840c0684b0c4e885b1d0a6f94a9cca7e881bbe0838d20e09152d3bcf4",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1107,
+          228,
+          52,
+          64
+        ],
+        "region": [
+          1106,
+          204,
+          53,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Branch",
+        "tags": [
+          "branch",
+          "git",
+          "version control"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.version-control"
+        ],
+        "concept_id": "developer.version-control.branch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i14",
+      "cell": [
+        18,
+        2
+      ],
+      "crop_rgba_sha256": "6a03c3a18c6f0b3410e5bbf26aa1837b1ac35684e2545b1da2a5c1ee8b093fef",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1180,
+          226,
+          53,
+          63
+        ],
+        "region": [
+          1180,
+          204,
+          54,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Shield check",
+        "tags": [
+          "shield check",
+          "security",
+          "verified",
+          "protected"
+        ],
+        "aliases": [],
+        "subjects": [
+          "security.verification"
+        ],
+        "concept_id": "security.verification.shield-check",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i15",
+      "cell": [
+        19,
+        2
+      ],
+      "crop_rgba_sha256": "e31cecb09c49b11a1d9d68b479ce5b79347a4daf8c6f0d8c753df5a8dac996a0",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1262,
+          228,
+          49,
+          61
+        ],
+        "region": [
+          1261,
+          204,
+          50,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Branch",
+        "tags": [
+          "branch",
+          "git",
+          "version control"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.version-control"
+        ],
+        "concept_id": "developer.version-control.branch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i16",
+      "cell": [
+        20,
+        2
+      ],
+      "crop_rgba_sha256": "562537d5c34447f9d35dc653d0d6718c4dd438d223afc53271944533ccb028a6",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1336,
+          226,
+          64,
+          63
+        ],
+        "region": [
+          1336,
+          204,
+          64,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i17",
+      "cell": [
+        21,
+        2
+      ],
+      "crop_rgba_sha256": "1fca3d69184ee7afa6b4e13dd7d40ad941cb47aaf09eb94247accc54a4552bb4",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1421,
+          232,
+          65,
+          48
+        ],
+        "region": [
+          1421,
+          204,
+          65,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cloud upload",
+        "tags": [
+          "cloud upload",
+          "send",
+          "cloud storage"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.cloud"
+        ],
+        "concept_id": "network.cloud.cloud-upload",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i18",
+      "cell": [
+        22,
+        2
+      ],
+      "crop_rgba_sha256": "68aaa4245fbafd3ae65fbd7413606edf0e2e00bdcb5ceb08e1fd4e015976222b",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1503,
+          232,
+          64,
+          57
+        ],
+        "region": [
+          1503,
+          204,
+          65,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cloud download",
+        "tags": [
+          "cloud download",
+          "receive",
+          "cloud storage"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.cloud"
+        ],
+        "concept_id": "network.cloud.cloud-download",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i19",
+      "cell": [
+        23,
+        2
+      ],
+      "crop_rgba_sha256": "1b91ee28e3b5dbeee709bef43d120c165826aa14407106ef4c5bec519b111249",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1585,
+          232,
+          64,
+          57
+        ],
+        "region": [
+          1585,
+          204,
+          65,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cloud sync",
+        "tags": [
+          "cloud sync",
+          "transfer",
+          "cloud storage"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.cloud"
+        ],
+        "concept_id": "network.cloud.cloud-sync",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i20",
+      "cell": [
+        0,
+        3
+      ],
+      "crop_rgba_sha256": "03e5bde5ff1f41348241a606d72ed86f2eb5f6017dad9910db593949aa613eb7",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1671,
+          232,
+          56,
+          52
+        ],
+        "region": [
+          1671,
+          204,
+          56,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i21",
+      "cell": [
+        1,
+        3
+      ],
+      "crop_rgba_sha256": "484cb61d812b803e60062460d3a3c54f5f17176059eab61f3fa36021a912a4d6",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1749,
+          228,
+          59,
+          56
+        ],
+        "region": [
+          1749,
+          204,
+          59,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Link",
+        "tags": [
+          "link",
+          "chain",
+          "hyperlink",
+          "url"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.links"
+        ],
+        "concept_id": "network.links.link",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i22",
+      "cell": [
+        2,
+        3
+      ],
+      "crop_rgba_sha256": "9a5a54cea1f3e959dc1a359bab581f26e38af8ce16eb1ecd0fb296ab9ef948ec",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1837,
+          234,
+          56,
+          47
+        ],
+        "region": [
+          1836,
+          204,
+          57,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i23",
+      "cell": [
+        3,
+        3
+      ],
+      "crop_rgba_sha256": "5cba9d739fe1a7b4bf9c87da40c7fb8048675ceb92ce3f29d45c210a0d41a238",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1917,
+          238,
+          61,
+          37
+        ],
+        "region": [
+          1917,
+          204,
+          62,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Linked rings",
+        "tags": [
+          "linked rings",
+          "connection",
+          "chain",
+          "links"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.links"
+        ],
+        "concept_id": "network.links.linked-rings",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i24",
+      "cell": [
+        4,
+        3
+      ],
+      "crop_rgba_sha256": "1709b41e80e324bda8d4043dd17a611f00a2878ba989ce13a4ff0a9aab290d9a",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1998,
+          228,
+          56,
+          60
+        ],
+        "region": [
+          1997,
+          204,
+          57,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Branch",
+        "tags": [
+          "branch",
+          "git",
+          "version control"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.version-control"
+        ],
+        "concept_id": "developer.version-control.branch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r02i25",
+      "cell": [
+        5,
+        3
+      ],
+      "crop_rgba_sha256": "68462361d75717e930072eca113206eafedf2b66ec0987d186c46e995a99c407",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          2074,
+          232,
+          63,
+          47
+        ],
+        "region": [
+          2074,
+          204,
+          63,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Eye",
+        "tags": [
+          "eye",
+          "view",
+          "visibility",
+          "preview"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.eye",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i00",
+      "cell": [
+        6,
+        3
+      ],
+      "crop_rgba_sha256": "d931a0ee1a454b89d1e06feabb72ccba42afff6e5196b0e26af29d3a1d4734aa",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          35,
+          316,
+          57,
+          61
+        ],
+        "region": [
+          35,
+          295,
+          57,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Archive box",
+        "tags": [
+          "archive box",
+          "storage",
+          "archive",
+          "package"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.archive"
+        ],
+        "concept_id": "files.archive.archive-box",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i01",
+      "cell": [
+        7,
+        3
+      ],
+      "crop_rgba_sha256": "4dde8986be78a87b847261317a9bc5945ab974d38e8034a20717c39abe4464bb",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          121,
+          317,
+          57,
+          62
+        ],
+        "region": [
+          121,
+          295,
+          58,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cube",
+        "tags": [
+          "cube",
+          "box",
+          "3d",
+          "object"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geometry.shapes"
+        ],
+        "concept_id": "geometry.shapes.cube",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i02",
+      "cell": [
+        8,
+        3
+      ],
+      "crop_rgba_sha256": "c677ac5d6b29ea0ea0a5d43aef82cb0507fe5e4fedbb92b31e736979bb688d86",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          198,
+          316,
+          64,
+          60
+        ],
+        "region": [
+          198,
+          295,
+          64,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cubes",
+        "tags": [
+          "cubes",
+          "boxes",
+          "3d",
+          "blocks"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geometry.shapes"
+        ],
+        "concept_id": "geometry.shapes.cubes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i03",
+      "cell": [
+        9,
+        3
+      ],
+      "crop_rgba_sha256": "8971ed8765d72bf14f593bee861de719d74e547f177e9e4d58bd9e9ce820f5ce",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          281,
+          321,
+          67,
+          55
+        ],
+        "region": [
+          281,
+          295,
+          67,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Container ship",
+        "tags": [
+          "container ship",
+          "docker",
+          "ship",
+          "cargo"
+        ],
+        "aliases": [],
+        "subjects": [
+          "transport.sea"
+        ],
+        "concept_id": "transport.sea.container-ship",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i04",
+      "cell": [
+        10,
+        3
+      ],
+      "crop_rgba_sha256": "ffa78a09fa4909802f4899b729dd4275f492a25359cfbf2e671247149ee71c85",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          367,
+          316,
+          60,
+          61
+        ],
+        "region": [
+          367,
+          295,
+          60,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Calendar",
+        "tags": [
+          "calendar",
+          "schedule",
+          "date",
+          "events"
+        ],
+        "aliases": [],
+        "subjects": [
+          "time.calendar"
+        ],
+        "concept_id": "time.calendar.calendar",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i05",
+      "cell": [
+        11,
+        3
+      ],
+      "crop_rgba_sha256": "97c4e49f1a2df05009e35ff165ffa23c0c2e5b306392298c2946bdde7a6a0b3f",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          446,
+          323,
+          66,
+          50
+        ],
+        "region": [
+          446,
+          295,
+          66,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cloud",
+        "tags": [
+          "cloud",
+          "cloud computing",
+          "online",
+          "storage"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.cloud"
+        ],
+        "concept_id": "network.cloud.cloud",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i06",
+      "cell": [
+        12,
+        3
+      ],
+      "crop_rgba_sha256": "5fce3f69eeb30cc4b696cfdcb3bd8a5e5cc216f7b5c46b2f1fe33e577d627f09",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          534,
+          317,
+          54,
+          61
+        ],
+        "region": [
+          534,
+          295,
+          54,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Server rack",
+        "tags": [
+          "server rack",
+          "hosting",
+          "servers",
+          "datacenter"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.servers"
+        ],
+        "concept_id": "hardware.servers.server-rack",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i07",
+      "cell": [
+        13,
+        3
+      ],
+      "crop_rgba_sha256": "87bb6ea58ad2b3b803958fd77d2be7f7f3d8a7d2331f9ade99943bc15d538139",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          617,
+          320,
+          58,
+          58
+        ],
+        "region": [
+          617,
+          295,
+          58,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Server rack",
+        "tags": [
+          "server rack",
+          "hosting",
+          "servers",
+          "datacenter"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.servers"
+        ],
+        "concept_id": "hardware.servers.server-rack",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i08",
+      "cell": [
+        14,
+        3
+      ],
+      "crop_rgba_sha256": "91f7a5e190bf2e4094d131e4614a64761ace59d8543426febe3c107ea69028de",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          702,
+          317,
+          55,
+          65
+        ],
+        "region": [
+          702,
+          295,
+          55,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Database",
+        "tags": [
+          "database",
+          "data storage",
+          "sql"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.storage"
+        ],
+        "concept_id": "data.storage.database",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i09",
+      "cell": [
+        15,
+        3
+      ],
+      "crop_rgba_sha256": "1af553deda2f3b06332f52fd7dee1aae3a2a437c35a283c10fff49e5ded4468e",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          777,
+          319,
+          63,
+          63
+        ],
+        "region": [
+          777,
+          295,
+          63,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Computer monitor",
+        "tags": [
+          "computer monitor",
+          "display",
+          "screen",
+          "desktop"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.display"
+        ],
+        "concept_id": "hardware.display.computer-monitor",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i10",
+      "cell": [
+        16,
+        3
+      ],
+      "crop_rgba_sha256": "f30d4e2096a9b3c60bcee345a27a24f7cf57bbf52d57a8086d99592b2d544a58",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          857,
+          327,
+          66,
+          50
+        ],
+        "region": [
+          857,
+          295,
+          67,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Laptop",
+        "tags": [
+          "laptop",
+          "notebook computer",
+          "portable pc"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.computers"
+        ],
+        "concept_id": "hardware.computers.laptop",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i11",
+      "cell": [
+        17,
+        3
+      ],
+      "crop_rgba_sha256": "0eb3849eb38d188d182206c54dffab18e4e850bdd4097f5e5340504a9ac8ffd5",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          946,
+          320,
+          52,
+          61
+        ],
+        "region": [
+          945,
+          295,
+          54,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "File",
+        "tags": [
+          "file",
+          "document"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i12",
+      "cell": [
+        18,
+        3
+      ],
+      "crop_rgba_sha256": "389f287a1b8b3b89b5d70dc63c94e6c9a850dfa497e67da681f90a0959904e7d",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1024,
+          321,
+          56,
+          59
+        ],
+        "region": [
+          1024,
+          295,
+          56,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Server rack",
+        "tags": [
+          "server rack",
+          "servers",
+          "datacenter",
+          "hosting"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.servers"
+        ],
+        "concept_id": "hardware.servers.server-rack",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i13",
+      "cell": [
+        19,
+        3
+      ],
+      "crop_rgba_sha256": "223b6634188c189033071cd2b89dcbda9ad4c2264325b5fcddd318153840ea2f",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1102,
+          321,
+          60,
+          60
+        ],
+        "region": [
+          1102,
+          295,
+          60,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Settings",
+        "tags": [
+          "settings",
+          "gear",
+          "cog",
+          "configuration"
+        ],
+        "aliases": [],
+        "subjects": [
+          "software.settings"
+        ],
+        "concept_id": "software.settings.settings",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i14",
+      "cell": [
+        20,
+        3
+      ],
+      "crop_rgba_sha256": "43c1124bf48b78b74172ee22bbbaa16128a70668a699499ad6feb97316162886",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1182,
+          321,
+          59,
+          59
+        ],
+        "region": [
+          1182,
+          295,
+          59,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i15",
+      "cell": [
+        21,
+        3
+      ],
+      "crop_rgba_sha256": "8675bb30e7b9b170dce7aff7dbe8a43cae869097381e9e8448e035a41eb08c58",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1261,
+          321,
+          60,
+          55
+        ],
+        "region": [
+          1260,
+          295,
+          61,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Terminal window",
+        "tags": [
+          "terminal window",
+          "shell",
+          "console",
+          "command line"
+        ],
+        "aliases": [],
+        "subjects": [
+          "developer.terminal"
+        ],
+        "concept_id": "developer.terminal.terminal-window",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i16",
+      "cell": [
+        22,
+        3
+      ],
+      "crop_rgba_sha256": "95631e65a6c485f37966ba8c44d26d7b197abf41673f9ac50a55a09276457bea",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1343,
+          320,
+          58,
+          60
+        ],
+        "region": [
+          1343,
+          295,
+          58,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Hierarchy",
+        "tags": [
+          "hierarchy",
+          "organization chart",
+          "tree",
+          "network nodes"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.structures"
+        ],
+        "concept_id": "data.structures.hierarchy",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i17",
+      "cell": [
+        23,
+        3
+      ],
+      "crop_rgba_sha256": "719563a224ae0b7e20a69d7d00c315878c3769e15da715fe21ce927e58371a81",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1425,
+          319,
+          59,
+          60
+        ],
+        "region": [
+          1425,
+          295,
+          59,
+          91
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Graph nodes",
+        "tags": [
+          "graph nodes",
+          "network",
+          "graph",
+          "hierarchy"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.structures"
+        ],
+        "concept_id": "data.structures.graph-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i18",
+      "cell": [
+        0,
+        4
+      ],
+      "crop_rgba_sha256": "a615aaaae79faba057052a631dfa08b1f0b4a0440be1128922ce004d131280c2",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1511,
+          323,
+          50,
+          55
+        ],
+        "region": [
+          1511,
+          295,
+          50,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i19",
+      "cell": [
+        1,
+        4
+      ],
+      "crop_rgba_sha256": "94c8f0a81ab5d8b1503b5ed60aa6a9ff40092d0b33698a9e66cc94aae9574ff7",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1584,
+          315,
+          66,
+          68
+        ],
+        "region": [
+          1584,
+          295,
+          66,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i20",
+      "cell": [
+        2,
+        4
+      ],
+      "crop_rgba_sha256": "9d4fe21878d5ccdb72c7f353c080c223a6ca8386376e50c761bbc5a5374cd65b",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1667,
+          320,
+          62,
+          60
+        ],
+        "region": [
+          1667,
+          295,
+          62,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i21",
+      "cell": [
+        3,
+        4
+      ],
+      "crop_rgba_sha256": "fc1f5ee0541d0d3ebe3dfd57899923391f274d169d69b67d6d0ba0b0100ea3c9",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1748,
+          326,
+          65,
+          49
+        ],
+        "region": [
+          1748,
+          295,
+          65,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i22",
+      "cell": [
+        4,
+        4
+      ],
+      "crop_rgba_sha256": "b143714c733275af02cc2b73480db5b3faf1b86265ff6ac1fd0e413faf693286",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1836,
+          316,
+          61,
+          62
+        ],
+        "region": [
+          1835,
+          295,
+          62,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i23",
+      "cell": [
+        5,
+        4
+      ],
+      "crop_rgba_sha256": "a97a0cc30e67792faa6dd9e44cfd6adeb1b5b3a98cca7244597b0ecf4a2833b8",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1920,
+          320,
+          51,
+          58
+        ],
+        "region": [
+          1920,
+          295,
+          51,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i24",
+      "cell": [
+        6,
+        4
+      ],
+      "crop_rgba_sha256": "97da72b3447b7eadb7eaf991570b9198d7635d69e39fc8011f932c33c425066c",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1992,
+          319,
+          62,
+          60
+        ],
+        "region": [
+          1991,
+          295,
+          63,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r03i25",
+      "cell": [
+        7,
+        4
+      ],
+      "crop_rgba_sha256": "a2b805d4bd2d59976685361a7c292f6863d06ff8a43249d594b9ff6a509e03fb",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          2074,
+          318,
+          62,
+          61
+        ],
+        "region": [
+          2074,
+          295,
+          63,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i00",
+      "cell": [
+        8,
+        4
+      ],
+      "crop_rgba_sha256": "5104cd4c8d53857ab3d6b3af00c931d4893182e434f0be567a1954d2f2c43b6b",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          35,
+          406,
+          59,
+          63
+        ],
+        "region": [
+          34,
+          386,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i01",
+      "cell": [
+        9,
+        4
+      ],
+      "crop_rgba_sha256": "bdc7f4e9d6f5658f38b84c5ca3027017ac1ed009b3e27082344dfc03af0a6284",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          115,
+          407,
+          65,
+          61
+        ],
+        "region": [
+          115,
+          386,
+          65,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i02",
+      "cell": [
+        10,
+        4
+      ],
+      "crop_rgba_sha256": "fe41398aad90de7247e433c99c6a2639882486bda00412e236b27b7be9b6a2bc",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          201,
+          407,
+          59,
+          58
+        ],
+        "region": [
+          200,
+          386,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i03",
+      "cell": [
+        11,
+        4
+      ],
+      "crop_rgba_sha256": "a41253dab981b0f63ebfae0c8e06774e0e911310a7b8f74bb89bfa46b56f113a",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          283,
+          407,
+          60,
+          59
+        ],
+        "region": [
+          283,
+          386,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i04",
+      "cell": [
+        12,
+        4
+      ],
+      "crop_rgba_sha256": "42da810df68be2a0931525a5235a48f405f076fdc031f08d707169a52cbc6d09",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          365,
+          407,
+          63,
+          61
+        ],
+        "region": [
+          365,
+          386,
+          63,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i05",
+      "cell": [
+        13,
+        4
+      ],
+      "crop_rgba_sha256": "1df2088cc862fa745b0da719c440768b1ec22c335432b6ff810cd6500dc836f5",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          451,
+          407,
+          61,
+          61
+        ],
+        "region": [
+          451,
+          386,
+          61,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i06",
+      "cell": [
+        14,
+        4
+      ],
+      "crop_rgba_sha256": "75558358ee35d0eee85b1dfa408b55b4861cef244f02427eaa4f8c8ddb30e76a",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          533,
+          409,
+          59,
+          59
+        ],
+        "region": [
+          532,
+          386,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i07",
+      "cell": [
+        15,
+        4
+      ],
+      "crop_rgba_sha256": "43e7a5465065293091e15711ecf32844b46063eb3c9e8be5095bc035a92a62e4",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          621,
+          407,
+          47,
+          63
+        ],
+        "region": [
+          621,
+          386,
+          47,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i08",
+      "cell": [
+        16,
+        4
+      ],
+      "crop_rgba_sha256": "5cf04fb7eeefe77939f8a426eec4af60bf0b6236089d8c34072c927f68c31bea",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          697,
+          407,
+          65,
+          64
+        ],
+        "region": [
+          697,
+          386,
+          65,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i09",
+      "cell": [
+        17,
+        4
+      ],
+      "crop_rgba_sha256": "c89f92515168913d7862acac54a60805ff32ce8aaf92fd1c43b34dac31522057",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          780,
+          408,
+          59,
+          64
+        ],
+        "region": [
+          779,
+          386,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i10",
+      "cell": [
+        18,
+        4
+      ],
+      "crop_rgba_sha256": "e059ac5db5802e078566d1891e132afb372e26ad2ee4a951c0e02fb93581f9e1",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          860,
+          408,
+          57,
+          65
+        ],
+        "region": [
+          860,
+          386,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i11",
+      "cell": [
+        19,
+        4
+      ],
+      "crop_rgba_sha256": "6b69e352eaa96c9ec7f4c2e9c11d9ca17def1cc9c72eb956cc6f0935ce6beceb",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          945,
+          408,
+          54,
+          65
+        ],
+        "region": [
+          945,
+          386,
+          54,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i12",
+      "cell": [
+        20,
+        4
+      ],
+      "crop_rgba_sha256": "0193be68e1bf586547879e497b522cea9c8b1eb62db441a2bf3a16a2cae0dd7c",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1024,
+          409,
+          54,
+          64
+        ],
+        "region": [
+          1024,
+          386,
+          54,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i13",
+      "cell": [
+        21,
+        4
+      ],
+      "crop_rgba_sha256": "51ba3ab70117cca9024523dce9a0a78b352b25d1dc3824be8f931205b0a39e9c",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1104,
+          409,
+          54,
+          64
+        ],
+        "region": [
+          1104,
+          386,
+          54,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i14",
+      "cell": [
+        22,
+        4
+      ],
+      "crop_rgba_sha256": "c650489c1e8c4e064eec901f8ff6ad572ee89622e7691c9814d6493a7df30312",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1183,
+          409,
+          53,
+          64
+        ],
+        "region": [
+          1183,
+          386,
+          54,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i15",
+      "cell": [
+        23,
+        4
+      ],
+      "crop_rgba_sha256": "d293553c7c48b08b3628b8b736b5b6547010bd1b601f0764e87ea3e7f38fad13",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1263,
+          410,
+          56,
+          63
+        ],
+        "region": [
+          1262,
+          386,
+          57,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i16",
+      "cell": [
+        0,
+        5
+      ],
+      "crop_rgba_sha256": "0da4b0db8a16bd9b704b7889c977b41a90a4449b952fcfd58bb36f9f9a0bd97d",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1344,
+          410,
+          56,
+          66
+        ],
+        "region": [
+          1344,
+          386,
+          56,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i17",
+      "cell": [
+        1,
+        5
+      ],
+      "crop_rgba_sha256": "ce30973ecb5b92683a8e52586e6548ac38cf35b16ce5aaaa07602d822286ec55",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1427,
+          409,
+          54,
+          66
+        ],
+        "region": [
+          1427,
+          386,
+          54,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i18",
+      "cell": [
+        2,
+        5
+      ],
+      "crop_rgba_sha256": "4dca210ec6429b885fdd423702cf0037d8d29fdc619c54a9594006706dc53bf1",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1507,
+          411,
+          58,
+          59
+        ],
+        "region": [
+          1506,
+          386,
+          59,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i19",
+      "cell": [
+        3,
+        5
+      ],
+      "crop_rgba_sha256": "c13f6cc2e73d0634bbac243581bf9481b0af00149f24ff28707551600d2883a3",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1590,
+          409,
+          53,
+          63
+        ],
+        "region": [
+          1590,
+          386,
+          54,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i20",
+      "cell": [
+        4,
+        5
+      ],
+      "crop_rgba_sha256": "e37a7a559af94cbc04a92a743684dfa26af56df96d1a4c186de44bf9b6da3595",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1671,
+          408,
+          53,
+          64
+        ],
+        "region": [
+          1671,
+          386,
+          53,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i21",
+      "cell": [
+        5,
+        5
+      ],
+      "crop_rgba_sha256": "874cff1001d2f839aa8427a1a3dd82b3f82cb8c35c2f1fdb111e7f6544bc1889",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1750,
+          410,
+          59,
+          60
+        ],
+        "region": [
+          1750,
+          386,
+          59,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i22",
+      "cell": [
+        6,
+        5
+      ],
+      "crop_rgba_sha256": "8876a4ff7970f31ab4969dc919c802cb0174325a564ceb5e4d51305e5f6c43be",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1842,
+          409,
+          51,
+          61
+        ],
+        "region": [
+          1841,
+          386,
+          53,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i23",
+      "cell": [
+        7,
+        5
+      ],
+      "crop_rgba_sha256": "be6ff2f5d53c321e11343ea2b5d4fbca767960d8df9c879786ae647560094267",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1917,
+          407,
+          60,
+          63
+        ],
+        "region": [
+          1917,
+          386,
+          60,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i24",
+      "cell": [
+        8,
+        5
+      ],
+      "crop_rgba_sha256": "a2af974e8c2a1793d21618d9d45b359cc4f792c845f6b6da663501d8ad93965e",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1999,
+          409,
+          54,
+          61
+        ],
+        "region": [
+          1999,
+          386,
+          54,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r04i25",
+      "cell": [
+        9,
+        5
+      ],
+      "crop_rgba_sha256": "9a19dc96f29ae8927aa8f96278024c8b67cec22ae2f7867c6fe5e9eff3a21cee",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          2072,
+          415,
+          67,
+          50
+        ],
+        "region": [
+          2072,
+          386,
+          67,
+          93
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i00",
+      "cell": [
+        10,
+        5
+      ],
+      "crop_rgba_sha256": "253e8c70a3ec36ce95f951151359975c80a8372d475dfb6575067c15c16983fd",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          37,
+          498,
+          54,
+          62
+        ],
+        "region": [
+          37,
+          479,
+          55,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i01",
+      "cell": [
+        11,
+        5
+      ],
+      "crop_rgba_sha256": "bf494da6f06b0a9b20fa51c5df5496397049cf008f99cf09d9c96310d1bfb47c",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          112,
+          502,
+          71,
+          58
+        ],
+        "region": [
+          112,
+          479,
+          71,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i02",
+      "cell": [
+        12,
+        5
+      ],
+      "crop_rgba_sha256": "62fcc183af4ccf5f213a53ae6bc074d3528595dd66b337970cdc59a0bd94604e",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          200,
+          502,
+          62,
+          56
+        ],
+        "region": [
+          199,
+          479,
+          63,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i03",
+      "cell": [
+        13,
+        5
+      ],
+      "crop_rgba_sha256": "cf50bd63820631044314a39b96c9cb0dcb16e06263add0c422b6d96e17c8e5ca",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          283,
+          502,
+          61,
+          56
+        ],
+        "region": [
+          283,
+          479,
+          61,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i04",
+      "cell": [
+        14,
+        5
+      ],
+      "crop_rgba_sha256": "d65637d48fa3d670f1a345760cbff1b3b11cd9b28cde99635711af9b18cc0b60",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          369,
+          494,
+          56,
+          65
+        ],
+        "region": [
+          369,
+          479,
+          56,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i05",
+      "cell": [
+        15,
+        5
+      ],
+      "crop_rgba_sha256": "6de86aadd2d7f66107582465905fe7ca48632ebda4cf8965296508ebc0eb9b73",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          450,
+          500,
+          58,
+          54
+        ],
+        "region": [
+          449,
+          479,
+          60,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i06",
+      "cell": [
+        16,
+        5
+      ],
+      "crop_rgba_sha256": "ae9df161b36f6ca47b4cab976e83f62d5f1ae6252e986a91e1f0d90b79a1ff17",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          534,
+          494,
+          55,
+          65
+        ],
+        "region": [
+          533,
+          479,
+          56,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i07",
+      "cell": [
+        17,
+        5
+      ],
+      "crop_rgba_sha256": "808387f285d05d56fe57f28b7fd54a8459f4e358c482b4a3b721860c4d13c41b",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          617,
+          497,
+          57,
+          61
+        ],
+        "region": [
+          617,
+          479,
+          57,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i08",
+      "cell": [
+        18,
+        5
+      ],
+      "crop_rgba_sha256": "99a558efa057371ca7d878df81174a8b28bd7c67fa9fa31b5ad30c0e3b7dd168",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          697,
+          505,
+          64,
+          47
+        ],
+        "region": [
+          697,
+          479,
+          64,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i09",
+      "cell": [
+        19,
+        5
+      ],
+      "crop_rgba_sha256": "1ee4d4641dc71284a301bbe788541804e09ad5ee3af2c5525249ec00fe93f0e5",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          777,
+          503,
+          64,
+          51
+        ],
+        "region": [
+          777,
+          479,
+          64,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i10",
+      "cell": [
+        20,
+        5
+      ],
+      "crop_rgba_sha256": "7554f5339bd9263bc091b2a56e7978853609edb00b1c5104fae939ad690dea84",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          861,
+          496,
+          58,
+          61
+        ],
+        "region": [
+          861,
+          479,
+          58,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i11",
+      "cell": [
+        21,
+        5
+      ],
+      "crop_rgba_sha256": "c014cc32721e8b1d47dc78ac86b7f82df61af04b1329ad7209870bd5e978ecd1",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          943,
+          498,
+          50,
+          61
+        ],
+        "region": [
+          942,
+          479,
+          51,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i12",
+      "cell": [
+        22,
+        5
+      ],
+      "crop_rgba_sha256": "09271e27de05e18da811ede4bc1dfc29e332646aa2f3f53ab82006f3f71b2deb",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1021,
+          498,
+          51,
+          62
+        ],
+        "region": [
+          1021,
+          479,
+          52,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i13",
+      "cell": [
+        23,
+        5
+      ],
+      "crop_rgba_sha256": "77277dd9228f665f93bd5e040afa9935ef26153737baf54b9a7d5e0d2052d1ce",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1098,
+          499,
+          60,
+          52
+        ],
+        "region": [
+          1098,
+          479,
+          60,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i14",
+      "cell": [
+        0,
+        6
+      ],
+      "crop_rgba_sha256": "08752cb89bb023b281e2c12b8d9c3e83aa7ccf2f4fe3fa9bcd607d427e51adf1",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1181,
+          503,
+          58,
+          55
+        ],
+        "region": [
+          1181,
+          479,
+          58,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i15",
+      "cell": [
+        1,
+        6
+      ],
+      "crop_rgba_sha256": "291d0b3f9411b3f19c8e367c8a3bb57ee500ed9c96193b43baeae5930501fc2e",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1262,
+          499,
+          56,
+          61
+        ],
+        "region": [
+          1261,
+          479,
+          57,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i16",
+      "cell": [
+        2,
+        6
+      ],
+      "crop_rgba_sha256": "107d0720a6beb756ff6c9987e09f6cb8ffd05d22c05f3e68cc8e25e49bd55dc4",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1342,
+          503,
+          59,
+          56
+        ],
+        "region": [
+          1342,
+          479,
+          59,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i17",
+      "cell": [
+        3,
+        6
+      ],
+      "crop_rgba_sha256": "457f1bdfa80654f2cc7ae3178d938dd70b24853f672442feeb849cc167a33f09",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1426,
+          505,
+          58,
+          53
+        ],
+        "region": [
+          1425,
+          479,
+          59,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i18",
+      "cell": [
+        4,
+        6
+      ],
+      "crop_rgba_sha256": "73150c93d5f3750373e83b3a1a9befa5e272f3f0de0b5d501e9b74ad8feb6f77",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1513,
+          503,
+          49,
+          57
+        ],
+        "region": [
+          1513,
+          479,
+          49,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i19",
+      "cell": [
+        5,
+        6
+      ],
+      "crop_rgba_sha256": "62bdb3607114bf3523365aded6a66fdf199bbcbc1bdd7b5dfbf172a1d637c8ad",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1593,
+          502,
+          45,
+          56
+        ],
+        "region": [
+          1593,
+          479,
+          45,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i20",
+      "cell": [
+        6,
+        6
+      ],
+      "crop_rgba_sha256": "92ac18568ec00eab2947e9d2f9cf89555747ca825adf29a578d2280e0216f61a",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1669,
+          504,
+          56,
+          56
+        ],
+        "region": [
+          1669,
+          479,
+          56,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i21",
+      "cell": [
+        7,
+        6
+      ],
+      "crop_rgba_sha256": "d05e9319538a06a06482e2709a41218f7738d07d07b07c545596bd11abbb1704",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1751,
+          503,
+          57,
+          57
+        ],
+        "region": [
+          1751,
+          479,
+          57,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i22",
+      "cell": [
+        8,
+        6
+      ],
+      "crop_rgba_sha256": "dbebe4fb5096d9538b680b5c089f7c57b4d7e23014ecad8285ffd0dee5b5b875",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1841,
+          503,
+          54,
+          57
+        ],
+        "region": [
+          1840,
+          479,
+          55,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i23",
+      "cell": [
+        9,
+        6
+      ],
+      "crop_rgba_sha256": "73cdddb61f11851d1c55f55bae884de0aa973f03e47e67ada5207eeaffbd691c",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1918,
+          502,
+          55,
+          59
+        ],
+        "region": [
+          1918,
+          479,
+          56,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i24",
+      "cell": [
+        10,
+        6
+      ],
+      "crop_rgba_sha256": "4cc7d38d186833a1a9aab0a3593b0866e36ffc8f5818f6000b9edb871f86fc03",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1999,
+          501,
+          57,
+          60
+        ],
+        "region": [
+          1999,
+          479,
+          57,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r05i25",
+      "cell": [
+        11,
+        6
+      ],
+      "crop_rgba_sha256": "f5a70aa742abf3c38b43768bccc801b34070298560b7b635aa3eed961595c99e",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          2078,
+          503,
+          57,
+          57
+        ],
+        "region": [
+          2078,
+          479,
+          57,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i00",
+      "cell": [
+        12,
+        6
+      ],
+      "crop_rgba_sha256": "eb4232c21eb6e5df5144b3f4ee01f89d7fb6a91ac1109710c11bd70d4e736235",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          33,
+          582,
+          63,
+          56
+        ],
+        "region": [
+          33,
+          565,
+          63,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i01",
+      "cell": [
+        13,
+        6
+      ],
+      "crop_rgba_sha256": "01e6ae10dd5e75f78ac3376c52534b4f59cae6e4dba0d782b28916e810c7202d",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          119,
+          579,
+          60,
+          59
+        ],
+        "region": [
+          119,
+          565,
+          61,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i02",
+      "cell": [
+        14,
+        6
+      ],
+      "crop_rgba_sha256": "715ffc3692ba837691885f631dafc61912b1c2d7699b564b5194af47d1d8e138",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          203,
+          579,
+          60,
+          59
+        ],
+        "region": [
+          203,
+          565,
+          60,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i03",
+      "cell": [
+        15,
+        6
+      ],
+      "crop_rgba_sha256": "d09039f6b7543970752b537c7b2bd296676eb370bc7e5a89e7ce0c7f5a23e8da",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          284,
+          579,
+          60,
+          60
+        ],
+        "region": [
+          284,
+          565,
+          61,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i04",
+      "cell": [
+        16,
+        6
+      ],
+      "crop_rgba_sha256": "9f8f1191a6a0d23c126843e0dd9b3c93aca42d6f6c6876313466b4febc929110",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          371,
+          579,
+          53,
+          58
+        ],
+        "region": [
+          371,
+          565,
+          53,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i05",
+      "cell": [
+        17,
+        6
+      ],
+      "crop_rgba_sha256": "3dc24b35432bdee860acfa1a757d88f814e27bc3f2aea29416ae7cd6ddd21def",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          448,
+          580,
+          57,
+          57
+        ],
+        "region": [
+          447,
+          565,
+          59,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i06",
+      "cell": [
+        18,
+        6
+      ],
+      "crop_rgba_sha256": "a0138870e0b08be41d4b37eca9299d32fc5c97a5060a83c27a92b70c413d6667",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          533,
+          579,
+          51,
+          59
+        ],
+        "region": [
+          533,
+          565,
+          51,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i07",
+      "cell": [
+        19,
+        6
+      ],
+      "crop_rgba_sha256": "db8b54bbc962b1c65cc1fe15f651b8daf964d2e298d67a715a5ba7163dc88b49",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          615,
+          581,
+          61,
+          57
+        ],
+        "region": [
+          615,
+          565,
+          61,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i08",
+      "cell": [
+        20,
+        6
+      ],
+      "crop_rgba_sha256": "7442e7f95d3cf3fadf82f39b027002bb30742f5d59849b62fe9a2377b179fc3b",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          699,
+          581,
+          61,
+          58
+        ],
+        "region": [
+          699,
+          565,
+          61,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i09",
+      "cell": [
+        21,
+        6
+      ],
+      "crop_rgba_sha256": "8e540142a5a4797d0cec1b172112ec9a28c44e7d63a18147d1a27c0c06804461",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          780,
+          587,
+          59,
+          46
+        ],
+        "region": [
+          780,
+          565,
+          59,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i10",
+      "cell": [
+        22,
+        6
+      ],
+      "crop_rgba_sha256": "15060110e570a6499910803c51c5198602cf1c5491276ab68691bcaa9b6bfe12",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          860,
+          581,
+          54,
+          60
+        ],
+        "region": [
+          860,
+          565,
+          54,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i11",
+      "cell": [
+        23,
+        6
+      ],
+      "crop_rgba_sha256": "be6e1d6f74722124156a4173b7dffdf978ef9815d113057b9ab43d5e64dbe1b5",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          941,
+          584,
+          58,
+          58
+        ],
+        "region": [
+          941,
+          565,
+          58,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i12",
+      "cell": [
+        0,
+        7
+      ],
+      "crop_rgba_sha256": "04a9f35c53371a6fb92c209faf4e4a0d668520307517fb131d86fc0563267d3c",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1021,
+          587,
+          59,
+          51
+        ],
+        "region": [
+          1021,
+          565,
+          60,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i13",
+      "cell": [
+        1,
+        7
+      ],
+      "crop_rgba_sha256": "1da684e04c794ce8200d9ce5da1e0bae9d53825232c86addde4a3e2fbdb51556",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1102,
+          582,
+          53,
+          60
+        ],
+        "region": [
+          1101,
+          565,
+          54,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i14",
+      "cell": [
+        2,
+        7
+      ],
+      "crop_rgba_sha256": "d0de2e04c3ca8e69cfb5bbbfa3a87830dcea68181507d792ad53baa906907aad",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1177,
+          583,
+          59,
+          56
+        ],
+        "region": [
+          1177,
+          565,
+          59,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i15",
+      "cell": [
+        3,
+        7
+      ],
+      "crop_rgba_sha256": "87a879a228d6db62cfddb1d2e8222d3fa9c59a307fce4a9a3f3552a7660e1eb8",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1267,
+          582,
+          40,
+          56
+        ],
+        "region": [
+          1267,
+          565,
+          40,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i16",
+      "cell": [
+        4,
+        7
+      ],
+      "crop_rgba_sha256": "b2319a7e94d9957a4dca61dbd13b90635580254b74fd029b34948ad2416989fd",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1340,
+          581,
+          59,
+          57
+        ],
+        "region": [
+          1340,
+          565,
+          59,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i17",
+      "cell": [
+        5,
+        7
+      ],
+      "crop_rgba_sha256": "ccbf7430fb0ee80c164dd81d3a244719f7e255c163f9fc65d996267c19794015",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1419,
+          581,
+          65,
+          60
+        ],
+        "region": [
+          1419,
+          565,
+          65,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i18",
+      "cell": [
+        6,
+        7
+      ],
+      "crop_rgba_sha256": "25d9b72fc0f50f46e8b6dfe32abc813373e195a1b6538145a3e8483d72df146c",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1508,
+          578,
+          55,
+          64
+        ],
+        "region": [
+          1508,
+          565,
+          55,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i19",
+      "cell": [
+        7,
+        7
+      ],
+      "crop_rgba_sha256": "c1ef6799b4731364ec8a9dcbd11f41d34cea4a37d5c1647db27f737ffd8b95e6",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1590,
+          580,
+          51,
+          60
+        ],
+        "region": [
+          1590,
+          565,
+          52,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i20",
+      "cell": [
+        8,
+        7
+      ],
+      "crop_rgba_sha256": "22f0b421635c996a818dbf021091585a97be886d2a0e5cd9f8e23036a03e7cc9",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1666,
+          580,
+          61,
+          55
+        ],
+        "region": [
+          1666,
+          565,
+          61,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i21",
+      "cell": [
+        9,
+        7
+      ],
+      "crop_rgba_sha256": "5d4498e5a14de7a58da664bb351f84cead994651876d24e52a707a6cf73e6d9c",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1751,
+          587,
+          57,
+          48
+        ],
+        "region": [
+          1751,
+          565,
+          57,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i22",
+      "cell": [
+        10,
+        7
+      ],
+      "crop_rgba_sha256": "0db385ebf0ad0667203e4df7ff73429f5e660c4c694059ee89611d6d5efb809b",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1836,
+          582,
+          58,
+          58
+        ],
+        "region": [
+          1836,
+          565,
+          59,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i23",
+      "cell": [
+        11,
+        7
+      ],
+      "crop_rgba_sha256": "82fbb56c38a5fd5021436805a567ea7e75b27032d49079d49c0aa4037735b817",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1916,
+          582,
+          61,
+          59
+        ],
+        "region": [
+          1916,
+          565,
+          62,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r06i24",
+      "cell": [
+        12,
+        7
+      ],
+      "crop_rgba_sha256": "cd52abc27b786109abf2755676662ea4f961d6119b36785582462a0b9d3f91a0",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          1996,
+          581,
+          63,
+          62
+        ],
+        "region": [
+          1996,
+          565,
+          63,
+          81
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i00",
+      "cell": [
+        13,
+        7
+      ],
+      "crop_rgba_sha256": "41d0f656fb7ae51d2a9fd85bb33705b838190919646366d61b583804b062fcd3",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          36,
+          652,
+          58,
+          63
+        ],
+        "region": [
+          36,
+          646,
+          58,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i01",
+      "cell": [
+        14,
+        7
+      ],
+      "crop_rgba_sha256": "96eb274a4cda1f0c5dff6fe04961c1d7aa9f482f5c776397cabdd1b32073e383",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          125,
+          658,
+          52,
+          52
+        ],
+        "region": [
+          125,
+          646,
+          52,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i02",
+      "cell": [
+        15,
+        7
+      ],
+      "crop_rgba_sha256": "41ec327f6034ea81183861d8a4f7ad811df501604d8c440c4bc5b8957768d4c2",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          203,
+          654,
+          57,
+          57
+        ],
+        "region": [
+          202,
+          646,
+          58,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i03",
+      "cell": [
+        16,
+        7
+      ],
+      "crop_rgba_sha256": "708b3cc14c7d927fb8e5f5ae036e345091feb9c38a1021a4409b2bb9a40e2657",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          285,
+          655,
+          57,
+          56
+        ],
+        "region": [
+          285,
+          646,
+          57,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i04",
+      "cell": [
+        17,
+        7
+      ],
+      "crop_rgba_sha256": "b4df9bb5c198ffe08b6288388077f8407ebd5649cf3e9ecf9e24f32bf123c0e5",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          366,
+          654,
+          59,
+          57
+        ],
+        "region": [
+          365,
+          646,
+          60,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i05",
+      "cell": [
+        18,
+        7
+      ],
+      "crop_rgba_sha256": "3d8f946244b6c5d1b8dad512c350014d4e5fc0ce0820fd2beed4183820eb2a38",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          447,
+          655,
+          58,
+          56
+        ],
+        "region": [
+          447,
+          646,
+          59,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i06",
+      "cell": [
+        19,
+        7
+      ],
+      "crop_rgba_sha256": "a8f2e713413ccdb555403cedacfcec73fef4094aecafac003e53a4898818b515",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          530,
+          653,
+          61,
+          61
+        ],
+        "region": [
+          530,
+          646,
+          61,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i07",
+      "cell": [
+        20,
+        7
+      ],
+      "crop_rgba_sha256": "c63688e08aa3fcf26fb88d99b1683fa9551cd3e463da3902a0f2b24be076c531",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          615,
+          654,
+          62,
+          57
+        ],
+        "region": [
+          615,
+          646,
+          62,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i08",
+      "cell": [
+        21,
+        7
+      ],
+      "crop_rgba_sha256": "2ad456e72ae911bbb78f3e7b11f5d589e0fc64e5d8c82259483a73bd61cc9d82",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          701,
+          656,
+          59,
+          58
+        ],
+        "region": [
+          701,
+          646,
+          59,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i09",
+      "cell": [
+        22,
+        7
+      ],
+      "crop_rgba_sha256": "4b699815442ca76e222c50907434772dc44b29aedc7a185dcb71d1606ae6626f",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          784,
+          654,
+          52,
+          57
+        ],
+        "region": [
+          783,
+          646,
+          53,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.developer-tools.r07i10",
+      "cell": [
+        23,
+        7
+      ],
+      "crop_rgba_sha256": "18d39215ddb35f23779aa652b91a07c1dcdb7ced4971ba25f08c027577b61a6f",
+      "source": {
+        "file": "monochrome_developer_tools_icon_grid.png",
+        "bbox": [
+          858,
+          655,
+          61,
+          56
+        ],
+        "region": [
+          858,
+          646,
+          61,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    }
+  ]
+}

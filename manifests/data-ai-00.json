@@ -1,0 +1,7307 @@
+{
+  "schema": "smi-icon-atlas-sheet/1",
+  "sheet": {
+    "id": "icons.monoline.data-ai-00.24x8",
+    "path": "sheets/data-ai-00/atlas.png",
+    "foreground_mask": "sheets/data-ai-00/atlas.png",
+    "black_outline": "sheets/data-ai-00/black-outline.png",
+    "preview": "sheets/data-ai-00/inspection-preview.png",
+    "width_px": 2304,
+    "height_px": 768,
+    "cell_px": 96,
+    "columns": 24,
+    "rows": 8,
+    "domain": "data-ai",
+    "sha256": "4de94ac632d451b758fc6d9c383a52b3b61941932c9a7185e74be85f61a61579",
+    "style": "white-geometric-monoline",
+    "variant": "monoline"
+  },
+  "icons": [
+    {
+      "id": "icons.candidate.data-ai.r00i00",
+      "cell": [
+        0,
+        0
+      ],
+      "crop_rgba_sha256": "366e6dc030d61e942fe789c5785b6f477ecfb516439a426f4976387d10328fcf",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          22,
+          19,
+          57,
+          57
+        ],
+        "region": [
+          22,
+          0,
+          57,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Dot matrix",
+        "tags": [
+          "dot matrix",
+          "grid",
+          "nine dots",
+          "points"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.structures"
+        ],
+        "concept_id": "data.structures.dot-matrix",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i01",
+      "cell": [
+        1,
+        0
+      ],
+      "crop_rgba_sha256": "b42247b9e285eae7794af4adb39f632e9016434b018c907eb710cd88bb344fba",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          108,
+          15,
+          57,
+          64
+        ],
+        "region": [
+          108,
+          0,
+          58,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Database",
+        "tags": [
+          "database",
+          "data storage",
+          "sql",
+          "db"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.storage"
+        ],
+        "concept_id": "data.storage.database",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i02",
+      "cell": [
+        2,
+        0
+      ],
+      "crop_rgba_sha256": "209dd82fd1773911da2aa892ecbac05268fe8a0bcf3528e2b9199f174a34b3ce",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          193,
+          17,
+          61,
+          61
+        ],
+        "region": [
+          193,
+          0,
+          61,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Table",
+        "tags": [
+          "table",
+          "spreadsheet",
+          "grid",
+          "data cells"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.tables"
+        ],
+        "concept_id": "data.tables.table",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i03",
+      "cell": [
+        3,
+        0
+      ],
+      "crop_rgba_sha256": "01d759a97612d332b70b94ddf7d289a8b5077c7a8dbab70c8663a6e6d136ccc8",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          283,
+          17,
+          56,
+          60
+        ],
+        "region": [
+          283,
+          0,
+          56,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Columns",
+        "tags": [
+          "columns",
+          "data columns",
+          "table",
+          "vertical bars"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.tables"
+        ],
+        "concept_id": "data.tables.columns",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i04",
+      "cell": [
+        4,
+        0
+      ],
+      "crop_rgba_sha256": "12ce3fda893f12d26fad74aa3cd3039b95a796fe55feb250932d9513bd664f1f",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          365,
+          27,
+          62,
+          40
+        ],
+        "region": [
+          365,
+          0,
+          62,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Two rows",
+        "tags": [
+          "two rows",
+          "list",
+          "table rows"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.tables"
+        ],
+        "concept_id": "data.tables.two-rows",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i05",
+      "cell": [
+        5,
+        0
+      ],
+      "crop_rgba_sha256": "f2ca77c2ca0cd4fec7034696c329cc67cf1d93dc025f3c5617e0b6caada4643e",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          451,
+          17,
+          62,
+          61
+        ],
+        "region": [
+          451,
+          0,
+          62,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Table",
+        "tags": [
+          "table",
+          "spreadsheet",
+          "data grid"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.tables"
+        ],
+        "concept_id": "data.tables.table",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i06",
+      "cell": [
+        6,
+        0
+      ],
+      "crop_rgba_sha256": "128e3797a9419deea6b2b1afe7896533883d2977212301336685c6294a615507",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          538,
+          16,
+          60,
+          63
+        ],
+        "region": [
+          537,
+          0,
+          61,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Server rack",
+        "tags": [
+          "server rack",
+          "database server",
+          "compute"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.servers"
+        ],
+        "concept_id": "hardware.servers.server-rack",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i07",
+      "cell": [
+        7,
+        0
+      ],
+      "crop_rgba_sha256": "4d93f47977076e25ae6d67147022f1d81bffbae6c82239638537ccb2e3966086",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          623,
+          16,
+          63,
+          61
+        ],
+        "region": [
+          623,
+          0,
+          63,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Data warehouse",
+        "tags": [
+          "data warehouse",
+          "storage building",
+          "warehouse",
+          "data"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.storage"
+        ],
+        "concept_id": "data.storage.data-warehouse",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i08",
+      "cell": [
+        8,
+        0
+      ],
+      "crop_rgba_sha256": "b40cfa8a4400ac06b2b21daaf8075fdaa7240f93f8f8b2c4e6611407fd489eb0",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          713,
+          20,
+          58,
+          57
+        ],
+        "region": [
+          713,
+          0,
+          58,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Liquid container",
+        "tags": [
+          "liquid container",
+          "water level",
+          "tank",
+          "fluid"
+        ],
+        "aliases": [],
+        "subjects": [
+          "nature.water"
+        ],
+        "concept_id": "nature.water.liquid-container",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i09",
+      "cell": [
+        9,
+        0
+      ],
+      "crop_rgba_sha256": "7de0c850c400f373336fb298d521b2966556c2ec204dff9a2793af56306253a9",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          797,
+          17,
+          66,
+          61
+        ],
+        "region": [
+          797,
+          0,
+          66,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Data flow",
+        "tags": [
+          "data flow",
+          "wind",
+          "stream",
+          "flow lines"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.flow"
+        ],
+        "concept_id": "data.flow.data-flow",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i10",
+      "cell": [
+        10,
+        0
+      ],
+      "crop_rgba_sha256": "377168baeb3e63206c40cfcb37732a2af3c2c206f2a3e9f271c6beb052c1264f",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          884,
+          22,
+          65,
+          51
+        ],
+        "region": [
+          884,
+          0,
+          65,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i11",
+      "cell": [
+        11,
+        0
+      ],
+      "crop_rgba_sha256": "e8675661ae542505fd40f0ce411a47b40ab16b883062a6be4b248e1614ddbf22",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          967,
+          17,
+          65,
+          60
+        ],
+        "region": [
+          967,
+          0,
+          65,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i12",
+      "cell": [
+        12,
+        0
+      ],
+      "crop_rgba_sha256": "a9dcd05660fe36623afa45da0ca809529826e6353f112dd95b6af8e2db0ed9a7",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1054,
+          18,
+          63,
+          59
+        ],
+        "region": [
+          1054,
+          0,
+          63,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Share nodes",
+        "tags": [
+          "share nodes",
+          "graph",
+          "connected nodes"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.share-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i13",
+      "cell": [
+        13,
+        0
+      ],
+      "crop_rgba_sha256": "74aa82c3272bff6544b96e589c4586e40cc24e761eb0d58de2d06ebc5fe4cbe3",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1141,
+          18,
+          66,
+          58
+        ],
+        "region": [
+          1141,
+          0,
+          66,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Graph nodes",
+        "tags": [
+          "graph nodes",
+          "connections",
+          "graph",
+          "tree"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.graph-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i14",
+      "cell": [
+        14,
+        0
+      ],
+      "crop_rgba_sha256": "15fddab4f7f62d1a749c21184e723a31210954e03a42f1e00df4a4c645e15b05",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1229,
+          18,
+          60,
+          60
+        ],
+        "region": [
+          1229,
+          0,
+          60,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Filter",
+        "tags": [
+          "filter",
+          "funnel",
+          "filter data",
+          "query"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.query"
+        ],
+        "concept_id": "data.query.filter",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i15",
+      "cell": [
+        15,
+        0
+      ],
+      "crop_rgba_sha256": "5eb02234f67a4cb4fcd96220a3a113a7d9ae1ede1e809900a7837c2006fe5824",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1315,
+          18,
+          60,
+          59
+        ],
+        "region": [
+          1315,
+          0,
+          60,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Sort",
+        "tags": [
+          "sort",
+          "ascending descending",
+          "order",
+          "arrows"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.query"
+        ],
+        "concept_id": "data.query.sort",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i16",
+      "cell": [
+        16,
+        0
+      ],
+      "crop_rgba_sha256": "0231e52a7c287ca13a45f1d8fd1b93ee5e63e961adab0ddc94f14cbd281a7fb6",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1402,
+          17,
+          62,
+          61
+        ],
+        "region": [
+          1402,
+          0,
+          62,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Search",
+        "tags": [
+          "search",
+          "find",
+          "query",
+          "magnifying glass"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.query"
+        ],
+        "concept_id": "data.query.search",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i17",
+      "cell": [
+        17,
+        0
+      ],
+      "crop_rgba_sha256": "aaa4b35d043e83f83fd8b6a334e898b8892cdc055f650faed9bc1a5ecfc3a399",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1489,
+          16,
+          61,
+          63
+        ],
+        "region": [
+          1488,
+          0,
+          62,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Document search",
+        "tags": [
+          "document search",
+          "find in file",
+          "query document"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.query"
+        ],
+        "concept_id": "data.query.document-search",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i18",
+      "cell": [
+        18,
+        0
+      ],
+      "crop_rgba_sha256": "2b0c6ab392f566251361f5845a092d678a457feff71c1b9ceb6480722b69c465",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1574,
+          19,
+          63,
+          59
+        ],
+        "region": [
+          1574,
+          0,
+          63,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Bar chart",
+        "tags": [
+          "bar chart",
+          "analytics",
+          "histogram",
+          "statistics"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.bar-chart",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i19",
+      "cell": [
+        19,
+        0
+      ],
+      "crop_rgba_sha256": "e80580d9227d0ce7985cf7f253158e4dda7e620f0006d7906c205353b24a0ec4",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1661,
+          21,
+          61,
+          57
+        ],
+        "region": [
+          1661,
+          0,
+          61,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Line chart",
+        "tags": [
+          "line chart",
+          "trend",
+          "analytics",
+          "graph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.line-chart",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i20",
+      "cell": [
+        20,
+        0
+      ],
+      "crop_rgba_sha256": "7ca8866880063c0412616e17dcbac3f4a3f7a10db53a927e220d09c17da05494",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1749,
+          14,
+          66,
+          66
+        ],
+        "region": [
+          1749,
+          0,
+          66,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Pie chart",
+        "tags": [
+          "pie chart",
+          "portion",
+          "statistics",
+          "analytics"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.pie-chart",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i21",
+      "cell": [
+        21,
+        0
+      ],
+      "crop_rgba_sha256": "83bcc7eb50d3a391e2c49430319483569a373f3b05a36c015550e267596c5fa0",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1840,
+          19,
+          60,
+          59
+        ],
+        "region": [
+          1839,
+          0,
+          61,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Area chart",
+        "tags": [
+          "area chart",
+          "trend",
+          "analytics",
+          "line graph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.area-chart",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i22",
+      "cell": [
+        22,
+        0
+      ],
+      "crop_rgba_sha256": "ed9177e531f2d71530cf7fc92f01360c1b47d302daca9ec6cfd585e1abbf1245",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1925,
+          18,
+          60,
+          60
+        ],
+        "region": [
+          1925,
+          0,
+          60,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Scatter plot",
+        "tags": [
+          "scatter plot",
+          "data points",
+          "scatter graph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.scatter-plot",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i23",
+      "cell": [
+        23,
+        0
+      ],
+      "crop_rgba_sha256": "9c33f3209dd2c3a357460ff098ad3ce0fa2f77d2bc15d08d2eb8786e1e526986",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2007,
+          20,
+          64,
+          56
+        ],
+        "region": [
+          2007,
+          0,
+          64,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Histogram",
+        "tags": [
+          "histogram",
+          "bar chart",
+          "distribution",
+          "statistics"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.histogram",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r00i24",
+      "cell": [
+        0,
+        1
+      ],
+      "crop_rgba_sha256": "491a3d82852dff28e10833ac117fed3820c4ab0022659c95690ac260b80e7b95",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2094,
+          15,
+          63,
+          62
+        ],
+        "region": [
+          2094,
+          0,
+          63,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Dashboard",
+        "tags": [
+          "dashboard",
+          "analytics",
+          "metrics",
+          "tiles"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.dashboard",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i00",
+      "cell": [
+        1,
+        1
+      ],
+      "crop_rgba_sha256": "cfd8c8f4c78610db7b242691f07cb7ddc0757bffd177120bfa127c0c22e85d6b",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          18,
+          104,
+          64,
+          58
+        ],
+        "region": [
+          18,
+          90,
+          64,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Bar chart",
+        "tags": [
+          "bar chart",
+          "analytics",
+          "histogram",
+          "statistics"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.bar-chart",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i01",
+      "cell": [
+        2,
+        1
+      ],
+      "crop_rgba_sha256": "ca9611ade0fe3d5ffc0855db9f884db5cff48ce6b0e9646e76d2030f01bff34f",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          106,
+          106,
+          62,
+          56
+        ],
+        "region": [
+          106,
+          90,
+          62,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Line chart",
+        "tags": [
+          "line chart",
+          "trend",
+          "analytics",
+          "graph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.line-chart",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i02",
+      "cell": [
+        3,
+        1
+      ],
+      "crop_rgba_sha256": "f7ed13a9314a92522826f04435e7f106fa18a4ac5fa56f543a79ba925263d2b1",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          192,
+          99,
+          64,
+          65
+        ],
+        "region": [
+          191,
+          90,
+          65,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Pie chart",
+        "tags": [
+          "pie chart",
+          "portion",
+          "statistics",
+          "analytics"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.pie-chart",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i03",
+      "cell": [
+        4,
+        1
+      ],
+      "crop_rgba_sha256": "a40cc6df3666a606d8cce1f9b6962329a63b5ca3d553895e4f439454d33577f7",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          280,
+          104,
+          60,
+          58
+        ],
+        "region": [
+          280,
+          90,
+          61,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Area chart",
+        "tags": [
+          "area chart",
+          "trend",
+          "analytics",
+          "line graph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.area-chart",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i04",
+      "cell": [
+        5,
+        1
+      ],
+      "crop_rgba_sha256": "006496e968e96d5a7703e866c42128f3fecf46358cc31daad1761ec18b3aab62",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          366,
+          101,
+          61,
+          61
+        ],
+        "region": [
+          365,
+          90,
+          62,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Scatter plot",
+        "tags": [
+          "scatter plot",
+          "data points",
+          "scatter graph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.scatter-plot",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i05",
+      "cell": [
+        6,
+        1
+      ],
+      "crop_rgba_sha256": "5d7966975d052176b76769c2343bf3f4b85deb7b0cac0c83250ac02c0236eb45",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          449,
+          104,
+          65,
+          57
+        ],
+        "region": [
+          449,
+          90,
+          65,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Histogram",
+        "tags": [
+          "histogram",
+          "bar chart",
+          "distribution"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.histogram",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i06",
+      "cell": [
+        7,
+        1
+      ],
+      "crop_rgba_sha256": "1ad4ac8a8989f14429c0829394ac025475076bdcafe3ab717d0b0125ed3ee591",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          537,
+          99,
+          62,
+          62
+        ],
+        "region": [
+          537,
+          90,
+          62,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Dashboard",
+        "tags": [
+          "dashboard",
+          "analytics",
+          "metrics",
+          "tiles"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.dashboard",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i07",
+      "cell": [
+        8,
+        1
+      ],
+      "crop_rgba_sha256": "ad8bbea49f624151ed61588ae73d7330e3c1f31a7c2117286fd87dc47b007834",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          621,
+          106,
+          67,
+          49
+        ],
+        "region": [
+          621,
+          90,
+          67,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Gauge",
+        "tags": [
+          "gauge",
+          "meter",
+          "speed",
+          "metric"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.gauge",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i08",
+      "cell": [
+        9,
+        1
+      ],
+      "crop_rgba_sha256": "3e0241a13cef45e099b3e90c16f6ffa8d0cdeac3e2959c7250fdaa7d1ef3b5f8",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          714,
+          97,
+          55,
+          67
+        ],
+        "region": [
+          714,
+          90,
+          55,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Clipboard",
+        "tags": [
+          "clipboard",
+          "tasks",
+          "notes",
+          "report"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.tasks"
+        ],
+        "concept_id": "ui.tasks.clipboard",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i09",
+      "cell": [
+        10,
+        1
+      ],
+      "crop_rgba_sha256": "049a6d82aa8ea970ba59208a43b6fae62c439340b2a123994e9de1d084f44b71",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          802,
+          97,
+          55,
+          67
+        ],
+        "region": [
+          802,
+          90,
+          55,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Clipboard",
+        "tags": [
+          "clipboard",
+          "tasks",
+          "notes",
+          "report"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.tasks"
+        ],
+        "concept_id": "ui.tasks.clipboard",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i10",
+      "cell": [
+        11,
+        1
+      ],
+      "crop_rgba_sha256": "2aa09ac3bbb27ffd4eb6a54f4ce5cbfb79377e39f0f57935bedcb68f1f07abbe",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          891,
+          99,
+          51,
+          65
+        ],
+        "region": [
+          890,
+          90,
+          52,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Calculator",
+        "tags": [
+          "calculator",
+          "math",
+          "numeric",
+          "arithmetic"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.devices"
+        ],
+        "concept_id": "hardware.devices.calculator",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i11",
+      "cell": [
+        12,
+        1
+      ],
+      "crop_rgba_sha256": "614ba57ca039ffe242ab1a5d6ee6c92faf6508de1d0f4274d96ccddf2497d1b4",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          976,
+          106,
+          45,
+          51
+        ],
+        "region": [
+          976,
+          90,
+          46,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Summation",
+        "tags": [
+          "summation",
+          "sigma",
+          "sum",
+          "total"
+        ],
+        "aliases": [],
+        "subjects": [
+          "math.operators"
+        ],
+        "concept_id": "math.operators.summation",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i12",
+      "cell": [
+        13,
+        1
+      ],
+      "crop_rgba_sha256": "e3794f81c18860b649186ec87e7976cb53224f1a8dc7580d1aaab68ef24a2085",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1051,
+          105,
+          72,
+          55
+        ],
+        "region": [
+          1051,
+          90,
+          72,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Function expression",
+        "tags": [
+          "function expression",
+          "f(x)",
+          "formula",
+          "callable"
+        ],
+        "aliases": [],
+        "subjects": [
+          "programming.functions"
+        ],
+        "concept_id": "programming.functions.function-expression",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i13",
+      "cell": [
+        14,
+        1
+      ],
+      "crop_rgba_sha256": "09e7a117c95db4512b979fc92c68f29d42a25ca8dabef3f27d8024db827d7f7f",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1138,
+          104,
+          69,
+          56
+        ],
+        "region": [
+          1138,
+          90,
+          69,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Distribution curve",
+        "tags": [
+          "distribution curve",
+          "bell curve",
+          "gaussian",
+          "normal distribution"
+        ],
+        "aliases": [],
+        "subjects": [
+          "math.statistics"
+        ],
+        "concept_id": "math.statistics.distribution-curve",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i14",
+      "cell": [
+        15,
+        1
+      ],
+      "crop_rgba_sha256": "77efbce2bc61b0d02363961490630d1ff5f9dba4f89aaaf7410645b8eab7c22e",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1225,
+          104,
+          66,
+          56
+        ],
+        "region": [
+          1225,
+          90,
+          66,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Histogram",
+        "tags": [
+          "histogram",
+          "bar chart",
+          "statistics"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.histogram",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i15",
+      "cell": [
+        16,
+        1
+      ],
+      "crop_rgba_sha256": "7d7d42ed6913099470b39256f03484978b1b8d72589bdd50f1d8958bd2f008a3",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1311,
+          106,
+          67,
+          54
+        ],
+        "region": [
+          1310,
+          90,
+          68,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Distribution curve",
+        "tags": [
+          "distribution curve",
+          "bell curve",
+          "gaussian"
+        ],
+        "aliases": [],
+        "subjects": [
+          "math.statistics"
+        ],
+        "concept_id": "math.statistics.distribution-curve",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i16",
+      "cell": [
+        17,
+        1
+      ],
+      "crop_rgba_sha256": "6b7b67b67f17f8fc1f14eee8d81f0b6da16138d72d71b564b34bf68e41ab14c0",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1401,
+          100,
+          66,
+          63
+        ],
+        "region": [
+          1401,
+          90,
+          67,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Venn diagram",
+        "tags": [
+          "venn diagram",
+          "sets",
+          "overlap",
+          "intersection"
+        ],
+        "aliases": [],
+        "subjects": [
+          "math.sets"
+        ],
+        "concept_id": "math.sets.venn-diagram",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i17",
+      "cell": [
+        18,
+        1
+      ],
+      "crop_rgba_sha256": "274a7b72cdf3d4a7e5aa4f1a4b8ce43a8dbecd7415612f6c58152b193fda1d20",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1489,
+          106,
+          59,
+          51
+        ],
+        "region": [
+          1489,
+          90,
+          59,
+          87
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i18",
+      "cell": [
+        19,
+        1
+      ],
+      "crop_rgba_sha256": "24c3dfe274b05aeb52fde14894493d7028238e2a8f4d2b4d92ef57dc380ef26f",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1574,
+          100,
+          62,
+          63
+        ],
+        "region": [
+          1574,
+          90,
+          62,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Scatter plot",
+        "tags": [
+          "scatter plot",
+          "data points",
+          "scatter graph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.scatter-plot",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i19",
+      "cell": [
+        20,
+        1
+      ],
+      "crop_rgba_sha256": "4352b09a1af92a83cf80936b2d06b99bbf1d2a609a975781da0e78ece12c9138",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1665,
+          99,
+          56,
+          65
+        ],
+        "region": [
+          1665,
+          90,
+          57,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Link",
+        "tags": [
+          "link",
+          "chain",
+          "connection"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.links"
+        ],
+        "concept_id": "network.links.link",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i20",
+      "cell": [
+        21,
+        1
+      ],
+      "crop_rgba_sha256": "46c79eadc8a729a3aa5fb9c861215856e3fef5a75315eaf6fd272ba90ab44f8c",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1752,
+          106,
+          62,
+          48
+        ],
+        "region": [
+          1752,
+          90,
+          62,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Graph nodes",
+        "tags": [
+          "graph nodes",
+          "network",
+          "linked nodes"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.graph-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i21",
+      "cell": [
+        22,
+        1
+      ],
+      "crop_rgba_sha256": "9c77313f4e60437947a64e3512eeababf8eb152dccdccd7467f8e697a936597f",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1842,
+          105,
+          55,
+          53
+        ],
+        "region": [
+          1842,
+          90,
+          55,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Data shapes",
+        "tags": [
+          "data shapes",
+          "shapes",
+          "types",
+          "geometry"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.structures"
+        ],
+        "concept_id": "data.structures.data-shapes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i22",
+      "cell": [
+        23,
+        1
+      ],
+      "crop_rgba_sha256": "53241790adebe2b6b3094dd74f8814dcb31c8656cfc56fe71a1d6ffa9865784b",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1923,
+          100,
+          61,
+          62
+        ],
+        "region": [
+          1923,
+          90,
+          61,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Table",
+        "tags": [
+          "table",
+          "spreadsheet",
+          "grid",
+          "cells"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.tables"
+        ],
+        "concept_id": "data.tables.table",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i23",
+      "cell": [
+        0,
+        2
+      ],
+      "crop_rgba_sha256": "8f44218f3e814d428dbe96cbeccf999211e33f8d0b8344f67a3b2de4ce446e48",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2011,
+          103,
+          56,
+          56
+        ],
+        "region": [
+          2011,
+          90,
+          56,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Scatter plot",
+        "tags": [
+          "scatter plot",
+          "data points",
+          "scatter graph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.scatter-plot",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r01i24",
+      "cell": [
+        1,
+        2
+      ],
+      "crop_rgba_sha256": "c402d5bad044d4242c24e83df57e466288ce0436146eb782cbd791604d4286c5",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2094,
+          98,
+          62,
+          66
+        ],
+        "region": [
+          2094,
+          90,
+          63,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Dot matrix",
+        "tags": [
+          "dot matrix",
+          "points",
+          "grid",
+          "dots"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.structures"
+        ],
+        "concept_id": "data.structures.dot-matrix",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i00",
+      "cell": [
+        2,
+        2
+      ],
+      "crop_rgba_sha256": "ad98b040bdec1c947f06edc3f51a2a88825686ac7c066dfe4930ef8ed79efc52",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          18,
+          185,
+          27,
+          61
+        ],
+        "region": [
+          18,
+          177,
+          27,
+          88
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i01",
+      "cell": [
+        3,
+        2
+      ],
+      "crop_rgba_sha256": "1a932eaaa1fc468c868da6a25bf7d9e0dfb72906256b6b0bdfc14f28d4328d40",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          55,
+          185,
+          27,
+          61
+        ],
+        "region": [
+          55,
+          177,
+          27,
+          88
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i02",
+      "cell": [
+        4,
+        2
+      ],
+      "crop_rgba_sha256": "d23290b4d62f981532cc046391ac20135fa8c71854f6696d82bf39ca7ed0aa54",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          105,
+          185,
+          64,
+          61
+        ],
+        "region": [
+          105,
+          177,
+          64,
+          88
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i03",
+      "cell": [
+        5,
+        2
+      ],
+      "crop_rgba_sha256": "ad0de2a4e1c0904a01285cc17a7514f46db8ee3fe3d81983dc68a1228ebb33ac",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          194,
+          183,
+          60,
+          65
+        ],
+        "region": [
+          193,
+          177,
+          61,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cube",
+        "tags": [
+          "cube",
+          "3d",
+          "box",
+          "object"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geometry.shapes"
+        ],
+        "concept_id": "geometry.shapes.cube",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i04",
+      "cell": [
+        6,
+        2
+      ],
+      "crop_rgba_sha256": "c59d38cd88495efdceee8853a08aef34d9ec7d168bd1b7d90ad00204aa1add75",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          277,
+          184,
+          66,
+          64
+        ],
+        "region": [
+          277,
+          177,
+          67,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cubes",
+        "tags": [
+          "cubes",
+          "blocks",
+          "boxes",
+          "3d"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geometry.shapes"
+        ],
+        "concept_id": "geometry.shapes.cubes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i05",
+      "cell": [
+        7,
+        2
+      ],
+      "crop_rgba_sha256": "30d6fee677de57da701d681d81698fa02b64593177267dc89785bfbf9fb7abe1",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          366,
+          184,
+          60,
+          63
+        ],
+        "region": [
+          366,
+          177,
+          60,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Graph nodes",
+        "tags": [
+          "graph nodes",
+          "network",
+          "connections"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.graph-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i06",
+      "cell": [
+        8,
+        2
+      ],
+      "crop_rgba_sha256": "238dcc211d02463a73a5482f9bbb4ece95637c9a617d91f099d21272c510d292",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          462,
+          193,
+          44,
+          43
+        ],
+        "region": [
+          462,
+          177,
+          44,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Circle",
+        "tags": [
+          "circle",
+          "ring",
+          "geometry"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geometry.shapes"
+        ],
+        "concept_id": "geometry.shapes.circle",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i07",
+      "cell": [
+        9,
+        2
+      ],
+      "crop_rgba_sha256": "1a7d721873ccdb1e23093a48b6d8d53da3ba58c67e077fe559faa6e088f9eaeb",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          535,
+          184,
+          65,
+          59
+        ],
+        "region": [
+          535,
+          177,
+          65,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Graph nodes",
+        "tags": [
+          "graph nodes",
+          "network",
+          "connections"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.graph-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i08",
+      "cell": [
+        10,
+        2
+      ],
+      "crop_rgba_sha256": "8d72761c0f1d2b00ed6530dd7180a4575643483ccda2390d91719d685643478d",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          623,
+          185,
+          63,
+          61
+        ],
+        "region": [
+          623,
+          177,
+          64,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Graph nodes",
+        "tags": [
+          "graph nodes",
+          "network",
+          "connections"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.graph-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i09",
+      "cell": [
+        11,
+        2
+      ],
+      "crop_rgba_sha256": "03e04a5e6ecda2fb6753a702e81b231d6b3b1c93b48bd50157c31bd5763a1438",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          711,
+          184,
+          62,
+          62
+        ],
+        "region": [
+          711,
+          177,
+          62,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Graph mesh",
+        "tags": [
+          "graph mesh",
+          "network",
+          "connections",
+          "neural network"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.graph-mesh",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i10",
+      "cell": [
+        12,
+        2
+      ],
+      "crop_rgba_sha256": "e8cf8567df5425cc92a9a29b48bc63c36b70fd13db81e42076c2351a3a261132",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          797,
+          184,
+          66,
+          63
+        ],
+        "region": [
+          796,
+          177,
+          67,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Brain",
+        "tags": [
+          "brain",
+          "artificial intelligence",
+          "machine learning",
+          "neural"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ai.symbols"
+        ],
+        "concept_id": "ai.symbols.brain",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i11",
+      "cell": [
+        13,
+        2
+      ],
+      "crop_rgba_sha256": "807ec1b424c7c687ba29b226552232d2122424cd1cfbbe75c5e61a633858b175",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          885,
+          184,
+          63,
+          63
+        ],
+        "region": [
+          884,
+          177,
+          64,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Settings",
+        "tags": [
+          "settings",
+          "gear",
+          "config",
+          "configuration"
+        ],
+        "aliases": [],
+        "subjects": [
+          "software.settings"
+        ],
+        "concept_id": "software.settings.settings",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i12",
+      "cell": [
+        14,
+        2
+      ],
+      "crop_rgba_sha256": "9ac6a3d29512b9b1619a3559b9be62f9c6b3d5654bb1aa2ba42ab5c66bcadd5d",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          967,
+          183,
+          65,
+          64
+        ],
+        "region": [
+          967,
+          177,
+          65,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Microchip",
+        "tags": [
+          "microchip",
+          "cpu",
+          "processor",
+          "hardware"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": "hardware.components.microchip",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i13",
+      "cell": [
+        15,
+        2
+      ],
+      "crop_rgba_sha256": "740cc51bd38a37566ff71d9bd5fce00dcb373ad1e3565405ec8d9238a6287175",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1055,
+          187,
+          63,
+          59
+        ],
+        "region": [
+          1055,
+          177,
+          63,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Sparkles",
+        "tags": [
+          "sparkles",
+          "ai magic",
+          "shine",
+          "stars"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.symbols"
+        ],
+        "concept_id": "ui.symbols.sparkles",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i14",
+      "cell": [
+        16,
+        2
+      ],
+      "crop_rgba_sha256": "911c8d853ccb9049f8edf624826f457ed5cf1dec885c566ee4cb02a28ede22e1",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1139,
+          186,
+          67,
+          60
+        ],
+        "region": [
+          1139,
+          177,
+          67,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cube focus",
+        "tags": [
+          "cube focus",
+          "3d object",
+          "selected box"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geometry.shapes"
+        ],
+        "concept_id": "geometry.shapes.cube-focus",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i15",
+      "cell": [
+        17,
+        2
+      ],
+      "crop_rgba_sha256": "3d3524693f9139ccbad537731d640a4c5645830e412f65bb954f1631cfae5416",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1229,
+          186,
+          60,
+          60
+        ],
+        "region": [
+          1229,
+          177,
+          60,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Graph nodes",
+        "tags": [
+          "graph nodes",
+          "network",
+          "connections"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.graph-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i16",
+      "cell": [
+        18,
+        2
+      ],
+      "crop_rgba_sha256": "3f5a8a69c1d0953e439d94a15fa7a246f5736b22a480cf4807678415c189298a",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1311,
+          185,
+          63,
+          62
+        ],
+        "region": [
+          1310,
+          177,
+          64,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Graph nodes",
+        "tags": [
+          "graph nodes",
+          "network",
+          "connections"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.graph-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i17",
+      "cell": [
+        19,
+        2
+      ],
+      "crop_rgba_sha256": "c4a7952a4ce147f3d4dc1dc03f99d116cbc3bd402d297f48ebcf45107833879d",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1402,
+          185,
+          61,
+          61
+        ],
+        "region": [
+          1402,
+          177,
+          61,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Graph nodes",
+        "tags": [
+          "graph nodes",
+          "network",
+          "connections"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.graph-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i18",
+      "cell": [
+        20,
+        2
+      ],
+      "crop_rgba_sha256": "40957bc2157e0760a8685e0d84395348f54b473d1ce05bfa30507609f89adcc7",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1487,
+          186,
+          63,
+          62
+        ],
+        "region": [
+          1487,
+          177,
+          63,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Hierarchy",
+        "tags": [
+          "hierarchy",
+          "tree",
+          "graph",
+          "branches"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.hierarchy",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i19",
+      "cell": [
+        21,
+        2
+      ],
+      "crop_rgba_sha256": "31a29312b64a185e2ef08b37d75b2cd085fe309d361b3d6a1cf52129a2813aef",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1573,
+          186,
+          63,
+          62
+        ],
+        "region": [
+          1573,
+          177,
+          63,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Scatter plot",
+        "tags": [
+          "scatter plot",
+          "data points",
+          "scatter graph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.visualization"
+        ],
+        "concept_id": "data.visualization.scatter-plot",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i20",
+      "cell": [
+        22,
+        2
+      ],
+      "crop_rgba_sha256": "7da91f7d4bcd7017865ef9b9e4611fa4fae87d6065fc6b9487f808e9800ed1ce",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1663,
+          186,
+          63,
+          62
+        ],
+        "region": [
+          1662,
+          177,
+          65,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Venn circles",
+        "tags": [
+          "venn circles",
+          "three circles",
+          "sets",
+          "overlap"
+        ],
+        "aliases": [],
+        "subjects": [
+          "math.sets"
+        ],
+        "concept_id": "math.sets.venn-circles",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i21",
+      "cell": [
+        23,
+        2
+      ],
+      "crop_rgba_sha256": "6d7ee384c3e087945870c8f64ad5734c43338f9aa2fffc47b5d50ac45aa15520",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1752,
+          192,
+          62,
+          48
+        ],
+        "region": [
+          1752,
+          177,
+          62,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Graph nodes",
+        "tags": [
+          "graph nodes",
+          "connections",
+          "network"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.graphs"
+        ],
+        "concept_id": "data.graphs.graph-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i22",
+      "cell": [
+        0,
+        3
+      ],
+      "crop_rgba_sha256": "7a518af7f21495eb37d5134fbb2361b9a08dfbd8872efc87bf1cfee914af97d6",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1838,
+          187,
+          64,
+          60
+        ],
+        "region": [
+          1838,
+          177,
+          64,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Venn circles",
+        "tags": [
+          "venn circles",
+          "three circles",
+          "sets",
+          "overlap"
+        ],
+        "aliases": [],
+        "subjects": [
+          "math.sets"
+        ],
+        "concept_id": "math.sets.venn-circles",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i23",
+      "cell": [
+        1,
+        3
+      ],
+      "crop_rgba_sha256": "06487c0f9f90bedda87818988882ee0d5050176c49257b5f2b60428961a22444",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1920,
+          185,
+          68,
+          63
+        ],
+        "region": [
+          1920,
+          177,
+          68,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Warning",
+        "tags": [
+          "warning",
+          "caution",
+          "alert",
+          "exclamation triangle"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.status"
+        ],
+        "concept_id": "ui.status.warning",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i24",
+      "cell": [
+        2,
+        3
+      ],
+      "crop_rgba_sha256": "ec9277c79145c59bf101c2dcf37edd70b1aadc3ed13d59b8db92144cda74c9dd",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2007,
+          190,
+          64,
+          50
+        ],
+        "region": [
+          2007,
+          177,
+          64,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Laptop",
+        "tags": [
+          "laptop",
+          "computer",
+          "notebook",
+          "device"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.computers"
+        ],
+        "concept_id": "hardware.computers.laptop",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r02i25",
+      "cell": [
+        3,
+        3
+      ],
+      "crop_rgba_sha256": "3c8329c083c931a38cd8ba0481ff1daf1c0ee461a99d9f04abf3d9a93d62c809",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2097,
+          186,
+          52,
+          62
+        ],
+        "region": [
+          2097,
+          177,
+          53,
+          88
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Flask",
+        "tags": [
+          "flask",
+          "lab",
+          "chemistry",
+          "experiment"
+        ],
+        "aliases": [],
+        "subjects": [
+          "science.lab"
+        ],
+        "concept_id": "science.lab.flask",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i00",
+      "cell": [
+        4,
+        3
+      ],
+      "crop_rgba_sha256": "1464ca39df8a49531f7f46c110ff2d76e17f0874ae67364bfe47a74087220da7",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          18,
+          273,
+          65,
+          63
+        ],
+        "region": [
+          17,
+          265,
+          66,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Star",
+        "tags": [
+          "star",
+          "favorite",
+          "bookmark",
+          "rating"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.symbols"
+        ],
+        "concept_id": "ui.symbols.star",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i01",
+      "cell": [
+        5,
+        3
+      ],
+      "crop_rgba_sha256": "708d36c04b4de0187bb2777dd0c74dc2aabfc702cf63f0a935a2e4439a50389b",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          105,
+          273,
+          63,
+          61
+        ],
+        "region": [
+          105,
+          265,
+          63,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Thumbs up",
+        "tags": [
+          "thumbs up",
+          "like",
+          "approve",
+          "positive"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.feedback"
+        ],
+        "concept_id": "ui.feedback.thumbs-up",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i02",
+      "cell": [
+        6,
+        3
+      ],
+      "crop_rgba_sha256": "a18b3467bea32190950c414f98f6f73688dbe433485388166257b4b1d387960b",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          194,
+          275,
+          58,
+          57
+        ],
+        "region": [
+          194,
+          265,
+          58,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Sliders",
+        "tags": [
+          "sliders",
+          "adjust",
+          "tune",
+          "settings"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.controls"
+        ],
+        "concept_id": "ui.controls.sliders",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i03",
+      "cell": [
+        7,
+        3
+      ],
+      "crop_rgba_sha256": "de625d912079d6f723ecc914b20335631a57697e98c5e90aeaf1a4ea18c37e70",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          281,
+          271,
+          62,
+          67
+        ],
+        "region": [
+          281,
+          265,
+          62,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Document search",
+        "tags": [
+          "document search",
+          "find file",
+          "query file"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.actions"
+        ],
+        "concept_id": "files.actions.document-search",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i04",
+      "cell": [
+        8,
+        3
+      ],
+      "crop_rgba_sha256": "37cfd94c4d77a9e30bd428b920fcfe3451c33fb2bf55a679e243fd41d194d02b",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          369,
+          271,
+          53,
+          66
+        ],
+        "region": [
+          368,
+          265,
+          54,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Text file",
+        "tags": [
+          "text file",
+          "document",
+          "notes",
+          "plain text"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.text-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i05",
+      "cell": [
+        9,
+        3
+      ],
+      "crop_rgba_sha256": "f63885c3a25bb4010e1d61d8270e4de3d51c8ed38c6166a87f6e4675141da479",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          454,
+          271,
+          54,
+          66
+        ],
+        "region": [
+          454,
+          265,
+          54,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Text file",
+        "tags": [
+          "text file",
+          "document",
+          "notes",
+          "plain text"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.text-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i06",
+      "cell": [
+        10,
+        3
+      ],
+      "crop_rgba_sha256": "570f0e23c720919598c978ca5cda47b2a90a08a908ca9ea9559a19ba7e0b39b5",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          537,
+          274,
+          61,
+          62
+        ],
+        "region": [
+          536,
+          265,
+          62,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Picture",
+        "tags": [
+          "picture",
+          "image",
+          "photo",
+          "photograph"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.media"
+        ],
+        "concept_id": "files.media.picture",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i07",
+      "cell": [
+        11,
+        3
+      ],
+      "crop_rgba_sha256": "a9e92835d23394347951963e19457112eb6c59737a0ad6ddeb9a416dfcbe7167",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          622,
+          274,
+          63,
+          62
+        ],
+        "region": [
+          622,
+          265,
+          64,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Copy",
+        "tags": [
+          "copy",
+          "duplicate",
+          "two squares"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.copy",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i08",
+      "cell": [
+        12,
+        3
+      ],
+      "crop_rgba_sha256": "8258cb005dc1f23996e50c105a696168a98641b89af7ab8a66e6fc3da905c214",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          713,
+          275,
+          26,
+          58
+        ],
+        "region": [
+          713,
+          265,
+          26,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Focus frame",
+        "tags": [
+          "focus frame",
+          "crop",
+          "selection",
+          "scan"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.focus-frame",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i09",
+      "cell": [
+        13,
+        3
+      ],
+      "crop_rgba_sha256": "3085c351e6750ef1adbfce6a53ac0031fe82461d49b922aa0f22f1fd6a14169c",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          745,
+          275,
+          25,
+          58
+        ],
+        "region": [
+          745,
+          265,
+          25,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Focus frame",
+        "tags": [
+          "focus frame",
+          "crop",
+          "selection",
+          "scan"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.focus-frame",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i10",
+      "cell": [
+        14,
+        3
+      ],
+      "crop_rgba_sha256": "fe19d33a19cbb092574a05e69a51783d1ddcf6a31186285fef031ca25e97a4c6",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          797,
+          280,
+          67,
+          48
+        ],
+        "region": [
+          796,
+          265,
+          68,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Eye",
+        "tags": [
+          "eye",
+          "view",
+          "visibility",
+          "preview"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.eye",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i11",
+      "cell": [
+        15,
+        3
+      ],
+      "crop_rgba_sha256": "9211d6777cfc7867053d16ed6acad08a95f2083036f12261a10ae7caee09f2ad",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          885,
+          276,
+          63,
+          56
+        ],
+        "region": [
+          885,
+          265,
+          63,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Video player",
+        "tags": [
+          "video player",
+          "movie",
+          "play",
+          "media"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.video"
+        ],
+        "concept_id": "media.video.video-player",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i12",
+      "cell": [
+        16,
+        3
+      ],
+      "crop_rgba_sha256": "539f3877c3909472a2970253ffb70dcab7a76f059d67d3f28e06401794431b73",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          970,
+          276,
+          63,
+          56
+        ],
+        "region": [
+          970,
+          265,
+          63,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Audio waveform",
+        "tags": [
+          "audio waveform",
+          "sound wave",
+          "signal",
+          "voice"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.audio-waveform",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i13",
+      "cell": [
+        17,
+        3
+      ],
+      "crop_rgba_sha256": "611f1c6121d81f60d47d06cd8abd492017a79a1ed2fe10196ec9d84d4b9f4bdd",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1059,
+          276,
+          56,
+          56
+        ],
+        "region": [
+          1058,
+          265,
+          57,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Speaker",
+        "tags": [
+          "speaker",
+          "volume",
+          "sound",
+          "audio"
+        ],
+        "aliases": [],
+        "subjects": [
+          "media.audio"
+        ],
+        "concept_id": "media.audio.speaker",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i14",
+      "cell": [
+        18,
+        3
+      ],
+      "crop_rgba_sha256": "e0ee9b6db03e082c0c0fe296aa2c5fa63d1d4c22d1f34833322a60d36f3726e7",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1143,
+          270,
+          55,
+          67
+        ],
+        "region": [
+          1143,
+          265,
+          55,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Text file",
+        "tags": [
+          "text file",
+          "document",
+          "notes"
+        ],
+        "aliases": [],
+        "subjects": [
+          "files.documents"
+        ],
+        "concept_id": "files.documents.text-file",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i15",
+      "cell": [
+        19,
+        3
+      ],
+      "crop_rgba_sha256": "88075f95cb6fbae900e2d783de694c5742062b2517e343e099da39a58c434bce",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1226,
+          274,
+          65,
+          57
+        ],
+        "region": [
+          1226,
+          265,
+          65,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Chat bubble",
+        "tags": [
+          "chat bubble",
+          "message",
+          "conversation",
+          "comment"
+        ],
+        "aliases": [],
+        "subjects": [
+          "communication.chat"
+        ],
+        "concept_id": "communication.chat.chat-bubble",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i16",
+      "cell": [
+        20,
+        3
+      ],
+      "crop_rgba_sha256": "5bcf5a0a2716f73689f134fd25f5d16b151fb83f4eb0087ee307f42f6e40afaa",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1313,
+          273,
+          63,
+          61
+        ],
+        "region": [
+          1313,
+          265,
+          63,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Robot face",
+        "tags": [
+          "robot face",
+          "bot",
+          "ai",
+          "assistant"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ai.symbols"
+        ],
+        "concept_id": "ai.symbols.robot-face",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i17",
+      "cell": [
+        21,
+        3
+      ],
+      "crop_rgba_sha256": "01c79eaa6e488d11c521449c1490bed915676e50e052bdf71580db70d7ed4cb2",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1402,
+          272,
+          58,
+          66
+        ],
+        "region": [
+          1402,
+          265,
+          58,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "User",
+        "tags": [
+          "user",
+          "person",
+          "profile",
+          "account"
+        ],
+        "aliases": [],
+        "subjects": [
+          "identity.people"
+        ],
+        "concept_id": "identity.people.user",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i18",
+      "cell": [
+        22,
+        3
+      ],
+      "crop_rgba_sha256": "88abf52e130092cfd02616400796f2f21b1d04163c3e8abc2ca39edd269b8df8",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1488,
+          273,
+          60,
+          64
+        ],
+        "region": [
+          1488,
+          265,
+          60,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Share",
+        "tags": [
+          "share",
+          "network",
+          "connected nodes"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.share",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i19",
+      "cell": [
+        23,
+        3
+      ],
+      "crop_rgba_sha256": "3a104e542aa932d6d815775cbdf5dc13dd5b0696279950f80fe9a98abd81ba83",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1573,
+          274,
+          64,
+          64
+        ],
+        "region": [
+          1573,
+          265,
+          64,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Settings",
+        "tags": [
+          "settings",
+          "gear",
+          "cog",
+          "configuration"
+        ],
+        "aliases": [],
+        "subjects": [
+          "software.settings"
+        ],
+        "concept_id": "software.settings.settings",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i20",
+      "cell": [
+        0,
+        4
+      ],
+      "crop_rgba_sha256": "74f4133b8b73df1de3659c96c5f5ab19467618e06889dcc2db23d2e44b9f1b6d",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1662,
+          276,
+          66,
+          58
+        ],
+        "region": [
+          1661,
+          265,
+          67,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i21",
+      "cell": [
+        1,
+        4
+      ],
+      "crop_rgba_sha256": "d43936619b4f3c49cd36a66f2437c7bcc6d444c536f36d87904843395e16f319",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1752,
+          274,
+          60,
+          61
+        ],
+        "region": [
+          1752,
+          265,
+          61,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i22",
+      "cell": [
+        2,
+        4
+      ],
+      "crop_rgba_sha256": "3b3d897eba7a58f61c89a7473afc28dbd6be9dddde4abb865ac9293ae22fd2ce",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1837,
+          274,
+          65,
+          60
+        ],
+        "region": [
+          1837,
+          265,
+          65,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i23",
+      "cell": [
+        3,
+        4
+      ],
+      "crop_rgba_sha256": "05b3e429b76fe4ef29447c41a4f869c157523b581046c435920f5dbf0c25cb47",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1925,
+          274,
+          59,
+          60
+        ],
+        "region": [
+          1925,
+          265,
+          59,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i24",
+      "cell": [
+        4,
+        4
+      ],
+      "crop_rgba_sha256": "62d8f8a8a7b444875c03fc5482943d3512c6b270357a11bf05794a5c15d437f1",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2006,
+          278,
+          67,
+          52
+        ],
+        "region": [
+          2006,
+          265,
+          67,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r03i25",
+      "cell": [
+        5,
+        4
+      ],
+      "crop_rgba_sha256": "ac6036e2d3a98e22511d061831480c03225dfb362d472e3bb706221367f46a99",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2097,
+          273,
+          55,
+          64
+        ],
+        "region": [
+          2097,
+          265,
+          55,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i00",
+      "cell": [
+        6,
+        4
+      ],
+      "crop_rgba_sha256": "07cb47104e415fb91e5821709ef1940a1f725168011635edcbd6068eaaf4031f",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          18,
+          362,
+          64,
+          63
+        ],
+        "region": [
+          18,
+          355,
+          64,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i01",
+      "cell": [
+        7,
+        4
+      ],
+      "crop_rgba_sha256": "adb566f4c06cbff809096a0415d3c6e321a61b404aa8a320a69e7fef1b327d52",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          105,
+          362,
+          61,
+          63
+        ],
+        "region": [
+          105,
+          355,
+          61,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i02",
+      "cell": [
+        8,
+        4
+      ],
+      "crop_rgba_sha256": "fd08e3bbfa0d8d37ff237a75f5bbe4109b60959eb435b0ee294580be88467347",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          195,
+          359,
+          56,
+          68
+        ],
+        "region": [
+          195,
+          355,
+          56,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i03",
+      "cell": [
+        9,
+        4
+      ],
+      "crop_rgba_sha256": "8222a86560bff3ca09ca58936e0a1399e986c6864c089bb6751b980c1ddcf71d",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          281,
+          362,
+          54,
+          64
+        ],
+        "region": [
+          281,
+          355,
+          54,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i04",
+      "cell": [
+        10,
+        4
+      ],
+      "crop_rgba_sha256": "bafeeb73fbea3bd92959526e766355208fbfcf3fb3e2f597c965a625bd0c7eed",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          363,
+          366,
+          65,
+          49
+        ],
+        "region": [
+          362,
+          355,
+          66,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i05",
+      "cell": [
+        11,
+        4
+      ],
+      "crop_rgba_sha256": "51c1373d69170a87825b8736561418b9cca3c879d1d6b9a6fcf531fa00ef2d05",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          450,
+          363,
+          63,
+          62
+        ],
+        "region": [
+          450,
+          355,
+          63,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i06",
+      "cell": [
+        12,
+        4
+      ],
+      "crop_rgba_sha256": "601b980236a250c946b9d6e64bcade57caf007fce82b6291cbd01886064a8d36",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          537,
+          362,
+          64,
+          62
+        ],
+        "region": [
+          537,
+          355,
+          64,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i07",
+      "cell": [
+        13,
+        4
+      ],
+      "crop_rgba_sha256": "c0119381f54495fcac99545643bd452736ee86971b8f4bc2749dc5f55fa484f1",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          623,
+          363,
+          63,
+          63
+        ],
+        "region": [
+          623,
+          355,
+          63,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i08",
+      "cell": [
+        14,
+        4
+      ],
+      "crop_rgba_sha256": "3c5b487bb025657e0ef19047668f177a174521b2ae52397766f70661c4866bfa",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          711,
+          363,
+          62,
+          62
+        ],
+        "region": [
+          711,
+          355,
+          62,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i09",
+      "cell": [
+        15,
+        4
+      ],
+      "crop_rgba_sha256": "1647b9369a3df99913d0de7d50fa667fd3d88161f32a55cd52b982184c7dd763",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          794,
+          367,
+          70,
+          53
+        ],
+        "region": [
+          793,
+          355,
+          72,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i10",
+      "cell": [
+        16,
+        4
+      ],
+      "crop_rgba_sha256": "5431708d015a5e683c5c0d6fa2e56153378cc7b4c41d8dfb01892033514ba064",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          883,
+          363,
+          63,
+          62
+        ],
+        "region": [
+          882,
+          355,
+          64,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i11",
+      "cell": [
+        17,
+        4
+      ],
+      "crop_rgba_sha256": "255a4c9e395a71a63b50f1dc8d2409af2abdeac52791f24221d97f36b7b18fde",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          969,
+          363,
+          64,
+          63
+        ],
+        "region": [
+          969,
+          355,
+          64,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i12",
+      "cell": [
+        18,
+        4
+      ],
+      "crop_rgba_sha256": "818613ea9f73d08907c936dfaa2db1f81911b178072ae03bf3fa69db5802c051",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1058,
+          373,
+          61,
+          45
+        ],
+        "region": [
+          1058,
+          355,
+          61,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i13",
+      "cell": [
+        19,
+        4
+      ],
+      "crop_rgba_sha256": "978e93c87c44df64a45bb1098771c012959f29ed645cfc35f31517f932d75f04",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1144,
+          364,
+          66,
+          63
+        ],
+        "region": [
+          1144,
+          355,
+          66,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i14",
+      "cell": [
+        20,
+        4
+      ],
+      "crop_rgba_sha256": "27413e18b554a5d22a0ffdc8b16ba78527ddfcd8a4fa2a4a999c3db679fb03e1",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1232,
+          365,
+          56,
+          62
+        ],
+        "region": [
+          1232,
+          355,
+          56,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i15",
+      "cell": [
+        21,
+        4
+      ],
+      "crop_rgba_sha256": "1889043d922fc68f0dbdae88b47303e553f0a3a1caf70d9a21858b660f832eae",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1314,
+          364,
+          58,
+          64
+        ],
+        "region": [
+          1313,
+          355,
+          59,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i16",
+      "cell": [
+        22,
+        4
+      ],
+      "crop_rgba_sha256": "2d829cb69d29a9253bbd9bf8c3ace038373e91db05e37680c41b198100ad2367",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1398,
+          363,
+          66,
+          65
+        ],
+        "region": [
+          1398,
+          355,
+          66,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i17",
+      "cell": [
+        23,
+        4
+      ],
+      "crop_rgba_sha256": "525f457c028cebe38f427b145ce82d787ecda257b54e26bed17decea5f61cf21",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1489,
+          365,
+          65,
+          62
+        ],
+        "region": [
+          1489,
+          355,
+          65,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i18",
+      "cell": [
+        0,
+        5
+      ],
+      "crop_rgba_sha256": "084927594a434737a862ba13ac9818409a28794c79873237ff0fe0eaeec3f852",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1579,
+          366,
+          60,
+          60
+        ],
+        "region": [
+          1579,
+          355,
+          61,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i19",
+      "cell": [
+        1,
+        5
+      ],
+      "crop_rgba_sha256": "7019f8112871319d50f89b2b96a782b06403d2be298b8bb4a5b550e64524ae4b",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1669,
+          368,
+          55,
+          55
+        ],
+        "region": [
+          1669,
+          355,
+          55,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i20",
+      "cell": [
+        2,
+        5
+      ],
+      "crop_rgba_sha256": "78dcfc29afcf16eb413d379efddd6ec7376215ebdafb0cfe0b21d1d3e6eaf8be",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1752,
+          364,
+          59,
+          63
+        ],
+        "region": [
+          1752,
+          355,
+          60,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i21",
+      "cell": [
+        3,
+        5
+      ],
+      "crop_rgba_sha256": "a264915ebd083bddda20e2c442d786c02f0adbd524e1a610c448a2509d45109d",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1839,
+          366,
+          61,
+          56
+        ],
+        "region": [
+          1839,
+          355,
+          61,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i22",
+      "cell": [
+        4,
+        5
+      ],
+      "crop_rgba_sha256": "bdf98f47e0870a6fc0484a62b421645f418c9fd0704f54315087c07b330fb801",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1925,
+          367,
+          58,
+          56
+        ],
+        "region": [
+          1925,
+          355,
+          58,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i23",
+      "cell": [
+        5,
+        5
+      ],
+      "crop_rgba_sha256": "6cfb1406151acefcad0c0e9557a7e37c45e916010cffa813604d803de73353ea",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2006,
+          370,
+          67,
+          54
+        ],
+        "region": [
+          2006,
+          355,
+          67,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r04i24",
+      "cell": [
+        6,
+        5
+      ],
+      "crop_rgba_sha256": "af8189b99b9d9a8da7a335cc0fdf5392cfcdc047ae5992d686047157c33671ea",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2095,
+          363,
+          61,
+          63
+        ],
+        "region": [
+          2095,
+          355,
+          62,
+          91
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i00",
+      "cell": [
+        7,
+        5
+      ],
+      "crop_rgba_sha256": "fb2ebda6d045b341dfa7b03eca207a272d57171d1ab3a54d8b9c4c5b8e1c0400",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          20,
+          455,
+          59,
+          57
+        ],
+        "region": [
+          20,
+          446,
+          59,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i01",
+      "cell": [
+        8,
+        5
+      ],
+      "crop_rgba_sha256": "955760fb994735c2d3fb40c5167b4d58c266485f76a35150d95374c036929019",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          104,
+          453,
+          66,
+          61
+        ],
+        "region": [
+          104,
+          446,
+          66,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i02",
+      "cell": [
+        9,
+        5
+      ],
+      "crop_rgba_sha256": "a54dfa7205150fb15780e29c86f343f9d5ec273c7e76ce074821ac772669b275",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          192,
+          454,
+          66,
+          58
+        ],
+        "region": [
+          192,
+          446,
+          66,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i03",
+      "cell": [
+        10,
+        5
+      ],
+      "crop_rgba_sha256": "044cf14e3d9229ced8325c2334f8807ea4cac3871763bcdaa8981fc9725be65d",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          277,
+          450,
+          66,
+          66
+        ],
+        "region": [
+          277,
+          446,
+          67,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i04",
+      "cell": [
+        11,
+        5
+      ],
+      "crop_rgba_sha256": "a560cd29bf27478432e7fe9d588794667a8a4b3cd654d656b50e5233d7bb8bd6",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          366,
+          452,
+          60,
+          62
+        ],
+        "region": [
+          366,
+          446,
+          60,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i05",
+      "cell": [
+        12,
+        5
+      ],
+      "crop_rgba_sha256": "36283ed49af0ed230497dde56c94d375f5527d34ca58505f8785fc1de07b7a7a",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          450,
+          455,
+          63,
+          59
+        ],
+        "region": [
+          450,
+          446,
+          63,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i06",
+      "cell": [
+        13,
+        5
+      ],
+      "crop_rgba_sha256": "93ed33e9d30503ee121b651ffc9c59f27e259766f8f7225f7833145b1bac4d93",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          536,
+          456,
+          64,
+          55
+        ],
+        "region": [
+          536,
+          446,
+          64,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i07",
+      "cell": [
+        14,
+        5
+      ],
+      "crop_rgba_sha256": "e92cc7cd79752d18ff44180f8899e0d803c5f1ecb1ee59758e22f4eecf531f63",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          624,
+          453,
+          63,
+          62
+        ],
+        "region": [
+          624,
+          446,
+          64,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i08",
+      "cell": [
+        15,
+        5
+      ],
+      "crop_rgba_sha256": "23dcc5425474eec83d56c1321f4b4108dfb2db1b646357ef7aef8dde35a12f7d",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          712,
+          452,
+          60,
+          63
+        ],
+        "region": [
+          711,
+          446,
+          61,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i09",
+      "cell": [
+        16,
+        5
+      ],
+      "crop_rgba_sha256": "e363f0c23d15c5866add392cf395eaf6763659f6bef244e13903a0f42a93a404",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          797,
+          452,
+          66,
+          63
+        ],
+        "region": [
+          797,
+          446,
+          67,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i10",
+      "cell": [
+        17,
+        5
+      ],
+      "crop_rgba_sha256": "b39c1d884aa3cd077abcdf56f500e46d5e3652de93fa7ed2b865b786a57933d2",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          889,
+          452,
+          53,
+          64
+        ],
+        "region": [
+          889,
+          446,
+          53,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i11",
+      "cell": [
+        18,
+        5
+      ],
+      "crop_rgba_sha256": "1aa484299b2a930a6721b51fa47354fe01914e91854aec689c1fa25ad0fb407d",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          967,
+          453,
+          60,
+          60
+        ],
+        "region": [
+          967,
+          446,
+          61,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i12",
+      "cell": [
+        19,
+        5
+      ],
+      "crop_rgba_sha256": "e6d5313b4dbe726730a97a2d7f38d59915b4f103ce7ee89dd76eeacd4d44e034",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1056,
+          451,
+          57,
+          65
+        ],
+        "region": [
+          1056,
+          446,
+          57,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i13",
+      "cell": [
+        20,
+        5
+      ],
+      "crop_rgba_sha256": "082c45a3a0b7027741c7f653c6198753295165b14babd1ce5b9181f38d262958",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1141,
+          459,
+          66,
+          48
+        ],
+        "region": [
+          1140,
+          446,
+          67,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i14",
+      "cell": [
+        21,
+        5
+      ],
+      "crop_rgba_sha256": "f6d2f3e71c9d3762d32ba3b24ad9704d9d97041c15d41c9d6429109093b37573",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1232,
+          456,
+          52,
+          55
+        ],
+        "region": [
+          1232,
+          446,
+          52,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i15",
+      "cell": [
+        22,
+        5
+      ],
+      "crop_rgba_sha256": "f345d3b869cdf03c7d2b820ee3305c3996b22c3c065876fad299e95bba72ba85",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1313,
+          455,
+          62,
+          60
+        ],
+        "region": [
+          1313,
+          446,
+          62,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i16",
+      "cell": [
+        23,
+        5
+      ],
+      "crop_rgba_sha256": "41afe950e71c6fcf4a9ddf520513638c56040c17e283bf4c2636ad40d9e6c2a6",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1397,
+          453,
+          68,
+          62
+        ],
+        "region": [
+          1397,
+          446,
+          68,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i17",
+      "cell": [
+        0,
+        6
+      ],
+      "crop_rgba_sha256": "0d03a5dc1530d00477ab0b62f1be67f6531c6a1cda58c75d36d8c012df64554e",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1490,
+          453,
+          52,
+          63
+        ],
+        "region": [
+          1489,
+          446,
+          53,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i18",
+      "cell": [
+        1,
+        6
+      ],
+      "crop_rgba_sha256": "f6c82537c97fc7c613694a6b1bcf7caedd4e5a238bdcb31132b20fb51b369cdb",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1576,
+          452,
+          54,
+          67
+        ],
+        "region": [
+          1576,
+          446,
+          55,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i19",
+      "cell": [
+        2,
+        6
+      ],
+      "crop_rgba_sha256": "e199ece0cba8af8c0e0b5ee36d4a8b237ecc9d993f07cf1072df83f0cbb3cf31",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1663,
+          459,
+          57,
+          52
+        ],
+        "region": [
+          1662,
+          446,
+          58,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i20",
+      "cell": [
+        3,
+        6
+      ],
+      "crop_rgba_sha256": "a1afd3ba7031d0c20afb93cae75322aa08b166cb01a96da6f6cf1ed35dee9510",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1749,
+          459,
+          67,
+          51
+        ],
+        "region": [
+          1749,
+          446,
+          68,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i21",
+      "cell": [
+        4,
+        6
+      ],
+      "crop_rgba_sha256": "91a2ceecac35751af690b22db4de7e3b3a56cda70692c04597a08943d0cf773a",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1839,
+          454,
+          61,
+          64
+        ],
+        "region": [
+          1839,
+          446,
+          61,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i22",
+      "cell": [
+        5,
+        6
+      ],
+      "crop_rgba_sha256": "647cdd2c3aafede8685cb683a288a08413daacf2242a7ee6edf013f8a676c85c",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1923,
+          451,
+          61,
+          66
+        ],
+        "region": [
+          1923,
+          446,
+          62,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i23",
+      "cell": [
+        6,
+        6
+      ],
+      "crop_rgba_sha256": "91a7eb3604c1dc7fa470a0f997da9d6b17fcaf9758aed74c8849e38857a11393",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2010,
+          453,
+          59,
+          63
+        ],
+        "region": [
+          2009,
+          446,
+          60,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r05i24",
+      "cell": [
+        7,
+        6
+      ],
+      "crop_rgba_sha256": "7ce727983c71de76f68adf7e3f209df052e90dbffe92a9f9250fed2baef98f0c",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2094,
+          453,
+          63,
+          62
+        ],
+        "region": [
+          2094,
+          446,
+          63,
+          86
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i00",
+      "cell": [
+        8,
+        6
+      ],
+      "crop_rgba_sha256": "fd4fe72d1a610148d9fab66cbe5a4c8c00c38142165a1c04d8d05566c840a4ef",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          21,
+          541,
+          58,
+          55
+        ],
+        "region": [
+          20,
+          532,
+          59,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i01",
+      "cell": [
+        9,
+        6
+      ],
+      "crop_rgba_sha256": "6b40d52d581c2af92b1436a535cacc76415987f741f0c60700df9fb6e357da19",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          108,
+          541,
+          56,
+          55
+        ],
+        "region": [
+          108,
+          532,
+          57,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i02",
+      "cell": [
+        10,
+        6
+      ],
+      "crop_rgba_sha256": "219e3ee0cbb2319e570441cb641edbd50a15386c445f8fda880acd465d28b05d",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          193,
+          537,
+          57,
+          62
+        ],
+        "region": [
+          193,
+          532,
+          57,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i03",
+      "cell": [
+        11,
+        6
+      ],
+      "crop_rgba_sha256": "8e71e3c54f42a5d0ae5f49312bc76972c141adea83eb1c5a5ba2a7145f071fab",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          278,
+          537,
+          61,
+          63
+        ],
+        "region": [
+          278,
+          532,
+          61,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i04",
+      "cell": [
+        12,
+        6
+      ],
+      "crop_rgba_sha256": "815769b949e147d06294a1a5742ff21c8db936ed899b231cc6f72dd68df68d2a",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          364,
+          540,
+          62,
+          57
+        ],
+        "region": [
+          364,
+          532,
+          62,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i05",
+      "cell": [
+        13,
+        6
+      ],
+      "crop_rgba_sha256": "5067f7e5bad74609b22c5469e387a896a22dc7d8467b623a4bfc4c3f161d868a",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          451,
+          544,
+          61,
+          54
+        ],
+        "region": [
+          451,
+          532,
+          61,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i06",
+      "cell": [
+        14,
+        6
+      ],
+      "crop_rgba_sha256": "b999b1db6c0d5753c6adce7f28700f102b21c04b6e7393e8a53fbb46b2470f8f",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          538,
+          544,
+          60,
+          54
+        ],
+        "region": [
+          537,
+          532,
+          61,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i07",
+      "cell": [
+        15,
+        6
+      ],
+      "crop_rgba_sha256": "ff2bbb5d6ba46c4849966326dc2e7bf020d037794d77feecf8e5ffe63b25bd94",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          621,
+          538,
+          64,
+          62
+        ],
+        "region": [
+          621,
+          532,
+          65,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i08",
+      "cell": [
+        16,
+        6
+      ],
+      "crop_rgba_sha256": "cff4be9fe018a898e46e731d8a998c34033136e10fa84cc8c1a36c813358ea29",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          715,
+          539,
+          51,
+          60
+        ],
+        "region": [
+          715,
+          532,
+          51,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i09",
+      "cell": [
+        17,
+        6
+      ],
+      "crop_rgba_sha256": "f4ce70d9caa962182e6d8778e1e9354638eae59f0072970b5fd54f15d865bf24",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          797,
+          543,
+          54,
+          55
+        ],
+        "region": [
+          797,
+          532,
+          54,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i10",
+      "cell": [
+        18,
+        6
+      ],
+      "crop_rgba_sha256": "09571c534e53fc358d4b6f775605a3e8ccd65f6f821de0735bc9e0799b24ce98",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          877,
+          541,
+          63,
+          57
+        ],
+        "region": [
+          877,
+          532,
+          63,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i11",
+      "cell": [
+        19,
+        6
+      ],
+      "crop_rgba_sha256": "ed9b68925e310cf399980ee945fcc6da84068f0e997bba57c2970249abab8068",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          967,
+          541,
+          54,
+          57
+        ],
+        "region": [
+          967,
+          532,
+          55,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i12",
+      "cell": [
+        20,
+        6
+      ],
+      "crop_rgba_sha256": "feda4e847d1feadf6afa9a72d6bc4780abab9c1199553235c61d4c31570ed56b",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1049,
+          542,
+          67,
+          57
+        ],
+        "region": [
+          1049,
+          532,
+          67,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i13",
+      "cell": [
+        21,
+        6
+      ],
+      "crop_rgba_sha256": "3f3d77b63781280616e5918531cc99f60c5c533f93d22329f7d533ffaae85150",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1144,
+          543,
+          53,
+          54
+        ],
+        "region": [
+          1144,
+          532,
+          53,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i14",
+      "cell": [
+        22,
+        6
+      ],
+      "crop_rgba_sha256": "b59ed39a5471e06f3b4b0ef5cd14afb590e0674066444f5ae92b839bcbb7d786",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1232,
+          551,
+          55,
+          38
+        ],
+        "region": [
+          1232,
+          532,
+          55,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i15",
+      "cell": [
+        23,
+        6
+      ],
+      "crop_rgba_sha256": "8aea03cc65d34cf6d923be99632eb44dd31f4a1592d9de0698df935929886535",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1317,
+          543,
+          50,
+          54
+        ],
+        "region": [
+          1317,
+          532,
+          50,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i16",
+      "cell": [
+        0,
+        7
+      ],
+      "crop_rgba_sha256": "9c8ccafc653a75e012a33822e034075d98e9fdb42ef46178eebb76a4b81f19ac",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1405,
+          542,
+          46,
+          56
+        ],
+        "region": [
+          1405,
+          532,
+          46,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i17",
+      "cell": [
+        1,
+        7
+      ],
+      "crop_rgba_sha256": "107a9d01aa3cf452d71759aada02c49ad8329684cfa8d4cfe0b52feac4f536b7",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1484,
+          547,
+          61,
+          46
+        ],
+        "region": [
+          1484,
+          532,
+          61,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i18",
+      "cell": [
+        2,
+        7
+      ],
+      "crop_rgba_sha256": "3ce9a3bc001546734449c318fdae3b9748d0503c048c4bc7092db8e1e8c58e18",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1572,
+          547,
+          62,
+          49
+        ],
+        "region": [
+          1572,
+          532,
+          62,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i19",
+      "cell": [
+        3,
+        7
+      ],
+      "crop_rgba_sha256": "3fbe4d33e6ea57b016bf0d9280a452860fb341dcc566da2c0b105ba7c3c5f370",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1661,
+          548,
+          61,
+          48
+        ],
+        "region": [
+          1660,
+          532,
+          62,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i20",
+      "cell": [
+        4,
+        7
+      ],
+      "crop_rgba_sha256": "e2ef93f30d45c3a43ad0b1bd59d129d8249bddece250c060283c80209eb1fa81",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1750,
+          548,
+          62,
+          50
+        ],
+        "region": [
+          1750,
+          532,
+          63,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i21",
+      "cell": [
+        5,
+        7
+      ],
+      "crop_rgba_sha256": "088c8f835c62ccccdac54dd75e4b278f44ef69b600231f496c33c49259865364",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1842,
+          542,
+          58,
+          58
+        ],
+        "region": [
+          1842,
+          532,
+          58,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i22",
+      "cell": [
+        6,
+        7
+      ],
+      "crop_rgba_sha256": "36dca2d7a3cb6a1ad07353997d56aceea7bba1accffe6b39e7e4a7e92217d089",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1928,
+          548,
+          51,
+          41
+        ],
+        "region": [
+          1928,
+          532,
+          52,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i23",
+      "cell": [
+        7,
+        7
+      ],
+      "crop_rgba_sha256": "5dfa396beefe5160f4e54e5aa0d55cf91ac9144a3c1028f5df3e98f0fc1583e5",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2014,
+          541,
+          44,
+          58
+        ],
+        "region": [
+          2014,
+          532,
+          44,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r06i24",
+      "cell": [
+        8,
+        7
+      ],
+      "crop_rgba_sha256": "b2535bceb64318c2313e496697c469b513cd57a0884229045a0adae811fa5eb3",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2094,
+          542,
+          63,
+          53
+        ],
+        "region": [
+          2094,
+          532,
+          63,
+          75
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i00",
+      "cell": [
+        9,
+        7
+      ],
+      "crop_rgba_sha256": "6fc5b32b4cf8a9b541a094636210241a063922eaf2c3a9946871f78b259baa5b",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          22,
+          613,
+          50,
+          105
+        ],
+        "region": [
+          21,
+          607,
+          51,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i01",
+      "cell": [
+        10,
+        7
+      ],
+      "crop_rgba_sha256": "5e12a46b38570141bad29cb73b75eff03e586539487de6540a0403e15db22107",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          109,
+          612,
+          50,
+          107
+        ],
+        "region": [
+          109,
+          607,
+          50,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i02",
+      "cell": [
+        11,
+        7
+      ],
+      "crop_rgba_sha256": "775d502c649de87d0f5c5b67fac680ff3f00299338cf0565d6cdb1a6cf99134b",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          201,
+          612,
+          41,
+          108
+        ],
+        "region": [
+          201,
+          607,
+          41,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i03",
+      "cell": [
+        12,
+        7
+      ],
+      "crop_rgba_sha256": "e89dee267fd632f966a307be98f201506a85a43e95cd8859f2c90f2bfca676d9",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          280,
+          612,
+          49,
+          109
+        ],
+        "region": [
+          280,
+          607,
+          49,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i04",
+      "cell": [
+        13,
+        7
+      ],
+      "crop_rgba_sha256": "55c6f05c90b40a2d1e04d63c6bd448788a0806bd76fdc47309db280fb0064732",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          368,
+          613,
+          53,
+          107
+        ],
+        "region": [
+          368,
+          607,
+          53,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i05",
+      "cell": [
+        14,
+        7
+      ],
+      "crop_rgba_sha256": "3e4685c31ade37198a94e06e951f2f0dcc225a48553bcbb7f30253cc45fdbd40",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          454,
+          612,
+          55,
+          99
+        ],
+        "region": [
+          454,
+          607,
+          56,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i06",
+      "cell": [
+        15,
+        7
+      ],
+      "crop_rgba_sha256": "65a0400667e5706a1773ad9876398c1558dcd5d371fcd700916f9af68203ae80",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          541,
+          613,
+          51,
+          107
+        ],
+        "region": [
+          541,
+          607,
+          51,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i07",
+      "cell": [
+        16,
+        7
+      ],
+      "crop_rgba_sha256": "0960433d1ae691669bd94e296bc962ed209cdfb902967051166bd11e3c485b08",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          622,
+          613,
+          58,
+          107
+        ],
+        "region": [
+          622,
+          607,
+          58,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i08",
+      "cell": [
+        17,
+        7
+      ],
+      "crop_rgba_sha256": "4485dc307f492468aeccd1a6a6e45d23170c0b3a1eb75cb607a4557a99af87a4",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          713,
+          614,
+          56,
+          106
+        ],
+        "region": [
+          712,
+          607,
+          57,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i09",
+      "cell": [
+        18,
+        7
+      ],
+      "crop_rgba_sha256": "b103ceb37c2e8ebf5f956cf226545c659abf3875ee85f168f2d8133b77db835e",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          800,
+          612,
+          49,
+          107
+        ],
+        "region": [
+          800,
+          607,
+          49,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i10",
+      "cell": [
+        19,
+        7
+      ],
+      "crop_rgba_sha256": "b9b53c7092e0418e17d1e41292a18e455712f91ebe5a55562572ccafe5c96d8f",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          880,
+          612,
+          49,
+          107
+        ],
+        "region": [
+          880,
+          607,
+          49,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i11",
+      "cell": [
+        20,
+        7
+      ],
+      "crop_rgba_sha256": "f2b4e7a998e32b17a94f2f9bc4493d2530322fd64027c0175ffb49aee003c309",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          956,
+          614,
+          55,
+          105
+        ],
+        "region": [
+          955,
+          607,
+          56,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i12",
+      "cell": [
+        21,
+        7
+      ],
+      "crop_rgba_sha256": "ddec69fb335cea399bb2cb6db8f1d77c50d12acd291e057ca370e22106014c37",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1031,
+          618,
+          56,
+          101
+        ],
+        "region": [
+          1031,
+          607,
+          56,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i13",
+      "cell": [
+        22,
+        7
+      ],
+      "crop_rgba_sha256": "8be61af67822625c2c099c66d2aa9164df93233d528b84d371b7705af873d443",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1098,
+          613,
+          55,
+          106
+        ],
+        "region": [
+          1098,
+          607,
+          55,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i14",
+      "cell": [
+        23,
+        7
+      ],
+      "crop_rgba_sha256": "c3075b74574b8da9ea90e04fe054fa297f4550def610b688af13acb4b64c7b93",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1173,
+          612,
+          47,
+          108
+        ],
+        "region": [
+          1173,
+          607,
+          47,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    }
+  ]
+}

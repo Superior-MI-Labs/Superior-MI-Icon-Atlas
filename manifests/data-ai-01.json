@@ -1,0 +1,405 @@
+{
+  "schema": "smi-icon-atlas-sheet/1",
+  "sheet": {
+    "id": "icons.monoline.data-ai-01.24x8",
+    "path": "sheets/data-ai-01/atlas.png",
+    "foreground_mask": "sheets/data-ai-01/atlas.png",
+    "black_outline": "sheets/data-ai-01/black-outline.png",
+    "preview": "sheets/data-ai-01/inspection-preview.png",
+    "width_px": 2304,
+    "height_px": 768,
+    "cell_px": 96,
+    "columns": 24,
+    "rows": 8,
+    "domain": "data-ai",
+    "sha256": "5c960a2267a47f444f777891e71282b27a6c2cc3a3280a4646517722b33067fd",
+    "style": "white-geometric-monoline",
+    "variant": "monoline"
+  },
+  "icons": [
+    {
+      "id": "icons.candidate.data-ai.r07i15",
+      "cell": [
+        0,
+        0
+      ],
+      "crop_rgba_sha256": "a964bda2d57665784103a0ebf5af99c47502034f12b9bb3a7b601bdc9a5dfc73",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1243,
+          616,
+          50,
+          104
+        ],
+        "region": [
+          1243,
+          607,
+          50,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i16",
+      "cell": [
+        1,
+        0
+      ],
+      "crop_rgba_sha256": "c49030279b1ea1ec8ba2937aa28a04f2d7980b44ad3b068ff5da3ca37b522022",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1316,
+          613,
+          50,
+          107
+        ],
+        "region": [
+          1316,
+          607,
+          50,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i17",
+      "cell": [
+        2,
+        0
+      ],
+      "crop_rgba_sha256": "208e07cf6ad59739f60c803d2a58e020d84fe79def892ff355f5194e58e571cd",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1373,
+          613,
+          53,
+          104
+        ],
+        "region": [
+          1373,
+          607,
+          53,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i18",
+      "cell": [
+        3,
+        0
+      ],
+      "crop_rgba_sha256": "595c1bbaf5ff73197d2ca658b4fba416fd7018c3dca0a94d315366a0f9ecce2c",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1447,
+          612,
+          54,
+          106
+        ],
+        "region": [
+          1447,
+          607,
+          54,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i19",
+      "cell": [
+        4,
+        0
+      ],
+      "crop_rgba_sha256": "c9ea69622ac9630041de713774b5793440bf321cb62ea0c929eb180f7490277a",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1523,
+          613,
+          58,
+          107
+        ],
+        "region": [
+          1523,
+          607,
+          58,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i20",
+      "cell": [
+        5,
+        0
+      ],
+      "crop_rgba_sha256": "207f48b26db34a5115aba2c485f629330fc41cde78d623d4f736abb097d333f1",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1608,
+          613,
+          47,
+          108
+        ],
+        "region": [
+          1608,
+          607,
+          47,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i21",
+      "cell": [
+        6,
+        0
+      ],
+      "crop_rgba_sha256": "50c0489eb2245fd705039c0bd82e5bac37f898037c68a4b6c3b0a5b649f0557f",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1681,
+          614,
+          49,
+          106
+        ],
+        "region": [
+          1680,
+          607,
+          50,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i22",
+      "cell": [
+        7,
+        0
+      ],
+      "crop_rgba_sha256": "ef14d78ce624cd415480f132484cf4c8c526d0886bae882571584610b391599c",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1759,
+          613,
+          51,
+          109
+        ],
+        "region": [
+          1759,
+          607,
+          51,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i23",
+      "cell": [
+        8,
+        0
+      ],
+      "crop_rgba_sha256": "c5c5ba682af38c79abedc15960067821b13e97711557a055bc7829e438b9ee85",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1840,
+          614,
+          54,
+          107
+        ],
+        "region": [
+          1839,
+          607,
+          55,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i24",
+      "cell": [
+        9,
+        0
+      ],
+      "crop_rgba_sha256": "5bc2c71a1cd7190790a8dee603c992c4f219e938ac4cbbc59659f4d0bcb35374",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          1926,
+          614,
+          53,
+          105
+        ],
+        "region": [
+          1926,
+          607,
+          54,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i25",
+      "cell": [
+        10,
+        0
+      ],
+      "crop_rgba_sha256": "a4b999882e7620a98dffa10bc50544ff3f8cf8476207388d593bf44d10ea4b46",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2014,
+          612,
+          50,
+          51
+        ],
+        "region": [
+          2013,
+          607,
+          51,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.data-ai.r07i26",
+      "cell": [
+        11,
+        0
+      ],
+      "crop_rgba_sha256": "ee82446127d95dd1bab0b03a1de002fce7e3031993e33857a33f5007ea61d7d8",
+      "source": {
+        "file": "monoline_data_and_ai_icon_atlas.png",
+        "bbox": [
+          2100,
+          613,
+          49,
+          109
+        ],
+        "region": [
+          2100,
+          607,
+          49,
+          117
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    }
+  ]
+}

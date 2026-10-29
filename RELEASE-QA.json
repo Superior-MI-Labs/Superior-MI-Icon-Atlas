@@ -1,0 +1,34 @@
+{
+  "release": "v0.5.0",
+  "github_published": false,
+  "derived_from": "v0.4.0",
+  "total_icons": 2073,
+  "sheets": 20,
+  "reviewed": 734,
+  "newly_reviewed": 685,
+  "unreviewed": 1339,
+  "reviewed_by_domain": {
+    "data-ai": 90,
+    "developer-tools": 89,
+    "files-media": 88,
+    "hardware": 88,
+    "network-cloud": 96,
+    "programming": 188,
+    "ui-controls": 95
+  },
+  "source_atlases_changed": 0,
+  "geometry_and_crop_changes": 0,
+  "root_manifest_bytes": 5322,
+  "test_evidence": {
+    "unit_tests": "5 passed",
+    "deep_png_integrity": "PASS (all 2073)",
+    "browser_search_vm": "PASS",
+    "js_syntax": "PASS",
+    "raw_texture_sha_comparison_with_v0.4.0": "all same"
+  },
+  "limitations": [
+    "Search labels are visually reviewed, not proven artistically or legally cleared.",
+    "Browser end-to-end interactions not qualified on Linux host.",
+    "Live GitHub main not updated by this package."
+  ]
+}

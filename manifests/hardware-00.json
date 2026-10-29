@@ -1,0 +1,7283 @@
+{
+  "schema": "smi-icon-atlas-sheet/1",
+  "sheet": {
+    "id": "icons.monoline.hardware-00.24x8",
+    "path": "sheets/hardware-00/atlas.png",
+    "foreground_mask": "sheets/hardware-00/atlas.png",
+    "black_outline": "sheets/hardware-00/black-outline.png",
+    "preview": "sheets/hardware-00/inspection-preview.png",
+    "width_px": 2304,
+    "height_px": 768,
+    "cell_px": 96,
+    "columns": 24,
+    "rows": 8,
+    "domain": "hardware",
+    "sha256": "742b0b92959529f0074e0a37c2fe5dd99f902b85ca21f899e3361d1f2b4c5696",
+    "style": "white-geometric-monoline",
+    "variant": "monoline"
+  },
+  "icons": [
+    {
+      "id": "icons.candidate.hardware.r00i00",
+      "cell": [
+        0,
+        0
+      ],
+      "crop_rgba_sha256": "c67fcc44107f811c905cc488a3e6c2a761c2ae9508c7d631729424726d5334ba",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          42,
+          43,
+          57,
+          61
+        ],
+        "region": [
+          41,
+          0,
+          58,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Microchip",
+        "tags": [
+          "chip",
+          "cpu",
+          "processor",
+          "integrated circuit"
+        ],
+        "subjects": [
+          "hardware.processing"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i01",
+      "cell": [
+        1,
+        0
+      ],
+      "crop_rgba_sha256": "1ee030c9578f2d4336d8c06bc2d5b76853082c1a922ff0a5147ac69bb4d09224",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          118,
+          46,
+          64,
+          54
+        ],
+        "region": [
+          118,
+          0,
+          64,
+          110
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i02",
+      "cell": [
+        2,
+        0
+      ],
+      "crop_rgba_sha256": "9fa55a27c10d4186b21cdf52073b7e616f29d53a45b509c892c18e9ca018349c",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          200,
+          54,
+          64,
+          41
+        ],
+        "region": [
+          200,
+          0,
+          64,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Memory module",
+        "tags": [
+          "ram",
+          "memory",
+          "module"
+        ],
+        "subjects": [
+          "hardware.memory"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i03",
+      "cell": [
+        3,
+        0
+      ],
+      "crop_rgba_sha256": "9f5f24993d8b835f662a83fdb22849b87e7dd45ea8b973b7042c68ea6560df24",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          284,
+          43,
+          60,
+          61
+        ],
+        "region": [
+          284,
+          0,
+          60,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Microchip",
+        "tags": [
+          "microchip",
+          "processor",
+          "cpu",
+          "integrated circuit"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": "hardware.components.microchip",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i04",
+      "cell": [
+        4,
+        0
+      ],
+      "crop_rgba_sha256": "ac75415d5df5aa3b64fc7d4556e9797b54805f8aadee0d5821ea3e99440f8973",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          364,
+          44,
+          62,
+          60
+        ],
+        "region": [
+          364,
+          0,
+          62,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Circuit board",
+        "tags": [
+          "circuit board",
+          "pcb",
+          "electronics",
+          "motherboard"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": "hardware.components.circuit-board",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i05",
+      "cell": [
+        5,
+        0
+      ],
+      "crop_rgba_sha256": "b32205cbaeb206073fdf232fd9c59b47f674e4509377febcaaa10176d469bd92",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          451,
+          44,
+          54,
+          59
+        ],
+        "region": [
+          451,
+          0,
+          54,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Circuit traces",
+        "tags": [
+          "circuit traces",
+          "wires",
+          "pcb",
+          "electronics"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": "hardware.components.circuit-traces",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i06",
+      "cell": [
+        6,
+        0
+      ],
+      "crop_rgba_sha256": "5221954fbda786f815d1eceecadf6f3293b1d95d3d97effce97502bc54676a63",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          529,
+          44,
+          58,
+          59
+        ],
+        "region": [
+          529,
+          0,
+          58,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Resistor",
+        "tags": [
+          "resistor",
+          "electrical component",
+          "ohm",
+          "electronics"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": "hardware.components.resistor",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i07",
+      "cell": [
+        7,
+        0
+      ],
+      "crop_rgba_sha256": "b4bfa153dccb53999d29505fca6ad4574589fa3d5e1edd8fcb1c733f41500a14",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          621,
+          42,
+          37,
+          64
+        ],
+        "region": [
+          621,
+          0,
+          37,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Electronic component",
+        "tags": [
+          "electronics",
+          "component",
+          "capacitor"
+        ],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i08",
+      "cell": [
+        8,
+        0
+      ],
+      "crop_rgba_sha256": "8037513d400d1dfd6843efa978ba7ce788d0c6fb76840cecfa37c33a55c9bf7b",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          691,
+          56,
+          61,
+          34
+        ],
+        "region": [
+          691,
+          0,
+          61,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Inductor",
+        "tags": [
+          "inductor",
+          "coil",
+          "electronic component"
+        ],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i09",
+      "cell": [
+        9,
+        0
+      ],
+      "crop_rgba_sha256": "7e828db110f7c868750a6a6e966be5a72bb6040e634a98895b353b7429d94f74",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          771,
+          52,
+          62,
+          44
+        ],
+        "region": [
+          771,
+          0,
+          62,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Diode",
+        "tags": [
+          "diode",
+          "electronic component"
+        ],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i10",
+      "cell": [
+        10,
+        0
+      ],
+      "crop_rgba_sha256": "b38b8171519792f536586e9efb29b6bb99e70a11b7e9974a5643b1614106af4a",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          851,
+          44,
+          65,
+          62
+        ],
+        "region": [
+          851,
+          0,
+          65,
+          110
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i11",
+      "cell": [
+        11,
+        0
+      ],
+      "crop_rgba_sha256": "cf68e013ea3dc078ad0e646adcd4476df976af3ef27d0c592d2c88be25328791",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          935,
+          46,
+          65,
+          56
+        ],
+        "region": [
+          935,
+          0,
+          65,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Operational amplifier",
+        "tags": [
+          "amplifier",
+          "op amp",
+          "circuit"
+        ],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": null,
+        "aliases": [],
+        "evidence": "visual-inspection-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i12",
+      "cell": [
+        12,
+        0
+      ],
+      "crop_rgba_sha256": "b65d4460fb571669edaa39d1cd4c53df384ae82d4e8e5bf55a17d7e2dcdfd972",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1024,
+          44,
+          49,
+          61
+        ],
+        "region": [
+          1024,
+          0,
+          49,
+          110
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i13",
+      "cell": [
+        13,
+        0
+      ],
+      "crop_rgba_sha256": "5c6473878307dcf87fc0b774be13370adf8e8e9bcbaf5f8a124a1570fe868adc",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1099,
+          44,
+          60,
+          60
+        ],
+        "region": [
+          1099,
+          0,
+          60,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Microchip",
+        "tags": [
+          "microchip",
+          "processor",
+          "cpu",
+          "integrated circuit"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": "hardware.components.microchip",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i14",
+      "cell": [
+        14,
+        0
+      ],
+      "crop_rgba_sha256": "3973931a651abfd6a0bb5c6fd4982de569ed49f9ed6b0efca9c8c6f7344e24d5",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1181,
+          45,
+          60,
+          59
+        ],
+        "region": [
+          1181,
+          0,
+          60,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Microchip",
+        "tags": [
+          "microchip",
+          "processor",
+          "cpu",
+          "integrated circuit"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": "hardware.components.microchip",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i15",
+      "cell": [
+        15,
+        0
+      ],
+      "crop_rgba_sha256": "95f126a83db76318e6810a907c2f46e65df4d930de43e928f437795efb2d90e8",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1261,
+          48,
+          64,
+          52
+        ],
+        "region": [
+          1261,
+          0,
+          64,
+          110
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i16",
+      "cell": [
+        16,
+        0
+      ],
+      "crop_rgba_sha256": "202bb4fb06f8c0b8cedd9aec205c84efd3185a05d550c79490a6b05c81e362d9",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1344,
+          43,
+          61,
+          62
+        ],
+        "region": [
+          1344,
+          0,
+          61,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cooling fan",
+        "tags": [
+          "cooling fan",
+          "fan",
+          "airflow",
+          "cooling",
+          "computer"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.cooling"
+        ],
+        "concept_id": "hardware.cooling.cooling-fan",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i17",
+      "cell": [
+        17,
+        0
+      ],
+      "crop_rgba_sha256": "a0b22364308fbfdebbe3631b0c543c4fdeadb2d2b3215a029386d81c798fa358",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1424,
+          45,
+          62,
+          59
+        ],
+        "region": [
+          1424,
+          0,
+          62,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Heatsink",
+        "tags": [
+          "heatsink",
+          "cooling",
+          "radiator",
+          "fins"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.cooling"
+        ],
+        "concept_id": "hardware.cooling.heatsink",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i18",
+      "cell": [
+        18,
+        0
+      ],
+      "crop_rgba_sha256": "0dec9e36c29d92ed48f3e09299a8da49820dffc38dd97bc73b91d40c260bce77",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1519,
+          42,
+          37,
+          65
+        ],
+        "region": [
+          1519,
+          0,
+          37,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Thermometer",
+        "tags": [
+          "thermometer",
+          "temperature",
+          "heat",
+          "sensor"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.sensors"
+        ],
+        "concept_id": "hardware.sensors.thermometer",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i19",
+      "cell": [
+        19,
+        0
+      ],
+      "crop_rgba_sha256": "88105d54a3404cfe177445a8f6247af22e73aaa5d59a5bbeadbd90b72406857a",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1598,
+          43,
+          37,
+          63
+        ],
+        "region": [
+          1598,
+          0,
+          38,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Battery",
+        "tags": [
+          "battery",
+          "power",
+          "charge",
+          "energy"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.power"
+        ],
+        "concept_id": "hardware.power.battery",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i20",
+      "cell": [
+        20,
+        0
+      ],
+      "crop_rgba_sha256": "a7edd0b595e2f382281366822b17a5908e29e88333f37d78fa6714249c198024",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1667,
+          55,
+          62,
+          40
+        ],
+        "region": [
+          1667,
+          0,
+          62,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Battery level",
+        "tags": [
+          "battery level",
+          "charge",
+          "energy",
+          "power"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.power"
+        ],
+        "concept_id": "hardware.power.battery-level",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i21",
+      "cell": [
+        21,
+        0
+      ],
+      "crop_rgba_sha256": "5a0aea2916a60f16f9f5d0867497af2dfa4486dc32cbc06e3e0316a97f2b26e6",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1746,
+          55,
+          64,
+          40
+        ],
+        "region": [
+          1746,
+          0,
+          64,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Battery charging",
+        "tags": [
+          "battery charging",
+          "electricity",
+          "charge",
+          "power"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.power"
+        ],
+        "concept_id": "hardware.power.battery-charging",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i22",
+      "cell": [
+        22,
+        0
+      ],
+      "crop_rgba_sha256": "2c0a83617ba4ea2a4c3a312aa1c870d6c404df66eb2f7eeef2fe565c3b372451",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1834,
+          44,
+          48,
+          62
+        ],
+        "region": [
+          1834,
+          0,
+          48,
+          110
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i23",
+      "cell": [
+        23,
+        0
+      ],
+      "crop_rgba_sha256": "f65496309e40236c3bd58e5c5cabf0bca40f492f1083fd8136bcc1b006ad9fbe",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1918,
+          44,
+          48,
+          63
+        ],
+        "region": [
+          1918,
+          0,
+          48,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Plug",
+        "tags": [
+          "plug",
+          "electric",
+          "power",
+          "connector"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.power"
+        ],
+        "concept_id": "hardware.power.plug",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i24",
+      "cell": [
+        0,
+        1
+      ],
+      "crop_rgba_sha256": "de4282c57da34ef4dc9befe6188d681fdc9c8efd05f000dccd4456df59b9472b",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1993,
+          46,
+          59,
+          60
+        ],
+        "region": [
+          1993,
+          0,
+          59,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Power socket",
+        "tags": [
+          "power socket",
+          "electrical outlet",
+          "ac power"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.power"
+        ],
+        "concept_id": "hardware.power.power-socket",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r00i25",
+      "cell": [
+        1,
+        1
+      ],
+      "crop_rgba_sha256": "7e5e14c481dace513222a2f92f025024b2e67db17eedcefec6674c181be37013",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          2074,
+          43,
+          55,
+          62
+        ],
+        "region": [
+          2074,
+          0,
+          56,
+          110
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Power",
+        "tags": [
+          "power",
+          "on off",
+          "switch",
+          "shutdown"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.power"
+        ],
+        "concept_id": "hardware.power.power",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i00",
+      "cell": [
+        2,
+        1
+      ],
+      "crop_rgba_sha256": "9f8022bddeba02276dcef08f96201d4b4ee9cb8b1c482e48dd4a5f92afcf7fb5",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          45,
+          127,
+          53,
+          66
+        ],
+        "region": [
+          45,
+          110,
+          53,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Plug",
+        "tags": [
+          "plug",
+          "electric",
+          "power",
+          "connector"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.power"
+        ],
+        "concept_id": "hardware.power.plug",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i01",
+      "cell": [
+        3,
+        1
+      ],
+      "crop_rgba_sha256": "cd4db415037c99f62e4fbf795d5a5de274a3b3ed700923200900cc5fa55f685c",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          118,
+          127,
+          64,
+          66
+        ],
+        "region": [
+          118,
+          110,
+          64,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Power strip",
+        "tags": [
+          "power strip",
+          "surge protector",
+          "outlet strip"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.power"
+        ],
+        "concept_id": "hardware.power.power-strip",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i02",
+      "cell": [
+        4,
+        1
+      ],
+      "crop_rgba_sha256": "58655e90e9250d32ad5436e470141a3a25838cca268411060163d016cf3415b3",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          212,
+          127,
+          40,
+          66
+        ],
+        "region": [
+          211,
+          110,
+          41,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "USB",
+        "tags": [
+          "usb",
+          "universal serial bus",
+          "usb connector"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.connectors"
+        ],
+        "concept_id": "hardware.connectors.usb",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i03",
+      "cell": [
+        5,
+        1
+      ],
+      "crop_rgba_sha256": "96a8823ec9014fb453b373e48938429863b759af2f888fb47c8244a530d142f9",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          282,
+          140,
+          63,
+          39
+        ],
+        "region": [
+          282,
+          110,
+          64,
+          87
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i04",
+      "cell": [
+        6,
+        1
+      ],
+      "crop_rgba_sha256": "52dcdacbb85867bf5a73896920f661633f1edd8cadb7ab1a17f084e06a4a7750",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          364,
+          144,
+          62,
+          32
+        ],
+        "region": [
+          364,
+          110,
+          62,
+          87
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i05",
+      "cell": [
+        7,
+        1
+      ],
+      "crop_rgba_sha256": "7680fefe54ec4141ee5fb5c59949903375815000bd6b5087e31f127be677d636",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          445,
+          142,
+          63,
+          35
+        ],
+        "region": [
+          445,
+          110,
+          63,
+          87
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i06",
+      "cell": [
+        8,
+        1
+      ],
+      "crop_rgba_sha256": "816912939f843268a06c84785754600416c1a91beea15f27e13be0fce0157b41",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          526,
+          142,
+          64,
+          34
+        ],
+        "region": [
+          526,
+          110,
+          64,
+          87
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i07",
+      "cell": [
+        9,
+        1
+      ],
+      "crop_rgba_sha256": "a77f04955f674792694b8afc16cded033701d88a67b9aee2061dcaf85f4d3429",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          608,
+          131,
+          64,
+          58
+        ],
+        "region": [
+          608,
+          110,
+          64,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Ethernet port",
+        "tags": [
+          "ethernet port",
+          "network jack",
+          "rj45",
+          "lan"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.connectors"
+        ],
+        "concept_id": "hardware.connectors.ethernet-port",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i08",
+      "cell": [
+        10,
+        1
+      ],
+      "crop_rgba_sha256": "35f389405f36b538b67e371cfc9808fe1ea4411296771f53c12aa4c530565826",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          692,
+          130,
+          59,
+          62
+        ],
+        "region": [
+          692,
+          110,
+          59,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Audio jack",
+        "tags": [
+          "audio jack",
+          "3.5mm",
+          "headphone connector"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.connectors"
+        ],
+        "concept_id": "hardware.connectors.audio-jack",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i09",
+      "cell": [
+        11,
+        1
+      ],
+      "crop_rgba_sha256": "e7bf9653d0feabc756ac8fcf9a98450ec6bc99de6e30db86a1ffd4431cd8a6a8",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          787,
+          128,
+          30,
+          66
+        ],
+        "region": [
+          787,
+          110,
+          31,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Jack plug",
+        "tags": [
+          "jack plug",
+          "audio",
+          "headphone connector"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.connectors"
+        ],
+        "concept_id": "hardware.connectors.jack-plug",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i10",
+      "cell": [
+        12,
+        1
+      ],
+      "crop_rgba_sha256": "ee4230b672d389aee356f25576e9860b1b41fcebf4e2dc57e844909952644bdc",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          851,
+          142,
+          66,
+          38
+        ],
+        "region": [
+          851,
+          110,
+          66,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Video connector",
+        "tags": [
+          "video connector",
+          "vga",
+          "display connector"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.connectors"
+        ],
+        "concept_id": "hardware.connectors.video-connector",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i11",
+      "cell": [
+        13,
+        1
+      ],
+      "crop_rgba_sha256": "89f307570d4b77bba385013e66f80b22c851bd70e43bd9ac78ea8c8943be0529",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          935,
+          142,
+          63,
+          38
+        ],
+        "region": [
+          935,
+          110,
+          63,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Video connector",
+        "tags": [
+          "video connector",
+          "vga",
+          "display connector"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.connectors"
+        ],
+        "concept_id": "hardware.connectors.video-connector",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i12",
+      "cell": [
+        14,
+        1
+      ],
+      "crop_rgba_sha256": "60b23505e17136a5e1512352501ed97c186d2c31c675159a030831cfab03137f",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1017,
+          142,
+          64,
+          38
+        ],
+        "region": [
+          1017,
+          110,
+          64,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Video connector",
+        "tags": [
+          "video connector",
+          "vga",
+          "display connector"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.connectors"
+        ],
+        "concept_id": "hardware.connectors.video-connector",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i13",
+      "cell": [
+        15,
+        1
+      ],
+      "crop_rgba_sha256": "443d342b2117ad989151f6db80243bbe67bf60e5829a66e8f7479a9d42dc0eca",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1103,
+          127,
+          52,
+          67
+        ],
+        "region": [
+          1103,
+          110,
+          52,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cable",
+        "tags": [
+          "cable",
+          "wire",
+          "connection",
+          "lead"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.connectors"
+        ],
+        "concept_id": "hardware.connectors.cable",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i14",
+      "cell": [
+        16,
+        1
+      ],
+      "crop_rgba_sha256": "b84d74f69e4f67d0409ad4d041478c8c4ad54a7f7465ea3fedfb0f5b4a205e92",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1180,
+          131,
+          62,
+          60
+        ],
+        "region": [
+          1180,
+          110,
+          62,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Ring",
+        "tags": [
+          "ring",
+          "circle",
+          "connector socket"
+        ],
+        "aliases": [],
+        "subjects": [
+          "geometry.shapes"
+        ],
+        "concept_id": "geometry.shapes.ring",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i15",
+      "cell": [
+        17,
+        1
+      ],
+      "crop_rgba_sha256": "2294610ec94ecf92e16c61ca947dfb39f487ec1925f94c49e1ee864b8beb6448",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1264,
+          131,
+          58,
+          60
+        ],
+        "region": [
+          1264,
+          110,
+          58,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Share",
+        "tags": [
+          "share",
+          "network nodes",
+          "connection"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.links"
+        ],
+        "concept_id": "network.links.share",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i16",
+      "cell": [
+        18,
+        1
+      ],
+      "crop_rgba_sha256": "bde102bd4986cc91f0f68d50120f44ee2b0fb09be7c9692869841b06253bb5dc",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1345,
+          130,
+          59,
+          59
+        ],
+        "region": [
+          1345,
+          110,
+          59,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Hierarchy",
+        "tags": [
+          "hierarchy",
+          "network topology",
+          "tree",
+          "connected nodes"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.topology"
+        ],
+        "concept_id": "network.topology.hierarchy",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i17",
+      "cell": [
+        19,
+        1
+      ],
+      "crop_rgba_sha256": "c43edaf8dd934ae5b4ced07e71318b1b4433764e507baf92f83062953ca98c69",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1426,
+          130,
+          59,
+          60
+        ],
+        "region": [
+          1426,
+          110,
+          59,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Network nodes",
+        "tags": [
+          "network nodes",
+          "topology",
+          "graph",
+          "connections"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.topology"
+        ],
+        "concept_id": "network.topology.network-nodes",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i18",
+      "cell": [
+        20,
+        1
+      ],
+      "crop_rgba_sha256": "62c51d89c22a614a648ccf3d385ccdbf4993b7fb605d9b9750990484bc1cf3f1",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1507,
+          131,
+          57,
+          57
+        ],
+        "region": [
+          1507,
+          110,
+          57,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Link",
+        "tags": [
+          "link",
+          "chain",
+          "connection",
+          "hyperlink"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.links"
+        ],
+        "concept_id": "network.links.link",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i19",
+      "cell": [
+        21,
+        1
+      ],
+      "crop_rgba_sha256": "b4db29a9d114705bb365b33cc0306bcaeca9ffb6bdafa560fd5843dbe03c8d01",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1585,
+          136,
+          64,
+          52
+        ],
+        "region": [
+          1585,
+          110,
+          64,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Wi-Fi",
+        "tags": [
+          "wi-fi",
+          "wireless",
+          "network",
+          "wifi"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.wireless"
+        ],
+        "concept_id": "network.wireless.wi-fi",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i20",
+      "cell": [
+        22,
+        1
+      ],
+      "crop_rgba_sha256": "13b806d98239ab166a4ed03db4ddbe78c984d30490e2ba76cfcdd50e03242eaa",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1671,
+          127,
+          53,
+          63
+        ],
+        "region": [
+          1671,
+          110,
+          53,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cellular tower",
+        "tags": [
+          "cellular tower",
+          "antenna",
+          "radio tower",
+          "signal"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.wireless"
+        ],
+        "concept_id": "network.wireless.cellular-tower",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i21",
+      "cell": [
+        23,
+        1
+      ],
+      "crop_rgba_sha256": "807bb5242f64078355a5772dacc6ec4a79585c8413938419a6f555aae7040709",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1749,
+          132,
+          76,
+          59
+        ],
+        "region": [
+          1749,
+          110,
+          76,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Wireless router",
+        "tags": [
+          "wireless router",
+          "wifi",
+          "router",
+          "access point",
+          "antenna"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.hardware"
+        ],
+        "concept_id": "network.hardware.wireless-router",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i22",
+      "cell": [
+        0,
+        2
+      ],
+      "crop_rgba_sha256": "86eacfb732faa646397d1a5875a973d9b34f8e19eb60fd424c68e2e1f721efc6",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1864,
+          141,
+          104,
+          46
+        ],
+        "region": [
+          1864,
+          110,
+          104,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Network switch",
+        "tags": [
+          "network switch",
+          "switch",
+          "network equipment"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.hardware"
+        ],
+        "concept_id": "network.hardware.network-switch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i23",
+      "cell": [
+        1,
+        2
+      ],
+      "crop_rgba_sha256": "804b78150798fbd4db56387662ac24c675d0e88c26fdd6771eac34e6c690ea2e",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1988,
+          137,
+          69,
+          53
+        ],
+        "region": [
+          1987,
+          110,
+          70,
+          87
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r01i24",
+      "cell": [
+        2,
+        2
+      ],
+      "crop_rgba_sha256": "16c05f382a1d6a7276dd6f76ec939420982a14a9d87b34973bf38c6b3cf630a5",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          2074,
+          129,
+          55,
+          63
+        ],
+        "region": [
+          2074,
+          110,
+          55,
+          87
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Server rack",
+        "tags": [
+          "server rack",
+          "datacenter",
+          "hosting",
+          "servers"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.servers"
+        ],
+        "concept_id": "hardware.servers.server-rack",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i00",
+      "cell": [
+        3,
+        2
+      ],
+      "crop_rgba_sha256": "33aeb86b27a255ab4b27438542dd06dd5fce81183e3840141621b2685f7f9d51",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          47,
+          217,
+          49,
+          70
+        ],
+        "region": [
+          47,
+          197,
+          49,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Server cabinet",
+        "tags": [
+          "server cabinet",
+          "rack",
+          "server",
+          "datacenter"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.servers"
+        ],
+        "concept_id": "hardware.servers.server-cabinet",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i01",
+      "cell": [
+        4,
+        2
+      ],
+      "crop_rgba_sha256": "7e31ec3e33c1a8f0a76984fe28d1a98f68654d9f37698792731a0555e359d8bd",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          125,
+          218,
+          52,
+          68
+        ],
+        "region": [
+          125,
+          197,
+          53,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Server rack",
+        "tags": [
+          "server rack",
+          "servers",
+          "hosting",
+          "datacenter"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.servers"
+        ],
+        "concept_id": "hardware.servers.server-rack",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i02",
+      "cell": [
+        5,
+        2
+      ],
+      "crop_rgba_sha256": "9738bc483914bddbf4afae3b709d08fcf20a090c66eb408c792bd0d063d71ee6",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          201,
+          224,
+          62,
+          58
+        ],
+        "region": [
+          201,
+          197,
+          62,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Circuit board",
+        "tags": [
+          "circuit board",
+          "pcb",
+          "electronics",
+          "component"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.components"
+        ],
+        "concept_id": "hardware.components.circuit-board",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i03",
+      "cell": [
+        6,
+        2
+      ],
+      "crop_rgba_sha256": "2f7c1beef4fd51853fa03ad0dc41ef4797f4ec3a3ae5c5efa171b8ea088fe3d5",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          287,
+          219,
+          54,
+          66
+        ],
+        "region": [
+          287,
+          197,
+          54,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Hard drive",
+        "tags": [
+          "hard drive",
+          "hdd",
+          "disk",
+          "storage"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.storage"
+        ],
+        "concept_id": "hardware.storage.hard-drive",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i04",
+      "cell": [
+        7,
+        2
+      ],
+      "crop_rgba_sha256": "b614641b9a61aec3a45831015d18678ae90dce625ed59231461e8c65fb7ac570",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          368,
+          218,
+          54,
+          67
+        ],
+        "region": [
+          368,
+          197,
+          54,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "SSD",
+        "tags": [
+          "ssd",
+          "solid state drive",
+          "storage",
+          "disk"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.storage"
+        ],
+        "concept_id": "hardware.storage.ssd",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i05",
+      "cell": [
+        8,
+        2
+      ],
+      "crop_rgba_sha256": "dc1748eec80e1f3a92621638933b038a34ff9e8c72b4ec047e62046e8e00ce19",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          451,
+          218,
+          53,
+          67
+        ],
+        "region": [
+          451,
+          197,
+          53,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Storage drive",
+        "tags": [
+          "storage drive",
+          "disk",
+          "storage",
+          "hdd"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.storage"
+        ],
+        "concept_id": "hardware.storage.storage-drive",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i06",
+      "cell": [
+        9,
+        2
+      ],
+      "crop_rgba_sha256": "8f05324788fa756626b2ace81ed617df9b5e42c30b37d24d4e859a7e72d705cb",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          527,
+          217,
+          65,
+          66
+        ],
+        "region": [
+          527,
+          197,
+          65,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "USB flash drive",
+        "tags": [
+          "usb flash drive",
+          "thumb drive",
+          "usb stick",
+          "storage"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.storage"
+        ],
+        "concept_id": "hardware.storage.usb-flash-drive",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i07",
+      "cell": [
+        10,
+        2
+      ],
+      "crop_rgba_sha256": "76fdfb99a9b451c4004d71949c1b093b49f045cebf0a1655d0a190baef48e34b",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          618,
+          222,
+          50,
+          61
+        ],
+        "region": [
+          618,
+          197,
+          50,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Memory card",
+        "tags": [
+          "memory card",
+          "sd card",
+          "storage",
+          "flash"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.storage"
+        ],
+        "concept_id": "hardware.storage.memory-card",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i08",
+      "cell": [
+        11,
+        2
+      ],
+      "crop_rgba_sha256": "fe2e75fa0bd663b938db962dae5e4246b54ee1660a94c157917b0bb2817b4ce8",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          702,
+          235,
+          39,
+          46
+        ],
+        "region": [
+          702,
+          197,
+          39,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Memory card",
+        "tags": [
+          "memory card",
+          "sd card",
+          "storage",
+          "flash"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.storage"
+        ],
+        "concept_id": "hardware.storage.memory-card",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i09",
+      "cell": [
+        12,
+        2
+      ],
+      "crop_rgba_sha256": "4dbe55fdfbba9c7ec09ff59ebffd63adbab417619b4d80433630f0cb737472a0",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          772,
+          224,
+          60,
+          60
+        ],
+        "region": [
+          772,
+          197,
+          60,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Disc",
+        "tags": [
+          "disc",
+          "optical media",
+          "cd",
+          "dvd"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.storage"
+        ],
+        "concept_id": "hardware.storage.disc",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i10",
+      "cell": [
+        13,
+        2
+      ],
+      "crop_rgba_sha256": "86c357ab7b269f518a492544386235e5a2d13ea7c643c3bf111486fc0cce600f",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          852,
+          231,
+          65,
+          51
+        ],
+        "region": [
+          852,
+          197,
+          65,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cloud storage",
+        "tags": [
+          "cloud storage",
+          "secure cloud",
+          "online storage"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.cloud"
+        ],
+        "concept_id": "network.cloud.cloud-storage",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i11",
+      "cell": [
+        14,
+        2
+      ],
+      "crop_rgba_sha256": "834cae2a584ceed3084258368b5a243922950641781d6c31ba86e19fdaae091a",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          940,
+          223,
+          53,
+          64
+        ],
+        "region": [
+          940,
+          197,
+          53,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Database",
+        "tags": [
+          "database",
+          "sql",
+          "db",
+          "data storage"
+        ],
+        "aliases": [],
+        "subjects": [
+          "data.storage"
+        ],
+        "concept_id": "data.storage.database",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i12",
+      "cell": [
+        15,
+        2
+      ],
+      "crop_rgba_sha256": "5592d8a1f979f3c62d1fab96c4141933c5717e56fa8688bc23218af97d055c60",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1017,
+          221,
+          63,
+          66
+        ],
+        "region": [
+          1017,
+          197,
+          64,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Keyboard",
+        "tags": [
+          "keyboard",
+          "keys",
+          "input device",
+          "typing"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.input"
+        ],
+        "concept_id": "hardware.input.keyboard",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i13",
+      "cell": [
+        16,
+        2
+      ],
+      "crop_rgba_sha256": "93527f2ce94baa1b6ff5f3dd7d2da2ed025537d310e48edff4c5c32d07797352",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1100,
+          231,
+          64,
+          51
+        ],
+        "region": [
+          1100,
+          197,
+          64,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cloud download",
+        "tags": [
+          "cloud download",
+          "download",
+          "cloud storage"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.cloud"
+        ],
+        "concept_id": "network.cloud.cloud-download",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i14",
+      "cell": [
+        17,
+        2
+      ],
+      "crop_rgba_sha256": "56d042e2daef5b4a09c56a36851dfe3e7bb04c6f8e0c61adfd9d66284068ee2b",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1183,
+          231,
+          64,
+          51
+        ],
+        "region": [
+          1183,
+          197,
+          64,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cloud upload",
+        "tags": [
+          "cloud upload",
+          "upload",
+          "cloud storage"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.cloud"
+        ],
+        "concept_id": "network.cloud.cloud-upload",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i15",
+      "cell": [
+        18,
+        2
+      ],
+      "crop_rgba_sha256": "26e5cc3257f42d722240865bb530d0077c3d717f1953d54526d9237d38e86c58",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1266,
+          231,
+          63,
+          51
+        ],
+        "region": [
+          1266,
+          197,
+          63,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Cloud upload",
+        "tags": [
+          "cloud upload",
+          "upload",
+          "cloud storage"
+        ],
+        "aliases": [],
+        "subjects": [
+          "network.cloud"
+        ],
+        "concept_id": "network.cloud.cloud-upload",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i16",
+      "cell": [
+        19,
+        2
+      ],
+      "crop_rgba_sha256": "eeec8822a755f01cf6cff22975062177b7a536f45da08e4d69ca413b16101806",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1349,
+          223,
+          58,
+          58
+        ],
+        "region": [
+          1349,
+          197,
+          58,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Server rack",
+        "tags": [
+          "server rack",
+          "hosting",
+          "servers",
+          "datacenter"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.servers"
+        ],
+        "concept_id": "hardware.servers.server-rack",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i17",
+      "cell": [
+        20,
+        2
+      ],
+      "crop_rgba_sha256": "bf26b9ee6fd27293c4e4ebc46e29c398a074ad8e07f8cfa785cc0ff2ed34e373",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1430,
+          225,
+          53,
+          55
+        ],
+        "region": [
+          1430,
+          197,
+          53,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Sync",
+        "tags": [
+          "sync",
+          "synchronize",
+          "refresh",
+          "arrows"
+        ],
+        "aliases": [],
+        "subjects": [
+          "ui.actions"
+        ],
+        "concept_id": "ui.actions.sync",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i18",
+      "cell": [
+        21,
+        2
+      ],
+      "crop_rgba_sha256": "9afbc07db67171e29313916e2fb0362243e9a1f13e0a0a173b27dd4ba78358f8",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1518,
+          212,
+          44,
+          78
+        ],
+        "region": [
+          1518,
+          197,
+          44,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Phone",
+        "tags": [
+          "phone",
+          "mobile",
+          "smartphone",
+          "cellphone"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.devices"
+        ],
+        "concept_id": "hardware.devices.phone",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i19",
+      "cell": [
+        22,
+        2
+      ],
+      "crop_rgba_sha256": "be8877aea160edff58bd6904461b1d7fc634d2bd85337c31bc391db3ded6b683",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1592,
+          212,
+          60,
+          78
+        ],
+        "region": [
+          1592,
+          197,
+          60,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Tablet",
+        "tags": [
+          "tablet",
+          "touchscreen",
+          "tablet computer"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.devices"
+        ],
+        "concept_id": "hardware.devices.tablet",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i20",
+      "cell": [
+        23,
+        2
+      ],
+      "crop_rgba_sha256": "87ecd6f3e1689b9de7ff66968a66bbff6d59ccb0271eb421cde1c55027acaf49",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1678,
+          224,
+          94,
+          59
+        ],
+        "region": [
+          1678,
+          197,
+          94,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Laptop",
+        "tags": [
+          "laptop",
+          "notebook",
+          "portable computer"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.computers"
+        ],
+        "concept_id": "hardware.computers.laptop",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i21",
+      "cell": [
+        0,
+        3
+      ],
+      "crop_rgba_sha256": "b873cbdbe4a943246024b0ddf415173329fca195247acf92c7f3a96bc23207b9",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1798,
+          212,
+          94,
+          78
+        ],
+        "region": [
+          1798,
+          197,
+          94,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Monitor",
+        "tags": [
+          "monitor",
+          "screen",
+          "computer display",
+          "desktop"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.display"
+        ],
+        "concept_id": "hardware.display.monitor",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i22",
+      "cell": [
+        1,
+        3
+      ],
+      "crop_rgba_sha256": "721dbd488fb4d3baa47a8530fb07142fefcedd35006c2750413335b51550729e",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1920,
+          212,
+          48,
+          78
+        ],
+        "region": [
+          1920,
+          197,
+          48,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Desktop tower",
+        "tags": [
+          "desktop tower",
+          "pc",
+          "computer case",
+          "workstation"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.computers"
+        ],
+        "concept_id": "hardware.computers.desktop-tower",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r02i23",
+      "cell": [
+        2,
+        3
+      ],
+      "crop_rgba_sha256": "733ffac547c2952ba61b10c1d249f1880973f813ba252a01faba756fb003f679",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          2001,
+          222,
+          76,
+          66
+        ],
+        "region": [
+          2001,
+          197,
+          76,
+          97
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Monitor",
+        "tags": [
+          "monitor",
+          "screen",
+          "computer display",
+          "desktop"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.display"
+        ],
+        "concept_id": "hardware.display.monitor",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i00",
+      "cell": [
+        3,
+        3
+      ],
+      "crop_rgba_sha256": "ff76f3239769c4c6de6c908633e05d88cb590b6f6d98c3f1661a77f52859f10c",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          42,
+          318,
+          66,
+          54
+        ],
+        "region": [
+          42,
+          294,
+          66,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Monitor",
+        "tags": [
+          "monitor",
+          "screen",
+          "computer display",
+          "desktop"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.display"
+        ],
+        "concept_id": "hardware.display.monitor",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i01",
+      "cell": [
+        4,
+        3
+      ],
+      "crop_rgba_sha256": "305e5f589ab1c3cff90dbeeec00a69a1b123502d41dba4f875828938b9bb8759",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          127,
+          312,
+          63,
+          62
+        ],
+        "region": [
+          127,
+          294,
+          63,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Television",
+        "tags": [
+          "television",
+          "tv",
+          "display",
+          "screen"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.display"
+        ],
+        "concept_id": "hardware.display.television",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i02",
+      "cell": [
+        5,
+        3
+      ],
+      "crop_rgba_sha256": "b2b7a3b5474db0819d8afe1f5b0f5ec0bfc90e1f5127ece31be8a45732ea6735",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          210,
+          329,
+          61,
+          40
+        ],
+        "region": [
+          209,
+          294,
+          62,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i03",
+      "cell": [
+        6,
+        3
+      ],
+      "crop_rgba_sha256": "66be747bb0183d41a22ecc18eb6aabab4f138b760df748dd85056149d31c2220",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          291,
+          315,
+          63,
+          62
+        ],
+        "region": [
+          291,
+          294,
+          63,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Printer",
+        "tags": [
+          "printer",
+          "print",
+          "office printer",
+          "paper"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.peripherals"
+        ],
+        "concept_id": "hardware.peripherals.printer",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i04",
+      "cell": [
+        7,
+        3
+      ],
+      "crop_rgba_sha256": "b76f12acd816ae6bcb9cbc7c954df6f1d4d20abb0db3d9ee78fde8eaed1daf72",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          374,
+          323,
+          61,
+          47
+        ],
+        "region": [
+          374,
+          294,
+          61,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Scanner",
+        "tags": [
+          "scanner",
+          "document scanner",
+          "scan"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.peripherals"
+        ],
+        "concept_id": "hardware.peripherals.scanner",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i05",
+      "cell": [
+        8,
+        3
+      ],
+      "crop_rgba_sha256": "7b27980f03b8aa03424494c1155812790b834af0455396b8f9a0165f99a1e361",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          458,
+          318,
+          63,
+          55
+        ],
+        "region": [
+          458,
+          294,
+          64,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Flatbed scanner",
+        "tags": [
+          "flatbed scanner",
+          "scan",
+          "document scanner"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.peripherals"
+        ],
+        "concept_id": "hardware.peripherals.flatbed-scanner",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i06",
+      "cell": [
+        9,
+        3
+      ],
+      "crop_rgba_sha256": "bb6e599ccbbc21faf01273f92d4a8ea73b1be6cca3e0b8123bb19d511b6fa8ac",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          543,
+          328,
+          66,
+          41
+        ],
+        "region": [
+          543,
+          294,
+          66,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Keyboard",
+        "tags": [
+          "keyboard",
+          "keys",
+          "typing",
+          "input"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.input"
+        ],
+        "concept_id": "hardware.input.keyboard",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i07",
+      "cell": [
+        10,
+        3
+      ],
+      "crop_rgba_sha256": "c1bfb83b2314bac5680fc4b24e75ae8326b0508c068bcf100a855616787cc134",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          632,
+          311,
+          41,
+          66
+        ],
+        "region": [
+          632,
+          294,
+          41,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Mouse",
+        "tags": [
+          "mouse",
+          "computer mouse",
+          "pointer",
+          "input"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.input"
+        ],
+        "concept_id": "hardware.input.mouse",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i08",
+      "cell": [
+        11,
+        3
+      ],
+      "crop_rgba_sha256": "1946e3b2c8e94d30f8e3d020f6b6b968ec668ee81862c4bdfbef2e9fa9fcc815",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          695,
+          321,
+          61,
+          51
+        ],
+        "region": [
+          695,
+          294,
+          61,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i09",
+      "cell": [
+        12,
+        3
+      ],
+      "crop_rgba_sha256": "cd76de768480947aa94dc24abf73eb9ccced4fbe073a4d7ef96c308f3384ecc0",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          779,
+          312,
+          51,
+          66
+        ],
+        "region": [
+          779,
+          294,
+          51,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Webcam",
+        "tags": [
+          "webcam",
+          "camera",
+          "video chat",
+          "web camera"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.cameras"
+        ],
+        "concept_id": "hardware.cameras.webcam",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i10",
+      "cell": [
+        13,
+        3
+      ],
+      "crop_rgba_sha256": "a16eaea98a974f897e1092a805d72d87fbd2a99d6eb669e8d2617f518e361bb8",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          853,
+          318,
+          67,
+          54
+        ],
+        "region": [
+          853,
+          294,
+          67,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Camera",
+        "tags": [
+          "camera",
+          "photography",
+          "digital camera"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.cameras"
+        ],
+        "concept_id": "hardware.cameras.camera",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i11",
+      "cell": [
+        14,
+        3
+      ],
+      "crop_rgba_sha256": "c9ab3960b387d9a07dd1032c275c5e663445c0101161af189c7908730ee726c8",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          941,
+          326,
+          61,
+          40
+        ],
+        "region": [
+          941,
+          294,
+          61,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Video camera",
+        "tags": [
+          "video camera",
+          "camcorder",
+          "video recording"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.cameras"
+        ],
+        "concept_id": "hardware.cameras.video-camera",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i12",
+      "cell": [
+        15,
+        3
+      ],
+      "crop_rgba_sha256": "fdfc02a7ec880fee5e617093cb6bebab166a69aa9eb54c45b3d0398934902d6d",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1025,
+          311,
+          50,
+          68
+        ],
+        "region": [
+          1025,
+          294,
+          50,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Speaker",
+        "tags": [
+          "speaker",
+          "audio",
+          "sound",
+          "loudspeaker"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.audio"
+        ],
+        "concept_id": "hardware.audio.speaker",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i13",
+      "cell": [
+        16,
+        3
+      ],
+      "crop_rgba_sha256": "826aaf82f806c43d81392590ad3768229fb7227a4bc30ef3f8254e0cc5087acd",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1098,
+          319,
+          62,
+          54
+        ],
+        "region": [
+          1098,
+          294,
+          62,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Volume up",
+        "tags": [
+          "volume up",
+          "speaker",
+          "loud",
+          "sound"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.audio"
+        ],
+        "concept_id": "hardware.audio.volume-up",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i14",
+      "cell": [
+        17,
+        3
+      ],
+      "crop_rgba_sha256": "ff6de77463897b51cf9e946883e9191a646bf677d0d23b046b700e5a2a5c17b5",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1180,
+          312,
+          63,
+          65
+        ],
+        "region": [
+          1180,
+          294,
+          63,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Headphones",
+        "tags": [
+          "headphones",
+          "audio",
+          "headset",
+          "listen"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.audio"
+        ],
+        "concept_id": "hardware.audio.headphones",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i15",
+      "cell": [
+        18,
+        3
+      ],
+      "crop_rgba_sha256": "1695175c5cd1128b1a6ef90e813ddfde366e5bec230f6288d566fc3a4168c2a9",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1269,
+          312,
+          44,
+          66
+        ],
+        "region": [
+          1268,
+          294,
+          45,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Microphone",
+        "tags": [
+          "microphone",
+          "record",
+          "audio",
+          "voice"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.audio"
+        ],
+        "concept_id": "hardware.audio.microphone",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i16",
+      "cell": [
+        19,
+        3
+      ],
+      "crop_rgba_sha256": "cc566446fe64046ae7959e9faa75e5ca56d62c139fa598e1059940a6cf6263e7",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1346,
+          310,
+          45,
+          68
+        ],
+        "region": [
+          1346,
+          294,
+          45,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Microphone",
+        "tags": [
+          "microphone",
+          "record",
+          "audio",
+          "voice"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.audio"
+        ],
+        "concept_id": "hardware.audio.microphone",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i17",
+      "cell": [
+        20,
+        3
+      ],
+      "crop_rgba_sha256": "dcb694f3b829fd54eb092252520b846d22e3ce6cee263110417dce71870125e7",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1426,
+          320,
+          49,
+          58
+        ],
+        "region": [
+          1426,
+          294,
+          49,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i18",
+      "cell": [
+        21,
+        3
+      ],
+      "crop_rgba_sha256": "31c4aab92957d698a94fd0557ffe42b9d917f99ee1bdcc06f072c399905893a2",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1503,
+          324,
+          74,
+          51
+        ],
+        "region": [
+          1503,
+          294,
+          74,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Game controller",
+        "tags": [
+          "game controller",
+          "gamepad",
+          "gaming",
+          "joystick"
+        ],
+        "aliases": [],
+        "subjects": [
+          "gaming.controls"
+        ],
+        "concept_id": "gaming.controls.game-controller",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i19",
+      "cell": [
+        22,
+        3
+      ],
+      "crop_rgba_sha256": "f44a44471386d8d1f0b48084d07dc65f09bf8a16b80d7318d40ec79f68d212da",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1599,
+          312,
+          53,
+          66
+        ],
+        "region": [
+          1599,
+          294,
+          53,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Joystick",
+        "tags": [
+          "joystick",
+          "game controller",
+          "arcade",
+          "input"
+        ],
+        "aliases": [],
+        "subjects": [
+          "gaming.controls"
+        ],
+        "concept_id": "gaming.controls.joystick",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i20",
+      "cell": [
+        23,
+        3
+      ],
+      "crop_rgba_sha256": "1a2a66f9dc998db064a201a0c7f4296eb751997582d3f7f818e79c6136326332",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1675,
+          312,
+          65,
+          68
+        ],
+        "region": [
+          1674,
+          294,
+          66,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Steering wheel",
+        "tags": [
+          "steering wheel",
+          "driving",
+          "vehicle",
+          "game controller"
+        ],
+        "aliases": [],
+        "subjects": [
+          "transport.vehicles"
+        ],
+        "concept_id": "transport.vehicles.steering-wheel",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i21",
+      "cell": [
+        0,
+        4
+      ],
+      "crop_rgba_sha256": "ea0bd771e39f28167188adb34d41eecbdbee05cf82ed9bfde00bb1d07c6d1311",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1759,
+          318,
+          73,
+          53
+        ],
+        "region": [
+          1759,
+          294,
+          73,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Smartwatch",
+        "tags": [
+          "smartwatch",
+          "watch",
+          "wearable",
+          "connected device"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.wearable"
+        ],
+        "concept_id": "hardware.wearable.smartwatch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i22",
+      "cell": [
+        1,
+        4
+      ],
+      "crop_rgba_sha256": "3323f90bdcd2870ddf1474dc1540c1f8c5557fc399e4ba4f690ed8b0115afbf6",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1862,
+          311,
+          56,
+          69
+        ],
+        "region": [
+          1862,
+          294,
+          56,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Smartwatch",
+        "tags": [
+          "smartwatch",
+          "watch",
+          "wearable",
+          "connected device"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.wearable"
+        ],
+        "concept_id": "hardware.wearable.smartwatch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i23",
+      "cell": [
+        2,
+        4
+      ],
+      "crop_rgba_sha256": "626f2a322c62958968f10e01d43f13ac75c770b65e3f6fb1f4fde76f6ec19354",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1967,
+          311,
+          37,
+          69
+        ],
+        "region": [
+          1967,
+          294,
+          37,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Smartwatch",
+        "tags": [
+          "smartwatch",
+          "watch",
+          "wearable",
+          "connected device"
+        ],
+        "aliases": [],
+        "subjects": [
+          "hardware.wearable"
+        ],
+        "concept_id": "hardware.wearable.smartwatch",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r03i24",
+      "cell": [
+        3,
+        4
+      ],
+      "crop_rgba_sha256": "68754a9bf464f3752b2128f2f7028dc45bf51a49ce46b6fc63bee54883f6734e",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          2042,
+          325,
+          87,
+          42
+        ],
+        "region": [
+          2042,
+          294,
+          87,
+          90
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Handheld game console",
+        "tags": [
+          "handheld game console",
+          "portable gaming",
+          "gamepad"
+        ],
+        "aliases": [],
+        "subjects": [
+          "gaming.devices"
+        ],
+        "concept_id": "gaming.devices.handheld-game-console",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i00",
+      "cell": [
+        4,
+        4
+      ],
+      "crop_rgba_sha256": "2c877fa4b035d9e3ef43bb1503c507b6126dda6eaa55662880d15a2c3000b4a9",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          43,
+          408,
+          61,
+          63
+        ],
+        "region": [
+          43,
+          384,
+          61,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i01",
+      "cell": [
+        5,
+        4
+      ],
+      "crop_rgba_sha256": "095438b4ee452fee535f267cb4637ebcefc08a13a7d94ed92a90684c127d7186",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          130,
+          403,
+          56,
+          71
+        ],
+        "region": [
+          130,
+          384,
+          56,
+          94
+        ]
+      },
+      "review": {
+        "status": "reviewed",
+        "name": "Robot",
+        "tags": [
+          "robot",
+          "android",
+          "robotics",
+          "automaton"
+        ],
+        "aliases": [],
+        "subjects": [
+          "robotics.devices"
+        ],
+        "concept_id": "robotics.devices.robot",
+        "evidence": "visual-contact-sheet-review-2026-10-29",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i02",
+      "cell": [
+        6,
+        4
+      ],
+      "crop_rgba_sha256": "9fe239d7d7d388cdb3b684ae73a6237879a64a829674e31086145d057595fb9a",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          212,
+          403,
+          62,
+          70
+        ],
+        "region": [
+          212,
+          384,
+          62,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i03",
+      "cell": [
+        7,
+        4
+      ],
+      "crop_rgba_sha256": "f53b763f28a4f663748c19abb4b7193f9c49248214aa6f21285f660f2d09f17e",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          296,
+          417,
+          61,
+          52
+        ],
+        "region": [
+          296,
+          384,
+          61,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i04",
+      "cell": [
+        8,
+        4
+      ],
+      "crop_rgba_sha256": "b7c83de05971d91a54973e8c6ca4810044405a2f186b6f88b4d6b1a691e107cc",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          378,
+          404,
+          58,
+          66
+        ],
+        "region": [
+          378,
+          384,
+          58,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i05",
+      "cell": [
+        9,
+        4
+      ],
+      "crop_rgba_sha256": "9073155ef5b94c6bc000868098bde3c3bae2141168d6d036d1d501c5ebabd159",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          457,
+          408,
+          64,
+          62
+        ],
+        "region": [
+          457,
+          384,
+          64,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i06",
+      "cell": [
+        10,
+        4
+      ],
+      "crop_rgba_sha256": "57553b01f26895be57256aa409c233abf28769efa49c7e038df64f9fae374f05",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          545,
+          403,
+          58,
+          67
+        ],
+        "region": [
+          544,
+          384,
+          59,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i07",
+      "cell": [
+        11,
+        4
+      ],
+      "crop_rgba_sha256": "c5972ec7073d85e44bc5e44255ceb89ec39cd85af35c67b9a9cef615013373a7",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          634,
+          404,
+          64,
+          65
+        ],
+        "region": [
+          634,
+          384,
+          64,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i08",
+      "cell": [
+        12,
+        4
+      ],
+      "crop_rgba_sha256": "bca2b87275faf63ec92cfae1548406eba1b59a56685b61c8885f596bb2048081",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          723,
+          406,
+          53,
+          64
+        ],
+        "region": [
+          723,
+          384,
+          53,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i09",
+      "cell": [
+        13,
+        4
+      ],
+      "crop_rgba_sha256": "8310b7ea2221892ad9e7d04db227cad768acb3905667101edfaf101ed9c3bb16",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          805,
+          405,
+          43,
+          65
+        ],
+        "region": [
+          805,
+          384,
+          43,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i10",
+      "cell": [
+        14,
+        4
+      ],
+      "crop_rgba_sha256": "1b08777d6b71547b09c0b41bf6c51d02d9c9f5fd343bdd6ec1d7769fb5e2b543",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          876,
+          415,
+          52,
+          47
+        ],
+        "region": [
+          876,
+          384,
+          52,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i11",
+      "cell": [
+        15,
+        4
+      ],
+      "crop_rgba_sha256": "033061f04535001f1a029d1e9b49bf1af2e14d1afef6873ef16b1a5e50df86ee",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          958,
+          403,
+          34,
+          71
+        ],
+        "region": [
+          958,
+          384,
+          34,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i12",
+      "cell": [
+        16,
+        4
+      ],
+      "crop_rgba_sha256": "1aef78cfe649a4e1e0f5336035a804a4a7a63bed6d49390dfe9e2e657aa84d10",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1024,
+          418,
+          62,
+          52
+        ],
+        "region": [
+          1024,
+          384,
+          62,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i13",
+      "cell": [
+        17,
+        4
+      ],
+      "crop_rgba_sha256": "bee4aeec9e41ea4d4188c1aa365a09008ceea5f73e7b259b5d91f05d85d51dba",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1110,
+          410,
+          62,
+          51
+        ],
+        "region": [
+          1110,
+          384,
+          62,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i14",
+      "cell": [
+        18,
+        4
+      ],
+      "crop_rgba_sha256": "7ac3985871509c3629b18b9e1d0c9ce33f7cd7c12e2e4fa022e3da0ce9a40998",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1201,
+          408,
+          45,
+          66
+        ],
+        "region": [
+          1201,
+          384,
+          45,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i15",
+      "cell": [
+        19,
+        4
+      ],
+      "crop_rgba_sha256": "f042ffeb3045a19cfb2d9760839262a4bb01d4a324406a687c4124f9f64d66df",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1278,
+          406,
+          47,
+          68
+        ],
+        "region": [
+          1277,
+          384,
+          48,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i16",
+      "cell": [
+        20,
+        4
+      ],
+      "crop_rgba_sha256": "999344111f4f7da7839d694092c93bb2e4435bb01a82fae93f593f478e7e0fc1",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1358,
+          403,
+          61,
+          71
+        ],
+        "region": [
+          1358,
+          384,
+          61,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i17",
+      "cell": [
+        21,
+        4
+      ],
+      "crop_rgba_sha256": "9b6d925b7ea20f4210963c5b9c8f1e7ac2449044fa633523bafe96199ef8647c",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1432,
+          411,
+          61,
+          58
+        ],
+        "region": [
+          1432,
+          384,
+          61,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i18",
+      "cell": [
+        22,
+        4
+      ],
+      "crop_rgba_sha256": "489295fbe994fb7ce356f84b377efcaab84f11ff8a4e80c45d13d394bfb1587f",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1515,
+          410,
+          62,
+          59
+        ],
+        "region": [
+          1515,
+          384,
+          62,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i19",
+      "cell": [
+        23,
+        4
+      ],
+      "crop_rgba_sha256": "506442668b0776da8cfe43716a5871d712938f06dc9409b33c75dde5393f6f32",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1604,
+          412,
+          55,
+          56
+        ],
+        "region": [
+          1604,
+          384,
+          55,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i20",
+      "cell": [
+        0,
+        5
+      ],
+      "crop_rgba_sha256": "cf63ca22ab0e7c4abfe96b1816233a95e4d216ed536cc73e6efd315d86c2a3d6",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1696,
+          411,
+          44,
+          59
+        ],
+        "region": [
+          1696,
+          384,
+          44,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i21",
+      "cell": [
+        1,
+        5
+      ],
+      "crop_rgba_sha256": "dcd1aac6fda30560cdb82248a1109b4ed4367d7371057687a3b55e304133319e",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1782,
+          409,
+          44,
+          62
+        ],
+        "region": [
+          1782,
+          384,
+          44,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i22",
+      "cell": [
+        2,
+        5
+      ],
+      "crop_rgba_sha256": "d400950ae1dc7cd8f925010416fc573372d3c3c57505ec65f262598819cbf399",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1873,
+          404,
+          50,
+          70
+        ],
+        "region": [
+          1873,
+          384,
+          50,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i23",
+      "cell": [
+        3,
+        5
+      ],
+      "crop_rgba_sha256": "d39bfc8567b3696db3f0ddc0d3c7935617ea56aae26cb0b3ec1295119b8d592d",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1966,
+          404,
+          56,
+          69
+        ],
+        "region": [
+          1966,
+          384,
+          56,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r04i24",
+      "cell": [
+        4,
+        5
+      ],
+      "crop_rgba_sha256": "637dc11bb59dc15ed1daeb9f71408f91822c02b80b0c698016f9fc28d50f67ae",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          2066,
+          404,
+          50,
+          70
+        ],
+        "region": [
+          2066,
+          384,
+          50,
+          94
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i00",
+      "cell": [
+        5,
+        5
+      ],
+      "crop_rgba_sha256": "0a97212afbbf773e46bc2c77c41c7fd22e7fedc4c39f1ef925ad68061c4a6912",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          43,
+          502,
+          53,
+          63
+        ],
+        "region": [
+          43,
+          478,
+          53,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i01",
+      "cell": [
+        6,
+        5
+      ],
+      "crop_rgba_sha256": "880f0e715a832d4735cc73c32e5205c43cf16cc49fd4754da9bb15918a4fffad",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          119,
+          505,
+          62,
+          60
+        ],
+        "region": [
+          119,
+          478,
+          62,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i02",
+      "cell": [
+        7,
+        5
+      ],
+      "crop_rgba_sha256": "dcaccf4793a62bfb7c18737fe8cb71d7d6f36f75a3c154f017293646c4650408",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          201,
+          502,
+          61,
+          62
+        ],
+        "region": [
+          201,
+          478,
+          61,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i03",
+      "cell": [
+        8,
+        5
+      ],
+      "crop_rgba_sha256": "d115d0505701f79a13a9930da3037b303e0bdecf769e314b4ee70beb36babbf2",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          289,
+          503,
+          61,
+          62
+        ],
+        "region": [
+          289,
+          478,
+          61,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i04",
+      "cell": [
+        9,
+        5
+      ],
+      "crop_rgba_sha256": "8b8d6f03c7876bdb493366077aa87bb9728af4c3f2195824cf90ee8a652f1a9d",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          374,
+          503,
+          61,
+          62
+        ],
+        "region": [
+          374,
+          478,
+          61,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i05",
+      "cell": [
+        10,
+        5
+      ],
+      "crop_rgba_sha256": "658c98538daf665d07aeb56f79366e4ddcd573b0293241c0f82c37950c9fe18b",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          456,
+          508,
+          52,
+          52
+        ],
+        "region": [
+          456,
+          478,
+          52,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i06",
+      "cell": [
+        11,
+        5
+      ],
+      "crop_rgba_sha256": "178c1d7c2b34a2b5c84af624b9de62aa0ad54b261af24dde66e9b0b06126ef45",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          530,
+          503,
+          59,
+          62
+        ],
+        "region": [
+          530,
+          478,
+          59,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i07",
+      "cell": [
+        12,
+        5
+      ],
+      "crop_rgba_sha256": "71b9cac8b064c5c21cace34e3cc1dc6290937dfa5cd657e0ee0860678bc9b36e",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          610,
+          507,
+          63,
+          57
+        ],
+        "region": [
+          610,
+          478,
+          63,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i08",
+      "cell": [
+        13,
+        5
+      ],
+      "crop_rgba_sha256": "ca0a2dfad6032886c2765cdfee779017e58d0f4de18390162c09ad0ff5a32c39",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          692,
+          507,
+          63,
+          57
+        ],
+        "region": [
+          692,
+          478,
+          63,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i09",
+      "cell": [
+        14,
+        5
+      ],
+      "crop_rgba_sha256": "abd85b8f428001cd8a147eb31070b0d433a52bac674887fdb7565874a581a6ec",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          776,
+          506,
+          56,
+          58
+        ],
+        "region": [
+          776,
+          478,
+          56,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i10",
+      "cell": [
+        15,
+        5
+      ],
+      "crop_rgba_sha256": "c5e182d171c1814547adf594457a9877f799def6b958bc1a9ec59739c0853fc2",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          853,
+          507,
+          62,
+          57
+        ],
+        "region": [
+          853,
+          478,
+          62,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i11",
+      "cell": [
+        16,
+        5
+      ],
+      "crop_rgba_sha256": "6d2ff1c941bf807a927a1357646029812d086dbc59dd500eb389c9e3e3e43ce1",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          937,
+          504,
+          60,
+          61
+        ],
+        "region": [
+          936,
+          478,
+          61,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i12",
+      "cell": [
+        17,
+        5
+      ],
+      "crop_rgba_sha256": "db16d805073a3132ddc4b20aa98e10905da73084056ed5084d76be3b70e6fe06",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1017,
+          509,
+          55,
+          50
+        ],
+        "region": [
+          1017,
+          478,
+          55,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i13",
+      "cell": [
+        18,
+        5
+      ],
+      "crop_rgba_sha256": "0e09a33ad1c9810a663443f33b8f8a6cec5a68887b1d4d2e103f4b7b551fa09a",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1093,
+          511,
+          56,
+          53
+        ],
+        "region": [
+          1093,
+          478,
+          56,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i14",
+      "cell": [
+        19,
+        5
+      ],
+      "crop_rgba_sha256": "ce530aed9cc1a704bcb65f96a0d7ad1e4fa048c30f664d1d7ae41f76f0658353",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1172,
+          511,
+          56,
+          53
+        ],
+        "region": [
+          1172,
+          478,
+          56,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i15",
+      "cell": [
+        20,
+        5
+      ],
+      "crop_rgba_sha256": "27e3e5fbd38dfeb17ec9ed108f543c408135e430582b66e62797291980e4690e",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1251,
+          511,
+          56,
+          53
+        ],
+        "region": [
+          1251,
+          478,
+          56,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i16",
+      "cell": [
+        21,
+        5
+      ],
+      "crop_rgba_sha256": "58f8558c9c2c83c9f8eecf30b1c394fadf8c60b1710f2e9c5bd49788dc6be49d",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1340,
+          502,
+          46,
+          59
+        ],
+        "region": [
+          1340,
+          478,
+          46,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i17",
+      "cell": [
+        22,
+        5
+      ],
+      "crop_rgba_sha256": "2f0e8d42860cdf201777684916e0a4b02ec0a5106fa118f58cb304439364e376",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1419,
+          505,
+          46,
+          59
+        ],
+        "region": [
+          1419,
+          478,
+          47,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i18",
+      "cell": [
+        23,
+        5
+      ],
+      "crop_rgba_sha256": "19fe366c986f5cddcdaa6007de02b6e8e26cad103f6e7a9e9f0fd3318f994696",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1495,
+          506,
+          49,
+          59
+        ],
+        "region": [
+          1495,
+          478,
+          49,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i19",
+      "cell": [
+        0,
+        6
+      ],
+      "crop_rgba_sha256": "d543d69f638f9d335f5a85efd1a606f95bf4bd742c919475637436c02d0e90bc",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1570,
+          505,
+          49,
+          59
+        ],
+        "region": [
+          1570,
+          478,
+          49,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i20",
+      "cell": [
+        1,
+        6
+      ],
+      "crop_rgba_sha256": "d380631219a8378ac9e03a83586dee607b3674e2c58c084c293c397ab90e19f8",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1646,
+          506,
+          53,
+          58
+        ],
+        "region": [
+          1646,
+          478,
+          53,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i21",
+      "cell": [
+        2,
+        6
+      ],
+      "crop_rgba_sha256": "23c06391eaef83af6736fc0470886ece1e86af87daaeac2a011523291e37ccd7",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1724,
+          508,
+          65,
+          56
+        ],
+        "region": [
+          1724,
+          478,
+          66,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i22",
+      "cell": [
+        3,
+        6
+      ],
+      "crop_rgba_sha256": "a7dd3eb7024c93b8d177120d796643e7820729a091599abfee97b54b55b5354a",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1813,
+          502,
+          64,
+          65
+        ],
+        "region": [
+          1813,
+          478,
+          64,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i23",
+      "cell": [
+        4,
+        6
+      ],
+      "crop_rgba_sha256": "49217f3b2dd7fd2d758b255947134a47d9b2631ff208fed43b6f9064182ad469",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1906,
+          506,
+          59,
+          59
+        ],
+        "region": [
+          1906,
+          478,
+          59,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i24",
+      "cell": [
+        5,
+        6
+      ],
+      "crop_rgba_sha256": "40f792bf2e65f292abba991ab6aa9a44a944a2f0eb93830ad173038102c9df41",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1990,
+          515,
+          59,
+          43
+        ],
+        "region": [
+          1990,
+          478,
+          59,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r05i25",
+      "cell": [
+        6,
+        6
+      ],
+      "crop_rgba_sha256": "0b14b92548156d1935f40dfb01cd5c01cacc4d973e85011c962c512664cc8353",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          2072,
+          509,
+          58,
+          52
+        ],
+        "region": [
+          2072,
+          478,
+          58,
+          92
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i00",
+      "cell": [
+        7,
+        6
+      ],
+      "crop_rgba_sha256": "0f305c5cd8f65a195a53631e70dd4eb1bcf46c37cc6f45219c4907b081ce85a6",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          42,
+          587,
+          52,
+          53
+        ],
+        "region": [
+          42,
+          570,
+          52,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i01",
+      "cell": [
+        8,
+        6
+      ],
+      "crop_rgba_sha256": "8d6df400bfa83add8e3b919177eca4552fc22b6c87571e46cee27bdfa96ea17c",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          122,
+          587,
+          52,
+          54
+        ],
+        "region": [
+          122,
+          570,
+          52,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i02",
+      "cell": [
+        9,
+        6
+      ],
+      "crop_rgba_sha256": "698b7ab2c86d247cf677401850a530f04e54883e81db970c8e3d586ed64add1e",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          201,
+          587,
+          53,
+          54
+        ],
+        "region": [
+          201,
+          570,
+          53,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i03",
+      "cell": [
+        10,
+        6
+      ],
+      "crop_rgba_sha256": "4086cc0f8e9eedbb07a7bb39dd1ece3f5b767347c683318a3238f5ce282000d5",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          281,
+          589,
+          50,
+          50
+        ],
+        "region": [
+          281,
+          570,
+          50,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i04",
+      "cell": [
+        11,
+        6
+      ],
+      "crop_rgba_sha256": "85a10ee07fb7bdb2519042a0d7123614c23c3f22a80064d2cc8b75c5e947c52d",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          359,
+          594,
+          51,
+          41
+        ],
+        "region": [
+          359,
+          570,
+          51,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i05",
+      "cell": [
+        12,
+        6
+      ],
+      "crop_rgba_sha256": "6648e2b4b0015b159baea7f09d4e942a35254c6dcc32a9e4458ae3a6bb134a68",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          438,
+          589,
+          51,
+          50
+        ],
+        "region": [
+          438,
+          570,
+          51,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i06",
+      "cell": [
+        13,
+        6
+      ],
+      "crop_rgba_sha256": "a9e41da15adc350643e3a90a5188eb05a0610d0a72df45a04321f089eec57cdf",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          514,
+          595,
+          62,
+          37
+        ],
+        "region": [
+          514,
+          570,
+          62,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i07",
+      "cell": [
+        14,
+        6
+      ],
+      "crop_rgba_sha256": "a391ce4414522bc861248f8bd482af9bc9dbb0810df926891f01112c32b44902",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          600,
+          594,
+          66,
+          39
+        ],
+        "region": [
+          600,
+          570,
+          66,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i08",
+      "cell": [
+        15,
+        6
+      ],
+      "crop_rgba_sha256": "893883cdddf197664ec3b2237423be611de02412fae414b5ccaebd9ebba96830",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          690,
+          590,
+          55,
+          51
+        ],
+        "region": [
+          690,
+          570,
+          55,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i09",
+      "cell": [
+        16,
+        6
+      ],
+      "crop_rgba_sha256": "49cc2b44592fff925466b5eb257ccfc88077d1046a3e9b5bd22c8108430b58ed",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          769,
+          589,
+          52,
+          51
+        ],
+        "region": [
+          769,
+          570,
+          52,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i10",
+      "cell": [
+        17,
+        6
+      ],
+      "crop_rgba_sha256": "6a39703916c871b7269e0093f927944c80786e99bb95c5ab6bb305b8c782b6af",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          846,
+          590,
+          56,
+          50
+        ],
+        "region": [
+          846,
+          570,
+          56,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i11",
+      "cell": [
+        18,
+        6
+      ],
+      "crop_rgba_sha256": "20af15b6a2706404a80afcd71905511c519fa89521f051ebc6ae9749cbfd3562",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          927,
+          593,
+          52,
+          45
+        ],
+        "region": [
+          927,
+          570,
+          52,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i12",
+      "cell": [
+        19,
+        6
+      ],
+      "crop_rgba_sha256": "0c6b9b07d4fb388c647cf2503d07ece7ab7ccc6f620cfbe709acd9c1f96d1aec",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1004,
+          593,
+          51,
+          45
+        ],
+        "region": [
+          1004,
+          570,
+          51,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i13",
+      "cell": [
+        20,
+        6
+      ],
+      "crop_rgba_sha256": "b088af9ba6ddaf87639604e1d692f5a7d20cb2a2f99c871476cfe4d5f6816808",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1081,
+          587,
+          48,
+          54
+        ],
+        "region": [
+          1080,
+          570,
+          49,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i14",
+      "cell": [
+        21,
+        6
+      ],
+      "crop_rgba_sha256": "72e484348e3d3eb9a1d39b638ccb16d47756f588a08888e6bd71a8c89bf0734a",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1161,
+          593,
+          56,
+          47
+        ],
+        "region": [
+          1161,
+          570,
+          56,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i15",
+      "cell": [
+        22,
+        6
+      ],
+      "crop_rgba_sha256": "1362d1144298c0be490799c4505955e8b245481a556c369dc3a531e3157f0792",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1244,
+          593,
+          53,
+          47
+        ],
+        "region": [
+          1244,
+          570,
+          53,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i16",
+      "cell": [
+        23,
+        6
+      ],
+      "crop_rgba_sha256": "ddde15be404bd2ea4e65488f3d0d3ac29f94c06bb1f76fba68772cf64646f10e",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1323,
+          593,
+          52,
+          47
+        ],
+        "region": [
+          1323,
+          570,
+          52,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i17",
+      "cell": [
+        0,
+        7
+      ],
+      "crop_rgba_sha256": "5b6694ec177ea48294d67748e71759c8522c7ae79ea94e02b531abc09fa8a6a3",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1401,
+          590,
+          47,
+          49
+        ],
+        "region": [
+          1401,
+          570,
+          48,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i18",
+      "cell": [
+        1,
+        7
+      ],
+      "crop_rgba_sha256": "ec658ee231a2cc50bb7ad93a3f85a38cc00b4b89e4c945f50a0208f383b0cb7f",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1476,
+          589,
+          54,
+          50
+        ],
+        "region": [
+          1475,
+          570,
+          55,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i19",
+      "cell": [
+        2,
+        7
+      ],
+      "crop_rgba_sha256": "561d8e558eeaa4f8756cd42f5727ca22696002fe4de1bea61477f22927f35713",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1555,
+          588,
+          54,
+          55
+        ],
+        "region": [
+          1555,
+          570,
+          54,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i20",
+      "cell": [
+        3,
+        7
+      ],
+      "crop_rgba_sha256": "09985af4df53bb249d36668570c9f4dedf54ce37d6f9b47f822344f31e19ffb2",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1641,
+          589,
+          49,
+          52
+        ],
+        "region": [
+          1641,
+          570,
+          49,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i21",
+      "cell": [
+        4,
+        7
+      ],
+      "crop_rgba_sha256": "9ede8565aeb1d590a0d453f72db29135d3264ee08f6ce8d5204b9d1bad3499e2",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1715,
+          587,
+          47,
+          54
+        ],
+        "region": [
+          1715,
+          570,
+          47,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i22",
+      "cell": [
+        5,
+        7
+      ],
+      "crop_rgba_sha256": "a4359c02e3c206e010ea8961116f9e6307fade790c39c51e97610e15036fc8da",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1785,
+          590,
+          41,
+          50
+        ],
+        "region": [
+          1785,
+          570,
+          41,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i23",
+      "cell": [
+        6,
+        7
+      ],
+      "crop_rgba_sha256": "78ef5dace4dc53de7673906f1a2490e9d75830c7d53fb1894662686bdf5ddefa",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1849,
+          590,
+          52,
+          51
+        ],
+        "region": [
+          1849,
+          570,
+          52,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i24",
+      "cell": [
+        7,
+        7
+      ],
+      "crop_rgba_sha256": "9dd6e41b6a5123632b6911d68744c50dc70561f4c5ce98cc2616c63c1898d12f",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1923,
+          593,
+          54,
+          42
+        ],
+        "region": [
+          1923,
+          570,
+          54,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i25",
+      "cell": [
+        8,
+        7
+      ],
+      "crop_rgba_sha256": "b121d375c7bb20934ec3952b1f6cdb6536e7e8ad9f967d5f98ae4d1b5f510e9d",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          2001,
+          587,
+          51,
+          53
+        ],
+        "region": [
+          2001,
+          570,
+          51,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r06i26",
+      "cell": [
+        9,
+        7
+      ],
+      "crop_rgba_sha256": "0a39a98ee4f0bea3fb9ff12ea3e7fed24c4d2ee54434052eaa70d455f07e9391",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          2077,
+          587,
+          52,
+          54
+        ],
+        "region": [
+          2077,
+          570,
+          53,
+          76
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i00",
+      "cell": [
+        10,
+        7
+      ],
+      "crop_rgba_sha256": "b7e3b5fa712a3ea1032d3dba81aad0cf3a96a4ba9a02bd99d71ec42bc1cbe0e7",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          43,
+          657,
+          51,
+          51
+        ],
+        "region": [
+          43,
+          646,
+          51,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i01",
+      "cell": [
+        11,
+        7
+      ],
+      "crop_rgba_sha256": "e1d91ac1476e623ec8edb134db4c4cba6f3c1c512fc68c5a04cad226dc1d8e47",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          123,
+          658,
+          51,
+          50
+        ],
+        "region": [
+          123,
+          646,
+          51,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i02",
+      "cell": [
+        12,
+        7
+      ],
+      "crop_rgba_sha256": "b3b61021b4712d1f3a9f50b515f9397c5355bb0af5ed6c8df30fadc9ba69359d",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          204,
+          657,
+          54,
+          52
+        ],
+        "region": [
+          204,
+          646,
+          54,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i03",
+      "cell": [
+        13,
+        7
+      ],
+      "crop_rgba_sha256": "926734e55d6cffc9887c7aeaa0bfb46a6e1af8454dfc7ae78a46b17befaaa260",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          293,
+          656,
+          47,
+          54
+        ],
+        "region": [
+          293,
+          646,
+          47,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i04",
+      "cell": [
+        14,
+        7
+      ],
+      "crop_rgba_sha256": "fbb2e6db67433ff1915b86380fb3670cbaeaff085eca7e34c22050374ed1b1d0",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          377,
+          658,
+          49,
+          51
+        ],
+        "region": [
+          377,
+          646,
+          49,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i05",
+      "cell": [
+        15,
+        7
+      ],
+      "crop_rgba_sha256": "dd5d235568db9671a1fc2d58dfa2bb54b0c11e9fdee404eabaf0254edbe85377",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          456,
+          659,
+          49,
+          50
+        ],
+        "region": [
+          456,
+          646,
+          49,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i06",
+      "cell": [
+        16,
+        7
+      ],
+      "crop_rgba_sha256": "2c3b233290c026daf8b9b162f00b791b29c9a3f3d7fa420230bfcb23f5c3b25f",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          535,
+          657,
+          50,
+          52
+        ],
+        "region": [
+          535,
+          646,
+          50,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i07",
+      "cell": [
+        17,
+        7
+      ],
+      "crop_rgba_sha256": "9d12eb38a7aeed2b4cf846850d290a89c19da206f1f83fd949b94169b4d70fad",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          615,
+          659,
+          49,
+          50
+        ],
+        "region": [
+          615,
+          646,
+          49,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i08",
+      "cell": [
+        18,
+        7
+      ],
+      "crop_rgba_sha256": "8a23ddaede5bbfa55607445310eda6698487d7ef926e0495dca2922752e83bf1",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          690,
+          657,
+          54,
+          54
+        ],
+        "region": [
+          690,
+          646,
+          54,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i09",
+      "cell": [
+        19,
+        7
+      ],
+      "crop_rgba_sha256": "5ee513fd681a53eeac55bd08ff8802c3e3e326b05697425f4935e77d6735adea",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          766,
+          659,
+          49,
+          50
+        ],
+        "region": [
+          766,
+          646,
+          49,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i10",
+      "cell": [
+        20,
+        7
+      ],
+      "crop_rgba_sha256": "59ca59d1bf840d26326d2b568f0b25628b02c3e84adfe432f1e0f6fee202a401",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          842,
+          657,
+          55,
+          54
+        ],
+        "region": [
+          842,
+          646,
+          55,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i11",
+      "cell": [
+        21,
+        7
+      ],
+      "crop_rgba_sha256": "e32b8f4ab4bbb47afa733cb315407c54c38a7eabed016b513532c27cbe9039e1",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          921,
+          657,
+          54,
+          53
+        ],
+        "region": [
+          920,
+          646,
+          55,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i12",
+      "cell": [
+        22,
+        7
+      ],
+      "crop_rgba_sha256": "a259f9f428da99c5d980eb38d56fffc71c3bc05cf656d4b69187a0c09938522c",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1000,
+          656,
+          56,
+          55
+        ],
+        "region": [
+          1000,
+          646,
+          56,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i13",
+      "cell": [
+        23,
+        7
+      ],
+      "crop_rgba_sha256": "2aacd4bc88dd9720aae75f9c401143a7c2a65b1bf39608f6fa2f1ce7fa352fbb",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1081,
+          658,
+          53,
+          52
+        ],
+        "region": [
+          1081,
+          646,
+          53,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    }
+  ]
+}

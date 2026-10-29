@@ -8,7 +8,7 @@
   const iconMap = new Map(catalog.icons.map(i => [i.id, i]));
   const images = new Map();
   const params = new URLSearchParams(location.search);
-  const search = $('search'), domain = $('domain'), variant = $('variant'), quality = $('quality');
+  const search = $('search'), domain = $('domain'), style = $('style'), subject = $('subject'), review = $('review');
   const gallery = $('gallery'), detail = $('detail'), count = $('count'), more = $('more');
   const tintEnabled = $('tint-enabled'), tintColor = $('tint-color');
   let selected = null, visible = 0, matches = [];
@@ -23,8 +23,9 @@
     const el = document.createElement('option'); el.value = value; el.textContent = label; select.appendChild(el);
   }
   [...new Set(catalog.icons.map(x => x.domain))].sort().forEach(x => option(domain, x, x));
-  [...new Set(catalog.icons.map(x => x.variant))].sort().forEach(x => option(variant, x, x));
-  [...new Set(catalog.icons.map(x => x.quality).filter(Boolean))].sort().forEach(x => option(quality, x, x));
+  [...new Set(catalog.icons.map(x => x.style))].sort().forEach(x => option(style, x, catalog.styles?.[x]?.label || x));
+  [...new Set(catalog.icons.flatMap(x => x.subjects || []))].sort().forEach(x => option(subject, x, x));
+  [...new Set(catalog.icons.map(x => x.review_status))].sort().forEach(x => option(review, x, x));
   $('release').textContent = 'v' + String(catalog.version || 'dev');
   const stats = $('stats');
   for (const [n, label] of [[catalog.icons.length, 'ASSETS'], [new Set(catalog.icons.map(x => x.domain)).size, 'CATEGORIES'], [catalog.sheets.length, 'ATLAS SHEETS']]) {
@@ -33,16 +34,42 @@
     const sub=document.createElement('span');sub.textContent=label;
     block.append(strong,sub);stats.appendChild(block);
   }
-  function normalized(v) { return String(v || '').toLowerCase().replace(/[_\-.]+/g,' ').replace(/\s+/g,' ').trim(); }
-  function matchesSearch(item, term) {
-    if (!term) return true;
-    const hay = normalized([item.id, item.concept_id, item.name, item.domain, ...(item.tags || [])].join(' '));
-    return term.split(' ').every(token => hay.includes(token));
+  function words(value) { return String(value ?? '').normalize('NFKD').toLowerCase().replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim().split(' ').filter(Boolean); }
+  const synonyms = new Map();
+  for (const [canonical, aliases] of Object.entries(catalog.synonyms || {})) {
+    const group = [...new Set([canonical, ...aliases].flatMap(words))];
+    for (const token of group) synonyms.set(token, new Set([...(synonyms.get(token) || []), ...group]));
+  }
+  function scoreMatch(item, query) {
+    const queryTerms = words(query);
+    if (!queryTerms.length) return item.review_status === 'reviewed' ? 2 : 1;
+    const fields = [
+      [item.id, 50], [item.name, 45], [item.aliases || [], 38], [item.tags || [], 28],
+      [item.subjects || [], 17], [item.domain, 3], [item.style, 1]
+    ].map(([values, weight]) => ({ tokens:new Set((Array.isArray(values) ? values : [values]).flatMap(words)),weight }));
+    let score = 0;
+    for (const token of queryTerms) {
+      const expanded = synonyms.get(token) || new Set([token]);
+      const direct = Math.max(0, ...fields.filter(f => f.tokens.has(token)).map(f => f.weight));
+      const indirect = Math.max(0, ...fields.filter(f => [...expanded].some(w => w !== token && f.tokens.has(w))).map(f => Math.round(f.weight * .55)));
+      const weight = Math.max(direct, indirect);
+      if (!weight) return 0;
+      score += weight;
+    }
+    const exact = String(query).toLowerCase().trim();
+    if ([item.id,item.name,...(item.aliases||[])].some(s => s?.toLowerCase()===exact)) score+=200;
+    return score;
   }
   function applyFilters() {
-    const term = normalized(search.value);
-    matches = catalog.icons.filter(i => (!domain.value || i.domain === domain.value) && (!variant.value || i.variant === variant.value) && (!quality.value || i.quality === quality.value) && matchesSearch(i, term));
-    gallery.replaceChildren(); visible = 0; count.textContent = matches.length.toLocaleString() + ' matching icons';
+    const query = search.value;
+    const ranked = catalog.icons.filter(i => (!domain.value || i.domain===domain.value)
+      && (!style.value || i.style===style.value)
+      && (!subject.value || (i.subjects||[]).includes(subject.value))
+      && (!review.value || i.review_status===review.value))
+      .map(item=>({item,score:scoreMatch(item,query)})).filter(x=>x.score>0)
+      .sort((a,b)=>b.score-a.score || a.item.id.localeCompare(b.item.id));
+    matches = ranked.map(x=>x.item);
+    gallery.replaceChildren();visible=0;count.textContent=matches.length.toLocaleString()+' matching icons';
     appendPage();
   }
   function appendPage() {
@@ -65,7 +92,7 @@
     const title=document.createElement('h3');title.textContent=item.name;
     const meta=document.createElement('div');meta.className='meta';
     const a=document.createElement('span');a.textContent=item.domain;
-    const b=document.createElement('span');b.textContent=item.variant;
+    const b=document.createElement('span');b.textContent=item.review_status === 'reviewed' ? item.style : 'Needs review';
     meta.append(a,b);
     const id=document.createElement('div');id.className='idline';id.title=item.id;id.textContent=item.id;
     const buttons=document.createElement('div');buttons.className='card-actions';
@@ -123,7 +150,7 @@
     $('filename').textContent='Filename: '+item.id+'.png · transparent RGBA';
     const dl=$('attributes');dl.replaceChildren();
     const s=sheetMap.get(item.sheet);
-    for(const [label,value] of [['Category',item.domain],['Variant',item.variant],['Concept',item.concept_id],['Texture',item.sheet],['Grid cell',Math.floor(item.rect_px.x/s.cell_px)+', '+Math.floor(item.rect_px.y/s.cell_px)],['Pixel rect',`${item.rect_px.x}, ${item.rect_px.y} · ${item.rect_px.w}×${item.rect_px.h}`],['License',item.license || 'See manifest'],['Quality',item.quality || 'Unreviewed'],['Search tags',(item.tags||[]).join(', ')]]) {
+    for(const [label,value] of [['Category',item.domain],['Style',item.style],['Variant',item.variant],['Subject',(item.subjects||[]).join(', ') || 'Unclassified'],['Aliases',(item.aliases||[]).join(', ')],['Review',item.review_status],['Concept',item.concept_id],['Texture',item.sheet],['Grid cell',Math.floor(item.rect_px.x/s.cell_px)+', '+Math.floor(item.rect_px.y/s.cell_px)],['Pixel rect',`${item.rect_px.x}, ${item.rect_px.y} · ${item.rect_px.w}×${item.rect_px.h}`],['License',item.license || 'See manifest'],['Quality',item.quality || 'Unreviewed'],['Search tags',(item.tags||[]).join(', ')]]) {
       const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;dl.append(dt,dd);
     }
     tintEnabled.checked=false;tintColor.disabled=true;
@@ -148,7 +175,7 @@
   async function copyText(value) {
     try{await navigator.clipboard.writeText(value);notify('Copied');}catch{notify('Clipboard unavailable. Select and copy the ID manually.');}
   }
-  for(const ctl of [search,domain,variant,quality])ctl.addEventListener('input',applyFilters);
+  for(const ctl of [search,domain,style,subject,review])ctl.addEventListener('input',applyFilters);
   more.addEventListener('click',appendPage);
   $('close').addEventListener('click',closeIcon);
   detail.addEventListener('cancel',event=>{event.preventDefault();closeIcon();});

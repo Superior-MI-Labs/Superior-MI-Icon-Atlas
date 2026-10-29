@@ -1,0 +1,53 @@
+{
+  "schema": "smi-icon-atlas-sheet/1",
+  "sheet": {
+    "id": "icons.monoline.universal-01.24x8",
+    "path": "sheets/universal-01/atlas.png",
+    "foreground_mask": "sheets/universal-01/atlas.png",
+    "black_outline": "sheets/universal-01/black-outline.png",
+    "preview": "sheets/universal-01/inspection-preview.png",
+    "width_px": 2304,
+    "height_px": 768,
+    "cell_px": 96,
+    "columns": 24,
+    "rows": 8,
+    "domain": "universal",
+    "sha256": "a7a2b10c7d19907176abbc5d4bb2657422041395cb3e78e7bb56c23af41e565f",
+    "style": "white-geometric-monoline",
+    "variant": "monoline"
+  },
+  "icons": [
+    {
+      "id": "icons.candidate.universal.r07i23",
+      "cell": [
+        0,
+        0
+      ],
+      "crop_rgba_sha256": "14846b9ee4180bfeead6f346c5be441685aca48d4e5c8eca7304005ac4370be9",
+      "source": {
+        "file": "monochrome_universal_icon_atlas.png",
+        "bbox": [
+          2075,
+          643,
+          84,
+          66
+        ],
+        "region": [
+          2075,
+          634,
+          84,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    }
+  ]
+}

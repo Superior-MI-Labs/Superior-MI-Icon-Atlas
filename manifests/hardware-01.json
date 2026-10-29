@@ -1,0 +1,437 @@
+{
+  "schema": "smi-icon-atlas-sheet/1",
+  "sheet": {
+    "id": "icons.monoline.hardware-01.24x8",
+    "path": "sheets/hardware-01/atlas.png",
+    "foreground_mask": "sheets/hardware-01/atlas.png",
+    "black_outline": "sheets/hardware-01/black-outline.png",
+    "preview": "sheets/hardware-01/inspection-preview.png",
+    "width_px": 2304,
+    "height_px": 768,
+    "cell_px": 96,
+    "columns": 24,
+    "rows": 8,
+    "domain": "hardware",
+    "sha256": "0f4c3b7deb863e09e5d0dea860c41f5c08ff6ee5c120262a0db32777bd5a5e26",
+    "style": "white-geometric-monoline",
+    "variant": "monoline"
+  },
+  "icons": [
+    {
+      "id": "icons.candidate.hardware.r07i14",
+      "cell": [
+        0,
+        0
+      ],
+      "crop_rgba_sha256": "bb940f39a685ff7a57894f87c011c757aa78800d425af185d26d67886892acf7",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1156,
+          660,
+          59,
+          48
+        ],
+        "region": [
+          1156,
+          646,
+          59,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i15",
+      "cell": [
+        1,
+        0
+      ],
+      "crop_rgba_sha256": "b414504c383cd9a0d0300a5d26cabf0f71127a490ef5d6bd451f48f5b8aa9541",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1240,
+          658,
+          47,
+          51
+        ],
+        "region": [
+          1240,
+          646,
+          47,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i16",
+      "cell": [
+        2,
+        0
+      ],
+      "crop_rgba_sha256": "21f2cf3b0891ffbf4f2a49d25f7a656b6d05aa1487679abe62f5170a7cd4eb66",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1312,
+          664,
+          57,
+          38
+        ],
+        "region": [
+          1312,
+          646,
+          57,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i17",
+      "cell": [
+        3,
+        0
+      ],
+      "crop_rgba_sha256": "e40aba601ac466f4d65309c3e060f69ac5424fa8e03c592da18956c836351799",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1393,
+          662,
+          46,
+          44
+        ],
+        "region": [
+          1393,
+          646,
+          46,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i18",
+      "cell": [
+        4,
+        0
+      ],
+      "crop_rgba_sha256": "e8d38fcfa15360fbe976ba9b8e9e46a0b1d9919d7ceed42608f83a647613b5ad",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1465,
+          660,
+          48,
+          47
+        ],
+        "region": [
+          1464,
+          646,
+          49,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i19",
+      "cell": [
+        5,
+        0
+      ],
+      "crop_rgba_sha256": "f01bcdf91598692209c7273fb0c1a26e4fb6c5997f0e637e55fa1561a2e8e9d1",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1538,
+          658,
+          48,
+          51
+        ],
+        "region": [
+          1538,
+          646,
+          48,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i20",
+      "cell": [
+        6,
+        0
+      ],
+      "crop_rgba_sha256": "d3a7bc165115ed9f1fc65ce860b3f649c47966d28bdd918d0c6a9c98e6fafc32",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1611,
+          660,
+          46,
+          47
+        ],
+        "region": [
+          1611,
+          646,
+          46,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i21",
+      "cell": [
+        7,
+        0
+      ],
+      "crop_rgba_sha256": "ec84943c3085e499e6c122d49b5829da6da6aee02a516736418198968c41ced9",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1682,
+          658,
+          50,
+          51
+        ],
+        "region": [
+          1682,
+          646,
+          50,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i22",
+      "cell": [
+        8,
+        0
+      ],
+      "crop_rgba_sha256": "bcf6a853953160062f43ba142ac1fa4bd3ea4d1505b7abef0030536cbf88a912",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1758,
+          658,
+          50,
+          51
+        ],
+        "region": [
+          1758,
+          646,
+          50,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i23",
+      "cell": [
+        9,
+        0
+      ],
+      "crop_rgba_sha256": "744f962e8b6bbb231a909281f6bf3f4047891126a105e59da2efc5ee822da416",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1836,
+          658,
+          50,
+          51
+        ],
+        "region": [
+          1836,
+          646,
+          50,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i24",
+      "cell": [
+        10,
+        0
+      ],
+      "crop_rgba_sha256": "b4bb13a7bc64e3f15d1472465b766a4fa7f60b22cfbd2fe7f858d0b0c3d59d6f",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1922,
+          658,
+          50,
+          51
+        ],
+        "region": [
+          1922,
+          646,
+          51,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i25",
+      "cell": [
+        11,
+        0
+      ],
+      "crop_rgba_sha256": "a514bb1f611d491321aed946b308ac60ce1142379cd37a81dc419fbed0012567",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          1998,
+          658,
+          50,
+          51
+        ],
+        "region": [
+          1998,
+          646,
+          50,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.hardware.r07i26",
+      "cell": [
+        12,
+        0
+      ],
+      "crop_rgba_sha256": "ed82e40ac909d44268bf2afb61648abe69bff2fdf6d0a1f66a9d5fead415d35d",
+      "source": {
+        "file": "white_monoline_hardware_icon_atlas.png",
+        "bbox": [
+          2072,
+          658,
+          50,
+          51
+        ],
+        "region": [
+          2072,
+          646,
+          50,
+          78
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    }
+  ]
+}

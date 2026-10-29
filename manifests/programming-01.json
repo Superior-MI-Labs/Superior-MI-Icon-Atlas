@@ -1,0 +1,117 @@
+{
+  "schema": "smi-icon-atlas-sheet/1",
+  "sheet": {
+    "id": "icons.monoline.programming-01.24x8",
+    "path": "sheets/programming-01/atlas.png",
+    "foreground_mask": "sheets/programming-01/atlas.png",
+    "black_outline": "sheets/programming-01/black-outline.png",
+    "preview": "sheets/programming-01/inspection-preview.png",
+    "width_px": 2304,
+    "height_px": 768,
+    "cell_px": 96,
+    "columns": 24,
+    "rows": 8,
+    "domain": "programming",
+    "sha256": "6d0f7d4e3bf70f9504566db2ff87c51bad821003e8c4dc7664952ae63643f6ba",
+    "style": "white-geometric-monoline",
+    "variant": "monoline"
+  },
+  "icons": [
+    {
+      "id": "icons.candidate.programming.r07i24",
+      "cell": [
+        0,
+        0
+      ],
+      "crop_rgba_sha256": "1cbbb6862685d642c46a66816e58dffd170e69ca7121a9da6c58bf32c27839cb",
+      "source": {
+        "file": "transparent_programming_icon_sprite_sheet.png",
+        "bbox": [
+          1920,
+          637,
+          55,
+          66
+        ],
+        "region": [
+          1920,
+          634,
+          56,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.programming.r07i25",
+      "cell": [
+        1,
+        0
+      ],
+      "crop_rgba_sha256": "31b984a6b36d82fe0dbbda0b787f07133b44c67505d710ad5cfe6b44b294afab",
+      "source": {
+        "file": "transparent_programming_icon_sprite_sheet.png",
+        "bbox": [
+          2007,
+          637,
+          56,
+          66
+        ],
+        "region": [
+          2007,
+          634,
+          56,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    },
+    {
+      "id": "icons.candidate.programming.r07i26",
+      "cell": [
+        2,
+        0
+      ],
+      "crop_rgba_sha256": "e8309b702d0bbb31defbc64aea6543b42909e8a864e19fa86b4c511113500db2",
+      "source": {
+        "file": "transparent_programming_icon_sprite_sheet.png",
+        "bbox": [
+          2086,
+          643,
+          55,
+          59
+        ],
+        "region": [
+          2086,
+          634,
+          56,
+          90
+        ]
+      },
+      "review": {
+        "status": "unreviewed",
+        "art_status": "candidate"
+      },
+      "license": {
+        "id": "Apache-2.0",
+        "rights_reviewed": false,
+        "origin": "generated-candidate"
+      }
+    }
+  ]
+}
