@@ -20,7 +20,7 @@ jobs:
       - name: Validate catalog and sprite geometry
         run: python3 -m unittest discover -s tests -p 'test_*.py' -v
       - name: Validate browser search and dynamic filters
-        run: node --check web/app.js && node tests/browser-search.cjs
+        run: node --check web/app.js && node --check web/featured.js && node tests/browser-search.cjs
       - name: Validate local-first builder, ZIP import/export primitives and packaged demo
         run: node --check web/builder.js && node --check web/timeline-core.js && node --check web/collection-core.js && node --check web/slot-core.js && node tests/builder-contract.cjs && node tests/timeline-core.cjs && node tests/collections-interaction.cjs && node tests/slots-presets.cjs && python3 tools/validate_visual_pack.py web/demo/starter-pack.zip && python3 tools/validate_visual_pack.py web/demo/potions-collection.zip && python3 tools/qualify_asset_zip.py web/demo/potions-collection.zip --out /tmp/smi-atlas-potions-qa
       - uses: actions/configure-pages@v5

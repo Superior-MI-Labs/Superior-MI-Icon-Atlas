@@ -1,0 +1,74 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.examples.animated-icon",
+  "version": "1.0.0",
+  "description": "Original geometric tutorial art for Visual Atlas. Not finished production artwork.",
+  "license": "CC0-1.0",
+  "textures": {
+    "atlas": {
+      "path": "textures/atlas.png",
+      "width_px": 288,
+      "height_px": 96,
+      "alpha": "straight"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.example.pulse.frame1",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        0,
+        0,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.example.pulse.frame2",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        96,
+        0,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.example.pulse.frame3",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        192,
+        0,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.example.pulse",
+      "kind": "sequence",
+      "name": "Looping pulse",
+      "default_fps": 6,
+      "playback": "loop",
+      "tags": [
+        "animation",
+        "icon",
+        "glow",
+        "pulse"
+      ],
+      "frames": [
+        {
+          "asset": "smi.example.pulse.frame1"
+        },
+        {
+          "asset": "smi.example.pulse.frame2"
+        },
+        {
+          "asset": "smi.example.pulse.frame3"
+        }
+      ]
+    }
+  ]
+}

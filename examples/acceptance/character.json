@@ -1,0 +1,11 @@
+{
+  "schema": "smi-ai-acceptance/1",
+  "intent": "A robot sprite set with distinct four-frame idle and walk sequences, and both named states",
+  "checks": [
+    {"type":"asset_kind","asset":"smi.example.robot.states","kind":"state_set"},
+    {"type":"state_contains","asset":"smi.example.robot.states","state":"idle"},
+    {"type":"state_contains","asset":"smi.example.robot.states","state":"walk"},
+    {"type":"sequence_frames","asset":"smi.example.robot.walk","at_least":4},
+    {"type":"sequence_distinct_frames","asset":"smi.example.robot.walk","at_least":3}
+  ]
+}

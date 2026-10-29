@@ -1,0 +1,177 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.examples.character",
+  "version": "1.0.0",
+  "description": "Original geometric tutorial art for Visual Atlas. Not finished production artwork.",
+  "license": "CC0-1.0",
+  "textures": {
+    "atlas": {
+      "path": "textures/atlas.png",
+      "width_px": 384,
+      "height_px": 192,
+      "alpha": "straight"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.example.robot.idle.frame1",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        0,
+        0,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.example.robot.idle.frame2",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        96,
+        0,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.example.robot.idle.frame3",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        192,
+        0,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.example.robot.idle.frame4",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        288,
+        0,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.example.robot.walk.frame1",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        0,
+        96,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.example.robot.walk.frame2",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        96,
+        96,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.example.robot.walk.frame3",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        192,
+        96,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.example.robot.walk.frame4",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        288,
+        96,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "smi.example.robot.idle",
+      "kind": "sequence",
+      "name": "Idle animation",
+      "default_fps": 4,
+      "playback": "loop",
+      "tags": [
+        "robot",
+        "character",
+        "sprite",
+        "animation",
+        "idle"
+      ],
+      "frames": [
+        {
+          "asset": "smi.example.robot.idle.frame1"
+        },
+        {
+          "asset": "smi.example.robot.idle.frame2"
+        },
+        {
+          "asset": "smi.example.robot.idle.frame3"
+        },
+        {
+          "asset": "smi.example.robot.idle.frame4"
+        }
+      ]
+    },
+    {
+      "id": "smi.example.robot.walk",
+      "kind": "sequence",
+      "name": "Walk animation",
+      "default_fps": 8,
+      "playback": "loop",
+      "tags": [
+        "robot",
+        "character",
+        "sprite",
+        "animation",
+        "walk"
+      ],
+      "frames": [
+        {
+          "asset": "smi.example.robot.walk.frame1"
+        },
+        {
+          "asset": "smi.example.robot.walk.frame2"
+        },
+        {
+          "asset": "smi.example.robot.walk.frame3"
+        },
+        {
+          "asset": "smi.example.robot.walk.frame4"
+        }
+      ]
+    },
+    {
+      "id": "smi.example.robot.states",
+      "kind": "state_set",
+      "name": "Robot animation states",
+      "default_state": "idle",
+      "states": {
+        "idle": "smi.example.robot.idle",
+        "walk": "smi.example.robot.walk"
+      },
+      "tags": [
+        "robot",
+        "stateful",
+        "idle",
+        "walk"
+      ]
+    }
+  ]
+}

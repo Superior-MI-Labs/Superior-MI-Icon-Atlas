@@ -1,0 +1,15 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.examples.collection.character-animations",
+  "name": "Robot Idle / Walk Animation Set",
+  "version": "1.0.0",
+  "description": "Original geometric starter and reference manifest. Simple tutorial art, not a finished commercial design.",
+  "entry_asset": "smi.example.robot.states",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Character Animations",
+      "category": "character-animation"
+    }
+  ]
+}

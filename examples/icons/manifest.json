@@ -1,0 +1,36 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.examples.static-icon",
+  "version": "1.0.0",
+  "description": "Original geometric tutorial art for Visual Atlas. Not finished production artwork.",
+  "license": "CC0-1.0",
+  "textures": {
+    "atlas": {
+      "path": "textures/atlas.png",
+      "width_px": 96,
+      "height_px": 96,
+      "alpha": "straight"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.example.icon.star",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "name": "Five-point star",
+      "tags": [
+        "star",
+        "symbol",
+        "icon",
+        "white",
+        "monoline"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.examples.collection.icons",
+  "name": "White Monoline Star",
+  "version": "1.0.0",
+  "description": "Original geometric starter and reference manifest. Simple tutorial art, not a finished commercial design.",
+  "entry_asset": "smi.example.icon.star",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Icons",
+      "category": "icon"
+    }
+  ]
+}

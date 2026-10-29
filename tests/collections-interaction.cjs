@@ -9,6 +9,7 @@ defs[19].pack.assets.push({id:'smi.demo.character',kind:'composition',name:'Mult
 const index={schema:'smi-visual-collection/1',collection_id:'smi.demo.animations',name:'Character Animation Bag',version:'1.0.0',entry_asset:'smi.demo.character',packs:defs.map((d,i)=>({manifest:d.path,label:'Animation '+i,category:'character'}))};
 const {pack:resolved,bag}=C.resolveCollection(index,defs);
 assert.equal(bag.groups.length,20);assert.equal(bag.assetIds.length,21);assert.equal(bag.textureCount,20);assert.equal(bag.entry,'smi.demo.character');
+assert.equal(C.resolveCollection(null,[{path:'manifest.json',pack:{...pack(0),assets:[...pack(0).assets,{id:'smi.demo.seq',kind:'sequence',default_fps:4,playback:'loop',frames:[{asset:'smi.demo.frame0'}]}]}}]).bag.entry,'smi.demo.seq');
 assert.equal(resolved.assets.find(a=>a.id==='smi.demo.frame0').texture,'p0_main');
 assert.equal(resolved.textures.p0_main.path,'packs/p0/textures/sheet.png');
 assert.deepEqual(resolved.assets.find(a=>a.id==='smi.demo.character').layers.map(l=>l.asset),['smi.demo.frame0','smi.demo.frame19']);

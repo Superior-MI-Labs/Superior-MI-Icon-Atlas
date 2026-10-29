@@ -1,0 +1,15 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.examples.collection.interactive-hud",
+  "name": "Interactive Energy Meter",
+  "version": "1.0.0",
+  "description": "Original geometric starter and reference manifest. Simple tutorial art, not a finished commercial design.",
+  "entry_asset": "smi.example.hud.meter",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Interactive Hud",
+      "category": "gui-control"
+    }
+  ]
+}

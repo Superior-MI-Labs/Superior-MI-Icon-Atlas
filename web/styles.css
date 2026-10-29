@@ -4,3 +4,17 @@
 
 /* White artwork requires a dark checkerboard; transparent exports remain unchanged. */
 .checker{background-color:#1c2a3b;background-image:linear-gradient(45deg,#28374b 25%,transparent 25%),linear-gradient(-45deg,#28374b 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#28374b 75%),linear-gradient(-45deg,transparent 75%,#28374b 75%)}
+
+/* Generated public pack discovery, separate from the existing icon gallery. */
+.featured-section{margin:20px clamp(18px,3vw,46px) 26px;padding:22px;border:1px solid var(--border);border-radius:13px;background:var(--surface)}
+.featured-head{display:flex;justify-content:space-between;gap:16px;align-items:start}
+.featured-head h2{font-size:22px;letter-spacing:-.025em;margin:0 0 4px}
+.featured-head p:not(.eyebrow){max-width:680px;color:var(--muted);margin:0 0 14px}
+.featured-search{display:block;font-size:12px;font-weight:650;color:var(--muted);max-width:390px;margin-bottom:10px}
+.featured-search input{margin-top:5px}
+.featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px}
+.featured-card{background:var(--surface2);border:1px solid #465773;border-radius:10px;padding:17px}
+.featured-card h3{font-size:16px;margin:0 0 6px}.featured-card p{font-size:12px;margin:0 0 10px;line-height:1.55}
+.featured-actions{display:flex;gap:10px;flex-wrap:wrap}.featured-actions a{border-radius:7px;padding:7px 9px;border:1px solid #6384b4;font-size:12px}
+.gallery-heading{margin:24px clamp(18px,3vw,46px) 4px;font-size:21px}
+@media(max-width:680px){.featured-head{flex-direction:column}.featured-section{padding:16px}}

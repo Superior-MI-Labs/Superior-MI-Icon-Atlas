@@ -62,6 +62,7 @@ class AssetQualityTests(unittest.TestCase):
                 self.assertTrue((site/path).is_file(),path)
             guide=(site/'ai-guide.html').read_text()
             self.assertLess(len(guide),6500)
-            self.assertIn('QA-CHECKLIST.md',guide)
+            self.assertIn('RELEASE-CHECKLIST.md',guide)
+            self.assertIn('ai/INDEX.md',guide)
 
 if __name__=='__main__':unittest.main()

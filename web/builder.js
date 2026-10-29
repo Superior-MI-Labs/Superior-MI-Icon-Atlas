@@ -581,9 +581,23 @@
     $('add-keyframe').addEventListener('click',()=>editKeyframe(false));
     $('remove-keyframe').addEventListener('click',()=>editKeyframe(true));
     $('export-png').addEventListener('click',()=>{const canvas=$('stage');canvas.toBlob(blob=>{if(blob)download(blob,slug($('composition-name').value)+'-preview.png');else setStatus('PNG export unavailable',true);},'image/png');});
-    $('copy-prompt').addEventListener('click',async()=>{const prompt='Read '+AI_URL+' and its linked visual QA checklist. Faithfully reconstruct my creative request and constraints as a brief; reuse a working template, produce complete original texture images and manifest-driven assets in one ZIP, verify and repack actual sprite boundaries (never assume generated grids are exact), run structural and per-region pixel tests, inspect every crop/animation state, and provide a truthful PASS/WARN/NOT RUN QA receipt. My request:';try{await navigator.clipboard.writeText(prompt);setStatus('Copied AI creation instructions and guide link.')}catch{setStatus('Copy unavailable. Open the AI workflow guide and copy the instructions.',true)}});
+    $('copy-prompt').addEventListener('click',async()=>{const prompt='Read '+AI_URL+'; follow its short checklist and open only the relevant recipe from ai/INDEX.md. Faithfully reconstruct my creative request as a working brief without losing constraints; use the working example, make real source artwork and manifests, measure/repack the actual pixels, run the validator plus pixel/visual checks and one request-specific acceptance test. Return one complete ZIP and a truthful QA receipt. My request:';try{await navigator.clipboard.writeText(prompt);setStatus('Copied AI creation instructions and guide link.')}catch{setStatus('Copy unavailable. Open the AI workflow guide and copy the instructions.',true)}});
   }
   addOfficialIcons();
   try{$('save-bag').checked=localStorage.getItem(bagPersistenceKey)==='yes';}catch{}
   wire();renderBag();refreshList();renderControlPanel();layerInputs();refreshTimeline();requestAnimationFrame(tick);restoreBag();
+  // Example links use only filenames explicitly generated from the bundled demo ZIPs.
+  // Private ZIPs from the user's computer are never fetched or submitted to a server.
+  (async()=>{
+    const requested=new URLSearchParams(location.search).get('example');
+    if(!requested)return;
+    try{
+      const response=await fetch('featured-packs.json');if(!response.ok)throw Error('Example registry unavailable');
+      const data=await response.json();
+      if(!data.packs?.some(p=>p.filename===requested)||!(/^[a-z0-9-]+\.zip$/.test(requested)))throw Error('Unknown example pack');
+      const downloadResponse=await fetch('demo/'+requested);if(!downloadResponse.ok)throw Error('Example archive unavailable');
+      const file=new File([await downloadResponse.blob()],requested,{type:'application/zip'});
+      await importZip(file);setStatus('Opened '+requested+' from Explore. All files stay local to your browser.');
+    }catch(e){setStatus('Could not open example: '+e.message,true)}
+  })();
 })();

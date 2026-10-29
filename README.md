@@ -4,6 +4,15 @@
 
 [Browse the icon gallery](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Manifest index](manifest.json) · [Architecture](docs/ARCHITECTURE.md) · [Artwork policy](docs/ARTWORK-POLICY.md)
 
+## v0.11.0 — AI recipe hierarchy and Explore template discovery
+
+- **Small AI entrypoint:** `docs/ai/START-HERE.md` has a short mandatory to-do list and routes to a categorized recipe library. Agents read only task-relevant instructions plus the common QA gate, avoiding context overload.
+- **Five recipe groups:** icons, animations/characters, GUI interactions, multi-manifest collections, and layered materials. Shared [manifest/API reference](docs/ai/FORMAT-API.md), [final release checklist](docs/ai/RELEASE-CHECKLIST.md) and real executable sample ZIPs.
+- **Four new exact-coordinate starter packs:** simple icon, animated icon, character states and GUI meter. Their source manifests and original artwork live under `examples/`; the site builder deterministically packages them as ZIPs.
+- **Explore full asset packs:** public template cards and search derive their information from the actual bundled ZIP manifests; `Open in Builder` imports and previews the corresponding example. The existing 2,073 icon catalog remains intact.
+- **Executable user-specific QA:** `tools/ai_acceptance.py PACK.zip --acceptance TEST.json --out qa/...` evaluates the request-specific assertions, actual animation frames and named states/presets before printing an honest PASS/FAIL.
+- **Validation gates:** actual example ZIP schemas and pixel regions, documentation links, generated featured index, and URL routing have regression tests. Every AI release still requires a creator-specific acceptance test and a truthful QA receipt.
+
 ## v0.10.0 — AI production kit, exact-grid starters and visual QA
 
 - **Short AI handoff:** [AI guide](web/ai-guide.html) links to [START-HERE](docs/ai/START-HERE.md), [pixel/animation QA](docs/ai/QA-CHECKLIST.md), [working templates](docs/ai/TEMPLATES.md) and [compact prompt examples](docs/ai/PROMPT-EXAMPLES.md). Instructions are progressive, not pasted into one enormous prompt.

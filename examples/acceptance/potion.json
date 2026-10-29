@@ -1,0 +1,10 @@
+{
+  "schema": "smi-ai-acceptance/1",
+  "intent": "A bottle with a Mana preset that selects an animated blue fluid while retaining other fluid options",
+  "checks": [
+    {"type":"asset_kind","asset":"smi.potion.bottle","kind":"composition"},
+    {"type":"preset_selects","asset":"smi.potion.bottle","preset":"Mana","slot":"fluid","option":"smi.fluid.mana"},
+    {"type":"sequence_frames","asset":"smi.fluid.mana","at_least":3},
+    {"type":"sequence_distinct_frames","asset":"smi.fluid.mana","at_least":2}
+  ]
+}

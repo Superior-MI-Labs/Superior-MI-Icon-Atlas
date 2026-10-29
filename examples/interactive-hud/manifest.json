@@ -1,0 +1,119 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.examples.hud-meter",
+  "version": "1.0.0",
+  "description": "Original geometric tutorial art for Visual Atlas. Not finished production artwork.",
+  "license": "CC0-1.0",
+  "textures": {
+    "atlas": {
+      "path": "textures/atlas.png",
+      "width_px": 512,
+      "height_px": 128,
+      "alpha": "straight"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.example.hud.frame",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        0,
+        0,
+        328,
+        56
+      ],
+      "name": "Meter frame"
+    },
+    {
+      "id": "smi.example.hud.fill",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        0,
+        56,
+        320,
+        32
+      ],
+      "name": "Green fill"
+    },
+    {
+      "id": "smi.example.hud.thumb",
+      "kind": "region",
+      "texture": "atlas",
+      "rect_px": [
+        332,
+        0,
+        52,
+        56
+      ],
+      "name": "Slider thumb"
+    },
+    {
+      "id": "smi.example.hud.meter",
+      "kind": "composition",
+      "name": "Interactive energy meter",
+      "size_px": [
+        328,
+        56
+      ],
+      "tags": [
+        "health",
+        "mana",
+        "gui",
+        "slider",
+        "meter",
+        "progress"
+      ],
+      "inputs": {
+        "value": {
+          "type": "number",
+          "default": 72,
+          "min": 0,
+          "max": 100
+        }
+      },
+      "behavior": {
+        "role": "slider",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "fill",
+          "asset": "smi.example.hud.fill",
+          "offset_px": [
+            9,
+            12
+          ],
+          "clip": {
+            "input": "value",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "frame",
+          "asset": "smi.example.hud.frame"
+        }
+      ]
+    }
+  ]
+}
