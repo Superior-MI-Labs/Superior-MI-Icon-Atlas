@@ -1,6 +1,6 @@
 # Visual Atlas AI authoring library
 
-**Start with [START-HERE.md](START-HERE.md).** It is the only required entrypoint for an assistant. Read only the one recipe matching the creator's request, then the mandatory [release checklist](RELEASE-CHECKLIST.md).
+**Start with [START-HERE.md](START-HERE.md).** It is the only required entrypoint for an assistant. Its [creator preflight](CREATOR-PREFLIGHT.md) reconstructs the user's actual goal, researches applicable project constraints and obtains approval for nontrivial production. Read only the task-relevant recipe, use [image-engine guidance](IMAGE-ENGINE-WORKFLOW.md) when generating images, then run the common [release checklist](RELEASE-CHECKLIST.md).
 
 | What you're building | Recipe | Working ZIP |
 |---|---|---|

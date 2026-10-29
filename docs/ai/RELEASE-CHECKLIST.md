@@ -2,6 +2,14 @@
 
 Do not label an asset ready merely because its JSON parses. Structural validation, image inspection, actual behavior, and request-specific acceptance are separate gates.
 
+## 0. Research, creator intent and approval (BEFORE producing expensive assets)
+- [ ] Reconstruct the original user request into a faithful working brief using [creator preflight](CREATOR-PREFLIGHT.md), explicitly separating confirmed requirements, discovered project contracts, optional enhancements and unresolved assumptions.
+- [ ] Inspect relevant linked repositories, attached references, prior accessible project decisions, game engine/renderer integration and established asset templates. If not accessible, say so rather than guessing.
+- [ ] Identify whether the game needs modular character clothing, equipment, directional anatomy, anchors or distinct transition states. Decide these **before** baking art into a flattened sheet.
+- [ ] Compare at least two viable techniques when generation method is consequential; choose one based on suitability, maintenance cost and expected art fidelity.
+- [ ] For multi-asset or costly work, show the creator a scoped blueprint, acceptance criteria, and one qualification slice; obtain approval or explicit delegated decision before bulk production. Document material subsequent changes and their reasons.
+- [ ] Reject unsupported scope creep: the assistant may propose richer details, but they are not mandatory or agreed until accepted.
+
 ## 1. Creator brief and coverage
 - [ ] All assets the creator requested are included; unexpected simplifications are disclosed.
 - [ ] Names, tags, style, animation/state names, defaults, licensing and rights claims are accurate.
@@ -38,6 +46,7 @@ Do not label an asset ready merely because its JSON parses. Structural validatio
 VISUAL ATLAS HANDOFF
 Archive: <filename>.zip
 Collections / manifests / assets / textures: <actual counts>
+Creator brief / architecture approval: APPROVED | DELEGATED | NOT REQUIRED | NOT RUN
 Manifest & dependency checks: PASS | FAIL | NOT RUN
 Pixel / crop scan: PASS | WARN | FAIL | NOT RUN
 Contact sheet review: <reviewed count>/<total regions>
@@ -47,4 +56,4 @@ Remaining warnings: <facts or none>
 Delivery: READY FOR PREVIEW | NEEDS FIXES
 ```
 
-**Rules:** Unrun checks say NOT RUN. Structural PASS does **not** mean artistic or rights clearance. A missing texture, empty required region, invalid dependency or impossible coordinate must block READY FOR PREVIEW. Keep detailed QA evidence separate from the creator-facing one-page result.
+**Rules:** An unapproved material production blueprint or a failing creative-identity gate blocks a final-production claim. Unrun checks say NOT RUN. Structural PASS does **not** mean artistic or rights clearance. A missing texture, empty required region, invalid dependency or impossible coordinate must block READY FOR PREVIEW. Keep detailed QA evidence separate from the creator-facing one-page result.
