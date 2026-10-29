@@ -1,3 +1,3 @@
-# Artwork and provenance notice
+Superior MI Icon Atlas v0.3.2
 
-This release contains generated monoline icon study sheets, normalized into transparent white-RGBA cells. No known Font Awesome or Material Design vector paths were deliberately imported into this v0.3.0 package. A review of potential resemblance and suitability for public redistribution remains outstanding. Original project code and metadata are under Apache-2.0; the generated images are labeled provisional.
+This experimental candidate collection was generated for Superior MI Labs from the included ten concept source images. Original project code and metadata are licensed under Apache-2.0. No Font Awesome or Material Design paths are intentionally included. Artist review is pending.

@@ -1,0 +1,820 @@
+{
+  "version": "0.3.2",
+  "checks": {
+    "total_icons": 2073,
+    "total_sheets": 20,
+    "empty_cell_border_failures": 0,
+    "id_collisions": 0,
+    "invalid_icons": 0,
+    "all_production_sprites_white": true,
+    "all_crops_nonempty": true,
+    "source_registration": "per-row foreground isolation; manual semantic inspection pending",
+    "errors": []
+  },
+  "sources": [
+    {
+      "category": "programming",
+      "input": "transparent_programming_icon_sprite_sheet.png",
+      "source_dimensions": [
+        2172,
+        724
+      ],
+      "source_row_bounds": [
+        0,
+        90,
+        181,
+        272,
+        362,
+        452,
+        543,
+        634,
+        724
+      ],
+      "row_details": [
+        {
+          "row": 0,
+          "start_y": 0,
+          "end_y": 90,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 1,
+          "start_y": 90,
+          "end_y": 181,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 2,
+          "start_y": 181,
+          "end_y": 272,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 3,
+          "start_y": 272,
+          "end_y": 362,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 4,
+          "start_y": 362,
+          "end_y": 452,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 5,
+          "start_y": 452,
+          "end_y": 543,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 6,
+          "start_y": 543,
+          "end_y": 634,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 7,
+          "start_y": 634,
+          "end_y": 724,
+          "raw_range_count": 27,
+          "successful_icons": 27
+        }
+      ],
+      "extracted": 195
+    },
+    {
+      "category": "developer-tools",
+      "input": "monochrome_developer_tools_icon_grid.png",
+      "source_dimensions": [
+        2172,
+        724
+      ],
+      "source_row_bounds": [
+        0,
+        123,
+        204,
+        295,
+        386,
+        479,
+        565,
+        646,
+        724
+      ],
+      "row_details": [
+        {
+          "row": 0,
+          "start_y": 0,
+          "end_y": 123,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 1,
+          "start_y": 123,
+          "end_y": 204,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 2,
+          "start_y": 204,
+          "end_y": 295,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 3,
+          "start_y": 295,
+          "end_y": 386,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 4,
+          "start_y": 386,
+          "end_y": 479,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 5,
+          "start_y": 479,
+          "end_y": 565,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 6,
+          "start_y": 565,
+          "end_y": 646,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 7,
+          "start_y": 646,
+          "end_y": 724,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        }
+      ],
+      "extracted": 207
+    },
+    {
+      "category": "files-media",
+      "input": "monochrome_file_and_media_icon_atlas.png",
+      "source_dimensions": [
+        2172,
+        724
+      ],
+      "source_row_bounds": [
+        0,
+        100,
+        193,
+        286,
+        381,
+        479,
+        572,
+        657,
+        724
+      ],
+      "row_details": [
+        {
+          "row": 0,
+          "start_y": 0,
+          "end_y": 100,
+          "raw_range_count": 30,
+          "successful_icons": 30
+        },
+        {
+          "row": 1,
+          "start_y": 100,
+          "end_y": 193,
+          "raw_range_count": 30,
+          "successful_icons": 30
+        },
+        {
+          "row": 2,
+          "start_y": 193,
+          "end_y": 286,
+          "raw_range_count": 30,
+          "successful_icons": 30
+        },
+        {
+          "row": 3,
+          "start_y": 286,
+          "end_y": 381,
+          "raw_range_count": 30,
+          "successful_icons": 30
+        },
+        {
+          "row": 4,
+          "start_y": 381,
+          "end_y": 479,
+          "raw_range_count": 30,
+          "successful_icons": 30
+        },
+        {
+          "row": 5,
+          "start_y": 479,
+          "end_y": 572,
+          "raw_range_count": 30,
+          "successful_icons": 30
+        },
+        {
+          "row": 6,
+          "start_y": 572,
+          "end_y": 657,
+          "raw_range_count": 30,
+          "successful_icons": 30
+        },
+        {
+          "row": 7,
+          "start_y": 657,
+          "end_y": 724,
+          "raw_range_count": 32,
+          "successful_icons": 32
+        }
+      ],
+      "extracted": 242
+    },
+    {
+      "category": "hardware",
+      "input": "white_monoline_hardware_icon_atlas.png",
+      "source_dimensions": [
+        2172,
+        724
+      ],
+      "source_row_bounds": [
+        0,
+        110,
+        197,
+        294,
+        384,
+        478,
+        570,
+        646,
+        724
+      ],
+      "row_details": [
+        {
+          "row": 0,
+          "start_y": 0,
+          "end_y": 110,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 1,
+          "start_y": 110,
+          "end_y": 197,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 2,
+          "start_y": 197,
+          "end_y": 294,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 3,
+          "start_y": 294,
+          "end_y": 384,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 4,
+          "start_y": 384,
+          "end_y": 478,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 5,
+          "start_y": 478,
+          "end_y": 570,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 6,
+          "start_y": 570,
+          "end_y": 646,
+          "raw_range_count": 27,
+          "successful_icons": 27
+        },
+        {
+          "row": 7,
+          "start_y": 646,
+          "end_y": 724,
+          "raw_range_count": 27,
+          "successful_icons": 27
+        }
+      ],
+      "extracted": 205
+    },
+    {
+      "category": "network-cloud",
+      "input": "monochrome_cloud_network_icon_atlas.png",
+      "source_dimensions": [
+        2172,
+        724
+      ],
+      "source_row_bounds": [
+        0,
+        94,
+        184,
+        275,
+        366,
+        457,
+        547,
+        634,
+        724
+      ],
+      "row_details": [
+        {
+          "row": 0,
+          "start_y": 0,
+          "end_y": 94,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 1,
+          "start_y": 94,
+          "end_y": 184,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 2,
+          "start_y": 184,
+          "end_y": 275,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 3,
+          "start_y": 275,
+          "end_y": 366,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 4,
+          "start_y": 366,
+          "end_y": 457,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 5,
+          "start_y": 457,
+          "end_y": 547,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 6,
+          "start_y": 547,
+          "end_y": 634,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 7,
+          "start_y": 634,
+          "end_y": 724,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        }
+      ],
+      "extracted": 201
+    },
+    {
+      "category": "data-ai",
+      "input": "monoline_data_and_ai_icon_atlas.png",
+      "source_dimensions": [
+        2172,
+        724
+      ],
+      "source_row_bounds": [
+        0,
+        90,
+        177,
+        265,
+        355,
+        446,
+        532,
+        607,
+        724
+      ],
+      "row_details": [
+        {
+          "row": 0,
+          "start_y": 0,
+          "end_y": 90,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 1,
+          "start_y": 90,
+          "end_y": 177,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 2,
+          "start_y": 177,
+          "end_y": 265,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 3,
+          "start_y": 265,
+          "end_y": 355,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 4,
+          "start_y": 355,
+          "end_y": 446,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 5,
+          "start_y": 446,
+          "end_y": 532,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 6,
+          "start_y": 532,
+          "end_y": 607,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 7,
+          "start_y": 607,
+          "end_y": 724,
+          "raw_range_count": 27,
+          "successful_icons": 27
+        }
+      ],
+      "extracted": 204
+    },
+    {
+      "category": "ui-controls",
+      "input": "monochrome_ui_icon_grid_sheet.png",
+      "source_dimensions": [
+        2172,
+        724
+      ],
+      "source_row_bounds": [
+        0,
+        96,
+        191,
+        285,
+        386,
+        483,
+        572,
+        646,
+        724
+      ],
+      "row_details": [
+        {
+          "row": 0,
+          "start_y": 0,
+          "end_y": 96,
+          "raw_range_count": 30,
+          "successful_icons": 30
+        },
+        {
+          "row": 1,
+          "start_y": 96,
+          "end_y": 191,
+          "raw_range_count": 27,
+          "successful_icons": 27
+        },
+        {
+          "row": 2,
+          "start_y": 191,
+          "end_y": 285,
+          "raw_range_count": 28,
+          "successful_icons": 28
+        },
+        {
+          "row": 3,
+          "start_y": 285,
+          "end_y": 386,
+          "raw_range_count": 28,
+          "successful_icons": 28
+        },
+        {
+          "row": 4,
+          "start_y": 386,
+          "end_y": 483,
+          "raw_range_count": 28,
+          "successful_icons": 28
+        },
+        {
+          "row": 5,
+          "start_y": 483,
+          "end_y": 572,
+          "raw_range_count": 28,
+          "successful_icons": 28
+        },
+        {
+          "row": 6,
+          "start_y": 572,
+          "end_y": 646,
+          "raw_range_count": 28,
+          "successful_icons": 28
+        },
+        {
+          "row": 7,
+          "start_y": 646,
+          "end_y": 724,
+          "raw_range_count": 28,
+          "successful_icons": 28
+        }
+      ],
+      "extracted": 225
+    },
+    {
+      "category": "fantasy-gaming",
+      "input": "monochrome_rpg_icon_sprite_sheet.png",
+      "source_dimensions": [
+        2172,
+        724
+      ],
+      "source_row_bounds": [
+        0,
+        91,
+        181,
+        275,
+        367,
+        463,
+        549,
+        635,
+        724
+      ],
+      "row_details": [
+        {
+          "row": 0,
+          "start_y": 0,
+          "end_y": 91,
+          "raw_range_count": 27,
+          "successful_icons": 27
+        },
+        {
+          "row": 1,
+          "start_y": 91,
+          "end_y": 181,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 2,
+          "start_y": 181,
+          "end_y": 275,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 3,
+          "start_y": 275,
+          "end_y": 367,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 4,
+          "start_y": 367,
+          "end_y": 463,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 5,
+          "start_y": 463,
+          "end_y": 549,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 6,
+          "start_y": 549,
+          "end_y": 635,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        },
+        {
+          "row": 7,
+          "start_y": 635,
+          "end_y": 724,
+          "raw_range_count": 26,
+          "successful_icons": 26
+        }
+      ],
+      "extracted": 205
+    },
+    {
+      "category": "nature",
+      "input": "monochrome_nature_icon_atlas.png",
+      "source_dimensions": [
+        2172,
+        724
+      ],
+      "source_row_bounds": [
+        0,
+        91,
+        181,
+        272,
+        368,
+        459,
+        549,
+        636,
+        724
+      ],
+      "row_details": [
+        {
+          "row": 0,
+          "start_y": 0,
+          "end_y": 91,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 1,
+          "start_y": 91,
+          "end_y": 181,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 2,
+          "start_y": 181,
+          "end_y": 272,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 3,
+          "start_y": 272,
+          "end_y": 368,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 4,
+          "start_y": 368,
+          "end_y": 459,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 5,
+          "start_y": 459,
+          "end_y": 549,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 6,
+          "start_y": 549,
+          "end_y": 636,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 7,
+          "start_y": 636,
+          "end_y": 724,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        }
+      ],
+      "extracted": 196
+    },
+    {
+      "category": "universal",
+      "input": "monochrome_universal_icon_atlas.png",
+      "source_dimensions": [
+        2172,
+        724
+      ],
+      "source_row_bounds": [
+        0,
+        93,
+        185,
+        278,
+        376,
+        465,
+        551,
+        634,
+        724
+      ],
+      "row_details": [
+        {
+          "row": 0,
+          "start_y": 0,
+          "end_y": 93,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 1,
+          "start_y": 93,
+          "end_y": 185,
+          "raw_range_count": 25,
+          "successful_icons": 25
+        },
+        {
+          "row": 2,
+          "start_y": 185,
+          "end_y": 278,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 3,
+          "start_y": 278,
+          "end_y": 376,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 4,
+          "start_y": 376,
+          "end_y": 465,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 5,
+          "start_y": 465,
+          "end_y": 551,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        },
+        {
+          "row": 6,
+          "start_y": 551,
+          "end_y": 634,
+          "raw_range_count": 23,
+          "successful_icons": 23
+        },
+        {
+          "row": 7,
+          "start_y": 634,
+          "end_y": 724,
+          "raw_range_count": 24,
+          "successful_icons": 24
+        }
+      ],
+      "extracted": 193
+    }
+  ],
+  "alerts": [],
+  "release_status": "technical_geometry_pass, individual_semantic_and_visual_review_pending",
+  "notes": [
+    "Input images were NOT uniformly 24x8 grids.",
+    "v0.3.1 checksums were internally consistent but did not test source alignment.",
+    "v0.3.2 groups original glyphs by source rows and foreground isolation before repacking.",
+    "Source-image provenance is included; no semantic labels are claimed without review."
+  ],
+  "source_edge_contacts": [
+    {
+      "id": "icons.candidate.files-media.r02i29",
+      "edge_pixels": 1
+    },
+    {
+      "id": "icons.candidate.fantasy-gaming.r01i12",
+      "edge_pixels": 2
+    }
+  ],
+  "source_edge_contacts_not_zero": 2,
+  "flags": [
+    "Technical cell geometry and alpha pass; semantic/visual art approval incomplete.",
+    "Residual input-edge contacts should be inspected before individual artwork is declared final.",
+    "Source input layouts are irregular; do not apply a fixed 24x8 crop to them."
+  ]
+}

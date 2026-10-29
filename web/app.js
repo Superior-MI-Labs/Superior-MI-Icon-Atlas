@@ -27,7 +27,7 @@
   [...new Set(catalog.icons.map(x => x.quality).filter(Boolean))].sort().forEach(x => option(quality, x, x));
   $('release').textContent = 'v' + String(catalog.version || 'dev');
   const stats = $('stats');
-  for (const [n, label] of [[catalog.icons.length, 'ASSETS'], [new Set(catalog.icons.map(x => x.concept_id)).size, 'CONCEPTS'], [catalog.sheets.length, 'ATLAS SHEETS']]) {
+  for (const [n, label] of [[catalog.icons.length, 'ASSETS'], [new Set(catalog.icons.map(x => x.domain)).size, 'CATEGORIES'], [catalog.sheets.length, 'ATLAS SHEETS']]) {
     const block = document.createElement('div'); block.className='stat';
     const strong=document.createElement('strong'); strong.textContent=n.toLocaleString();
     const sub=document.createElement('span');sub.textContent=label;
