@@ -47,6 +47,7 @@ GitHub Pages already hosts a read-only catalog. Evolve its existing browser incr
 - `examples/ui-button.json`: independent normal/hover/pressed/disabled states with nine-slice geometry.
 - `examples/health-bar.json`: one numeric value clips a fill layer, with a scalable frame.
 - `examples/glass-rain.json`: glass base, crack state set and independently toggled rain sequence.
+- `examples/ui-slider.json`: a normalized value drives both a clipped fill and the thumb position; no slider-specific renderer.
 
 These fixtures declare imaginary asset filenames **for schema exploration only**; they are not published artwork or functional previews. Rendering QA requires real textures later.
 
