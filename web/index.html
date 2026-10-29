@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101724">
+  <meta name="description" content="Explore and download transparent icons from the open-source Superior MI Icon Atlas.">
+  <title>Superior MI Icon Atlas · Browse & Download</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="mark" aria-hidden="true">▧</span><div><p class="eyebrow">SUPERIOR MI LABS</p><h1>Icon Atlas</h1></div></div>
+    <div class="headright"><span id="release" class="muted"></span><a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a></div>
+  </header>
+  <section class="intro" aria-labelledby="intro-title">
+    <div><p class="eyebrow">A GROWING VISUAL VOCABULARY</p><h2 id="intro-title">Find the right symbol. Take just the one you need.</h2><p>Explore original geometric icons, inspect variants, and download transparent 96×96 PNGs. Downloads use the exact manifest ID as the filename.</p></div>
+    <div class="stats" id="stats" aria-label="Atlas statistics"></div>
+  </section>
+  <section class="toolbar" aria-label="Filter icons">
+    <label class="searchbox">Search icons <input id="search" type="search" placeholder="picture, png, bug, i32, family…" autocomplete="off"></label>
+    <label>Category <select id="domain"><option value="">All categories</option></select></label>
+    <label>Style <select id="variant"><option value="">All styles</option></select></label>
+    <label>Artwork <select id="quality"><option value="">All statuses</option></select></label>
+  </section>
+  <div class="results-header"><span id="count" aria-live="polite"></span><span class="muted">Checkerboard previews indicate transparency</span></div>
+  <main id="gallery" class="gallery" aria-label="Icon gallery"></main>
+  <div class="loadmore"><button id="more" type="button" hidden>Load more</button></div>
+  <footer>Artwork status: design-review. The atlas is under active development. <a href="manifest.json" id="manifestlink">Read the manifest</a> · <a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License</a></footer>
+  <dialog id="detail" aria-labelledby="detail-title">
+    <div class="detail-head"><div><p class="eyebrow">ICON DETAILS</p><h2 id="detail-title"></h2></div><button type="button" id="close" class="close" aria-label="Close detail">✕</button></div>
+    <div class="detail-body">
+      <div class="detail-preview checker"><canvas id="detail-canvas" width="96" height="96" aria-label="Icon preview"></canvas></div>
+      <div class="detail-data">
+        <span class="fieldlabel">Manifest ID</span>
+        <div class="idrow"><code id="detail-id"></code><button id="copy" type="button" class="compact">Copy</button></div>
+        <dl id="attributes"></dl>
+        <label class="tint-control"><input type="checkbox" id="tint-enabled"> Recolor foreground <input id="tint-color" type="color" value="#4b9cff" aria-label="Foreground color" disabled></label>
+        <div class="actions"><button id="download" type="button" class="primary">Download PNG</button><button type="button" id="share" class="secondary">Copy icon link</button></div>
+        <p class="muted fineprint" id="filename"></p>
+      </div>
+    </div>
+  </dialog>
+  <div id="notice" role="status" aria-live="polite" class="notice" hidden></div>
+</body>
+</html>
