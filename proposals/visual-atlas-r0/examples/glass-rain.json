@@ -1,0 +1,162 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.demo.glass-rain",
+  "version": "0.1.0",
+  "textures": {
+    "glass": {
+      "path": "textures/glass.png",
+      "width_px": 1024,
+      "height_px": 768
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.glass.base",
+      "kind": "region",
+      "texture": "glass",
+      "rect_px": [
+        0,
+        0,
+        256,
+        256
+      ]
+    },
+    {
+      "id": "smi.glass.crack.hairline",
+      "kind": "region",
+      "texture": "glass",
+      "rect_px": [
+        256,
+        0,
+        256,
+        256
+      ]
+    },
+    {
+      "id": "smi.glass.crack.shattered",
+      "kind": "region",
+      "texture": "glass",
+      "rect_px": [
+        512,
+        0,
+        256,
+        256
+      ]
+    },
+    {
+      "id": "smi.glass.clear",
+      "kind": "region",
+      "texture": "glass",
+      "rect_px": [
+        768,
+        0,
+        256,
+        256
+      ]
+    },
+    {
+      "id": "smi.glass.rain.frame-a",
+      "kind": "region",
+      "texture": "glass",
+      "rect_px": [
+        0,
+        256,
+        256,
+        256
+      ]
+    },
+    {
+      "id": "smi.glass.rain.frame-b",
+      "kind": "region",
+      "texture": "glass",
+      "rect_px": [
+        256,
+        256,
+        256,
+        256
+      ]
+    },
+    {
+      "id": "smi.glass.cracks",
+      "kind": "state_set",
+      "default_state": "intact",
+      "states": {
+        "intact": "smi.glass.clear",
+        "hairline": "smi.glass.crack.hairline",
+        "shattered": "smi.glass.crack.shattered"
+      }
+    },
+    {
+      "id": "smi.glass.rain",
+      "kind": "sequence",
+      "name": "Rain on glass",
+      "tags": [
+        "rain",
+        "water",
+        "weather",
+        "loop"
+      ],
+      "default_fps": 12,
+      "playback": "loop",
+      "frames": [
+        {
+          "asset": "smi.glass.rain.frame-a"
+        },
+        {
+          "asset": "smi.glass.rain.frame-b"
+        }
+      ]
+    },
+    {
+      "id": "smi.glass.panel",
+      "kind": "composition",
+      "name": "Reactive glass panel",
+      "tags": [
+        "glass",
+        "window",
+        "cracked",
+        "rain",
+        "weather",
+        "animated"
+      ],
+      "size_px": [
+        256,
+        256
+      ],
+      "inputs": {
+        "damage": {
+          "type": "enum",
+          "default": "intact",
+          "values": [
+            "intact",
+            "hairline",
+            "shattered"
+          ]
+        },
+        "raining": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "layers": [
+        {
+          "id": "glass",
+          "asset": "smi.glass.base"
+        },
+        {
+          "id": "cracks",
+          "asset": "smi.glass.cracks",
+          "state_from_input": "damage"
+        },
+        {
+          "id": "weather",
+          "asset": "smi.glass.rain",
+          "visible_when": {
+            "input": "raining",
+            "equals": true
+          }
+        }
+      ]
+    }
+  ]
+}
