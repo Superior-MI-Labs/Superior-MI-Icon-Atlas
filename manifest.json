@@ -1,8 +1,8 @@
 {
   "schema": "smi-icon-atlas/3",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "pack": "Superior MI Icon Atlas",
-  "description": "One registry index; authored data lives in one manifest per atlas sheet.",
+  "description": "Original Icon Atlas collection (2,073 icons) plus a separate local-first Visual Atlas Builder; icon sheet contracts remain unchanged.",
   "styles": {
     "white-geometric-monoline": {
       "label": "White geometric monoline",

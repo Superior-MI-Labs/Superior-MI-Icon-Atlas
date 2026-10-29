@@ -2,24 +2,27 @@
 # Run as `bash publish-to-github.sh`. Fails only in this child process.
 set -Eeuo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REMOTE='https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas.git'
+REMOTE="${SMI_ATLAS_REMOTE:-https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas.git}"
 # Reviewed live main head at the beginning of this audit. Refuse to discard later edits.
-EXPECTED_HEAD='e95f979a82c32a3f77216148bff47432ebf86837'
-LOG="$HOME/Downloads/icon-atlas-v0.5.0-publish.log"
+EXPECTED_HEAD="${SMI_EXPECTED_HEAD:-b1debc18a1a29d916879ef0f8eee1cc139842800}"
+LOG="$HOME/Downloads/visual-atlas-v0.7.0-publish.log"
+export GIT_PAGER=cat PAGER=cat
 mkdir -p "$(dirname "$LOG")"
 command -v git >/dev/null || { echo 'ERROR: git is required' >&2; exit 1; }
+# Fast safety check before expensive QA. The clone is checked again after QA.
+HEAD_NOW="$(git ls-remote --heads "$REMOTE" main | awk '{print $1}')"
+if [ "$HEAD_NOW" != "$EXPECTED_HEAD" ]; then
+  echo 'STOP: GitHub main changed since this release package was prepared.'
+  echo "Expected: $EXPECTED_HEAD"
+  echo "Found:    $HEAD_NOW"
+  echo 'No files changed. Refresh the package against the new revision.'
+  exit 2
+fi
 command -v python3 >/dev/null || { echo 'ERROR: python3 is required' >&2; exit 1; }
 (
   cd "$ROOT"
-  python3 atlasctl.py validate
-  python3 tools/build_site.py
-  if python3 -c 'from PIL import Image' >/dev/null 2>&1; then
-    python3 atlasctl.py validate --deep
-    python3 -m unittest discover -s tests -p 'test_site.py' -v
-  else
-    echo 'NOTE: Pillow not installed locally. Quick validation passed; CI will run deep pixel checks.'
-  fi
-  if command -v node >/dev/null; then node --check web/app.js && node tests/browser-search.cjs; fi
+  bash RUN-ALL.sh
+
 ) 2>&1 | tee "$LOG"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
@@ -45,8 +48,8 @@ find "$TMP/repo" -type f -name '*.pyc' -delete
   git add -A
   git diff --cached --check
   if git diff --cached --quiet; then echo 'Already current; nothing to publish.';exit 0;fi
-  git diff --cached --stat
-  git -c user.name='Superior MI Labs' -c user.email='superior.mi.labs@gmail.com' commit -m 'refactor: sheet-owned manifests, visual search, semantic curation v0.5.0'
+  git --no-pager diff --cached --stat
+  git -c user.name='Superior MI Labs' -c user.email='superior.mi.labs@gmail.com' commit -m 'feat: local-first Visual Atlas builder and portable asset pack workflow v0.7.0'
   git push origin main
 )
 echo 'Published. GitHub Pages workflow will deploy automatically from main.'

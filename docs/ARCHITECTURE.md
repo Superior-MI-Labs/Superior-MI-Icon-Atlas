@@ -83,3 +83,13 @@ The same pack can serve Studio, websites, native apps, games, and toolkits. No s
 v0.3.2 `manifest.json` was `smi-icon-atlas/2` and contained every icon inline. v0.4.0 `manifest.json` is `smi-icon-atlas/3` and links to per-sheet JSON; code reading the old inline shape must use `atlasctl.load()` or implement the documented resolver. The pixel atlas artwork and IDs remain unchanged. Generated browser data still arrives as `window.ICON_ATLAS_DATA`.
 
 Original raw source images and QA screenshots are retained for provenance. Duplicate `foreground-mask.png` files were removed only after byte-for-byte matching their corresponding atlas PNGs. `inspection-preview.png` is for authors, not production rendering.
+
+## Visual Atlas v0.7 optional animation extension
+
+The existing root registry and per-sheet icon manifests remain authoritative and unchanged. The separate `smi-visual-pack/1` schema accepts optional `duration_ms` and `playback` on compositions. Composition layers accept **tracks**, each containing a named numeric property and strictly increasing `keyframes` with `time_ms`, `value`, and optional `easing` (`linear`, `smooth`, `step`). Valid properties are `x`, `y`, `opacity`, `scale_x`, `scale_y`, `rotation_deg`. Frame count derives from referenced sequences; it is never duplicated as an authored field.
+
+The pure `web/timeline-core.js` handles interpolation and time normalization for both the preview and Node tests. A composition renderer uses the evaluated fields without mutating the authored manifest. Old packs with no tracks remain unchanged. When exported, the builder writes the same optional fields into portable pack manifests. PNG-frame ZIPs contain rendered images plus `frames.json` timing metadata; those are convenience outputs, not an authored source of truth. Game engines may consume the portable pack natively or use flattened frames.
+
+Tracks are deliberately limited: no arbitrary code, event scripts, networking, shader expressions, or transitions requiring physics. Future texture-channel animation should extend the controlled property vocabulary rather than embedding executable expressions.
+
+X/Y keyframe values are **additive displacements** relative to a layer’s `offset_px`. The builder scene uses the same rule so exported and reimported manifests render at the same coordinates.

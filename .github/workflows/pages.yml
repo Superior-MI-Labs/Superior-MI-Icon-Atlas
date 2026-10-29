@@ -1,4 +1,4 @@
-name: Publish Icon Atlas
+name: Publish Visual Atlas
 on:
   push:
     branches: [main]
@@ -18,9 +18,11 @@ jobs:
       - name: Install image validation dependencies
         run: python3 -m pip install -r requirements-test.txt
       - name: Validate catalog and sprite geometry
-        run: python3 -m unittest discover -s tests -p 'test_site.py' -v
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
       - name: Validate browser search and dynamic filters
         run: node --check web/app.js && node tests/browser-search.cjs
+      - name: Validate local-first builder, ZIP import/export primitives and packaged demo
+        run: node --check web/builder.js && node --check web/timeline-core.js && node tests/builder-contract.cjs && node tests/timeline-core.cjs && python3 tools/validate_visual_pack.py web/demo/starter-pack.zip
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

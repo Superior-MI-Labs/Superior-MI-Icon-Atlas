@@ -19,8 +19,17 @@ def build(dest:Path|None=None):
     if dest==ROOT or ROOT in dest.parents and 'sheets' in dest.parts:
         raise ValueError('Refusing to build over source')
     dest.mkdir(parents=True,exist_ok=True)
-    for name in ('index.html','styles.css','app.js'):
+    for name in ('index.html','styles.css','app.js','builder.html','builder.css','timeline-core.js','builder.js','ai-guide.html'):
         shutil.copy2(ROOT/'web'/name,dest/name)
+    vendor=ROOT/'web'/'vendor'
+    if not (vendor/'jszip.min.js').is_file() or not (vendor/'JSZip-LICENSE.md').is_file(): raise ValueError('Missing bundled offline ZIP library')
+    (dest/'vendor').mkdir(exist_ok=True)
+    shutil.copy2(vendor/'jszip.min.js',dest/'vendor'/'jszip.min.js')
+    shutil.copy2(vendor/'JSZip-LICENSE.md',dest/'vendor'/'JSZip-LICENSE.md')
+    (dest/'schemas').mkdir(exist_ok=True)
+    shutil.copy2(ROOT/'schemas'/'smi-visual-pack-v1.schema.json',dest/'schemas'/'smi-visual-pack-v1.schema.json')
+    (dest/'demo').mkdir(exist_ok=True)
+    shutil.copy2(ROOT/'web'/'demo'/'starter-pack.zip',dest/'demo'/'starter-pack.zip')
     src_files=['manifest.json','LICENSE','NOTICE.md']
     registry=json.loads((ROOT/'manifest.json').read_text(encoding='utf-8'))
     src_files.extend(ref['manifest'] for ref in registry['sheets'])

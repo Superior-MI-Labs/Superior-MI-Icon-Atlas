@@ -1,8 +1,31 @@
-# Superior MI Icon Atlas
+# Superior MI Visual Atlas (formerly Icon Atlas)
 
 **Reusable transparent icon atlases, a typed manifest vocabulary, and a searchable static browser.**
 
 [Browse the icon gallery](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Manifest index](manifest.json) · [Architecture](docs/ARCHITECTURE.md) · [Artwork policy](docs/ARTWORK-POLICY.md)
+
+## v0.7.0 — Keyframe timeline, frame exports and reliable publisher
+
+- **Fixed Linux publisher:** the previous v0.6.0 script attempted the Python test suite before installing `jsonschema`; `RUN-ALL.sh` now installs missing Pillow/jsonschema into an isolated reusable venv and executes the full required tests before any Git operation.
+- **Timeline editor:** select a composition layer, scrub time, set/delete keyframes for x, y, opacity, scale X/Y and rotation; choose linear, smooth or step interpolation.
+- **Playback:** per-composition `duration_ms`, loop / once / ping-pong. A pure `timeline-core.js` drives browser rendering and Node regressions.
+- **Portable animation:** layer tracks are authored into exported `smi-visual-pack/1` manifests and survive reimport. An additional export option writes timed PNG frames and `frames.json` into a ZIP.
+- **Private safety:** ZIP imports enforce member and total uncompressed-size limits before CRC inflation; the pack validator rejects invalid frame ordering or impossible values.
+- **Compatibility:** the original 2,073 icon IDs and pixels are unchanged. The builder and v0.6.0 pack formats remain compatible; `tracks` and `duration_ms` are optional fields.
+
+### Run and publish
+
+```bash
+bash RUN-ALL.sh          # full QA; installs missing deps in a private venv
+bash RUN-LOCALLY.sh     # starts local static site (Ctrl+C to stop)
+# After the tests pass, use bash publish-to-github.sh to publish this release.
+```
+
+The runtime is a local-first Canvas 2D preview, not a server-side upload tool. Browser preview tests performed against injected Chromium resources and a real ZIP import→export→reimport cycle. Browser-navigation restrictions prevent directly testing the GitHub Pages URL here.
+
+## v0.6.0 — Local-first Visual Atlas Builder
+
+This release adds a separate local-first builder for browsing and composing imported icons, sprites, layers, states, animation sequences and GUI components. **Existing v0.5.0 icon artwork and IDs remain unchanged.**
 
 ## v0.5.0 — Visual curation and search precision
 

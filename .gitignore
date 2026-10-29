@@ -9,3 +9,6 @@ __pycache__/
 *.bak-*
 # Generated catalog; GitHub Actions rebuilds it from manifest + web/.
 /site/
+
+# Ship the locally usable demo pack. Release ZIPs remain ignored.
+!web/demo/starter-pack.zip

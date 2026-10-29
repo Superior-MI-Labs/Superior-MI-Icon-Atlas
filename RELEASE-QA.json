@@ -1,5 +1,5 @@
 {
-  "release": "v0.5.0",
+  "release": "v0.7.0",
   "github_published": false,
   "derived_from": "v0.4.0",
   "total_icons": 2073,
@@ -20,15 +20,39 @@
   "geometry_and_crop_changes": 0,
   "root_manifest_bytes": 5322,
   "test_evidence": {
-    "unit_tests": "5 passed",
-    "deep_png_integrity": "PASS (all 2073)",
-    "browser_search_vm": "PASS",
-    "js_syntax": "PASS",
-    "raw_texture_sha_comparison_with_v0.4.0": "all same"
+    "python_unittests": "10 passed",
+    "existing_icons": "2073 unchanged",
+    "deep_png_integrity": "PASS",
+    "node": "timeline interpolation + existing contracts PASS",
+    "chromium": "real import > two keyframes > export composition ZIP > export 24 PNG frames > reimport PASS",
+    "production_publish": "not performed",
+    "publisher_local": "PASS: local git publish; branch-head rejection exercised via preflight",
+    "pixel_identical_roundtrip": "PASS: Chromium original composition at 1000 ms equals reimported composition at 1000 ms"
   },
   "limitations": [
-    "Search labels are visually reviewed, not proven artistically or legally cleared.",
-    "Browser end-to-end interactions not qualified on Linux host.",
-    "Live GitHub main not updated by this package."
+    "GitHub Pages v0.7 deploy pending",
+    "Browser test uses injected local resources because direct navigation blocked",
+    "No MP4, GIF or WebGL export; PNG frames only",
+    "Existing candidate artwork rights still under review"
+  ],
+  "previous_version": "v0.5.0",
+  "notes": "v0.5.0 is live on main at b1debc1. v0.7.0 is a complete bundled update including the previously unpushed v0.6 builder; nothing has been pushed from this patch. Existing icon art and IDs remain unchanged.",
+  "builder_contract": "smi-visual-pack/1",
+  "builder_demo_assets": 27,
+  "builder_py_unittests": "8 passed",
+  "builder_js_contract": "PASS",
+  "builder_browser_smoke": "PASS in Chromium using injected local HTML/resources; direct localhost navigation blocked by environment",
+  "zip_roundtrip": "PASS: demo import > composition export > ZIP reimport",
+  "offline_zip": "vendored JSZip 3.10.1 (MIT)",
+  "privacy": "browser-local imported files; no upload endpoint",
+  "artwork_license": "original procedural demo CC0-1.0 only; legacy candidate art remains Apache-2.0 pending rights review",
+  "publisher_dependency_fix": "RUN-ALL.sh installs Pillow/jsonschema into isolated venv before full tests; no silent skip",
+  "new_features": [
+    "composition layer keyframe timeline",
+    "linear/smooth/step interpolation",
+    "loop/once/pingpong playback",
+    "portable keyframe manifest export",
+    "PNG frame sequence ZIP export",
+    "archive decompression size guard"
   ]
 }
