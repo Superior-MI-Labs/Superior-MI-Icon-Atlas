@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/schemas/smi-visual-pack-v1.schema.json",
+  "$id": "https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/design/visual-atlas-r0/proposals/visual-atlas-r0/schema.json",
   "title": "Superior MI Visual Atlas proposal: pack v1",
   "type": "object",
   "additionalProperties": false,
@@ -208,6 +208,9 @@
         "tint": {
           "type": "string",
           "pattern": "^#[A-Fa-f0-9]{6}$"
+        },
+        "position_from_input": {
+          "$ref": "#/$defs/positionBinding"
         }
       }
     },
@@ -335,7 +338,8 @@
           "type": "array",
           "items": {
             "type": "number",
-            "minimum": 0
+            "minimum": 0,
+            "maximum": 1
           },
           "minItems": 2,
           "maxItems": 2
@@ -477,6 +481,34 @@
           }
         }
       ]
+    },
+    "positionBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "input",
+        "axis",
+        "from_px",
+        "to_px"
+      ],
+      "properties": {
+        "input": {
+          "type": "string",
+          "minLength": 1
+        },
+        "axis": {
+          "enum": [
+            "x",
+            "y"
+          ]
+        },
+        "from_px": {
+          "type": "number"
+        },
+        "to_px": {
+          "type": "number"
+        }
+      }
     }
   }
 }
