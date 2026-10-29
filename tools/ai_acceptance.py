@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from PIL import Image
 from tools.qualify_asset_zip import scan
 
-TYPES={'asset_kind','sequence_frames','sequence_distinct_frames','state_contains','preset_selects','input_declared','tag_contains'}
+TYPES={'asset_kind','sequence_frames','sequence_distinct_frames','state_contains','preset_selects','input_declared','tag_contains','input_range','layer_order','output_maps_from_input','event_declared','layer_uses_input'}
 
 def check_acceptance(archive:Path,spec:dict)->list[str]:
     if not isinstance(spec,dict) or spec.get('schema')!='smi-ai-acceptance/1':return ['Acceptance file must use schema smi-ai-acceptance/1']
@@ -70,6 +70,29 @@ def check_acceptance(archive:Path,spec:dict)->list[str]:
             elif t=='input_declared':
                 inp=a.get('inputs',{}).get(c.get('input'),{})
                 if inp.get('type')!=c.get('input_type'):errors.append(f'Check {num}: input {c.get("input")} type mismatch in {aid}')
+            elif t=='input_range':
+                defn=a.get('inputs',{}).get(c.get('input'),{})
+                if a['kind']!='composition' or defn.get('type')!='number' or defn.get('min')!=c.get('min') or defn.get('max')!=c.get('max'):
+                    errors.append(f'Check {num}: numeric input {c.get("input")} range mismatch in {aid}')
+            elif t=='layer_order':
+                order=[l.get('id') for l in a.get('layers',[])]
+                before,after=c.get('before'),c.get('after')
+                if a['kind']!='composition' or before not in order or after not in order or order.index(before)>=order.index(after):
+                    errors.append(f'Check {num}: layer {before} must render before {after} in {aid}')
+            elif t=='output_maps_from_input':
+                outputs=a.get('behavior',{}).get('outputs',{})
+                if outputs.get(c.get('output'),{}).get('from_input')!=c.get('input'):
+                    errors.append(f'Check {num}: output {c.get("output")} not mapped from input {c.get("input")}')
+            elif t=='event_declared':
+                if c.get('event') not in a.get('behavior',{}).get('on',{}):
+                    errors.append(f'Check {num}: event {c.get("event")} is not declared for {aid}')
+            elif t=='layer_uses_input':
+                layer=next((l for l in a.get('layers',[]) if l.get('id')==c.get('layer')),None)
+                use=c.get('binding')
+                if use not in ('clip','position_from_input','visible_when','state_from_input'):
+                    errors.append(f'Check {num}: unsupported layer binding {use}')
+                elif not layer or (layer.get(use) if use=='state_from_input' else (layer.get(use) or {}).get('input')) != c.get('input'):
+                    errors.append(f'Check {num}: layer {c.get("layer")} does not bind {use} to input {c.get("input")}')
             elif t=='tag_contains':
                 if c.get('tag') not in a.get('tags',[]):errors.append(f'Check {num}: tag {c.get("tag")} absent from {aid}')
     return errors

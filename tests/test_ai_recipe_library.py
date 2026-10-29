@@ -24,7 +24,7 @@ class AIRecipeLibraryTests(unittest.TestCase):
             self.assertTrue(path.is_file(),str(path))
             self.assertIn('RELEASE-CHECKLIST.md',path.read_text())
         checklist=(docs/'RELEASE-CHECKLIST.md').read_text()
-        for field in ('creator-specific','every asset region','NOT RUN','READY FOR PREVIEW'):
+        for field in ('creator-specific','every asset region','NOT RUN','READY FOR PREVIEW','minimum, midpoint, maximum','layer order'):
             self.assertIn(field.lower(),checklist.lower())
 
     def test_example_zip_structure_and_visual_pixels(self):

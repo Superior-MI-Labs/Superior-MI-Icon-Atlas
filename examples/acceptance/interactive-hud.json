@@ -1,0 +1,55 @@
+{
+  "schema": "smi-ai-acceptance/1",
+  "intent": "Animated/interactive energy meter must visually reflect 0\u2013100% and return the numeric value.",
+  "checks": [
+    {
+      "type": "asset_kind",
+      "asset": "smi.example.hud.meter",
+      "kind": "composition"
+    },
+    {
+      "type": "input_range",
+      "asset": "smi.example.hud.meter",
+      "input": "value",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "type": "layer_order",
+      "asset": "smi.example.hud.meter",
+      "before": "frame",
+      "after": "fill"
+    },
+    {
+      "type": "layer_order",
+      "asset": "smi.example.hud.meter",
+      "before": "fill",
+      "after": "thumb"
+    },
+    {
+      "type": "layer_uses_input",
+      "asset": "smi.example.hud.meter",
+      "layer": "fill",
+      "binding": "clip",
+      "input": "value"
+    },
+    {
+      "type": "layer_uses_input",
+      "asset": "smi.example.hud.meter",
+      "layer": "thumb",
+      "binding": "position_from_input",
+      "input": "value"
+    },
+    {
+      "type": "output_maps_from_input",
+      "asset": "smi.example.hud.meter",
+      "output": "value",
+      "input": "value"
+    },
+    {
+      "type": "event_declared",
+      "asset": "smi.example.hud.meter",
+      "event": "set_value"
+    }
+  ]
+}

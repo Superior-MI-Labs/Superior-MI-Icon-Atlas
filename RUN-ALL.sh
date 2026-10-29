@@ -29,15 +29,18 @@ fi
 "$PY" -m unittest discover -s tests -p 'test_*.py' -v
 "$PY" tools/validate_visual_pack.py web/demo/starter-pack.zip
 "$PY" tools/validate_visual_pack.py web/demo/potions-collection.zip
+"$PY" tools/validate_visual_pack.py site/demo/interactive-hud.zip
+"$PY" tools/ai_acceptance.py site/demo/interactive-hud.zip --acceptance examples/acceptance/interactive-hud.json --out "${TMPDIR:-/tmp}/smi-visual-atlas-hud-acceptance"
 "$PY" tools/qualify_asset_zip.py web/demo/potions-collection.zip --out "${TMPDIR:-/tmp}/smi-visual-atlas-potions-qa"
 "$PY" tools/ai_acceptance.py site/demo/character-animations.zip --acceptance examples/acceptance/character.json --out "${TMPDIR:-/tmp}/smi-visual-atlas-character-acceptance"
 "$PY" tools/ai_acceptance.py web/demo/potions-collection.zip --acceptance examples/acceptance/potion.json --out "${TMPDIR:-/tmp}/smi-visual-atlas-potion-acceptance"
 if command -v node >/dev/null 2>&1; then
-  for f in web/featured.js web/app.js web/builder.js web/timeline-core.js web/collection-core.js web/bag-store.js web/interaction-core.js web/slot-core.js; do node --check "$f"; done
+  for f in web/featured.js web/app.js web/builder.js web/timeline-core.js web/visual-core.js web/collection-core.js web/bag-store.js web/interaction-core.js web/slot-core.js; do node --check "$f"; done
   node --check web/featured.js
   node tests/browser-search.cjs
   node tests/builder-contract.cjs
   node tests/timeline-core.cjs
+  node tests/visual-core.cjs
   node tests/collections-interaction.cjs
   node tests/slots-presets.cjs
 else echo 'WARNING: Node tests unavailable (Node not installed). GitHub CI will run these tests.'; fi

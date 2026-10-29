@@ -57,3 +57,7 @@ Browser packs use `id`, human-readable `name`, `tags`, `subjects`, styles and as
 Manifests define the geometry, defaults, frames, state mapping, layer order and compatible choices; host applications decide how to draw and respond to events. Source pixels are separate from generated previews. Export must carry the transitive dependencies and all chosen options, along with license/attribution notices.
 
 **Important limitations:** v1 uses supported Canvas 2D properties only. Don't require code execution, unknown shaders, rotated packing or unsupported blend/easing behavior from this format. See [examples by task](INDEX.md) and run [release QA](RELEASE-CHECKLIST.md).
+
+### Non-unit numeric interaction values (important)
+
+The creator may specify a number input with `min:0, max:100` or `min:40, max:60`. The manifest stores native values and outputs (e.g. 72%, 50°C). Preview clipping and position bindings convert those values to a unit fraction using `(value-min)/(max-min)`. Never feed 72 directly to a renderer that expects a 0..1 fraction. Check min / mid / max **visually**, including layer occlusion. Invalid numeric range (max <= min) is not a working contract.

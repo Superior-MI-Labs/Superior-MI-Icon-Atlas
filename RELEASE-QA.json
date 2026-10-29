@@ -1,31 +1,57 @@
 {
-  "release": "0.11.0",
-  "status": "local validation passed; production GitHub push and hosted Pages deployment pending",
-  "base_github_main": "83426993deb51525810da98db454bada3f6adbb0",
-  "existing_icon_assets_preserved": 2073,
-  "python_tests": 30,
-  "browser_testing": "Chromium with local resources injected; direct localhost navigation blocked by administrator",
-  "new_example_packs": [
-    "icons",
-    "animated-icons",
-    "character-animations",
-    "interactive-hud"
-  ],
-  "total_public_example_packs": 6,
-  "example_pixel_scan": "All four new example pack regions passed structural and alpha checks; each yielded a contact sheet",
-  "ui_smoke_checks": [
-    "Explore cards generated from six valid ZIP manifests",
-    "Featured search filters to character example",
-    "Builder imported the selected character ZIP into My Bag without JavaScript errors"
-  ],
-  "not_verified": [
-    "GitHub Pages hosted v0.11 deployment has not occurred",
-    "Direct localhost Chromium navigation blocked; tested site with injected local resources and realistic ZIP imports",
-    "Semantic/artistic review of all 2073 legacy candidate icons cannot be guaranteed",
-    "External AI assistants are not automatically forced to run QA: the documented CLI gate must be executed by the creating assistant"
-  ],
-  "production_icon_artwork": "unchanged; all 2073 legacy IDs and crops preserved",
-  "creator_specific_acceptance": "Two test files passed (character 5 checks; potion 4 checks), including pixel-distinct frame checks",
-  "run_all": "Full suite reached 30 Python tests PASS; JavaScript contracts and both acceptance checks passed independently. Combined shell rerun timed out after character acceptance due execution environment.",
-  "production_baseline_verified": "GitHub main is v0.10.0 commit 83426993; release includes only v0.11 changes on that baseline"
+  "version": "0.12.0",
+  "release": "Meter visual fix + AI production pipelines",
+  "repository_base_head": "63459b8e02e1ab3830e72d6f3f278a2831986d93",
+  "tests": {
+    "python_unittest": {
+      "result": "PASS",
+      "count": 33
+    },
+    "javascript_checks": {
+      "result": "PASS",
+      "suites": [
+        "browser-search",
+        "builder-contract",
+        "timeline-core",
+        "collections-interaction",
+        "slots-presets",
+        "visual-core"
+      ]
+    },
+    "icon_validation": {
+      "result": "PASS",
+      "icons": 2073
+    },
+    "hud_acceptance": {
+      "result": "PASS",
+      "checks": 8
+    },
+    "hud_chromium_pixel_test": {
+      "result": "PASS",
+      "input_to_green_pixels": {
+        "0": 0,
+        "50": 2462,
+        "100": 5276
+      }
+    },
+    "full_RUN_ALL": {
+      "result": "NOT COMPLETED",
+      "detail": "Execution timeout in this environment in late acceptance phase; unit/JavaScript/individual HUD and character/potion acceptance checks completed separately."
+    },
+    "hosted_pages_deployment": {
+      "result": "NOT RUN",
+      "detail": "Release not pushed to GitHub."
+    },
+    "visual_semantic_review": {
+      "result": "NOT VERIFIED AUTOMATICALLY"
+    }
+  },
+  "changes": [
+    "UI renderer normalize numeric inputs using declared min/max",
+    "Interactive HUD frame-fill-thumb layer order",
+    "Shared visual-core.js with pure unit normalization",
+    "Typed GUI acceptance assertions incl layer order, event/output source",
+    "Real Chromium 0/50/100 pixel regression tool",
+    "Category-specific agent production pipelines and release gate"
+  ]
 }

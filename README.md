@@ -4,6 +4,14 @@
 
 [Browse the icon gallery](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Manifest index](manifest.json) · [Architecture](docs/ARCHITECTURE.md) · [Artwork policy](docs/ARTWORK-POLICY.md)
 
+## v0.12.0 — GUI visibility fix + AI production pipelines
+
+- **Fixed interactive energy meter:** numeric range values are normalized for clip/position; a meter draws frame → fill → movable thumb, so changing 0/50/100 produces actual visual differences instead of a permanently empty or full bar.
+- **Mandatory type-specific AI pipeline gates:** icons, directional character animations, GUI/interactions, materials/overlays, multi-pack collections. Every category links back to the same authoritative release checklist.
+- **Executable interactive checks:** validate native input range, layer ordering, event and output mapping, clip/position input bindings. Added regression tests and an interactive HUD acceptance fixture.
+- **Transparency and visual correctness:** auto-checks catch structure, but manual frame-by-frame inspection and a real browser render test remain distinct from JSON validation.
+- Existing 2,073 icons are unchanged.
+
 ## v0.11.0 — AI recipe hierarchy and Explore template discovery
 
 - **Small AI entrypoint:** `docs/ai/START-HERE.md` has a short mandatory to-do list and routes to a categorized recipe library. Agents read only task-relevant instructions plus the common QA gate, avoiding context overload.

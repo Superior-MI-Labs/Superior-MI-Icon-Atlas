@@ -9,3 +9,18 @@
 5. Open in builder, exercise each declared control/event/preset and verify visual bounds and returned values. Run [release checklist](../RELEASE-CHECKLIST.md).
 
 Host application owns actual pointer/keyboard/game input. The manifest must not contain executable code.
+
+## Required GUI interaction production pipeline
+
+1. Define intended host interactions, typed inputs, min/max/default values, output units and named states.
+2. Identify each visual layer and order explicitly: background, fill, borders, control handle, overlay.
+3. Match each region to measured source image rectangles; inspect alpha over transparent and dark backgrounds.
+4. Normalize non-unit numeric inputs **for rendering** (e.g. 72 of 100 = 72% width), but preserve source values for outputs.
+5. Show visual previews at min, 25%, midpoint, 75%, max and every named state/preset.
+6. Verify the fill isn't hidden by an opaque border/frame, the thumb tracks the same numeric input, and text/labels match values.
+7. Verify event contracts and accessible host semantics; no executable scripts inside manifests.
+8. Add request-specific executable assertions for layer order, input range, clip/position bindings and outputs.
+9. Run ZIP validator, strict crop/contact-sheet QA and a **real browser render test** comparing min/mid/max pixels (`python3 tests/browser_hud_pixels.py` when Playwright + Chromium are installed).
+10. Export the final ZIP; reopen it and verify behavior, geometry, licensing and dependencies before claiming READY.
+
+Reference test: `examples/acceptance/interactive-hud.json` (request-specific assertions) and `tests/visual-core.cjs` (normalization + layer order regression). These support but do not replace browser visual QA.

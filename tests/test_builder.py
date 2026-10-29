@@ -12,7 +12,7 @@ class BuilderContractTests(unittest.TestCase):
     def test_offline_site_contains_builder_and_demo(self):
         with tempfile.TemporaryDirectory() as temp:
             build(Path(temp))
-            for rel in ('builder.html','builder.css','builder.js','timeline-core.js','collection-core.js','bag-store.js','interaction-core.js','schemas/smi-visual-collection-v1.schema.json','ai-guide.html','vendor/jszip.min.js','vendor/JSZip-LICENSE.md','demo/starter-pack.zip'):
+            for rel in ('builder.html','builder.css','builder.js','timeline-core.js','visual-core.js','collection-core.js','bag-store.js','interaction-core.js','schemas/smi-visual-collection-v1.schema.json','ai-guide.html','vendor/jszip.min.js','vendor/JSZip-LICENSE.md','demo/starter-pack.zip'):
                 self.assertTrue((Path(temp)/rel).is_file(),rel)
             html=(Path(temp)/'builder.html').read_text()
             self.assertIn('Import ZIP',html)

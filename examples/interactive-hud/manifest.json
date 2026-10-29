@@ -97,6 +97,10 @@
       },
       "layers": [
         {
+          "id": "frame",
+          "asset": "smi.example.hud.frame"
+        },
+        {
           "id": "fill",
           "asset": "smi.example.hud.fill",
           "offset_px": [
@@ -110,8 +114,14 @@
           }
         },
         {
-          "id": "frame",
-          "asset": "smi.example.hud.frame"
+          "id": "thumb",
+          "asset": "smi.example.hud.thumb",
+          "position_from_input": {
+            "input": "value",
+            "axis": "x",
+            "from_px": 0,
+            "to_px": 276
+          }
         }
       ]
     }

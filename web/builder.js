@@ -2,7 +2,8 @@
 /* Superior MI Visual Atlas builder R0. Browser-local: no upload, no server-side state. */
 (() => {
   const $ = id => document.getElementById(id);
-  const Timeline = window.VisualAtlasTimeline;
+  const Timeline = window.VisualAtlasTimeline, VisualCore = window.VisualAtlasVisualCore;
+  if(!VisualCore)throw Error('Missing visual-core.js');
   const Collections = window.VisualAtlasCollections, BagStore = window.VisualAtlasBagStore, Interactions = window.VisualAtlasInteraction, Slots = window.VisualAtlasSlots;
   if(!Collections)throw Error('Missing collection-core.js');
   if(!Interactions)throw Error('Missing interaction-core.js');
@@ -89,6 +90,10 @@
         if(a.duration_ms!==undefined&&(!Number.isInteger(a.duration_ms)||a.duration_ms<1||a.duration_ms>600000))throw Error('Invalid animation duration: '+id);
         if(a.playback&&!['once','loop','pingpong'].includes(a.playback))throw Error('Invalid playback mode: '+id);
         refs=Slots.refs(a);
+        for(const [key,input] of Object.entries(a.inputs||{}))if(input.type==='number'){
+          const min=input.min, max=input.max;
+          if((min===undefined)!==(max===undefined) || (min!==undefined && !(Number.isFinite(min)&&Number.isFinite(max)&&max>min)) || (min!==undefined && (input.default<min||input.default>max))) throw Error('Invalid numeric input range: '+id+'/'+key);
+        }
         for(const l of a.layers){
           for(const k of [l.visible_when?.input,l.clip?.input,l.state_from_input,l.position_from_input?.input].filter(Boolean))if(!a.inputs?.[k])throw Error('Unknown composition input '+k+' in '+id);
           const issues=Timeline.validateTracks(l.tracks,a.duration_ms||undefined,[],id+'/'+l.id);
@@ -306,7 +311,7 @@
       const target=layer.slot?slotState.slots[layer.slot]:layer.asset;
       const [lw,lh]=layer.size_px||sizeFor(target);
       let px=(layer.offset_px?.[0]||0)+(layer.x||0),py=(layer.offset_px?.[1]||0)+(layer.y||0);
-      if(layer.position_from_input){const bind=layer.position_from_input;const v=range(inputs[bind.input],0,1),pos=bind.from_px+(bind.to_px-bind.from_px)*v;if(bind.axis==='x')px+=pos;else py+=pos;}
+      if(layer.position_from_input){const bind=layer.position_from_input;const v=VisualCore.unitValue(a,inputs,bind.input),pos=bind.from_px+(bind.to_px-bind.from_px)*v;if(bind.axis==='x')px+=pos;else py+=pos;}
       ctx.save();ctx.globalAlpha*=layer.opacity??1;
       if(layer.rotation_deg||layer.scale_x!==undefined||layer.scale_y!==undefined){
         const midx=px+lw/2,midy=py+lh/2;
@@ -314,7 +319,7 @@
         ctx.scale(layer.scale_x??1,layer.scale_y??1);ctx.translate(-midx,-midy);
       }
       if(layer.blend)ctx.globalCompositeOperation=({normal:'source-over',multiply:'multiply',screen:'screen',add:'lighter'})[layer.blend]||'source-over';
-      if(layer.clip){const fraction=range(inputs[layer.clip.input],0,1),horizontal=layer.clip.axis==='x';let cx=px,cy=py,cw=horizontal?lw*fraction:lw,ch=horizontal?lh:lh*fraction;if(layer.clip.origin==='end'){if(horizontal)cx+=lw-cw;else cy+=lh-ch;}ctx.beginPath();ctx.rect(cx,cy,cw,ch);ctx.clip();}
+      if(layer.clip){const fraction=VisualCore.unitValue(a,inputs,layer.clip.input),horizontal=layer.clip.axis==='x';let cx=px,cy=py,cw=horizontal?lw*fraction:lw,ch=horizontal?lh:lh*fraction;if(layer.clip.origin==='end'){if(horizontal)cx+=lw-cw;else cy+=lh-ch;}ctx.beginPath();ctx.rect(cx,cy,cw,ch);ctx.clip();}
       await drawAsset(target,ctx,px,py,lw,lh,time,{...inputs,...(layer.input_values||{})},layer.state_from_input?inputs[layer.state_from_input]:(layer.state||null),next);
       ctx.restore();
     }

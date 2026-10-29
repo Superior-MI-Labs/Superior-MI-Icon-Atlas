@@ -139,6 +139,14 @@ def check(pack_path: Path):
                 elif asset['kind'] == 'state_set' and asset['default_state'] not in asset['states']:
                     errors.append('Missing default state ' + asset['id'])
                 elif asset['kind'] == 'composition':
+                    for key, inp in asset.get('inputs', {}).items():
+                        if inp.get('type') == 'number':
+                            if ('min' in inp) != ('max' in inp):
+                                errors.append(f'{asset["id"]}: numeric input {key} must specify both min and max or neither')
+                            if 'min' in inp and 'max' in inp and inp['max'] <= inp['min']:
+                                errors.append(f'{asset["id"]}: numeric input {key} has invalid min/max')
+                            if 'min' in inp and 'max' in inp and not inp['min'] <= inp['default'] <= inp['max']:
+                                errors.append(f'{asset["id"]}: numeric input {key} default outside range')
                     for layer in asset['layers']:
                         errors.extend(validate_tracks(layer.get('tracks',[]),asset.get('duration_ms'),asset['id']+'/'+layer['id']))
                         for key in [layer.get('state_from_input'),(layer.get('visible_when') or {}).get('input'),(layer.get('clip') or {}).get('input'),(layer.get('position_from_input') or {}).get('input')]:

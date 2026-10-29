@@ -9,3 +9,13 @@
 5. Run [release checklist](../RELEASE-CHECKLIST.md); do not require unsupported shaders or executable manifest code.
 
 The same approach works for glass, water, smoke, weather, fire, backgrounds, game decals, and website overlays.
+
+
+## Required layered material / effects pipeline
+
+1. Identify base, masks, overlays, optional animations and independent states (wet, cracked, dirty, broken).
+2. Verify resolution, alpha mode, mask alignment and blend modes for every layer.
+3. Render every exposed state combination with layers on/off; confirm actual visual differences.
+4. Inspect each source region and transitions/loops (including the seam) at intended scale.
+5. Validate references, no unintended occlusion, frame timing and compatibility contracts.
+6. Export, reimport and compare fixed-state preview pixels; record QA evidence.

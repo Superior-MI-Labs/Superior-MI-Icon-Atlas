@@ -10,7 +10,7 @@
 | Multiple manifests, slot compatibility and presets | [Collections](collections/README.md) | [Potion Lab](../demo/potions-collection.zip) |
 | Glass, cracks, rain and layered effects | [Materials and layers](materials/README.md) | [Glass/weather demo](../demo/starter-pack.zip) |
 
-**Executable acceptance examples:** [`character.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/character.json) · [`potion.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/potion.json). The checker prints a real PASS/FAIL and never claims human visual inspection.
+**Executable acceptance examples:** [Interactive HUD](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/interactive-hud.json) · [`character.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/character.json) · [`potion.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/potion.json). The checker prints a real PASS/FAIL and never claims human visual inspection.
 
 **Shared reference:** [Manifest/API contract](FORMAT-API.md) · [QA release checklist](RELEASE-CHECKLIST.md) · [Request examples](PROMPT-EXAMPLES.md) · [Grid starters](../templates/authoring-grids.zip).
 

@@ -10,3 +10,13 @@
 6. Run [release checklist](../RELEASE-CHECKLIST.md), and verify the entire Bag opens and group navigation works.
 
 For a large animation character with 20 sheets, the user should open **one** Bag card, browse named animations/states, and preview the declared default without configuring anything.
+
+
+## Required collection / compatible slot pipeline
+
+1. Inventory every pack, manifest, texture, dependency, entry asset and asset count.
+2. Define versioned slot interfaces (logical sizes, pivots, masks), not similarity by tags.
+3. Check every accepted candidate against the declared slot contract, geometry and ownership.
+4. Validate defaults and each preset, including animated/static swaps and all state inputs.
+5. Reject unknown refs, cycles, incompatible versions, conflicting IDs and missing dependencies.
+6. Open the whole ZIP as one Bag, inspect each group and entry, export/reimport, and rerun checks.

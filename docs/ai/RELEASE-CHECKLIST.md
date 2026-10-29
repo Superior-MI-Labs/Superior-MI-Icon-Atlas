@@ -17,13 +17,17 @@ Do not label an asset ready merely because its JSON parses. Structural validatio
 - [ ] All images are packaged and paths resolve locally with no external dependencies.
 - [ ] All asset references, ordering, animation FPS/frame durations, state maps, events, inputs/outputs and presets are valid.
 - [ ] Every animation, state and compatible option is previewed; visually check frame 1, middle, end, loop boundary and independent overlays.
+- [ ] For **every input-controlled visual**, exercise minimum, midpoint, maximum, and request-specific states; compare actual rendered pixels, not only output labels.
+- [ ] Numeric values with non-unit ranges (e.g. 0..100) are normalized correctly for clipping and positioning, while output values preserve their declared units.
+- [ ] Layer order, alpha, masks and clipping are checked against real preview: opaque frames cannot cover a required fill or animated layer.
+- [ ] Frame-boundary and animation loop tests cover anchor/pivot continuity; do not claim approval from sprite-sheet geometry alone.
 - [ ] Opening the ZIP automatically previews the intended default asset, without hand-configuring layers.
 
 ## 4. Executed QA and packaging
 - [ ] Run `python3 tools/validate_visual_pack.py OUTPUT.zip` and fix any errors.
 - [ ] Run `python3 tools/qualify_asset_zip.py OUTPUT.zip --out QA-DIR` and inspect `contact-*.png` and the receipt.
 - [ ] Write an acceptance JSON with assertions derived from the creator request; execute `python3 tools/ai_acceptance.py OUTPUT.zip --acceptance MY-ACCEPTANCE.json --out QA-DIR` and inspect its output. [Robot](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/character.json) and [potion](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/potion.json) are examples. Never print PASS for unexecuted tests.
-- [ ] Re-import the final ZIP into the builder and check preset/state behavior, then optionally export/reimport once more.
+- [ ] Re-import the final ZIP into the builder and check preset/state behavior and **actual visual response**, then export/reimport and compare at least one fixed-time preview.
 - [ ] Hand off the ZIP, a brief contents description and a truthful QA receipt.
 
 ## QA receipt to include in the final answer

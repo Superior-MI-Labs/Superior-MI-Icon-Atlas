@@ -1,0 +1,17 @@
+"use strict";
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const {unitValue}=require('../web/visual-core.js');
+const pack=JSON.parse(fs.readFileSync(path.join(__dirname,'../examples/interactive-hud/manifest.json')));
+const meter=pack.assets.find(a=>a.id==='smi.example.hud.meter');
+assert.ok(meter,'Missing demo composition');
+assert.deepEqual([0,25,50,72,100].map(value=>unitValue(meter,{value},'value')),[0,.25,.5,.72,1]);
+assert.equal(unitValue(meter,{value:-10},'value'),0);
+assert.equal(unitValue(meter,{value:110},'value'),1);
+assert.equal(unitValue({inputs:{x:{type:'number',min:40,max:60}}},{x:50},'x'),.5);
+const names=meter.layers.map(l=>l.id);
+assert.ok(names.indexOf('frame')<names.indexOf('fill'),'Opaque frame drawn over fill');
+assert.ok(meter.layers.some(l=>l.position_from_input?.input==='value'),'Missing slider thumb movement');
+assert.ok(meter.layers.some(l=>l.clip?.input==='value'),'Missing dynamic fill');
+console.log('Visual input range, layer order, clip and thumb: PASS');
