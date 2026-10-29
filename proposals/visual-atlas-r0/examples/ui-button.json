@@ -1,0 +1,106 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.demo.ui-button",
+  "version": "0.1.0",
+  "textures": {
+    "ui": {
+      "path": "textures/ui.png",
+      "width_px": 512,
+      "height_px": 256
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.ui.button.normal",
+      "kind": "region",
+      "name": "Button normal",
+      "texture": "ui",
+      "rect_px": [
+        0,
+        0,
+        120,
+        48
+      ],
+      "nine_slice_px": [
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "id": "smi.ui.button.hover",
+      "kind": "region",
+      "name": "Button hover",
+      "texture": "ui",
+      "rect_px": [
+        120,
+        0,
+        120,
+        48
+      ],
+      "nine_slice_px": [
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "id": "smi.ui.button.pressed",
+      "kind": "region",
+      "name": "Button pressed",
+      "texture": "ui",
+      "rect_px": [
+        240,
+        0,
+        120,
+        48
+      ],
+      "nine_slice_px": [
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "id": "smi.ui.button.disabled",
+      "kind": "region",
+      "name": "Button disabled",
+      "texture": "ui",
+      "rect_px": [
+        360,
+        0,
+        120,
+        48
+      ],
+      "nine_slice_px": [
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "id": "smi.ui.button.states",
+      "kind": "state_set",
+      "name": "Button appearances",
+      "tags": [
+        "button",
+        "gui",
+        "interactive",
+        "hover",
+        "pressed",
+        "disabled"
+      ],
+      "default_state": "normal",
+      "states": {
+        "normal": "smi.ui.button.normal",
+        "hover": "smi.ui.button.hover",
+        "pressed": "smi.ui.button.pressed",
+        "disabled": "smi.ui.button.disabled"
+      }
+    }
+  ]
+}
