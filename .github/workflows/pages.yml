@@ -2,6 +2,12 @@ name: Publish Icon Atlas
 on:
   push:
     branches: [main]
+    paths:
+      - 'manifest.json'
+      - 'sheets/**'
+      - 'web/**'
+      - 'tools/build_site.py'
+      - 'tests/test_site.py'
   workflow_dispatch:
 
 permissions:
