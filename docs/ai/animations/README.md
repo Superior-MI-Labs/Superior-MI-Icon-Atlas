@@ -10,6 +10,8 @@
 
 Contract source: [`examples/character-animations/manifest.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/character-animations/manifest.json).
 
+**For complex side-scrolling player/NPC characters** with condition-dependent idles, independent weapons, combos, dialogue portraits and transition-heavy traversal, use the focused [side-scroller production guide](SIDE-SCROLLER-PRODUCTION.md). It begins with a canonical reference lock and a machine-checked qualification slice; its proposed controller sidecar is not implemented in the current runtime.
+
 ## Character / directional animation production pipeline
 
 1. Confirm creator brief, reference identity, states, directions, art style and deliverable.
