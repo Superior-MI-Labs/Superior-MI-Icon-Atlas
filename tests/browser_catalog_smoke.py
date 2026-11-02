@@ -8,7 +8,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Thread
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import expect, sync_playwright
 
 SITE = Path(__file__).resolve().parents[1] / "site"
 
@@ -21,20 +21,20 @@ class QuietHandler(SimpleHTTPRequestHandler):
 def check(page):
     errors = []
     page.on("pageerror", lambda err: errors.append(str(err)))
-    page.goto(page.url if page.url.startswith("http") else page.context._base_url, wait_until="networkidle")
-    page.locator("#count").get_by_text("70 matches").wait_for(timeout=20000)
+    page.reload(wait_until="networkidle")
+    expect(page.locator("#count")).to_have_text("70 matches", timeout=20000)
 
     page.locator("#pack").select_option("legacy-icons")
-    page.locator("#count").get_by_text("2,073 matches").wait_for()
+    expect(page.locator("#count")).to_have_text("2,073 matches")
     page.locator("#domain").select_option("programming")
-    page.locator("#count").get_by_text("195 matches").wait_for()
+    expect(page.locator("#count")).to_have_text("195 matches")
     page.locator("#clear-filters").click()
-    page.locator("#count").get_by_text("70 matches").wait_for()
+    expect(page.locator("#count")).to_have_text("70 matches")
 
     page.locator("#status").select_option("archive")
-    page.locator("#count").get_by_text("2,073 matches").wait_for()
+    expect(page.locator("#count")).to_have_text("2,073 matches")
     page.locator("#review").select_option("reviewed")
-    page.locator("#count").get_by_text("734 matches").wait_for()
+    expect(page.locator("#count")).to_have_text("734 matches")
     page.locator("#clear-filters").click()
 
     page.locator("#search").fill("healthbar")
@@ -72,7 +72,7 @@ def main():
                 print("Desktop:", check(page))
                 mobile = browser.new_page(viewport={"width": 390, "height": 844}, base_url=url)
                 mobile.goto(url, wait_until="networkidle")
-                mobile.locator("#count").get_by_text("70 matches").wait_for(timeout=20000)
+                expect(mobile.locator("#count")).to_have_text("70 matches", timeout=20000)
                 assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Horizontal overflow on mobile"
                 print("Responsive viewport: PASS")
             finally:
