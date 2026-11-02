@@ -33,6 +33,12 @@ A circular/radial meter cannot express continuously rotating or sweeping angular
 
 For reusable multi-heart and segmented-pip variants, use existing `composition` and `state_set` references; prefer one parent state-family for browser discovery. Individual source IDs should remain stable, addressable and independently testable without a second grouping registry.
 
+## Top-rim ornament collision (Royal Forge resource pack)
+
+A horizontal top-edge highlight in the source frame and a second unbroken stroke in the overlay rim crossed through rune glyphs and inset gems. The crop geometry was correct; the **composed layer order and stroke path** were not. Fix the base/rim SVG path itself: the rim must not redraw a continuous horizontal line through a foreground decoration. Keep upper ornaments visibly anchored inside the upper frame, and verify assembled bars at actual display scale. Do not hide the defect by covering it with more sprites or modifying the core renderer.
+
+For user-configurable heart and pip groups, a fixed `state_set` is a historical snapshot, not a scalable meter. Use the existing `composition` with a constrained `layer.repeat` binding to numeric `max`, `value`, and `columns` inputs, and a real underlying state family. The preview must expose a draggable numeric input and a readable value; the state-family viewer additionally offers a discrete step slider and dropdown. Test 1 heart, 20 hearts in 2×10, and wrap to 4×5.
+
 ## Required acceptance before export
 
 1. Render **every one** of `0, 1, 5, 10, 25, 50, 75, 90, 99, 100` percent (map to the declared native numeric range). Include min/max of any nonzero-start ranges.
