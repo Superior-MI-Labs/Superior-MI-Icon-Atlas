@@ -4,7 +4,20 @@
 
 [Browse the icon gallery](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Manifest index](manifest.json) · [Architecture](docs/ARCHITECTURE.md) · [Artwork policy](docs/ARTWORK-POLICY.md)
 
-## v0.13.0 — Rendered-state QA matrix (AI release gate)
+## Current public catalog — November 2, 2026
+
+Published collections are governed by [`publications.json`](publications.json), not the historic README version headings:
+
+- Fantasy RPG HUD Wave 1: **70** assets.
+- Royal Forge Core Controls: **214** assets.
+- Royal Forge HUD Resource Systems v1.1: **360** assets.
+- Historic icon archive: **2,073** searchable candidates, separately flagged for artistic/rights review.
+
+The public browser exposes **644 approved visual assets** and **2,073 archived icons** (2,717 addressable records). The repository's earlier v0.13.0 notes below describe the baseline QA release, not the latest public inventory. The current maintenance branch consolidates typed input bounds for both previews, preserves sliders during capacity changes, and sizes multi-layer repeated compositions without clipping negative offsets.
+
+For creator guidance, see [Creator preflight](docs/ai/CREATOR-PREFLIGHT.md), [image-source workflow](docs/ai/IMAGE-ENGINE-WORKFLOW.md), and [release checklist](docs/ai/RELEASE-CHECKLIST.md).
+
+## v0.13.0 — Rendered-state QA matrix (historical QA baseline)
 
 - **Actual Chromium canvas testing:** five scenarios verify interactive HUD 0/50/100 and reported outputs, robot idle/walk/loop, animated icon frames/loop, independent glass damage/rain layers, and Health/Mana/Poison presets with animated mana.
 - **Reusable, no-code scenario specification:** `tests/visual-scenarios.json` defines asset ZIP, sampled inputs, state, preset and time plus explicit pixel/output assertions; `tests/browser_visual_matrix.py` renders the real builder and saves PNG evidence and `report.json`.
