@@ -7,12 +7,45 @@
   let entries=[],matches=[],shown=0,current=null,clock=0,playing=true,previous=0;
   let preset=null,chosenState=null,controls={},slotChoices={};
   let activePreview=0,cardObserver,detailRendering=false;
+  let synonyms={},styleLabels={};
+  const FACETS=['kind','pack','domain','style','subject','status','review','license','animated'];
   const legacyImageCache=new Map();
   const PAGE=24;
   const renderer=Renderer.create({getAsset:id=>assets.get(id),getImage:imageFor,slots:Slots,timeline:Timeline,visualCore:VisualCore});
   const notify=message=>{const box=$('notice');box.textContent=message;box.hidden=false;clearTimeout(notify.timer);notify.timer=setTimeout(()=>box.hidden=true,3200);};
-  function filters(){const kind=$('kind'),pack=$('pack');for(const k of [...new Set(entries.map(a=>a.kind))].sort()){kind.add(new Option(k==='state_set'?'State variants':k[0].toUpperCase()+k.slice(1),k));}
-    for(const p of collections.values())pack.add(new Option(p.name,p.id));}
+  const human=value=>String(value).replace(/[._-]+/g,' ').replace(/\\b\\w/g,m=>m.toUpperCase());
+  function filterValues(){return Object.fromEntries(FACETS.map(id=>[id,$(id).value]));}
+  function facetLabel(key,value){
+    if(key==='pack')return collections.get(value)?.name||value;
+    if(key==='style')return styleLabels[value]?.label||human(value);
+    if(key==='animated')return value==='yes'?'Animated':'Static';
+    if(key==='status')return value==='archive'?'Legacy archive':'Published';
+    if(key==='review')return value==='reviewed'?'Semantics reviewed':'Needs visual review';
+    if(key==='kind')return value==='state_set'?'State variants':human(value);
+    if(key==='subject')return value.split('.').map(human).join(' › ');
+    return human(value);
+  }
+  function refreshFacets(params){
+    const counts=VisualAtlasSearch.facets(entries,params);
+    for(const key of FACETS){
+      const control=$(key),selected=control.value;
+      const empty=control.options[0]?.textContent?.replace(/ \\(.*\\)$/,'')||'All';
+      control.replaceChildren(new Option(empty,''));
+      for(const {value,count} of counts[key])control.add(new Option(facetLabel(key,value)+' ('+count+')',value));
+      if(selected&&!counts[key].some(item=>item.value===selected))control.add(new Option(facetLabel(key,selected)+' (0)',selected));
+      control.value=selected;
+    }
+  }
+  function activeChips(){
+    const box=$('active-filters');box.replaceChildren();
+    for(const key of FACETS){
+      const value=$(key).value;if(!value)continue;
+      const button=document.createElement('button');button.type='button';
+      button.textContent=facetLabel(key,value)+' ×';
+      button.setAttribute('aria-label','Remove '+facetLabel(key,value)+' filter');
+      button.onclick=()=>{$(key).value='';update()};box.append(button);
+    }
+  }
   async function loadCollection(id){
     if(id==='legacy-icons')return null;
     if(loaded.has(id))return loaded.get(id);
@@ -73,12 +106,20 @@
     const ctx=canvas.getContext('2d');ctx.clearRect(0,0,canvas.width,canvas.height);
     const a=assets.get(entry.id),defaults=Object.fromEntries(Object.entries(a.inputs||{}).map(([k,v])=>[k,v.default]));
     await renderer.drawAsset(entry.id,ctx,0,0,canvas.width,canvas.height,time,{...defaults,...(options.controls||{})},options.state||null,new Set(),options.slots||null,options.preset||null);
+    if(entry.legacy&&!options.card&&$('tint-enabled').checked){
+      ctx.globalCompositeOperation='source-in';ctx.fillStyle=$('tint-color').value;
+      ctx.fillRect(0,0,canvas.width,canvas.height);ctx.globalCompositeOperation='source-over';
+    }
   }
   function update(){
-    const q=$('search').value,k=$('kind').value,p=$('pack').value,order=$('sort').value;
-    matches=VisualAtlasSearch.results(entries,{query:q,kind:k,pack:p,sort:order});shown=0;$('gallery').replaceChildren();$('count').textContent=matches.length+' assets';
-    $('browse-title').textContent=q?'Search results':p==='legacy-icons'?'Legacy Icons':'Recently published';$('browse-subtitle').textContent=q?'Results include approved assets and historical icon candidates.':'Approved compositions first. Legacy icons are accessible through search or the Legacy Icons collection.';
-    if(!matches.length){$('gallery').textContent='No matching published assets. Try slider, health, heart, or mana.';$('more').hidden=true;return;}
+    const query=$('search').value,params={...filterValues(),query,synonyms,sort:$('sort').value};
+    refreshFacets(params);activeChips();
+    matches=VisualAtlasSearch.results(entries,params);shown=0;$('gallery').replaceChildren();
+    $('count').textContent=matches.length.toLocaleString()+' matches';
+    const refining=Boolean(query.trim()||FACETS.some(key=>params[key]));
+    $('browse-title').textContent=query?'Search results':refining?'Filtered assets':'Explore assets';
+    $('browse-subtitle').textContent=refining?'Results are ranked by matching names, synonyms and manifest metadata.':'Finished compositions first. Explore icon collections and styles with filters.';
+    if(!matches.length){$('gallery').textContent='No matching assets. Remove a filter or try another keyword.';$('more').hidden=true;return;}
     more();
   }
   function card(a){const node=document.createElement('button');node.type='button';node.className='asset-tile';node.dataset.assetId=a.id;
@@ -116,8 +157,20 @@
     $('open-builder').hidden=Boolean(a.legacy);
     if(!a.legacy){$('download-pack').href=collections.get(a.pack).zip;
       $('open-builder').href='builder.html?example='+encodeURIComponent(collections.get(a.pack).zip.split('/').at(-1))+'&asset='+encodeURIComponent(a.id);}
-    $('detail-meta').textContent=[a.category,a.style,a.license,a.legacy?'Archive candidate · rights review pending':''].filter(Boolean).join(' · ');
-    try{await ready(a.pack);controlsFor(assets.get(a.id));$('detail').showModal();activePreview++;}catch(e){notify('Preview failed: '+e.message);}
+    $('detail-meta').textContent=[a.category,facetLabel('style',a.style||''),a.license,
+      a.review_status&&facetLabel('review',a.review_status),
+      a.legacy?'Archive candidate · rights review pending':''].filter(Boolean).join(' · ');
+    const tags=$('detail-tags');tags.replaceChildren();
+    for(const tag of [...new Set([...(a.subjects||[]),...(a.tags||[])])].slice(0,18)){
+      const label=document.createElement('span');label.textContent=tag;tags.append(label);
+    }
+    $('tint-options').hidden=!a.legacy;$('tint-enabled').checked=false;
+    try{
+      await ready(a.pack);if(current?.id!==a.id)return;
+      controlsFor(assets.get(a.id));$('detail').showModal();activePreview++;
+      const url=new URL(location.href);url.searchParams.set('asset',a.id);
+      history.replaceState(null,'',url);
+    }catch(e){notify('Preview failed: '+e.message);}
   }
   async function downloadAsset(){if(!current)return;
     if(current.legacy){
@@ -153,15 +206,24 @@
   async function init(){
     const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Public catalog unavailable');const index=await response.json();if(index.schema!=='smi-public-catalog/1')throw Error('Unsupported public catalog');
     entries=index.assets;if(!Array.isArray(entries)||!entries.length)throw Error('No assets in catalog');for(const pack of index.packs)collections.set(pack.id,pack);
+    synonyms=index.synonyms||{};styleLabels=index.styles||{};
     for(const a of entries.filter(a=>a.legacy))assets.set(a.id,{...a,texture:'legacy-icons::'+a.texture});
     $('count').title=`${index.approved_count||0} approved assets and ${index.legacy_count||0} legacy icons`;
 
-    filters();
     cardObserver=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){cardObserver.unobserve(e.target);const a=entries.find(x=>x.id===e.target.dataset.assetId);if(a)paint(e.target.querySelector('canvas'),a,0,{card:true}).catch(()=>{e.target.querySelector('.art').textContent='Preview unavailable'});}}, {rootMargin:'260px'});
     update();
+    const requested=new URLSearchParams(location.search).get('asset')||new URLSearchParams(location.search).get('icon');
+    const found=requested&&entries.find(a=>a.id===requested);
+    if(found)openDetail(found);
   }
-  $('more').onclick=more;for(const id of ['search','kind','pack','sort'])$(id).addEventListener('input',update);
-  $('close').onclick=()=>$('detail').close();$('detail').addEventListener('close',()=>{current=null;activePreview++});
+  $('more').onclick=more;for(const id of ['search','sort',...FACETS])$(id).addEventListener('input',update);
+  $('clear-filters').onclick=()=>{$('search').value='';for(const id of FACETS)$(id).value='';update()};
+  $('copy-id').onclick=()=>{if(current)navigator.clipboard.writeText(current.id).then(()=>notify('Asset ID copied')).catch(()=>notify('Clipboard unavailable'))};
+  $('copy-link').onclick=()=>{if(current){const url=new URL(location.href);url.searchParams.set('asset',current.id);navigator.clipboard.writeText(url.href).then(()=>notify('Asset link copied')).catch(()=>notify('Clipboard unavailable'))}};
+  $('close').onclick=()=>$('detail').close();$('detail').addEventListener('close',()=>{
+    current=null;activePreview++;
+    const url=new URL(location.href);url.searchParams.delete('asset');url.searchParams.delete('icon');history.replaceState(null,'',url);
+  });
   $('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Pause':'Play'};
   $('step').onclick=()=>{clock+=1000/12;playing=false;$('play').textContent='Play'};
   $('download-png').onclick=()=>{if(!current)return;const canvas=$('detail-canvas');canvas.toBlob(b=>b?save(b,current.id+'.png'):notify('PNG unavailable'),'image/png')};
