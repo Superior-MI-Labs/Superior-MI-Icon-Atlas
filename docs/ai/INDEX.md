@@ -12,7 +12,7 @@
 
 **Executable acceptance examples:** [Interactive HUD](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/interactive-hud.json) · [`character.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/character.json) · [`potion.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/potion.json). The checker prints a real PASS/FAIL and never claims human visual inspection.
 
-**Shared reference:** [Manifest/API contract](FORMAT-API.md) · [QA release checklist](RELEASE-CHECKLIST.md) · [Request examples](PROMPT-EXAMPLES.md) · [Grid starters](../templates/authoring-grids.zip).
+**Shared authoring:** [Creator preflight](CREATOR-PREFLIGHT.md) · [Image source workflow](IMAGE-ENGINE-WORKFLOW.md) (when relevant).\n\n**Shared reference:** [Manifest/API contract](FORMAT-API.md) · [QA release checklist](RELEASE-CHECKLIST.md) · [Request examples](PROMPT-EXAMPLES.md) · [Grid starters](../templates/authoring-grids.zip).
 
 ## Why the directions are separated
 
