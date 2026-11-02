@@ -29,7 +29,7 @@ class PublicCatalogTests(unittest.TestCase):
             self.assertEqual(len({a['id'] for a in public['assets']}),2143)
             self.assertTrue(all(a.get('style') for a in public['assets']))
             for field in ('domain','style','subject','review','status','license','animated'):
-                self.assertIn('id="'+field+'"',home if False else (site/'index.html').read_text())
+                self.assertIn('id="'+field+'"',(site/'index.html').read_text())
             self.assertEqual(check(site/'demo/fantasy-rpg-hud-wave1.zip'),[])
             self.assertTrue(all(a['license']=='CC0-1.0' for a in public['assets'] if not a.get('legacy')))
             self.assertEqual(sum(a.get('legacy',False) for a in public['assets']),2073)
