@@ -100,6 +100,16 @@ The [Batch 03 Sunblade receipt](https://github.com/Superior-MI-Labs/Superior-MI-
 
 **Status boundary:** local ZIP/source/frame tests PASS, but the exact new import ZIP was not imported in a real Visual Atlas browser session, and the artwork is not yet approved versus the source Sunblade concepts. **No public publication** and no claim that Sky's swordless idle, run or three-tail animations have been delivered. The next source-art family is those body clips plus an ornate sword art-quality pass, without reopening reference concepting.
 
+### Batch 04 lesson — technically valid body sprites can still fail art production
+
+The [Batch 04 body-motion receipt](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/BODY-BATCH-04-RECEIPT.md) records an honest new artifact: **92 real original vector-drawn body frames, 9 clips, 2 preview selectors, 4 optimized atlases**, with **92/92 pixel-exact source reconstructions**. Its 16FPS state clips can be imported in principle using existing region/sequence/state_set kinds, with sword and body remaining separate. However, the art is a simplified technical study and **fails the detailed, painterly Sky identity requirement**. Do **not** call it finished, upscale it to mask defects, or publish it.
+
+**New critical QA distinction:** technical pass (valid image/manifest/loop structure) != animation-quality pass (contact, acceleration, silhouettes, expressive pose work) != style-identity pass (user-approved proportions, costume, celestial eyes, genuinely feathered three hip-rooted tails, cloth/face concealment). The pipeline must label **all three gates individually**, and may publish only if each required gate passes.
+
+**Source-of-truth lesson:** do not generate clips by moving or liquefying an approved static character illustration. Author unique grounded key poses and believable in-betweens. The technical vector pose generator can be used as a removable **motion timing proxy**, not as the final art source. Once high-fidelity full-body art is approved, replace the proxy frames under stable IDs and rerun exact-alpha atlas, loop and native-scale visual checks. Do not add a second runtime schema, reimplement the Atlas renderer, or create new profile variants beyond the user-approved two health tiers (>36% normal; <=36% low).
+
+**Constraint learned from the local test environment:** Playwright is installed, but the bundled Chromium executable is missing; launching the system Chromium still blocks `file://` pages by administrator policy. Do not claim actual Builder import simply because Python, preview GIFs or a new repository CI check passes. Browser import of the **exact** new ZIP remains a specific separate gate.
+
 ## Gate P1 — smallest useful *working* animation slice
 
 Create these actual Visual Atlas assets first: relaxed side idle loop; run loop and an authored run-stop transition; three-tail idle secondary motion; and a separate dormant Sunblade orbit visualization. Build one **self-contained** ZIP using existing `smi-visual-pack/1` kinds and real measured PNG frames. Do not invent a controller property in this strict v1 schema.

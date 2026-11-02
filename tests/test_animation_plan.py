@@ -112,6 +112,31 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertFalse(self.plan["provenance"]["sunblade_batch03_published"])
         self.assertEqual(self.plan["target"]["weapon"]["animation_approach"]["primary"], "traditionally_drawn_full_sword_frames")
 
+    def test_batch04_swordless_body_motion_is_not_final_art(self):
+        batch = self.plan["latest_body_candidate"]
+        self.assertEqual(batch["pack_id"], "smi.sky.body.motion-study")
+        self.assertEqual(batch["animation_technique"], "independent_offline_vector_pose_drawings")
+        self.assertEqual(len(batch["states"]), 9)
+        self.assertEqual(sum(batch["frame_counts"]), 92)
+        self.assertEqual(batch["fps"], 16)
+        self.assertEqual(batch["sequences"], 9)
+        self.assertEqual(batch["selectors"], 2)
+        self.assertEqual(batch["assets"], 103)
+        self.assertEqual(batch["atlas_pages"], 4)
+        self.assertEqual(batch["frames"], 92)
+        self.assertEqual(batch["exact_frame_reconstruction"], "92_OF_92_SOURCE_RGBA_PASS")
+        self.assertGreater(batch["decoded_memory_savings_percent"], 40)
+        self.assertLess(batch["decoded_atlas_bytes"], batch["untrimmed_decoded_bytes"])
+        self.assertTrue(batch["body_sword_separation"])
+        self.assertEqual(batch["health_tiers"], ["normal_above_36", "low_at_or_below_36"])
+        self.assertEqual(batch["art_fidelity"], "QUALITY_HOLD_SIMPLIFIED_VECTOR_NOT_DETAILED_CANONICAL")
+        self.assertFalse(batch["user_art_approval"])
+        self.assertEqual(batch["official_browser_builder_import"], "NOT_TESTED")
+        self.assertFalse(batch["public_release"])
+        self.assertEqual(self.plan["provenance"]["body_batch04_art_quality"], "HOLD")
+        self.assertFalse(self.plan["provenance"]["body_batch04_published"])
+        self.assertTrue((ROOT / batch["document"]).is_file())
+
     def test_creator_chose_traditional_sword_animation(self):
         sword = self.plan["target"]["weapon"]
         method = sword["animation_approach"]
