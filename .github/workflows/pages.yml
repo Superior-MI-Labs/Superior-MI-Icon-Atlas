@@ -2,6 +2,8 @@ name: Publish Visual Atlas
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -39,10 +41,13 @@ jobs:
       - name: Remove legacy assets and unpublished starter packs from Pages artifact
         run: python3 tools/prune_public_site.py site
       - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v4
+        if: github.event_name != 'pull_request'
         with:
           path: site/
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
