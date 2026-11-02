@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / 'site'
 
 SCRIPTS = (
-    'vendor/jszip.min.js', 'timeline-core.js', 'visual-core.js',
+    'vendor/jszip.min.js', 'timeline-core.js', 'visual-core.js', 'input-core.js',
     'collection-core.js', 'bag-store.js', 'interaction-core.js',
     'slot-core.js', 'asset-renderer.js', 'builder.js',
 )
