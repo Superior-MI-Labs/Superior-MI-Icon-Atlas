@@ -1,7 +1,7 @@
 {
   "schema": "smi-character-production-plan/1",
   "project_id": "smi.sky-blue-eyes.motion-foundation",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "status": "PREPRODUCTION",
   "runtime_support": "NOT_IMPLEMENTED",
   "description": "Grounded no-wing veiled desert wanderer: approved base clothing/silhouette, unqualified directional masters and unframed dialogue head. This is a planning manifest, NOT renderable animation artwork.",
@@ -83,7 +83,7 @@
     },
     "weapon": {
       "base": "Dormant Shattered Sunblade",
-      "behavior": "independent autonomous floating sword with fragment-local motion; back hover, orbit, cast, recall and hand-lock melee",
+      "behavior": "Independently positioned animated sword actor, using traditionally drawn full-sword motion clips; floats behind Sky, casts remotely, grabs hilt for melee, returns to hover.",
       "appearance": "Ancient segmented Shattered Sunblade: clearly separated fragments suspended by interwoven, flowing energy, cloth-wrapped hilt/guard and tied phoenix feathers; no static welding or fixed physical joints.",
       "aspects": [
         "dormant",
@@ -94,69 +94,30 @@
         "storm",
         "spirit"
       ],
-      "note": "One canonical fragment hierarchy and animation family. All seven aspects reuse fragment identities and core paths but change energy language, shaders/material overlays and particles; gameplay/puzzles owned by host.",
+      "note": "One canonical drawn sword art family; all aspects reuse the silhouette and base motion timings where visually appropriate. Aspect-specific FX may be drawn as separate existing composition/sequence assets. No runtime per-fragment rig.",
       "articulation": {
-        "status": "CREATOR_DESIGN_LOCKED_RUNTIME_NOT_IMPLEMENTED",
-        "principle": "Separated solid fragments are suspended in a variable geometry by interwoven magical energy, not welded, connected by hidden rigid joints, or merely painted with cracks.",
+        "status": "VISUAL_ART_DIRECTION_ONLY",
         "separate_actor": true,
         "default_space": "root_relative_back_hover_not_sheathed",
-        "ownership": "sword actor; never bake sword pixels into Sky body frames",
-        "canonical_elements": [
-          {
-            "id": "hilt",
-            "role": "rigid grip and primary attachment anchor",
-            "allowed_motion": "whole_weapon; no grip drift while hand-locked"
-          },
-          {
-            "id": "guard",
-            "role": "solar guard and orbital rings",
-            "allowed_motion": "subtle independent ring rotations and planar drift while maintaining usable grip clearance"
-          },
-          {
-            "id": "blade_fragments",
-            "role": "stable-ID relic metal/stone shards and tip",
-            "allowed_motion": "independent translation, angular oscillation and offset from primary blade axis; preserve identity and ordering"
-          },
-          {
-            "id": "cohesion_weave",
-            "role": "energy threading the actual gaps",
-            "allowed_motion": "continuously deforms, reconnects and redistributes flow between moving shard endpoints"
-          },
-          {
-            "id": "cloth_and_feathers",
-            "role": "physical cloth wraps/straps and dangling phoenix feathers",
-            "allowed_motion": "secondary cloth/feather sway from movement, not a rigid painted sticker"
-          }
+        "technique": "FULL_SWORD_AUTHORED_FRAMES",
+        "description": "The sword is visibly broken into separate pieces connected by changing, interwoven energy. Any apparent shard flex, lag or rotation is drawn into successive whole-sword frames, not evaluated independently at runtime.",
+        "invariant_rules": [
+          "Visibly shattered silhouette with energy flowing in actual negative-space gaps, not a physically welded blade.",
+          "Stable recognizable hilt, guard, shard shapes and cloth across authored frames; no random geometry drift.",
+          "Hilt aligns to Sky hand anchor during melee, but body sprites never include sword pixels.",
+          "Sword floats beside Sky's back while resting: no physical scabbard or attached/sheathed weapon.",
+          "Elemental effects are variants or additive visual layers; no need to create a shard-control engine.",
+          "Real hand-authored adjacent frames and loop seams must visually qualify; avoid stretching one still or fake warps."
         ],
         "motion_phases": {
-          "hover": "small asynchronous translation and rotation per fragment, soft sway, loosely assembled readable sword silhouette",
-          "orbit": "orientation follows orbit trajectory while fragments subtly lag/lead with bounded displacement and fluid energy weave",
-          "cast": "brief charge and expansion; fragments stretch apart in flight under tether, then converge toward impact",
-          "recall": "fragments catch up in order and settle with soft overshoot; energy threads stay continuous",
-          "hand_lock": "hilt arrives at exact hand transform; remaining fragments tighten for precise melee silhouette but remain visibly unjoined",
-          "held_melee": "hilt stays perfectly anchored to hand; independent shard lag, rotational flex, compression at contact and damped return",
-          "release": "unclamp from hand smoothly; fragments relax into floating back-hover or autonomous command"
-        },
-        "invariant_rules": [
-          "fragments remain individually visible and separated; no permanently solid unbroken sword silhouette",
-          "consistent fragment IDs, textures and relative order across all aspects and animation frames",
-          "hilt/grip transform never drifts while attached to Sky's hand",
-          "no sword baked into body sprites and no physical back scabbard",
-          "energy weave endpoints track moving fragment positions; no disconnected luminous stickers or rigid glowing crack decal",
-          "preserve recognizable Shattered Sunblade geometry even with extreme cast/impact motion",
-          "avoid unconstrained random jitter, incorrect shard intersections, energy pops or frame-seam teleportation",
-          "all elemental aspects recolor/alter energy + optional material/particle overlays while reusing the core shard animation",
-          "dormant energy is subtle yet actually holds fragments together; radiator-like rigid connecting rods are prohibited"
-        ],
-        "production_guidance": "Author clean isolated fragment source images, a stable assembly/attachment table, an idle-hum keypose set and a hand-grip pose. The future controller can animate fragment-local transforms and render tethers procedurally or via authored animation; start with existing region/sequence/composition capabilities and request engine extensions only after a tested proof of need.",
-        "preview_cases": [
-          "rest_hover_small_asynchronous_drift",
-          "orbit_with_shard_lag",
-          "cast_expansion",
-          "held_grip_contact_flex",
-          "release_and_reassemble",
-          "aspect_swap_without_fragment_identity_change"
-        ]
+          "back_hover": "drawn subtle floating, shifting gaps and breathing energy in a seamless idle",
+          "orbit": "drawn orientation and perspective change while sword actor follows an independent root path",
+          "cast": "authored anticipation, extension, travel slash and recovery poses",
+          "recall": "authored reversal and settling frames",
+          "grab_transition": "authored hilt approach and precise grip key pose",
+          "held_slash": "drawn full-sword impact and follow-through while hilt is attached to Sky's hand",
+          "release": "drawn detach and return to hovering arrangement"
+        }
       },
       "default_placement": "Autonomous back-hover near right shoulder, never a sheathed scabbard or baked body weapon",
       "combat_identities": {
@@ -174,7 +135,7 @@
         }
       },
       "ab_experiment": {
-        "status": "STRUCTURAL_PASS_VISUAL_BROWSER_PENDING_NOT_CANONICAL",
+        "status": "CLOSED_CREATOR_SELECTED_AUTHORED_FRAMES",
         "milestone": "Sunblade Split-Test 0.1",
         "design_docs": "production/sky-blue-eyes/SUNBLADE-AB-EXPERIMENT.md",
         "external_handoff": "Sky-Sunblade-AB-Prototype-Handoff-v0.1.zip",
@@ -211,7 +172,29 @@
         "canonical_art_approved": false,
         "real_browser_import_qualified": false,
         "measured_by": "2026-11-02 deterministic prototype generator and ZIP structural validator",
-        "note": "Both approaches use the same simplified source geometry, not user-approved ornate Sunblade art. Other agent handles image optimization; don't change existing published artwork."
+        "note": "Historical simplified technical proof only. Creator chose normally drawn whole-sword frames; do not continue A or propose dynamic shard rig. Preserve measurements solely as experiment provenance.",
+        "selected_approach": "B",
+        "history_only": true,
+        "current_production_dependency": false
+      },
+      "animation_approach": {
+        "status": "CREATOR_SELECTED",
+        "primary": "traditionally_drawn_full_sword_frames",
+        "runtime_representation": "smi-visual-pack/1 region + sequence + state_set; optional pre-existing composition layers for whole-actor FX",
+        "instruction": "Create separate, individually authored complete sword poses. Animate fragmentation, interwoven cohesion and cloth directly in each frame; no programmable per-shard transforms, shard rig, endpoint solver, or procedural floating-pieces controller.",
+        "retained": "Sword is its own animated actor; Sky body frames contain no sword; hilt/world/hand anchor transitions belong to the host game, not to an independent fragment rig.",
+        "cadence": "16 FPS default with meaningful variable per-frame holds; tune by visual QA, not interpolated static-image warping",
+        "first_clips": [
+          "back_hover",
+          "orbit",
+          "cast",
+          "recall",
+          "grab_transition",
+          "held_slash",
+          "release"
+        ],
+        "source_pipeline": "reference-approved sword-only drawing -> hand-authored key poses -> real in-betweens -> transparent PNG frames -> deterministic lossless atlas -> sequence manifests -> preview/ZIP qualification",
+        "approval": "User rejected A/B fragment-driven strategy on 2026-11-02; draw sword normally."
       }
     },
     "input_design": {
@@ -375,7 +358,6 @@
       "default dormant Sunblade exact silhouette and proportion",
       "unframed head dialogue poses matching same cloak/veil and galaxy eyes",
       "original reference image handoff to durable source repository and rights documentation",
-      "final shard count and stable fragment ID roster, maximal displacement per state and exact energy-tether appearance",
       "Regenerate corrected full-body right-facing hero study with lower three tail roots and shallow three-quarter perspective; only approve as source after inspection."
     ],
     "confirmed_design_decisions": [
@@ -387,7 +369,8 @@
       "two health art tiers split at 36%",
       "Sunblade fragments independently rotate, translate, flex and reassemble by animated energy cohesion across both floating and hand-held modes",
       "Right-facing hero art uses a shallow three-quarter side angle and real volume, not an absolutely flattened lateral profile.",
-      "Three feathered tails attach at lower back/pelvic hip area. Upper two tail origins from tall side candidate must be lowered to align with approved crop."
+      "Three feathered tails attach at lower back/pelvic hip area. Upper two tail origins from tall side candidate must be lowered to align with approved crop.",
+      "Sunblade animation production uses traditionally drawn complete sword frames; procedural fragment rig and A/B comparisons are discontinued."
     ]
   },
   "track_owners": [
@@ -709,9 +692,9 @@
       ]
     },
     {
-      "id": "weapon_articulation",
+      "id": "weapon_authored_motion",
       "stage": "P3",
-      "evidence": "Real multi-frame/scrubbable animation visibly shows at least two independently rotated and translated persistent shards; energy strands attach to their moving endpoints; hilt stays fixed in hand when locked; no discontinuities or lost fragments during aspect swaps.",
+      "evidence": "Full-sword hand-authored frames: clear separated shards, live-looking interwoven energy, stable hilt/grip pose, convincing follow-through, no popping between frames, loop seam and aspect render review; source PNGs/atlas/ZIP must be inspected.",
       "covers": [
         "sky.sword.cast",
         "sky.sword.recall",
@@ -784,6 +767,8 @@
     "latest_image_generation_attempt": "Decorative reference collage; rejected for canonical frame geometry. It does not override the approved user tail-placement example.",
     "sunblade_ab_structural_pass": true,
     "sunblade_ab_browser_qa": "NOT_RUN",
-    "sunblade_ab_visual_approval": "PENDING"
+    "sunblade_ab_visual_approval": "NOT_REQUIRED_HISTORICAL_EXPERIMENT",
+    "sunblade_authored_frames_approved": false,
+    "sunblade_animation_method": "AUTHORED_FRAME_SELECTED"
   }
 }
