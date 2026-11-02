@@ -88,6 +88,21 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertEqual(self.plan["target"]["weapon"]["articulation"]["canonical_elements"][0]["id"], "hilt")
         self.assertTrue((ROOT / "production/sky-blue-eyes/CONTROL-AND-COMBO-PROPOSAL.md").is_file())
 
+    def test_sword_ab_proof_is_two_reusable_visual_pipelines(self):
+        test = self.plan["target"]["weapon"]["ab_experiment"]
+        self.assertEqual(test["states"], ["hover", "cast", "recall", "held"])
+        self.assertEqual(test["approaches"]["A"]["kind"], "composition")
+        self.assertEqual(test["approaches"]["B"]["kind"], "sequence")
+        self.assertEqual(test["approaches"]["A"]["shards"], 6)
+        self.assertEqual(test["approaches"]["B"]["frames"], 64)
+        self.assertLess(test["approaches"]["A"]["size_bytes"], test["approaches"]["B"]["size_bytes"])
+        self.assertEqual(test["real_browser_import_qualified"], False)
+        self.assertFalse(test["canonical_art_approved"])
+        self.assertFalse(test["archive_available_in_repo"])
+        self.assertEqual(self.plan["provenance"]["sunblade_ab_browser_qa"], "NOT_RUN")
+        self.assertTrue((ROOT / test["design_docs"]).is_file())
+        self.assertEqual(self.plan["target"]["weapon"]["articulation"]["separate_actor"], True)
+
     def test_duplicate_clip_rejected(self):
         plan = copy.deepcopy(self.plan)
         plan["qualification_clips"].append(copy.deepcopy(plan["qualification_clips"][0]))
