@@ -16,7 +16,7 @@ Contract source: [`examples/character-animations/manifest.json`](https://github.
 
 1. Confirm creator brief, reference identity, states, directions, art style and deliverable.
 2. Inspect existing Visual Atlas animation recipes, manifest, tests; reuse contracts.
-3. Fix consistent camera, scale, canvas, alpha, palette, baseline and ground pivot.
+3. Fix consistent camera, scale, canvas, alpha, palette, baseline and ground pivot. For trimmed character frames, follow the exact [logical canvas/trim/pivot contract](../FORMAT-API.md); verify that each crop renders at the authored ground anchor, including a looped animation. Legacy `logical_size_px` without trim has different display semantics.
 4. Produce canonical direction poses; inspect identity, anatomy, apparel and silhouettes **before** creating action frames.
 5. Draw actual key poses (breathing, blinking, foot articulation, shifts in weight); do not fake action by globally warping one sprite.
 6. Draw/investigate in-betweens; allow action-dependent frame counts and timing.
