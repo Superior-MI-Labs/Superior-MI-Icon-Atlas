@@ -56,7 +56,7 @@ def build(dest:Path|None=None):
         archive=dest/'demo'/(folder.name+'.zip')
         with ZipFile(archive,'w',ZIP_DEFLATED,compresslevel=7) as z:
             for f in sorted(folder.rglob('*')):
-                if not f.is_file() or f.suffix.lower() not in {'.json','.png','.md'}: continue
+                if not f.is_file() or f.name=='preview.png' or f.suffix.lower() not in {'.json','.png','.md'}: continue
                 entry=ZipInfo(f.relative_to(folder).as_posix(),date_time=(2020,1,1,0,0,0))
                 entry.compress_type=ZIP_DEFLATED
                 entry.external_attr=(0o644<<16)
@@ -83,6 +83,16 @@ def build(dest:Path|None=None):
               'tags':sorted({tag for a in assets for tag in a.get('tags',[])})[:24],
               'license':sorted({str(p.get('license','UNSPECIFIED')) for p in manifests})}
     featured=[inspect_archive(path) for path in sorted((dest/'demo').glob('*.zip'))]
+    # Optional authored preview stays outside the downloadable runtime pack.
+    # Search and pack metadata remain derived from source manifests.
+    for item in featured:
+        stem=Path(item['filename']).stem
+        preview=ROOT/'examples'/stem/'preview.png'
+        if preview.is_file():
+            target=dest/'showcase'/f'{stem}.png'
+            target.parent.mkdir(exist_ok=True)
+            shutil.copy2(preview,target)
+            item['preview']='showcase/'+target.name
     (dest/'featured-packs.json').write_text(json.dumps({'schema':'smi-featured-packs/1','packs':featured},indent=2)+'\n',encoding='utf-8')
 
     src_files=['manifest.json','LICENSE','NOTICE.md']

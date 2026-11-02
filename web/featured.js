@@ -10,6 +10,11 @@
     root.replaceChildren();
     for(const p of selected){
       const article=document.createElement('article');article.className='featured-card';
+      if(p.preview){
+        const img=document.createElement('img');img.className='featured-preview';
+        img.src=p.preview;img.alt='Preview of '+p.title;img.loading='lazy';
+        article.append(img);
+      }
       const heading=document.createElement('h3');heading.textContent=p.title;
       const detail=document.createElement('p');detail.textContent=p.description||'Validated manifest-driven visual asset example.';
       const meta=document.createElement('p');meta.className='muted';meta.textContent=`${p.assets} assets · ${p.manifests} manifest(s) · ${p.kinds.join(', ')}`;

@@ -71,6 +71,18 @@ class AIRecipeLibraryTests(unittest.TestCase):
             self.assertIn('featured-packs.json',(site/'featured.js').read_text())
             self.assertIn("get('example')",(site/'builder.js').read_text())
 
+    def test_optional_showcase_is_derived_and_not_bundled_in_pack(self):
+        folder=ROOT/'examples'/'fantasy-rpg-hud-wave1'
+        if not (folder/'manifest.json').is_file(): self.skipTest('Approved Wave 1 pack not yet published')
+        with tempfile.TemporaryDirectory() as tmp:
+            site=Path(tmp);build(site)
+            packs=json.loads((site/'featured-packs.json').read_text())['packs']
+            item=next(p for p in packs if p['filename']=='fantasy-rpg-hud-wave1.zip')
+            self.assertEqual(item['preview'],'showcase/fantasy-rpg-hud-wave1.png')
+            self.assertTrue((site/item['preview']).is_file())
+            with ZipFile(site/'demo'/item['filename']) as z:
+                self.assertNotIn('preview.png',z.namelist())
+
     def test_local_ai_links_resolve_in_generated_site(self):
         with tempfile.TemporaryDirectory() as tmp:
             site=Path(tmp);build(site)
