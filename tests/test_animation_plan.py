@@ -90,7 +90,11 @@ class CharacterPlanTests(unittest.TestCase):
 
     def test_sword_ab_proof_is_two_reusable_visual_pipelines(self):
         test = self.plan["target"]["weapon"]["ab_experiment"]
-        self.assertEqual(test["states"], ["hover", "cast", "recall", "held"])\n        self.assertEqual(test["status"], "CLOSED_CREATOR_SELECTED_AUTHORED_FRAMES")\n        self.assertEqual(test["selected_approach"], "B")\n        self.assertTrue(test["history_only"])\n        self.assertFalse(test["current_production_dependency"])
+        self.assertEqual(test["states"], ["hover", "cast", "recall", "held"])
+        self.assertEqual(test["status"], "CLOSED_CREATOR_SELECTED_AUTHORED_FRAMES")
+        self.assertEqual(test["selected_approach"], "B")
+        self.assertTrue(test["history_only"])
+        self.assertFalse(test["current_production_dependency"])
         self.assertEqual(test["approaches"]["A"]["kind"], "composition")
         self.assertEqual(test["approaches"]["B"]["kind"], "sequence")
         self.assertEqual(test["approaches"]["A"]["shards"], 6)
@@ -99,7 +103,8 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertEqual(test["real_browser_import_qualified"], False)
         self.assertFalse(test["canonical_art_approved"])
         self.assertFalse(test["archive_available_in_repo"])
-        self.assertEqual(self.plan["provenance"]["sunblade_ab_browser_qa"], "NOT_RUN")\n        self.assertEqual(self.plan["provenance"]["sunblade_ab_visual_approval"], "NOT_REQUIRED_HISTORICAL_EXPERIMENT")
+        self.assertEqual(self.plan["provenance"]["sunblade_ab_browser_qa"], "NOT_RUN")
+        self.assertEqual(self.plan["provenance"]["sunblade_ab_visual_approval"], "NOT_REQUIRED_HISTORICAL_EXPERIMENT")
         self.assertTrue((ROOT / test["design_docs"]).is_file())
         self.assertEqual(self.plan["target"]["weapon"]["articulation"]["separate_actor"], True)
 
