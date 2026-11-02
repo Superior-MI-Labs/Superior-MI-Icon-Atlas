@@ -5,6 +5,8 @@ Do not label an asset ready merely because its JSON parses. Structural validatio
 ## 1. Creator brief and coverage
 
 For substantial commissions, use [creator preflight](CREATOR-PREFLIGHT.md) before expensive production; image generation follows [source-art workflow](IMAGE-ENGINE-WORKFLOW.md) when relevant. Do not invent acceptance or approval.
+- [ ] **Canonical visual fidelity GATE FIRST:** When the request includes a user-approved art/style reference, compare each candidate source against that actual reference side-by-side at the intended gameplay/render size **and** at native art resolution. Verify subject identity, anatomy, shapes, costume/ornament geometry, material treatment, effects and silhouette. A different art style, however technically valid, is **FAIL**; do not package it as production-ready or expand to more variants. Save direct visual evidence and explicit user/artist approval. Plan approval is not artwork approval.
+- [ ] **No proxy for visual sign-off:** unit tests, lossless PNG packing, nonblank pixels, FPS, GIF previews, number of frames, or successful CI must never substitute for an actual approved master or an inspected in-engine/imported animation.
 - [ ] All assets the creator requested are included; unexpected simplifications are disclosed.
 - [ ] Names, tags, style, animation/state names, defaults, licensing and rights claims are accurate.
 - [ ] A compact request-specific acceptance test exists (examples: "Mana preset selects three animated frames", "walk and idle state changes remain aligned", "slider outputs value 12 when set to 12").
