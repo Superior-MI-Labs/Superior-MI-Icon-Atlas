@@ -147,6 +147,30 @@ def check(pack_path: Path):
                                 errors.append(f'{asset["id"]}: numeric input {key} has invalid min/max')
                             if 'min' in inp and 'max' in inp and not inp['min'] <= inp['default'] <= inp['max']:
                                 errors.append(f'{asset["id"]}: numeric input {key} default outside range')
+                    repeat_layers=[layer for layer in asset['layers'] if layer.get('repeat')]
+                    if len(repeat_layers)>1:errors.append(f'{asset["id"]}: only one repeated layer supported per composition')
+                    for layer in repeat_layers:
+                        r=layer['repeat']
+                        target=ids.get(layer.get('asset'))
+                        if not target or target['kind']!='state_set' or layer.get('slot'):
+                            errors.append(f'{asset["id"]}: repeat requires a directly referenced state_set')
+                            continue
+                        for key in (r['count_input'],r['value_input'],r['columns_input']):
+                            inp=asset.get('inputs',{}).get(key)
+                            if not inp or inp.get('type')!='number' or any(k not in inp for k in ('min','max')):
+                                errors.append(f'{asset["id"]}: repeat input {key} must have a numeric range')
+                        for key in (r['count_input'],r['columns_input']):
+                            inp=asset.get('inputs',{}).get(key,{})
+                            if inp.get('min',0)<1 or inp.get('max',257)>256 or inp.get('step',1)!=1:
+                                errors.append(f'{asset["id"]}: repeat count/column {key} requires integer 1..256 step 1')
+                        if asset.get('inputs',{}).get(r['value_input'],{}).get('step',1)!=1:
+                            errors.append(f'{asset["id"]}: repeat value requires integer steps')
+                        if set(r['levels'])-set(target['states']):
+                            errors.append(f'{asset["id"]}: repeat levels not in state_set {target["id"]}')
+                        count_max=asset.get('inputs',{}).get(r['count_input'],{}).get('max',0)
+                        value_max=asset.get('inputs',{}).get(r['value_input'],{}).get('max',0)
+                        if value_max<count_max*(len(r['levels'])-1):
+                            errors.append(f'{asset["id"]}: repeat value must cover full capacity')
                     for layer in asset['layers']:
                         errors.extend(validate_tracks(layer.get('tracks',[]),asset.get('duration_ms'),asset['id']+'/'+layer['id']))
                         for key in [layer.get('state_from_input'),(layer.get('visible_when') or {}).get('input'),(layer.get('clip') or {}).get('input'),(layer.get('position_from_input') or {}).get('input')]:
