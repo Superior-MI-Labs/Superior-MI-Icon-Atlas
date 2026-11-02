@@ -25,6 +25,14 @@ Produce a model-sheet package *as real, separately inspectable art*, not one ima
 
 **Approval rule:** P0 is complete only when the model sheet, palette, camera, body canvas, anchors, default Sunblade silhouette, and source-rights decision are approved and evidence recorded. Approval of a plan does not equal approval of artwork. When uncertainty would make bulk work expensive, produce the smallest reversible study instead.
 
+### P0 failure mode: beautiful reference collage, unusable animation source
+
+**Observed in Sky's first visual exploration:** AI generations made ornate presentation boards with multiple tiny figures, textual labels, sword thumbnails, and schematic action poses. These were useful for discussion but **failed canonical sprite qualification**. Do not crop a tiny pose from such a board, upscale it, and silently call it an animation frame.
+
+**Correction:** use the original identity references for planning, then create **one isolated full-height right-facing, 90-degree side-profile character per art-generation pass**, on a simple uniform neutral ground with visible feet, a known camera and the full silhouette. Explicitly prohibit title text, multi-panel layout, diagrams, extra characters, motion smear, weapons overlapping the body, and dramatic background lighting. Request folded or separated wings when studying the body occlusion. Generate alternate views and motion key poses in separate passes *after* one view passes identity and scale review.
+
+**Gate:** inspect the single isolated pose at target on-screen height, compare eye/muzzle/ear shape, body markings, costume seams, wing roots and bifurcated tail to source references, and verify one contiguous figure without clipping. Mark `NEEDS FIXES` if the output is a collage, inconsistent view, or scene painting even when aesthetically excellent. An image-generation response is not a qualified PNG sprite sheet, stable model sheet, or loop. See [Sky P0 review](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/P0-REVIEW.md) for concrete regression evidence.
+
 ## Gate P1 — smallest useful *working* animation slice
 
 Create these actual Visual Atlas assets first: relaxed side idle loop; run loop and an authored run-stop transition; separate wing idle motion; and a Sunblade orbit visualization. Build one **self-contained** ZIP using existing `smi-visual-pack/1` kinds and real measured PNG frames. Do not invent a controller property in this strict v1 schema.
