@@ -14,13 +14,16 @@ class PublicCatalogTests(unittest.TestCase):
             site=Path(temp);build(site)
             public=json.loads((site/'public-catalog.json').read_text())
             self.assertEqual(public['schema'],'smi-public-catalog/1')
-            self.assertEqual(len(public['packs']),1)
+            self.assertEqual(len(public['packs']),2)
+            self.assertEqual(public['legacy_count'],2073)
+            self.assertEqual(public['approved_count'],70)
             self.assertEqual(public['packs'][0]['id'],'fantasy-rpg-hud-wave1')
             pack=json.loads((ROOT/'examples/fantasy-rpg-hud-wave1/manifest.json').read_text())
-            self.assertEqual({a['id'] for a in pack['assets']},{a['id'] for a in public['assets']})
-            self.assertEqual(len(public['assets']),70)
+            self.assertEqual({a['id'] for a in pack['assets']},{a['id'] for a in public['assets'] if not a.get('legacy')})
+            self.assertEqual(len(public['assets']),2143)
             self.assertEqual(check(site/'demo/fantasy-rpg-hud-wave1.zip'),[])
-            self.assertTrue(all(a['license']=='CC0-1.0' for a in public['assets']))
+            self.assertTrue(all(a['license']=='CC0-1.0' for a in public['assets'] if not a.get('legacy')))
+            self.assertEqual(sum(a.get('legacy',False) for a in public['assets']),2073)
             home=(site/'index.html').read_text().lower()
             self.assertNotIn('browse the 2,073-icon library',home)
             self.assertNotIn('white geometric monoline',home)
@@ -38,8 +41,10 @@ class PublicCatalogTests(unittest.TestCase):
             self.assertIn('fantasy-rpg-hud-wave1.zip',(site/'ai-guide.html').read_text())
             for doc in (site/'ai').rglob('*.md'):
                 self.assertNotRegex(doc.read_text(),r'\]\((?:\.\./)+demo/(?:icons|animated-icons|character-animations|interactive-hud|starter-pack|potions-collection)\.zip\)')
-            for rel in ('catalog-data.js','featured-packs.json','manifest.json','sheets','manifests','demo/starter-pack.zip','demo/animated-icons.zip','demo/interactive-hud.zip'):
+            for rel in ('catalog-data.js','featured-packs.json','manifest.json','manifests','demo/starter-pack.zip','demo/animated-icons.zip','demo/interactive-hud.zip'):
                 self.assertFalse((site/rel).exists(),rel)
+            self.assertEqual(len(list(site.glob('sheets/*/atlas.png'))),20)
+            self.assertFalse(list(site.glob('sheets/*/black-outline.png')))
 
     def test_legacy_sources_remain_archived(self):
         self.assertTrue((ROOT/'manifest.json').is_file())

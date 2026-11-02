@@ -15,9 +15,9 @@
     if(clean(a.name)===clean(query))total+=150;
     return total;
   }
-  function rank(a,query){return score(a,query)+(a.kind==='composition'?120:a.kind==='sequence'?65:a.kind==='state_set'?36:0);}
+  function rank(a,query){return score(a,query)+(a.kind==='composition'?120:a.kind==='sequence'?65:a.kind==='state_set'?36:0)-(a.legacy?180:0);}
   function results(entries,{query='',kind='',pack='',sort='recommended'}={}){
-    const ranked=entries.filter(a=>(!kind||a.kind===kind)&&(!pack||a.pack===pack)).map(a=>({a,score:score(a,query)})).filter(x=>x.score>0);
+    const ranked=entries.filter(a=>(!kind||a.kind===kind)&&(!pack||a.pack===pack)&&(!a.legacy||Boolean(query.trim())||pack==='legacy-icons')).map(a=>({a,score:score(a,query)})).filter(x=>x.score>0);
     ranked.sort((x,y)=>sort==='name'?x.a.name.localeCompare(y.a.name):sort==='newest'?y.a.published.localeCompare(x.a.published)||rank(y.a,query)-rank(x.a,query)||x.a.id.localeCompare(y.a.id):rank(y.a,query)-rank(x.a,query)||y.a.published.localeCompare(x.a.published)||x.a.id.localeCompare(y.a.id));
     return ranked.map(x=>x.a);
   }

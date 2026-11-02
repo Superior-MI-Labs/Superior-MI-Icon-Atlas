@@ -7,12 +7,14 @@
   let entries=[],matches=[],shown=0,current=null,clock=0,playing=true,previous=0;
   let preset=null,chosenState=null,controls={},slotChoices={};
   let activePreview=0,cardObserver,detailRendering=false;
+  const legacyImageCache=new Map();
   const PAGE=24;
   const renderer=Renderer.create({getAsset:id=>assets.get(id),getImage:imageFor,slots:Slots,timeline:Timeline,visualCore:VisualCore});
   const notify=message=>{const box=$('notice');box.textContent=message;box.hidden=false;clearTimeout(notify.timer);notify.timer=setTimeout(()=>box.hidden=true,3200);};
   function filters(){const kind=$('kind'),pack=$('pack');for(const k of [...new Set(entries.map(a=>a.kind))].sort()){kind.add(new Option(k==='state_set'?'State variants':k[0].toUpperCase()+k.slice(1),k));}
     for(const p of collections.values())pack.add(new Option(p.name,p.id));}
   async function loadCollection(id){
+    if(id==='legacy-icons')return null;
     if(loaded.has(id))return loaded.get(id);
     if(pending.has(id))return pending.get(id);
     const loader=(async()=>{
@@ -46,14 +48,22 @@
       const cache={zip,textureMap,images:new Map(),manifests};loaded.set(id,cache);return cache;
     })();pending.set(id,loader);try{return await loader;}finally{pending.delete(id);}
   }
-  async function imageFor(key){const [packId,textureKey]=key.split('::');const data=await loadCollection(packId);const t=data.textureMap.get(textureKey);if(!t)throw Error('Missing texture '+key);
+  async function imageFor(key){const [packId,textureKey]=key.split('::');
+    if(packId==='legacy-icons'){
+      if(!legacyImageCache.has(textureKey))legacyImageCache.set(textureKey,new Promise((resolve,reject)=>{
+        const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>reject(Error('Legacy texture unavailable'));
+        img.src=textureKey;
+      }));
+      return legacyImageCache.get(textureKey);
+    }
+    const data=await loadCollection(packId);const t=data.textureMap.get(textureKey);if(!t)throw Error('Missing texture '+key);
     if(!data.images.has(key)){data.images.set(key,(async()=>{
       const raw=await t.file.async('blob'),url=URL.createObjectURL(raw);
       try{return await new Promise((res,rej)=>{const img=new Image();img.onload=()=>res(img);img.onerror=()=>rej(Error('Texture decode failed'));img.src=url;});}
       finally{URL.revokeObjectURL(url);}
     })());}return data.images.get(key);}
   function bindTextures(packId){for(const a of assets.values())if(a.pack===packId&&a.kind==='region'&&!a.texture.includes('::'))a.texture=packId+'::'+a.texture;}
-  async function ready(id){const data=await loadCollection(id);bindTextures(id);return data;}
+  async function ready(id){if(id==='legacy-icons')return null;const data=await loadCollection(id);bindTextures(id);return data;}
   async function paint(canvas,entry,time=0,options={}){
     await ready(entry.pack);
     const size=renderer.sizeFor(entry.id),width=Math.max(1,size[0]),height=Math.max(1,size[1]);
@@ -67,13 +77,13 @@
   function update(){
     const q=$('search').value,k=$('kind').value,p=$('pack').value,order=$('sort').value;
     matches=VisualAtlasSearch.results(entries,{query:q,kind:k,pack:p,sort:order});shown=0;$('gallery').replaceChildren();$('count').textContent=matches.length+' assets';
-    $('browse-title').textContent=q?'Search results':'Recently published';$('browse-subtitle').textContent=q?'Results include finished compositions and reusable parts.':'Finished compositions appear first, followed by reusable source parts.';
+    $('browse-title').textContent=q?'Search results':p==='legacy-icons'?'Legacy Icons':'Recently published';$('browse-subtitle').textContent=q?'Results include approved assets and historical icon candidates.':'Approved compositions first. Legacy icons are accessible through search or the Legacy Icons collection.';
     if(!matches.length){$('gallery').textContent='No matching published assets. Try slider, health, heart, or mana.';$('more').hidden=true;return;}
     more();
   }
   function card(a){const node=document.createElement('button');node.type='button';node.className='asset-tile';node.dataset.assetId=a.id;
     const art=document.createElement('div');art.className='art checker';const canvas=document.createElement('canvas');canvas.width=190;canvas.height=108;canvas.setAttribute('aria-hidden','true');art.append(canvas);
-    const body=document.createElement('div');body.className='tile-details';const kind=document.createElement('span');kind.className='chip';kind.textContent=a.kind==='composition'?'Ready-to-use':a.kind==='state_set'?'State variants':a.kind;
+    const body=document.createElement('div');body.className='tile-details';const kind=document.createElement('span');kind.className='chip';kind.textContent=a.legacy?'Legacy · Review':a.kind==='composition'?'Ready-to-use':a.kind==='state_set'?'State variants':a.kind;
     const name=document.createElement('strong');name.textContent=a.name;const meta=document.createElement('div');meta.className='tile-meta';const label=document.createElement('span');label.textContent=a.style||'Visual asset';const src=document.createElement('span');src.textContent=collections.get(a.pack)?.name||a.pack;meta.append(label,src);body.append(kind,name,meta);node.append(art,body);
     node.onclick=()=>openDetail(a);if(cardObserver)cardObserver.observe(node);
     else paint(canvas,a,0,{card:true}).catch(()=>art.textContent='Preview unavailable');return node;}
@@ -102,11 +112,26 @@
     $('detail-title').textContent=a.name;$('detail-type').textContent=a.kind.replace('_',' ').toUpperCase();$('detail-id').textContent=a.id;
     $('detail-pack').textContent=collections.get(a.pack)?.name||a.pack;
     $('detail-meta').textContent=[a.category,a.style,a.license].filter(Boolean).join(' · ');
-    $('download-pack').href=collections.get(a.pack).zip;
-    $('open-builder').href='builder.html?example='+encodeURIComponent(collections.get(a.pack).zip.split('/').at(-1))+'&asset='+encodeURIComponent(a.id);
+    $('download-pack').hidden=Boolean(a.legacy);
+    $('open-builder').hidden=Boolean(a.legacy);
+    if(!a.legacy){$('download-pack').href=collections.get(a.pack).zip;
+      $('open-builder').href='builder.html?example='+encodeURIComponent(collections.get(a.pack).zip.split('/').at(-1))+'&asset='+encodeURIComponent(a.id);}
+    $('detail-meta').textContent=[a.category,a.style,a.license,a.legacy?'Archive candidate · rights review pending':''].filter(Boolean).join(' · ');
     try{await ready(a.pack);controlsFor(assets.get(a.id));$('detail').showModal();activePreview++;}catch(e){notify('Preview failed: '+e.message);}
   }
   async function downloadAsset(){if(!current)return;
+    if(current.legacy){
+      // One icon, one real cropped texture; no unrelated sheet cells in the ZIP.
+      const asset=assets.get(current.id),src=await imageFor(asset.texture);
+      const [x,y,w,h]=asset.rect_px,c=document.createElement('canvas');c.width=w;c.height=h;
+      c.getContext('2d').drawImage(src,x,y,w,h,0,0,w,h);
+      const png=await new Promise((resolve,reject)=>c.toBlob(b=>b?resolve(b):reject(Error('PNG encoding failed')),'image/png'));
+      const zip=new JSZip();zip.file('textures/icon.png',png);
+      const clean={...asset,texture:'icon'};for(const field of ['pack','legacy','rights_reviewed','review_status','category','published','previewable','animated','aliases'])delete clean[field];
+      zip.file('manifest.json',JSON.stringify({schema:'smi-visual-pack/1',pack_id:'smi.legacy.icon.selection',version:'1.0.0',license:asset.license,description:'Historical icon export: verify rights before commercial redistribution',textures:{icon:{path:'textures/icon.png',width_px:w,height_px:h}},assets:[{...clean,rect_px:[0,0,w,h]}]},null,2)+'\n');
+      zip.file('SOURCE-NOTICES.txt','Historical icon candidate. Rights review is pending. Original ID: '+asset.id+'\n');
+      save(await zip.generateAsync({type:'blob',compression:'DEFLATE'}),current.id+'.zip');return;
+    }
     const data=await ready(current.pack);const closure=new Set();function walk(id){if(closure.has(id))return;const a=assets.get(id);if(!a)throw Error('Missing dependency '+id);closure.add(id);Slots.refs(a).forEach(walk);}
     walk(current.id);const chosen=[...closure].map(id=>structuredClone(assets.get(id)));const required=new Set(chosen.filter(a=>a.kind==='region').map(a=>a.texture.split('::')[1]));
     const main=data.manifests[0];const zip=new JSZip();const defs={};
@@ -127,7 +152,10 @@
   }
   async function init(){
     const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Public catalog unavailable');const index=await response.json();if(index.schema!=='smi-public-catalog/1')throw Error('Unsupported public catalog');
-    entries=index.assets;if(!Array.isArray(entries)||!entries.length)throw Error('No approved public assets');for(const pack of index.packs)collections.set(pack.id,pack);
+    entries=index.assets;if(!Array.isArray(entries)||!entries.length)throw Error('No assets in catalog');for(const pack of index.packs)collections.set(pack.id,pack);
+    for(const a of entries.filter(a=>a.legacy))assets.set(a.id,{...a,texture:'legacy-icons::'+a.texture});
+    $('count').title=`${index.approved_count||0} approved assets and ${index.legacy_count||0} legacy icons`;
+
     filters();
     cardObserver=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){cardObserver.unobserve(e.target);const a=entries.find(x=>x.id===e.target.dataset.assetId);if(a)paint(e.target.querySelector('canvas'),a,0,{card:true}).catch(()=>{e.target.querySelector('.art').textContent='Preview unavailable'});}}, {rootMargin:'260px'});
     update();

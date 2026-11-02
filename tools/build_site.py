@@ -146,9 +146,30 @@ def build(dest:Path|None=None):
                     'previewable':a['kind']!='region' or bool(a.get('rect_px'))
                 })
     if not any(a['kind']=='composition' for a in public_assets):raise ValueError('No published finished compositions')
+    approved_count=len(public_assets)
+    # Historical icons use the original authoritative smi-icon-atlas/3 loader.
+    # They are searchable as a clearly flagged archive, not approved new artwork.
+    legacy_pack='legacy-icons'
+    public_packs.append({'id':legacy_pack,'name':'Legacy Icons · Review Required',
+                         'zip':None,'published':'2026-10-29','license':['Apache-2.0'],
+                         'archived':True})
+    for icon in m['icons']:
+        r=icon['rect_px']
+        if icon['id'] in seen_ids:raise ValueError('Archive ID collision: '+icon['id'])
+        seen_ids.add(icon['id'])
+        public_assets.append({
+            'id':icon['id'],'name':icon['name'],'kind':'region',
+            'style':icon['style'],'tags':icon['tags'],'subjects':icon['subjects'],
+            'aliases':icon['aliases'],'pack':legacy_pack,'published':'2026-10-29',
+            'license':icon['license'],'category':'Legacy Icons','animated':False,
+            'previewable':True,'legacy':True,'review_status':icon['review_status'],
+            'rights_reviewed':icon['provenance']['licensing_review'],
+            'texture':icon['sheet'],'rect_px':[r['x'],r['y'],r['w'],r['h']]
+        })
+
     public_assets.sort(key=lambda a:(a['pack'],a['id']))
     (dest/'public-catalog.json').write_text(json.dumps({'schema':'smi-public-catalog/1',
-        'assets':public_assets,'packs':public_packs},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        'assets':public_assets,'packs':public_packs,'approved_count':approved_count,'legacy_count':len(m['icons'])},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 
     src_files=['manifest.json','LICENSE','NOTICE.md']

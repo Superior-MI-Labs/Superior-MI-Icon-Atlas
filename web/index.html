@@ -12,17 +12,17 @@
 <div class="headright"><a href="builder.html">Builder / My Bag</a><a href="ai-guide.html">Create with AI</a><a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas" target="_blank" rel="noopener noreferrer">GitHub</a></div></header>
 <main class="browse-main">
 <section class="browse-hero"><p class="eyebrow">GAME ASSETS & REUSABLE VISUALS</p><h2>Find the asset your project needs.</h2>
-<p>Browse independently downloadable UI controls, HUDs, sprites and compositions. Preview real states and animations before importing them into your project.</p></section>
+<p>Browse approved game assets and the original icon archive. Finished compositions appear first; historical icons are searchable and clearly marked for review.</p></section>
 <section class="browse-tools" aria-label="Browse filters"><label class="searchbox"><span class="sr-only">Search published assets</span><input id="search" type="search" placeholder="Search sliders, health bars, mana, hearts..." autocomplete="off" autofocus></label>
 <label><span class="sr-only">Asset type</span><select id="kind"><option value="">All asset types</option></select></label>
 <label><span class="sr-only">Collection</span><select id="pack"><option value="">All collections</option></select></label>
 <label><span class="sr-only">Sort</span><select id="sort"><option value="recommended">Featured and recent</option><option value="newest">Newest</option><option value="name">Name A–Z</option></select></label></section>
-<div class="browse-summary"><div><h3 id="browse-title">Recently published</h3><p id="browse-subtitle" class="muted">Ready-to-use compositions appear first. Source components remain searchable.</p></div><span id="count" role="status" aria-live="polite">Loading assets…</span></div>
+<div class="browse-summary"><div><h3 id="browse-title">Recently published</h3><p id="browse-subtitle" class="muted">Ready-to-use compositions appear first. Legacy icon candidates remain searchable.</p></div><span id="count" role="status" aria-live="polite">Loading assets…</span></div>
 <section id="gallery" class="asset-grid" aria-label="Published visual assets"></section>
 <div class="loadmore"><button type="button" id="more" hidden>Load more</button></div>
 <p id="browse-error" class="browse-error" role="alert" hidden></p>
 </main>
-<footer>Original assets carry their own licenses. <a href="builder.html">Import a ZIP privately</a> · <a href="ai-guide.html">AI authoring guide</a> · <a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas">Source repository</a></footer>
+<footer>Legacy icons are archive candidates and require rights review. Published assets carry their own licenses. <a href="builder.html">Import a ZIP privately</a> · <a href="ai-guide.html">AI authoring guide</a> · <a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas">Source repository</a></footer>
 <dialog id="detail" class="asset-detail" aria-labelledby="detail-title"><div class="detail-head"><div><p class="eyebrow" id="detail-type">VISUAL ASSET</p><h2 id="detail-title">Asset preview</h2><p class="muted" id="detail-pack"></p></div><button type="button" id="close" aria-label="Close preview">✕</button></div>
 <div class="asset-detail-body"><div><div class="detail-stage checker"><canvas id="detail-canvas" width="460" height="260" aria-label="Live manifest-driven asset preview"></canvas></div>
 <div class="preview-actions"><button type="button" id="play">Pause</button><button type="button" id="step">Step</button><span id="time-value" class="muted"></span></div><div id="controls" class="asset-controls"></div></div>
