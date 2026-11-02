@@ -58,6 +58,7 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertEqual(self.plan["target"]["face_reveal_policy"].startswith("hide muzzle"), True)
         self.assertTrue(any(x["id"] == "sky.head.talk.masked" for x in self.plan["qualification_clips"]))
         self.assertFalse(any("wing" in x["id"] for x in self.plan["qualification_clips"]))
+        self.assertFalse(any("wing" in clip for gate in self.plan["qa_gates"] for clip in gate.get("covers", [])))
         self.assertEqual(self.plan["target"]["weapon"]["aspects"][0], "dormant")
 
     def test_invalid_clip_stage_returns_validation_error(self):
