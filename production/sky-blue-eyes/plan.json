@@ -1,7 +1,7 @@
 {
   "schema": "smi-character-production-plan/1",
   "project_id": "smi.sky-blue-eyes.motion-foundation",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "status": "PREPRODUCTION",
   "runtime_support": "NOT_IMPLEMENTED",
   "description": "Grounded no-wing veiled desert wanderer: approved base clothing/silhouette, unqualified directional masters and unframed dialogue head. This is a planning manifest, NOT renderable animation artwork.",
@@ -775,7 +775,9 @@
     "reference_production_art_approval": "PER_ASSET_NOT_GLOBAL",
     "fx_first_batch_style_approved": false,
     "fx_first_batch_import_qualified": false,
-    "current_goal": "Produce approved body and traditional full-sword key poses, then real 16FPS animation sequences and qualifying ZIPs; do not request new reference concepts."
+    "current_goal": "Produce approved body and traditional full-sword key poses, then real 16FPS animation sequences and qualifying ZIPs; do not request new reference concepts.",
+    "fx_second_batch_local_qa": true,
+    "fx_second_batch_publication_approved": false
   },
   "design_direction_status": "LOCKED_NO_MORE_CONCEPT_ROUNDS",
   "production_inventory_path": "production/sky-blue-eyes/ANIMATION-INVENTORY.json",
@@ -792,5 +794,27 @@
     "status": "LOCAL_STRUCTURAL_QA_PASS_VISUAL_APPROVAL_AND_OFFICIAL_ATLAS_IMPORT_PENDING",
     "scope": "independent FX studies, not Sky body/sword animation, no public release",
     "reproducible_source": "Included in handoff archive, not installed in repo"
+  },
+  "latest_candidate_batch": {
+    "name": "Sky FX Foundation 0.2",
+    "document": "production/sky-blue-eyes/FX-BATCH-02-RECEIPT.md",
+    "handoff_zip": "Sky-Animation-Production-Batch-02.zip",
+    "import_zip": "sky-fx-foundation-v0.2.zip",
+    "pack_id": "smi.sky.fx.foundation",
+    "pack_version": "0.2.0",
+    "animated_effects": 20,
+    "frames": 240,
+    "assets": 265,
+    "atlas_pages": 2,
+    "import_zip_bytes": 5640077,
+    "decoded_atlas_bytes": 28266240,
+    "comparison_naive_untrimmed_bytes": 62914560,
+    "reduction_decoded_percent": 55.1,
+    "local_source_pixel_qa": "PASS",
+    "official_builder_browser_import": "NOT_TESTED",
+    "style_approved": false,
+    "publications_json_approved": false,
+    "artifact_location": "conversation handoff; PNG binaries not committed",
+    "source_contract": "Source 256x256 PNG masters -> byte-exact trim/paste packer -> existing region+sequence+state_set; no new schema or fragment rig"
   }
 }

@@ -80,6 +80,14 @@ Use the [315-action production inventory](https://github.com/Superior-MI-Labs/Su
 
 **Role boundary:** source image showing a sword floating by Sky's back is **wardrobe provenance** only and is excluded from the canonical body-only frame reference set. The actual body animation must be swordless; whole-sword drawn clips stay separate. Do not independently implement the old shard rig.
 
+### Batch 02 — production QA improvement from real PNG packing
+
+The [batch 02 source receipt](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/FX-BATCH-02-RECEIPT.md) documents an expanded **20-effect, 240-original-frame** experimental collection, built using the existing `region` + `sequence` + `state_set` contract. It preserves the first seven IDs and adds 13 varied motion/puzzle/combat effects. The exact ZIP and editable frame masters are in the conversation handoff, **not yet in the GitHub repository nor on the public site**.
+
+**Lossless packing wisdom:** when populating non-overlapping RGBA atlas rectangles, **paste** pixels directly rather than `alpha_composite` on transparent black. The latter can silently change hidden RGB bytes even while visual appearance seems equal. Reconstruct **every** final trimmed region to its complete logical canvas and compare bytes against the canonical PNG source. Keep the original full source frames; only compiled atlases are derived. This batch passed **240/240 exact RGBA comparisons** and used ~55% less decoded texture memory than untrimmed equal-size cells, with only two atlas pages. This is a *measured case*, not a guarantee for unrelated packs.
+
+**Quality boundary:** a passing ZIP validator, pixel-perfect crop test, or attractive contact image is **not** proof of actual animation quality. Browser navigation is blocked in the local environment, so the new import ZIP has no official Builder browser PASS; user review is still pending. Do not publish it. Keep authoring real Sky body and Sunblade whole-sword frame art next; do not generate a poster claiming dozens of finished character motions.
+
 ## Gate P1 — smallest useful *working* animation slice
 
 Create these actual Visual Atlas assets first: relaxed side idle loop; run loop and an authored run-stop transition; three-tail idle secondary motion; and a separate dormant Sunblade orbit visualization. Build one **self-contained** ZIP using existing `smi-visual-pack/1` kinds and real measured PNG frames. Do not invent a controller property in this strict v1 schema.

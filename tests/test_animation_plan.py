@@ -65,6 +65,27 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertFalse(self.plan["provenance"]["fx_first_batch_import_qualified"])
         self.assertIn("PENDING", first["status"])
 
+    def test_fx_batch02_real_source_qa_and_unpublished_status(self):
+        entry = self.plan["latest_candidate_batch"]
+        self.assertEqual(entry["pack_id"], "smi.sky.fx.foundation")
+        self.assertEqual(entry["pack_version"], "0.2.0")
+        self.assertEqual(entry["animated_effects"], 20)
+        self.assertEqual(entry["frames"], 240)
+        self.assertEqual(entry["assets"], 265)
+        self.assertEqual(entry["atlas_pages"], 2)
+        self.assertEqual(entry["decoded_atlas_bytes"], 28266240)
+        self.assertEqual(entry["comparison_naive_untrimmed_bytes"], 62914560)
+        self.assertGreater(entry["reduction_decoded_percent"], 55)
+        self.assertEqual(entry["local_source_pixel_qa"], "PASS")
+        self.assertEqual(entry["official_builder_browser_import"], "NOT_TESTED")
+        self.assertFalse(entry["style_approved"])
+        self.assertFalse(entry["publications_json_approved"])
+        self.assertTrue((ROOT / entry["document"]).is_file())
+        self.assertTrue(self.plan["provenance"]["fx_second_batch_local_qa"])
+        self.assertFalse(self.plan["provenance"]["fx_second_batch_publication_approved"])
+        self.assertTrue(self.plan["target"]["weapon"]["articulation"]["separate_actor"])
+        self.assertEqual(self.plan["target"]["weapon"]["animation_approach"]["primary"], "traditionally_drawn_full_sword_frames")
+
     def test_creator_chose_traditional_sword_animation(self):
         sword = self.plan["target"]["weapon"]
         method = sword["animation_approach"]
