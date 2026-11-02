@@ -1,7 +1,7 @@
 {
   "schema": "smi-character-production-plan/1",
   "project_id": "smi.sky-blue-eyes.motion-foundation",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "status": "PREPRODUCTION",
   "runtime_support": "NOT_IMPLEMENTED",
   "description": "Grounded no-wing veiled desert wanderer: approved base clothing/silhouette, unqualified directional masters and unframed dialogue head. This is a planning manifest, NOT renderable animation artwork.",
@@ -777,7 +777,11 @@
     "fx_first_batch_import_qualified": false,
     "current_goal": "Produce approved body and traditional full-sword key poses, then real 16FPS animation sequences and qualifying ZIPs; do not request new reference concepts.",
     "fx_second_batch_local_qa": true,
-    "fx_second_batch_publication_approved": false
+    "fx_second_batch_publication_approved": false,
+    "sunblade_batch03_source_qa": true,
+    "sunblade_batch03_art_approved": false,
+    "sunblade_batch03_browser_qa": "NOT_TESTED",
+    "sunblade_batch03_published": false
   },
   "design_direction_status": "LOCKED_NO_MORE_CONCEPT_ROUNDS",
   "production_inventory_path": "production/sky-blue-eyes/ANIMATION-INVENTORY.json",
@@ -816,5 +820,54 @@
     "publications_json_approved": false,
     "artifact_location": "conversation handoff; PNG binaries not committed",
     "source_contract": "Source 256x256 PNG masters -> byte-exact trim/paste packer -> existing region+sequence+state_set; no new schema or fragment rig"
+  },
+  "latest_sword_candidate": {
+    "name": "Shattered Sunblade Drawn Motion 0.1",
+    "documentation": "production/sky-blue-eyes/SUNBLADE-BATCH-03-RECEIPT.md",
+    "archive": "Sky-Animation-Production-Batch-03.zip",
+    "import_zip": "sky-sunblade-drawn-v0.1.zip",
+    "pack_id": "smi.sky.sunblade.drawn",
+    "pack_version": "0.1.0",
+    "animation_method": "complete_frame_drawings_offline_vector_rasterized",
+    "frame_rate": 16,
+    "states": [
+      "back_hover",
+      "orbit",
+      "cast",
+      "recall",
+      "grab_lock",
+      "held_slash",
+      "release"
+    ],
+    "loops": [
+      "back_hover",
+      "orbit"
+    ],
+    "frame_count": 84,
+    "sequence_count": 7,
+    "asset_count": 92,
+    "atlas_count": 2,
+    "atlas_width_height": [
+      [
+        2024,
+        2048
+      ],
+      [
+        1992,
+        1392
+      ]
+    ],
+    "import_zip_bytes": 5097676,
+    "decoded_atlas_bytes": 27672064,
+    "untrimmed_decoded_bytes": 58060800,
+    "atlas_decoded_savings_percent": 52.3,
+    "raw_source_roundtrip": "84_OF_84_EXACT_RGBA_PASS",
+    "numeric_loop_check": "HOVER_AND_ORBIT_PASS",
+    "full_sunblade_visual_approval": false,
+    "official_visual_atlas_import": "NOT_TESTED",
+    "animation_reference_fidelity": "SIMPLIFIED_STYLISTIC_CANDIDATE_NOT_FINAL",
+    "public_catalog_approval": false,
+    "source_location": "conversation archive; binary source files not committed",
+    "no_runtime_fragment_controller": true
   }
 }
