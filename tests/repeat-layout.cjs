@@ -11,8 +11,8 @@ assets.set(P+'hearts',{id:P+'hearts',kind:'composition',size_px:[738,150],
   layers:[{id:'hearts',asset:P+'heart.states',repeat:{
     count_input:'max',columns_input:'columns',value_input:'value',levels,gap_px:[2,6]}}]});
 assets.set(P+'static',{id:P+'static',kind:'composition',size_px:[72,72],layers:[{id:'single',asset:P+'heart.full'}]});
-const logs=[];
-const ctx={save(){},restore(){},translate(){},scale(){},beginPath(){},rect(){},clip(){},fillRect(){},drawImage(_img,sx,sy,sw,sh,dx,dy,w,h){logs.push({state:levels[sx/72],x:dx,y:dy,w,h})},globalAlpha:1,globalCompositeOperation:'source-over'};
+const logs=[],translates=[];
+const ctx={save(){},restore(){},translate(x,y){translates.push([x,y])},scale(){},beginPath(){},rect(){},clip(){},fillRect(){},drawImage(_img,sx,sy,sw,sh,dx,dy,w,h){logs.push({state:levels[sx/72],x:dx,y:dy,w,h})},globalAlpha:1,globalCompositeOperation:'source-over'};
 const renderer=create({getAsset:id=>assets.get(id),getImage:async()=>({}),slots:{resolve:()=>({inputs:{},slots:{}})},timeline:{layerAt:l=>l},visualCore:{unitValue:()=>0}});
 const size=v=>renderer.sizeFor(P+'hearts',new Set(),v);
 assert.deepEqual(size({max:1,columns:10,value:3}),[72,72]);
@@ -44,5 +44,21 @@ assert.deepEqual(renderer.sizeFor(P+'static'),[72,72]);
   logs.length=0;
   await renderer.drawAsset(P+'static',ctx,0,0,72,72,0);
   assert.equal(logs.length,1,'Existing compositions remain unchanged');
+  // One content-sized composition may contain several repeat and static layers.
+  // Negative offsets and ornaments outside the first repeater must be preserved.
+  assets.set(P+'corner',{id:P+'corner',kind:'region',rect_px:[0,0,40,20],texture:'sheet'});
+  assets.set(P+'ornamented',{id:P+'ornamented',kind:'composition',size_px:[738,150],
+    inputs:assets.get(P+'hearts').inputs,
+    layers:[
+      {...assets.get(P+'hearts').layers[0]},
+      {id:'left',asset:P+'corner',offset_px:[-8,-3],size_px:[40,20]},
+      {id:'right',asset:P+'corner',offset_px:[765,0],size_px:[40,20]}
+    ]});
+  const g=renderer.geometryFor(P+'ornamented',new Set(),{max:20,columns:10,value:63});
+  assert.deepEqual(g,{width:813,height:153,minX:-8,minY:-3});
+  assert.deepEqual(renderer.sizeFor(P+'ornamented',new Set(),{max:20,columns:10,value:63}),[813,153]);
+  translates.length=0;
+  await renderer.drawAsset(P+'ornamented',ctx,0,0,813,153,0,{max:20,columns:10,value:63});
+  assert.ok(translates.some(([x,y])=>x===8&&y===3),'Negative content origin must be translated into canvas');
   console.log('Adaptive state-family layout, quarter fill, max capacity and wrapped rows: PASS');
 })().catch(e=>{console.error(e);process.exitCode=1});
