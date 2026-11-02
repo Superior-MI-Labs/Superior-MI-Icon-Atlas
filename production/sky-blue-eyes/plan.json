@@ -1,7 +1,7 @@
 {
   "schema": "smi-character-production-plan/1",
   "project_id": "smi.sky-blue-eyes.motion-foundation",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "status": "PREPRODUCTION",
   "runtime_support": "NOT_IMPLEMENTED",
   "description": "Grounded no-wing veiled desert wanderer: approved base clothing/silhouette, unqualified directional masters and unframed dialogue head. This is a planning manifest, NOT renderable animation artwork.",
@@ -172,6 +172,46 @@
           "body": "martial arts while sword is remote",
           "sword": "world-space autonomous motion and intentional recall"
         }
+      },
+      "ab_experiment": {
+        "status": "STRUCTURAL_PASS_VISUAL_BROWSER_PENDING_NOT_CANONICAL",
+        "milestone": "Sunblade Split-Test 0.1",
+        "design_docs": "production/sky-blue-eyes/SUNBLADE-AB-EXPERIMENT.md",
+        "external_handoff": "Sky-Sunblade-AB-Prototype-Handoff-v0.1.zip",
+        "archive_available_in_repo": false,
+        "approaches": {
+          "A": {
+            "kind": "composition",
+            "state_count": 4,
+            "shards": 6,
+            "energy_track_layers": 6,
+            "assets": 15,
+            "sheets": 1,
+            "size_bytes": 137726,
+            "intermediate_retargeting": true,
+            "endpoint_dynamic_binding": false
+          },
+          "B": {
+            "kind": "sequence",
+            "state_count": 4,
+            "frames": 64,
+            "assets": 69,
+            "sheets": 8,
+            "size_bytes": 6779533,
+            "intermediate_retargeting": false,
+            "energy_painted_per_frame": true
+          }
+        },
+        "states": [
+          "hover",
+          "cast",
+          "recall",
+          "held"
+        ],
+        "canonical_art_approved": false,
+        "real_browser_import_qualified": false,
+        "measured_by": "2026-11-02 deterministic prototype generator and ZIP structural validator",
+        "note": "Both approaches use the same simplified source geometry, not user-approved ornate Sunblade art. Other agent handles image optimization; don't change existing published artwork."
       }
     },
     "input_design": {
@@ -741,6 +781,9 @@
     "lowered_tail_reference_approved": true,
     "corrected_hero_master_qualified": false,
     "ai_reference_production_qa": "NOT_PASSED",
-    "latest_image_generation_attempt": "Decorative reference collage; rejected for canonical frame geometry. It does not override the approved user tail-placement example."
+    "latest_image_generation_attempt": "Decorative reference collage; rejected for canonical frame geometry. It does not override the approved user tail-placement example.",
+    "sunblade_ab_structural_pass": true,
+    "sunblade_ab_browser_qa": "NOT_RUN",
+    "sunblade_ab_visual_approval": "PENDING"
   }
 }
