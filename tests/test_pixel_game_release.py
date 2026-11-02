@@ -41,6 +41,35 @@ class PixelGameReleaseTests(unittest.TestCase):
         self.assertEqual(len([a for a in manifest['assets'] if a['kind']=='region' and a['texture']=='effects']),13)
         self.assertTrue(all(a.get('style') for a in manifest['assets']))
 
+    def test_source_edge_details_survive_extraction(self):
+        """A padded atlas is not proof its source subject wasn't amputated.
+
+        Regresses the old 18px GrabCut hard-background rim that removed the
+        sword tip, the axe head, and near-edge details on nearby items.
+        """
+        from PIL import Image
+        source=Image.open(SOURCE/'source-wave1-clean.png').convert('RGB')
+        width,height=source.size
+        author=json.loads((SOURCE/'authoring.json').read_text())
+        coverage={r['id']:r for r in json.loads((SOURCE/'qa/source-coverage-all.json').read_text())}
+        for item in author['items']:
+            if item['sheet']!='icons':continue
+            i=item['index'];col,row=i%4,i//4
+            cell=source.crop((round(width*col/4),round(height*row/4),
+                              round(width*(col+1)/4),round(height*(row+1)/4)))
+            # This original art has a dark navy background. Bright source
+            # fragments, including metal tips, are actual source evidence.
+            bright=[(p%cell.width,p//cell.width) for p,rgb in enumerate(cell.get_flattened_data()) if max(rgb)>120]
+            self.assertTrue(bright,item['id'])
+            expected=(min(x for x,y in bright),min(y for x,y in bright),
+                      max(x for x,y in bright)+1,max(y for x,y in bright)+1)
+            actual=coverage[item['id']]['raw_bbox']
+            for side,(a,b) in enumerate(zip(actual,expected)):
+                if side<2:self.assertLessEqual(a,b+4,(item['id'],side,actual,expected))
+                else:self.assertGreaterEqual(a,b-4,(item['id'],side,actual,expected))
+        self.assertLessEqual(coverage['smi.game.pixel01.weapon.steel_sword']['raw_bbox'][1],8)
+        self.assertLessEqual(coverage['smi.game.pixel01.weapon.double_axe']['raw_bbox'][1],6)
+
     def test_real_builder_recipe_covers_every_item(self):
         import importlib.util
         module_spec=importlib.util.spec_from_file_location('pixel_browser_matrix',ROOT/'tests/browser_visual_matrix.py')

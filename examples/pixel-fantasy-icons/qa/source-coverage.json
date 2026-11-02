@@ -1,0 +1,1794 @@
+[
+  {
+    "id": "smi.game.pixel01.potion.health",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      0,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      16,
+      9,
+      111,
+      118
+    ],
+    "margins": [
+      16,
+      9,
+      17,
+      10
+    ],
+    "raw_bbox": [
+      54,
+      37,
+      273,
+      289
+    ],
+    "source_margins": [
+      54,
+      37,
+      41,
+      25
+    ],
+    "source_cell": [
+      0,
+      0,
+      314,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.potion.mana",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      128,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      18,
+      9,
+      109,
+      118
+    ],
+    "margins": [
+      18,
+      9,
+      19,
+      10
+    ],
+    "raw_bbox": [
+      55,
+      37,
+      266,
+      289
+    ],
+    "source_margins": [
+      55,
+      37,
+      47,
+      25
+    ],
+    "source_cell": [
+      314,
+      0,
+      313,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.potion.poison",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      256,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      19,
+      9,
+      109,
+      118
+    ],
+    "margins": [
+      19,
+      9,
+      19,
+      10
+    ],
+    "raw_bbox": [
+      55,
+      37,
+      264,
+      289
+    ],
+    "source_margins": [
+      55,
+      37,
+      49,
+      25
+    ],
+    "source_cell": [
+      627,
+      0,
+      313,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.potion.arcane",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      384,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      18,
+      9,
+      109,
+      118
+    ],
+    "margins": [
+      18,
+      9,
+      19,
+      10
+    ],
+    "raw_bbox": [
+      54,
+      37,
+      265,
+      289
+    ],
+    "source_margins": [
+      54,
+      37,
+      49,
+      25
+    ],
+    "source_cell": [
+      940,
+      0,
+      314,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.armor.knight_helmet",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      0,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      18,
+      9,
+      109,
+      118
+    ],
+    "margins": [
+      18,
+      9,
+      19,
+      10
+    ],
+    "raw_bbox": [
+      58,
+      15,
+      286,
+      288
+    ],
+    "source_margins": [
+      58,
+      15,
+      28,
+      25
+    ],
+    "source_cell": [
+      0,
+      314,
+      314,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.armor.knight_chestplate",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      128,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      11,
+      118,
+      117
+    ],
+    "margins": [
+      9,
+      11,
+      10,
+      11
+    ],
+    "raw_bbox": [
+      27,
+      30,
+      283,
+      279
+    ],
+    "source_margins": [
+      27,
+      30,
+      30,
+      34
+    ],
+    "source_cell": [
+      314,
+      314,
+      313,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.armor.leather_boots",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      256,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      12,
+      9,
+      116,
+      118
+    ],
+    "margins": [
+      12,
+      9,
+      12,
+      10
+    ],
+    "raw_bbox": [
+      25,
+      30,
+      264,
+      280
+    ],
+    "source_margins": [
+      25,
+      30,
+      49,
+      33
+    ],
+    "source_cell": [
+      627,
+      314,
+      313,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.armor.lion_shield",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      384,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      19,
+      9,
+      108,
+      118
+    ],
+    "margins": [
+      19,
+      9,
+      20,
+      10
+    ],
+    "raw_bbox": [
+      41,
+      18,
+      264,
+      290
+    ],
+    "source_margins": [
+      41,
+      18,
+      50,
+      23
+    ],
+    "source_cell": [
+      940,
+      314,
+      314,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.accessory.ruby_ring",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      0,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      13,
+      118,
+      115
+    ],
+    "margins": [
+      9,
+      13,
+      10,
+      13
+    ],
+    "raw_bbox": [
+      51,
+      43,
+      270,
+      248
+    ],
+    "source_margins": [
+      51,
+      43,
+      44,
+      65
+    ],
+    "source_cell": [
+      0,
+      627,
+      314,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.accessory.sapphire_pendant",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      128,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      24,
+      9,
+      104,
+      118
+    ],
+    "margins": [
+      24,
+      9,
+      24,
+      10
+    ],
+    "raw_bbox": [
+      66,
+      24,
+      241,
+      261
+    ],
+    "source_margins": [
+      66,
+      24,
+      72,
+      52
+    ],
+    "source_cell": [
+      314,
+      627,
+      313,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.item.sealed_scroll",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      256,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      12,
+      118,
+      116
+    ],
+    "margins": [
+      9,
+      12,
+      10,
+      12
+    ],
+    "raw_bbox": [
+      14,
+      27,
+      265,
+      267
+    ],
+    "source_margins": [
+      14,
+      27,
+      48,
+      46
+    ],
+    "source_cell": [
+      627,
+      627,
+      313,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.item.star_spellbook",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      384,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      11,
+      9,
+      117,
+      118
+    ],
+    "margins": [
+      11,
+      9,
+      11,
+      10
+    ],
+    "raw_bbox": [
+      26,
+      21,
+      271,
+      272
+    ],
+    "source_margins": [
+      26,
+      21,
+      43,
+      41
+    ],
+    "source_cell": [
+      940,
+      627,
+      314,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.weapon.steel_sword",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      0,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      17,
+      9,
+      110,
+      118
+    ],
+    "margins": [
+      17,
+      9,
+      18,
+      10
+    ],
+    "raw_bbox": [
+      50,
+      4,
+      273,
+      265
+    ],
+    "source_margins": [
+      50,
+      4,
+      41,
+      49
+    ],
+    "source_cell": [
+      0,
+      940,
+      314,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.weapon.double_axe",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      128,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      18,
+      9,
+      110,
+      118
+    ],
+    "margins": [
+      18,
+      9,
+      18,
+      10
+    ],
+    "raw_bbox": [
+      41,
+      2,
+      265,
+      268
+    ],
+    "source_margins": [
+      41,
+      2,
+      48,
+      46
+    ],
+    "source_cell": [
+      314,
+      940,
+      313,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.weapon.wooden_bow",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      256,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      16,
+      9,
+      112,
+      118
+    ],
+    "margins": [
+      16,
+      9,
+      16,
+      10
+    ],
+    "raw_bbox": [
+      32,
+      2,
+      271,
+      272
+    ],
+    "source_margins": [
+      32,
+      2,
+      42,
+      42
+    ],
+    "source_cell": [
+      627,
+      940,
+      313,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.ability.fireball",
+    "sheet": "icons",
+    "source_file": "source-wave1-clean.png",
+    "region": [
+      384,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      10,
+      118,
+      118
+    ],
+    "margins": [
+      9,
+      10,
+      10,
+      10
+    ],
+    "raw_bbox": [
+      24,
+      10,
+      279,
+      263
+    ],
+    "source_margins": [
+      24,
+      10,
+      35,
+      51
+    ],
+    "source_cell": [
+      940,
+      940,
+      314,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.material.azure_crystal",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      0,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      12,
+      9,
+      116,
+      119
+    ],
+    "margins": [
+      12,
+      9,
+      12,
+      9
+    ],
+    "source_cell": [
+      0,
+      0,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.material.iron_ore",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      128,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      13,
+      119,
+      114
+    ],
+    "margins": [
+      9,
+      13,
+      9,
+      14
+    ],
+    "source_cell": [
+      314,
+      0,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.material.rolled_leather",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      256,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      9,
+      119,
+      118
+    ],
+    "margins": [
+      9,
+      9,
+      9,
+      10
+    ],
+    "source_cell": [
+      627,
+      0,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.material.timber_log",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      384,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      15,
+      119,
+      113
+    ],
+    "margins": [
+      9,
+      15,
+      9,
+      15
+    ],
+    "source_cell": [
+      940,
+      0,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.material.ruby_gemstone",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      0,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      9,
+      118,
+      119
+    ],
+    "margins": [
+      9,
+      9,
+      10,
+      9
+    ],
+    "source_cell": [
+      0,
+      314,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.material.arcane_ink",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      128,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      14,
+      9,
+      113,
+      119
+    ],
+    "margins": [
+      14,
+      9,
+      15,
+      9
+    ],
+    "source_cell": [
+      314,
+      314,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.tool.rune_hammer",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      256,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      13,
+      9,
+      114,
+      119
+    ],
+    "margins": [
+      13,
+      9,
+      14,
+      9
+    ],
+    "source_cell": [
+      627,
+      314,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.tool.lockpicks",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      384,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      10,
+      119,
+      117
+    ],
+    "margins": [
+      9,
+      10,
+      9,
+      11
+    ],
+    "source_cell": [
+      940,
+      314,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.ability.frost_ward",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      0,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      10,
+      119,
+      117
+    ],
+    "margins": [
+      9,
+      10,
+      9,
+      11
+    ],
+    "source_cell": [
+      0,
+      627,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.weapon.venom_dagger",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      128,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      12,
+      119,
+      116
+    ],
+    "margins": [
+      9,
+      12,
+      9,
+      12
+    ],
+    "source_cell": [
+      314,
+      627,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.material.healing_herb",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      256,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      9,
+      119,
+      119
+    ],
+    "margins": [
+      9,
+      9,
+      9,
+      9
+    ],
+    "source_cell": [
+      627,
+      627,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.weapon.spiked_mace",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      384,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      10,
+      119,
+      118
+    ],
+    "margins": [
+      9,
+      10,
+      9,
+      10
+    ],
+    "source_cell": [
+      940,
+      627,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.potion.energy_elixir",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      0,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      18,
+      9,
+      109,
+      119
+    ],
+    "margins": [
+      18,
+      9,
+      19,
+      9
+    ],
+    "source_cell": [
+      0,
+      940,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.tool.brass_compass",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      128,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      15,
+      9,
+      112,
+      119
+    ],
+    "margins": [
+      15,
+      9,
+      16,
+      9
+    ],
+    "source_cell": [
+      314,
+      940,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.ability.necrotic_curse",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      256,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      10,
+      9,
+      118,
+      119
+    ],
+    "margins": [
+      10,
+      9,
+      10,
+      9
+    ],
+    "source_cell": [
+      627,
+      940,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.weapon.crystal_wand",
+    "sheet": "icons2",
+    "source_file": "source-expansion.png",
+    "region": [
+      384,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      11,
+      9,
+      116,
+      119
+    ],
+    "margins": [
+      11,
+      9,
+      12,
+      9
+    ],
+    "source_cell": [
+      940,
+      940,
+      314,
+      314
+    ],
+    "review_required": "source originally on light checkerboard; review edge detail"
+  },
+  {
+    "id": "smi.game.pixel01.quest.ornate_key",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      0,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      9,
+      118,
+      118
+    ],
+    "margins": [
+      9,
+      9,
+      10,
+      10
+    ],
+    "raw_bbox": [
+      53,
+      48,
+      280,
+      274
+    ],
+    "source_margins": [
+      53,
+      48,
+      34,
+      40
+    ],
+    "source_cell": [
+      0,
+      0,
+      314,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.quest.treasure_chest",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      128,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      16,
+      118,
+      111
+    ],
+    "margins": [
+      9,
+      16,
+      10,
+      17
+    ],
+    "raw_bbox": [
+      39,
+      62,
+      279,
+      272
+    ],
+    "source_margins": [
+      39,
+      62,
+      34,
+      42
+    ],
+    "source_cell": [
+      314,
+      0,
+      313,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.item.traveler_journal",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      256,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      10,
+      118,
+      117
+    ],
+    "margins": [
+      9,
+      10,
+      10,
+      11
+    ],
+    "raw_bbox": [
+      32,
+      45,
+      276,
+      285
+    ],
+    "source_margins": [
+      32,
+      45,
+      37,
+      29
+    ],
+    "source_cell": [
+      627,
+      0,
+      313,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.quest.rune_tablet",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      384,
+      0,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      14,
+      9,
+      114,
+      118
+    ],
+    "margins": [
+      14,
+      9,
+      14,
+      10
+    ],
+    "raw_bbox": [
+      39,
+      34,
+      262,
+      276
+    ],
+    "source_margins": [
+      39,
+      34,
+      52,
+      38
+    ],
+    "source_cell": [
+      940,
+      0,
+      314,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.food.forest_mushroom",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      0,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      10,
+      9,
+      118,
+      118
+    ],
+    "margins": [
+      10,
+      9,
+      10,
+      10
+    ],
+    "raw_bbox": [
+      52,
+      47,
+      269,
+      265
+    ],
+    "source_margins": [
+      52,
+      47,
+      45,
+      48
+    ],
+    "source_cell": [
+      0,
+      314,
+      314,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.food.rustic_bread",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      128,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      25,
+      118,
+      102
+    ],
+    "margins": [
+      9,
+      25,
+      10,
+      26
+    ],
+    "raw_bbox": [
+      34,
+      68,
+      279,
+      242
+    ],
+    "source_margins": [
+      34,
+      68,
+      34,
+      71
+    ],
+    "source_cell": [
+      314,
+      314,
+      313,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.currency.gold_pouch",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      256,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      11,
+      9,
+      116,
+      118
+    ],
+    "margins": [
+      11,
+      9,
+      12,
+      10
+    ],
+    "raw_bbox": [
+      44,
+      34,
+      274,
+      272
+    ],
+    "source_margins": [
+      44,
+      34,
+      39,
+      41
+    ],
+    "source_cell": [
+      627,
+      314,
+      313,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.food.blueberries",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      384,
+      128,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      11,
+      118,
+      117
+    ],
+    "margins": [
+      9,
+      11,
+      10,
+      11
+    ],
+    "raw_bbox": [
+      33,
+      38,
+      267,
+      266
+    ],
+    "source_margins": [
+      33,
+      38,
+      47,
+      47
+    ],
+    "source_cell": [
+      940,
+      314,
+      314,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.weapon.flame_sword",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      0,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      12,
+      9,
+      115,
+      118
+    ],
+    "margins": [
+      12,
+      9,
+      13,
+      10
+    ],
+    "raw_bbox": [
+      49,
+      26,
+      273,
+      264
+    ],
+    "source_margins": [
+      49,
+      26,
+      41,
+      49
+    ],
+    "source_cell": [
+      0,
+      627,
+      314,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.weapon.verdant_staff",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      128,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      9,
+      118,
+      118
+    ],
+    "margins": [
+      9,
+      9,
+      10,
+      10
+    ],
+    "raw_bbox": [
+      38,
+      25,
+      276,
+      264
+    ],
+    "source_margins": [
+      38,
+      25,
+      37,
+      49
+    ],
+    "source_cell": [
+      314,
+      627,
+      313,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.ability.lightning_bolt",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      256,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      11,
+      9,
+      116,
+      118
+    ],
+    "margins": [
+      11,
+      9,
+      12,
+      10
+    ],
+    "raw_bbox": [
+      45,
+      27,
+      268,
+      259
+    ],
+    "source_margins": [
+      45,
+      27,
+      45,
+      54
+    ],
+    "source_cell": [
+      627,
+      627,
+      313,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.ability.healing_aura",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      384,
+      256,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      12,
+      118,
+      116
+    ],
+    "margins": [
+      9,
+      12,
+      10,
+      12
+    ],
+    "raw_bbox": [
+      41,
+      30,
+      265,
+      243
+    ],
+    "source_margins": [
+      41,
+      30,
+      49,
+      70
+    ],
+    "source_cell": [
+      940,
+      627,
+      314,
+      313
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.material.amethyst_cluster",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      0,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      18,
+      9,
+      109,
+      118
+    ],
+    "margins": [
+      18,
+      9,
+      19,
+      10
+    ],
+    "raw_bbox": [
+      57,
+      18,
+      259,
+      259
+    ],
+    "source_margins": [
+      57,
+      18,
+      55,
+      55
+    ],
+    "source_cell": [
+      0,
+      940,
+      314,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.item.golden_bell",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      128,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      20,
+      9,
+      108,
+      118
+    ],
+    "margins": [
+      20,
+      9,
+      20,
+      10
+    ],
+    "raw_bbox": [
+      43,
+      18,
+      229,
+      249
+    ],
+    "source_margins": [
+      43,
+      18,
+      84,
+      65
+    ],
+    "source_cell": [
+      314,
+      940,
+      313,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.quest.treasure_map",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      256,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      9,
+      16,
+      118,
+      111
+    ],
+    "margins": [
+      9,
+      16,
+      10,
+      17
+    ],
+    "raw_bbox": [
+      23,
+      35,
+      274,
+      253
+    ],
+    "source_margins": [
+      23,
+      35,
+      39,
+      61
+    ],
+    "source_cell": [
+      627,
+      940,
+      313,
+      314
+    ]
+  },
+  {
+    "id": "smi.game.pixel01.accessory.amethyst_necklace",
+    "sheet": "icons3",
+    "source_file": "source-wave3.png",
+    "region": [
+      384,
+      384,
+      128,
+      128
+    ],
+    "silhouette_bbox": [
+      21,
+      9,
+      106,
+      118
+    ],
+    "margins": [
+      21,
+      9,
+      22,
+      10
+    ],
+    "raw_bbox": [
+      65,
+      25,
+      252,
+      264
+    ],
+    "source_margins": [
+      65,
+      25,
+      62,
+      50
+    ],
+    "source_cell": [
+      940,
+      940,
+      314,
+      314
+    ]
+  }
+]
