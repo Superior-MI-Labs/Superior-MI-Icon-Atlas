@@ -133,6 +133,19 @@ def check(pack_path: Path):
                     if t is None: errors.append('Unknown texture ' + asset['id']);continue
                     x,y,w,h = asset['rect_px']
                     if x+w > t['width_px'] or y+h > t['height_px']:errors.append('Out-of-bounds rect ' + asset['id'])
+                    # Trimming is opt-in: preserve legacy logical_size_px behavior.
+                    # An explicit trim must fit the authored full logical pose.
+                    if 'trim_offset_px' in asset:
+                        logical = asset.get('logical_size_px')
+                        if not logical:
+                            errors.append('Trim offset requires logical canvas ' + asset['id'])
+                        else:
+                            ox, oy = asset['trim_offset_px']
+                            lw, lh = logical
+                            if ox < 0 or oy < 0 or ox + w > lw or oy + h > lh:
+                                errors.append('Trimmed region outside logical canvas ' + asset['id'])
+                        if asset.get('nine_slice_px'):
+                            errors.append('Trim and nine-slice cannot be combined ' + asset['id'])
                     if asset.get('nine_slice_px'):
                         left,top,right,bottom = asset['nine_slice_px']
                         if left+right > w or top+bottom > h:errors.append('Nine-slice too large ' + asset['id'])
