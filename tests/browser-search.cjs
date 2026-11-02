@@ -1,40 +1,21 @@
 "use strict";
-// No browser-dependent DOM library: execute production search/render code in a small DOM harness.
-const fs = require('node:fs');
-const vm = require('node:vm');
-const path = require('node:path');
-const root = path.resolve(__dirname, '..');
-const site = process.env.ICON_ATLAS_SITE ? path.resolve(process.env.ICON_ATLAS_SITE) : path.join(root, 'site');
-class Element {
-  constructor(id='') {this.id=id;this.value='';this.hidden=false;this.style={};this.children=[];this.listeners={};this.textContent='';this.checked=false;}
-  append(...children){this.children.push(...children);}
-  appendChild(child){this.children.push(child);return child;}
-  replaceChildren(...children){this.children=[...children];}
-  addEventListener(type,callback){this.listeners[type]=callback;}
-  setAttribute(){}
+// Public search is a pure function: no parallel hand-maintained icon registry.
+const assert=require('node:assert/strict');
+const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const data=JSON.parse(fs.readFileSync(path.join(root,'site','public-catalog.json'),'utf8'));
+const Search=require('../web/public-search.js');
+assert.equal(data.schema,'smi-public-catalog/1');
+assert.equal(data.assets.length,70);
+assert.deepEqual(new Set(data.packs.map(x=>x.id)),new Set(['fantasy-rpg-hud-wave1']));
+for(const [query,token] of [['slider','Slider'],['sliders','Slider'],['healthbar','Meter'],['health','Health'],['heart','Heart'],['mana','Mana']]){
+  const matches=Search.results(data.assets,{query});
+  assert.ok(matches.length>0,query+' must return results');
+  assert.ok(matches.some(a=>a.name.includes(token)),query+' must include the requested asset');
+  console.log(query+': '+matches.length+' approved assets');
 }
-const elements = new Map();
-const document = {
-  getElementById(id){if(!elements.has(id))elements.set(id,new Element(id));return elements.get(id);},
-  createElement(type){return new Element(type);},
-  createDocumentFragment(){return new Element('fragment');},
-};
-const window = {};
-const ctx={window,document,location:{search:'',href:'http://localhost/'},URL,URLSearchParams,history:{replaceState(){}},setTimeout,clearTimeout,console};
-vm.createContext(ctx);
-vm.runInContext(fs.readFileSync(path.join(site,'catalog-data.js'),'utf8'),ctx);
-vm.runInContext(fs.readFileSync(path.join(root,'web/app.js'),'utf8'),ctx);
-const search = document.getElementById('search');
-const count = document.getElementById('count');
-for(const [term,expected] of [['fire',1],['flame',1],['picture',3],['lambda',1],['terminal',1]]) {
-  search.value=term;
-  search.listeners.input();
-  const found=Number(count.textContent.split(' ')[0].replaceAll(',',''));
-  if(found<expected)throw new Error(`${term}: expected at least ${expected}, got ${found}`);
-  console.log(`${term}: ${found} search results`);
-}
-const subject=document.getElementById('subject');
-if(!subject.children.length)throw new Error('Subject filter failed to populate');
-const style=document.getElementById('style');
-if(!style.children.length)throw new Error('Style filter failed to populate');
-console.log('Browser search and dynamic facet controls: PASS');
+const defaults=Search.results(data.assets,{});
+assert.ok(defaults[0].kind==='composition','Finished compositions must lead the default gallery');
+assert.ok(defaults.every(a=>a.pack==='fantasy-rpg-hud-wave1'),'Legacy/tutorial packs must not appear');
+assert.equal(Search.results(data.assets,{kind:'sequence'}).length,0,'Filters must reflect real data');
+console.log('Unified public asset search and facets: PASS');

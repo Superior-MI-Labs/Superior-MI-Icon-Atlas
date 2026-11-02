@@ -20,7 +20,7 @@ def build(dest:Path|None=None):
     if dest==ROOT or ROOT in dest.parents and 'sheets' in dest.parts:
         raise ValueError('Refusing to build over source')
     dest.mkdir(parents=True,exist_ok=True)
-    for name in ('index.html','styles.css','app.js','builder.html','builder.css','timeline-core.js','visual-core.js','collection-core.js','bag-store.js','interaction-core.js','slot-core.js','builder.js','ai-guide.html','featured.js'):
+    for name in ('index.html','styles.css','public-search.js','app.js','builder.html','builder.css','timeline-core.js','visual-core.js','collection-core.js','bag-store.js','interaction-core.js','slot-core.js','asset-renderer.js','builder.js','ai-guide.html','featured.js'):
         shutil.copy2(ROOT/'web'/name,dest/name)
     vendor=ROOT/'web'/'vendor'
     if not (vendor/'jszip.min.js').is_file() or not (vendor/'JSZip-LICENSE.md').is_file(): raise ValueError('Missing bundled offline ZIP library')
@@ -42,8 +42,8 @@ def build(dest:Path|None=None):
         source_ref=('../../../tests/visual-scenarios.json' if len(rel.parts)>1 else '../../tests/visual-scenarios.json')
         hosted_ref=('../../qa/visual-scenarios.json' if len(rel.parts)>1 else '../qa/visual-scenarios.json')
         target.write_text(content.replace(source_ref,hosted_ref),encoding='utf-8')
-    # Production guides are authored once in docs/asset-production and
-    # copied to their hosted paths so AI recipe links keep resolving.
+    # Publish authored production guides at the same relative site paths used
+    # by the AI recipes; never publish duplicate hand-edited copies.
     for guide in sorted((ROOT/'docs'/'asset-production').glob('*.md')):
         target=dest/'asset-production'/guide.name
         target.parent.mkdir(parents=True,exist_ok=True)
@@ -89,8 +89,8 @@ def build(dest:Path|None=None):
               'tags':sorted({tag for a in assets for tag in a.get('tags',[])})[:24],
               'license':sorted({str(p.get('license','UNSPECIFIED')) for p in manifests})}
     featured=[inspect_archive(path) for path in sorted((dest/'demo').glob('*.zip'))]
-    # Optional authored preview stays outside the downloadable runtime pack.
-    # Search and pack metadata remain derived from source manifests.
+    # Optional gallery artwork belongs to the authored example, not a second catalog.
+    # Never include editorial preview art inside the runtime ZIP for that example.
     for item in featured:
         stem=Path(item['filename']).stem
         preview=ROOT/'examples'/stem/'preview.png'
@@ -100,6 +100,56 @@ def build(dest:Path|None=None):
             shutil.copy2(preview,target)
             item['preview']='showcase/'+target.name
     (dest/'featured-packs.json').write_text(json.dumps({'schema':'smi-featured-packs/1','packs':featured},indent=2)+'\n',encoding='utf-8')
+
+    # Public discovery is derived from *approved* source manifests, never from
+    # tutorial/demo ZIPs, private browser bags, or the archival monoline catalog.
+    publication=json.loads((ROOT/'publications.json').read_text(encoding='utf-8'))
+    if publication.get('schema')!='smi-publications/1':raise ValueError('Invalid publication policy')
+    public_assets=[];public_packs=[];seen_ids=set();seen_paths=set()
+    for record in publication['collections']:
+        folder=Path(record['path']); full=ROOT/folder
+        if folder.is_absolute() or '..' in folder.parts or folder in seen_paths or not str(folder).startswith('examples/'):
+            raise ValueError('Unsafe/duplicate published collection: '+str(folder))
+        seen_paths.add(folder)
+        if not record.get('approval') or not record.get('rights'):raise ValueError('Unapproved public collection')
+        index=json.loads((full/'collection.json').read_text(encoding='utf-8'))
+        if index.get('schema')!='smi-visual-collection/1':raise ValueError('Invalid public collection index')
+        manifests=[]
+        for ref in index['packs']:
+            relpath=Path(ref['manifest'])
+            if relpath.is_absolute() or '..' in relpath.parts:raise ValueError('Unsafe manifest path')
+            manifests.append(json.loads((full/relpath).read_text(encoding='utf-8')))
+        if not manifests:raise ValueError('Empty public collection')
+        pack_name=folder.name
+        # Use the same generated ZIP as the existing builder importer.
+        zip_name=pack_name+'.zip'
+        if not (dest/'demo'/zip_name).is_file():raise ValueError('Missing published runtime ZIP: '+zip_name)
+        pubpack={'id':pack_name,'name':index.get('name',pack_name),'zip':'demo/'+zip_name,
+                 'published':record['published'],'entry':index['entry_asset'],
+                 'license':sorted({p.get('license','UNSPECIFIED') for p in manifests})}
+        if any(l in ('UNSPECIFIED','UNKNOWN','') for l in pubpack['license']):raise ValueError('Unknown public license')
+        public_packs.append(pubpack)
+        for pack in manifests:
+            for a in pack['assets']:
+                ident=a['id']
+                if ident in seen_ids:raise ValueError('Duplicate public asset: '+ident)
+                seen_ids.add(ident)
+                # Exact names and tags come from the canonical manifest.
+                public_assets.append({
+                    'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
+                    'kind':a['kind'],'style':a.get('style',''),
+                    'tags':a.get('tags',[]),'subjects':a.get('subjects',[]),
+                    'aliases':a.get('aliases',[]),'pack':pack_name,
+                    'published':record['published'],'license':a.get('license',pack.get('license','')),
+                    'category':('GUI & HUD' if 'ui.' in ident else 'Visual Assets'),
+                    'animated':a['kind']=='sequence' or bool(a.get('duration_ms')),
+                    'previewable':a['kind']!='region' or bool(a.get('rect_px'))
+                })
+    if not any(a['kind']=='composition' for a in public_assets):raise ValueError('No published finished compositions')
+    public_assets.sort(key=lambda a:(a['pack'],a['id']))
+    (dest/'public-catalog.json').write_text(json.dumps({'schema':'smi-public-catalog/1',
+        'assets':public_assets,'packs':public_packs},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
 
     src_files=['manifest.json','LICENSE','NOTICE.md']
     registry=json.loads((ROOT/'manifest.json').read_text(encoding='utf-8'))

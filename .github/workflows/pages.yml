@@ -36,6 +36,8 @@ jobs:
           name: visual-atlas-render-qa
           path: /tmp/smi-visual-render-qa/
           if-no-files-found: ignore
+      - name: Remove legacy assets and unpublished starter packs from Pages artifact
+        run: python3 tools/prune_public_site.py site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

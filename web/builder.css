@@ -38,3 +38,6 @@
 .advanced-panel>summary {cursor:pointer;font-size:13px;font-weight:650;padding:4px;color:var(--accent)}
 .advanced-panel[open]>summary {margin-bottom:12px}
 #input-controls {margin:12px 0}
+
+/* Legacy tutorial packs are internal test fixtures, not public featured content. */
+#load-demo,#load-potions{display:none}

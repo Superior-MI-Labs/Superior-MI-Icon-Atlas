@@ -25,7 +25,7 @@ SITE = ROOT / 'site'
 SCRIPTS = (
     'vendor/jszip.min.js', 'timeline-core.js', 'visual-core.js',
     'collection-core.js', 'bag-store.js', 'interaction-core.js',
-    'slot-core.js', 'builder.js',
+    'slot-core.js', 'asset-renderer.js', 'builder.js',
 )
 
 
@@ -185,7 +185,7 @@ def main():
                 }''',{**payload,'filename':case['pack']})
                 for path in SCRIPTS:
                     src=(SITE/path).read_text()
-                    if path=='builder.js':src=src.replace("new URLSearchParams(location.search).get('example')",json.dumps(case['pack']))
+                    if path=='builder.js':src=src.replace("new URLSearchParams(location.search).get('example')",json.dumps(case['pack'])).replace("fetch('public-catalog.json')","fetch('featured-packs.json')").replace("p.zip==='demo/'+requested","p.filename===requested")
                     page.add_script_tag(content=src)
                 page.locator('#builder-status').get_by_text('Opened '+case['pack'],exact=False).wait_for(timeout=15000)
                 if case.get('asset'):

@@ -40,9 +40,9 @@ with sync_playwright() as p:
         return new Response('',{status:404});
       };
     }''',data)
-    for name in ['vendor/jszip.min.js','timeline-core.js','visual-core.js','collection-core.js','bag-store.js','interaction-core.js','slot-core.js','builder.js']:
+    for name in ['vendor/jszip.min.js','timeline-core.js','visual-core.js','collection-core.js','bag-store.js','interaction-core.js','slot-core.js','asset-renderer.js','builder.js']:
       src=(site/name).read_text()
-      if name=='builder.js':src=src.replace("new URLSearchParams(location.search).get('example')", "'interactive-hud.zip'")
+      if name=='builder.js':src=src.replace("new URLSearchParams(location.search).get('example')", "'interactive-hud.zip'").replace("fetch('public-catalog.json')","fetch('featured-packs.json')").replace("p.zip==='demo/'+requested","p.filename===requested")
       page.add_script_tag(content=src)
     page.locator('#builder-status').get_by_text('Opened interactive-hud.zip',exact=False).wait_for(timeout=20000)
     print('status:',page.locator('#builder-status').inner_text())

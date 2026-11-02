@@ -67,8 +67,8 @@ class AIRecipeLibraryTests(unittest.TestCase):
                 self.assertGreater(item['manifests'],0)
                 self.assertTrue(item['entry'])
                 self.assertTrue(item['kinds'])
-            self.assertIn('featured.js',(site/'index.html').read_text())
-            self.assertIn('featured-packs.json',(site/'featured.js').read_text())
+            self.assertIn('public-search.js',(site/'index.html').read_text())
+            self.assertIn('public-catalog.json',(site/'app.js').read_text())
             self.assertIn("get('example')",(site/'builder.js').read_text())
 
     def test_optional_showcase_is_derived_and_not_bundled_in_pack(self):

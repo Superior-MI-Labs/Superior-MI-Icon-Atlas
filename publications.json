@@ -1,0 +1,11 @@
+{
+  "schema": "smi-publications/1",
+  "collections": [
+    {
+      "path": "examples/fantasy-rpg-hud-wave1",
+      "published": "2026-11-02",
+      "approval": "Approved Wave 1 v0.2, 57 source regions with browser value-fidelity QA",
+      "rights": "CC0-1.0 original artwork"
+    }
+  ]
+}
