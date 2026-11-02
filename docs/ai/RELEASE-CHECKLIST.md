@@ -12,6 +12,7 @@ For substantial commissions, use [creator preflight](CREATOR-PREFLIGHT.md) befor
 ## 2. Textures and exact geometry
 - [ ] Source art was inspected; each object is complete and properly positioned. A generated grid's implied layout was **not** blindly trusted.
 - [ ] Texture dimensions, region rectangles, transparency and per-cell spacing were measured against actual pixels; none cuts into a neighbor.
+- [ ] New raster textures have a documented size check against lossless optimization, including before/after bytes and exact decoded-pixel comparison when changed. A candidate is accepted only if smaller without changing pixels, geometry or required PNG encoding, and final file checksums match the authored manifests. Preserve source-image provenance metadata; use no lossy or downscaled substitute without explicit approval. Already-optimized files do not need repeated recompression.
 - [ ] A contact sheet was created and **every asset region** was visually reviewed, not just the first image.
 - [ ] Full-bleed artwork was identified as intentional; edge-contact warnings were investigated, not automatically ignored.
 
