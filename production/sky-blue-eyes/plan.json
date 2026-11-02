@@ -184,26 +184,6 @@
         "floating": "right stick directs independent sword, RT commands attack",
         "held": "right stick directional melee or throw aim; sword hilt follows body grip anchor"
       },
-      "actions": [
-        "move",
-        "blade_aim",
-        "jump",
-        "attack_light",
-        "attack_heavy",
-        "dodge",
-        "guard_parry",
-        "sword_attach",
-        "sword_command",
-        "focus_aim",
-        "sword_anchor",
-        "interact",
-        "aspect_prev",
-        "aspect_next",
-        "technique_prev",
-        "technique_next",
-        "pause",
-        "map"
-      ],
       "requirements": [
         "Every action must have remappable keyboard+mouse and controller bindings",
         "Command/cancel rules depend on gameplay state, never baked into sprite frames",
@@ -227,7 +207,8 @@
           "title": "Godot input actions and gamepad deadzones/haptics",
           "url": "https://docs.godotengine.org/en/latest/tutorials/inputs/controllers_gamepads_joysticks.html"
         }
-      ]
+      ],
+      "action_manifest_path": "production/sky-blue-eyes/controls-proposal.json"
     },
     "reference_handoff": {
       "status": "REVIEW_CANDIDATES_NOT_FINAL_PIXEL_APPROVAL",
@@ -758,6 +739,8 @@
     "ai_reference_promotion_note": "Source character design is user approved, the new single right-side candidate and all image generation overview panels remain unqualified source art.",
     "pose_direction_approved": true,
     "lowered_tail_reference_approved": true,
-    "corrected_hero_master_qualified": false
+    "corrected_hero_master_qualified": false,
+    "ai_reference_production_qa": "NOT_PASSED",
+    "latest_image_generation_attempt": "Decorative reference collage; rejected for canonical frame geometry. It does not override the approved user tail-placement example."
   }
 }
