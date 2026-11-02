@@ -940,25 +940,26 @@
   "effects_components": [
     {
       "id": "smi.game.pixel01.fx.clear",
-      "kind": "region",
+      "kind": "composition",
       "name": "Clear overlay",
-      "texture": "effects",
-      "rect_px": [
-        0,
-        0,
-        128,
-        128
-      ],
-      "logical_size_px": [
-        128,
-        128
-      ],
       "tags": [
         "ui",
         "effect",
         "clear"
       ],
-      "style": "hd-pixel-fantasy-01"
+      "style": "hd-pixel-fantasy-01",
+      "size_px": [
+        128,
+        128
+      ],
+      "layers": [
+        {
+          "id": "transparent",
+          "asset": "smi.game.pixel01.fx.hover",
+          "opacity": 0
+        }
+      ],
+      "description": "Transparent no-op state represented declaratively without an empty texture region."
     },
     {
       "id": "smi.game.pixel01.fx.hover",

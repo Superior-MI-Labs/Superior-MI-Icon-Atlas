@@ -38,7 +38,7 @@ class PixelGameReleaseTests(unittest.TestCase):
         manifest=json.loads((SOURCE/'manifest.json').read_text())
         self.assertEqual(len(manifest['assets']),65)
         self.assertEqual(len([a for a in manifest['assets'] if a['kind']=='region' and a['texture']!='effects']),48)
-        self.assertEqual(len([a for a in manifest['assets'] if a['kind']=='region' and a['texture']=='effects']),14)
+        self.assertEqual(len([a for a in manifest['assets'] if a['kind']=='region' and a['texture']=='effects']),13)
         self.assertTrue(all(a.get('style') for a in manifest['assets']))
 
     def test_real_builder_recipe_covers_every_item(self):

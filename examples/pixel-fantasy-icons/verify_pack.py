@@ -61,7 +61,7 @@ def validate():
     assert thumbhash(bad)!=baseline[bad['id']],'Shifted rect escaped pixel baseline'
     altered=pixels[items[0]['texture']].copy();x,y,_,_=items[0]['rect_px'];altered.paste((0,0,0,0),(x+90,y,x+128,y+128))
     assert hashlib.sha256(altered.crop((x,y,x+128,y+128)).tobytes()).hexdigest()!=baseline[items[0]['id']],'Amputation escaped baseline'
-    print('PASS: 48 real image regions, 14 overlays, 2 state sets, 1 shared composition; refs, hashes, gutters, and negative regressions')
+    print('PASS: 48 real image regions, 13 overlay regions, 1 transparent-state composition, 2 state sets, 1 item composition; refs, hashes, gutters, and negative regressions')
     print('WARNING: Alpha margins and baselines are not semantic completeness; live Builder/creator review separately required')
 
 if __name__=='__main__':validate()

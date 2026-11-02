@@ -2,7 +2,7 @@
 
 **Published collection · 48 item icons · 65 addressable assets · CC0-1.0**
 
-This collection contains 48 HD fantasy pixel-art items and 17 reusable interface assets (14 effect regions, two state sets, one configurable item-slot composition). Subjects include potions, equipment, jewelry, weapons, spells, resources, tools, food, and quest items. All art uses 128 × 128 logical icon canvases with transparent alpha and stable IDs. Three 512 × 512 icon sheets and one effects sheet are owned by one `smi-visual-pack/1` manifest. 
+This collection contains 48 HD fantasy pixel-art items and 17 reusable interface assets (13 visible effect regions, one transparent-state composition, two state sets, one configurable item-slot composition). Subjects include potions, equipment, jewelry, weapons, spells, resources, tools, food, and quest items. All art uses 128 × 128 logical icon canvases with transparent alpha and stable IDs. Three 512 × 512 icon sheets and one effects sheet are owned by one `smi-visual-pack/1` manifest. 
 
 [Explore the collection](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Open the Builder](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/builder.html)
 
