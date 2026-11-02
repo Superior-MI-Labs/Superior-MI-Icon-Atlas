@@ -1,0 +1,244 @@
+{
+  "schema": "smi-gameplay-control-proposal/1",
+  "status": "DESIGN_PROPOSAL_NOT_IMPLEMENTED",
+  "authority": "Host game's semantic input resolver; the Visual Atlas renderer is not a combat engine",
+  "modes": {
+    "floating": {
+      "left_stick": "move Sky and provide directional locomotion",
+      "right_stick": "direct/aim independently floating Sunblade",
+      "light_attack": "martial combo",
+      "heavy_attack": "martial launcher or finisher",
+      "sword_command": "cast, slash, control and charged vortex"
+    },
+    "held": {
+      "left_stick": "move Sky",
+      "right_stick": "aim held slashes or intentional throws",
+      "light_attack": "quick sword combo",
+      "heavy_attack": "heavy sword melee",
+      "sword_command": "throw blade and detach from hand"
+    },
+    "remote": {
+      "left_stick": "free martial movement",
+      "right_stick": "steer or designate target for distant blade",
+      "attach_release_recall": "request controlled recall; never teleport weapon"
+    }
+  },
+  "bindings": [
+    {
+      "id": "move",
+      "gamepad": "Left stick",
+      "keyboard_mouse": "WASD / Arrow keys",
+      "category": "locomotion",
+      "remappable": true
+    },
+    {
+      "id": "aim_sword",
+      "gamepad": "Right stick",
+      "keyboard_mouse": "Mouse pointer relative to Sky",
+      "category": "aim",
+      "remappable": true
+    },
+    {
+      "id": "jump",
+      "gamepad": "A / Cross",
+      "keyboard_mouse": "Space",
+      "category": "movement",
+      "remappable": true
+    },
+    {
+      "id": "light_attack",
+      "gamepad": "X / Square",
+      "keyboard_mouse": "Left mouse",
+      "category": "combat",
+      "remappable": true
+    },
+    {
+      "id": "heavy_attack",
+      "gamepad": "Y / Triangle",
+      "keyboard_mouse": "Right mouse",
+      "category": "combat",
+      "remappable": true
+    },
+    {
+      "id": "evade",
+      "gamepad": "B / Circle",
+      "keyboard_mouse": "Left Shift",
+      "category": "defense",
+      "remappable": true
+    },
+    {
+      "id": "block_parry",
+      "gamepad": "LB / L1",
+      "keyboard_mouse": "Q",
+      "category": "defense",
+      "remappable": true
+    },
+    {
+      "id": "attach_release_recall",
+      "gamepad": "RB / R1",
+      "keyboard_mouse": "R",
+      "category": "weapon",
+      "remappable": true
+    },
+    {
+      "id": "sword_command",
+      "gamepad": "RT / R2",
+      "keyboard_mouse": "F or Mouse 4",
+      "category": "weapon",
+      "remappable": true
+    },
+    {
+      "id": "precision_focus",
+      "gamepad": "LT / L2",
+      "keyboard_mouse": "Left Ctrl",
+      "category": "weapon",
+      "remappable": true
+    },
+    {
+      "id": "anchor",
+      "gamepad": "R3 (right-stick click)",
+      "keyboard_mouse": "G or Middle mouse",
+      "category": "weapon",
+      "remappable": true
+    },
+    {
+      "id": "interact",
+      "gamepad": "L3 (left-stick click)",
+      "keyboard_mouse": "E",
+      "category": "context",
+      "remappable": true
+    },
+    {
+      "id": "aspect_previous",
+      "gamepad": "D-pad Left",
+      "keyboard_mouse": "Z",
+      "category": "progression",
+      "remappable": true
+    },
+    {
+      "id": "aspect_next",
+      "gamepad": "D-pad Right",
+      "keyboard_mouse": "C",
+      "category": "progression",
+      "remappable": true
+    },
+    {
+      "id": "technique_previous",
+      "gamepad": "D-pad Down",
+      "keyboard_mouse": "1",
+      "category": "progression",
+      "remappable": true
+    },
+    {
+      "id": "technique_next",
+      "gamepad": "D-pad Up",
+      "keyboard_mouse": "2",
+      "category": "progression",
+      "remappable": true
+    },
+    {
+      "id": "pause",
+      "gamepad": "Menu / Options",
+      "keyboard_mouse": "Escape",
+      "category": "system",
+      "remappable": true
+    },
+    {
+      "id": "map_objectives",
+      "gamepad": "View / Share",
+      "keyboard_mouse": "Tab",
+      "category": "system",
+      "remappable": true
+    }
+  ],
+  "gestures": [
+    {
+      "id": "sword_vortex",
+      "gamepad": "Hold RT at least 350 ms while floating (optional right-stick circle refines vortex)",
+      "keyboard_mouse": "Hold F at least 350 ms (optional mouse circles refine vortex)",
+      "note": "No compulsory stick-circle gesture; controller and keyboard both have a simple hold alternative"
+    },
+    {
+      "id": "blade_hop",
+      "gamepad": "R3 anchor, then A on eligible sword contact",
+      "keyboard_mouse": "G anchor, then Space on eligible contact",
+      "note": "Requires host ability unlock, collision and re-jump rules"
+    },
+    {
+      "id": "grab_hilt",
+      "gamepad": "RB tap near hovering or returning sword",
+      "keyboard_mouse": "R tap",
+      "note": "At sword_grab_lock hilt attaches to animated hand; no instantaneous snap"
+    },
+    {
+      "id": "throw_recall",
+      "gamepad": "Held: RT tap to throw; away: RB hold to recall",
+      "keyboard_mouse": "Held: F tap to throw; away: R hold to recall",
+      "note": "Different game modes prevent conflicts; sword remains independent world actor"
+    },
+    {
+      "id": "martial_crosscut",
+      "gamepad": "X → RT → Y",
+      "keyboard_mouse": "LMB → F → RMB",
+      "note": "Target retention allows right thumb to leave stick; attack cancels require host legality"
+    },
+    {
+      "id": "launch_and_blade_followup",
+      "gamepad": "X → X → Y → A → RT",
+      "keyboard_mouse": "LMB → LMB → RMB → Space → F",
+      "note": "Combo input buffer and coyote time belong to host"
+    }
+  ],
+  "attachment_events": [
+    "sword_grab_start",
+    "sword_grab_lock",
+    "sword_release_start",
+    "sword_release_end",
+    "hand_right_socket",
+    "back_hover_anchor",
+    "remote_world_anchor"
+  ],
+  "analog_policy": {
+    "sample": "2d vector after circular deadzone, camera-space to world-space mapping",
+    "right_deadzone_proposed": 0.18,
+    "aim_retention_ms_proposed": 400,
+    "input_buffer_ms_proposed": 100,
+    "no_right_thumb_chord_requirement": true,
+    "last_valid_direction_fallback": true,
+    "directional_aim_persistent_while_face_buttons": true,
+    "deadzone_and_sensitivity_user_adjustable": true
+  },
+  "haptics": [
+    {
+      "event": "sword_grab_lock",
+      "response": "short click"
+    },
+    {
+      "event": "perfect_parry",
+      "response": "brief crisp pulse"
+    },
+    {
+      "event": "held_heavy_impact",
+      "response": "short weighted impulse"
+    },
+    {
+      "event": "sword_vortex_charge",
+      "response": "optional gentle ramp"
+    },
+    {
+      "event": "low_health_enter",
+      "response": "optional single alert; never constant buzz"
+    }
+  ],
+  "rules": [
+    "Action mapping always has mouse+keyboard equivalent; no mandatory motion control, vibration or stick gesture",
+    "Input schema is host adapter proposal, not a new visual pack kind",
+    "Vortex hold should not trigger both cast and vortex; input resolver commits action at release or charge threshold",
+    "Hold/tap conflicts require deterministic resolution and controller remapping",
+    "Right-stick guidance with face buttons uses retained aim and assisted targeting, never requires a simultaneous right-thumb press on both",
+    "Body animation contains no sword pixels; independent floating actor transfers to hilt attachment at explicit marker",
+    "Damage/reach/physics/iframes/hitstop/combos reside in host gameplay; Visual Atlas provides synchronized visual animation cues",
+    "All optional haptics are accessible, user adjustable, and repeatable without haptics",
+    "Gamepad and keyboard-mouse layouts must be reviewed for hold fatigue and input rollover"
+  ]
+}

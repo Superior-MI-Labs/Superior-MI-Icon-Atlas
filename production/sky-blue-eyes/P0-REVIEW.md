@@ -18,6 +18,16 @@ This is the single **project-specific review**, linked from the reusable [side-s
 
 The current generated sword reference page is **conceptual**. It cannot certify independent shard motion from a single still illustration. Before claiming an animated weapon pack, the pipeline must inspect discrete shard sources, stable pivots and fragment IDs, the actual keyframe/tether behavior in browser preview, and the hilt locked to Sky's animated hand. Never approve a one-piece blade with etched fractures just because its effects are visually impressive.
 
+## November 2 — approved stance angle and lower tail roots
+
+The creator has approved the masked desert-wanderer style and a **shallow right-facing three-quarter hero presentation** (cropped original: `image(20261102-135059).png`). This camera/stance angle is deliberately not an entirely flattened side profile: the torso, feet, hood and robes retain modest depth while Sky faces right.
+
+**Correction to the earlier tall isolated study:** its upper two tails are attached too high. **All three** tails must arise in the lower back/pelvic/hip region, then sweep backward and downward with plausible overlap, as in the creator's approved crop. Do not lower their tips alone; relocate their **roots and intervening feather bases** while preserving the cloth and belt construction. The back view must reveal three distinct attachments; the hero view can naturally overlap them.
+
+The eight-view technical turnaround **still includes a true 90-degree side** as a construction proof, but the right-facing **hero master is a shallow oblique** image. Angle approval does not mean the generated tall study with high tails passed. A corrected full-resolution one-character source, unframed dialogue heads and separately articulated Sunblade source assets are still required.
+
+The latest generated multipanel comparison poster is again **presentation-only**; it is not usable individual-frame source art. Keep it out of animation qualification/published packs. The right-side portrait with orange background is also a **candidate** until its tail-root and angle corrections are demonstrated. See [dual-stick combat and reference proposal](CONTROL-AND-COMBO-PROPOSAL.md).
+
 ## Eight-view canonical direction list
 
 | Key | Reference orientation | Critical verification |
@@ -48,7 +58,7 @@ No supplied art from these poster experiments has passed source-frame/alpha/pivo
 
 ## Qualification sequence
 
-1. Derive the full-height clean true-right side (90°) without sword overlapping the silhouette. Confirm body proportions, heel/paw ground baseline, hem shape, and three tail roots/occlusion.
+1. Derive a corrected full-height shallow right-front-three-quarter hero pose with the creator-approved perspective and **lower hip-rooted three-tail anatomy**; then produce the **strict 90° right-side** technical check without sword overlap. Confirm body proportions, feet baseline, hem, robe seams, and realistic root/occlusion relationships.
 2. Derive full-height back (180°) from the same construction reference; expose all three feathered tails and actual attachment positions. Then front (0°), left (270°), and the four diagonals.
 3. Produce separate **unframed** head references (front, side, three-quarter) with the same scarf/hood/ears/galactic iris. Confirm masked talk, blink, listening, and neutral studies are genuinely different but consistent.
 4. Produce the separate **dormant** blade canonical art without baked element effects. Review its scale, cloth/frayed wraps and phoenix-feather ties.
