@@ -1,7 +1,7 @@
 {
   "schema": "smi-character-production-plan/1",
   "project_id": "smi.sky-blue-eyes.motion-foundation",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "status": "PREPRODUCTION",
   "runtime_support": "NOT_IMPLEMENTED",
   "description": "Grounded no-wing veiled desert wanderer: approved base clothing/silhouette, unqualified directional masters and unframed dialogue head. This is a planning manifest, NOT renderable animation artwork.",
@@ -775,13 +775,17 @@
     "reference_production_art_approval": "PER_ASSET_NOT_GLOBAL",
     "fx_first_batch_style_approved": false,
     "fx_first_batch_import_qualified": false,
-    "current_goal": "Produce approved body and traditional full-sword key poses, then real 16FPS animation sequences and qualifying ZIPs; do not request new reference concepts.",
+    "current_goal": "Replace low-detail vector body studies with truly high-fidelity drawn keyposes/in-betweens matching approved swordless desert-wanderer art; preserve existing manifest and frame QA pipeline.",
     "fx_second_batch_local_qa": true,
     "fx_second_batch_publication_approved": false,
     "sunblade_batch03_source_qa": true,
     "sunblade_batch03_art_approved": false,
     "sunblade_batch03_browser_qa": "NOT_TESTED",
-    "sunblade_batch03_published": false
+    "sunblade_batch03_published": false,
+    "body_batch04_source_qa": "PASS",
+    "body_batch04_art_quality": "HOLD",
+    "body_batch04_browser_qa": "NOT_TESTED",
+    "body_batch04_published": false
   },
   "design_direction_status": "LOCKED_NO_MORE_CONCEPT_ROUNDS",
   "production_inventory_path": "production/sky-blue-eyes/ANIMATION-INVENTORY.json",
@@ -869,5 +873,58 @@
     "public_catalog_approval": false,
     "source_location": "conversation archive; binary source files not committed",
     "no_runtime_fragment_controller": true
+  },
+  "latest_body_candidate": {
+    "name": "Swordless Sky body motion study v0.1",
+    "document": "production/sky-blue-eyes/BODY-BATCH-04-RECEIPT.md",
+    "handoff_archive": "Sky-Animation-Production-Batch-04.zip",
+    "import_zip": "sky-body-motion-study-v0.1.zip",
+    "pack_id": "smi.sky.body.motion-study",
+    "pack_version": "0.1.0",
+    "animation_technique": "independent_offline_vector_pose_drawings",
+    "states": [
+      "idle.relaxed",
+      "idle.low",
+      "walk.loop",
+      "run.loop",
+      "run.stop",
+      "jump.rise",
+      "jump.land",
+      "martial.claw_01",
+      "defend.parry"
+    ],
+    "frame_counts": [
+      12,
+      12,
+      12,
+      12,
+      8,
+      8,
+      8,
+      12,
+      8
+    ],
+    "fps": 16,
+    "frames": 92,
+    "sequences": 9,
+    "selectors": 2,
+    "assets": 103,
+    "atlas_pages": 4,
+    "zip_bytes": 6026278,
+    "decoded_atlas_bytes": 49991680,
+    "untrimmed_decoded_bytes": 90439680,
+    "decoded_memory_savings_percent": 44.7,
+    "exact_frame_reconstruction": "92_OF_92_SOURCE_RGBA_PASS",
+    "numeric_loop_checks": "PASS_DIAGNOSTIC_ONLY",
+    "body_sword_separation": true,
+    "health_tiers": [
+      "normal_above_36",
+      "low_at_or_below_36"
+    ],
+    "art_fidelity": "QUALITY_HOLD_SIMPLIFIED_VECTOR_NOT_DETAILED_CANONICAL",
+    "user_art_approval": false,
+    "official_browser_builder_import": "NOT_TESTED",
+    "public_release": false,
+    "artifact_location": "conversation handoff only; source PNGs not committed"
   }
 }
