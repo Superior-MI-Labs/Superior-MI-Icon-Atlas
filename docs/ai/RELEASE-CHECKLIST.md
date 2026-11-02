@@ -29,6 +29,15 @@ Do not label an asset ready merely because its JSON parses. Structural validatio
 - [ ] Frame-boundary and animation loop tests cover anchor/pivot continuity; do not claim approval from sprite-sheet geometry alone.
 - [ ] Opening the ZIP automatically previews the intended default asset, without hand-configuring layers.
 
+## 3a. Developer usability and preview acceptance
+
+- [ ] For every publicly addressable **interactive composition**, the preview demonstrates every meaningful input, state or compatibility choice actually used by a host game/application. A visually changing screenshot alone is insufficient; it must be controlled by an explicit manifest input or state.
+- [ ] On first import of the **final ZIP**, the selected entry asset is a useful assembled widget rather than a raw cropped component, with a visible and legible default.
+- [ ] Vary numeric controls at endpoints and intermediate values using real sliders; for repeatable counters independently vary maximum capacity, fill count and wrap columns. Test at least 1, 4 and 20 indicators and 10-column wrap when the declared range permits.
+- [ ] For state sets, preview each state using both dropdown and synchronized step slider; for a composition, inspect its own bound state/value inputs. A state-only artwork must never be mislabeled as a continuous 0–100% meter.
+- [ ] Document game-engine integration boundaries: pixels and state/behavior declarations are portable; host handles pointer hit-testing, keyboard/gamepad mapping, input signals, layout in the destination engine, and font rendering unless explicitly implemented.
+- [ ] Preserve the same previewable behavior and dimensions after export/import of the **exact delivered ZIP**, and save evidence. Block publication when a named interactive asset lacks a working preview control or silently hides a demanded value.
+
 ## 4. Executed QA and packaging
 - [ ] Run `python3 tools/validate_visual_pack.py OUTPUT.zip` and fix any errors.
 - [ ] Run `python3 tools/qualify_asset_zip.py OUTPUT.zip --out QA-DIR` and inspect `contact-*.png` and the receipt.
