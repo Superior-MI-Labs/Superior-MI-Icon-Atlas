@@ -1,0 +1,17 @@
+{
+  "schema": "smi-ai-acceptance/1",
+  "intent": "48 distinct high-definition fantasy pixel-art items with reusable interaction effects and complete health potion / fireball artwork; no duplicated item effects",
+  "checks": [
+    {"type":"asset_kind","asset":"smi.game.pixel01.widget.item","kind":"composition"},
+    {"type":"input_declared","asset":"smi.game.pixel01.widget.item","input":"interaction","input_type":"enum"},
+    {"type":"input_declared","asset":"smi.game.pixel01.widget.item","input":"cooldown","input_type":"number"},
+    {"type":"input_range","asset":"smi.game.pixel01.widget.item","input":"cooldown","min":0,"max":1},
+    {"type":"layer_uses_input","asset":"smi.game.pixel01.widget.item","layer":"interaction","binding":"state_from_input","input":"interaction"},
+    {"type":"layer_uses_input","asset":"smi.game.pixel01.widget.item","layer":"cooldown","binding":"clip","input":"cooldown"},
+    {"type":"state_contains","asset":"smi.game.pixel01.fx.interaction","state":"hover"},
+    {"type":"state_contains","asset":"smi.game.pixel01.fx.interaction","state":"disabled"},
+    {"type":"asset_kind","asset":"smi.game.pixel01.potion.health","kind":"region"},
+    {"type":"asset_kind","asset":"smi.game.pixel01.ability.fireball","kind":"region"},
+    {"type":"asset_kind","asset":"smi.game.pixel01.quest.rune_tablet","kind":"region"}
+  ]
+}

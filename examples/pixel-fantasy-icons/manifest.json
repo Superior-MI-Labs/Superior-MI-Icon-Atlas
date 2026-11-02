@@ -1,0 +1,1986 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.game.pixel01",
+  "version": "0.3.0",
+  "description": "48 HD fantasy pixel-art game icons and 17 reusable UI assets; original source sheets and manifest-based sprite extraction included.",
+  "license": "CC0-1.0",
+  "textures": {
+    "icons": {
+      "path": "textures/icons-00.png",
+      "width_px": 512,
+      "height_px": 512,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "c306448aeb734e6a0f57e7ff0121c43ab77629f947e835cc2a8dfa7de259b047"
+    },
+    "icons2": {
+      "path": "textures/icons-01.png",
+      "width_px": 512,
+      "height_px": 512,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "5187953c11e1698e308efe448294eb175bb1a3eeb89044db88eef1c9ff5d1399"
+    },
+    "icons3": {
+      "path": "textures/icons-02.png",
+      "width_px": 512,
+      "height_px": 512,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "02ffa1d5273279ce0cf1c87fc3a8eeff3a8a782fa99f0bd884e9f200fbcb74cc"
+    },
+    "effects": {
+      "path": "textures/effects.png",
+      "width_px": 896,
+      "height_px": 256,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "a17cf859897c4c572fcc6e0cd942146255293ca464e66e6012435276da9d1cc5"
+    }
+  },
+  "interfaces": {
+    "smi.slot.game.pixel_icon.128/1": {
+      "size_px": [
+        128,
+        128
+      ],
+      "allow_scale": false,
+      "description": "A full-canvas 128x128 game item icon"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.game.pixel01.potion.health",
+      "name": "Health Potion",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "health",
+        "red potion",
+        "healing"
+      ],
+      "subjects": [
+        "game.items.consumables.potions"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.potion.mana",
+      "name": "Mana Potion",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "mana",
+        "blue potion",
+        "magic"
+      ],
+      "subjects": [
+        "game.items.consumables.potions"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.potion.poison",
+      "name": "Poison Potion",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "poison",
+        "green potion",
+        "toxin"
+      ],
+      "subjects": [
+        "game.items.consumables.potions"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.potion.arcane",
+      "name": "Arcane Potion",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "purple potion",
+        "arcane",
+        "elixir"
+      ],
+      "subjects": [
+        "game.items.consumables.potions"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.armor.knight_helmet",
+      "name": "Knight Helmet",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "helmet",
+        "headgear",
+        "knight"
+      ],
+      "subjects": [
+        "game.items.equipment.armor"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.armor.knight_chestplate",
+      "name": "Knight Chestplate",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "armor",
+        "chestplate",
+        "plate mail"
+      ],
+      "subjects": [
+        "game.items.equipment.armor"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.armor.leather_boots",
+      "name": "Leather Boots",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "boots",
+        "footwear",
+        "leather"
+      ],
+      "subjects": [
+        "game.items.equipment.armor"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.armor.lion_shield",
+      "name": "Lion Shield",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "shield",
+        "crest",
+        "lion"
+      ],
+      "subjects": [
+        "game.items.equipment.shields"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.accessory.ruby_ring",
+      "name": "Ruby Ring",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "ring",
+        "ruby",
+        "jewelry"
+      ],
+      "subjects": [
+        "game.items.accessories.rings"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        0,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.accessory.sapphire_pendant",
+      "name": "Sapphire Pendant",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "pendant",
+        "necklace",
+        "sapphire"
+      ],
+      "subjects": [
+        "game.items.accessories.necklaces"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        128,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.item.sealed_scroll",
+      "name": "Sealed Scroll",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "scroll",
+        "parchment",
+        "sealed"
+      ],
+      "subjects": [
+        "game.items.quest.scrolls"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        256,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.item.star_spellbook",
+      "name": "Star Spellbook",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "book",
+        "spellbook",
+        "magic"
+      ],
+      "subjects": [
+        "game.items.books"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        384,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.steel_sword",
+      "name": "Steel Sword",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "sword",
+        "blade",
+        "steel"
+      ],
+      "subjects": [
+        "game.items.weapons.swords"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        0,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.double_axe",
+      "name": "Double Axe",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "axe",
+        "double blade",
+        "weapon"
+      ],
+      "subjects": [
+        "game.items.weapons.axes"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        128,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.wooden_bow",
+      "name": "Wooden Bow",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "bow",
+        "archery",
+        "weapon"
+      ],
+      "subjects": [
+        "game.items.weapons.bows"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        256,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.ability.fireball",
+      "name": "Fireball",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "fire",
+        "spell",
+        "fireball"
+      ],
+      "subjects": [
+        "game.abilities.fire"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons",
+      "rect_px": [
+        384,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.azure_crystal",
+      "name": "Azure Crystal",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "azure crystal",
+        "material",
+        "azure",
+        "crystal"
+      ],
+      "subjects": [
+        "game.items.materials"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.iron_ore",
+      "name": "Iron Ore",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "iron ore",
+        "material",
+        "iron",
+        "ore"
+      ],
+      "subjects": [
+        "game.items.materials"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.rolled_leather",
+      "name": "Rolled Leather",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "rolled leather",
+        "material",
+        "rolled",
+        "leather"
+      ],
+      "subjects": [
+        "game.items.materials"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.timber_log",
+      "name": "Timber Log",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "timber log",
+        "material",
+        "timber",
+        "log"
+      ],
+      "subjects": [
+        "game.items.materials"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.ruby_gemstone",
+      "name": "Ruby Gemstone",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "ruby gemstone",
+        "material",
+        "ruby",
+        "gemstone"
+      ],
+      "subjects": [
+        "game.items.materials"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.arcane_ink",
+      "name": "Arcane Ink",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "arcane ink",
+        "material",
+        "arcane",
+        "ink"
+      ],
+      "subjects": [
+        "game.items.materials"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.tool.rune_hammer",
+      "name": "Rune Hammer",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "rune hammer",
+        "tool",
+        "rune",
+        "hammer"
+      ],
+      "subjects": [
+        "game.items.tools"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.tool.lockpicks",
+      "name": "Lockpicks",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "lockpicks",
+        "tool",
+        "lockpicks"
+      ],
+      "subjects": [
+        "game.items.tools"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.ability.frost_ward",
+      "name": "Frost Ward",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "frost ward",
+        "ability",
+        "frost",
+        "ward"
+      ],
+      "subjects": [
+        "game.abilities"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        0,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.venom_dagger",
+      "name": "Venom Dagger",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "venom dagger",
+        "weapon",
+        "venom",
+        "dagger"
+      ],
+      "subjects": [
+        "game.items.weapons"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        128,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.healing_herb",
+      "name": "Healing Herb",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "healing herb",
+        "material",
+        "healing",
+        "herb"
+      ],
+      "subjects": [
+        "game.items.materials"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        256,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.spiked_mace",
+      "name": "Spiked Mace",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "spiked mace",
+        "weapon",
+        "spiked",
+        "mace"
+      ],
+      "subjects": [
+        "game.items.weapons"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        384,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.potion.energy_elixir",
+      "name": "Energy Elixir",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "energy elixir",
+        "potion",
+        "energy",
+        "elixir"
+      ],
+      "subjects": [
+        "game.items.consumables.potions"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        0,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.tool.brass_compass",
+      "name": "Brass Compass",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "brass compass",
+        "tool",
+        "brass",
+        "compass"
+      ],
+      "subjects": [
+        "game.items.tools"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        128,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.ability.necrotic_curse",
+      "name": "Necrotic Curse",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "necrotic curse",
+        "ability",
+        "necrotic",
+        "curse"
+      ],
+      "subjects": [
+        "game.abilities"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        256,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.crystal_wand",
+      "name": "Crystal Wand",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "crystal wand",
+        "weapon",
+        "crystal",
+        "wand"
+      ],
+      "subjects": [
+        "game.items.weapons"
+      ],
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "kind": "region",
+      "texture": "icons2",
+      "rect_px": [
+        384,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.quest.ornate_key",
+      "name": "Ornate Key",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "quest",
+        "ornate",
+        "key"
+      ],
+      "subjects": [
+        "game.items.quest"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.quest.treasure_chest",
+      "name": "Treasure Chest",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "quest",
+        "treasure",
+        "chest"
+      ],
+      "subjects": [
+        "game.items.quest"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.item.traveler_journal",
+      "name": "Traveler Journal",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "item",
+        "traveler",
+        "journal"
+      ],
+      "subjects": [
+        "game.items.general"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.quest.rune_tablet",
+      "name": "Rune Tablet",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "quest",
+        "rune",
+        "tablet"
+      ],
+      "subjects": [
+        "game.items.quest"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.food.forest_mushroom",
+      "name": "Forest Mushroom",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "food",
+        "forest",
+        "mushroom"
+      ],
+      "subjects": [
+        "game.items.food"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.food.rustic_bread",
+      "name": "Rustic Bread",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "food",
+        "rustic",
+        "bread"
+      ],
+      "subjects": [
+        "game.items.food"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.currency.gold_pouch",
+      "name": "Gold Pouch",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "currency",
+        "gold",
+        "pouch"
+      ],
+      "subjects": [
+        "game.items.currency"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.food.blueberries",
+      "name": "Blueberries",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "food",
+        "blueberries"
+      ],
+      "subjects": [
+        "game.items.food"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.flame_sword",
+      "name": "Flame Sword",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "weapon",
+        "flame",
+        "sword"
+      ],
+      "subjects": [
+        "game.items.weapons"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        0,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.verdant_staff",
+      "name": "Verdant Staff",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "weapon",
+        "verdant",
+        "staff"
+      ],
+      "subjects": [
+        "game.items.weapons"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        128,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.ability.lightning_bolt",
+      "name": "Lightning Bolt",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "ability",
+        "lightning",
+        "bolt"
+      ],
+      "subjects": [
+        "game.abilities"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        256,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.ability.healing_aura",
+      "name": "Healing Aura",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "ability",
+        "healing",
+        "aura"
+      ],
+      "subjects": [
+        "game.abilities"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        384,
+        256,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.amethyst_cluster",
+      "name": "Amethyst Cluster",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "material",
+        "amethyst",
+        "cluster"
+      ],
+      "subjects": [
+        "game.items.materials"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        0,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.item.golden_bell",
+      "name": "Golden Bell",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "item",
+        "golden",
+        "bell"
+      ],
+      "subjects": [
+        "game.items.general"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        128,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.quest.treasure_map",
+      "name": "Treasure Map",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "quest",
+        "treasure",
+        "map"
+      ],
+      "subjects": [
+        "game.items.quest"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        256,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.accessory.amethyst_necklace",
+      "name": "Amethyst Necklace",
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "accessory",
+        "amethyst",
+        "necklace"
+      ],
+      "subjects": [
+        "game.items.accessories"
+      ],
+      "description": "HD fantasy pixel-art game icon, generated and packed into a 128\u00d7128 transparent cell.",
+      "implements": [
+        "smi.slot.game.pixel_icon.128/1"
+      ],
+      "kind": "region",
+      "texture": "icons3",
+      "rect_px": [
+        384,
+        384,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.fx.clear",
+      "kind": "region",
+      "name": "Clear overlay",
+      "texture": "effects",
+      "rect_px": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "clear"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.hover",
+      "kind": "region",
+      "name": "Hover overlay",
+      "texture": "effects",
+      "rect_px": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "hover"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.pressed",
+      "kind": "region",
+      "name": "Pressed overlay",
+      "texture": "effects",
+      "rect_px": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "pressed"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.disabled",
+      "kind": "region",
+      "name": "Disabled overlay",
+      "texture": "effects",
+      "rect_px": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "disabled"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.selected",
+      "kind": "region",
+      "name": "Selected overlay",
+      "texture": "effects",
+      "rect_px": [
+        512,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "selected"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.cooldown",
+      "kind": "region",
+      "name": "Cooldown overlay",
+      "texture": "effects",
+      "rect_px": [
+        640,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "cooldown"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.new",
+      "kind": "region",
+      "name": "New overlay",
+      "texture": "effects",
+      "rect_px": [
+        768,
+        0,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "new"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.focus",
+      "kind": "region",
+      "name": "Focus overlay",
+      "texture": "effects",
+      "rect_px": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "focus"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.equipped",
+      "kind": "region",
+      "name": "Equipped overlay",
+      "texture": "effects",
+      "rect_px": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "equipped"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.locked",
+      "kind": "region",
+      "name": "Locked overlay",
+      "texture": "effects",
+      "rect_px": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "locked"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.rarity_uncommon",
+      "kind": "region",
+      "name": "Rarity_Uncommon overlay",
+      "texture": "effects",
+      "rect_px": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "rarity_uncommon"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.rarity_rare",
+      "kind": "region",
+      "name": "Rarity_Rare overlay",
+      "texture": "effects",
+      "rect_px": [
+        512,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "rarity_rare"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.rarity_epic",
+      "kind": "region",
+      "name": "Rarity_Epic overlay",
+      "texture": "effects",
+      "rect_px": [
+        640,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "rarity_epic"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.rarity_legendary",
+      "kind": "region",
+      "name": "Rarity_Legendary overlay",
+      "texture": "effects",
+      "rect_px": [
+        768,
+        128,
+        128,
+        128
+      ],
+      "logical_size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "ui",
+        "effect",
+        "rarity_legendary"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.interaction",
+      "kind": "state_set",
+      "name": "Interaction overlay",
+      "default_state": "default",
+      "states": {
+        "default": "smi.game.pixel01.fx.clear",
+        "hover": "smi.game.pixel01.fx.hover",
+        "pressed": "smi.game.pixel01.fx.pressed",
+        "disabled": "smi.game.pixel01.fx.disabled",
+        "focus": "smi.game.pixel01.fx.focus"
+      },
+      "tags": [
+        "ui",
+        "states",
+        "hover",
+        "pressed",
+        "disabled"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.fx.rarity",
+      "kind": "state_set",
+      "name": "Rarity frame effects",
+      "default_state": "common",
+      "states": {
+        "common": "smi.game.pixel01.fx.clear",
+        "uncommon": "smi.game.pixel01.fx.rarity_uncommon",
+        "rare": "smi.game.pixel01.fx.rarity_rare",
+        "epic": "smi.game.pixel01.fx.rarity_epic",
+        "legendary": "smi.game.pixel01.fx.rarity_legendary"
+      },
+      "tags": [
+        "rarity",
+        "ui",
+        "status"
+      ],
+      "style": "hd-pixel-fantasy-01"
+    },
+    {
+      "id": "smi.game.pixel01.widget.item",
+      "kind": "composition",
+      "name": "Interactive fantasy item slot",
+      "size_px": [
+        128,
+        128
+      ],
+      "style": "hd-pixel-fantasy-01",
+      "tags": [
+        "ui",
+        "inventory",
+        "item",
+        "interactive",
+        "pixel art",
+        "game"
+      ],
+      "inputs": {
+        "interaction": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "focus"
+          ]
+        },
+        "rarity": {
+          "type": "enum",
+          "default": "common",
+          "values": [
+            "common",
+            "uncommon",
+            "rare",
+            "epic",
+            "legendary"
+          ]
+        },
+        "selected": {
+          "type": "boolean",
+          "default": false
+        },
+        "equipped": {
+          "type": "boolean",
+          "default": false
+        },
+        "locked": {
+          "type": "boolean",
+          "default": false
+        },
+        "new": {
+          "type": "boolean",
+          "default": false
+        },
+        "cooldown": {
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 1,
+          "step": 0.05
+        }
+      },
+      "slots": {
+        "icon": {
+          "accepts": "smi.slot.game.pixel_icon.128/1",
+          "default": "smi.game.pixel01.potion.health",
+          "options": [
+            "smi.game.pixel01.potion.health",
+            "smi.game.pixel01.potion.mana",
+            "smi.game.pixel01.potion.poison",
+            "smi.game.pixel01.potion.arcane",
+            "smi.game.pixel01.armor.knight_helmet",
+            "smi.game.pixel01.armor.knight_chestplate",
+            "smi.game.pixel01.armor.leather_boots",
+            "smi.game.pixel01.armor.lion_shield",
+            "smi.game.pixel01.accessory.ruby_ring",
+            "smi.game.pixel01.accessory.sapphire_pendant",
+            "smi.game.pixel01.item.sealed_scroll",
+            "smi.game.pixel01.item.star_spellbook",
+            "smi.game.pixel01.weapon.steel_sword",
+            "smi.game.pixel01.weapon.double_axe",
+            "smi.game.pixel01.weapon.wooden_bow",
+            "smi.game.pixel01.ability.fireball",
+            "smi.game.pixel01.material.azure_crystal",
+            "smi.game.pixel01.material.iron_ore",
+            "smi.game.pixel01.material.rolled_leather",
+            "smi.game.pixel01.material.timber_log",
+            "smi.game.pixel01.material.ruby_gemstone",
+            "smi.game.pixel01.material.arcane_ink",
+            "smi.game.pixel01.tool.rune_hammer",
+            "smi.game.pixel01.tool.lockpicks",
+            "smi.game.pixel01.ability.frost_ward",
+            "smi.game.pixel01.weapon.venom_dagger",
+            "smi.game.pixel01.material.healing_herb",
+            "smi.game.pixel01.weapon.spiked_mace",
+            "smi.game.pixel01.potion.energy_elixir",
+            "smi.game.pixel01.tool.brass_compass",
+            "smi.game.pixel01.ability.necrotic_curse",
+            "smi.game.pixel01.weapon.crystal_wand",
+            "smi.game.pixel01.quest.ornate_key",
+            "smi.game.pixel01.quest.treasure_chest",
+            "smi.game.pixel01.item.traveler_journal",
+            "smi.game.pixel01.quest.rune_tablet",
+            "smi.game.pixel01.food.forest_mushroom",
+            "smi.game.pixel01.food.rustic_bread",
+            "smi.game.pixel01.currency.gold_pouch",
+            "smi.game.pixel01.food.blueberries",
+            "smi.game.pixel01.weapon.flame_sword",
+            "smi.game.pixel01.weapon.verdant_staff",
+            "smi.game.pixel01.ability.lightning_bolt",
+            "smi.game.pixel01.ability.healing_aura",
+            "smi.game.pixel01.material.amethyst_cluster",
+            "smi.game.pixel01.item.golden_bell",
+            "smi.game.pixel01.quest.treasure_map",
+            "smi.game.pixel01.accessory.amethyst_necklace"
+          ],
+          "label": "Item artwork"
+        }
+      },
+      "layers": [
+        {
+          "id": "item",
+          "slot": "icon"
+        },
+        {
+          "id": "rarity",
+          "asset": "smi.game.pixel01.fx.rarity",
+          "state_from_input": "rarity"
+        },
+        {
+          "id": "interaction",
+          "asset": "smi.game.pixel01.fx.interaction",
+          "state_from_input": "interaction"
+        },
+        {
+          "id": "cooldown",
+          "asset": "smi.game.pixel01.fx.cooldown",
+          "clip": {
+            "input": "cooldown",
+            "axis": "y",
+            "origin": "end"
+          }
+        },
+        {
+          "id": "equipped",
+          "asset": "smi.game.pixel01.fx.equipped",
+          "visible_when": {
+            "input": "equipped",
+            "equals": true
+          }
+        },
+        {
+          "id": "selected",
+          "asset": "smi.game.pixel01.fx.selected",
+          "visible_when": {
+            "input": "selected",
+            "equals": true
+          }
+        },
+        {
+          "id": "locked",
+          "asset": "smi.game.pixel01.fx.locked",
+          "visible_when": {
+            "input": "locked",
+            "equals": true
+          }
+        },
+        {
+          "id": "new",
+          "asset": "smi.game.pixel01.fx.new",
+          "visible_when": {
+            "input": "new",
+            "equals": true
+          }
+        }
+      ]
+    }
+  ]
+}

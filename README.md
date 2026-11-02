@@ -11,9 +11,12 @@ Published collections are governed by [`publications.json`](publications.json), 
 - Fantasy RPG HUD Wave 1: **70** assets.
 - Royal Forge Core Controls: **214** assets.
 - Royal Forge HUD Resource Systems v1.1: **360** assets.
+- Pixel Fantasy Game Items: **48** HD pixel-art icons plus **17** reusable interaction assets, with source artwork and a manifest-driven Builder pack.
 - Historic icon archive: **2,073** searchable candidates, separately flagged for artistic/rights review.
 
-The public browser exposes **644 approved visual assets** and **2,073 archived icons** (2,717 addressable records). The repository's earlier v0.13.0 notes below describe the baseline QA release, not the latest public inventory. The current maintenance branch consolidates typed input bounds for both previews, preserves sliders during capacity changes, and sizes multi-layer repeated compositions without clipping negative offsets.
+The public browser exposes **709 approved visual assets** and **2,073 archived icons** (2,782 addressable records). The repository's earlier v0.13.0 notes below describe the baseline QA release, not the latest public inventory. The current maintenance branch consolidates typed input bounds for both previews, preserves sliders during capacity changes, and sizes multi-layer repeated compositions without clipping negative offsets.
+
+The [Pixel Fantasy collection source](examples/pixel-fantasy-icons/) contains three 512×512 item sheets, one shared effects texture, a 48-icon contact sheet, and documented crop-repair history. Browse or download it from the public catalog. A published first edition may still receive art-quality improvements; transparent-padding checks do not guarantee every original silhouette is perfect.
 
 For creator guidance, see [Creator preflight](docs/ai/CREATOR-PREFLIGHT.md), [image-source workflow](docs/ai/IMAGE-ENGINE-WORKFLOW.md), and [release checklist](docs/ai/RELEASE-CHECKLIST.md).
 

@@ -1,0 +1,1214 @@
+{
+  "schema": "smi-visual-scenarios/1",
+  "description": "Published pixel-fantasy icons: all 48 item slots plus independent interactive effects in the actual Visual Atlas Builder.",
+  "cases": [
+    {
+      "id": "pixel-item-sheet-1-builder",
+      "pack": "pixel-fantasy-icons.zip",
+      "preview_name": "Interactive fantasy item slot",
+      "asset": "smi.game.pixel01.widget.item",
+      "samples": [
+        {
+          "id": "icon-01",
+          "slots": {
+            "icon": "smi.game.pixel01.potion.health"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-02",
+          "slots": {
+            "icon": "smi.game.pixel01.potion.mana"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-03",
+          "slots": {
+            "icon": "smi.game.pixel01.potion.poison"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-04",
+          "slots": {
+            "icon": "smi.game.pixel01.potion.arcane"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-05",
+          "slots": {
+            "icon": "smi.game.pixel01.armor.knight_helmet"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-06",
+          "slots": {
+            "icon": "smi.game.pixel01.armor.knight_chestplate"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-07",
+          "slots": {
+            "icon": "smi.game.pixel01.armor.leather_boots"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-08",
+          "slots": {
+            "icon": "smi.game.pixel01.armor.lion_shield"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-09",
+          "slots": {
+            "icon": "smi.game.pixel01.accessory.ruby_ring"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-10",
+          "slots": {
+            "icon": "smi.game.pixel01.accessory.sapphire_pendant"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-11",
+          "slots": {
+            "icon": "smi.game.pixel01.item.sealed_scroll"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-12",
+          "slots": {
+            "icon": "smi.game.pixel01.item.star_spellbook"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-13",
+          "slots": {
+            "icon": "smi.game.pixel01.weapon.steel_sword"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-14",
+          "slots": {
+            "icon": "smi.game.pixel01.weapon.double_axe"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-15",
+          "slots": {
+            "icon": "smi.game.pixel01.weapon.wooden_bow"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-16",
+          "slots": {
+            "icon": "smi.game.pixel01.ability.fireball"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "icon-01",
+          "b": "icon-02",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-02",
+          "b": "icon-03",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-03",
+          "b": "icon-04",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-04",
+          "b": "icon-05",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-05",
+          "b": "icon-06",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-06",
+          "b": "icon-07",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-07",
+          "b": "icon-08",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-08",
+          "b": "icon-09",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-09",
+          "b": "icon-10",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-10",
+          "b": "icon-11",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-11",
+          "b": "icon-12",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-12",
+          "b": "icon-13",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-13",
+          "b": "icon-14",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-14",
+          "b": "icon-15",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-15",
+          "b": "icon-16",
+          "min_changed_pixels": 30
+        }
+      ]
+    },
+    {
+      "id": "pixel-item-sheet-2-builder",
+      "pack": "pixel-fantasy-icons.zip",
+      "preview_name": "Interactive fantasy item slot",
+      "asset": "smi.game.pixel01.widget.item",
+      "samples": [
+        {
+          "id": "icon-01",
+          "slots": {
+            "icon": "smi.game.pixel01.material.azure_crystal"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-02",
+          "slots": {
+            "icon": "smi.game.pixel01.material.iron_ore"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-03",
+          "slots": {
+            "icon": "smi.game.pixel01.material.rolled_leather"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-04",
+          "slots": {
+            "icon": "smi.game.pixel01.material.timber_log"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-05",
+          "slots": {
+            "icon": "smi.game.pixel01.material.ruby_gemstone"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-06",
+          "slots": {
+            "icon": "smi.game.pixel01.material.arcane_ink"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-07",
+          "slots": {
+            "icon": "smi.game.pixel01.tool.rune_hammer"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-08",
+          "slots": {
+            "icon": "smi.game.pixel01.tool.lockpicks"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-09",
+          "slots": {
+            "icon": "smi.game.pixel01.ability.frost_ward"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-10",
+          "slots": {
+            "icon": "smi.game.pixel01.weapon.venom_dagger"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-11",
+          "slots": {
+            "icon": "smi.game.pixel01.material.healing_herb"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-12",
+          "slots": {
+            "icon": "smi.game.pixel01.weapon.spiked_mace"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-13",
+          "slots": {
+            "icon": "smi.game.pixel01.potion.energy_elixir"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-14",
+          "slots": {
+            "icon": "smi.game.pixel01.tool.brass_compass"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-15",
+          "slots": {
+            "icon": "smi.game.pixel01.ability.necrotic_curse"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-16",
+          "slots": {
+            "icon": "smi.game.pixel01.weapon.crystal_wand"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "icon-01",
+          "b": "icon-02",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-02",
+          "b": "icon-03",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-03",
+          "b": "icon-04",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-04",
+          "b": "icon-05",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-05",
+          "b": "icon-06",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-06",
+          "b": "icon-07",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-07",
+          "b": "icon-08",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-08",
+          "b": "icon-09",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-09",
+          "b": "icon-10",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-10",
+          "b": "icon-11",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-11",
+          "b": "icon-12",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-12",
+          "b": "icon-13",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-13",
+          "b": "icon-14",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-14",
+          "b": "icon-15",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-15",
+          "b": "icon-16",
+          "min_changed_pixels": 30
+        }
+      ]
+    },
+    {
+      "id": "pixel-item-sheet-3-builder",
+      "pack": "pixel-fantasy-icons.zip",
+      "preview_name": "Interactive fantasy item slot",
+      "asset": "smi.game.pixel01.widget.item",
+      "samples": [
+        {
+          "id": "icon-01",
+          "slots": {
+            "icon": "smi.game.pixel01.quest.ornate_key"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-02",
+          "slots": {
+            "icon": "smi.game.pixel01.quest.treasure_chest"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-03",
+          "slots": {
+            "icon": "smi.game.pixel01.item.traveler_journal"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-04",
+          "slots": {
+            "icon": "smi.game.pixel01.quest.rune_tablet"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-05",
+          "slots": {
+            "icon": "smi.game.pixel01.food.forest_mushroom"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-06",
+          "slots": {
+            "icon": "smi.game.pixel01.food.rustic_bread"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-07",
+          "slots": {
+            "icon": "smi.game.pixel01.currency.gold_pouch"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-08",
+          "slots": {
+            "icon": "smi.game.pixel01.food.blueberries"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-09",
+          "slots": {
+            "icon": "smi.game.pixel01.weapon.flame_sword"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-10",
+          "slots": {
+            "icon": "smi.game.pixel01.weapon.verdant_staff"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-11",
+          "slots": {
+            "icon": "smi.game.pixel01.ability.lightning_bolt"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-12",
+          "slots": {
+            "icon": "smi.game.pixel01.ability.healing_aura"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-13",
+          "slots": {
+            "icon": "smi.game.pixel01.material.amethyst_cluster"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-14",
+          "slots": {
+            "icon": "smi.game.pixel01.item.golden_bell"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-15",
+          "slots": {
+            "icon": "smi.game.pixel01.quest.treasure_map"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "icon-16",
+          "slots": {
+            "icon": "smi.game.pixel01.accessory.amethyst_necklace"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          },
+          "time_ms": 0
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "icon-01",
+          "b": "icon-02",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-02",
+          "b": "icon-03",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-03",
+          "b": "icon-04",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-04",
+          "b": "icon-05",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-05",
+          "b": "icon-06",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-06",
+          "b": "icon-07",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-07",
+          "b": "icon-08",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-08",
+          "b": "icon-09",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-09",
+          "b": "icon-10",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-10",
+          "b": "icon-11",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-11",
+          "b": "icon-12",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-12",
+          "b": "icon-13",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-13",
+          "b": "icon-14",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-14",
+          "b": "icon-15",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "icon-15",
+          "b": "icon-16",
+          "min_changed_pixels": 30
+        }
+      ]
+    },
+    {
+      "id": "pixel-item-interaction-combinations",
+      "pack": "pixel-fantasy-icons.zip",
+      "preview_name": "Interactive fantasy item slot",
+      "asset": "smi.game.pixel01.widget.item",
+      "samples": [
+        {
+          "id": "default",
+          "slots": {
+            "icon": "smi.game.pixel01.potion.health"
+          },
+          "inputs": {
+            "interaction": "default",
+            "rarity": "common",
+            "selected": false,
+            "equipped": false,
+            "locked": false,
+            "new": false,
+            "cooldown": 0
+          }
+        },
+        {
+          "id": "hover",
+          "inputs": {
+            "interaction": "hover"
+          }
+        },
+        {
+          "id": "pressed",
+          "inputs": {
+            "interaction": "pressed"
+          }
+        },
+        {
+          "id": "selected",
+          "inputs": {
+            "interaction": "default",
+            "selected": true
+          }
+        },
+        {
+          "id": "disabled",
+          "inputs": {
+            "interaction": "disabled",
+            "selected": false
+          }
+        },
+        {
+          "id": "cooldown-50",
+          "inputs": {
+            "interaction": "default",
+            "cooldown": 0.5
+          }
+        },
+        {
+          "id": "cooldown-100",
+          "inputs": {
+            "interaction": "default",
+            "cooldown": 1
+          }
+        },
+        {
+          "id": "locked",
+          "inputs": {
+            "cooldown": 0,
+            "locked": true
+          }
+        },
+        {
+          "id": "new",
+          "inputs": {
+            "locked": false,
+            "new": true
+          }
+        },
+        {
+          "id": "legendary",
+          "inputs": {
+            "new": false,
+            "rarity": "legendary"
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "default",
+          "b": "hover",
+          "min_changed_pixels": 25
+        },
+        {
+          "type": "different",
+          "a": "default",
+          "b": "pressed",
+          "min_changed_pixels": 25
+        },
+        {
+          "type": "different",
+          "a": "default",
+          "b": "selected",
+          "min_changed_pixels": 25
+        },
+        {
+          "type": "different",
+          "a": "default",
+          "b": "disabled",
+          "min_changed_pixels": 25
+        },
+        {
+          "type": "different",
+          "a": "default",
+          "b": "cooldown-50",
+          "min_changed_pixels": 25
+        },
+        {
+          "type": "different",
+          "a": "cooldown-50",
+          "b": "cooldown-100",
+          "min_changed_pixels": 25
+        },
+        {
+          "type": "different",
+          "a": "default",
+          "b": "locked",
+          "min_changed_pixels": 25
+        },
+        {
+          "type": "different",
+          "a": "default",
+          "b": "new",
+          "min_changed_pixels": 25
+        },
+        {
+          "type": "different",
+          "a": "default",
+          "b": "legendary",
+          "min_changed_pixels": 25
+        }
+      ]
+    }
+  ]
+}
