@@ -28,3 +28,7 @@ Reference test: `examples/acceptance/interactive-hud.json` (request-specific ass
 For a machine-verifiable preview, extend [visual scenarios](../../../tests/visual-scenarios.json) with input samples and pixel/output assertions. Run `python3 tests/browser_visual_matrix.py --spec tests/visual-scenarios.json --out QA-DIR` after building the site. Include min/mid/max; check changing fill and output value.
 
 **Mandatory numeric-control gate:** [Value/geometry fidelity, thumb bounds and low-end visibility](VALUE-GEOMETRY.md). This rule is based on actual failed Fantasy HUD renders; passing the manifest schema alone does not meet it.
+
+## Approved Fantasy HUD reference
+
+The [Wave 1 source contract and measured value-fidelity regression](../../asset-production/FANTASY-HUD-WAVE1.md) is the baseline for more RPG controls. The [Wave 2 production inventory and QA requirements](../../asset-production/WAVE2.md) reuse this architecture. Only mark authored artwork published when its actual PNG/manifest files are committed and CI succeeds.
