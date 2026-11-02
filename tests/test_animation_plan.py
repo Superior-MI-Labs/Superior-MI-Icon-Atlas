@@ -40,6 +40,24 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertTrue(any(x["track"] == "sword" for x in self.plan["qualification_clips"]))
         self.assertTrue(any(x["track"] == "secondary" for x in self.plan["qualification_clips"]))
 
+    def test_sunblade_has_real_separate_fragment_contract(self):
+        sword = self.plan["target"]["weapon"]
+        articulation = sword["articulation"]
+        self.assertTrue(articulation["separate_actor"])
+        self.assertEqual(articulation["default_space"], "root_relative_back_hover_not_sheathed")
+        self.assertEqual(articulation["status"], "CREATOR_DESIGN_LOCKED_RUNTIME_NOT_IMPLEMENTED")
+        self.assertEqual(
+            [element["id"] for element in articulation["canonical_elements"]],
+            ["hilt", "guard", "blade_fragments", "cohesion_weave", "cloth_and_feathers"]
+        )
+        self.assertIn("held_melee", articulation["motion_phases"])
+        self.assertIn("release", articulation["motion_phases"])
+        self.assertIn("hand_lock", articulation["motion_phases"])
+        self.assertIn("independent translation", next(e["allowed_motion"] for e in articulation["canonical_elements"] if e["id"] == "blade_fragments"))
+        self.assertTrue(any("endpoints" in item for item in articulation["invariant_rules"]))
+        self.assertFalse(self.plan["provenance"]["weapon_articulation_qualified"])
+        self.assertTrue(any(gate["id"] == "weapon_articulation" and gate["stage"] == "P3" for gate in self.plan["qa_gates"]))
+
     def test_duplicate_clip_rejected(self):
         plan = copy.deepcopy(self.plan)
         plan["qualification_clips"].append(copy.deepcopy(plan["qualification_clips"][0]))
