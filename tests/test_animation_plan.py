@@ -142,12 +142,36 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertFalse(item["body_contains_sword"])
         self.assertFalse(item["winged"])
         self.assertEqual(item["tail_count"], 3)
-        self.assertEqual(item["visual_style_approval"], "HOLD_SIMPLIFIED_VECTOR_ART")
+        self.assertEqual(item["visual_style_approval"], "REJECTED_REFERENCE_FIDELITY_REBUILD")
         self.assertEqual(item["real_visual_atlas_builder_import"], "NOT_TESTED")
         self.assertFalse(item["public_catalog_approved"])
         self.assertFalse(self.plan["provenance"]["body_batch04_style_approved"])
         self.assertFalse(self.plan["provenance"]["body_batch04_published"])
         self.assertTrue((ROOT / item["documentation"]).is_file())
+
+    def test_visual_fidelity_audit_blocks_expansion_of_rejected_assets(self):
+        audit = self.plan["production_art_quality"]
+        self.assertTrue((ROOT / audit["audit_document"]).is_file())
+        self.assertEqual(audit["status"], "ART_REJECTED_REBUILD_REQUIRED")
+        self.assertEqual(audit["reference_design_status"], "APPROVED")
+        self.assertEqual(audit["approved_final_clip_count"], 0)
+        self.assertEqual(audit["approved_final_frame_count"], 0)
+        self.assertEqual(audit["technical_candidate_clips"], 36)
+        self.assertEqual(audit["technical_candidate_frame_records"], 416)
+        self.assertEqual(audit["fx_v02_unique_rgba_frames"], 224)
+        self.assertEqual(audit["fx_v02_addressable_frame_ids"], 240)
+        self.assertFalse(audit["source_ready_to_animate"])
+        self.assertFalse(audit["promotable_to_public_catalog"])
+        self.assertFalse(audit["allow_further_bulk_generation"])
+        self.assertEqual(self.plan["latest_body_candidate"]["production_art_status"], "REJECTED_DO_NOT_USE_AS_CANONICAL")
+        self.assertEqual(self.plan["latest_sword_candidate"]["production_art_status"], "REJECTED_DO_NOT_USE_AS_CANONICAL")
+        self.assertEqual(self.plan["latest_candidate_batch"]["production_art_status"], "REJECTED_DO_NOT_USE_AS_CANONICAL")
+        self.assertTrue(self.plan["provenance"]["production_art_rejected"])
+        self.assertTrue(self.plan["provenance"]["technical_pipeline_reusable"])
+        self.assertFalse(self.plan["provenance"]["artwork_approved"])
+        self.assertFalse(self.plan["provenance"]["body_batch04_style_approved"])
+        self.assertFalse(self.plan["provenance"]["sunblade_batch03_art_approved"])
+        self.assertFalse(self.plan["provenance"]["fx_second_batch_publication_approved"])
 
     def test_creator_chose_traditional_sword_animation(self):
         sword = self.plan["target"]["weapon"]
