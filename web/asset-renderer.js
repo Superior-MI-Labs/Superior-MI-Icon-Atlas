@@ -40,8 +40,8 @@
       // the first repeater: frames/overlays and negative offsets must not clip.
       let minX=0,minY=0,maxX=0,maxY=0;
       for(const layer of a.layers){
-        const target=layer.asset;
-        if(!target)continue; // slots are resolved by the composition renderer.
+        const target=layer.asset||(layer.slot&&a.slots?.[layer.slot]?.default);
+        if(!target)continue;
         const child=geometryFor(target,next,layer.input_values||null);
         const [lw,lh]=layer.size_px||[child.width,child.height];
         const size=layer.repeat?repeatLayout(layer,inputs,[lw,lh]):{width:lw,height:lh};
