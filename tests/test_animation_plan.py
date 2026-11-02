@@ -40,6 +40,31 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertTrue(any(x["track"] == "sword" for x in self.plan["qualification_clips"]))
         self.assertTrue(any(x["track"] == "secondary" for x in self.plan["qualification_clips"]))
 
+    def test_reference_concepting_closed_and_inventory_consistent(self):
+        self.assertEqual(self.plan["design_direction_status"], "LOCKED_NO_MORE_CONCEPT_ROUNDS")
+        self.assertTrue(self.plan["production_started"])
+        self.assertTrue(self.plan["provenance"]["reference_design_locked"])
+        self.assertFalse(self.plan["provenance"]["artwork_approved"])
+        inventory = json.loads((ROOT / self.plan["production_inventory_path"]).read_text(encoding="utf-8"))
+        families = inventory["families"]
+        ids = [
+            f"sky.{family['track']}.{family['family']}.{action}"
+            for family in families for action in family["actions"]
+        ]
+        self.assertEqual(inventory["planned_total"], len(ids))
+        self.assertEqual(len(ids), 315)
+        self.assertEqual(len(families), 22)
+        self.assertEqual(len(set(ids)), len(ids), "Never duplicate a planned clip ID")
+        self.assertTrue(all(group["stage"] in {"P1", "P2", "P3", "P4", "P5"} for group in families))
+        self.assertTrue(all("wing" not in name for name in ids), "Grounded V1 has no wings")
+        self.assertEqual(inventory["animation_method"], "complete authored frames; independent whole-sword actor, no fragment rig")
+        first = self.plan["first_production_batch"]
+        self.assertEqual(first["total_frames"], 84)
+        self.assertEqual(first["asset_sequences"], 7)
+        self.assertFalse(self.plan["provenance"]["fx_first_batch_style_approved"])
+        self.assertFalse(self.plan["provenance"]["fx_first_batch_import_qualified"])
+        self.assertIn("PENDING", first["status"])
+
     def test_creator_chose_traditional_sword_animation(self):
         sword = self.plan["target"]["weapon"]
         method = sword["animation_approach"]
