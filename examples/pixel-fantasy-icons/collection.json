@@ -2,7 +2,7 @@
   "schema": "smi-visual-collection/1",
   "collection_id": "smi.game.pixel01.wave123",
   "name": "Pixel Fantasy \u2014 48 Game Items & Interactive Effects",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "48 HD fantasy pixel-art item icons with 17 reusable state, rarity and interaction assets. Browse, search, download, and import into the Visual Atlas Builder.",
   "entry_asset": "smi.game.pixel01.widget.item",
   "packs": [

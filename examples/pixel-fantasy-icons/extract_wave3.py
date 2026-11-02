@@ -25,7 +25,9 @@ def extract(src, col, row):
   mask=np.full((hh,ww),cv2.GC_PR_BGD,dtype='uint8')
   mask[(dist>27)|(maxi>84)|(sat>53)]=cv2.GC_PR_FGD
   mask[(dist>65)&((maxi>115)|(sat>70))]=cv2.GC_FGD
-  rim=18
+  # Only the true cell boundary is guaranteed background. The old 18px rim
+  # amputated near-edge artwork (sword/axe/bow tips). Keep full source art.
+  rim=2
   mask[:rim,:]=cv2.GC_BGD;mask[-rim:,:]=cv2.GC_BGD;mask[:,:rim]=cv2.GC_BGD;mask[:,-rim:]=cv2.GC_BGD
   if np.count_nonzero(mask==cv2.GC_FGD)<150:raise ValueError(f'no definite foreground: {row},{col}')
   bg=np.zeros((1,65),np.float64);fg=np.zeros((1,65),np.float64)
@@ -43,7 +45,7 @@ def extract(src, col, row):
   if len(xs)<400:raise ValueError(f'too small {row},{col}')
   raw_bbox=[int(xs.min()),int(ys.min()),int(xs.max()+1),int(ys.max()+1)]
   raw_margins=[raw_bbox[0],raw_bbox[1],ww-raw_bbox[2],hh-raw_bbox[3]]
-  if min(raw_margins)<15:raise ValueError(f'SOURCE TRUNCATED: {row},{col}: margins {raw_margins}')
+  if min(raw_margins)<2:raise ValueError(f'SOURCE TRUNCATED: {row},{col}: margins {raw_margins}')
   xA=max(0,raw_bbox[0]-2);xB=min(ww,raw_bbox[2]+2);yA=max(0,raw_bbox[1]-2);yB=min(hh,raw_bbox[3]+2)
   rgba=np.dstack((rgb,binary))
   icon=Image.fromarray(rgba,'RGBA').crop((xA,yA,xB,yB))

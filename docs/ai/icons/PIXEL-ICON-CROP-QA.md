@@ -35,3 +35,9 @@ The source image can contain a severed sword even when its atlas `rect_px` is `[
 ## Standalone Wave 1–2 candidate handoff
 
 The accompanying 32-icon candidate includes `build_pack.py`, `verify_pack.py`, `qa/generate_contact.py`, `qa/browser_qa.py`, and a manually inspected Chromium gallery. This verifies the **authored** atlas and offline Canvas behavior. It is not a patch to replace the production renderer. The actual Builder gate remains pending until the ZIP is imported in that project environment.
+
+## Follow-up regression: source-boundary tips (November 2, 2026)
+
+The **published** sword and double-axe still lost their upper tips because the shared GrabCut input mask declared the outer **18 pixels** of every estimated source cell as guaranteed background. There was no corrupt JSON rectangle: the amputated foreground was packed faithfully into a 128px region with good transparent gutters and a passing hash baseline. The original dark-matte source contains the whole metal tips (sword around source cell y=4, axe around y=2); an 18px mask makes them impossible to recover downstream. The bow, fireball and smaller near-cell details were also affected.
+
+**New mandatory evidence:** Before **any** source-foreground removal, measure visible source pixels near all four estimated cell borders. Do not set a hard-background strip wider than the actual verified empty border. Where a source sheet has a clearly visible object near the edge, preserve its silhouette using conservative source segmentation and rescale inside the 128px logical canvas. Compare the source foreground bbox with the extracted foreground bbox (not only atlas padding), test all 48 items, and visually inspect the source vs the real Builder crop. Run the source-brightness coverage regression in `tests/test_pixel_game_release.py`; a synthetic or deliberate 18px boundary clip **must fail**. Never use extra manifest offsets or duplicate assets to mask this problem.

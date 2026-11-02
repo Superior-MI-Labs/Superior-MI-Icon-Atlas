@@ -27,3 +27,9 @@ The [AI crop and Builder QA guide](../../docs/ai/icons/PIXEL-ICON-CROP-QA.md) re
 - The normal CI browser-visual matrix exercises the actual Builder composition and checks that all 48 slot options produce different renderings where expected.
 
 **Originality/licensing:** Original AI-generated illustrations contributed for use under CC0-1.0. The art direction is fantasy RPG pixel art; it is not a copy of assets from Zelda, D&D or another game's protected icon library.
+
+## v0.3.1 — original source-tip restoration
+
+Repaired the source extractor's incorrect **18 px guaranteed-background rim**. The source-wave1-clean.png already contained the sword tip and the double-axe's upper blade; those pixels were erased during foreground segmentation. The source also showed boundary details on the bow, fireball and a few other items. The builder now regenerates the first sheet with a 2 px true-cell-boundary background seed, retaining legitimate near-edge artwork while still rejecting source silhouettes touching the actual source-cell boundary. Every item still has at least 6 px transparency after it is fitted on the 128×128 runtime canvas. No item IDs, effect references, slot definitions, category assignments, or texture geometry have changed.
+
+The release regression test checks that bright source details within 18 px of cell boundaries are included in the recorded extracted source bounding box. The previous extractor fails that test even though it passed transparent-padding checks.

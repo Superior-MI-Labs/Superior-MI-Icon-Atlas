@@ -103,13 +103,13 @@
       "visible_bbox": [
         18,
         9,
-        110,
+        109,
         118
       ],
       "margins_px": [
         18,
         9,
-        18,
+        19,
         10
       ]
     },
@@ -234,13 +234,13 @@
       "source_atlas": "textures/icons-00.png",
       "visible_bbox": [
         9,
-        11,
+        12,
         118,
         116
       ],
       "margins_px": [
         9,
-        11,
+        12,
         10,
         12
       ]
@@ -277,15 +277,15 @@
       ],
       "source_atlas": "textures/icons-00.png",
       "visible_bbox": [
-        15,
+        17,
         9,
-        112,
+        110,
         118
       ],
       "margins_px": [
-        15,
+        17,
         9,
-        16,
+        18,
         10
       ]
     },
@@ -299,15 +299,15 @@
       ],
       "source_atlas": "textures/icons-00.png",
       "visible_bbox": [
-        15,
+        18,
         9,
-        113,
+        110,
         118
       ],
       "margins_px": [
-        15,
+        18,
         9,
-        15,
+        18,
         10
       ]
     },
@@ -321,15 +321,15 @@
       ],
       "source_atlas": "textures/icons-00.png",
       "visible_bbox": [
-        12,
+        16,
         9,
-        115,
+        112,
         118
       ],
       "margins_px": [
-        12,
+        16,
         9,
-        13,
+        16,
         10
       ]
     },
@@ -344,15 +344,15 @@
       "source_atlas": "textures/icons-00.png",
       "visible_bbox": [
         9,
-        11,
+        10,
         118,
-        116
+        118
       ],
       "margins_px": [
         9,
-        11,
         10,
-        12
+        10,
+        10
       ]
     },
     {
