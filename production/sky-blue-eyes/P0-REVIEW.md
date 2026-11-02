@@ -1,6 +1,6 @@
 # Sky Blue Eyes — P0 canonical artwork review (2026-11-02)
 
-**Status: DESIGN IDENTITY APPROVED · CANONICAL DIRECTIONAL ART NOT QUALIFIED · ANIMATION FRAMES NOT PRODUCED.**
+**Status: DESIGN REFERENCE DIRECTION LOCKED — new concepting closed.** Source-frame art is still qualified per asset. The first independent FX candidate pack now contains 84 frame images; body/sword animation source frames remain in production. Do not reopen design references as a prerequisite to authoring.
 
 This is the single **project-specific review**, linked from the reusable [side-scrolling production recipe](../../docs/ai/animations/SIDE-SCROLLER-PRODUCTION.md) and machine-readable [plan](plan.json). The current approved clothing source is the image **supplied and positively selected by the creator** in conversation (`image(20261102-125259).png`, SHA-256 `5f0aa77d1514c1f859a5143732d4a39a3295a2afbb3b0fc0731878c98d95c97f`). The original pixels are not stored in this repo. A future agent must obtain the exact source image before generating derivative production views or certifying visual parity.
 
