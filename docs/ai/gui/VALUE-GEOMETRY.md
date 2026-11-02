@@ -23,6 +23,16 @@ For native input `v` with `min < max`, compute `t = clamp((v-min)/(max-min), 0, 
 
 The rendering API already supports `clip`, `position_from_input`, `offset_px`, `size_px`, layered compositions, and normalized number inputs. Prefer one geometry definition in the asset generator that derives both `clip` sizing and handle travel. No hard-coded UI-specific renderer or duplicate manifest registry.
 
+## Resource globes, vertical vials and radial indicators
+
+**Production failure observed in Royal Forge HUD Resource Systems:** a fluid sprite was drawn as an entire globe/vial-sized transparent canvas, while the actual data-bearing liquid occupied a much smaller interior. Binding `clip(axis: y, origin: end)` to the padded source caused low values (1/5/10%) to appear empty and high values (90/99%) to appear full. The manifest was valid but the displayed information was wrong.
+
+For a continuously filled orb/vial, rasterize and pack the **tight interior liquid region** as its own source rectangle. Place it at its measured origin inside the decorative vessel. Apply clip to that liquid region, not to the full external glass/frame dimensions. Check every required sample on the final layered composition. Do not introduce a new dedicated renderer or fake a full-extent clip by changing input values.
+
+A circular/radial meter cannot express continuously rotating or sweeping angular progress using the existing x/y `clip` schema. Until an explicitly designed shared angular clip contract exists, author actual discrete circular frames and expose them through `state_set`, documenting the increments and host-driven state selection. Never label that as a continuous 0–100 numeric controller.
+
+For reusable multi-heart and segmented-pip variants, use existing `composition` and `state_set` references; prefer one parent state-family for browser discovery. Individual source IDs should remain stable, addressable and independently testable without a second grouping registry.
+
 ## Required acceptance before export
 
 1. Render **every one** of `0, 1, 5, 10, 25, 50, 75, 90, 99, 100` percent (map to the declared native numeric range). Include min/max of any nonzero-start ranges.
