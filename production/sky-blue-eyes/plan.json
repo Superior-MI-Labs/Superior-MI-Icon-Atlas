@@ -1,0 +1,457 @@
+{
+  "schema": "smi-character-production-plan/1",
+  "project_id": "smi.sky-blue-eyes.motion-foundation",
+  "version": "0.1.0",
+  "status": "PREPRODUCTION",
+  "runtime_support": "NOT_IMPLEMENTED",
+  "description": "Candidate reference lock and qualification inventory. This is NOT an smi-visual-pack/1 runtime manifest and contains no finished artwork.",
+  "subject": "Sky Blue Eyes: ascended Tabaxi/phoenix monk with independent Shattered Sunblade",
+  "target": {
+    "game_type": "2d-side-scroller",
+    "master_facing": "right",
+    "art_fps_default": 16,
+    "gameplay_simulation_hz": 60,
+    "source_body_height_px_range": [
+      384,
+      512
+    ],
+    "on_screen_height_px_range": [
+      240,
+      320
+    ],
+    "final_scale": "PENDING_ON_SCREEN_SILHOUETTE_TEST",
+    "facing_mirror_policy": "PROPOSED_TEST_FIRST",
+    "alpha": "straight",
+    "reference_approval": "PENDING",
+    "licensing": "PENDING"
+  },
+  "reference_slots": [
+    {
+      "id": "ref.anatomy",
+      "role": "anatomy",
+      "source": "conversation:image(20261102-113521).png",
+      "availability": "conversation_only",
+      "approval": "PENDING",
+      "notes": "Spotted tall feline anatomy, broad flame feather wings, bifurcated tail, bright blue eyes; scenic lighting not a clean sprite source."
+    },
+    {
+      "id": "ref.costume",
+      "role": "costume",
+      "source": "conversation:image(20261102-113251).png",
+      "availability": "conversation_only",
+      "approval": "PENDING",
+      "notes": "Cream/saffron/gold combat wraps and red cloth; other figures in the crop are not separate approved character views."
+    },
+    {
+      "id": "ref.weapon",
+      "role": "weapon",
+      "source": "conversation:image(20261102-113243).png",
+      "availability": "conversation_only",
+      "approval": "PENDING",
+      "notes": "Six illustrated Shattered Sunblade concepts. Baseline selection and physical sword silhouette still need a canonical lock."
+    },
+    {
+      "id": "ref.flame",
+      "role": "flame_form",
+      "source": "conversation:image(20261102-113217).png",
+      "availability": "conversation_only",
+      "approval": "PENDING",
+      "notes": "Bright orange solar streak with blue traces. Concept only; not a frame-accurate transparent animation."
+    }
+  ],
+  "canonical_lock": {
+    "status": "PENDING",
+    "required_views": [
+      "right_side_neutral",
+      "right_side_combat",
+      "left_side_mirror_test",
+      "front_turnaround_check",
+      "back_turnaround_check",
+      "wings_folded",
+      "wings_spread",
+      "weapon_separate"
+    ],
+    "anchors": [
+      "root",
+      "foot_l",
+      "foot_r",
+      "hand_l",
+      "hand_r",
+      "head",
+      "wing_l",
+      "wing_r",
+      "tail_root",
+      "weapon_orbit",
+      "fx_origin"
+    ],
+    "visual_invariants": [
+      "feline muzzle and ears",
+      "spotted warm-brown/cream body",
+      "luminous sky-blue eyes",
+      "feathered orange/fire-and-blue wings",
+      "bifurcated fiery tail",
+      "wraps and cloth with consistent construction",
+      "separately transformable shattered sunblade"
+    ],
+    "pending_decisions": [
+      "gameplay silhouette at native on-screen scale",
+      "base sword variant out of six",
+      "wing folding/occlusion and mirroring policy",
+      "costume asymmetry and palette lock",
+      "source and redistribution rights"
+    ]
+  },
+  "track_owners": [
+    {
+      "id": "body",
+      "owns": [
+        "body pose",
+        "ground contact"
+      ]
+    },
+    {
+      "id": "sword",
+      "owns": [
+        "weapon world/local trajectory",
+        "blade orientation"
+      ]
+    },
+    {
+      "id": "secondary",
+      "owns": [
+        "wing feathers",
+        "tail",
+        "cloth"
+      ]
+    },
+    {
+      "id": "fx",
+      "owns": [
+        "dust",
+        "sparks",
+        "slash arcs",
+        "radiant flashes"
+      ]
+    },
+    {
+      "id": "portrait",
+      "owns": [
+        "expression",
+        "mouth",
+        "eyes",
+        "dialogue bust"
+      ]
+    }
+  ],
+  "qualification_clips": [
+    {
+      "id": "sky.body.idle.relaxed",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P1",
+      "playback": "loop"
+    },
+    {
+      "id": "sky.body.idle.injured",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P2",
+      "playback": "loop"
+    },
+    {
+      "id": "sky.body.idle.look_around",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P2",
+      "playback": "once"
+    },
+    {
+      "id": "sky.body.run.loop",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P1",
+      "playback": "loop"
+    },
+    {
+      "id": "sky.body.run.stop",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P1",
+      "playback": "once"
+    },
+    {
+      "id": "sky.body.jump.prepare",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P2",
+      "playback": "once"
+    },
+    {
+      "id": "sky.body.jump.rise",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P2",
+      "playback": "once"
+    },
+    {
+      "id": "sky.body.jump.fall",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P2",
+      "playback": "loop"
+    },
+    {
+      "id": "sky.body.jump.land",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P2",
+      "playback": "once"
+    },
+    {
+      "id": "sky.body.combat.claw_01",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P3",
+      "playback": "once"
+    },
+    {
+      "id": "sky.body.defend.parry",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P3",
+      "playback": "once"
+    },
+    {
+      "id": "sky.sword.orbit.relaxed",
+      "track": "sword",
+      "kind": "composition",
+      "stage": "P1",
+      "playback": "loop"
+    },
+    {
+      "id": "sky.sword.cast",
+      "track": "sword",
+      "kind": "composition",
+      "stage": "P3",
+      "playback": "once"
+    },
+    {
+      "id": "sky.sword.recall",
+      "track": "sword",
+      "kind": "composition",
+      "stage": "P3",
+      "playback": "once"
+    },
+    {
+      "id": "sky.secondary.wings.idle",
+      "track": "secondary",
+      "kind": "sequence",
+      "stage": "P1",
+      "playback": "loop"
+    },
+    {
+      "id": "sky.fx.dust.run_stop",
+      "track": "fx",
+      "kind": "sequence",
+      "stage": "P2",
+      "playback": "once"
+    },
+    {
+      "id": "sky.portrait.neutral",
+      "track": "portrait",
+      "kind": "composition",
+      "stage": "P4",
+      "playback": "loop"
+    }
+  ],
+  "transition_checks": [
+    {
+      "id": "idle_to_run",
+      "from": "sky.body.idle.relaxed",
+      "to": "sky.body.run.loop",
+      "stage": "P1",
+      "policy": "contact_aligned"
+    },
+    {
+      "id": "run_stop_to_idle",
+      "from": "sky.body.run.stop",
+      "to": "sky.body.idle.relaxed",
+      "stage": "P1",
+      "policy": "authored_bridge"
+    },
+    {
+      "id": "healthy_to_injured",
+      "from": "sky.body.idle.relaxed",
+      "to": "sky.body.idle.injured",
+      "stage": "P2",
+      "policy": "hysteresis_enter_0.25_exit_0.32"
+    },
+    {
+      "id": "run_to_jump",
+      "from": "sky.body.run.loop",
+      "to": "sky.body.jump.rise",
+      "stage": "P2",
+      "policy": "no_input_delay"
+    },
+    {
+      "id": "jump_land",
+      "from": "sky.body.jump.fall",
+      "to": "sky.body.jump.land",
+      "stage": "P2",
+      "policy": "ground_contact"
+    },
+    {
+      "id": "attack_to_sword_cast",
+      "from": "sky.body.combat.claw_01",
+      "to": "sky.sword.cast",
+      "stage": "P3",
+      "policy": "independent_tracks"
+    }
+  ],
+  "qa_gates": [
+    {
+      "id": "reference_lock",
+      "stage": "P0",
+      "evidence": "signed model sheet / native-scale silhouette / anchors / palette / licensing",
+      "covers": []
+    },
+    {
+      "id": "loop_seam",
+      "stage": "P1",
+      "evidence": "first-last seam and adjacent-frame contact review at native scale",
+      "covers": [
+        "sky.body.idle.relaxed",
+        "sky.body.run.loop"
+      ]
+    },
+    {
+      "id": "run_stop",
+      "stage": "P1",
+      "evidence": "run-to-stop-to-idle rooted foot positions and frame-by-frame inspection",
+      "covers": [
+        "sky.body.run.stop",
+        "sky.body.idle.relaxed"
+      ]
+    },
+    {
+      "id": "sword_space",
+      "stage": "P1",
+      "evidence": "sword orbit follows root without world-space teleport during body movement",
+      "covers": [
+        "sky.sword.orbit.relaxed"
+      ]
+    },
+    {
+      "id": "secondary_anchor",
+      "stage": "P1",
+      "evidence": "wing roots remain attached and occlusion is correct across all idle/run frames",
+      "covers": [
+        "sky.secondary.wings.idle"
+      ]
+    },
+    {
+      "id": "roundtrip",
+      "stage": "P1",
+      "evidence": "exact final ZIP reimported, source and preview pixels compared",
+      "covers": [
+        "sky.body.idle.relaxed",
+        "sky.body.run.loop",
+        "sky.body.run.stop",
+        "sky.sword.orbit.relaxed",
+        "sky.secondary.wings.idle"
+      ]
+    },
+    {
+      "id": "injury_hysteresis",
+      "stage": "P2",
+      "evidence": "health oscillation around threshold cannot flicker states",
+      "covers": [
+        "sky.body.idle.relaxed",
+        "sky.body.idle.injured",
+        "sky.body.idle.look_around"
+      ]
+    },
+    {
+      "id": "jump_cancel",
+      "stage": "P2",
+      "evidence": "host 60Hz jump accepted immediately, art follows physical phase",
+      "covers": [
+        "sky.body.jump.prepare",
+        "sky.body.jump.rise",
+        "sky.body.jump.fall",
+        "sky.body.jump.land"
+      ]
+    },
+    {
+      "id": "attack_cues",
+      "stage": "P3",
+      "evidence": "one semantic strike cue despite hitstop/replay and a legal cancel window",
+      "covers": [
+        "sky.body.combat.claw_01",
+        "sky.sword.cast",
+        "sky.sword.recall",
+        "sky.body.defend.parry"
+      ]
+    },
+    {
+      "id": "portrait",
+      "stage": "P4",
+      "evidence": "eyes and mouth independent; dialogue overlay does not change body controller",
+      "covers": [
+        "sky.portrait.neutral"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "id": "P0",
+      "name": "Canonical reference lock and production plan",
+      "gate": "reference_lock",
+      "release_scope": "planning_only"
+    },
+    {
+      "id": "P1",
+      "name": "Right-facing idle + run-stop + sword orbit qualification",
+      "gate": "loop_seam",
+      "release_scope": "self_contained_zip"
+    },
+    {
+      "id": "P2",
+      "name": "Injured idle, rare idle, jump/land transitions",
+      "gate": "injury_hysteresis",
+      "release_scope": "qualified_delta"
+    },
+    {
+      "id": "P3",
+      "name": "Combat, parry, sword cast/recall and timed cues",
+      "gate": "attack_cues",
+      "release_scope": "qualified_delta"
+    },
+    {
+      "id": "P4",
+      "name": "Secondary motion, effects and portrait presentation",
+      "gate": "portrait",
+      "release_scope": "qualified_delta"
+    },
+    {
+      "id": "P5",
+      "name": "Expansion via reusable animation family inventory",
+      "gate": "roundtrip",
+      "release_scope": "batched"
+    },
+    {
+      "id": "P6",
+      "name": "Game-engine adapter and memory/compression work",
+      "gate": "roundtrip",
+      "release_scope": "integration"
+    }
+  ],
+  "provenance": {
+    "references_are_user_supplied": true,
+    "original_image_bytes_in_repo": false,
+    "artwork_approved": false,
+    "rights_verified": false,
+    "pixel_visual_qa": "NOT_RUN",
+    "controller_schema_supported": false
+  }
+}

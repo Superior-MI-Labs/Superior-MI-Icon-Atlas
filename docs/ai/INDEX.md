@@ -12,7 +12,11 @@
 
 **Executable acceptance examples:** [Interactive HUD](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/interactive-hud.json) · [`character.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/character.json) · [`potion.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/potion.json). The checker prints a real PASS/FAIL and never claims human visual inspection.
 
-**Shared authoring:** [Creator preflight](CREATOR-PREFLIGHT.md) · [Image source workflow](IMAGE-ENGINE-WORKFLOW.md) (when relevant).\n\n**Shared reference:** [Manifest/API contract](FORMAT-API.md) · [QA release checklist](RELEASE-CHECKLIST.md) · [Request examples](PROMPT-EXAMPLES.md) · [Grid starters](../templates/authoring-grids.zip).
+**Shared authoring:** [Creator preflight](CREATOR-PREFLIGHT.md) · [Image source workflow](IMAGE-ENGINE-WORKFLOW.md) (when relevant).
+
+**Side-scrolling character production:** [Canonical references, action families, animation transitions and first motion qualification](animations/SIDE-SCROLLER-PRODUCTION.md) (only for applicable requests).
+
+**Shared reference:** [Manifest/API contract](FORMAT-API.md) · [QA release checklist](RELEASE-CHECKLIST.md) · [Request examples](PROMPT-EXAMPLES.md) · [Grid starters](../templates/authoring-grids.zip).
 
 ## Why the directions are separated
 
