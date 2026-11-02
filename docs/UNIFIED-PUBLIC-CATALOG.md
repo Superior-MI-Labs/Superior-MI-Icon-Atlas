@@ -1,12 +1,12 @@
 # Unified Visual Atlas Public Catalog — Implementation Contract
 
-**Status: APPROVED DIRECTION / NOT YET IMPLEMENTED.** This document describes the coordinated replacement for the public site. Never remove the old gallery before the new catalog is built, tested, and deployable. No changes to the already published Fantasy RPG HUD artwork or IDs.
+**Status: IMPLEMENTED BASELINE; Browser v2 adds faceted discovery.** The public browser replaced separate icon and pack galleries. Preserve all 2,073 legacy icon IDs and the approved Fantasy RPG HUD artwork while evolving its generated catalog.
 
 ## Product decision
 
 The public homepage is **one searchable asset library**, not two independent sections called "Explore packs" and "Browse the white geometric icon atlas". Remove both those interfaces and the introductory monoline copy in the coordinated site replacement.
 
-Expose **only published, rights-cleared, approved collections** on the public homepage. The current initial collection is `examples/fantasy-rpg-hud-wave1`. Pending Wave 2, tutorial packs, and 2,073 historical white-monoline icon candidates must not appear as public search results.
+Expose published, rights-cleared visual collections and a **clearly identified legacy icon archive** in the same search experience. The archive contains 2,073 historical icon candidates; it remains searchable and filterable, but does not appear in the default featured gallery and must never be described as fully rights-cleared. Pending Wave 2 and tutorial starter packs remain excluded from public search and downloads until approved.
 
 Do **not** casually delete historical source art, test fixtures, or APIs from the repository. Existing `smi-icon-atlas/3` sources and tutorial fixtures may be preserved internally while decoupled from the published site build. Old public demo files should stop being included in the **deployed** site after tests are updated to use local fixtures, not deleted blindly before test migration.
 
@@ -17,7 +17,7 @@ Keep existing authoritative `smi-visual-pack/1` and `smi-visual-collection/1` ma
 Add a **minimal publication allowlist**, separate from asset content: pack path, publication date, approval/rights verification reference, and an optional editorial rank. This is an inclusion policy, not a second metadata registry. Tags, titles, kind, dimensions, semantic aliases, style, presets, relationships, and licensing are derived from each approved pack's real manifests. A missing/invalid license or broken dependency must block public inclusion.
 
 The site build deterministically creates:
-- `public-catalog.json`: index of **each addressable published asset**, its parent collection, kind, searchable name/aliases/tags/subjects, style, license, default state/preset, and stable identifier. This contains no duplicate authoring of asset records.
+- `public-catalog.json`: index of **each addressable published asset and legacy icon**, its collection, kind, name/aliases/tags/subjects/concept, domain, style, review/publication status and license; also the root icon manifest's curated synonyms and style descriptions. This contains no duplicate authoring of asset records.
 - `public-packs.json`: lightweight collection information, manifest paths, counts, releases, original ZIP download.
 - Content-addressable/static image/preview products for thumbnails derived from the same public runtime/renderer, never separately authored metadata.
 
@@ -30,7 +30,7 @@ One responsive home:
 - Filters derived from available data: **asset kind** (compositions, regions, sequences, state sets), category/function, visual style, orientation/view (2D, side-scroller, isometric when authored), collection, license and animation.
 - No empty hardcoded categories; facets are populated from approved assets.
 - Default view sorts **recently published, usable compositions first**, then other useful content; show a diversity of distinct finished assets rather than leading with hundreds of atlas fragments. Sort ties by stable ID for deterministic builds.
-- Search returns individual compositions, their accessible states/variants, sprites, standalone icons and reusable regions with proper grouping/badges.
+- Search returns individual compositions, their accessible states/variants, sprites, standalone icons and reusable regions with proper grouping/badges. The facets for asset kind, collection, domain/category, style, subject, publication status, semantic review, license and animation are **derived from current results**; choosing a facet must not require maintaining a new hardcoded taxonomy. Archive records must remain reachable without a free-text query by selecting their collection or an applicable facet.
 - Related items show pack membership and compatible alternatives. A result can be downloaded independently without forcing the full parent pack.
 
 Each card shows the **actual rendered appearance** (not a generic pack cover image reused for every composition), name, type, style and collection. Animate only when inspected or hovered and when reduced-motion preferences permit. Do not make the page load every texture in the catalog at once. Empty search displays clear guidance.
@@ -62,12 +62,12 @@ If using an embedded builder modal, make the embedded view select the requested 
 3. Build one **manifest-derived asset-level public index** and test searches for `slider`, `sliders`, `red slider`, `health`, `healthbar`, `heart`, `mana`, and direct IDs against actual approved assets (add truthful synonyms/tags in authored manifests where necessary).
 4. Implement responsive browse grid and exact asset selection modal with live preview/interactive controls. Preview every published composition at its authored defaults and representative values.
 5. Verify one-item ZIP export, shared texture dependency closure, state/preset playback, and export/reimport pixel equivalence; check license notices and archive integrity.
-6. Before deploy, run current repo regression suite, existing 2,073 archival icon checks, pack visual QA, and new public-catalog tests. The archived assets can remain tested without appearing in public web artifacts.
-7. Publish the new homepage and remove the old gallery/template/monoline presentation **in one atomic successful deployment**. CI must reject deployments showing a historical starter pack in the public catalog or missing an approved composition.
+6. Before deploy, run current repo regression suite, all 2,073 archival icon checks, pack visual QA, search ranking/synonym/facet tests, and new public-catalog tests. The archived icon atlas PNGs must remain in public artifacts to keep archive previews and downloads usable.
+7. Publish the unified homepage as a single successful deployment. CI must reject deployments showing a historical starter pack as published, missing an approved composition, or losing any of the 2,073 archive records.
 8. Only after that move the old assets into an explicit compatibility/archive area or delete truly unused generated outputs; never break external stable IDs or lose provenance accidentally.
 
 ## Design non-goals
 
 No marketplace database, no publicly writable asset submissions, no browser-side source mutation, no independent catalog/renderer format, no giant handcrafted search category registry, no automatic color labels inferred from IDs, no downloading arbitrary untrusted asset scripts, no pretense that a ZIP-only preview certifies artistic quality.
 
-**Acceptance:** users see professional composed assets first; searching one concept returns its actual independently addressable asset variants; a clicked composition previews and can export **without** requiring the whole pack; the public site contains neither the starter-template section nor the white-geometric legacy gallery. The previous manifest/API/source remain testable.
+**Acceptance:** users see professional composed assets first; searching an icon by exact name, ID, reviewed synonym or subject returns it; composite parts and their variants remain independently addressable; a clicked composition previews and exports without requiring a whole-pack download; all 2,073 legacy icon records remain findable without restoring the old separate gallery. The previous manifest/API/source remain testable.

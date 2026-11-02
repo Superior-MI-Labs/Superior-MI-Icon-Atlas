@@ -21,6 +21,15 @@ class PublicCatalogTests(unittest.TestCase):
             pack=json.loads((ROOT/'examples/fantasy-rpg-hud-wave1/manifest.json').read_text())
             self.assertEqual({a['id'] for a in pack['assets']},{a['id'] for a in public['assets'] if not a.get('legacy')})
             self.assertEqual(len(public['assets']),2143)
+            self.assertEqual(public['synonyms'],json.loads((ROOT/'manifest.json').read_text())['search']['synonyms'])
+            self.assertIn('white-geometric-monoline',public['styles'])
+            archive=[a for a in public['assets'] if a.get('legacy')]
+            self.assertTrue(all(a.get('domain') and a.get('review_status') for a in archive))
+            self.assertTrue(any(a.get('concept_id') for a in archive))
+            self.assertEqual(len({a['id'] for a in public['assets']}),2143)
+            self.assertTrue(all(a.get('style') for a in public['assets']))
+            for field in ('domain','style','subject','review','status','license','animated'):
+                self.assertIn('id="'+field+'"',(site/'index.html').read_text())
             self.assertEqual(check(site/'demo/fantasy-rpg-hud-wave1.zip'),[])
             self.assertTrue(all(a['license']=='CC0-1.0' for a in public['assets'] if not a.get('legacy')))
             self.assertEqual(sum(a.get('legacy',False) for a in public['assets']),2073)

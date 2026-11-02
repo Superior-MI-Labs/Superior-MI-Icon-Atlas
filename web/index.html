@@ -17,16 +17,33 @@
 <label><span class="sr-only">Asset type</span><select id="kind"><option value="">All asset types</option></select></label>
 <label><span class="sr-only">Collection</span><select id="pack"><option value="">All collections</option></select></label>
 <label><span class="sr-only">Sort</span><select id="sort"><option value="recommended">Featured and recent</option><option value="newest">Newest</option><option value="name">Name A–Z</option></select></label></section>
+<div class="browse-layout">
+<aside class="browse-facets" aria-label="Refine results">
+<div class="facets-head"><h3><span aria-hidden="true">☷</span> Refine results</h3><button type="button" id="clear-filters" class="text-action">Clear all</button></div>
+<div class="facet-fields">
+<label>Category <select id="domain"><option value="">All categories</option></select></label>
+<label>Visual style <select id="style"><option value="">All styles</option></select></label>
+<label>Subject <select id="subject"><option value="">All subjects</option></select></label>
+<label>Publication <select id="status"><option value="">Published & archive</option></select></label>
+<label>Review <select id="review"><option value="">All review states</option></select></label>
+<label>License <select id="license"><option value="">All licenses</option></select></label>
+<label>Animation <select id="animated"><option value="">Any motion</option></select></label>
+</div><p class="facet-footnote">Filters reflect metadata in the actual asset manifests. Legacy icons are preserved for review.</p></aside>
+<section class="browse-results" aria-label="Asset results">
 <div class="browse-summary"><div><h3 id="browse-title">Recently published</h3><p id="browse-subtitle" class="muted">Ready-to-use compositions appear first. Legacy icon candidates remain searchable.</p></div><span id="count" role="status" aria-live="polite">Loading assets…</span></div>
-<section id="gallery" class="asset-grid" aria-label="Published visual assets"></section>
+<div id="active-filters" class="active-filters" aria-label="Active filters"></div><section id="gallery" class="asset-grid" aria-label="Published visual assets"></section>
 <div class="loadmore"><button type="button" id="more" hidden>Load more</button></div>
-<p id="browse-error" class="browse-error" role="alert" hidden></p>
+<p id="browse-error" class="browse-error" role="alert" hidden></p></section></div>
 </main>
 <footer>Legacy icons are archive candidates and require rights review. Published assets carry their own licenses. <a href="builder.html">Import a ZIP privately</a> · <a href="ai-guide.html">AI authoring guide</a> · <a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas">Source repository</a></footer>
 <dialog id="detail" class="asset-detail" aria-labelledby="detail-title"><div class="detail-head"><div><p class="eyebrow" id="detail-type">VISUAL ASSET</p><h2 id="detail-title">Asset preview</h2><p class="muted" id="detail-pack"></p></div><button type="button" id="close" aria-label="Close preview">✕</button></div>
 <div class="asset-detail-body"><div><div class="detail-stage checker"><canvas id="detail-canvas" width="460" height="260" aria-label="Live manifest-driven asset preview"></canvas></div>
 <div class="preview-actions"><button type="button" id="play">Pause</button><button type="button" id="step">Step</button><span id="time-value" class="muted"></span></div><div id="controls" class="asset-controls"></div></div>
-<div class="asset-information"><span class="fieldlabel">Asset ID</span><code id="detail-id"></code><div id="detail-meta" class="asset-meta"></div><h3>Download</h3>
+<div class="asset-information"><span class="fieldlabel">Asset ID</span><code id="detail-id"></code><div id="detail-meta" class="asset-meta"></div>
+<div id="detail-tags" class="detail-tags" aria-label="Searchable keywords"></div>
+<div class="detail-utilities"><button type="button" id="copy-id">Copy ID</button><button type="button" id="copy-link">Copy link</button></div>
+<label class="tint-control" id="tint-options" hidden><input id="tint-enabled" type="checkbox"> Recolor icon <input id="tint-color" type="color" value="#4b9cff" aria-label="Tint color"></label>
+<h3>Download</h3>
 <button id="download-png" type="button" class="primary">PNG (current frame)</button><button id="download-asset" type="button">This asset ZIP</button><a id="download-pack" href="#" download>Full collection ZIP</a>
 <a id="open-builder" href="builder.html">Open in full builder</a><p class="muted">An asset ZIP includes its manifest dependencies, required texture sheets and source license notices.</p></div></div>
 </dialog>

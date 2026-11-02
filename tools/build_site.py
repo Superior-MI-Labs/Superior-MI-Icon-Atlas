@@ -130,6 +130,9 @@ def build(dest:Path|None=None):
         if any(l in ('UNSPECIFIED','UNKNOWN','') for l in pubpack['license']):raise ValueError('Unknown public license')
         public_packs.append(pubpack)
         for pack in manifests:
+            # Inherit style only when every styled source region agrees.
+            region_styles={a['style'] for a in pack['assets'] if a['kind']=='region' and a.get('style')}
+            inherited_style=next(iter(region_styles)) if len(region_styles)==1 else ''
             for a in pack['assets']:
                 ident=a['id']
                 if ident in seen_ids:raise ValueError('Duplicate public asset: '+ident)
@@ -137,11 +140,13 @@ def build(dest:Path|None=None):
                 # Exact names and tags come from the canonical manifest.
                 public_assets.append({
                     'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
-                    'kind':a['kind'],'style':a.get('style',''),
+                    'kind':a['kind'],'style':a.get('style') or inherited_style,
                     'tags':a.get('tags',[]),'subjects':a.get('subjects',[]),
-                    'aliases':a.get('aliases',[]),'pack':pack_name,
+                    'aliases':a.get('aliases',[]),'concept_id':a.get('concept_id'),
+                    'variant':a.get('variant',''),'domain':a.get('domain') or index.get('name',pack_name),
+                    'pack':pack_name,
                     'published':record['published'],'license':a.get('license',pack.get('license','')),
-                    'category':('GUI & HUD' if 'ui.' in ident else 'Visual Assets'),
+                    'category':index.get('name',pack_name),
                     'animated':a['kind']=='sequence' or bool(a.get('duration_ms')),
                     'previewable':a['kind']!='region' or bool(a.get('rect_px'))
                 })
@@ -160,7 +165,9 @@ def build(dest:Path|None=None):
         public_assets.append({
             'id':icon['id'],'name':icon['name'],'kind':'region',
             'style':icon['style'],'tags':icon['tags'],'subjects':icon['subjects'],
-            'aliases':icon['aliases'],'pack':legacy_pack,'published':'2026-10-29',
+            'aliases':icon['aliases'],'concept_id':icon['concept_id'],'domain':icon['domain'],
+            'variant':icon['variant'],'quality':icon['quality'],
+            'pack':legacy_pack,'published':'2026-10-29',
             'license':icon['license'],'category':'Legacy Icons','animated':False,
             'previewable':True,'legacy':True,'review_status':icon['review_status'],
             'rights_reviewed':icon['provenance']['licensing_review'],
@@ -169,7 +176,9 @@ def build(dest:Path|None=None):
 
     public_assets.sort(key=lambda a:(a['pack'],a['id']))
     (dest/'public-catalog.json').write_text(json.dumps({'schema':'smi-public-catalog/1',
-        'assets':public_assets,'packs':public_packs,'approved_count':approved_count,'legacy_count':len(m['icons'])},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        'assets':public_assets,'packs':public_packs,
+        'synonyms':m.get('search',{}).get('synonyms',{}),'styles':m.get('styles',{}),
+        'approved_count':approved_count,'legacy_count':len(m['icons'])},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 
     src_files=['manifest.json','LICENSE','NOTICE.md']
