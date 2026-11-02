@@ -40,23 +40,23 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertTrue(any(x["track"] == "sword" for x in self.plan["qualification_clips"]))
         self.assertTrue(any(x["track"] == "secondary" for x in self.plan["qualification_clips"]))
 
-    def test_sunblade_has_real_separate_fragment_contract(self):
+    def test_creator_chose_traditional_sword_animation(self):
         sword = self.plan["target"]["weapon"]
-        articulation = sword["articulation"]
-        self.assertTrue(articulation["separate_actor"])
-        self.assertEqual(articulation["default_space"], "root_relative_back_hover_not_sheathed")
-        self.assertEqual(articulation["status"], "CREATOR_DESIGN_LOCKED_RUNTIME_NOT_IMPLEMENTED")
-        self.assertEqual(
-            [element["id"] for element in articulation["canonical_elements"]],
-            ["hilt", "guard", "blade_fragments", "cohesion_weave", "cloth_and_feathers"]
-        )
-        self.assertIn("held_melee", articulation["motion_phases"])
-        self.assertIn("release", articulation["motion_phases"])
-        self.assertIn("hand_lock", articulation["motion_phases"])
-        self.assertIn("independent translation", next(e["allowed_motion"] for e in articulation["canonical_elements"] if e["id"] == "blade_fragments"))
-        self.assertTrue(any("endpoints" in item for item in articulation["invariant_rules"]))
-        self.assertFalse(self.plan["provenance"]["weapon_articulation_qualified"])
-        self.assertTrue(any(gate["id"] == "weapon_articulation" and gate["stage"] == "P3" for gate in self.plan["qa_gates"]))
+        method = sword["animation_approach"]
+        self.assertEqual(method["status"], "CREATOR_SELECTED")
+        self.assertEqual(method["primary"], "traditionally_drawn_full_sword_frames")
+        self.assertIn("sequence", method["runtime_representation"])
+        self.assertEqual(sword["articulation"]["technique"], "FULL_SWORD_AUTHORED_FRAMES")
+        self.assertEqual(sword["articulation"]["status"], "VISUAL_ART_DIRECTION_ONLY")
+        self.assertTrue(sword["articulation"]["separate_actor"])
+        self.assertEqual(sword["articulation"]["default_space"], "root_relative_back_hover_not_sheathed")
+        self.assertIn("held_slash", sword["articulation"]["motion_phases"])
+        self.assertIn("release", sword["articulation"]["motion_phases"])
+        self.assertNotIn("canonical_elements", sword["articulation"])
+        self.assertTrue(all(c["kind"] == "sequence" for c in self.plan["qualification_clips"] if c["track"] == "sword"))
+        self.assertFalse(self.plan["provenance"]["sunblade_authored_frames_approved"])
+        self.assertEqual(self.plan["provenance"]["sunblade_animation_method"], "AUTHORED_FRAME_SELECTED")
+        self.assertTrue(any(g["id"] == "weapon_authored_motion" and g["stage"] == "P3" for g in self.plan["qa_gates"]))
 
     def test_hero_angle_and_tail_roots_are_explicit_not_falsely_qualified(self):
         pose = self.plan["target"]["hero_master_perspective"]
@@ -85,12 +85,16 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertIn("Hold RT", vortex["gamepad"])
         self.assertIn("Hold F", vortex["keyboard_mouse"])
         self.assertTrue(control["analog_policy"]["no_right_thumb_chord_requirement"])
-        self.assertEqual(self.plan["target"]["weapon"]["articulation"]["canonical_elements"][0]["id"], "hilt")
+        self.assertEqual(self.plan["target"]["weapon"]["articulation"]["technique"], "FULL_SWORD_AUTHORED_FRAMES")
         self.assertTrue((ROOT / "production/sky-blue-eyes/CONTROL-AND-COMBO-PROPOSAL.md").is_file())
 
     def test_sword_ab_proof_is_two_reusable_visual_pipelines(self):
         test = self.plan["target"]["weapon"]["ab_experiment"]
         self.assertEqual(test["states"], ["hover", "cast", "recall", "held"])
+        self.assertEqual(test["status"], "CLOSED_CREATOR_SELECTED_AUTHORED_FRAMES")
+        self.assertEqual(test["selected_approach"], "B")
+        self.assertTrue(test["history_only"])
+        self.assertFalse(test["current_production_dependency"])
         self.assertEqual(test["approaches"]["A"]["kind"], "composition")
         self.assertEqual(test["approaches"]["B"]["kind"], "sequence")
         self.assertEqual(test["approaches"]["A"]["shards"], 6)
@@ -100,6 +104,7 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertFalse(test["canonical_art_approved"])
         self.assertFalse(test["archive_available_in_repo"])
         self.assertEqual(self.plan["provenance"]["sunblade_ab_browser_qa"], "NOT_RUN")
+        self.assertEqual(self.plan["provenance"]["sunblade_ab_visual_approval"], "NOT_REQUIRED_HISTORICAL_EXPERIMENT")
         self.assertTrue((ROOT / test["design_docs"]).is_file())
         self.assertEqual(self.plan["target"]["weapon"]["articulation"]["separate_actor"], True)
 
