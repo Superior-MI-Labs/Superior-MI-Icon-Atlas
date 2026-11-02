@@ -53,7 +53,7 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertIn("held_melee", articulation["motion_phases"])
         self.assertIn("release", articulation["motion_phases"])
         self.assertIn("hand_lock", articulation["motion_phases"])
-        self.assertTrue(any("independently" in item for item in articulation["invariant_rules"]))
+        self.assertIn("independent translation", next(e["allowed_motion"] for e in articulation["canonical_elements"] if e["id"] == "blade_fragments"))
         self.assertTrue(any("endpoints" in item for item in articulation["invariant_rules"]))
         self.assertFalse(self.plan["provenance"]["weapon_articulation_qualified"])
         self.assertTrue(any(gate["id"] == "weapon_articulation" and gate["stage"] == "P3" for gate in self.plan["qa_gates"]))
