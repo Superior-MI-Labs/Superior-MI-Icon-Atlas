@@ -23,6 +23,9 @@ Do not label an asset ready merely because its JSON parses. Structural validatio
 - [ ] For discrete radial, pip and fractional-heart `state_set` variants, inspect **every named state** and assert neighboring states render different actual pixels. Do not advertise a continuous numeric radial input unless the manifest and shared renderer genuinely implement it.
 - [ ] Layer order, alpha, masks and clipping are checked against real preview: opaque frames or decorative badges cannot hide a required fill or animated layer.
 - [ ] Sliders and bars use one measured usable interval: 100% reaches its actual endpoint, 50% visually reads as half, the thumb center and active trail share endpoints, the thumb stays in bounds, and a mismatched SVG viewBox cannot letterbox the artwork. See [value-geometry gate](gui/VALUE-GEOMETRY.md).
+- [ ] Adaptive heart, pip, gem, leaf or armor layouts test 1, 4 and 20 maximum items, one/two/multiple rows, current value 0/full/partial and columns less than/equal to maximum. Verify the live numeric slider matches the visible value and clamps when maximum capacity decreases; preserve independently addressable state assets.
+- [ ] Discrete state sets are navigable via a synchronized dropdown **and** draggable step slider in both builder and public preview. A state selector must never be mistaken for a continuous numeric fill control.
+- [ ] Decorative rim highlights, top-frame seams, badges, runes and studs must not cross one another in the assembled rendering. Review assembled compositions at 100% native pixels, not only per-region contact sheets. A rim stroke that cuts through ornamental detail is a visual failure even if geometry and JSON pass.
 - [ ] Frame-boundary and animation loop tests cover anchor/pivot continuity; do not claim approval from sprite-sheet geometry alone.
 - [ ] Opening the ZIP automatically previews the intended default asset, without hand-configuring layers.
 

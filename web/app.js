@@ -99,13 +99,15 @@
   async function ready(id){if(id==='legacy-icons')return null;const data=await loadCollection(id);bindTextures(id);return data;}
   async function paint(canvas,entry,time=0,options={}){
     await ready(entry.pack);
-    const size=renderer.sizeFor(entry.id),width=Math.max(1,size[0]),height=Math.max(1,size[1]);
+    const asset=assets.get(entry.id);
+    const defaults=Object.fromEntries(Object.entries(asset?.inputs||{}).map(([k,v])=>[k,v.default]));
+    const values={...defaults,...(options.controls||{})};
+    const size=renderer.sizeFor(entry.id,new Set(),values),width=Math.max(1,size[0]),height=Math.max(1,size[1]);
     const maxW=options.card?200:520,maxH=options.card?124:255;
     const scale=Math.min(1,maxW/width,maxH/height);
     canvas.width=Math.max(1,Math.round(width*scale));canvas.height=Math.max(1,Math.round(height*scale));
     const ctx=canvas.getContext('2d');ctx.clearRect(0,0,canvas.width,canvas.height);
-    const a=assets.get(entry.id),defaults=Object.fromEntries(Object.entries(a.inputs||{}).map(([k,v])=>[k,v.default]));
-    await renderer.drawAsset(entry.id,ctx,0,0,canvas.width,canvas.height,time,{...defaults,...(options.controls||{})},options.state||null,new Set(),options.slots||null,options.preset||null);
+    await renderer.drawAsset(entry.id,ctx,0,0,canvas.width,canvas.height,time,values,options.state||null,new Set(),options.slots||null,options.preset||null);
     if(entry.legacy&&!options.card&&$('tint-enabled').checked){
       ctx.globalCompositeOperation='source-in';ctx.fillStyle=$('tint-color').value;
       ctx.fillRect(0,0,canvas.width,canvas.height);ctx.globalCompositeOperation='source-over';
@@ -129,9 +131,22 @@
     node.onclick=()=>openDetail(a);if(cardObserver)cardObserver.observe(node);
     else paint(canvas,a,0,{card:true}).catch(()=>art.textContent='Preview unavailable');return node;}
   function more(){const frag=document.createDocumentFragment();for(const a of matches.slice(shown,shown+PAGE))frag.append(card(a));shown=Math.min(matches.length,shown+PAGE);$('gallery').append(frag);$('more').hidden=shown>=matches.length;}
-  function controlsFor(a){const area=$('controls');area.replaceChildren();const state={};
+  function valueCap(a,key){
+    const layer=(a.layers||[]).find(l=>l.repeat?.value_input===key);
+    if(!layer)return null;
+    const repeat=layer.repeat,limit=controls[repeat.count_input]??a.inputs[repeat.count_input].default;
+    return Math.max(0,Math.floor(Number(limit)||1)*(repeat.levels.length-1));
+  }
+  function controlsFor(a){const area=$('controls');area.replaceChildren();
     if(a.kind==='state_set'){
-      const lab=document.createElement('label');lab.textContent='Appearance';const sel=document.createElement('select');for(const key of Object.keys(a.states||{}))sel.add(new Option(key,key));sel.value=chosenState||a.default_state;sel.onchange=()=>{chosenState=sel.value;clock=0};lab.append(sel);area.append(lab);
+      const lab=document.createElement('label');lab.textContent='Appearance';
+      const sel=document.createElement('select'),keys=Object.keys(a.states||{});
+      for(const key of keys)sel.add(new Option(key,key));sel.value=chosenState||a.default_state;
+      const slider=document.createElement('input');slider.type='range';slider.min=0;slider.max=keys.length-1;slider.step=1;slider.value=keys.indexOf(sel.value);
+      const readout=document.createElement('output');readout.textContent=(Number(slider.value)+1)+' / '+keys.length;
+      const apply=key=>{chosenState=key;sel.value=key;slider.value=keys.indexOf(key);readout.textContent=(Number(slider.value)+1)+' / '+keys.length;clock=0;};
+      sel.onchange=()=>apply(sel.value);slider.oninput=()=>apply(keys[Number(slider.value)]);
+      lab.append(sel,slider,readout);area.append(lab);
     }
     if(a.kind==='composition'&&a.presets){const lab=document.createElement('label');lab.textContent='Preset';const sel=document.createElement('select');sel.add(new Option('Default',''));for(const name of Object.keys(a.presets))sel.add(new Option(name,name));sel.value=preset||'';sel.onchange=()=>{preset=sel.value||null;controls={};clock=0;controlsFor(a)};lab.append(sel);area.append(lab);}
     if(a.kind==='composition'&&a.slots){const selected=Slots.resolve(a,preset,slotChoices).slots;for(const [slotName,slot] of Object.entries(a.slots)){
@@ -141,7 +156,23 @@
     for(const [key,def] of Object.entries(a.inputs||{})){
       const lab=document.createElement('label');lab.textContent=key;let elem;
       if(def.type==='boolean'){elem=document.createElement('input');elem.type='checkbox';elem.checked=controls[key]??defaultValues[key];elem.onchange=()=>{controls[key]=elem.checked;};}
-      else if(def.type==='number'){elem=document.createElement('input');elem.type='range';elem.min=def.min??0;elem.max=def.max??1;elem.step=def.step??1;elem.value=controls[key]??defaultValues[key];const info=document.createElement('span');info.textContent=elem.value;elem.oninput=()=>{controls[key]=Number(elem.value);info.textContent=elem.value;};lab.append(info);}
+      else if(def.type==='number'){
+        elem=document.createElement('input');elem.type='range';elem.min=def.min??0;
+        elem.max=valueCap(a,key)??def.max??1;elem.step=def.step??1;
+        elem.value=Math.min(Number(elem.max),controls[key]??defaultValues[key]);
+        const info=document.createElement('output');info.textContent=elem.value+' / '+elem.max;
+        elem.oninput=()=>{
+          controls[key]=Number(elem.value);info.textContent=elem.value+' / '+elem.max;
+          if((a.layers||[]).some(l=>l.repeat?.count_input===key)){
+            for(const layer of a.layers.filter(l=>l.repeat?.count_input===key)){
+              const valueKey=layer.repeat.value_input;
+              controls[valueKey]=Math.min(valueCap(a,valueKey),controls[valueKey]??defaultValues[valueKey]);
+            }
+            controlsFor(a);
+          }
+        };
+        lab.append(info);
+      }
       else{elem=document.createElement('select');for(const item of def.values||[])elem.add(new Option(item,item));elem.value=controls[key]??defaultValues[key];elem.onchange=()=>{controls[key]=elem.value;};}
       lab.append(elem);area.append(lab);
     }

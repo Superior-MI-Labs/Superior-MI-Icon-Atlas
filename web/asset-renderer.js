@@ -8,12 +8,33 @@
   root.VisualAtlasRenderer=api;
 })(typeof globalThis!=='undefined'?globalThis:this,function(){
   function create({getAsset,getImage,slots,timeline,visualCore}){
-    function sizeFor(id,seen=new Set()){
+    // Repeat a state-family using typed inputs; no special heart/pip renderer.
+    function repeatLayout(layer,values,size){
+      const r=layer.repeat;
+      const bounded=(v,lo,hi)=>Math.max(lo,Math.min(hi,Math.floor(Number(v)||0)));
+      const count=bounded(values[r.count_input],1,256);
+      const columns=bounded(values[r.columns_input],1,count);
+      const units=r.levels.length-1;
+      const value=bounded(values[r.value_input],0,count*units);
+      const [gx,gy]=r.gap_px||[0,0];
+      const rows=Math.ceil(count/columns);
+      return {count,columns,rows,value,units,stepX:size[0]+gx,stepY:size[1]+gy,
+        width:columns*size[0]+(columns-1)*gx,
+        height:rows*size[1]+(rows-1)*gy};
+    }
+    function sizeFor(id,seen=new Set(),values=null){
       if(seen.has(id))throw Error('Cyclic asset dimensions: '+id);
       const a=getAsset(id);if(!a)throw Error('Missing asset '+id);
       seen.add(id);
       if(a.kind==='region')return a.logical_size_px||a.rect_px.slice(2,4);
-      if(a.kind==='composition')return a.size_px;
+      if(a.kind==='composition'){
+        const layer=a.layers.find(item=>item.repeat);
+        if(!layer)return a.size_px;
+        const defaults=Object.fromEntries(Object.entries(a.inputs||{}).map(([key,input])=>[key,input.default]));
+        const geometry=repeatLayout(layer,{...defaults,...(values||{})},layer.size_px||sizeFor(layer.asset,new Set()));
+        return [Math.max(1,geometry.width+(layer.offset_px?.[0]||0)),
+                Math.max(1,geometry.height+(layer.offset_px?.[1]||0))];
+      }
       if(a.kind==='sequence')return sizeFor(a.frames[0].asset,seen);
       if(a.kind==='state_set')return sizeFor(a.states[a.default_state],seen);
       throw Error('Unknown kind '+a.kind);
@@ -58,7 +79,8 @@
       if(a.kind!=='composition')throw Error('Unknown kind '+a.kind);
       const slotState=slots.resolve(a,presetName,slotOverrides||{});
       const inputs={...slotState.inputs,...values};
-      ctx.save();ctx.translate(x,y);ctx.scale(w/a.size_px[0],h/a.size_px[1]);
+      const [naturalW,naturalH]=sizeFor(id,new Set(),inputs);
+      ctx.save();ctx.translate(x,y);ctx.scale(w/naturalW,h/naturalH);
       try{
         for(const rawLayer of a.layers){
           const layer=timeline.layerAt(rawLayer,time,a.duration_ms,a.playback||'loop');
@@ -77,12 +99,22 @@
             }
             if(layer.blend)ctx.globalCompositeOperation=({normal:'source-over',multiply:'multiply',screen:'screen',add:'lighter'})[layer.blend]||'source-over';
             if(layer.clip){const fraction=visualCore.unitValue(a,inputs,layer.clip.input),horizontal=layer.clip.axis==='x';let cx=px,cy=py,cw=horizontal?lw*fraction:lw,ch=horizontal?lh:lh*fraction;if(layer.clip.origin==='end'){if(horizontal)cx+=lw-cw;else cy+=lh-ch;}ctx.beginPath();ctx.rect(cx,cy,cw,ch);ctx.clip();}
-            await drawAsset(target,ctx,px,py,lw,lh,time,{...inputs,...(layer.input_values||{})},layer.state_from_input?inputs[layer.state_from_input]:(layer.state||null),next);
+            if(layer.repeat){
+              const child=getAsset(target),r=layer.repeat;
+              if(child?.kind!=='state_set')throw Error('Repeated layer must reference a state set: '+target);
+              const plan=repeatLayout(layer,inputs,[lw,lh]);
+              for(let i=0;i<plan.count;i++){
+                const filled=Math.max(0,Math.min(plan.units,plan.value-i*plan.units));
+                const state=r.levels[filled];
+                await drawAsset(target,ctx,px+(i%plan.columns)*plan.stepX,
+                  py+Math.floor(i/plan.columns)*plan.stepY,lw,lh,time,inputs,state,next);
+              }
+            }else await drawAsset(target,ctx,px,py,lw,lh,time,{...inputs,...(layer.input_values||{})},layer.state_from_input?inputs[layer.state_from_input]:(layer.state||null),next);
           }finally{ctx.restore();}
         }
       }finally{ctx.restore();}
     }
-    return Object.freeze({sizeFor,frameAt,drawAsset});
+    return Object.freeze({sizeFor,frameAt,drawAsset,repeatLayout});
   }
   return Object.freeze({create});
 });

@@ -292,6 +292,10 @@
           },
           "minItems": 1,
           "uniqueItems": true
+        },
+        "step": {
+          "type": "number",
+          "exclusiveMinimum": 0
         }
       }
     },
@@ -385,6 +389,39 @@
         },
         "slot": {
           "$ref": "#/$defs/nonblank"
+        },
+        "repeat": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "count_input",
+            "value_input",
+            "columns_input",
+            "levels"
+          ],
+          "properties": {
+            "count_input": {
+              "$ref": "#/$defs/nonblank"
+            },
+            "value_input": {
+              "$ref": "#/$defs/nonblank"
+            },
+            "columns_input": {
+              "$ref": "#/$defs/nonblank"
+            },
+            "levels": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 16,
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/nonblank"
+              }
+            },
+            "gap_px": {
+              "$ref": "#/$defs/px2"
+            }
+          }
         }
       },
       "oneOf": [
