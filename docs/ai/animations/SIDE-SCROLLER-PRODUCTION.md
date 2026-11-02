@@ -88,6 +88,18 @@ The [batch 02 source receipt](https://github.com/Superior-MI-Labs/Superior-MI-Ic
 
 **Quality boundary:** a passing ZIP validator, pixel-perfect crop test, or attractive contact image is **not** proof of actual animation quality. Browser navigation is blocked in the local environment, so the new import ZIP has no official Builder browser PASS; user review is still pending. Do not publish it. Keep authoring real Sky body and Sunblade whole-sword frame art next; do not generate a poster claiming dozens of finished character motions.
 
+### Batch 03 — full-frame sword art, measured but not visually approved
+
+The [Batch 03 Sunblade receipt](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/SUNBLADE-BATCH-03-RECEIPT.md) records a seven-sequence **real PNG-frame** candidate with 84 original source drawings, two trimmed texture pages, a valid `region → sequence → state_set` manifest and **84/84 exact RGBA reconstructions**. The sword actor is separate from Sky's body. **Back hover** and **orbit** loop; cast, recall, grab, held slash and release are one-shots. Do not incorrectly classify every frame as a loop.
+
+**Production lesson:** even when a generative image tool is asked for sprites, it may produce an impressive fake delivery-board illustration with invented counts instead of actual source art. **Reject the board, do not record its claimed assets as completed.** An offline vector drawing system can create isolated complete-frame PNGs for technical tests, but it must be labeled as a **style candidate** if it does not preserve the ornate approved reference. Do not secretly downgrade visual quality or claim a vector prototype is a professional hand-painted production sprite.
+
+**Reproducibility:** retain each individual source PNG, the full-stroke SVG/drawing generation logic, original ZIP, atlas manifest, deterministic packer, local QA evidence and animation previews in the handoff archive. The measured candidate is 5,097,676-byte ZIP with **52.3% decoded atlas memory savings** relative to untrimmed cells. This is not a universal compression rate and does not authorize changing older published images.
+
+**Do not introduce cross-pack dependencies accidentally:** independent FX v0.2 and full-sword ZIPs each import on their own; their composite GIFs are **review-only**. Before actual scene-level integration, implement one host-level composition or a deliberate dependency closure using the current renderer; never claim visual previews prove in-game state synchronization, hitboxes or hand anchors.
+
+**Status boundary:** local ZIP/source/frame tests PASS, but the exact new import ZIP was not imported in a real Visual Atlas browser session, and the artwork is not yet approved versus the source Sunblade concepts. **No public publication** and no claim that Sky's swordless idle, run or three-tail animations have been delivered. The next source-art family is those body clips plus an ornate sword art-quality pass, without reopening reference concepting.
+
 ## Gate P1 — smallest useful *working* animation slice
 
 Create these actual Visual Atlas assets first: relaxed side idle loop; run loop and an authored run-stop transition; three-tail idle secondary motion; and a separate dormant Sunblade orbit visualization. Build one **self-contained** ZIP using existing `smi-visual-pack/1` kinds and real measured PNG frames. Do not invent a controller property in this strict v1 schema.
