@@ -53,6 +53,7 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertIn("held_slash", sword["articulation"]["motion_phases"])
         self.assertIn("release", sword["articulation"]["motion_phases"])
         self.assertNotIn("canonical_elements", sword["articulation"])
+        self.assertTrue(all(c["kind"] == "sequence" for c in self.plan["qualification_clips"] if c["track"] == "sword"))
         self.assertFalse(self.plan["provenance"]["sunblade_authored_frames_approved"])
         self.assertEqual(self.plan["provenance"]["sunblade_animation_method"], "AUTHORED_FRAME_SELECTED")
         self.assertTrue(any(g["id"] == "weapon_authored_motion" and g["stage"] == "P3" for g in self.plan["qa_gates"]))
