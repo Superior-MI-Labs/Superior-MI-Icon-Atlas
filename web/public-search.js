@@ -4,12 +4,15 @@
   const clean=value=>String(value??'').normalize('NFKD').toLowerCase().replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
   const tokens=value=>clean(value).split(/\s+/).filter(Boolean);
   const FILTERS=['kind','pack','domain','style','subject','review','status','license','animated'];
+  const synonymCache=new WeakMap();
   function thesaurus(groups={}){
+    if(synonymCache.has(groups))return synonymCache.get(groups);
     const lookup=new Map();
     for(const [canonical,aliases] of Object.entries(groups)){
       const words=[canonical,...aliases].map(clean).filter(Boolean);
       for(const term of words){if(!lookup.has(term))lookup.set(term,new Set());for(const synonym of words)lookup.get(term).add(synonym);}
     }
+    synonymCache.set(groups,lookup);
     return lookup;
   }
   function contains(value,term){
@@ -75,10 +78,11 @@
   }
   function facets(entries,params={}){
     const counts={};
+    const queryMatches=entries.filter(a=>!params.query||score(a,params.query,params.synonyms)>0);
     for(const key of FILTERS){
       const histogram=new Map();
-      for(const a of entries){
-        if(!matches(a,params,key))continue;
+      for(const a of queryMatches){
+        if(!matches(a,{...params,query:''},key))continue;
         const values=Array.isArray(property(a,key))?property(a,key):[property(a,key)];
         for(const value of values){if(value)histogram.set(value,(histogram.get(value)||0)+1);}
       }
