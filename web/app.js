@@ -151,18 +151,18 @@
       const lab=document.createElement('label');lab.textContent=key;let elem;
       if(def.type==='boolean'){elem=document.createElement('input');elem.type='checkbox';elem.checked=controls[key]??defaultValues[key];elem.onchange=()=>{controls[key]=elem.checked;};}
       else if(def.type==='number'){
-        elem=document.createElement('input');elem.type='range';elem.min=def.min??0;
-        elem.max=valueCap(a,key)??def.max??1;elem.step=def.step??1;
-        elem.value=Math.min(Number(elem.max),controls[key]??defaultValues[key]);
+        const limits=Inputs.bounds(a,key,defaultValues);
+        elem=document.createElement('input');elem.type='range';elem.dataset.inputKey=key;
+        elem.min=limits.min;elem.max=limits.max;elem.step=limits.step;elem.value=defaultValues[key];
         const info=document.createElement('output');info.textContent=elem.value+' / '+elem.max;
         elem.oninput=()=>{
-          controls[key]=Number(elem.value);info.textContent=elem.value+' / '+elem.max;
-          if((a.layers||[]).some(l=>l.repeat?.count_input===key)){
-            for(const layer of a.layers.filter(l=>l.repeat?.count_input===key)){
-              const valueKey=layer.repeat.value_input;
-              controls[valueKey]=Math.min(valueCap(a,valueKey),controls[valueKey]??defaultValues[valueKey]);
-            }
-            controlsFor(a);
+          controls=Inputs.reconcile(a,{...controls,[key]:Number(elem.value)},Slots.resolve(a,preset).inputs);
+          // Update existing range elements; never replace a slider mid-drag.
+          for(const item of area.querySelectorAll('input[data-input-key]')){
+            const limit=Inputs.bounds(a,item.dataset.inputKey,controls);
+            item.min=limit.min;item.max=limit.max;item.step=limit.step;
+            item.value=controls[item.dataset.inputKey];
+            item.parentElement.querySelector('output').textContent=item.value+' / '+limit.max;
           }
         };
         lab.append(info);
