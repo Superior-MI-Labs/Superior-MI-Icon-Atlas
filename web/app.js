@@ -2,7 +2,7 @@
 /* Unified public browser. The manifest is authoritative; this is a derived read-only index. */
 (()=>{
   const $=id=>document.getElementById(id);
-  const {VisualAtlasRenderer:Renderer,VisualAtlasSlots:Slots,VisualAtlasTimeline:Timeline,VisualAtlasVisualCore:VisualCore,VisualAtlasInteractions:Interactions,VisualAtlasCollections:Collections}=window;
+  const {VisualAtlasRenderer:Renderer,VisualAtlasSlots:Slots,VisualAtlasTimeline:Timeline,VisualAtlasVisualCore:VisualCore,VisualAtlasInteraction:Interactions,VisualAtlasInputs:Inputs,VisualAtlasCollections:Collections}=window;
   const assets=new Map(),collections=new Map(),pending=new Map(),loaded=new Map();
   let entries=[],matches=[],shown=0,current=null,clock=0,playing=true,previous=0;
   let preset=null,chosenState=null,controls={},slotChoices={};
@@ -100,8 +100,7 @@
   async function paint(canvas,entry,time=0,options={}){
     await ready(entry.pack);
     const asset=assets.get(entry.id);
-    const defaults=Object.fromEntries(Object.entries(asset?.inputs||{}).map(([k,v])=>[k,v.default]));
-    const values={...defaults,...(options.controls||{})};
+    const values=Inputs.reconcile(asset,options.controls||{},Slots.resolve(asset,options.preset).inputs);
     const size=renderer.sizeFor(entry.id,new Set(),values),width=Math.max(1,size[0]),height=Math.max(1,size[1]);
     const maxW=options.card?200:520,maxH=options.card?124:255;
     const scale=Math.min(1,maxW/width,maxH/height);
