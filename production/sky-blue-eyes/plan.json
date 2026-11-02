@@ -1,7 +1,7 @@
 {
   "schema": "smi-character-production-plan/1",
   "project_id": "smi.sky-blue-eyes.motion-foundation",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "status": "PREPRODUCTION",
   "runtime_support": "NOT_IMPLEMENTED",
   "description": "Grounded no-wing veiled desert wanderer: approved base clothing/silhouette, unqualified directional masters and unframed dialogue head. This is a planning manifest, NOT renderable animation artwork.",
@@ -769,6 +769,28 @@
     "sunblade_ab_browser_qa": "NOT_RUN",
     "sunblade_ab_visual_approval": "NOT_REQUIRED_HISTORICAL_EXPERIMENT",
     "sunblade_authored_frames_approved": false,
-    "sunblade_animation_method": "AUTHORED_FRAME_SELECTED"
+    "sunblade_animation_method": "AUTHORED_FRAME_SELECTED",
+    "reference_design_locked": true,
+    "reference_concepting_frozen": true,
+    "reference_production_art_approval": "PER_ASSET_NOT_GLOBAL",
+    "fx_first_batch_style_approved": false,
+    "fx_first_batch_import_qualified": false,
+    "current_goal": "Produce approved body and traditional full-sword key poses, then real 16FPS animation sequences and qualifying ZIPs; do not request new reference concepts."
+  },
+  "design_direction_status": "LOCKED_NO_MORE_CONCEPT_ROUNDS",
+  "production_inventory_path": "production/sky-blue-eyes/ANIMATION-INVENTORY.json",
+  "production_started": true,
+  "first_production_batch": {
+    "name": "Sky FX Foundation 0.1",
+    "delivery": "Sky-Production-Kickoff-v1.zip",
+    "candidate_asset_zip": "sky-fx-foundation-v0.1.zip",
+    "total_frames": 84,
+    "asset_sequences": 7,
+    "atlas_count": 1,
+    "bytes": 1809145,
+    "asset_manifest_type": "smi-visual-pack/1",
+    "status": "LOCAL_STRUCTURAL_QA_PASS_VISUAL_APPROVAL_AND_OFFICIAL_ATLAS_IMPORT_PENDING",
+    "scope": "independent FX studies, not Sky body/sword animation, no public release",
+    "reproducible_source": "Included in handoff archive, not installed in repo"
   }
 }
