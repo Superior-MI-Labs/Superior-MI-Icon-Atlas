@@ -44,6 +44,12 @@ class CharacterPlanTests(unittest.TestCase):
         plan["transition_checks"][0]["stage"] = "P0"
         self.assertTrue(any("before its clips" in x for x in check(plan)))
 
+    def test_invalid_clip_stage_returns_validation_error(self):
+        plan = copy.deepcopy(self.plan)
+        plan["qualification_clips"][0]["stage"] = "NOT_A_STAGE"
+        problems = check(plan)
+        self.assertTrue(any("Unknown clip stage" in issue for issue in problems))
+
     def test_uncovered_first_slice_rejected(self):
         plan = copy.deepcopy(self.plan)
         for gate in plan["qa_gates"]:
