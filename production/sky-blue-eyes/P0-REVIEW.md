@@ -12,6 +12,11 @@ This is the single **project-specific review**, linked from the reusable [side-s
 - Dialogue identity concealed: **no exposed mouth and no framed portrait baked into the art**; masked speech via eye focus, ears, scarf tension, subtle head movement. Separate front, three-quarter and side close-up masters.
 - Normal body visual tier: health **above 36%**. Low-health body visual tier: health **36% or below**. No intermediate/fatigued tier in V1, plus independent death.
 - Dormant Shattered Sunblade: single base silhouette, wrapped bands and tied phoenix feathers, barely perceptible cohesion magic. Fire, frost, wind, radiant, storm and spirit variants are optional overlay/progression explorations, not separate baseline models.
+- **Articulated fragment design (confirmed):** the Sunblade is not a solid sword with decorative cracks. Its named broken shards are physically separate and can translate, rotate and flex independently while their gaps are held together by moving, interwoven energy. This continues while Sky holds its hilt: the grip is stable, but blade fragments can flex and follow through. Hover, cast, impact, recall and release each have distinct movement envelopes. Cohesion lines follow shard endpoints, never behave like rigid rods or static painted glows. The sword remains its own actor close to Sky's back at rest; **it is not sheathed**.
+
+### Weapon-art qualification still pending
+
+The current generated sword reference page is **conceptual**. It cannot certify independent shard motion from a single still illustration. Before claiming an animated weapon pack, the pipeline must inspect discrete shard sources, stable pivots and fragment IDs, the actual keyframe/tether behavior in browser preview, and the hilt locked to Sky's animated hand. Never approve a one-piece blade with etched fractures just because its effects are visually impressive.
 
 ## Eight-view canonical direction list
 
