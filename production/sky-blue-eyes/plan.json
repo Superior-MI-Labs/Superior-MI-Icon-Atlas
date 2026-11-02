@@ -1,11 +1,11 @@
 {
   "schema": "smi-character-production-plan/1",
   "project_id": "smi.sky-blue-eyes.motion-foundation",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "PREPRODUCTION",
   "runtime_support": "NOT_IMPLEMENTED",
-  "description": "Candidate reference lock and qualification inventory. This is NOT an smi-visual-pack/1 runtime manifest and contains no finished artwork.",
-  "subject": "Sky Blue Eyes: ascended Tabaxi/phoenix monk with independent Shattered Sunblade",
+  "description": "Grounded no-wing veiled desert wanderer: approved base clothing/silhouette, unqualified directional masters and unframed dialogue head. This is a planning manifest, NOT renderable animation artwork.",
+  "subject": "Sky Blue Eyes — The Veiled Wanderer (wingless, three feathered tails), monk with independently animated dormant Shattered Sunblade",
   "target": {
     "game_type": "2d-side-scroller",
     "master_facing": "right",
@@ -23,7 +23,79 @@
     "facing_mirror_policy": "PROPOSED_TEST_FIRST",
     "alpha": "straight",
     "reference_approval": "PENDING",
-    "licensing": "PENDING"
+    "licensing": "PENDING",
+    "health_variants": {
+      "low_health_when": "health_percent <= 36",
+      "normal_when": "health_percent > 36",
+      "tiers": [
+        "normal",
+        "low"
+      ],
+      "note": "Two presentation tiers only; no fatigued/mid-health animation tier. Death remains a separate state."
+    },
+    "directions": {
+      "type": "eight_way_reference",
+      "required": [
+        {
+          "key": "front",
+          "degrees": 0
+        },
+        {
+          "key": "front_right",
+          "degrees": 45
+        },
+        {
+          "key": "right",
+          "degrees": 90
+        },
+        {
+          "key": "back_right",
+          "degrees": 135
+        },
+        {
+          "key": "back",
+          "degrees": 180
+        },
+        {
+          "key": "back_left",
+          "degrees": 225
+        },
+        {
+          "key": "left",
+          "degrees": 270
+        },
+        {
+          "key": "front_left",
+          "degrees": 315
+        }
+      ],
+      "note": "Reference degrees are character orientation labels, not camera orbit or 3D rig. Gameplay side-scroller initially qualifies right/left; eight views are reference coverage, not eight full action animation sets."
+    },
+    "wardrobe_mood": "mysterious cloaked desert wanderer",
+    "face_reveal_policy": "hide muzzle and mouth in normal gameplay and dialogue; visible eyes only; any identity reveal requires separate narrative approval",
+    "eye_design": {
+      "distant": "apparent softly luminous sapphire/teal eyes; keep readability and modest glow",
+      "closeup": "deep cosmic iris, centered black-hole-like pupil with blue/teal accretion rings, dust and minute stars",
+      "trails": "subtle short light traces on gaze movement, not permanently exaggerated particle bursts",
+      "visibility": "at least one eye clear through hood shadow in all relevant facings; back-facing may show neither",
+      "source": "creator direction 2026-11-02",
+      "status": "DESIGN_APPROVED_PENDING_FRAME_VALIDATION"
+    },
+    "weapon": {
+      "base": "Dormant Shattered Sunblade",
+      "behavior": "independent orbit/cast/recall/anchor",
+      "appearance": "cloth-wrapped broken relic, low energy, tied phoenix feathers; no baked fire/frost/wind/light effects",
+      "aspects": [
+        "dormant",
+        "ember",
+        "frost",
+        "gale",
+        "radiant",
+        "storm",
+        "spirit"
+      ],
+      "note": "One blade motion family, optional aspect effect overlays; effects and puzzle logic are separate host responsibilities."
+    }
   },
   "reference_slots": [
     {
@@ -57,19 +129,33 @@
       "availability": "conversation_only",
       "approval": "PENDING",
       "notes": "Bright orange solar streak with blue traces. Concept only; not a frame-accurate transparent animation."
+    },
+    {
+      "id": "ref.wardrobe_approved",
+      "role": "approved_cloaked_desert_wanderer",
+      "source": "conversation:image(20261102-125259).png",
+      "sha256": "5f0aa77d1514c1f859a5143732d4a39a3295a2afbb3b0fc0731878c98d95c97f",
+      "availability": "conversation_only",
+      "approval": "APPROVED",
+      "notes": "Creator approved hood, mouth-covering ocher scarf, layered cream/saffron/red tattered robes, ornate gold solar brooch and accents, exposed spotted feline hands and feet, feather accents, and mysterious silhouette. Original image is three-quarter side character illustration with one inset framed head study, NOT an 8-way production turnaround."
     }
   ],
   "canonical_lock": {
     "status": "PENDING",
     "required_views": [
       "right_side_neutral",
+      "left_side_neutral",
+      "front_neutral",
+      "back_neutral",
+      "front_right_three_quarter",
+      "back_right_three_quarter",
+      "back_left_three_quarter",
+      "front_left_three_quarter",
       "right_side_combat",
-      "left_side_mirror_test",
-      "front_turnaround_check",
-      "back_turnaround_check",
-      "wings_folded",
-      "wings_spread",
-      "weapon_separate"
+      "weapon_separate",
+      "unframed_head_front",
+      "unframed_head_three_quarter",
+      "unframed_head_side"
     ],
     "anchors": [
       "root",
@@ -78,27 +164,39 @@
       "hand_l",
       "hand_r",
       "head",
-      "wing_l",
-      "wing_r",
-      "tail_root",
+      "ear_l",
+      "ear_r",
+      "tail_root_1",
+      "tail_root_2",
+      "tail_root_3",
       "weapon_orbit",
-      "fx_origin"
+      "fx_origin",
+      "dialogue_neck"
     ],
     "visual_invariants": [
-      "feline muzzle and ears",
-      "spotted warm-brown/cream body",
-      "luminous sky-blue eyes",
-      "feathered orange/fire-and-blue wings",
-      "bifurcated fiery tail",
-      "wraps and cloth with consistent construction",
-      "separately transformable shattered sunblade"
+      "no wings in V1, no wing anchor or flying/glide animation",
+      "hood conceals upper face; wrapped veil conceals mouth and muzzle silhouette",
+      "galactic irises with black-hole-like pupils, teal/blue accretion stars, subtle light trails, readable blue at gameplay scale",
+      "three separate feathered phoenix tails, consistent number and roots in all applicable angles, orange-red feathers with restrained blue accents",
+      "cream and saffron layered wraps, tattered red mantle, gold solar brooch and hood emblem match approved wardrobe reference",
+      "feline muzzle/ears and spotted warm-brown forearms/hands/feet remain anatomically consistent, no exposed mouth during dialogue",
+      "dormant broken cloth-wrapped sword remains visually distinct, separately rendered, tied feathers, no permanent element glow"
     ],
     "pending_decisions": [
-      "gameplay silhouette at native on-screen scale",
-      "base sword variant out of six",
-      "wing folding/occlusion and mirroring policy",
-      "costume asymmetry and palette lock",
-      "source and redistribution rights"
+      "clean isolated full-resolution views with consistent garment seams and left/right asymmetry",
+      "tail-root occlusion and three discrete tails visible from back, appropriate partial occlusion in true side view",
+      "native scale silhouette and crop/pivot validation",
+      "default dormant Sunblade exact silhouette and proportion",
+      "unframed head dialogue poses matching same cloak/veil and galaxy eyes",
+      "original reference image handoff to durable source repository and rights documentation"
+    ],
+    "confirmed_design_decisions": [
+      "approved original reference image source hash",
+      "wingless V1",
+      "covered mouth and hidden face",
+      "three feathered tails",
+      "cosmic blue/teal iris with dark pupil",
+      "two health art tiers split at 36%"
     ]
   },
   "track_owners": [
@@ -119,9 +217,9 @@
     {
       "id": "secondary",
       "owns": [
-        "wing feathers",
-        "tail",
-        "cloth"
+        "three feathered tails",
+        "hood and cape cloth",
+        "scarf and costume tassels"
       ]
     },
     {
@@ -136,10 +234,12 @@
     {
       "id": "portrait",
       "owns": [
-        "expression",
-        "mouth",
-        "eyes",
-        "dialogue bust"
+        "masked head turns",
+        "visible eyes",
+        "eyelids",
+        "ears",
+        "hood/scarf micro-movements",
+        "unframed bust region"
       ]
     }
   ],
@@ -149,13 +249,6 @@
       "track": "body",
       "kind": "sequence",
       "stage": "P1",
-      "playback": "loop"
-    },
-    {
-      "id": "sky.body.idle.injured",
-      "track": "body",
-      "kind": "sequence",
-      "stage": "P2",
       "playback": "loop"
     },
     {
@@ -243,13 +336,6 @@
       "playback": "once"
     },
     {
-      "id": "sky.secondary.wings.idle",
-      "track": "secondary",
-      "kind": "sequence",
-      "stage": "P1",
-      "playback": "loop"
-    },
-    {
       "id": "sky.fx.dust.run_stop",
       "track": "fx",
       "kind": "sequence",
@@ -261,6 +347,34 @@
       "track": "portrait",
       "kind": "composition",
       "stage": "P4",
+      "playback": "loop"
+    },
+    {
+      "id": "sky.secondary.tails.idle",
+      "track": "secondary",
+      "kind": "sequence",
+      "stage": "P1",
+      "playback": "loop"
+    },
+    {
+      "id": "sky.head.talk.masked",
+      "track": "portrait",
+      "kind": "sequence",
+      "stage": "P4",
+      "playback": "loop"
+    },
+    {
+      "id": "sky.head.blink",
+      "track": "portrait",
+      "kind": "sequence",
+      "stage": "P4",
+      "playback": "once"
+    },
+    {
+      "id": "sky.body.idle.low",
+      "track": "body",
+      "kind": "sequence",
+      "stage": "P2",
       "playback": "loop"
     }
   ],
@@ -280,11 +394,11 @@
       "policy": "authored_bridge"
     },
     {
-      "id": "healthy_to_injured",
+      "id": "normal_to_low",
       "from": "sky.body.idle.relaxed",
-      "to": "sky.body.idle.injured",
+      "to": "sky.body.idle.low",
       "stage": "P2",
-      "policy": "hysteresis_enter_0.25_exit_0.32"
+      "policy": "normal when health_percent > 36; low when <= 36; no extra middle tier"
     },
     {
       "id": "run_to_jump",
@@ -344,9 +458,9 @@
     {
       "id": "secondary_anchor",
       "stage": "P1",
-      "evidence": "wing roots remain attached and occlusion is correct across all idle/run frames",
+      "evidence": "All three tail roots remain attached and cloth occlusion is correct through every authored idle/run frame",
       "covers": [
-        "sky.secondary.wings.idle"
+        "sky.secondary.tails.idle"
       ]
     },
     {
@@ -362,12 +476,12 @@
       ]
     },
     {
-      "id": "injury_hysteresis",
+      "id": "health_two_tier",
       "stage": "P2",
-      "evidence": "health oscillation around threshold cannot flicker states",
+      "evidence": "Only normal (health>36) and low (health<=36) art tiers; exact boundary and 0-health death action are tested; no invented middle state",
       "covers": [
         "sky.body.idle.relaxed",
-        "sky.body.idle.injured",
+        "sky.body.idle.low",
         "sky.body.idle.look_around"
       ]
     },
@@ -396,9 +510,11 @@
     {
       "id": "portrait",
       "stage": "P4",
-      "evidence": "eyes and mouth independent; dialogue overlay does not change body controller",
+      "evidence": "Unframed head sprites: hood/veil/eye identity consistent across front, side, three-quarter; masked talk and blink cues remain expressive",
       "covers": [
-        "sky.portrait.neutral"
+        "sky.portrait.neutral",
+        "sky.head.talk.masked",
+        "sky.head.blink"
       ]
     }
   ],
@@ -417,8 +533,8 @@
     },
     {
       "id": "P2",
-      "name": "Injured idle, rare idle, jump/land transitions",
-      "gate": "injury_hysteresis",
+      "name": "Two-tier low-health idle, rare idle, jump/land transitions",
+      "gate": "health_two_tier",
       "release_scope": "qualified_delta"
     },
     {
@@ -452,6 +568,9 @@
     "artwork_approved": false,
     "rights_verified": false,
     "pixel_visual_qa": "NOT_RUN",
-    "controller_schema_supported": false
+    "controller_schema_supported": false,
+    "reference_identity_approved": true,
+    "canonical_views_qualified": false,
+    "failed_generation_notes": "Initial wide infographic turnarounds generated after the cloak approval were not qualified: small inconsistent figures and head portraits in frames instead of isolated frame sources."
   }
 }
