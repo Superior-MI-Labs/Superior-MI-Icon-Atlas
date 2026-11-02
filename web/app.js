@@ -130,7 +130,6 @@
     node.onclick=()=>openDetail(a);if(cardObserver)cardObserver.observe(node);
     else paint(canvas,a,0,{card:true}).catch(()=>art.textContent='Preview unavailable');return node;}
   function more(){const frag=document.createDocumentFragment();for(const a of matches.slice(shown,shown+PAGE))frag.append(card(a));shown=Math.min(matches.length,shown+PAGE);$('gallery').append(frag);$('more').hidden=shown>=matches.length;}
-  function valueCap(a,key){return Inputs.bounds(a,key,Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs))?.max??null;}
   function controlsFor(a){const area=$('controls');area.replaceChildren();
     if(a.kind==='state_set'){
       const lab=document.createElement('label');lab.textContent='Appearance';
