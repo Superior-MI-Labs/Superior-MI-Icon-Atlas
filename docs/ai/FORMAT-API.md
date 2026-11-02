@@ -21,6 +21,21 @@ One-manifest ZIPs can simply contain `manifest.json` and `textures/...`. Each pa
 - **composition:** ordered layers referencing assets, typed inputs, optional animated property tracks, slots and presets. Can compose static and animated sources.
 - **state_set:** maps state names (e.g. idle/walk/hurt, hover/pressed, on/off) to asset IDs, with a default state.
 
+**Adaptive repeated indicators:** A `composition` may use one `layer.repeat` pointing to a real `state_set`. This keeps existing `region`, `state_set`, `composition`, and `sequence` kinds unchanged. Declare numeric `value`, `max`, and `columns` inputs; `max` is the number of indicators (e.g. hearts), `columns` is the wrap width, and `value` is the underlying charge/quarter-health count. `levels` maps each integer quantum, from empty to full, to an actual state key. `gap_px` is the horizontal/vertical spacing. The shared renderer computes a natural width and height from the selected values instead of scaling a 1-heart layout into a 20-heart canvas. Limit count and columns to the declared numeric range; the validator requires integer steps and sufficiently large maximum `value`. Example:
+
+```json
+{
+  "id": "icons", "asset": "example.heart.states",
+  "repeat": {
+    "count_input": "max", "value_input": "value", "columns_input": "columns",
+    "levels": ["empty", "quarter", "half", "three_quarter", "full"],
+    "gap_px": [2, 6]
+  }
+}
+```
+
+With `max=20, columns=10, value=63`, this renders 20 hearts in two rows, with 15 full hearts, one three-quarter heart and four empty hearts. This is an additive schema feature; older imports and static compositions remain compatible. The builder and public viewer use a draggable numeric slider (with an explicit value readout) for numeric compositions. Discrete state sets expose synchronized dropdown and step-slider controls; they are not falsely advertised as continuously clipped artwork.
+
 **Interactions:** optional `behavior` declares a role, named events, safe set/toggle/emit operations and typed outputs. Host applications own real mouse/keyboard/game input. No arbitrary JS or code is executed from uploaded packs.
 
 **Slots/presets:** optional versioned interface definitions and explicit compatible options permit a composition to swap a fluid fill, equipment layer or stateful animation, without relying on fuzzy tags. A matching interface declaration is necessary but cannot prove artistic alignment by itself. Presets choose only declared slot options and typed input values.
