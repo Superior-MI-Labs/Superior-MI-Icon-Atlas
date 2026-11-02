@@ -27,7 +27,7 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertFalse(self.plan["provenance"]["original_image_bytes_in_repo"])
         self.assertEqual(self.plan["target"]["art_fps_default"], 16)
         self.assertEqual(self.plan["target"]["gameplay_simulation_hz"], 60)
-        self.assertEqual(len(self.plan["reference_slots"]), 5)
+        self.assertEqual(len(self.plan["reference_slots"]), 6)
         self.assertEqual(len(self.plan["target"]["directions"]["required"]), 8)
         self.assertEqual(self.plan["target"]["health_variants"]["low_health_when"], "health_percent <= 36")
         self.assertEqual(self.plan["target"]["health_variants"]["normal_when"], "health_percent > 36")
@@ -57,6 +57,36 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertTrue(any("endpoints" in item for item in articulation["invariant_rules"]))
         self.assertFalse(self.plan["provenance"]["weapon_articulation_qualified"])
         self.assertTrue(any(gate["id"] == "weapon_articulation" and gate["stage"] == "P3" for gate in self.plan["qa_gates"]))
+
+    def test_hero_angle_and_tail_roots_are_explicit_not_falsely_qualified(self):
+        pose = self.plan["target"]["hero_master_perspective"]
+        self.assertEqual(pose["status"], "USER_APPROVED_WITH_POSITIONAL_ADJUSTMENT")
+        self.assertIn("three-quarter", pose["view"])
+        self.assertIn("lower back/hip/pelvic", pose["tail_attachment"])
+        self.assertIn("top two tails", pose["tail_attachment"].lower())
+        self.assertTrue(self.plan["provenance"]["pose_direction_approved"])
+        self.assertFalse(self.plan["provenance"]["corrected_hero_master_qualified"])
+        self.assertFalse(self.plan["provenance"]["generated_reference_candidate_reviewed"])
+        self.assertTrue(any(r["role"] == "creator_approved_shallow_three_quarter_view_and_lower_triple_tail_roots" for r in self.plan["reference_slots"]))
+        self.assertEqual(self.plan["target"]["input_design"]["action_manifest_path"], "production/sky-blue-eyes/controls-proposal.json")
+        self.assertNotIn("actions", self.plan["target"]["input_design"], "input bindings must have a single source")
+
+    def test_complete_keyboard_mouse_gamepad_parity(self):
+        control = json.loads((ROOT / "production/sky-blue-eyes/controls-proposal.json").read_text(encoding="utf-8"))
+        self.assertEqual(control["status"], "DESIGN_PROPOSAL_NOT_IMPLEMENTED")
+        bindings = control["bindings"]
+        keys = [binding["id"] for binding in bindings]
+        self.assertEqual(len(keys), len(set(keys)))
+        self.assertGreaterEqual(len(keys), 18)
+        self.assertTrue(all(x.get("gamepad") and x.get("keyboard_mouse") and x.get("remappable") for x in bindings))
+        for required in ["move", "aim_sword", "jump", "light_attack", "heavy_attack", "evade", "block_parry", "attach_release_recall", "sword_command", "precision_focus", "anchor", "interact", "pause", "map_objectives"]:
+            self.assertIn(required, keys)
+        vortex = next(g for g in control["gestures"] if g["id"] == "sword_vortex")
+        self.assertIn("Hold RT", vortex["gamepad"])
+        self.assertIn("Hold F", vortex["keyboard_mouse"])
+        self.assertTrue(control["analog_policy"]["no_right_thumb_chord_requirement"])
+        self.assertIn("hilt", self.plan["target"]["weapon"]["articulation"]["canonical_elements"][0]["role"])
+        self.assertTrue((ROOT / "production/sky-blue-eyes/CONTROL-AND-COMBO-PROPOSAL.md").is_file())
 
     def test_duplicate_clip_rejected(self):
         plan = copy.deepcopy(self.plan)
