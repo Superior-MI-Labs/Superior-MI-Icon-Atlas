@@ -348,7 +348,7 @@
       "cream and saffron layered wraps, tattered red mantle, gold solar brooch and hood emblem match approved wardrobe reference",
       "feline muzzle/ears and spotted warm-brown forearms/hands/feet remain anatomically consistent, no exposed mouth during dialogue",
       "dormant broken cloth-wrapped sword remains visually distinct, separately rendered, tied feathers, no permanent element glow",
-      "shattered Sunblade consists of independently translating and rotating identifiable fragments, coherent energy weaving through live gaps, no rigid welded blade",
+      "shattered Sunblade *appears* to flex: authored complete sword frames depict separated pieces and evolving energy through gaps; no runtime shard rig",
       "three feathered tails anchored to the lower-back/hip region; none starts at shoulder height; accurate overlap in oblique right-facing views"
     ],
     "pending_decisions": [
@@ -367,7 +367,7 @@
       "three feathered tails",
       "cosmic blue/teal iris with dark pupil",
       "two health art tiers split at 36%",
-      "Sunblade fragments independently rotate, translate, flex and reassemble by animated energy cohesion across both floating and hand-held modes",
+      "Shattered fragment movement is drawn into each complete sword animation frame in both floating and held combat; no independent runtime shard control",
       "Right-facing hero art uses a shallow three-quarter side angle and real volume, not an absolutely flattened lateral profile.",
       "Three feathered tails attach at lower back/pelvic hip area. Upper two tail origins from tall side candidate must be lowered to align with approved crop.",
       "Sunblade animation production uses traditionally drawn complete sword frames; procedural fragment rig and A/B comparisons are discontinued."
@@ -491,21 +491,21 @@
     {
       "id": "sky.sword.orbit.relaxed",
       "track": "sword",
-      "kind": "composition",
+      "kind": "sequence",
       "stage": "P1",
       "playback": "loop"
     },
     {
       "id": "sky.sword.cast",
       "track": "sword",
-      "kind": "composition",
+      "kind": "sequence",
       "stage": "P3",
       "playback": "once"
     },
     {
       "id": "sky.sword.recall",
       "track": "sword",
-      "kind": "composition",
+      "kind": "sequence",
       "stage": "P3",
       "playback": "once"
     },
