@@ -17,7 +17,7 @@ Do not label an asset ready merely because its JSON parses. Structural validatio
 - [ ] All images are packaged and paths resolve locally with no external dependencies.
 - [ ] All asset references, ordering, animation FPS/frame durations, state maps, events, inputs/outputs and presets are valid.
 - [ ] Every animation, state and compatible option is previewed; visually check frame 1, middle, end, loop boundary and independent overlays.
-- [ ] For **every input-controlled visual**, render **0%, 1%, 5%, 10%, 25%, 50%, 75%, 90%, 99%, 100%** over the declared range (plus request-specific states); compare actual pixels, not only output labels. A low nonzero value cannot disappear behind a badge or mask.
+- [ ] For **every input-controlled visual**, render **0%, 1%, 5%, 10%, 25%, 50%, 75%, 90%, 99%, 100%** over the declared range (plus request-specific states); compare actual pixels, not only output labels. A low nonzero value cannot disappear behind a badge or mask. These samples include the minimum, midpoint, maximum; test those three for every non-percent input range as well.
 - [ ] Numeric values with non-unit ranges (e.g. 0..100) are normalized correctly for clipping and positioning, while output values preserve their declared units.
 - [ ] Layer order, alpha, masks and clipping are checked against real preview: opaque frames or decorative badges cannot hide a required fill or animated layer.
 - [ ] Sliders and bars use one measured usable interval: 100% reaches its actual endpoint, 50% visually reads as half, the thumb center and active trail share endpoints, the thumb stays in bounds, and a mismatched SVG viewBox cannot letterbox the artwork. See [value-geometry gate](gui/VALUE-GEOMETRY.md).
