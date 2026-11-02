@@ -325,23 +325,31 @@
     for(const [key,def] of Object.entries(a.inputs||{})){
       const label=document.createElement('label');label.textContent=key;let input;
       const applyValue=value=>{
-        ui.controls[key]=value;
-        if((a.layers||[]).some(l=>l.repeat?.count_input===key)){
-          for(const layer of a.layers.filter(l=>l.repeat?.count_input===key)){
-            const bound=repeatBound(a,layer.repeat.value_input,ui.controls),target=layer.repeat.value_input;
-            ui.controls[target]=Math.min(bound,ui.controls[target]??a.inputs[target].default);
-          }
-          renderControlPanel();
+        ui.controls=Inputs.reconcile(a,{...ui.controls,[key]:value},presetInputs);
+        // Keep pointer capture by updating controls in place, not reconstructing DOM.
+        for(const slider of controls.querySelectorAll('input[data-input-key]')){
+          const target=slider.dataset.inputKey,bound=Inputs.bounds(a,target,ui.controls);
+          slider.min=bound.min;slider.max=bound.max;slider.step=bound.step;
+          slider.value=ui.controls[target];
+          slider.parentElement.querySelector('output').textContent=slider.value+' / '+bound.max;
         }
         renderOutputs();
       };
-      if(def.type==='boolean'){input=document.createElement('input');input.type='checkbox';input.checked=ui.controls[key]??Slots.resolve(a,ui.preset).inputs[key]??def.default;input.onchange=()=>applyValue(input.checked);}
-      else if(def.type==='number'){input=document.createElement('input');input.type='range';input.min=def.min??0;input.max=def.max??1;input.step=def.step??'0.01';input.max=repeatBound(a,key,ui.controls)??def.max??1;
-        input.value=Math.min(Number(input.max),ui.controls[key]??Slots.resolve(a,ui.preset).inputs[key]??def.default);
-        const readout=document.createElement('output');readout.textContent=input.value+' / '+input.max;
-        input.oninput=()=>{applyValue(Number(input.value));readout.textContent=input.value+' / '+input.max;};
-        label.append(readout);}
-      else{input=document.createElement('select');for(const v of def.values||[])input.add(new Option(v,v));input.value=ui.controls[key]??Slots.resolve(a,ui.preset).inputs[key]??def.default;input.onchange=()=>applyValue(input.value);}
+      if(def.type==='boolean'){
+        input=document.createElement('input');input.type='checkbox';input.checked=displayed[key];
+        input.onchange=()=>applyValue(input.checked);
+      }else if(def.type==='number'){
+        const bound=Inputs.bounds(a,key,displayed);
+        input=document.createElement('input');input.type='range';input.dataset.inputKey=key;
+        input.min=bound.min;input.max=bound.max;input.step=bound.step;input.value=displayed[key];
+        const readout=document.createElement('output');readout.textContent=input.value+' / '+bound.max;
+        input.oninput=()=>applyValue(Number(input.value));
+        label.append(readout);
+      }else{
+        input=document.createElement('select');
+        for(const v of def.values||[])input.add(new Option(v,v));
+        input.value=displayed[key];input.onchange=()=>applyValue(input.value);
+      }
       label.append(input);controls.append(label);
     }
     if(a.behavior){
