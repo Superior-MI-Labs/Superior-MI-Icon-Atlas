@@ -312,47 +312,94 @@
     {
       "id": "reference_lock",
       "stage": "P0",
-      "evidence": "signed model sheet / native-scale silhouette / anchors / palette / licensing"
+      "evidence": "signed model sheet / native-scale silhouette / anchors / palette / licensing",
+      "covers": []
     },
     {
       "id": "loop_seam",
       "stage": "P1",
-      "evidence": "first-last seam and adjacent-frame contact review at native scale"
+      "evidence": "first-last seam and adjacent-frame contact review at native scale",
+      "covers": [
+        "sky.body.idle.relaxed",
+        "sky.body.run.loop"
+      ]
     },
     {
       "id": "run_stop",
       "stage": "P1",
-      "evidence": "run-to-stop-to-idle rooted foot positions and frame-by-frame inspection"
+      "evidence": "run-to-stop-to-idle rooted foot positions and frame-by-frame inspection",
+      "covers": [
+        "sky.body.run.stop",
+        "sky.body.idle.relaxed"
+      ]
     },
     {
       "id": "sword_space",
       "stage": "P1",
-      "evidence": "sword orbit follows root without world-space teleport during body movement"
+      "evidence": "sword orbit follows root without world-space teleport during body movement",
+      "covers": [
+        "sky.sword.orbit.relaxed"
+      ]
+    },
+    {
+      "id": "secondary_anchor",
+      "stage": "P1",
+      "evidence": "wing roots remain attached and occlusion is correct across all idle/run frames",
+      "covers": [
+        "sky.secondary.wings.idle"
+      ]
     },
     {
       "id": "roundtrip",
       "stage": "P1",
-      "evidence": "exact final ZIP reimported, source and preview pixels compared"
+      "evidence": "exact final ZIP reimported, source and preview pixels compared",
+      "covers": [
+        "sky.body.idle.relaxed",
+        "sky.body.run.loop",
+        "sky.body.run.stop",
+        "sky.sword.orbit.relaxed",
+        "sky.secondary.wings.idle"
+      ]
     },
     {
       "id": "injury_hysteresis",
       "stage": "P2",
-      "evidence": "health oscillation around threshold cannot flicker states"
+      "evidence": "health oscillation around threshold cannot flicker states",
+      "covers": [
+        "sky.body.idle.relaxed",
+        "sky.body.idle.injured",
+        "sky.body.idle.look_around"
+      ]
     },
     {
       "id": "jump_cancel",
       "stage": "P2",
-      "evidence": "host 60Hz jump accepted immediately, art follows physical phase"
+      "evidence": "host 60Hz jump accepted immediately, art follows physical phase",
+      "covers": [
+        "sky.body.jump.prepare",
+        "sky.body.jump.rise",
+        "sky.body.jump.fall",
+        "sky.body.jump.land"
+      ]
     },
     {
       "id": "attack_cues",
       "stage": "P3",
-      "evidence": "one semantic strike cue despite hitstop/replay and a legal cancel window"
+      "evidence": "one semantic strike cue despite hitstop/replay and a legal cancel window",
+      "covers": [
+        "sky.body.combat.claw_01",
+        "sky.sword.cast",
+        "sky.sword.recall",
+        "sky.body.defend.parry"
+      ]
     },
     {
       "id": "portrait",
       "stage": "P4",
-      "evidence": "eyes and mouth independent; dialogue overlay does not change body controller"
+      "evidence": "eyes and mouth independent; dialogue overlay does not change body controller",
+      "covers": [
+        "sky.portrait.neutral"
+      ]
     }
   ],
   "milestones": [
