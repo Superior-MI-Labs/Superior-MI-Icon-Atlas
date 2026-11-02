@@ -1,7 +1,7 @@
 {
   "schema": "smi-character-production-plan/1",
   "project_id": "smi.sky-blue-eyes.motion-foundation",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "PREPRODUCTION",
   "runtime_support": "NOT_IMPLEMENTED",
   "description": "Grounded no-wing veiled desert wanderer: approved base clothing/silhouette, unqualified directional masters and unframed dialogue head. This is a planning manifest, NOT renderable animation artwork.",
@@ -775,7 +775,7 @@
     "reference_production_art_approval": "PER_ASSET_NOT_GLOBAL",
     "fx_first_batch_style_approved": false,
     "fx_first_batch_import_qualified": false,
-    "current_goal": "Bring nine swordless drawn body clips to canonical painterly quality, then qualify actual Builder ZIP import and hand socket synchronization; don't generate more poster references or misleading finished art counts.",
+    "current_goal": "STOP extending procedural placeholder art. Redraw one accurate swordless Sky master and one accurate ornate sword master; obtain actual image approval before generating clips. Preserve packer, manifests, IDs and correct technical tests.",
     "fx_second_batch_local_qa": true,
     "fx_second_batch_publication_approved": false,
     "sunblade_batch03_source_qa": true,
@@ -785,7 +785,9 @@
     "body_batch04_source_geometry_pass": true,
     "body_batch04_style_approved": false,
     "body_batch04_browser_import": "NOT_TESTED",
-    "body_batch04_published": false
+    "body_batch04_published": false,
+    "production_art_rejected": true,
+    "technical_pipeline_reusable": true
   },
   "design_direction_status": "LOCKED_NO_MORE_CONCEPT_ROUNDS",
   "production_inventory_path": "production/sky-blue-eyes/ANIMATION-INVENTORY.json",
@@ -801,7 +803,8 @@
     "asset_manifest_type": "smi-visual-pack/1",
     "status": "LOCAL_STRUCTURAL_QA_PASS_VISUAL_APPROVAL_AND_OFFICIAL_ATLAS_IMPORT_PENDING",
     "scope": "independent FX studies, not Sky body/sword animation, no public release",
-    "reproducible_source": "Included in handoff archive, not installed in repo"
+    "reproducible_source": "Included in handoff archive, not installed in repo",
+    "art_disposition": "REJECTED_FINAL_STYLE_SUPERSEDED_BY_FX_V02"
   },
   "latest_candidate_batch": {
     "name": "Sky FX Foundation 0.2",
@@ -823,7 +826,8 @@
     "style_approved": false,
     "publications_json_approved": false,
     "artifact_location": "conversation handoff; PNG binaries not committed",
-    "source_contract": "Source 256x256 PNG masters -> byte-exact trim/paste packer -> existing region+sequence+state_set; no new schema or fragment rig"
+    "source_contract": "Source 256x256 PNG masters -> byte-exact trim/paste packer -> existing region+sequence+state_set; no new schema or fragment rig",
+    "production_art_status": "REJECTED_DO_NOT_USE_AS_CANONICAL"
   },
   "latest_sword_candidate": {
     "name": "Shattered Sunblade Drawn Motion 0.1",
@@ -872,7 +876,8 @@
     "animation_reference_fidelity": "SIMPLIFIED_STYLISTIC_CANDIDATE_NOT_FINAL",
     "public_catalog_approval": false,
     "source_location": "conversation archive; binary source files not committed",
-    "no_runtime_fragment_controller": true
+    "no_runtime_fragment_controller": true,
+    "production_art_status": "REJECTED_DO_NOT_USE_AS_CANONICAL"
   },
   "latest_body_candidate": {
     "name": "Sky Grounded Body Motion 0.1",
@@ -928,13 +933,43 @@
     "raw_source_pixel_qa": "92_OF_92_EXACT_RGBA_PASS",
     "unclipped_frame_count": 92,
     "numeric_loop_diagnostics": "NORMAL_IDLE_LOW_IDLE_WALK_RUN_PASS",
-    "visual_style_approval": "HOLD_SIMPLIFIED_VECTOR_ART",
+    "visual_style_approval": "REJECTED_REFERENCE_FIDELITY_REBUILD",
     "real_visual_atlas_builder_import": "NOT_TESTED",
     "host_game_attachment_test": "NOT_IMPLEMENTED",
     "body_contains_sword": false,
     "winged": false,
     "tail_count": 3,
     "artifact_location": "conversation handoff, binaries not in public repository",
-    "public_catalog_approved": false
+    "public_catalog_approved": false,
+    "production_art_status": "REJECTED_DO_NOT_USE_AS_CANONICAL"
+  },
+  "production_art_quality": {
+    "audit_document": "production/sky-blue-eyes/ART-FIDELITY-AUDIT-2026-11-02.md",
+    "status": "ART_REJECTED_REBUILD_REQUIRED",
+    "scope": "Sky body v0.1, Shattered Sunblade drawn v0.1, FX v0.1/v0.2, reference kit v0.3-v0.5",
+    "decision": "Preserve technical pipeline and stable IDs; remake character/weapon/FX artwork in the approved professional painterly style",
+    "reference_design_status": "APPROVED",
+    "approved_final_clip_count": 0,
+    "approved_final_frame_count": 0,
+    "technical_candidate_clips": 36,
+    "technical_candidate_frame_records": 416,
+    "source_art_generator": "PROCEDURAL_SVG_VECTOR_FIXTURES_NOT_PAINTERLY_REFERENCE_MATCH",
+    "source_ready_to_animate": false,
+    "canonical_character_master": "MISSING_APPROVED_CLEAN_SWORDLESS_FULL_SIZE",
+    "canonical_sunblade_master": "MISSING_APPROVED_FULL_SIZE_ORNATE_WEAPON",
+    "real_builder_import_of_candidates": "NOT_TESTED",
+    "promotable_to_public_catalog": false,
+    "allow_further_bulk_generation": false,
+    "new_art_gate": "Approve one accurate swordless Sky master and one accurately painted Sunblade master, using side-by-side original comparison, before further motion expansion",
+    "fx_v02_unique_rgba_frames": 224,
+    "fx_v02_addressable_frame_ids": 240,
+    "verified_from": [
+      "approved original source images",
+      "real current import ZIPs",
+      "three source generator scripts",
+      "four rerun local structural validators",
+      "CI workflow and current production plan"
+    ],
+    "verified_date": "2026-11-02"
   }
 }
