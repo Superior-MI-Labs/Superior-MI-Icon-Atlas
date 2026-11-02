@@ -1,5 +1,8 @@
 # Shattered Sunblade — A/B animation prototype, first measured outcome
 
+**CLOSED / SUPERSEDED BY CREATOR DECISION (2026-11-02):** The user chose traditionally hand-drawn *whole-sword frames* for the Shattered Sunblade. Do **not** continue the procedural fragment A/B comparison, dynamic shard rigs, or energy endpoint solver. All figures and test notes below are preserved solely as historical experiment evidence; new production work uses region → sequence → state_set and a separate whole-sword actor.
+
+
 **Stage:** P0→P1 technical experiment, **NOT** approved canonical production artwork or a public asset-pack release.
 
 The first experimental import ZIPs are supplied separately in the conversation handoff `Sky-Sunblade-AB-Prototype-Handoff-v0.1.zip`. Their bytes are **not** committed to the public repo, and are not automatically available to subsequent agents. If the handoff ZIP is missing, ask for that artifact or rerun the included deterministic source generator; do **not** substitute concept-art collages or claim you tested it.
@@ -48,4 +51,4 @@ The **50× package-size difference** for the small proof (rough ratio) is meanin
 - Test hand-attachment transitions and nonlinear fragment dynamics; if A's energy connectors separate between keys, extend the **existing** renderer contract narrowly, with deterministic tests, rather than starting another pipeline.
 - Record `observation / root cause / correction / test / evidence` as an update to this document and the **existing** AI production guide. Preserve source artwork and stable IDs; PNG optimization is a separate concern.
 
-**Recommended posture:** keep A as a likely runtime scalability candidate, B as the authored art-quality baseline. The winner/hybrid decision stays open until visual qualification, not a matter of preference alone.
+**Final production choice:** traditionally authored complete sword animation. No unresolved winner decision. Prior A/B results are archival, not a request for further comparison.
