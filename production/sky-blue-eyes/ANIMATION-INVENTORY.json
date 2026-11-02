@@ -1,0 +1,501 @@
+{
+  "schema": "smi-animation-production-inventory/1",
+  "project": "sky-blue-eyes",
+  "status": "BACKLOG_PRODUCTION_STARTED",
+  "fps_default": 16,
+  "gameplay_hz_reference": 60,
+  "health_tiers": {
+    "normal": "health_percent > 36",
+    "low": "health_percent <= 36",
+    "death": "separate"
+  },
+  "animation_method": "complete authored frames; independent whole-sword actor, no fragment rig",
+  "planned_total": 315,
+  "first_asset_handoff": {
+    "archive": "Sky-Production-Kickoff-v1.zip",
+    "fx_zip": "sky-fx-foundation-v0.1.zip",
+    "implemented_fx_frames": 84,
+    "implemented_fx_sequences": 7,
+    "approval": "STRUCTURAL_LOCAL_PASS_BROWSER_IMPORT_AND_STYLE_PENDING",
+    "artifact_location": "conversation handoff, not published or committed"
+  },
+  "families": [
+    {
+      "track": "body",
+      "family": "idle",
+      "stage": "P1",
+      "actions": [
+        "relaxed",
+        "guard",
+        "transition.relaxed_to_guard",
+        "look_left",
+        "look_right",
+        "scratch_ear",
+        "adjust_hood",
+        "adjust_scarf",
+        "stretch",
+        "shoulder_shift",
+        "meditate",
+        "rest",
+        "react_startle",
+        "inspect_hand",
+        "inspect_weapon_shadow"
+      ]
+    },
+    {
+      "track": "body",
+      "family": "walk_run",
+      "stage": "P1",
+      "actions": [
+        "walk.start",
+        "walk.loop",
+        "walk.stop",
+        "run.start",
+        "run.loop",
+        "run.stop",
+        "run.sprint",
+        "run.brake",
+        "run.turn",
+        "run.pivot",
+        "run.backstep",
+        "run.sidestep",
+        "run.attack_entry",
+        "sprint.stop",
+        "sprint.dash"
+      ]
+    },
+    {
+      "track": "body",
+      "family": "crouch",
+      "stage": "P2",
+      "actions": [
+        "duck.enter",
+        "duck.hold",
+        "duck.exit",
+        "crouch.enter",
+        "crouch.loop",
+        "crouch.walk",
+        "crouch.exit",
+        "slide.enter",
+        "slide.loop",
+        "slide.exit",
+        "roll.forward",
+        "roll.backward",
+        "crawl.enter",
+        "crawl.loop",
+        "crawl.exit"
+      ]
+    },
+    {
+      "track": "body",
+      "family": "jump",
+      "stage": "P2",
+      "actions": [
+        "jump.prepare",
+        "jump.launch",
+        "jump.rise",
+        "jump.apex",
+        "jump.fall",
+        "jump.fastfall",
+        "jump.land.soft",
+        "jump.land.hard",
+        "jump.double.start",
+        "jump.double.loop",
+        "air.dash",
+        "air.brake",
+        "air.turn",
+        "air.hover_short",
+        "air.interrupt"
+      ]
+    },
+    {
+      "track": "body",
+      "family": "wall_ledge",
+      "stage": "P2",
+      "actions": [
+        "wall.contact",
+        "wall.hang",
+        "wall.slide",
+        "wall.jump",
+        "wall.detach",
+        "ledge.grab",
+        "ledge.hang",
+        "ledge.climb",
+        "ledge.release",
+        "ledge.drop",
+        "vault.low",
+        "vault.high",
+        "rope.grab",
+        "rope.climb"
+      ]
+    },
+    {
+      "track": "body",
+      "family": "martial_ground",
+      "stage": "P3",
+      "actions": [
+        "jab.left",
+        "jab.right",
+        "palm.strike",
+        "elbow.front",
+        "elbow.back",
+        "claw.light_01",
+        "claw.light_02",
+        "claw.light_03",
+        "knee.strike",
+        "roundhouse.low",
+        "roundhouse.high",
+        "sweep.low",
+        "uppercut",
+        "launcher",
+        "kick.back",
+        "kick.spinning",
+        "kick.heel",
+        "hammerfist",
+        "chop",
+        "double_palm",
+        "charge.start",
+        "charge.release",
+        "dash.strike",
+        "sprint.strike",
+        "combo.finisher_01",
+        "combo.finisher_02",
+        "combo.recovery"
+      ]
+    },
+    {
+      "track": "body",
+      "family": "martial_air",
+      "stage": "P3",
+      "actions": [
+        "air.jab",
+        "air.claw",
+        "air.kick",
+        "air.roundhouse",
+        "air.uppercut",
+        "air.divekick",
+        "air.palm",
+        "air.launch_followup",
+        "air.combo_finisher",
+        "air.ground_slam",
+        "air.recover"
+      ]
+    },
+    {
+      "track": "body",
+      "family": "defense",
+      "stage": "P3",
+      "actions": [
+        "block.enter",
+        "block.hold",
+        "block.exit",
+        "block.hit",
+        "parry.start",
+        "parry.perfect",
+        "parry.fail",
+        "counter.quick",
+        "dodge.forward",
+        "dodge.backward",
+        "dodge.up",
+        "dodge.air",
+        "evade.step",
+        "hurt.light",
+        "hurt.heavy",
+        "hurt.air",
+        "hurt.wall",
+        "stagger",
+        "guard.break",
+        "knockdown",
+        "getup.low",
+        "getup.fast",
+        "death.start",
+        "death.loop",
+        "respawn"
+      ]
+    },
+    {
+      "track": "sword",
+      "family": "float",
+      "stage": "P1",
+      "actions": [
+        "back_hover",
+        "orbit.relaxed",
+        "orbit.combat",
+        "orbit.aim",
+        "hover.intercept",
+        "hover.guard",
+        "cast.start",
+        "cast.travel",
+        "cast.impact",
+        "cast.recover",
+        "remote.slash",
+        "remote.thrust",
+        "recall.start",
+        "recall.travel",
+        "recall.settle",
+        "anchor.enter",
+        "anchor.hold",
+        "anchor.exit"
+      ]
+    },
+    {
+      "track": "sword",
+      "family": "held",
+      "stage": "P3",
+      "actions": [
+        "grip.receive",
+        "grip.idle",
+        "slash.light_01",
+        "slash.light_02",
+        "slash.light_03",
+        "slash.heavy_01",
+        "slash.heavy_02",
+        "slash.launcher",
+        "slash.aerial",
+        "slash.dive",
+        "slash.spin",
+        "thrust.charge",
+        "thrust.release",
+        "throw.start",
+        "throw.travel",
+        "strike.recovery"
+      ]
+    },
+    {
+      "track": "sword",
+      "family": "transition",
+      "stage": "P3",
+      "actions": [
+        "grab.approach",
+        "grab.lock",
+        "release.detach",
+        "release.return",
+        "toss.catch",
+        "remote.to_held",
+        "held.to_remote",
+        "energy.reform"
+      ]
+    },
+    {
+      "track": "sword",
+      "family": "special",
+      "stage": "P5",
+      "actions": [
+        "vortex.charge",
+        "vortex.loop",
+        "vortex.release",
+        "sword.rain.multi",
+        "split.slash",
+        "aerial.followup",
+        "rebound.ricochet",
+        "orbit.burst",
+        "barrier.spin",
+        "anchor.trap",
+        "blade.hop",
+        "blade.platform",
+        "sword.surf",
+        "solar.cleave"
+      ]
+    },
+    {
+      "track": "body",
+      "family": "interaction",
+      "stage": "P4",
+      "actions": [
+        "item.pickup",
+        "item.inspect",
+        "item.use",
+        "item.equip",
+        "item.drop",
+        "item.toss",
+        "object.grab",
+        "object.carry",
+        "object.throw",
+        "object.push",
+        "object.pull",
+        "chest.open",
+        "chest.loot",
+        "door.open",
+        "door.close",
+        "lever.pull",
+        "switch.activate",
+        "examine.wall",
+        "camp.sit",
+        "camp.rise",
+        "rest.sleep",
+        "rest.wake",
+        "eat",
+        "drink"
+      ]
+    },
+    {
+      "track": "body",
+      "family": "grapple",
+      "stage": "P4",
+      "actions": [
+        "grapple.start",
+        "grapple.hold",
+        "grapple.throw",
+        "grapple.release",
+        "grapple.escape",
+        "grapple.wall_grab",
+        "grapple.wall_throw",
+        "stagger.grab",
+        "break_grip"
+      ]
+    },
+    {
+      "track": "portrait",
+      "family": "dialogue",
+      "stage": "P4",
+      "actions": [
+        "neutral",
+        "listen",
+        "speak.soft",
+        "speak.urgent",
+        "focused",
+        "glance.left",
+        "glance.right",
+        "blink.single",
+        "blink.double",
+        "anger",
+        "surprised",
+        "thoughtful",
+        "amused",
+        "suspicious",
+        "weary.low_health",
+        "distant.stare",
+        "closeup.eyes",
+        "react.pain",
+        "silent.nod",
+        "head.turn.left",
+        "head.turn.right",
+        "portrait.enter",
+        "portrait.exit"
+      ]
+    },
+    {
+      "track": "secondary",
+      "family": "tails_cloth",
+      "stage": "P1",
+      "actions": [
+        "tail.idle",
+        "tail.run",
+        "tail.stop",
+        "tail.jump",
+        "tail.dodge",
+        "tail.attack",
+        "tail.low_health",
+        "cloak.idle",
+        "cloak.run",
+        "cloak.turn",
+        "scarf.talk",
+        "scarf.idle",
+        "tassel.sway",
+        "feather.charm"
+      ]
+    },
+    {
+      "track": "fx",
+      "family": "movement",
+      "stage": "P1",
+      "actions": [
+        "dust.footfall",
+        "dust.slide",
+        "dust.land_soft",
+        "dust.land_heavy",
+        "dust.run_streak",
+        "dust.roll",
+        "dust.wall_slide",
+        "dust.wall_jump",
+        "sand.gust"
+      ]
+    },
+    {
+      "track": "fx",
+      "family": "combat",
+      "stage": "P1",
+      "actions": [
+        "parry.perfect",
+        "impact.martial",
+        "impact.heavy",
+        "impact.pierce",
+        "guard.break",
+        "slash.trail",
+        "hit.spark",
+        "claw.arc",
+        "solar.ring",
+        "sword.cohesion"
+      ]
+    },
+    {
+      "track": "fx",
+      "family": "aspects",
+      "stage": "P4",
+      "actions": [
+        "frost.burst",
+        "frost.trail",
+        "ember.burst",
+        "ember.trail",
+        "radiant.burst",
+        "radiant.trail",
+        "gale.burst",
+        "gale.vortex",
+        "storm.burst",
+        "storm.chain",
+        "spirit.burst",
+        "spirit.trail"
+      ]
+    },
+    {
+      "track": "fx",
+      "family": "world",
+      "stage": "P5",
+      "actions": [
+        "loot.glint",
+        "chest.open_magic",
+        "door.rune",
+        "activation.spark",
+        "platform.charge",
+        "environmental.dust",
+        "puzzle.unlock",
+        "puzzle.reveal",
+        "healing.pulse",
+        "low_health.vignette"
+      ]
+    },
+    {
+      "track": "body",
+      "family": "low_health",
+      "stage": "P2",
+      "actions": [
+        "idle.loop",
+        "walk.loop",
+        "run.loop",
+        "recovery.impact"
+      ]
+    },
+    {
+      "track": "body",
+      "family": "transformation",
+      "stage": "P5",
+      "actions": [
+        "form.charge",
+        "form.enter",
+        "form.loop",
+        "form.dash",
+        "form.attack",
+        "form.exit",
+        "form.recover"
+      ]
+    }
+  ],
+  "notes": [
+    "These are planned action IDs, not delivered clip counts.",
+    "No new conceptual references are required; source drawing still has clip-specific QA.",
+    "Never publish the user-supplied original artwork without verifying redistribution rights.",
+    "The original wardrobe image showing a sword near Sky's back is styling provenance ONLY; do not include in body-only canonical source PNG packs.",
+    "FX ZIP uses existing Visual Atlas region/sequence/state_set types; independently rendered full-sword frames remain upcoming.",
+    "Image optimization of existing published atlases is owned by another agent."
+  ]
+}
