@@ -42,6 +42,12 @@ def build(dest:Path|None=None):
         source_ref=('../../../tests/visual-scenarios.json' if len(rel.parts)>1 else '../../tests/visual-scenarios.json')
         hosted_ref=('../../qa/visual-scenarios.json' if len(rel.parts)>1 else '../qa/visual-scenarios.json')
         target.write_text(content.replace(source_ref,hosted_ref),encoding='utf-8')
+    # Production guides are authored once in docs/asset-production and
+    # copied to their hosted paths so AI recipe links keep resolving.
+    for guide in sorted((ROOT/'docs'/'asset-production').glob('*.md')):
+        target=dest/'asset-production'/guide.name
+        target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copy2(guide,target)
     (dest/'qa').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'tests'/'visual-scenarios.json',dest/'qa'/'visual-scenarios.json')
     (dest/'templates').mkdir(exist_ok=True)
