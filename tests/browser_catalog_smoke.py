@@ -64,11 +64,15 @@ def check(page):
     value=page.locator("#controls label").filter(has_text="value").locator('input[type=range]')
     def set_slider(control,value):
         control.evaluate("""(e,v)=>{e.value=String(v);e.dispatchEvent(new Event('input',{bubbles:true}))}""",value)
+    # Keep the exact slider element alive across capacity updates.
+    max_control.evaluate("(e)=>{window.__maxSliderBefore=e}")
     set_slider(max_control,1)
+    assert page.evaluate("window.__maxSliderBefore?.isConnected"), "Capacity input was replaced mid-drag"
     set_slider(value,3)
     expect(value).to_have_value("3")
     one_width=int(page.locator("#detail-canvas").get_attribute("width"))
     set_slider(max_control,20)
+    assert page.evaluate("window.__maxSliderBefore===document.querySelector('#controls input[data-input-key=max]')"), "Slider identity changed across capacity updates"
     set_slider(columns,10)
     set_slider(value,63)
     expect(value).to_have_value("63")
@@ -82,6 +86,10 @@ def check(page):
     assert toggle.count()==1, "Core controls must expose an interactive on/off checkbox"
     page.wait_for_timeout(120)
     off=page.locator("#detail-canvas").evaluate("(e)=>e.toDataURL()")
+    toggle.check()
+    assert page.locator("#controls button").count()>=1, "Toggle must offer declared event preview"
+    page.locator("#controls button").filter(has_text="Send activate").click()
+    expect(toggle).not_to_be_checked()
     toggle.check()
     page.wait_for_timeout(120)
     on=page.locator("#detail-canvas").evaluate("(e)=>e.toDataURL()")
