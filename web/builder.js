@@ -4,10 +4,11 @@
   const $ = id => document.getElementById(id);
   const Timeline = window.VisualAtlasTimeline, VisualCore = window.VisualAtlasVisualCore;
   if(!VisualCore)throw Error('Missing visual-core.js');
-  const Collections = window.VisualAtlasCollections, BagStore = window.VisualAtlasBagStore, Interactions = window.VisualAtlasInteraction, Slots = window.VisualAtlasSlots;
+  const Collections = window.VisualAtlasCollections, BagStore = window.VisualAtlasBagStore, Interactions = window.VisualAtlasInteraction, Slots = window.VisualAtlasSlots, Inputs = window.VisualAtlasInputs;
   if(!Collections)throw Error('Missing collection-core.js');
   if(!Interactions)throw Error('Missing interaction-core.js');
   if(!Slots)throw Error('Missing slot-core.js');
+  if(!Inputs)throw Error('Missing input-core.js');
   if(!Timeline)throw Error('Missing timeline-core.js');
   if (!window.JSZip) { $('builder-status').textContent = 'Local ZIP library missing: vendor/jszip.min.js'; return; }
   const library = new Map(); // unique asset ID -> authored/legacy asset
@@ -282,17 +283,13 @@
       btn.addEventListener('click',()=>{selectAsset(a.id);refreshList();renderControlPanel();});list.append(btn);
     }
   }
-  function repeatBound(asset,key,values){
-    const layer=(asset.layers||[]).find(l=>l.repeat?.value_input===key);
-    if(!layer)return null;
-    const r=layer.repeat,count=values[r.count_input]??asset.inputs[r.count_input].default;
-    return Math.max(0,Math.floor(Number(count)||1)*(r.levels.length-1));
-  }
   function renderControlPanel(){
     const a=library.get(ui.selected),controls=$('input-controls');controls.replaceChildren();
     $('preview-name').textContent=ui.isScene?'Composition':a?metaName(a):'Select an asset';
     $('preview-details').textContent=a?'ID: '+a.id+' · '+a.kind+' · License: '+(a.license||'unspecified'): 'Select any asset in the list';
     if(!a||ui.isScene)return;
+    const presetInputs=Slots.resolve(a,ui.preset).inputs;
+    const displayed=Inputs.reconcile(a,ui.controls,presetInputs);
     if(a.kind==='composition'&&(Object.keys(a.presets||{}).length||Object.keys(a.slots||{}).length)){
       if(Object.keys(a.presets||{}).length){
         const label=document.createElement('label');label.textContent='Preset';
