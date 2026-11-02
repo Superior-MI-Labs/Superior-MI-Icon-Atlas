@@ -35,7 +35,7 @@ fi
 "$PY" tools/ai_acceptance.py site/demo/character-animations.zip --acceptance examples/acceptance/character.json --out "${TMPDIR:-/tmp}/smi-visual-atlas-character-acceptance"
 "$PY" tools/ai_acceptance.py web/demo/potions-collection.zip --acceptance examples/acceptance/potion.json --out "${TMPDIR:-/tmp}/smi-visual-atlas-potion-acceptance"
 if command -v node >/dev/null 2>&1; then
-  for f in web/featured.js web/app.js web/builder.js web/timeline-core.js web/visual-core.js web/input-core.js web/collection-core.js web/bag-store.js web/interaction-core.js web/slot-core.js; do node --check "$f"; done
+  for f in web/featured.js web/app.js web/builder.js web/timeline-core.js web/visual-core.js web/input-core.js web/collection-core.js web/bag-store.js web/interaction-core.js web/slot-core.js web/asset-renderer.js; do node --check "$f"; done
   node --check web/featured.js
   node tests/browser-search.cjs
   node tests/builder-contract.cjs
@@ -44,5 +44,7 @@ if command -v node >/dev/null 2>&1; then
   node tests/visual-core.cjs
   node tests/collections-interaction.cjs
   node tests/slots-presets.cjs
+  node tests/repeat-layout.cjs
+  node tests/animation-pivot.cjs
 else echo 'WARNING: Node tests unavailable (Node not installed). GitHub CI will run these tests.'; fi
 printf '\nPASS: All locally available validations. Run: bash RUN-LOCALLY.sh\n'
