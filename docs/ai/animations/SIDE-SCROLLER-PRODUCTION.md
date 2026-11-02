@@ -70,6 +70,16 @@ For Sky, the creator approved the **shallow right-facing three-quarter depth** s
 
 **AI production gate:** create a small real drawn idle loop first, verify every frame and its seams, then cast/recall and hand-grab transitions. Fix the offending source frames rather than rebuilding the pack or adding more code. Mark only actual visually approved drawings `QUALIFIED`. Avoid compressing the other agent's published assets; use lossless PNG optimization and alpha trimming for new generated atlases only. The earlier A-vs-B size numbers are **not** criteria for overriding this decision.
 
+### Reference phase exit — real animation production has started
+
+**Creator instruction:** no more broad reference roundtrips. The original character/clothing reference, hip-rooted three feathered tails, masked cosmic eyes, slight three-quarter side camera, and traditionally drawn complete Shattered Sunblade define the locked identity. Technical side/back checks or missing alpha masks are **production source-art tasks**, not reasons to invent new costumes or request a new conceptual model board.
+
+Use the [315-action production inventory](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/ANIMATION-INVENTORY.json) as the single backlog. Select one family and author its actual PNG key poses/frames; do not pre-build every entry. The first handoff `Sky-Production-Kickoff-v1.zip` includes a **small candidate FX pack**: 7 sequences, 84 complete sprite frames, one atlas and a `sky.fx.preview` state selector. Structural local QA passed, but these are **NOT creator-approved game art** and the exact ZIP has not passed the real Visual Atlas Builder browser-import gate; don't publish the set.
+
+**One-step AI handoff rule:** reconstruct the user request → consume existing approved references and inventory → draw isolated, per-clip key poses → inspect/fix only failures → add true in-betweens → pack lossless atlases/manifests → run original Visual Atlas import/render tests → output ZIP with explicit PASS/HOLD receipt. Do not return to endless references, produce a composite fantasy infographic when asked for sprite frames, add a second renderer, or treat an image-optimization change as source-asset creation.
+
+**Role boundary:** source image showing a sword floating by Sky's back is **wardrobe provenance** only and is excluded from the canonical body-only frame reference set. The actual body animation must be swordless; whole-sword drawn clips stay separate. Do not independently implement the old shard rig.
+
 ## Gate P1 — smallest useful *working* animation slice
 
 Create these actual Visual Atlas assets first: relaxed side idle loop; run loop and an authored run-stop transition; three-tail idle secondary motion; and a separate dormant Sunblade orbit visualization. Build one **self-contained** ZIP using existing `smi-visual-pack/1` kinds and real measured PNG frames. Do not invent a controller property in this strict v1 schema.
