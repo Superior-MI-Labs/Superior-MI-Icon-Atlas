@@ -63,7 +63,7 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertEqual(pose["status"], "USER_APPROVED_WITH_POSITIONAL_ADJUSTMENT")
         self.assertIn("three-quarter", pose["view"])
         self.assertIn("lower back/hip/pelvic", pose["tail_attachment"])
-        self.assertIn("top two tails", pose["tail_attachment"].lower())
+        self.assertIn("upper two tails", pose["tail_attachment"].lower())
         self.assertTrue(self.plan["provenance"]["pose_direction_approved"])
         self.assertFalse(self.plan["provenance"]["corrected_hero_master_qualified"])
         self.assertFalse(self.plan["provenance"]["generated_reference_candidate_reviewed"])
