@@ -86,6 +86,32 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertTrue(self.plan["target"]["weapon"]["articulation"]["separate_actor"])
         self.assertEqual(self.plan["target"]["weapon"]["animation_approach"]["primary"], "traditionally_drawn_full_sword_frames")
 
+    def test_batch03_drawn_sword_is_a_real_candidate_not_falsely_published(self):
+        batch = self.plan["latest_sword_candidate"]
+        self.assertEqual(batch["pack_id"], "smi.sky.sunblade.drawn")
+        self.assertEqual(batch["animation_method"], "complete_frame_drawings_offline_vector_rasterized")
+        self.assertEqual(batch["frame_rate"], 16)
+        self.assertEqual(batch["states"], ["back_hover", "orbit", "cast", "recall", "grab_lock", "held_slash", "release"])
+        self.assertEqual(batch["loops"], ["back_hover", "orbit"])
+        self.assertEqual(batch["frame_count"], 84)
+        self.assertEqual(batch["sequence_count"], 7)
+        self.assertEqual(batch["asset_count"], 92)
+        self.assertEqual(batch["atlas_count"], 2)
+        self.assertEqual(batch["import_zip_bytes"], 5097676)
+        self.assertEqual(batch["decoded_atlas_bytes"], 27672064)
+        self.assertEqual(batch["untrimmed_decoded_bytes"], 58060800)
+        self.assertGreater(batch["atlas_decoded_savings_percent"], 50)
+        self.assertEqual(batch["raw_source_roundtrip"], "84_OF_84_EXACT_RGBA_PASS")
+        self.assertTrue(batch["no_runtime_fragment_controller"])
+        self.assertEqual(batch["official_visual_atlas_import"], "NOT_TESTED")
+        self.assertFalse(batch["full_sunblade_visual_approval"])
+        self.assertFalse(batch["public_catalog_approval"])
+        self.assertTrue((ROOT / batch["documentation"]).is_file())
+        self.assertTrue(self.plan["provenance"]["sunblade_batch03_source_qa"])
+        self.assertFalse(self.plan["provenance"]["sunblade_batch03_art_approved"])
+        self.assertFalse(self.plan["provenance"]["sunblade_batch03_published"])
+        self.assertEqual(self.plan["target"]["weapon"]["animation_approach"]["primary"], "traditionally_drawn_full_sword_frames")
+
     def test_creator_chose_traditional_sword_animation(self):
         sword = self.plan["target"]["weapon"]
         method = sword["animation_approach"]
