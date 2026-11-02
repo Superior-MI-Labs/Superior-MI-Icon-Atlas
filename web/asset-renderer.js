@@ -56,6 +56,34 @@
       const {width,height}=geometryFor(id,seen,values);
       return [width,height];
     }
+    // Keep legacy full-rectangle behavior unless a region explicitly declares a
+    // trim offset. Many existing packs use logical_size_px for display scaling
+    // without trimming; changing those assets would be a breaking change.
+    function regionRect(a,x,y,w,h){
+      if(!a.trim_offset_px)return [x,y,w,h];
+      if(!a.logical_size_px)throw Error('Trimmed region requires logical_size_px: '+a.id);
+      const [logicalW,logicalH]=a.logical_size_px,[cropW,cropH]=a.rect_px.slice(2);
+      const [offsetX,offsetY]=a.trim_offset_px;
+      if(logicalW<=0||logicalH<=0||offsetX<0||offsetY<0||offsetX+cropW>logicalW||offsetY+cropH>logicalH)
+        throw Error('Trimmed region outside logical canvas: '+a.id);
+      return [x+w*offsetX/logicalW,y+h*offsetY/logicalH,w*cropW/logicalW,h*cropH/logicalH];
+    }
+    // The regular drawAsset API places a logical top-left rectangle.
+    // Explicit pivot drawing is opt-in so existing UI assets do not move.
+    function pivotFor(id,time=0,stateOverride=null,seen=new Set()){
+      if(seen.has(id))throw Error('Cyclic pivot reference: '+id);
+      const a=getAsset(id);if(!a)throw Error('Missing asset '+id);
+      if(a.pivot)return a.pivot;
+      const next=new Set(seen);next.add(id);
+      if(a.kind==='sequence')return pivotFor(frameAt(a,time).asset,time,null,next);
+      if(a.kind==='state_set')return pivotFor(a.states[stateOverride&&a.states[stateOverride]?stateOverride:a.default_state],time,null,next);
+      return null;
+    }
+    async function drawAssetAtPivot(id,ctx,anchorX,anchorY,w,h,time,values={},stateOverride=null,stack=new Set(),slotOverrides=null,presetName=null){
+      const pivot=pivotFor(id,time,stateOverride);
+      if(!pivot)throw Error('Missing authored pivot for '+id);
+      return drawAsset(id,ctx,anchorX-w*pivot[0],anchorY-h*pivot[1],w,h,time,values,stateOverride,stack,slotOverrides,presetName);
+    }
     function nineSlice(ctx,img,src,target,margins){
       const [sx,sy,sw,sh]=src,[dx,dy,dw,dh]=target,[l,t,r,b]=margins;
       if(dw<l+r||dh<t+b){ctx.drawImage(img,sx,sy,sw,sh,dx,dy,dw,dh);return;}
@@ -81,8 +109,11 @@
       const next=new Set(stack);next.add(id);
       if(a.kind==='region'){
         const img=await getImage(a.texture),r=a.rect_px;
-        if(a.nine_slice_px)nineSlice(ctx,img,r,[x,y,w,h],a.nine_slice_px);
-        else ctx.drawImage(img,...r,x,y,w,h);
+        const dest=regionRect(a,x,y,w,h);
+        if(a.nine_slice_px){
+          if(a.trim_offset_px)throw Error('Trimmed nine-slice region is not supported: '+a.id);
+          nineSlice(ctx,img,r,dest,a.nine_slice_px);
+        }else ctx.drawImage(img,...r,...dest);
         return;
       }
       if(a.kind==='sequence'){
@@ -132,7 +163,7 @@
         }
       }finally{ctx.restore();}
     }
-    return Object.freeze({sizeFor,geometryFor,frameAt,drawAsset,repeatLayout});
+    return Object.freeze({sizeFor,geometryFor,frameAt,drawAsset,drawAssetAtPivot,pivotFor,regionRect,repeatLayout});
   }
   return Object.freeze({create});
 });
