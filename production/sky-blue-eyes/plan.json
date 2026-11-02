@@ -1,7 +1,7 @@
 {
   "schema": "smi-character-production-plan/1",
   "project_id": "smi.sky-blue-eyes.motion-foundation",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "status": "PREPRODUCTION",
   "runtime_support": "NOT_IMPLEMENTED",
   "description": "Grounded no-wing veiled desert wanderer: approved base clothing/silhouette, unqualified directional masters and unframed dialogue head. This is a planning manifest, NOT renderable animation artwork.",
@@ -775,13 +775,17 @@
     "reference_production_art_approval": "PER_ASSET_NOT_GLOBAL",
     "fx_first_batch_style_approved": false,
     "fx_first_batch_import_qualified": false,
-    "current_goal": "Produce approved body and traditional full-sword key poses, then real 16FPS animation sequences and qualifying ZIPs; do not request new reference concepts.",
+    "current_goal": "Bring nine swordless drawn body clips to canonical painterly quality, then qualify actual Builder ZIP import and hand socket synchronization; don't generate more poster references or misleading finished art counts.",
     "fx_second_batch_local_qa": true,
     "fx_second_batch_publication_approved": false,
     "sunblade_batch03_source_qa": true,
     "sunblade_batch03_art_approved": false,
     "sunblade_batch03_browser_qa": "NOT_TESTED",
-    "sunblade_batch03_published": false
+    "sunblade_batch03_published": false,
+    "body_batch04_source_geometry_pass": true,
+    "body_batch04_style_approved": false,
+    "body_batch04_browser_import": "NOT_TESTED",
+    "body_batch04_published": false
   },
   "design_direction_status": "LOCKED_NO_MORE_CONCEPT_ROUNDS",
   "production_inventory_path": "production/sky-blue-eyes/ANIMATION-INVENTORY.json",
@@ -869,5 +873,68 @@
     "public_catalog_approval": false,
     "source_location": "conversation archive; binary source files not committed",
     "no_runtime_fragment_controller": true
+  },
+  "latest_body_candidate": {
+    "name": "Sky Grounded Body Motion 0.1",
+    "documentation": "production/sky-blue-eyes/BODY-BATCH-04-RECEIPT.md",
+    "handoff_archive": "Sky-Animation-Production-Batch-04.zip",
+    "import_zip": "sky-body-grounded-v0.1.zip",
+    "pack_id": "smi.sky.body.grounded",
+    "pack_version": "0.1.0",
+    "source_kind": "SVG-authored distinct posed full-body drawings -> transparent RGBA PNG",
+    "source_dimensions_px": [
+      640,
+      512
+    ],
+    "art_fps": 16,
+    "clips": {
+      "sky.body.idle.relaxed": 12,
+      "sky.body.low_health.idle.loop": 12,
+      "sky.body.walk_run.walk.loop": 12,
+      "sky.body.walk_run.run.loop": 12,
+      "sky.body.walk_run.run.stop": 8,
+      "sky.body.jump.jump.rise": 8,
+      "sky.body.jump.jump.land.soft": 8,
+      "sky.body.martial_ground.claw.light_01": 12,
+      "sky.body.defense.parry.start": 8
+    },
+    "clip_count": 9,
+    "frames": 92,
+    "assets": 103,
+    "preview_state_sets": 2,
+    "atlas_pages": 4,
+    "atlas_width_height": [
+      [
+        2016,
+        2048
+      ],
+      [
+        2040,
+        2040
+      ],
+      [
+        2008,
+        2032
+      ],
+      [
+        312,
+        408
+      ]
+    ],
+    "import_zip_bytes": 7025327,
+    "decoded_atlas_bytes": 49991680,
+    "untrimmed_decoded_bytes": 120586240,
+    "decoded_atlas_reduction_percent": 58.5,
+    "raw_source_pixel_qa": "92_OF_92_EXACT_RGBA_PASS",
+    "unclipped_frame_count": 92,
+    "numeric_loop_diagnostics": "NORMAL_IDLE_LOW_IDLE_WALK_RUN_PASS",
+    "visual_style_approval": "HOLD_SIMPLIFIED_VECTOR_ART",
+    "real_visual_atlas_builder_import": "NOT_TESTED",
+    "host_game_attachment_test": "NOT_IMPLEMENTED",
+    "body_contains_sword": false,
+    "winged": false,
+    "tail_count": 3,
+    "artifact_location": "conversation handoff, binaries not in public repository",
+    "public_catalog_approved": false
   }
 }
