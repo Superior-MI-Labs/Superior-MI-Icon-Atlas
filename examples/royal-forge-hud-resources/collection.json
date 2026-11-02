@@ -1,0 +1,13 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.royalforge02.resources",
+  "name": "Royal Forge \u2014 HUD Resource Systems Vol. 1",
+  "version": "1.1.0",
+  "description": "Original fantasy RPG resource meters and life indicators",
+  "packs": [
+    {
+      "manifest": "manifest.json"
+    }
+  ],
+  "entry_asset": "smi.hud.royalforge02.widget.bar.royal.health"
+}

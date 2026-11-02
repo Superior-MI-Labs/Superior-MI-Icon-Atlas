@@ -1,0 +1,1 @@
+CC0-1.0: Original Royal Forge SVG and source textures; attribution appreciated, not required. No third-party textures or embedded fonts.

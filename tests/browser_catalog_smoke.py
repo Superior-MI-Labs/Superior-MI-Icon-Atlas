@@ -22,14 +22,14 @@ def check(page):
     errors = []
     page.on("pageerror", lambda err: errors.append(str(err)))
     page.reload(wait_until="networkidle")
-    expect(page.locator("#count")).to_have_text("70 matches", timeout=20000)
+    expect(page.locator("#count")).to_have_text("644 matches", timeout=20000)
 
     page.locator("#pack").select_option("legacy-icons")
     expect(page.locator("#count")).to_have_text("2,073 matches")
     page.locator("#domain").select_option("programming")
     expect(page.locator("#count")).to_have_text("195 matches")
     page.locator("#clear-filters").click()
-    expect(page.locator("#count")).to_have_text("70 matches")
+    expect(page.locator("#count")).to_have_text("644 matches")
 
     page.locator("#status").select_option("archive")
     expect(page.locator("#count")).to_have_text("2,073 matches")
@@ -53,6 +53,40 @@ def check(page):
     page.locator("#tint-enabled").check()
     page.locator("#detail-canvas").wait_for()
     page.locator("#close").click()
+    # Import both published ZIPs via their real public entrypoints and inspect controls.
+    url=page.url.split('?',1)[0]
+    page.goto(url+"?asset=smi.hud.royalforge02.widget.hearts.ruby.adaptive",wait_until="networkidle")
+    page.locator("#detail[open]").wait_for(timeout=20000)
+    sliders=page.locator("#controls input[type=range]")
+    assert sliders.count()==3, "Adaptive hearts must expose max, columns, and current value sliders"
+    max_control=page.locator("#controls label").filter(has_text="max").locator('input[type=range]')
+    columns=page.locator("#controls label").filter(has_text="columns").locator('input[type=range]')
+    value=page.locator("#controls label").filter(has_text="value").locator('input[type=range]')
+    def set_slider(control,value):
+        control.evaluate("""(e,v)=>{e.value=String(v);e.dispatchEvent(new Event('input',{bubbles:true}))}""",value)
+    set_slider(max_control,1)
+    set_slider(value,3)
+    expect(value).to_have_value("3")
+    one_width=int(page.locator("#detail-canvas").get_attribute("width"))
+    set_slider(max_control,20)
+    set_slider(columns,10)
+    set_slider(value,63)
+    expect(value).to_have_value("63")
+    page.wait_for_timeout(200)
+    many_width=int(page.locator("#detail-canvas").get_attribute("width"))
+    assert many_width>one_width, f"Adaptive preview dimensions did not expand: {one_width} to {many_width}"
+    page.locator("#close").click()
+    page.goto(url+"?asset=smi.ui.fantasy01.wave2.widget.toggle",wait_until="networkidle")
+    page.locator("#detail[open]").wait_for(timeout=20000)
+    toggle=page.locator("#controls input[type=checkbox]").first
+    assert toggle.count()==1, "Core controls must expose an interactive on/off checkbox"
+    page.wait_for_timeout(120)
+    off=page.locator("#detail-canvas").evaluate("(e)=>e.toDataURL()")
+    toggle.check()
+    page.wait_for_timeout(120)
+    on=page.locator("#detail-canvas").evaluate("(e)=>e.toDataURL()")
+    assert on!=off, "On/off toggle must visibly change when checked"
+    page.locator("#close").click()
     assert not errors, "Browser JavaScript errors: " + repr(errors)
     return page.locator("#count").inner_text()
 
@@ -72,7 +106,7 @@ def main():
                 print("Desktop:", check(page))
                 mobile = browser.new_page(viewport={"width": 390, "height": 844}, base_url=url)
                 mobile.goto(url, wait_until="networkidle")
-                expect(mobile.locator("#count")).to_have_text("70 matches", timeout=20000)
+                expect(mobile.locator("#count")).to_have_text("644 matches", timeout=20000)
                 assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Horizontal overflow on mobile"
                 print("Responsive viewport: PASS")
             finally:

@@ -120,6 +120,10 @@ def build(dest:Path|None=None):
             if relpath.is_absolute() or '..' in relpath.parts:raise ValueError('Unsafe manifest path')
             manifests.append(json.loads((full/relpath).read_text(encoding='utf-8')))
         if not manifests:raise ValueError('Empty public collection')
+        expected=record.get('expected_assets')
+        actual=sum(len(pack.get('assets',[])) for pack in manifests)
+        if not isinstance(expected,int) or isinstance(expected,bool) or expected<1 or expected!=actual:
+            raise ValueError(f'{folder}: publication inventory mismatch; expected {expected}, actual {actual}')
         pack_name=folder.name
         # Use the same generated ZIP as the existing builder importer.
         zip_name=pack_name+'.zip'

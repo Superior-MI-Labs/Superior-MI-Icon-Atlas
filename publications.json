@@ -5,7 +5,22 @@
       "path": "examples/fantasy-rpg-hud-wave1",
       "published": "2026-11-02",
       "approval": "Approved Wave 1 v0.2, 57 source regions with browser value-fidelity QA",
-      "rights": "CC0-1.0 original artwork"
+      "rights": "CC0-1.0 original artwork",
+      "expected_assets": 70
+    },
+    {
+      "path": "examples/royal-forge-controls",
+      "published": "2026-11-02",
+      "expected_assets": 214,
+      "approval": "Approved Royal Forge fantasy GUI Controls Wave 2; 214-addressable-asset collection",
+      "rights": "CC0-1.0 original generated/vector artwork"
+    },
+    {
+      "path": "examples/royal-forge-hud-resources",
+      "published": "2026-11-02",
+      "expected_assets": 360,
+      "approval": "User approved Royal Forge HUD Resources v1.1 including adaptive hearts/pips and corrected rims",
+      "rights": "CC0-1.0 original generated/vector artwork"
     }
   ]
 }

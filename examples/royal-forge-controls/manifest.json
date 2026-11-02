@@ -1,0 +1,6642 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.ui.fantasy01.wave2.controls",
+  "version": "0.2.0",
+  "description": "Royal Forge core controls expansion: new buttons, switches, navigation, steppers, selectors, dials, scroll parts and panels; retains all original Wave 2 IDs.",
+  "license": "CC0-1.0",
+  "textures": {
+    "atlas0": {
+      "path": "textures/fantasy-controls-00.png",
+      "width_px": 2048,
+      "height_px": 1024,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "7908f991b7165446c135c6be0a84c84d35df8660ba683be882798cb24f0acf94"
+    },
+    "atlas1": {
+      "path": "textures/fantasy-controls-01.png",
+      "width_px": 2048,
+      "height_px": 1280,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "0564d82478dce69de793ee14f059d3628c67bc63d4e36e682601ddb1bf2b073d"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.ui.fantasy01.wave2.button.primary.default",
+      "kind": "region",
+      "name": "Button Primary Default",
+      "texture": "atlas0",
+      "rect_px": [
+        8,
+        8,
+        252,
+        68
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "primary",
+        "default",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.primary.hover",
+      "kind": "region",
+      "name": "Button Primary Hover",
+      "texture": "atlas0",
+      "rect_px": [
+        268,
+        8,
+        252,
+        68
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "primary",
+        "hover",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.primary.pressed",
+      "kind": "region",
+      "name": "Button Primary Pressed",
+      "texture": "atlas0",
+      "rect_px": [
+        528,
+        8,
+        252,
+        68
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "primary",
+        "pressed",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.primary.disabled",
+      "kind": "region",
+      "name": "Button Primary Disabled",
+      "texture": "atlas0",
+      "rect_px": [
+        788,
+        8,
+        252,
+        68
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "primary",
+        "disabled",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.secondary.default",
+      "kind": "region",
+      "name": "Button Secondary Default",
+      "texture": "atlas0",
+      "rect_px": [
+        1048,
+        8,
+        208,
+        58
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "secondary",
+        "default",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.secondary.hover",
+      "kind": "region",
+      "name": "Button Secondary Hover",
+      "texture": "atlas0",
+      "rect_px": [
+        1264,
+        8,
+        208,
+        58
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "secondary",
+        "hover",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.secondary.pressed",
+      "kind": "region",
+      "name": "Button Secondary Pressed",
+      "texture": "atlas0",
+      "rect_px": [
+        1480,
+        8,
+        208,
+        58
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "secondary",
+        "pressed",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.secondary.disabled",
+      "kind": "region",
+      "name": "Button Secondary Disabled",
+      "texture": "atlas0",
+      "rect_px": [
+        1696,
+        8,
+        208,
+        58
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "secondary",
+        "disabled",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.icon.default",
+      "kind": "region",
+      "name": "Button Icon Default",
+      "texture": "atlas0",
+      "rect_px": [
+        1912,
+        8,
+        74,
+        68
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "icon",
+        "default",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.icon.hover",
+      "kind": "region",
+      "name": "Button Icon Hover",
+      "texture": "atlas0",
+      "rect_px": [
+        8,
+        84,
+        74,
+        68
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "icon",
+        "hover",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.icon.pressed",
+      "kind": "region",
+      "name": "Button Icon Pressed",
+      "texture": "atlas0",
+      "rect_px": [
+        90,
+        84,
+        74,
+        68
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "icon",
+        "pressed",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.icon.disabled",
+      "kind": "region",
+      "name": "Button Icon Disabled",
+      "texture": "atlas0",
+      "rect_px": [
+        172,
+        84,
+        74,
+        68
+      ],
+      "tags": [
+        "fantasy",
+        "rpg",
+        "button",
+        "icon",
+        "disabled",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.switch.off",
+      "kind": "region",
+      "name": "Toggle Switch Off",
+      "texture": "atlas0",
+      "rect_px": [
+        254,
+        84,
+        144,
+        64
+      ],
+      "tags": [
+        "toggle",
+        "switch",
+        "on-off",
+        "off",
+        "game-ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.switch.on",
+      "kind": "region",
+      "name": "Toggle Switch On",
+      "texture": "atlas0",
+      "rect_px": [
+        406,
+        84,
+        144,
+        64
+      ],
+      "tags": [
+        "toggle",
+        "switch",
+        "on-off",
+        "on",
+        "game-ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.switch.hover",
+      "kind": "region",
+      "name": "Toggle Switch Hover",
+      "texture": "atlas0",
+      "rect_px": [
+        558,
+        84,
+        144,
+        64
+      ],
+      "tags": [
+        "toggle",
+        "switch",
+        "on-off",
+        "hover",
+        "game-ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.switch.pressed",
+      "kind": "region",
+      "name": "Toggle Switch Pressed",
+      "texture": "atlas0",
+      "rect_px": [
+        710,
+        84,
+        144,
+        64
+      ],
+      "tags": [
+        "toggle",
+        "switch",
+        "on-off",
+        "pressed",
+        "game-ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.checkbox.square.unchecked",
+      "kind": "region",
+      "name": "Checkbox Square Unchecked",
+      "texture": "atlas0",
+      "rect_px": [
+        862,
+        84,
+        54,
+        54
+      ],
+      "tags": [
+        "checkbox",
+        "check",
+        "unchecked",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.checkbox.square.checked",
+      "kind": "region",
+      "name": "Checkbox Square Checked",
+      "texture": "atlas0",
+      "rect_px": [
+        924,
+        84,
+        54,
+        54
+      ],
+      "tags": [
+        "checkbox",
+        "check",
+        "checked",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.checkbox.square.disabled",
+      "kind": "region",
+      "name": "Checkbox Square Disabled",
+      "texture": "atlas0",
+      "rect_px": [
+        986,
+        84,
+        54,
+        54
+      ],
+      "tags": [
+        "checkbox",
+        "check",
+        "disabled",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.radio.round.unselected",
+      "kind": "region",
+      "name": "Radio Round Unselected",
+      "texture": "atlas0",
+      "rect_px": [
+        1048,
+        84,
+        54,
+        54
+      ],
+      "tags": [
+        "radio",
+        "selection",
+        "unselected",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.radio.round.selected",
+      "kind": "region",
+      "name": "Radio Round Selected",
+      "texture": "atlas0",
+      "rect_px": [
+        1110,
+        84,
+        54,
+        54
+      ],
+      "tags": [
+        "radio",
+        "selection",
+        "selected",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.inventory.square.empty",
+      "kind": "region",
+      "name": "Inventory Square Empty",
+      "texture": "atlas0",
+      "rect_px": [
+        1172,
+        84,
+        88,
+        88
+      ],
+      "tags": [
+        "inventory",
+        "equipment",
+        "slot",
+        "empty",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.inventory.square.hover",
+      "kind": "region",
+      "name": "Inventory Square Hover",
+      "texture": "atlas0",
+      "rect_px": [
+        1268,
+        84,
+        88,
+        88
+      ],
+      "tags": [
+        "inventory",
+        "equipment",
+        "slot",
+        "hover",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.inventory.square.selected",
+      "kind": "region",
+      "name": "Inventory Square Selected",
+      "texture": "atlas0",
+      "rect_px": [
+        1364,
+        84,
+        88,
+        88
+      ],
+      "tags": [
+        "inventory",
+        "equipment",
+        "slot",
+        "selected",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.inventory.square.locked",
+      "kind": "region",
+      "name": "Inventory Square Locked",
+      "texture": "atlas0",
+      "rect_px": [
+        1460,
+        84,
+        88,
+        88
+      ],
+      "tags": [
+        "inventory",
+        "equipment",
+        "slot",
+        "locked",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.inventory.square.rare",
+      "kind": "region",
+      "name": "Inventory Square Rare",
+      "texture": "atlas0",
+      "rect_px": [
+        1556,
+        84,
+        88,
+        88
+      ],
+      "tags": [
+        "inventory",
+        "equipment",
+        "slot",
+        "rare",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.inventory.square.epic",
+      "kind": "region",
+      "name": "Inventory Square Epic",
+      "texture": "atlas0",
+      "rect_px": [
+        1652,
+        84,
+        88,
+        88
+      ],
+      "tags": [
+        "inventory",
+        "equipment",
+        "slot",
+        "epic",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.hotbar.square.ready",
+      "kind": "region",
+      "name": "Hotbar Square Ready",
+      "texture": "atlas0",
+      "rect_px": [
+        1748,
+        84,
+        88,
+        88
+      ],
+      "tags": [
+        "hotbar",
+        "ability",
+        "slot",
+        "ready",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.hotbar.square.cooldown",
+      "kind": "region",
+      "name": "Hotbar Square Cooldown",
+      "texture": "atlas0",
+      "rect_px": [
+        1844,
+        84,
+        88,
+        88
+      ],
+      "tags": [
+        "hotbar",
+        "ability",
+        "slot",
+        "cooldown",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.hotbar.square.active",
+      "kind": "region",
+      "name": "Hotbar Square Active",
+      "texture": "atlas0",
+      "rect_px": [
+        1940,
+        84,
+        88,
+        88
+      ],
+      "tags": [
+        "hotbar",
+        "ability",
+        "slot",
+        "active",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.hotbar.square.locked",
+      "kind": "region",
+      "name": "Hotbar Square Locked",
+      "texture": "atlas0",
+      "rect_px": [
+        8,
+        180,
+        88,
+        88
+      ],
+      "tags": [
+        "hotbar",
+        "ability",
+        "slot",
+        "locked",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.indicator.pip.ready",
+      "kind": "region",
+      "name": "Indicator Pip Ready",
+      "texture": "atlas0",
+      "rect_px": [
+        104,
+        180,
+        48,
+        48
+      ],
+      "tags": [
+        "status",
+        "pip",
+        "ready",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.indicator.pip.spent",
+      "kind": "region",
+      "name": "Indicator Pip Spent",
+      "texture": "atlas0",
+      "rect_px": [
+        160,
+        180,
+        48,
+        48
+      ],
+      "tags": [
+        "status",
+        "pip",
+        "spent",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.indicator.pip.warning",
+      "kind": "region",
+      "name": "Indicator Pip Warning",
+      "texture": "atlas0",
+      "rect_px": [
+        216,
+        180,
+        48,
+        48
+      ],
+      "tags": [
+        "status",
+        "pip",
+        "warning",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.tab.menu.default",
+      "kind": "region",
+      "name": "Tab Menu Default",
+      "texture": "atlas0",
+      "rect_px": [
+        272,
+        180,
+        176,
+        53
+      ],
+      "tags": [
+        "tab",
+        "navigation",
+        "default",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.tab.menu.hover",
+      "kind": "region",
+      "name": "Tab Menu Hover",
+      "texture": "atlas0",
+      "rect_px": [
+        456,
+        180,
+        176,
+        53
+      ],
+      "tags": [
+        "tab",
+        "navigation",
+        "hover",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.tab.menu.selected",
+      "kind": "region",
+      "name": "Tab Menu Selected",
+      "texture": "atlas0",
+      "rect_px": [
+        640,
+        180,
+        176,
+        53
+      ],
+      "tags": [
+        "tab",
+        "navigation",
+        "selected",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.tab.menu.disabled",
+      "kind": "region",
+      "name": "Tab Menu Disabled",
+      "texture": "atlas0",
+      "rect_px": [
+        824,
+        180,
+        176,
+        53
+      ],
+      "tags": [
+        "tab",
+        "navigation",
+        "disabled",
+        "ui"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.panel.tooltip",
+      "kind": "region",
+      "name": "Panel Tooltip",
+      "texture": "atlas0",
+      "rect_px": [
+        1008,
+        180,
+        310,
+        180
+      ],
+      "tags": [
+        "panel",
+        "tooltip",
+        "resizable",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.panel.header",
+      "kind": "region",
+      "name": "Panel Header",
+      "texture": "atlas0",
+      "rect_px": [
+        1326,
+        180,
+        215,
+        48
+      ],
+      "tags": [
+        "header",
+        "title",
+        "panel",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.panel.corner",
+      "kind": "region",
+      "name": "Panel Corner",
+      "texture": "atlas0",
+      "rect_px": [
+        1549,
+        180,
+        56,
+        56
+      ],
+      "tags": [
+        "corner",
+        "ornament",
+        "panel",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.effect.pulse.frame0",
+      "kind": "region",
+      "name": "Effect Pulse Frame0",
+      "texture": "atlas0",
+      "rect_px": [
+        1613,
+        180,
+        82,
+        82
+      ],
+      "tags": [
+        "glow",
+        "pulse",
+        "animation",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.effect.pulse.frame1",
+      "kind": "region",
+      "name": "Effect Pulse Frame1",
+      "texture": "atlas0",
+      "rect_px": [
+        1703,
+        180,
+        82,
+        82
+      ],
+      "tags": [
+        "glow",
+        "pulse",
+        "animation",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.effect.pulse.frame2",
+      "kind": "region",
+      "name": "Effect Pulse Frame2",
+      "texture": "atlas0",
+      "rect_px": [
+        1793,
+        180,
+        82,
+        82
+      ],
+      "tags": [
+        "glow",
+        "pulse",
+        "animation",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.primary.states",
+      "kind": "state_set",
+      "name": "Ornate primary button states",
+      "default_state": "default",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.button.primary.default",
+        "hover": "smi.ui.fantasy01.wave2.button.primary.hover",
+        "pressed": "smi.ui.fantasy01.wave2.button.primary.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.button.primary.disabled"
+      },
+      "tags": [
+        "button",
+        "primary",
+        "states",
+        "fantasy",
+        "rpg"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.secondary.states",
+      "kind": "state_set",
+      "name": "Ornate secondary button states",
+      "default_state": "default",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.button.secondary.default",
+        "hover": "smi.ui.fantasy01.wave2.button.secondary.hover",
+        "pressed": "smi.ui.fantasy01.wave2.button.secondary.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.button.secondary.disabled"
+      },
+      "tags": [
+        "button",
+        "secondary",
+        "states",
+        "fantasy",
+        "rpg"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.icon.states",
+      "kind": "state_set",
+      "name": "Ornate icon button states",
+      "default_state": "default",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.button.icon.default",
+        "hover": "smi.ui.fantasy01.wave2.button.icon.hover",
+        "pressed": "smi.ui.fantasy01.wave2.button.icon.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.button.icon.disabled"
+      },
+      "tags": [
+        "button",
+        "icon",
+        "states",
+        "fantasy",
+        "rpg"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.switch.states",
+      "kind": "state_set",
+      "name": "Gold switch states",
+      "default_state": "off",
+      "states": {
+        "off": "smi.ui.fantasy01.wave2.toggle.switch.off",
+        "on": "smi.ui.fantasy01.wave2.toggle.switch.on",
+        "hover": "smi.ui.fantasy01.wave2.toggle.switch.hover",
+        "pressed": "smi.ui.fantasy01.wave2.toggle.switch.pressed"
+      },
+      "tags": [
+        "toggle",
+        "switch",
+        "states",
+        "fantasy",
+        "rpg"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.checkbox.square.states",
+      "kind": "state_set",
+      "name": "Square checkbox states",
+      "default_state": "unchecked",
+      "states": {
+        "unchecked": "smi.ui.fantasy01.wave2.checkbox.square.unchecked",
+        "checked": "smi.ui.fantasy01.wave2.checkbox.square.checked",
+        "disabled": "smi.ui.fantasy01.wave2.checkbox.square.disabled"
+      },
+      "tags": [
+        "checkbox",
+        "square",
+        "states",
+        "fantasy",
+        "rpg"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.radio.round.states",
+      "kind": "state_set",
+      "name": "Radio states",
+      "default_state": "unselected",
+      "states": {
+        "unselected": "smi.ui.fantasy01.wave2.radio.round.unselected",
+        "selected": "smi.ui.fantasy01.wave2.radio.round.selected"
+      },
+      "tags": [
+        "radio",
+        "round",
+        "states",
+        "fantasy",
+        "rpg"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.inventory.square.states",
+      "kind": "state_set",
+      "name": "Inventory socket states",
+      "default_state": "empty",
+      "states": {
+        "empty": "smi.ui.fantasy01.wave2.inventory.square.empty",
+        "hover": "smi.ui.fantasy01.wave2.inventory.square.hover",
+        "selected": "smi.ui.fantasy01.wave2.inventory.square.selected",
+        "locked": "smi.ui.fantasy01.wave2.inventory.square.locked",
+        "rare": "smi.ui.fantasy01.wave2.inventory.square.rare",
+        "epic": "smi.ui.fantasy01.wave2.inventory.square.epic"
+      },
+      "tags": [
+        "inventory",
+        "square",
+        "states",
+        "fantasy",
+        "rpg"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.hotbar.square.states",
+      "kind": "state_set",
+      "name": "Hotbar socket states",
+      "default_state": "ready",
+      "states": {
+        "ready": "smi.ui.fantasy01.wave2.hotbar.square.ready",
+        "cooldown": "smi.ui.fantasy01.wave2.hotbar.square.cooldown",
+        "active": "smi.ui.fantasy01.wave2.hotbar.square.active",
+        "locked": "smi.ui.fantasy01.wave2.hotbar.square.locked"
+      },
+      "tags": [
+        "hotbar",
+        "square",
+        "states",
+        "fantasy",
+        "rpg"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.indicator.pip.states",
+      "kind": "state_set",
+      "name": "Status pip states",
+      "default_state": "ready",
+      "states": {
+        "ready": "smi.ui.fantasy01.wave2.indicator.pip.ready",
+        "spent": "smi.ui.fantasy01.wave2.indicator.pip.spent",
+        "warning": "smi.ui.fantasy01.wave2.indicator.pip.warning"
+      },
+      "tags": [
+        "indicator",
+        "pip",
+        "states",
+        "fantasy",
+        "rpg"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.tab.menu.states",
+      "kind": "state_set",
+      "name": "Menu tab states",
+      "default_state": "default",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.tab.menu.default",
+        "hover": "smi.ui.fantasy01.wave2.tab.menu.hover",
+        "selected": "smi.ui.fantasy01.wave2.tab.menu.selected",
+        "disabled": "smi.ui.fantasy01.wave2.tab.menu.disabled"
+      },
+      "tags": [
+        "tab",
+        "menu",
+        "states",
+        "fantasy",
+        "rpg"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.effect.pulse.sequence",
+      "kind": "sequence",
+      "name": "Animated highlight pulse",
+      "default_fps": 8,
+      "playback": "loop",
+      "frames": [
+        {
+          "asset": "smi.ui.fantasy01.wave2.effect.pulse.frame0"
+        },
+        {
+          "asset": "smi.ui.fantasy01.wave2.effect.pulse.frame1"
+        },
+        {
+          "asset": "smi.ui.fantasy01.wave2.effect.pulse.frame2"
+        }
+      ],
+      "tags": [
+        "pulse",
+        "glow",
+        "animation",
+        "highlight"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.primary-button",
+      "kind": "composition",
+      "name": "Interactive gold button",
+      "size_px": [
+        252,
+        68
+      ],
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "button",
+          "asset": "smi.ui.fantasy01.wave2.button.primary.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "button",
+        "fantasy",
+        "interactive",
+        "hover",
+        "pressed"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.toggle",
+      "kind": "composition",
+      "name": "Interactive on/off toggle",
+      "size_px": [
+        144,
+        64
+      ],
+      "inputs": {
+        "enabled": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "behavior": {
+        "role": "toggle",
+        "outputs": {
+          "enabled": {
+            "from_input": "enabled"
+          }
+        },
+        "on": {
+          "activate": [
+            {
+              "op": "toggle",
+              "input": "enabled"
+            },
+            {
+              "op": "emit",
+              "event": "changed"
+            }
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "off",
+          "asset": "smi.ui.fantasy01.wave2.toggle.switch.off",
+          "visible_when": {
+            "input": "enabled",
+            "equals": false
+          }
+        },
+        {
+          "id": "on",
+          "asset": "smi.ui.fantasy01.wave2.toggle.switch.on",
+          "visible_when": {
+            "input": "enabled",
+            "equals": true
+          }
+        }
+      ],
+      "tags": [
+        "toggle",
+        "switch",
+        "on-off",
+        "fantasy",
+        "interactive"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.tooltip",
+      "kind": "composition",
+      "name": "Fantasy tooltip frame",
+      "size_px": [
+        310,
+        180
+      ],
+      "layers": [
+        {
+          "id": "panel",
+          "asset": "smi.ui.fantasy01.wave2.panel.tooltip"
+        },
+        {
+          "id": "header",
+          "asset": "smi.ui.fantasy01.wave2.panel.header",
+          "offset_px": [
+            47,
+            14
+          ]
+        }
+      ],
+      "tags": [
+        "tooltip",
+        "panel",
+        "fantasy",
+        "gui"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.danger.default",
+      "kind": "region",
+      "name": "Button Danger Default",
+      "texture": "atlas1",
+      "rect_px": [
+        8,
+        8,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "danger",
+        "default",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.danger.hover",
+      "kind": "region",
+      "name": "Button Danger Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        264,
+        8,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "danger",
+        "hover",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.danger.pressed",
+      "kind": "region",
+      "name": "Button Danger Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        520,
+        8,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "danger",
+        "pressed",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.danger.disabled",
+      "kind": "region",
+      "name": "Button Danger Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        776,
+        8,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "danger",
+        "disabled",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.danger.states",
+      "kind": "state_set",
+      "name": "Button Danger States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.button.danger.default",
+        "hover": "smi.ui.fantasy01.wave2.button.danger.hover",
+        "pressed": "smi.ui.fantasy01.wave2.button.danger.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.button.danger.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "button",
+        "danger",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.button-danger",
+      "kind": "composition",
+      "name": "Danger Action Button",
+      "size_px": [
+        248,
+        64
+      ],
+      "layers": [
+        {
+          "id": "plate",
+          "asset": "smi.ui.fantasy01.wave2.button.danger.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "button-danger",
+        "button",
+        "activate",
+        "hover",
+        "pressed",
+        "disabled",
+        "danger",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.accept.default",
+      "kind": "region",
+      "name": "Button Accept Default",
+      "texture": "atlas1",
+      "rect_px": [
+        1032,
+        8,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "accept",
+        "default",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.accept.hover",
+      "kind": "region",
+      "name": "Button Accept Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        1288,
+        8,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "accept",
+        "hover",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.accept.pressed",
+      "kind": "region",
+      "name": "Button Accept Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        1544,
+        8,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "accept",
+        "pressed",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.accept.disabled",
+      "kind": "region",
+      "name": "Button Accept Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        8,
+        80,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "accept",
+        "disabled",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.accept.states",
+      "kind": "state_set",
+      "name": "Button Accept States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.button.accept.default",
+        "hover": "smi.ui.fantasy01.wave2.button.accept.hover",
+        "pressed": "smi.ui.fantasy01.wave2.button.accept.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.button.accept.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "button",
+        "accept",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.button-accept",
+      "kind": "composition",
+      "name": "Accept Action Button",
+      "size_px": [
+        248,
+        64
+      ],
+      "layers": [
+        {
+          "id": "plate",
+          "asset": "smi.ui.fantasy01.wave2.button.accept.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "button-accept",
+        "button",
+        "activate",
+        "hover",
+        "pressed",
+        "disabled",
+        "accept",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.arcane.default",
+      "kind": "region",
+      "name": "Button Arcane Default",
+      "texture": "atlas1",
+      "rect_px": [
+        264,
+        80,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "arcane",
+        "default",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.arcane.hover",
+      "kind": "region",
+      "name": "Button Arcane Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        520,
+        80,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "arcane",
+        "hover",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.arcane.pressed",
+      "kind": "region",
+      "name": "Button Arcane Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        776,
+        80,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "arcane",
+        "pressed",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.arcane.disabled",
+      "kind": "region",
+      "name": "Button Arcane Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        1032,
+        80,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "arcane",
+        "disabled",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.arcane.states",
+      "kind": "state_set",
+      "name": "Button Arcane States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.button.arcane.default",
+        "hover": "smi.ui.fantasy01.wave2.button.arcane.hover",
+        "pressed": "smi.ui.fantasy01.wave2.button.arcane.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.button.arcane.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "button",
+        "arcane",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.button-arcane",
+      "kind": "composition",
+      "name": "Arcane Action Button",
+      "size_px": [
+        248,
+        64
+      ],
+      "layers": [
+        {
+          "id": "plate",
+          "asset": "smi.ui.fantasy01.wave2.button.arcane.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "button-arcane",
+        "button",
+        "activate",
+        "hover",
+        "pressed",
+        "disabled",
+        "arcane",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.night.default",
+      "kind": "region",
+      "name": "Button Night Default",
+      "texture": "atlas1",
+      "rect_px": [
+        1288,
+        80,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "night",
+        "default",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.night.hover",
+      "kind": "region",
+      "name": "Button Night Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        1544,
+        80,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "night",
+        "hover",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.night.pressed",
+      "kind": "region",
+      "name": "Button Night Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        8,
+        152,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "night",
+        "pressed",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.night.disabled",
+      "kind": "region",
+      "name": "Button Night Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        264,
+        152,
+        248,
+        64
+      ],
+      "tags": [
+        "button",
+        "night",
+        "disabled",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.night.states",
+      "kind": "state_set",
+      "name": "Button Night States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.button.night.default",
+        "hover": "smi.ui.fantasy01.wave2.button.night.hover",
+        "pressed": "smi.ui.fantasy01.wave2.button.night.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.button.night.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "button",
+        "night",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.button-night",
+      "kind": "composition",
+      "name": "Night Action Button",
+      "size_px": [
+        248,
+        64
+      ],
+      "layers": [
+        {
+          "id": "plate",
+          "asset": "smi.ui.fantasy01.wave2.button.night.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "button-night",
+        "button",
+        "activate",
+        "hover",
+        "pressed",
+        "disabled",
+        "night",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.compact.default",
+      "kind": "region",
+      "name": "Button Compact Default",
+      "texture": "atlas1",
+      "rect_px": [
+        520,
+        152,
+        160,
+        54
+      ],
+      "tags": [
+        "button",
+        "compact",
+        "default",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.compact.hover",
+      "kind": "region",
+      "name": "Button Compact Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        688,
+        152,
+        160,
+        54
+      ],
+      "tags": [
+        "button",
+        "compact",
+        "hover",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.compact.pressed",
+      "kind": "region",
+      "name": "Button Compact Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        856,
+        152,
+        160,
+        54
+      ],
+      "tags": [
+        "button",
+        "compact",
+        "pressed",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.compact.disabled",
+      "kind": "region",
+      "name": "Button Compact Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        1024,
+        152,
+        160,
+        54
+      ],
+      "tags": [
+        "button",
+        "compact",
+        "disabled",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.button.compact.states",
+      "kind": "state_set",
+      "name": "Button Compact States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.button.compact.default",
+        "hover": "smi.ui.fantasy01.wave2.button.compact.hover",
+        "pressed": "smi.ui.fantasy01.wave2.button.compact.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.button.compact.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "button",
+        "compact",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.button-compact",
+      "kind": "composition",
+      "name": "Compact Action Button",
+      "size_px": [
+        160,
+        54
+      ],
+      "layers": [
+        {
+          "id": "plate",
+          "asset": "smi.ui.fantasy01.wave2.button.compact.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "button-compact",
+        "button",
+        "activate",
+        "hover",
+        "pressed",
+        "disabled",
+        "compact",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.ruby.default",
+      "kind": "region",
+      "name": "Round Ruby Default",
+      "texture": "atlas1",
+      "rect_px": [
+        1192,
+        152,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "ruby",
+        "default",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.ruby.hover",
+      "kind": "region",
+      "name": "Round Ruby Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        1272,
+        152,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "ruby",
+        "hover",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.ruby.pressed",
+      "kind": "region",
+      "name": "Round Ruby Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        1352,
+        152,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "ruby",
+        "pressed",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.ruby.disabled",
+      "kind": "region",
+      "name": "Round Ruby Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        1432,
+        152,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "ruby",
+        "disabled",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.ruby.states",
+      "kind": "state_set",
+      "name": "Round Ruby States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.round.ruby.default",
+        "hover": "smi.ui.fantasy01.wave2.round.ruby.hover",
+        "pressed": "smi.ui.fantasy01.wave2.round.ruby.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.round.ruby.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "round",
+        "ruby",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.button-round-ruby",
+      "kind": "composition",
+      "name": "Round-Ruby Action Button",
+      "size_px": [
+        72,
+        72
+      ],
+      "layers": [
+        {
+          "id": "plate",
+          "asset": "smi.ui.fantasy01.wave2.round.ruby.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "button-round-ruby",
+        "button",
+        "activate",
+        "hover",
+        "pressed",
+        "disabled",
+        "round-ruby",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.aqua.default",
+      "kind": "region",
+      "name": "Round Aqua Default",
+      "texture": "atlas1",
+      "rect_px": [
+        1512,
+        152,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "aqua",
+        "default",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.aqua.hover",
+      "kind": "region",
+      "name": "Round Aqua Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        1592,
+        152,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "aqua",
+        "hover",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.aqua.pressed",
+      "kind": "region",
+      "name": "Round Aqua Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        1672,
+        152,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "aqua",
+        "pressed",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.aqua.disabled",
+      "kind": "region",
+      "name": "Round Aqua Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        1752,
+        152,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "aqua",
+        "disabled",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.aqua.states",
+      "kind": "state_set",
+      "name": "Round Aqua States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.round.aqua.default",
+        "hover": "smi.ui.fantasy01.wave2.round.aqua.hover",
+        "pressed": "smi.ui.fantasy01.wave2.round.aqua.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.round.aqua.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "round",
+        "aqua",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.button-round-aqua",
+      "kind": "composition",
+      "name": "Round-Aqua Action Button",
+      "size_px": [
+        72,
+        72
+      ],
+      "layers": [
+        {
+          "id": "plate",
+          "asset": "smi.ui.fantasy01.wave2.round.aqua.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "button-round-aqua",
+        "button",
+        "activate",
+        "hover",
+        "pressed",
+        "disabled",
+        "round-aqua",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.jade.default",
+      "kind": "region",
+      "name": "Round Jade Default",
+      "texture": "atlas1",
+      "rect_px": [
+        1832,
+        152,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "jade",
+        "default",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.jade.hover",
+      "kind": "region",
+      "name": "Round Jade Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        1912,
+        152,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "jade",
+        "hover",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.jade.pressed",
+      "kind": "region",
+      "name": "Round Jade Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        8,
+        232,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "jade",
+        "pressed",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.jade.disabled",
+      "kind": "region",
+      "name": "Round Jade Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        88,
+        232,
+        72,
+        72
+      ],
+      "tags": [
+        "round",
+        "jade",
+        "disabled",
+        "circle",
+        "button",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.round.jade.states",
+      "kind": "state_set",
+      "name": "Round Jade States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.round.jade.default",
+        "hover": "smi.ui.fantasy01.wave2.round.jade.hover",
+        "pressed": "smi.ui.fantasy01.wave2.round.jade.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.round.jade.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "round",
+        "jade",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.button-round-jade",
+      "kind": "composition",
+      "name": "Round-Jade Action Button",
+      "size_px": [
+        72,
+        72
+      ],
+      "layers": [
+        {
+          "id": "plate",
+          "asset": "smi.ui.fantasy01.wave2.round.jade.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "button-round-jade",
+        "button",
+        "activate",
+        "hover",
+        "pressed",
+        "disabled",
+        "round-jade",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.buttons"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.up.default",
+      "kind": "region",
+      "name": "Arrow Up Default",
+      "texture": "atlas1",
+      "rect_px": [
+        168,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "up",
+        "default",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.up.hover",
+      "kind": "region",
+      "name": "Arrow Up Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        242,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "up",
+        "hover",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.up.pressed",
+      "kind": "region",
+      "name": "Arrow Up Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        316,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "up",
+        "pressed",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.up.disabled",
+      "kind": "region",
+      "name": "Arrow Up Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        390,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "up",
+        "disabled",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.up.states",
+      "kind": "state_set",
+      "name": "Arrow Up States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.arrow.up.default",
+        "hover": "smi.ui.fantasy01.wave2.arrow.up.hover",
+        "pressed": "smi.ui.fantasy01.wave2.arrow.up.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.arrow.up.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "arrow",
+        "up",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.arrow-up",
+      "kind": "composition",
+      "name": "Up Navigation Button",
+      "size_px": [
+        66,
+        66
+      ],
+      "layers": [
+        {
+          "id": "body",
+          "asset": "smi.ui.fantasy01.wave2.arrow.up.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "arrow-up",
+        "navigation",
+        "arrow",
+        "up",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.down.default",
+      "kind": "region",
+      "name": "Arrow Down Default",
+      "texture": "atlas1",
+      "rect_px": [
+        464,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "down",
+        "default",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.down.hover",
+      "kind": "region",
+      "name": "Arrow Down Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        538,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "down",
+        "hover",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.down.pressed",
+      "kind": "region",
+      "name": "Arrow Down Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        612,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "down",
+        "pressed",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.down.disabled",
+      "kind": "region",
+      "name": "Arrow Down Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        686,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "down",
+        "disabled",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.down.states",
+      "kind": "state_set",
+      "name": "Arrow Down States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.arrow.down.default",
+        "hover": "smi.ui.fantasy01.wave2.arrow.down.hover",
+        "pressed": "smi.ui.fantasy01.wave2.arrow.down.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.arrow.down.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "arrow",
+        "down",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.arrow-down",
+      "kind": "composition",
+      "name": "Down Navigation Button",
+      "size_px": [
+        66,
+        66
+      ],
+      "layers": [
+        {
+          "id": "body",
+          "asset": "smi.ui.fantasy01.wave2.arrow.down.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "arrow-down",
+        "navigation",
+        "arrow",
+        "down",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.left.default",
+      "kind": "region",
+      "name": "Arrow Left Default",
+      "texture": "atlas1",
+      "rect_px": [
+        760,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "left",
+        "default",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.left.hover",
+      "kind": "region",
+      "name": "Arrow Left Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        834,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "left",
+        "hover",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.left.pressed",
+      "kind": "region",
+      "name": "Arrow Left Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        908,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "left",
+        "pressed",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.left.disabled",
+      "kind": "region",
+      "name": "Arrow Left Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        982,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "left",
+        "disabled",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.left.states",
+      "kind": "state_set",
+      "name": "Arrow Left States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.arrow.left.default",
+        "hover": "smi.ui.fantasy01.wave2.arrow.left.hover",
+        "pressed": "smi.ui.fantasy01.wave2.arrow.left.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.arrow.left.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "arrow",
+        "left",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.arrow-left",
+      "kind": "composition",
+      "name": "Left Navigation Button",
+      "size_px": [
+        66,
+        66
+      ],
+      "layers": [
+        {
+          "id": "body",
+          "asset": "smi.ui.fantasy01.wave2.arrow.left.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "arrow-left",
+        "navigation",
+        "arrow",
+        "left",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.right.default",
+      "kind": "region",
+      "name": "Arrow Right Default",
+      "texture": "atlas1",
+      "rect_px": [
+        1056,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "right",
+        "default",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.right.hover",
+      "kind": "region",
+      "name": "Arrow Right Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        1130,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "right",
+        "hover",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.right.pressed",
+      "kind": "region",
+      "name": "Arrow Right Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        1204,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "right",
+        "pressed",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.right.disabled",
+      "kind": "region",
+      "name": "Arrow Right Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        1278,
+        232,
+        66,
+        66
+      ],
+      "tags": [
+        "arrow",
+        "right",
+        "disabled",
+        "navigation",
+        "chevron",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.arrow.right.states",
+      "kind": "state_set",
+      "name": "Arrow Right States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.arrow.right.default",
+        "hover": "smi.ui.fantasy01.wave2.arrow.right.hover",
+        "pressed": "smi.ui.fantasy01.wave2.arrow.right.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.arrow.right.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "arrow",
+        "right",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.arrow-right",
+      "kind": "composition",
+      "name": "Right Navigation Button",
+      "size_px": [
+        66,
+        66
+      ],
+      "layers": [
+        {
+          "id": "body",
+          "asset": "smi.ui.fantasy01.wave2.arrow.right.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "arrow-right",
+        "navigation",
+        "arrow",
+        "right",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.navigation.arrows"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.lever.off",
+      "kind": "region",
+      "name": "Toggle Lever Off",
+      "texture": "atlas1",
+      "rect_px": [
+        1352,
+        232,
+        168,
+        68
+      ],
+      "tags": [
+        "toggle",
+        "lever",
+        "off",
+        "switch",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.lever.on",
+      "kind": "region",
+      "name": "Toggle Lever On",
+      "texture": "atlas1",
+      "rect_px": [
+        1528,
+        232,
+        168,
+        68
+      ],
+      "tags": [
+        "toggle",
+        "lever",
+        "on",
+        "switch",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.lever.disabled",
+      "kind": "region",
+      "name": "Toggle Lever Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        1704,
+        232,
+        168,
+        68
+      ],
+      "tags": [
+        "toggle",
+        "lever",
+        "disabled",
+        "switch",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.lever.states",
+      "kind": "state_set",
+      "name": "Toggle Lever States",
+      "states": {
+        "off": "smi.ui.fantasy01.wave2.toggle.lever.off",
+        "on": "smi.ui.fantasy01.wave2.toggle.lever.on",
+        "disabled": "smi.ui.fantasy01.wave2.toggle.lever.disabled"
+      },
+      "default_state": "off",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "toggle",
+        "lever",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.toggle-lever",
+      "kind": "composition",
+      "name": "Toggle Lever",
+      "size_px": [
+        168,
+        68
+      ],
+      "layers": [
+        {
+          "id": "off",
+          "asset": "smi.ui.fantasy01.wave2.toggle.lever.off",
+          "visible_when": {
+            "input": "enabled",
+            "equals": false
+          }
+        },
+        {
+          "id": "on",
+          "asset": "smi.ui.fantasy01.wave2.toggle.lever.on",
+          "visible_when": {
+            "input": "enabled",
+            "equals": true
+          }
+        }
+      ],
+      "tags": [
+        "toggle-lever",
+        "toggle",
+        "on",
+        "off",
+        "boolean",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "enabled": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "behavior": {
+        "role": "toggle",
+        "outputs": {
+          "enabled": {
+            "from_input": "enabled"
+          }
+        },
+        "on": {
+          "activate": [
+            {
+              "op": "toggle",
+              "input": "enabled"
+            },
+            {
+              "op": "emit",
+              "event": "changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.jewel.off",
+      "kind": "region",
+      "name": "Toggle Jewel Off",
+      "texture": "atlas1",
+      "rect_px": [
+        8,
+        312,
+        168,
+        68
+      ],
+      "tags": [
+        "toggle",
+        "jewel",
+        "off",
+        "switch",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.jewel.on",
+      "kind": "region",
+      "name": "Toggle Jewel On",
+      "texture": "atlas1",
+      "rect_px": [
+        184,
+        312,
+        168,
+        68
+      ],
+      "tags": [
+        "toggle",
+        "jewel",
+        "on",
+        "switch",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.jewel.disabled",
+      "kind": "region",
+      "name": "Toggle Jewel Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        360,
+        312,
+        168,
+        68
+      ],
+      "tags": [
+        "toggle",
+        "jewel",
+        "disabled",
+        "switch",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.toggle.jewel.states",
+      "kind": "state_set",
+      "name": "Toggle Jewel States",
+      "states": {
+        "off": "smi.ui.fantasy01.wave2.toggle.jewel.off",
+        "on": "smi.ui.fantasy01.wave2.toggle.jewel.on",
+        "disabled": "smi.ui.fantasy01.wave2.toggle.jewel.disabled"
+      },
+      "default_state": "off",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "toggle",
+        "jewel",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.toggle-jewel",
+      "kind": "composition",
+      "name": "Toggle Jewel",
+      "size_px": [
+        168,
+        68
+      ],
+      "layers": [
+        {
+          "id": "off",
+          "asset": "smi.ui.fantasy01.wave2.toggle.jewel.off",
+          "visible_when": {
+            "input": "enabled",
+            "equals": false
+          }
+        },
+        {
+          "id": "on",
+          "asset": "smi.ui.fantasy01.wave2.toggle.jewel.on",
+          "visible_when": {
+            "input": "enabled",
+            "equals": true
+          }
+        }
+      ],
+      "tags": [
+        "toggle-jewel",
+        "toggle",
+        "on",
+        "off",
+        "boolean",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "enabled": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "behavior": {
+        "role": "toggle",
+        "outputs": {
+          "enabled": {
+            "from_input": "enabled"
+          }
+        },
+        "on": {
+          "activate": [
+            {
+              "op": "toggle",
+              "input": "enabled"
+            },
+            {
+              "op": "emit",
+              "event": "changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.checkbox.diamond.unchecked",
+      "kind": "region",
+      "name": "Checkbox Diamond Unchecked",
+      "texture": "atlas1",
+      "rect_px": [
+        536,
+        312,
+        72,
+        72
+      ],
+      "tags": [
+        "checkbox",
+        "diamond",
+        "unchecked",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.checkboxes"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.checkbox.diamond.checked",
+      "kind": "region",
+      "name": "Checkbox Diamond Checked",
+      "texture": "atlas1",
+      "rect_px": [
+        616,
+        312,
+        72,
+        72
+      ],
+      "tags": [
+        "checkbox",
+        "diamond",
+        "checked",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.checkboxes"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.checkbox.diamond.hover",
+      "kind": "region",
+      "name": "Checkbox Diamond Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        696,
+        312,
+        72,
+        72
+      ],
+      "tags": [
+        "checkbox",
+        "diamond",
+        "hover",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.checkboxes"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.checkbox.diamond.disabled",
+      "kind": "region",
+      "name": "Checkbox Diamond Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        776,
+        312,
+        72,
+        72
+      ],
+      "tags": [
+        "checkbox",
+        "diamond",
+        "disabled",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.checkboxes"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.checkbox.diamond.states",
+      "kind": "state_set",
+      "name": "Checkbox Diamond States",
+      "states": {
+        "unchecked": "smi.ui.fantasy01.wave2.checkbox.diamond.unchecked",
+        "checked": "smi.ui.fantasy01.wave2.checkbox.diamond.checked",
+        "hover": "smi.ui.fantasy01.wave2.checkbox.diamond.hover",
+        "disabled": "smi.ui.fantasy01.wave2.checkbox.diamond.disabled"
+      },
+      "default_state": "unchecked",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "checkbox",
+        "diamond",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.checkboxes"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.checkbox-diamond",
+      "kind": "composition",
+      "name": "Checkbox Diamond",
+      "size_px": [
+        72,
+        72
+      ],
+      "layers": [
+        {
+          "id": "off",
+          "asset": "smi.ui.fantasy01.wave2.checkbox.diamond.unchecked",
+          "visible_when": {
+            "input": "enabled",
+            "equals": false
+          }
+        },
+        {
+          "id": "on",
+          "asset": "smi.ui.fantasy01.wave2.checkbox.diamond.checked",
+          "visible_when": {
+            "input": "enabled",
+            "equals": true
+          }
+        }
+      ],
+      "tags": [
+        "checkbox-diamond",
+        "toggle",
+        "on",
+        "off",
+        "boolean",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "enabled": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "behavior": {
+        "role": "toggle",
+        "outputs": {
+          "enabled": {
+            "from_input": "enabled"
+          }
+        },
+        "on": {
+          "activate": [
+            {
+              "op": "toggle",
+              "input": "enabled"
+            },
+            {
+              "op": "emit",
+              "event": "changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.radio.gem.unselected",
+      "kind": "region",
+      "name": "Radio Gem Unselected",
+      "texture": "atlas1",
+      "rect_px": [
+        856,
+        312,
+        72,
+        72
+      ],
+      "tags": [
+        "radio",
+        "gem",
+        "unselected",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.radio"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.radio.gem.selected",
+      "kind": "region",
+      "name": "Radio Gem Selected",
+      "texture": "atlas1",
+      "rect_px": [
+        936,
+        312,
+        72,
+        72
+      ],
+      "tags": [
+        "radio",
+        "gem",
+        "selected",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.radio"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.radio.gem.disabled",
+      "kind": "region",
+      "name": "Radio Gem Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        1016,
+        312,
+        72,
+        72
+      ],
+      "tags": [
+        "radio",
+        "gem",
+        "disabled",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.radio"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.radio.gem.states",
+      "kind": "state_set",
+      "name": "Radio Gem States",
+      "states": {
+        "unselected": "smi.ui.fantasy01.wave2.radio.gem.unselected",
+        "selected": "smi.ui.fantasy01.wave2.radio.gem.selected",
+        "disabled": "smi.ui.fantasy01.wave2.radio.gem.disabled"
+      },
+      "default_state": "unselected",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "radio",
+        "gem",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.radio"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.radio-gem",
+      "kind": "composition",
+      "name": "Radio Gem",
+      "size_px": [
+        72,
+        72
+      ],
+      "layers": [
+        {
+          "id": "off",
+          "asset": "smi.ui.fantasy01.wave2.radio.gem.unselected",
+          "visible_when": {
+            "input": "enabled",
+            "equals": false
+          }
+        },
+        {
+          "id": "on",
+          "asset": "smi.ui.fantasy01.wave2.radio.gem.selected",
+          "visible_when": {
+            "input": "enabled",
+            "equals": true
+          }
+        }
+      ],
+      "tags": [
+        "radio-gem",
+        "toggle",
+        "on",
+        "off",
+        "boolean",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.switches"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "enabled": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "behavior": {
+        "role": "toggle",
+        "outputs": {
+          "enabled": {
+            "from_input": "enabled"
+          }
+        },
+        "on": {
+          "activate": [
+            {
+              "op": "toggle",
+              "input": "enabled"
+            },
+            {
+              "op": "emit",
+              "event": "changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.segment.royal.left",
+      "kind": "region",
+      "name": "Segment Royal Left",
+      "texture": "atlas1",
+      "rect_px": [
+        1096,
+        312,
+        216,
+        64
+      ],
+      "tags": [
+        "segment",
+        "royal",
+        "left",
+        "three-way",
+        "selector",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.selectors"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.segment.royal.center",
+      "kind": "region",
+      "name": "Segment Royal Center",
+      "texture": "atlas1",
+      "rect_px": [
+        1320,
+        312,
+        216,
+        64
+      ],
+      "tags": [
+        "segment",
+        "royal",
+        "center",
+        "three-way",
+        "selector",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.selectors"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.segment.royal.right",
+      "kind": "region",
+      "name": "Segment Royal Right",
+      "texture": "atlas1",
+      "rect_px": [
+        1544,
+        312,
+        216,
+        64
+      ],
+      "tags": [
+        "segment",
+        "royal",
+        "right",
+        "three-way",
+        "selector",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.selectors"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.segment.royal.states",
+      "kind": "state_set",
+      "name": "Segment Royal States",
+      "states": {
+        "left": "smi.ui.fantasy01.wave2.segment.royal.left",
+        "center": "smi.ui.fantasy01.wave2.segment.royal.center",
+        "right": "smi.ui.fantasy01.wave2.segment.royal.right"
+      },
+      "default_state": "left",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "segment",
+        "royal",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.selectors"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.segment-royal",
+      "kind": "composition",
+      "name": "Three-Way Royal Selector",
+      "size_px": [
+        216,
+        64
+      ],
+      "layers": [
+        {
+          "id": "segments",
+          "asset": "smi.ui.fantasy01.wave2.segment.royal.states",
+          "state_from_input": "selected"
+        }
+      ],
+      "tags": [
+        "segment-royal",
+        "segmented",
+        "three-way",
+        "navigation",
+        "select",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.selectors"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "selected": {
+          "type": "enum",
+          "default": "left",
+          "values": [
+            "left",
+            "center",
+            "right"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "select",
+        "outputs": {
+          "selected": {
+            "from_input": "selected"
+          }
+        },
+        "on": {
+          "set_selected": [
+            {
+              "op": "set",
+              "input": "selected",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "selection_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.tab.vertical.default",
+      "kind": "region",
+      "name": "Tab Vertical Default",
+      "texture": "atlas1",
+      "rect_px": [
+        1768,
+        312,
+        104,
+        152
+      ],
+      "tags": [
+        "tab",
+        "vertical",
+        "default",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.tabs"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.tab.vertical.hover",
+      "kind": "region",
+      "name": "Tab Vertical Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        1880,
+        312,
+        104,
+        152
+      ],
+      "tags": [
+        "tab",
+        "vertical",
+        "hover",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.tabs"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.tab.vertical.selected",
+      "kind": "region",
+      "name": "Tab Vertical Selected",
+      "texture": "atlas1",
+      "rect_px": [
+        8,
+        472,
+        104,
+        152
+      ],
+      "tags": [
+        "tab",
+        "vertical",
+        "selected",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.tabs"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.tab.vertical.disabled",
+      "kind": "region",
+      "name": "Tab Vertical Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        120,
+        472,
+        104,
+        152
+      ],
+      "tags": [
+        "tab",
+        "vertical",
+        "disabled",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.navigation.tabs"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.tab.vertical.states",
+      "kind": "state_set",
+      "name": "Tab Vertical States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.tab.vertical.default",
+        "hover": "smi.ui.fantasy01.wave2.tab.vertical.hover",
+        "selected": "smi.ui.fantasy01.wave2.tab.vertical.selected",
+        "disabled": "smi.ui.fantasy01.wave2.tab.vertical.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "tab",
+        "vertical",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.navigation.tabs"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.tab-vertical",
+      "kind": "composition",
+      "name": "Vertical Royal Navigation Tab",
+      "size_px": [
+        104,
+        152
+      ],
+      "layers": [
+        {
+          "id": "tab",
+          "asset": "smi.ui.fantasy01.wave2.tab.vertical.states",
+          "state_from_input": "selection"
+        }
+      ],
+      "tags": [
+        "tab-vertical",
+        "vertical",
+        "tab",
+        "navigation",
+        "selected",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.navigation.tabs"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "selection": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "selected",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "select",
+        "outputs": {
+          "selection": {
+            "from_input": "selection"
+          }
+        },
+        "on": {
+          "select_tab": [
+            {
+              "op": "set",
+              "input": "selection",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "selected"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.scroll.horizontal.track",
+      "kind": "region",
+      "name": "Scroll Horizontal Track",
+      "texture": "atlas1",
+      "rect_px": [
+        232,
+        472,
+        268,
+        44
+      ],
+      "tags": [
+        "scroll",
+        "horizontal",
+        "track",
+        "scrollbar",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.scrollbars"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.scroll.horizontal.thumb",
+      "kind": "region",
+      "name": "Scroll Horizontal Thumb",
+      "texture": "atlas1",
+      "rect_px": [
+        508,
+        472,
+        84,
+        44
+      ],
+      "tags": [
+        "scroll",
+        "horizontal",
+        "thumb",
+        "scrollbar",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.scrollbars"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.scroll-horizontal",
+      "kind": "composition",
+      "name": "Horizontal Interactive Scrollbar",
+      "size_px": [
+        268,
+        44
+      ],
+      "layers": [
+        {
+          "id": "track",
+          "asset": "smi.ui.fantasy01.wave2.scroll.horizontal.track"
+        },
+        {
+          "id": "thumb",
+          "asset": "smi.ui.fantasy01.wave2.scroll.horizontal.thumb",
+          "position_from_input": {
+            "input": "value",
+            "axis": "x",
+            "from_px": 0,
+            "to_px": 184
+          }
+        }
+      ],
+      "tags": [
+        "scroll-horizontal",
+        "scrollbar",
+        "horizontal",
+        "drag",
+        "thumb",
+        "scroll",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.scrollbars"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "value": {
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 100
+        }
+      },
+      "behavior": {
+        "role": "slider",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.scroll.vertical.track",
+      "kind": "region",
+      "name": "Scroll Vertical Track",
+      "texture": "atlas1",
+      "rect_px": [
+        600,
+        472,
+        44,
+        268
+      ],
+      "tags": [
+        "scroll",
+        "vertical",
+        "track",
+        "scrollbar",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.scrollbars"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.scroll.vertical.thumb",
+      "kind": "region",
+      "name": "Scroll Vertical Thumb",
+      "texture": "atlas1",
+      "rect_px": [
+        652,
+        472,
+        44,
+        84
+      ],
+      "tags": [
+        "scroll",
+        "vertical",
+        "thumb",
+        "scrollbar",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.scrollbars"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.scroll-vertical",
+      "kind": "composition",
+      "name": "Vertical Interactive Scrollbar",
+      "size_px": [
+        44,
+        268
+      ],
+      "layers": [
+        {
+          "id": "track",
+          "asset": "smi.ui.fantasy01.wave2.scroll.vertical.track"
+        },
+        {
+          "id": "thumb",
+          "asset": "smi.ui.fantasy01.wave2.scroll.vertical.thumb",
+          "position_from_input": {
+            "input": "value",
+            "axis": "y",
+            "from_px": 0,
+            "to_px": 184
+          }
+        }
+      ],
+      "tags": [
+        "scroll-vertical",
+        "scrollbar",
+        "vertical",
+        "drag",
+        "thumb",
+        "scroll",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.scrollbars"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "value": {
+          "type": "number",
+          "default": 50,
+          "min": 0,
+          "max": 100
+        }
+      },
+      "behavior": {
+        "role": "slider",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.stepper.plus.default",
+      "kind": "region",
+      "name": "Stepper Plus Default",
+      "texture": "atlas1",
+      "rect_px": [
+        704,
+        472,
+        72,
+        72
+      ],
+      "tags": [
+        "stepper",
+        "plus",
+        "default",
+        "increment",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.stepper.plus.hover",
+      "kind": "region",
+      "name": "Stepper Plus Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        784,
+        472,
+        72,
+        72
+      ],
+      "tags": [
+        "stepper",
+        "plus",
+        "hover",
+        "increment",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.stepper.plus.pressed",
+      "kind": "region",
+      "name": "Stepper Plus Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        864,
+        472,
+        72,
+        72
+      ],
+      "tags": [
+        "stepper",
+        "plus",
+        "pressed",
+        "increment",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.stepper.plus.disabled",
+      "kind": "region",
+      "name": "Stepper Plus Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        944,
+        472,
+        72,
+        72
+      ],
+      "tags": [
+        "stepper",
+        "plus",
+        "disabled",
+        "increment",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.stepper.plus.states",
+      "kind": "state_set",
+      "name": "Stepper Plus States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.stepper.plus.default",
+        "hover": "smi.ui.fantasy01.wave2.stepper.plus.hover",
+        "pressed": "smi.ui.fantasy01.wave2.stepper.plus.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.stepper.plus.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "stepper",
+        "plus",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.stepper-plus",
+      "kind": "composition",
+      "name": "Plus Stepper Action",
+      "size_px": [
+        72,
+        72
+      ],
+      "layers": [
+        {
+          "id": "button",
+          "asset": "smi.ui.fantasy01.wave2.stepper.plus.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "stepper-plus",
+        "stepper",
+        "increment",
+        "plus",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.stepper.minus.default",
+      "kind": "region",
+      "name": "Stepper Minus Default",
+      "texture": "atlas1",
+      "rect_px": [
+        1024,
+        472,
+        72,
+        72
+      ],
+      "tags": [
+        "stepper",
+        "minus",
+        "default",
+        "decrement",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.stepper.minus.hover",
+      "kind": "region",
+      "name": "Stepper Minus Hover",
+      "texture": "atlas1",
+      "rect_px": [
+        1104,
+        472,
+        72,
+        72
+      ],
+      "tags": [
+        "stepper",
+        "minus",
+        "hover",
+        "decrement",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.stepper.minus.pressed",
+      "kind": "region",
+      "name": "Stepper Minus Pressed",
+      "texture": "atlas1",
+      "rect_px": [
+        1184,
+        472,
+        72,
+        72
+      ],
+      "tags": [
+        "stepper",
+        "minus",
+        "pressed",
+        "decrement",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.stepper.minus.disabled",
+      "kind": "region",
+      "name": "Stepper Minus Disabled",
+      "texture": "atlas1",
+      "rect_px": [
+        1264,
+        472,
+        72,
+        72
+      ],
+      "tags": [
+        "stepper",
+        "minus",
+        "disabled",
+        "decrement",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.stepper.minus.states",
+      "kind": "state_set",
+      "name": "Stepper Minus States",
+      "states": {
+        "default": "smi.ui.fantasy01.wave2.stepper.minus.default",
+        "hover": "smi.ui.fantasy01.wave2.stepper.minus.hover",
+        "pressed": "smi.ui.fantasy01.wave2.stepper.minus.pressed",
+        "disabled": "smi.ui.fantasy01.wave2.stepper.minus.disabled"
+      },
+      "default_state": "default",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "stepper",
+        "minus",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.stepper-minus",
+      "kind": "composition",
+      "name": "Minus Stepper Action",
+      "size_px": [
+        72,
+        72
+      ],
+      "layers": [
+        {
+          "id": "button",
+          "asset": "smi.ui.fantasy01.wave2.stepper.minus.states",
+          "state_from_input": "state"
+        }
+      ],
+      "tags": [
+        "stepper-minus",
+        "stepper",
+        "decrement",
+        "minus",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.steppers"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "state": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "button",
+        "outputs": {
+          "state": {
+            "from_input": "state"
+          }
+        },
+        "on": {
+          "pointer_enter": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            }
+          ],
+          "pointer_leave": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "default"
+            }
+          ],
+          "pointer_down": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "pressed"
+            }
+          ],
+          "pointer_up": [
+            {
+              "op": "set",
+              "input": "state",
+              "value": "hover"
+            },
+            {
+              "op": "emit",
+              "event": "activated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.arcane.0",
+      "kind": "region",
+      "name": "Dial Arcane 0",
+      "texture": "atlas1",
+      "rect_px": [
+        1344,
+        472,
+        116,
+        116
+      ],
+      "tags": [
+        "dial",
+        "arcane",
+        "0",
+        "knob",
+        "rotary",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.arcane.25",
+      "kind": "region",
+      "name": "Dial Arcane 25",
+      "texture": "atlas1",
+      "rect_px": [
+        1468,
+        472,
+        116,
+        116
+      ],
+      "tags": [
+        "dial",
+        "arcane",
+        "25",
+        "knob",
+        "rotary",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.arcane.50",
+      "kind": "region",
+      "name": "Dial Arcane 50",
+      "texture": "atlas1",
+      "rect_px": [
+        1592,
+        472,
+        116,
+        116
+      ],
+      "tags": [
+        "dial",
+        "arcane",
+        "50",
+        "knob",
+        "rotary",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.arcane.75",
+      "kind": "region",
+      "name": "Dial Arcane 75",
+      "texture": "atlas1",
+      "rect_px": [
+        1716,
+        472,
+        116,
+        116
+      ],
+      "tags": [
+        "dial",
+        "arcane",
+        "75",
+        "knob",
+        "rotary",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.arcane.100",
+      "kind": "region",
+      "name": "Dial Arcane 100",
+      "texture": "atlas1",
+      "rect_px": [
+        1840,
+        472,
+        116,
+        116
+      ],
+      "tags": [
+        "dial",
+        "arcane",
+        "100",
+        "knob",
+        "rotary",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.arcane.states",
+      "kind": "state_set",
+      "name": "Dial Arcane States",
+      "states": {
+        "0": "smi.ui.fantasy01.wave2.dial.arcane.0",
+        "25": "smi.ui.fantasy01.wave2.dial.arcane.25",
+        "50": "smi.ui.fantasy01.wave2.dial.arcane.50",
+        "75": "smi.ui.fantasy01.wave2.dial.arcane.75",
+        "100": "smi.ui.fantasy01.wave2.dial.arcane.100"
+      },
+      "default_state": "50",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "dial",
+        "arcane",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.dial-arcane",
+      "kind": "composition",
+      "name": "Arcane Rotary Dial",
+      "size_px": [
+        116,
+        116
+      ],
+      "layers": [
+        {
+          "id": "knob",
+          "asset": "smi.ui.fantasy01.wave2.dial.arcane.states",
+          "state_from_input": "setting"
+        }
+      ],
+      "tags": [
+        "dial-arcane",
+        "dial",
+        "knob",
+        "value",
+        "discrete",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "setting": {
+          "type": "enum",
+          "default": "50",
+          "values": [
+            "0",
+            "25",
+            "50",
+            "75",
+            "100"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "select",
+        "outputs": {
+          "setting": {
+            "from_input": "setting"
+          }
+        },
+        "on": {
+          "set_setting": [
+            {
+              "op": "set",
+              "input": "setting",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "setting_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.sunstone.0",
+      "kind": "region",
+      "name": "Dial Sunstone 0",
+      "texture": "atlas1",
+      "rect_px": [
+        8,
+        748,
+        116,
+        116
+      ],
+      "tags": [
+        "dial",
+        "sunstone",
+        "0",
+        "knob",
+        "rotary",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.sunstone.25",
+      "kind": "region",
+      "name": "Dial Sunstone 25",
+      "texture": "atlas1",
+      "rect_px": [
+        132,
+        748,
+        116,
+        116
+      ],
+      "tags": [
+        "dial",
+        "sunstone",
+        "25",
+        "knob",
+        "rotary",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.sunstone.50",
+      "kind": "region",
+      "name": "Dial Sunstone 50",
+      "texture": "atlas1",
+      "rect_px": [
+        256,
+        748,
+        116,
+        116
+      ],
+      "tags": [
+        "dial",
+        "sunstone",
+        "50",
+        "knob",
+        "rotary",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.sunstone.75",
+      "kind": "region",
+      "name": "Dial Sunstone 75",
+      "texture": "atlas1",
+      "rect_px": [
+        380,
+        748,
+        116,
+        116
+      ],
+      "tags": [
+        "dial",
+        "sunstone",
+        "75",
+        "knob",
+        "rotary",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.sunstone.100",
+      "kind": "region",
+      "name": "Dial Sunstone 100",
+      "texture": "atlas1",
+      "rect_px": [
+        504,
+        748,
+        116,
+        116
+      ],
+      "tags": [
+        "dial",
+        "sunstone",
+        "100",
+        "knob",
+        "rotary",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.dial.sunstone.states",
+      "kind": "state_set",
+      "name": "Dial Sunstone States",
+      "states": {
+        "0": "smi.ui.fantasy01.wave2.dial.sunstone.0",
+        "25": "smi.ui.fantasy01.wave2.dial.sunstone.25",
+        "50": "smi.ui.fantasy01.wave2.dial.sunstone.50",
+        "75": "smi.ui.fantasy01.wave2.dial.sunstone.75",
+        "100": "smi.ui.fantasy01.wave2.dial.sunstone.100"
+      },
+      "default_state": "50",
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "dial",
+        "sunstone",
+        "states",
+        "fantasy",
+        "game-ui"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.dial-sunstone",
+      "kind": "composition",
+      "name": "Sunstone Rotary Dial",
+      "size_px": [
+        116,
+        116
+      ],
+      "layers": [
+        {
+          "id": "knob",
+          "asset": "smi.ui.fantasy01.wave2.dial.sunstone.states",
+          "state_from_input": "setting"
+        }
+      ],
+      "tags": [
+        "dial-sunstone",
+        "dial",
+        "knob",
+        "value",
+        "discrete",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.controls.dials"
+      ],
+      "style": "fantasy-ornate-gold",
+      "inputs": {
+        "setting": {
+          "type": "enum",
+          "default": "50",
+          "values": [
+            "0",
+            "25",
+            "50",
+            "75",
+            "100"
+          ]
+        }
+      },
+      "behavior": {
+        "role": "select",
+        "outputs": {
+          "setting": {
+            "from_input": "setting"
+          }
+        },
+        "on": {
+          "set_setting": [
+            {
+              "op": "set",
+              "input": "setting",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "setting_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.badge.warning",
+      "kind": "region",
+      "name": "Badge Warning",
+      "texture": "atlas1",
+      "rect_px": [
+        628,
+        748,
+        76,
+        76
+      ],
+      "tags": [
+        "badge",
+        "warning",
+        "notification",
+        "status",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.status.indicators"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.badge.success",
+      "kind": "region",
+      "name": "Badge Success",
+      "texture": "atlas1",
+      "rect_px": [
+        712,
+        748,
+        76,
+        76
+      ],
+      "tags": [
+        "badge",
+        "success",
+        "notification",
+        "status",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.status.indicators"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.badge.alert",
+      "kind": "region",
+      "name": "Badge Alert",
+      "texture": "atlas1",
+      "rect_px": [
+        796,
+        748,
+        76,
+        76
+      ],
+      "tags": [
+        "badge",
+        "alert",
+        "notification",
+        "status",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.status.indicators"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.badge.quest",
+      "kind": "region",
+      "name": "Badge Quest",
+      "texture": "atlas1",
+      "rect_px": [
+        880,
+        748,
+        76,
+        76
+      ],
+      "tags": [
+        "badge",
+        "quest",
+        "notification",
+        "status",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.status.indicators"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.badge.magic",
+      "kind": "region",
+      "name": "Badge Magic",
+      "texture": "atlas1",
+      "rect_px": [
+        964,
+        748,
+        76,
+        76
+      ],
+      "tags": [
+        "badge",
+        "magic",
+        "notification",
+        "status",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.status.indicators"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.badge.lock",
+      "kind": "region",
+      "name": "Badge Lock",
+      "texture": "atlas1",
+      "rect_px": [
+        1048,
+        748,
+        76,
+        76
+      ],
+      "tags": [
+        "badge",
+        "lock",
+        "notification",
+        "status",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.status.indicators"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.trim.corner.top-left",
+      "kind": "region",
+      "name": "Trim Corner Top Left",
+      "texture": "atlas1",
+      "rect_px": [
+        1132,
+        748,
+        70,
+        70
+      ],
+      "tags": [
+        "trim",
+        "corner",
+        "top-left",
+        "panel",
+        "frame",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.panels.trim"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.trim.corner.top-right",
+      "kind": "region",
+      "name": "Trim Corner Top Right",
+      "texture": "atlas1",
+      "rect_px": [
+        1210,
+        748,
+        70,
+        70
+      ],
+      "tags": [
+        "trim",
+        "corner",
+        "top-right",
+        "panel",
+        "frame",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.panels.trim"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.trim.corner.bottom-left",
+      "kind": "region",
+      "name": "Trim Corner Bottom Left",
+      "texture": "atlas1",
+      "rect_px": [
+        1288,
+        748,
+        70,
+        70
+      ],
+      "tags": [
+        "trim",
+        "corner",
+        "bottom-left",
+        "panel",
+        "frame",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.panels.trim"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.trim.corner.bottom-right",
+      "kind": "region",
+      "name": "Trim Corner Bottom Right",
+      "texture": "atlas1",
+      "rect_px": [
+        1366,
+        748,
+        70,
+        70
+      ],
+      "tags": [
+        "trim",
+        "corner",
+        "bottom-right",
+        "panel",
+        "frame",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.panels.trim"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.trim.divider",
+      "kind": "region",
+      "name": "Trim Divider",
+      "texture": "atlas1",
+      "rect_px": [
+        1444,
+        748,
+        280,
+        36
+      ],
+      "tags": [
+        "trim",
+        "divider",
+        "panel",
+        "frame",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.panels.trim"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.panel.banner",
+      "kind": "region",
+      "name": "Panel Banner",
+      "texture": "atlas1",
+      "rect_px": [
+        8,
+        872,
+        340,
+        68
+      ],
+      "tags": [
+        "panel",
+        "banner",
+        "frame",
+        "trim",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.panels.frames"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.panel.window",
+      "kind": "region",
+      "name": "Panel Window",
+      "texture": "atlas1",
+      "rect_px": [
+        356,
+        872,
+        360,
+        264
+      ],
+      "tags": [
+        "panel",
+        "window",
+        "frame",
+        "trim",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.panels.frames"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.panel.small",
+      "kind": "region",
+      "name": "Panel Small",
+      "texture": "atlas1",
+      "rect_px": [
+        724,
+        872,
+        260,
+        164
+      ],
+      "tags": [
+        "panel",
+        "small",
+        "frame",
+        "trim",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.panels.frames"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.effect.highlight.frame0",
+      "kind": "region",
+      "name": "Effect Highlight Frame0",
+      "texture": "atlas1",
+      "rect_px": [
+        992,
+        872,
+        76,
+        76
+      ],
+      "tags": [
+        "effect",
+        "highlight",
+        "frame0",
+        "pulse",
+        "glow",
+        "frame",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.effects.illumination"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.effect.highlight.frame1",
+      "kind": "region",
+      "name": "Effect Highlight Frame1",
+      "texture": "atlas1",
+      "rect_px": [
+        1076,
+        872,
+        76,
+        76
+      ],
+      "tags": [
+        "effect",
+        "highlight",
+        "frame1",
+        "pulse",
+        "glow",
+        "frame",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.effects.illumination"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.effect.highlight.frame2",
+      "kind": "region",
+      "name": "Effect Highlight Frame2",
+      "texture": "atlas1",
+      "rect_px": [
+        1160,
+        872,
+        76,
+        76
+      ],
+      "tags": [
+        "effect",
+        "highlight",
+        "frame2",
+        "pulse",
+        "glow",
+        "frame",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.effects.illumination"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.effect.highlight.frame3",
+      "kind": "region",
+      "name": "Effect Highlight Frame3",
+      "texture": "atlas1",
+      "rect_px": [
+        1244,
+        872,
+        76,
+        76
+      ],
+      "tags": [
+        "effect",
+        "highlight",
+        "frame3",
+        "pulse",
+        "glow",
+        "frame",
+        "fantasy",
+        "game-ui",
+        "ornate",
+        "gold"
+      ],
+      "subjects": [
+        "ui.effects.illumination"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Original Royal Forge fantasy game interface asset."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.effect.highlight.sequence",
+      "kind": "sequence",
+      "name": "Royal Highlight Pulse",
+      "default_fps": 8,
+      "playback": "pingpong",
+      "frames": [
+        {
+          "asset": "smi.ui.fantasy01.wave2.effect.highlight.frame0"
+        },
+        {
+          "asset": "smi.ui.fantasy01.wave2.effect.highlight.frame1"
+        },
+        {
+          "asset": "smi.ui.fantasy01.wave2.effect.highlight.frame2"
+        },
+        {
+          "asset": "smi.ui.fantasy01.wave2.effect.highlight.frame3"
+        }
+      ],
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "animation",
+        "highlight",
+        "pulse",
+        "glow"
+      ],
+      "subjects": [
+        "ui.effects.illumination"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.window-royal",
+      "kind": "composition",
+      "name": "Royal Interactive Window",
+      "size_px": [
+        360,
+        264
+      ],
+      "layers": [
+        {
+          "id": "frame",
+          "asset": "smi.ui.fantasy01.wave2.panel.window"
+        },
+        {
+          "id": "header",
+          "asset": "smi.ui.fantasy01.wave2.panel.banner",
+          "offset_px": [
+            10,
+            9
+          ],
+          "size_px": [
+            340,
+            68
+          ]
+        }
+      ],
+      "tags": [
+        "window-royal",
+        "window",
+        "dialog",
+        "container",
+        "panel",
+        "frame",
+        "interactive",
+        "fantasy",
+        "rpg"
+      ],
+      "subjects": [
+        "ui.panels.frames"
+      ],
+      "style": "fantasy-ornate-gold",
+      "description": "Nine-slice-free composed panel at its native authored size. Host handles layout and text."
+    }
+  ]
+}

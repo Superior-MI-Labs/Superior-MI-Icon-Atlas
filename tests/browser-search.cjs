@@ -7,10 +7,13 @@ const data=JSON.parse(fs.readFileSync(path.join(root,'site','public-catalog.json
 const Search=require('../web/public-search.js');
 const params={synonyms:data.synonyms};
 assert.equal(data.schema,'smi-public-catalog/1');
-assert.equal(data.assets.length,2143);
-assert.equal(data.approved_count,70);
+const approved=JSON.parse(fs.readFileSync(path.join(root,'publications.json'),'utf8')).collections;
+const approvedCount=approved.reduce((sum,p)=>sum+p.expected_assets,0);
+assert.equal(approvedCount,644,'The approved v1.1 release inventory must be complete');
+assert.equal(data.assets.length,2073+approvedCount);
+assert.equal(data.approved_count,approvedCount);
 assert.equal(data.legacy_count,2073);
-assert.deepEqual(new Set(data.packs.map(x=>x.id)),new Set(['fantasy-rpg-hud-wave1','legacy-icons']));
+assert.deepEqual(new Set(data.packs.map(x=>x.id)),new Set(['fantasy-rpg-hud-wave1','royal-forge-controls','royal-forge-hud-resources','legacy-icons']));
 assert.ok(data.synonyms.flame.includes('fire'),'Root manifest synonyms must survive projection');
 assert.ok(data.styles['white-geometric-monoline'],'Style registry must survive projection');
 const archive=data.assets.filter(a=>a.legacy);
@@ -29,10 +32,15 @@ assert.equal(Search.results(data.assets,{...params,pack:'legacy-icons'}).length,
 assert.ok(Search.results(data.assets,{...params,query:'fire'}).some(a=>a.legacy));
 assert.ok(Search.results(data.assets,{...params,query:'folder'}).some(a=>a.legacy));
 assert.ok(Search.results(data.assets,{...params,query:'health'}).some(a=>!a.legacy));
-assert.equal(Search.results(data.assets,{...params,kind:'sequence'}).length,0);
+assert.equal(Search.results(data.assets,{...params,kind:'sequence'}).length,4);
 assert.equal(Search.results(data.assets,{...params,status:'archive'}).length,2073);
-assert.equal(Search.results(data.assets,{...params,status:'published'}).length,70);
+assert.equal(Search.results(data.assets,{...params,status:'published'}).length,approvedCount);
 assert.ok(Search.results(data.assets,{...params,review:'reviewed'}).length>0);
+for(const [pack,count] of [['royal-forge-controls',214],['royal-forge-hud-resources',360]]){
+  const matches=Search.results(data.assets,{...params,pack});
+  assert.equal(matches.length,count,pack+' must remain entirely discoverable and downloadable');
+  assert.ok(matches.some(a=>a.kind==='composition'),pack+' must expose assembled interactive widgets');
+}
 assert.ok(Search.results(data.assets,{...params,review:'unreviewed'}).length>0);
 const sample=archive.find(a=>a.tags.length&&a.subjects.length);
 assert.ok(sample);
