@@ -46,6 +46,16 @@ The user explicitly approved the **original cream-and-saffron hooded, face-cover
 
 **QA anti-pattern:** several generated "canonical character design" infographics showed eight tiny angle studies but did not supply consistent, individually editable source files; dialogue heads were presented in boxes; some color-variant eyes were invented from health state; directions and tails could not be independently verified. Mark **CONCEPT ONLY / P0 NOT PASSED**. For future generation, use a **single-view or single-unframed-head** source task per iteration; only compose a presentation sheet *after* each source view is individually qualified. Source-art prompt engineering or attractive typography must never be mistaken for animation-ready geometry.
 
+### Hero-angle and tail-placement correction
+
+For Sky, the creator approved the **shallow right-facing three-quarter depth** shown in their cropped reference `image(20261102-135059).png`. This is the hero animation reference—not an absolutely flat side projection. Keep a pure 90° right-side construction view **also**, so garment seams, heel/paw alignment and tail-root geometry can be audited. Approval of the look does **not** approve the earlier full-height candidate unchanged.
+
+**Three-tail placement:** All three feathered phoenix tails emerge around the **lower back/pelvis/hip**, with the top two tail roots lowered from the earlier isolated study. Their masses fan backward and downward and overlap naturally in the oblique angle. Never leave long upper tails growing at shoulder height. Distinguish roots, feather bases and feather tips and inspect them in the back/three-quarter views.
+
+**AI image-generation instruction:** ask for *one* clean high-resolution source figure per angle, not a multi-panel reference bible. A decorative collage with good text and thumbnails is an **invalid** canonical model master. Treat the supplied crop as the approved pose/placement reference while the approved original full costume image remains authoritative for colors and garment construction.
+
+**Game control separation:** the independent sword actor, martial and held-sword modes, analog aiming, and keyboard/controller parity belong to a host game contract. See [Sky's source-of-truth gameplay proposal](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/controls-proposal.json) and [ergonomics/animation handoff](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/CONTROL-AND-COMBO-PROPOSAL.md). Do not introduce gamepad input behavior inside `smi-visual-pack/1` or a parallel renderer.
+
 ## Gate P1 — smallest useful *working* animation slice
 
 Create these actual Visual Atlas assets first: relaxed side idle loop; run loop and an authored run-stop transition; three-tail idle secondary motion; and a separate dormant Sunblade orbit visualization. Build one **self-contained** ZIP using existing `smi-visual-pack/1` kinds and real measured PNG frames. Do not invent a controller property in this strict v1 schema.
