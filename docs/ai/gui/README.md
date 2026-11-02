@@ -26,3 +26,5 @@ Host application owns actual pointer/keyboard/game input. The manifest must not 
 Reference test: `examples/acceptance/interactive-hud.json` (request-specific assertions) and `tests/visual-core.cjs` (normalization + layer order regression). These support but do not replace browser visual QA.
 
 For a machine-verifiable preview, extend [visual scenarios](../../../tests/visual-scenarios.json) with input samples and pixel/output assertions. Run `python3 tests/browser_visual_matrix.py --spec tests/visual-scenarios.json --out QA-DIR` after building the site. Include min/mid/max; check changing fill and output value.
+
+**Mandatory numeric-control gate:** [Value/geometry fidelity, thumb bounds and low-end visibility](VALUE-GEOMETRY.md). This rule is based on actual failed Fantasy HUD renders; passing the manifest schema alone does not meet it.
