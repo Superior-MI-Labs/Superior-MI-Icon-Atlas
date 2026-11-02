@@ -1,7 +1,7 @@
 {
   "schema": "smi-character-production-plan/1",
   "project_id": "smi.sky-blue-eyes.motion-foundation",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "status": "PREPRODUCTION",
   "runtime_support": "NOT_IMPLEMENTED",
   "description": "Grounded no-wing veiled desert wanderer: approved base clothing/silhouette, unqualified directional masters and unframed dialogue head. This is a planning manifest, NOT renderable animation artwork.",
@@ -157,7 +157,90 @@
           "release_and_reassemble",
           "aspect_swap_without_fragment_identity_change"
         ]
+      },
+      "default_placement": "Autonomous back-hover near right shoulder, never a sheathed scabbard or baked body weapon",
+      "combat_identities": {
+        "floating": {
+          "body": "martial arts / high mobility",
+          "sword": "long-range autonomous cast/slash/vortex/anchor; lower damage than committed melee"
+        },
+        "held": {
+          "body": "close-range held-sword combat with martial transitions",
+          "sword": "hilt hand-locked, independent shard flex; higher damage and shorter effective reach"
+        },
+        "away": {
+          "body": "martial arts while sword is remote",
+          "sword": "world-space autonomous motion and intentional recall"
+        }
       }
+    },
+    "input_design": {
+      "status": "DESIGN_PROPOSAL_NOT_IMPLEMENTED",
+      "authority": "Host game input/action resolver, not Visual Atlas manifest or renderer",
+      "guide_path": "production/sky-blue-eyes/CONTROL-AND-COMBO-PROPOSAL.md",
+      "primary_axes": {
+        "movement": "gamepad left stick / keyboard WASD",
+        "weapon_aim": "gamepad right stick / pointer-relative mouse aim",
+        "floating": "right stick directs independent sword, RT commands attack",
+        "held": "right stick directional melee or throw aim; sword hilt follows body grip anchor"
+      },
+      "actions": [
+        "move",
+        "blade_aim",
+        "jump",
+        "attack_light",
+        "attack_heavy",
+        "dodge",
+        "guard_parry",
+        "sword_attach",
+        "sword_command",
+        "focus_aim",
+        "sword_anchor",
+        "interact",
+        "aspect_prev",
+        "aspect_next",
+        "technique_prev",
+        "technique_next",
+        "pause",
+        "map"
+      ],
+      "requirements": [
+        "Every action must have remappable keyboard+mouse and controller bindings",
+        "Command/cancel rules depend on gameplay state, never baked into sprite frames",
+        "Right-thumb face-button conflict handled through aim retention, targeting assist and alternate bindings",
+        "No gesture-only mandatory combat action; sword vortex gets a discrete input alternative",
+        "Accessibility: deadzones, remapping, haptic on/off/intensity, reduce motion, no vibration-exclusive information",
+        "Named sword_grab_start, sword_grab_lock, sword_release_start, sword_release_end, hand attachment markers",
+        "Independent sword actor and shards persist across floating/held/remote state transition",
+        "Host validates double-jump/blade-hop/vortex/collision, Visual Atlas previews semantic animations only"
+      ],
+      "references": [
+        {
+          "title": "Dust An Elysian Tail historical keyboard/controller action mapping",
+          "url": "https://steamcommunity.com/app/236090/discussions/0/648814844934174298"
+        },
+        {
+          "title": "Devil May Cry 5 character-style combat control mappings",
+          "url": "https://www.gamerguides.com/devil-may-cry-5/guide/the-basics/gameplay/controls/"
+        },
+        {
+          "title": "Godot input actions and gamepad deadzones/haptics",
+          "url": "https://docs.godotengine.org/en/latest/tutorials/inputs/controllers_gamepads_joysticks.html"
+        }
+      ]
+    },
+    "reference_handoff": {
+      "status": "REVIEW_CANDIDATES_NOT_FINAL_PIXEL_APPROVAL",
+      "kit_filename": "Sky-Sunblade-AI-Reference-Kit-v0.3.zip",
+      "delivery": "conversation attachment (separate from git). Not automatically fetched by future agents.",
+      "rules": [
+        "Original approved cloaked identity reference is authoritative for clothing, veil, cosmic eyes and ornaments",
+        "Original six-sunblade art is authoritative for shattered structure and old world relic geometry",
+        "New right-facing study is an isolated source candidate, subject to user approval and pixel QA",
+        "Do not treat mini turnarounds, composite boards or explanatory crops as animation source sprites",
+        "Head references for dialogue must be generated as clean isolated unframed assets",
+        "Canonical 8-view sources, separately manipulable sword shards and real loops remain pending"
+      ]
     }
   },
   "reference_slots": [
@@ -648,6 +731,9 @@
     "reference_identity_approved": true,
     "canonical_views_qualified": false,
     "failed_generation_notes": "Initial wide infographic turnarounds generated after the cloak approval were not qualified: small inconsistent figures and head portraits in frames instead of isolated frame sources.",
-    "weapon_articulation_qualified": false
+    "weapon_articulation_qualified": false,
+    "generated_reference_candidate_reviewed": false,
+    "reference_handoff_zip_created": true,
+    "ai_reference_promotion_note": "Source character design is user approved, the new single right-side candidate and all image generation overview panels remain unqualified source art."
   }
 }
