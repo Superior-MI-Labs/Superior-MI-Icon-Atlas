@@ -27,7 +27,16 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertFalse(self.plan["provenance"]["original_image_bytes_in_repo"])
         self.assertEqual(self.plan["target"]["art_fps_default"], 16)
         self.assertEqual(self.plan["target"]["gameplay_simulation_hz"], 60)
-        self.assertEqual(len(self.plan["reference_slots"]), 4)
+        self.assertEqual(len(self.plan["reference_slots"]), 5)
+        self.assertEqual(len(self.plan["target"]["directions"]["required"]), 8)
+        self.assertEqual(self.plan["target"]["health_variants"]["low_health_when"], "health_percent <= 36")
+        self.assertEqual(self.plan["target"]["health_variants"]["normal_when"], "health_percent > 36")
+        self.assertTrue(self.plan["provenance"]["reference_identity_approved"])
+        self.assertFalse(self.plan["provenance"]["canonical_views_qualified"])
+        self.assertTrue(any(ref["id"] == "ref.wardrobe_approved" and ref["approval"] == "APPROVED" for ref in self.plan["reference_slots"]))
+        self.assertTrue(any("no wings" in rule for rule in self.plan["canonical_lock"]["visual_invariants"]))
+        self.assertTrue(any("three separate feathered" in rule for rule in self.plan["canonical_lock"]["visual_invariants"]))
+        self.assertTrue(any("galactic irises" in rule for rule in self.plan["canonical_lock"]["visual_invariants"]))
         self.assertTrue(any(x["track"] == "sword" for x in self.plan["qualification_clips"]))
         self.assertTrue(any(x["track"] == "secondary" for x in self.plan["qualification_clips"]))
 
@@ -44,6 +53,13 @@ class CharacterPlanTests(unittest.TestCase):
         plan["transition_checks"][0]["stage"] = "P0"
         self.assertTrue(any("before its clips" in x for x in check(plan)))
 
+    def test_approved_identity_does_not_approve_animation_art(self):
+        self.assertEqual(self.plan["canonical_lock"]["status"], "PENDING")
+        self.assertEqual(self.plan["target"]["face_reveal_policy"].startswith("hide muzzle"), True)
+        self.assertTrue(any(x["id"] == "sky.head.talk.masked" for x in self.plan["qualification_clips"]))
+        self.assertFalse(any("wing" in x["id"] for x in self.plan["qualification_clips"]))
+        self.assertEqual(self.plan["target"]["weapon"]["aspects"][0], "dormant")
+
     def test_invalid_clip_stage_returns_validation_error(self):
         plan = copy.deepcopy(self.plan)
         plan["qualification_clips"][0]["stage"] = "NOT_A_STAGE"
@@ -53,7 +69,7 @@ class CharacterPlanTests(unittest.TestCase):
     def test_uncovered_first_slice_rejected(self):
         plan = copy.deepcopy(self.plan)
         for gate in plan["qa_gates"]:
-            gate["covers"] = [c for c in gate["covers"] if c != "sky.secondary.wings.idle"]
+            gate["covers"] = [c for c in gate["covers"] if c != "sky.secondary.tails.idle"]
         self.assertTrue(any("P1 clips missing explicit QA" in x for x in check(plan)))
 
     def test_false_approval_rejected(self):
