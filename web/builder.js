@@ -282,6 +282,12 @@
       btn.addEventListener('click',()=>{selectAsset(a.id);refreshList();renderControlPanel();});list.append(btn);
     }
   }
+  function repeatBound(asset,key,values){
+    const layer=(asset.layers||[]).find(l=>l.repeat?.value_input===key);
+    if(!layer)return null;
+    const r=layer.repeat,count=values[r.count_input]??asset.inputs[r.count_input].default;
+    return Math.max(0,Math.floor(Number(count)||1)*(r.levels.length-1));
+  }
   function renderControlPanel(){
     const a=library.get(ui.selected),controls=$('input-controls');controls.replaceChildren();
     $('preview-name').textContent=ui.isScene?'Composition':a?metaName(a):'Select an asset';
@@ -308,13 +314,36 @@
       }
     }
     if(a.kind==='state_set'){
-      const label=document.createElement('label');label.textContent='State';const select=document.createElement('select');for(const key of Object.keys(a.states))select.add(new Option(key,key));select.onchange=()=>{ui.controls._state=select.value;};label.append(select);controls.append(label);
+      const label=document.createElement('label');label.textContent='State';
+      const select=document.createElement('select'),keys=Object.keys(a.states);
+      for(const key of keys)select.add(new Option(key,key));
+      select.value=ui.controls._state&&a.states[ui.controls._state]?ui.controls._state:a.default_state;
+      const slider=document.createElement('input');slider.type='range';slider.min=0;slider.max=keys.length-1;slider.step=1;
+      slider.value=keys.indexOf(select.value);
+      const readout=document.createElement('output');readout.textContent=(Number(slider.value)+1)+' / '+keys.length;
+      const apply=state=>{ui.controls._state=state;select.value=state;slider.value=keys.indexOf(state);readout.textContent=(Number(slider.value)+1)+' / '+keys.length;};
+      select.onchange=()=>apply(select.value);slider.oninput=()=>apply(keys[Number(slider.value)]);
+      label.append(select,slider,readout);controls.append(label);
     }
     for(const [key,def] of Object.entries(a.inputs||{})){
       const label=document.createElement('label');label.textContent=key;let input;
-      const applyValue=value=>{ui.controls[key]=value;renderOutputs();};
+      const applyValue=value=>{
+        ui.controls[key]=value;
+        if((a.layers||[]).some(l=>l.repeat?.count_input===key)){
+          for(const layer of a.layers.filter(l=>l.repeat?.count_input===key)){
+            const bound=repeatBound(a,layer.repeat.value_input,ui.controls),target=layer.repeat.value_input;
+            ui.controls[target]=Math.min(bound,ui.controls[target]??a.inputs[target].default);
+          }
+          renderControlPanel();
+        }
+        renderOutputs();
+      };
       if(def.type==='boolean'){input=document.createElement('input');input.type='checkbox';input.checked=ui.controls[key]??Slots.resolve(a,ui.preset).inputs[key]??def.default;input.onchange=()=>applyValue(input.checked);}
-      else if(def.type==='number'){input=document.createElement('input');input.type='range';input.min=def.min??0;input.max=def.max??1;input.step=def.step??'0.01';input.value=ui.controls[key]??Slots.resolve(a,ui.preset).inputs[key]??def.default;input.oninput=()=>applyValue(Number(input.value));}
+      else if(def.type==='number'){input=document.createElement('input');input.type='range';input.min=def.min??0;input.max=def.max??1;input.step=def.step??'0.01';input.max=repeatBound(a,key,ui.controls)??def.max??1;
+        input.value=Math.min(Number(input.max),ui.controls[key]??Slots.resolve(a,ui.preset).inputs[key]??def.default);
+        const readout=document.createElement('output');readout.textContent=input.value+' / '+input.max;
+        input.oninput=()=>{applyValue(Number(input.value));readout.textContent=input.value+' / '+input.max;};
+        label.append(readout);}
       else{input=document.createElement('select');for(const v of def.values||[])input.add(new Option(v,v));input.value=ui.controls[key]??Slots.resolve(a,ui.preset).inputs[key]??def.default;input.onchange=()=>applyValue(input.value);}
       label.append(input);controls.append(label);
     }
@@ -363,7 +392,7 @@
         const lw=(l.w||ww)*(l.scale_x??1),lh=(l.h||hh)*(l.scale_y??1);
         if(l.rotation_deg){const cx=px+lw/2,cy=py+lh/2;ctx.translate(cx,cy);ctx.rotate(l.rotation_deg*Math.PI/180);ctx.translate(-cx,-cy);}
         await drawAsset(l.asset,ctx,px,py,lw,lh,time,l.values||{},l.state||null);ctx.restore();}}
-      else if(ui.selected){const [aw,ah]=sizeFor(ui.selected),factor=Math.min(cw/aw,ch/ah,3);await drawAsset(ui.selected,ctx,Math.max(0,(cw-aw*factor)/2),Math.max(0,(ch-ah*factor)/2),aw*factor,ah*factor,time,ui.controls,ui.controls._state||null,new Set(),ui.slots,ui.preset);}
+      else if(ui.selected){const [aw,ah]=sizeFor(ui.selected,new Set(),ui.controls),factor=Math.min(cw/aw,ch/ah,3);await drawAsset(ui.selected,ctx,Math.max(0,(cw-aw*factor)/2),Math.max(0,(ch-ah*factor)/2),aw*factor,ah*factor,time,ui.controls,ui.controls._state||null,new Set(),ui.slots,ui.preset);}
     }catch(e){setStatus(e.message,true);}finally{ctx.restore();}
   }
   async function renderFrame(){await renderAt($('stage'),ui.clock,false);}
