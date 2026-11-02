@@ -112,6 +112,43 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertFalse(self.plan["provenance"]["sunblade_batch03_published"])
         self.assertEqual(self.plan["target"]["weapon"]["animation_approach"]["primary"], "traditionally_drawn_full_sword_frames")
 
+    def test_body_batch04_is_inventory_aligned_and_publication_gated(self):
+        item = self.plan["latest_body_candidate"]
+        inventory = json.loads((ROOT / self.plan["production_inventory_path"]).read_text(encoding="utf-8"))
+        inventory_ids = {
+            f"sky.{family['track']}.{family['family']}.{action}"
+            for family in inventory["families"] for action in family["actions"]
+        }
+        self.assertEqual(item["pack_id"], "smi.sky.body.grounded")
+        self.assertEqual(item["pack_version"], "0.1.0")
+        self.assertEqual(item["art_fps"], 16)
+        self.assertEqual(item["source_dimensions_px"], [640,512])
+        self.assertEqual(item["clip_count"], len(item["clips"]))
+        self.assertEqual(item["clip_count"], 9)
+        self.assertEqual(item["frames"], sum(item["clips"].values()))
+        self.assertEqual(item["frames"], 92)
+        self.assertEqual(set(item["clips"]) - inventory_ids, set())
+        self.assertEqual(item["assets"], item["frames"] + item["clip_count"] + item["preview_state_sets"])
+        self.assertEqual(item["atlas_pages"], len(item["atlas_width_height"]))
+        self.assertTrue(all(0 < w <= 2048 and 0 < h <= 2048 for w,h in item["atlas_width_height"]))
+        self.assertEqual(
+            item["decoded_atlas_bytes"],
+            sum(w*h*4 for w,h in item["atlas_width_height"])
+        )
+        self.assertLess(item["decoded_atlas_bytes"], item["untrimmed_decoded_bytes"])
+        self.assertGreater(item["decoded_atlas_reduction_percent"], 50)
+        self.assertEqual(item["raw_source_pixel_qa"], "92_OF_92_EXACT_RGBA_PASS")
+        self.assertEqual(item["unclipped_frame_count"], item["frames"])
+        self.assertFalse(item["body_contains_sword"])
+        self.assertFalse(item["winged"])
+        self.assertEqual(item["tail_count"], 3)
+        self.assertEqual(item["visual_style_approval"], "HOLD_SIMPLIFIED_VECTOR_ART")
+        self.assertEqual(item["real_visual_atlas_builder_import"], "NOT_TESTED")
+        self.assertFalse(item["public_catalog_approved"])
+        self.assertFalse(self.plan["provenance"]["body_batch04_style_approved"])
+        self.assertFalse(self.plan["provenance"]["body_batch04_published"])
+        self.assertTrue((ROOT / item["documentation"]).is_file())
+
     def test_creator_chose_traditional_sword_animation(self):
         sword = self.plan["target"]["weapon"]
         method = sword["animation_approach"]
