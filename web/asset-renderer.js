@@ -22,22 +22,39 @@
         width:columns*size[0]+(columns-1)*gx,
         height:rows*size[1]+(rows-1)*gy};
     }
-    function sizeFor(id,seen=new Set(),values=null){
+    function geometryFor(id,seen=new Set(),values=null){
       if(seen.has(id))throw Error('Cyclic asset dimensions: '+id);
       const a=getAsset(id);if(!a)throw Error('Missing asset '+id);
-      seen.add(id);
-      if(a.kind==='region')return a.logical_size_px||a.rect_px.slice(2,4);
-      if(a.kind==='composition'){
-        const layer=a.layers.find(item=>item.repeat);
-        if(!layer)return a.size_px;
-        const defaults=Object.fromEntries(Object.entries(a.inputs||{}).map(([key,input])=>[key,input.default]));
-        const geometry=repeatLayout(layer,{...defaults,...(values||{})},layer.size_px||sizeFor(layer.asset,new Set()));
-        return [Math.max(1,geometry.width+(layer.offset_px?.[0]||0)),
-                Math.max(1,geometry.height+(layer.offset_px?.[1]||0))];
+      const next=new Set(seen);next.add(id);
+      const frame=(width,height,minX=0,minY=0)=>({width,height,minX,minY});
+      if(a.kind==='region'){
+        const [width,height]=a.logical_size_px||a.rect_px.slice(2,4);
+        return frame(width,height);
       }
-      if(a.kind==='sequence')return sizeFor(a.frames[0].asset,seen);
-      if(a.kind==='state_set')return sizeFor(a.states[a.default_state],seen);
-      throw Error('Unknown kind '+a.kind);
+      if(a.kind==='sequence')return geometryFor(a.frames[0].asset,next);
+      if(a.kind==='state_set')return geometryFor(a.states[a.default_state],next);
+      if(a.kind!=='composition')throw Error('Unknown kind '+a.kind);
+      if(!a.layers.some(layer=>layer.repeat))return frame(...a.size_px);
+      const inputs={...Object.fromEntries(Object.entries(a.inputs||{}).map(([key,input])=>[key,input.default])),...(values||{})};
+      // A repeated composition is content-sized. Include every layer, not only
+      // the first repeater: frames/overlays and negative offsets must not clip.
+      let minX=0,minY=0,maxX=0,maxY=0;
+      for(const layer of a.layers){
+        const target=layer.asset||(layer.slot&&a.slots?.[layer.slot]?.default);
+        if(!target)continue;
+        const child=geometryFor(target,next,layer.input_values||null);
+        const [lw,lh]=layer.size_px||[child.width,child.height];
+        const size=layer.repeat?repeatLayout(layer,inputs,[lw,lh]):{width:lw,height:lh};
+        const x=(layer.offset_px?.[0]||0)+(layer.x||0);
+        const y=(layer.offset_px?.[1]||0)+(layer.y||0);
+        minX=Math.min(minX,x);minY=Math.min(minY,y);
+        maxX=Math.max(maxX,x+size.width);maxY=Math.max(maxY,y+size.height);
+      }
+      return frame(Math.max(1,maxX-minX),Math.max(1,maxY-minY),minX,minY);
+    }
+    function sizeFor(id,seen=new Set(),values=null){
+      const {width,height}=geometryFor(id,seen,values);
+      return [width,height];
     }
     function nineSlice(ctx,img,src,target,margins){
       const [sx,sy,sw,sh]=src,[dx,dy,dw,dh]=target,[l,t,r,b]=margins;
@@ -79,8 +96,9 @@
       if(a.kind!=='composition')throw Error('Unknown kind '+a.kind);
       const slotState=slots.resolve(a,presetName,slotOverrides||{});
       const inputs={...slotState.inputs,...values};
-      const [naturalW,naturalH]=sizeFor(id,new Set(),inputs);
-      ctx.save();ctx.translate(x,y);ctx.scale(w/naturalW,h/naturalH);
+      const geometry=geometryFor(id,new Set(),inputs);
+      ctx.save();ctx.translate(x,y);ctx.scale(w/geometry.width,h/geometry.height);
+      ctx.translate(-geometry.minX,-geometry.minY);
       try{
         for(const rawLayer of a.layers){
           const layer=timeline.layerAt(rawLayer,time,a.duration_ms,a.playback||'loop');
@@ -114,7 +132,7 @@
         }
       }finally{ctx.restore();}
     }
-    return Object.freeze({sizeFor,frameAt,drawAsset,repeatLayout});
+    return Object.freeze({sizeFor,geometryFor,frameAt,drawAsset,repeatLayout});
   }
   return Object.freeze({create});
 });

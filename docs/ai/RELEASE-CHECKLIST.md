@@ -2,7 +2,7 @@
 
 Do not label an asset ready merely because its JSON parses. Structural validation, image inspection, actual behavior, and request-specific acceptance are separate gates.
 
-## 1. Creator brief and coverage
+## 1. Creator brief and coverage\nFor substantial commissions, use [creator preflight](CREATOR-PREFLIGHT.md) before expensive production; image generation follows [source-art workflow](IMAGE-ENGINE-WORKFLOW.md) when relevant. Do not invent acceptance or approval.
 - [ ] All assets the creator requested are included; unexpected simplifications are disclosed.
 - [ ] Names, tags, style, animation/state names, defaults, licensing and rights claims are accurate.
 - [ ] A compact request-specific acceptance test exists (examples: "Mana preset selects three animated frames", "walk and idle state changes remain aligned", "slider outputs value 12 when set to 12").

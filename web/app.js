@@ -2,7 +2,7 @@
 /* Unified public browser. The manifest is authoritative; this is a derived read-only index. */
 (()=>{
   const $=id=>document.getElementById(id);
-  const {VisualAtlasRenderer:Renderer,VisualAtlasSlots:Slots,VisualAtlasTimeline:Timeline,VisualAtlasVisualCore:VisualCore,VisualAtlasInteractions:Interactions,VisualAtlasCollections:Collections}=window;
+  const {VisualAtlasRenderer:Renderer,VisualAtlasSlots:Slots,VisualAtlasTimeline:Timeline,VisualAtlasVisualCore:VisualCore,VisualAtlasInteraction:Interactions,VisualAtlasInputs:Inputs,VisualAtlasCollections:Collections}=window;
   const assets=new Map(),collections=new Map(),pending=new Map(),loaded=new Map();
   let entries=[],matches=[],shown=0,current=null,clock=0,playing=true,previous=0;
   let preset=null,chosenState=null,controls={},slotChoices={};
@@ -100,8 +100,7 @@
   async function paint(canvas,entry,time=0,options={}){
     await ready(entry.pack);
     const asset=assets.get(entry.id);
-    const defaults=Object.fromEntries(Object.entries(asset?.inputs||{}).map(([k,v])=>[k,v.default]));
-    const values={...defaults,...(options.controls||{})};
+    const values=Inputs.reconcile(asset,options.controls||{},Slots.resolve(asset,options.preset).inputs);
     const size=renderer.sizeFor(entry.id,new Set(),values),width=Math.max(1,size[0]),height=Math.max(1,size[1]);
     const maxW=options.card?200:520,maxH=options.card?124:255;
     const scale=Math.min(1,maxW/width,maxH/height);
@@ -131,12 +130,6 @@
     node.onclick=()=>openDetail(a);if(cardObserver)cardObserver.observe(node);
     else paint(canvas,a,0,{card:true}).catch(()=>art.textContent='Preview unavailable');return node;}
   function more(){const frag=document.createDocumentFragment();for(const a of matches.slice(shown,shown+PAGE))frag.append(card(a));shown=Math.min(matches.length,shown+PAGE);$('gallery').append(frag);$('more').hidden=shown>=matches.length;}
-  function valueCap(a,key){
-    const layer=(a.layers||[]).find(l=>l.repeat?.value_input===key);
-    if(!layer)return null;
-    const repeat=layer.repeat,limit=controls[repeat.count_input]??a.inputs[repeat.count_input].default;
-    return Math.max(0,Math.floor(Number(limit)||1)*(repeat.levels.length-1));
-  }
   function controlsFor(a){const area=$('controls');area.replaceChildren();
     if(a.kind==='state_set'){
       const lab=document.createElement('label');lab.textContent='Appearance';
@@ -152,23 +145,23 @@
     if(a.kind==='composition'&&a.slots){const selected=Slots.resolve(a,preset,slotChoices).slots;for(const [slotName,slot] of Object.entries(a.slots)){
       const lab=document.createElement('label');lab.textContent=slot.label||slotName;const sel=document.createElement('select');for(const id of slot.options)sel.add(new Option(assets.get(id)?.name||id,id));sel.value=selected[slotName];sel.onchange=()=>{slotChoices[slotName]=sel.value};lab.append(sel);area.append(lab);
     }}
-    const defaultValues={...Slots.resolve(a,preset).inputs,...Object.fromEntries(Object.entries(a.inputs||{}).map(([k,v])=>[k,v.default]))};
+    const defaultValues=Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs);
     for(const [key,def] of Object.entries(a.inputs||{})){
       const lab=document.createElement('label');lab.textContent=key;let elem;
       if(def.type==='boolean'){elem=document.createElement('input');elem.type='checkbox';elem.checked=controls[key]??defaultValues[key];elem.onchange=()=>{controls[key]=elem.checked;};}
       else if(def.type==='number'){
-        elem=document.createElement('input');elem.type='range';elem.min=def.min??0;
-        elem.max=valueCap(a,key)??def.max??1;elem.step=def.step??1;
-        elem.value=Math.min(Number(elem.max),controls[key]??defaultValues[key]);
+        const limits=Inputs.bounds(a,key,defaultValues);
+        elem=document.createElement('input');elem.type='range';elem.dataset.inputKey=key;
+        elem.min=limits.min;elem.max=limits.max;elem.step=limits.step;elem.value=defaultValues[key];
         const info=document.createElement('output');info.textContent=elem.value+' / '+elem.max;
         elem.oninput=()=>{
-          controls[key]=Number(elem.value);info.textContent=elem.value+' / '+elem.max;
-          if((a.layers||[]).some(l=>l.repeat?.count_input===key)){
-            for(const layer of a.layers.filter(l=>l.repeat?.count_input===key)){
-              const valueKey=layer.repeat.value_input;
-              controls[valueKey]=Math.min(valueCap(a,valueKey),controls[valueKey]??defaultValues[valueKey]);
-            }
-            controlsFor(a);
+          controls=Inputs.reconcile(a,{...controls,[key]:Number(elem.value)},Slots.resolve(a,preset).inputs);
+          // Update existing range elements; never replace a slider mid-drag.
+          for(const item of area.querySelectorAll('input[data-input-key]')){
+            const limit=Inputs.bounds(a,item.dataset.inputKey,controls);
+            item.min=limit.min;item.max=limit.max;item.step=limit.step;
+            item.value=controls[item.dataset.inputKey];
+            item.parentElement.querySelector('output').textContent=item.value+' / '+limit.max;
           }
         };
         lab.append(info);
