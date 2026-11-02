@@ -1,0 +1,2790 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.ui.fantasy01.hud-wave1",
+  "version": "0.2.0",
+  "description": "Original handcrafted procedural vector UI: 57 isolated reusable fantasy meter, slider, and heart parts; approved artwork with pixel-verified value fidelity.",
+  "license": "CC0-1.0",
+  "textures": {
+    "atlas0": {
+      "path": "textures/fantasy-hud-00.png",
+      "width_px": 2048,
+      "height_px": 1024,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "ab3ea0531d8c7bb7cc840cd870508f02795f1e3ea4ec4e19329fc398b5144547"
+    }
+  },
+  "interfaces": {
+    "smi.slot.ui.fantasy01.meter.fill.290x20/1": {
+      "size_px": [
+        290,
+        20
+      ],
+      "allow_scale": false
+    },
+    "smi.slot.ui.fantasy01.heart.ruby.48x48/1": {
+      "size_px": [
+        48,
+        48
+      ],
+      "allow_scale": false
+    },
+    "smi.slot.ui.fantasy01.heart.gold.48x48/1": {
+      "size_px": [
+        48,
+        48
+      ],
+      "allow_scale": false
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.ui.fantasy01.meter.standard.shell",
+      "kind": "region",
+      "name": "Meter Standard Shell",
+      "texture": "atlas0",
+      "rect_px": [
+        10,
+        10,
+        320,
+        48
+      ],
+      "logical_size_px": [
+        320,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rpg",
+        "shell"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.standard.recess",
+      "kind": "region",
+      "name": "Meter Standard Recess",
+      "texture": "atlas0",
+      "rect_px": [
+        346,
+        10,
+        320,
+        48
+      ],
+      "logical_size_px": [
+        320,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "recess",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.standard.rim",
+      "kind": "region",
+      "name": "Meter Standard Rim",
+      "texture": "atlas0",
+      "rect_px": [
+        682,
+        10,
+        320,
+        48
+      ],
+      "logical_size_px": [
+        320,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rim",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.compact.shell",
+      "kind": "region",
+      "name": "Meter Compact Shell",
+      "texture": "atlas0",
+      "rect_px": [
+        1018,
+        10,
+        240,
+        36
+      ],
+      "logical_size_px": [
+        240,
+        36
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rpg",
+        "shell"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.compact.recess",
+      "kind": "region",
+      "name": "Meter Compact Recess",
+      "texture": "atlas0",
+      "rect_px": [
+        1274,
+        10,
+        240,
+        36
+      ],
+      "logical_size_px": [
+        240,
+        36
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "recess",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.compact.rim",
+      "kind": "region",
+      "name": "Meter Compact Rim",
+      "texture": "atlas0",
+      "rect_px": [
+        1530,
+        10,
+        240,
+        36
+      ],
+      "logical_size_px": [
+        240,
+        36
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rim",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.boss.shell",
+      "kind": "region",
+      "name": "Meter Boss Shell",
+      "texture": "atlas0",
+      "rect_px": [
+        10,
+        74,
+        512,
+        68
+      ],
+      "logical_size_px": [
+        512,
+        68
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rpg",
+        "shell"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.boss.recess",
+      "kind": "region",
+      "name": "Meter Boss Recess",
+      "texture": "atlas0",
+      "rect_px": [
+        538,
+        74,
+        512,
+        68
+      ],
+      "logical_size_px": [
+        512,
+        68
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "recess",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.boss.rim",
+      "kind": "region",
+      "name": "Meter Boss Rim",
+      "texture": "atlas0",
+      "rect_px": [
+        1066,
+        74,
+        512,
+        68
+      ],
+      "logical_size_px": [
+        512,
+        68
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rim",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.fill.health",
+      "kind": "region",
+      "name": "Meter Fill Health",
+      "texture": "atlas0",
+      "rect_px": [
+        1594,
+        74,
+        290,
+        20
+      ],
+      "logical_size_px": [
+        290,
+        20
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "health",
+        "meters",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold",
+      "implements": [
+        "smi.slot.ui.fantasy01.meter.fill.290x20/1"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.fill.mana",
+      "kind": "region",
+      "name": "Meter Fill Mana",
+      "texture": "atlas0",
+      "rect_px": [
+        10,
+        158,
+        290,
+        20
+      ],
+      "logical_size_px": [
+        290,
+        20
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "mana",
+        "meters",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold",
+      "implements": [
+        "smi.slot.ui.fantasy01.meter.fill.290x20/1"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.fill.stamina",
+      "kind": "region",
+      "name": "Meter Fill Stamina",
+      "texture": "atlas0",
+      "rect_px": [
+        316,
+        158,
+        290,
+        20
+      ],
+      "logical_size_px": [
+        290,
+        20
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rpg",
+        "stamina"
+      ],
+      "style": "fantasy-ornate-gold",
+      "implements": [
+        "smi.slot.ui.fantasy01.meter.fill.290x20/1"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.fill.xp",
+      "kind": "region",
+      "name": "Meter Fill Xp",
+      "texture": "atlas0",
+      "rect_px": [
+        622,
+        158,
+        290,
+        20
+      ],
+      "logical_size_px": [
+        290,
+        20
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rpg",
+        "xp"
+      ],
+      "style": "fantasy-ornate-gold",
+      "implements": [
+        "smi.slot.ui.fantasy01.meter.fill.290x20/1"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.fill.shield",
+      "kind": "region",
+      "name": "Meter Fill Shield",
+      "texture": "atlas0",
+      "rect_px": [
+        928,
+        158,
+        290,
+        20
+      ],
+      "logical_size_px": [
+        290,
+        20
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rpg",
+        "shield"
+      ],
+      "style": "fantasy-ornate-gold",
+      "implements": [
+        "smi.slot.ui.fantasy01.meter.fill.290x20/1"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.overlay.damage",
+      "kind": "region",
+      "name": "Meter Overlay Damage",
+      "texture": "atlas0",
+      "rect_px": [
+        1234,
+        158,
+        320,
+        48
+      ],
+      "logical_size_px": [
+        320,
+        48
+      ],
+      "tags": [
+        "damage",
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.overlay.healing",
+      "kind": "region",
+      "name": "Meter Overlay Healing",
+      "texture": "atlas0",
+      "rect_px": [
+        1570,
+        158,
+        320,
+        48
+      ],
+      "logical_size_px": [
+        320,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "healing",
+        "meters",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.overlay.critical",
+      "kind": "region",
+      "name": "Meter Overlay Critical",
+      "texture": "atlas0",
+      "rect_px": [
+        10,
+        222,
+        320,
+        48
+      ],
+      "logical_size_px": [
+        320,
+        48
+      ],
+      "tags": [
+        "critical",
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.overlay.shield-hit",
+      "kind": "region",
+      "name": "Meter Overlay Shield Hit",
+      "texture": "atlas0",
+      "rect_px": [
+        346,
+        222,
+        320,
+        48
+      ],
+      "logical_size_px": [
+        320,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rpg",
+        "shield-hit"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.badge.hp",
+      "kind": "region",
+      "name": "Meter Badge Hp",
+      "texture": "atlas0",
+      "rect_px": [
+        682,
+        222,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "hp",
+        "meters",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.badge.mp",
+      "kind": "region",
+      "name": "Meter Badge Mp",
+      "texture": "atlas0",
+      "rect_px": [
+        746,
+        222,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "mp",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.badge.stamina",
+      "kind": "region",
+      "name": "Meter Badge Stamina",
+      "texture": "atlas0",
+      "rect_px": [
+        810,
+        222,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "meters",
+        "ornate",
+        "rpg",
+        "stamina"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.track",
+      "kind": "region",
+      "name": "Slider Gem Track",
+      "texture": "atlas0",
+      "rect_px": [
+        874,
+        222,
+        320,
+        40
+      ],
+      "logical_size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders",
+        "track"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.fill",
+      "kind": "region",
+      "name": "Slider Gem Fill",
+      "texture": "atlas0",
+      "rect_px": [
+        1210,
+        222,
+        272,
+        10
+      ],
+      "logical_size_px": [
+        272,
+        10
+      ],
+      "tags": [
+        "fantasy",
+        "fill",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.thumb.default",
+      "kind": "region",
+      "name": "Slider Gem Thumb Default",
+      "texture": "atlas0",
+      "rect_px": [
+        1498,
+        222,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "default",
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.thumb.hover",
+      "kind": "region",
+      "name": "Slider Gem Thumb Hover",
+      "texture": "atlas0",
+      "rect_px": [
+        1554,
+        222,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "hover",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.thumb.pressed",
+      "kind": "region",
+      "name": "Slider Gem Thumb Pressed",
+      "texture": "atlas0",
+      "rect_px": [
+        1610,
+        222,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "ornate",
+        "pressed",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.thumb.disabled",
+      "kind": "region",
+      "name": "Slider Gem Thumb Disabled",
+      "texture": "atlas0",
+      "rect_px": [
+        1666,
+        222,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "disabled",
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.focus",
+      "kind": "region",
+      "name": "Slider Gem Focus",
+      "texture": "atlas0",
+      "rect_px": [
+        10,
+        286,
+        320,
+        40
+      ],
+      "logical_size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "focus",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.ticks",
+      "kind": "region",
+      "name": "Slider Gem Ticks",
+      "texture": "atlas0",
+      "rect_px": [
+        346,
+        286,
+        320,
+        40
+      ],
+      "logical_size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders",
+        "ticks"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.track",
+      "kind": "region",
+      "name": "Slider Engraved Track",
+      "texture": "atlas0",
+      "rect_px": [
+        682,
+        286,
+        320,
+        40
+      ],
+      "logical_size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders",
+        "track"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.fill",
+      "kind": "region",
+      "name": "Slider Engraved Fill",
+      "texture": "atlas0",
+      "rect_px": [
+        1018,
+        286,
+        272,
+        10
+      ],
+      "logical_size_px": [
+        272,
+        10
+      ],
+      "tags": [
+        "fantasy",
+        "fill",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.thumb.default",
+      "kind": "region",
+      "name": "Slider Engraved Thumb Default",
+      "texture": "atlas0",
+      "rect_px": [
+        1306,
+        286,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "default",
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.thumb.hover",
+      "kind": "region",
+      "name": "Slider Engraved Thumb Hover",
+      "texture": "atlas0",
+      "rect_px": [
+        1362,
+        286,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "hover",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.thumb.pressed",
+      "kind": "region",
+      "name": "Slider Engraved Thumb Pressed",
+      "texture": "atlas0",
+      "rect_px": [
+        1418,
+        286,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "ornate",
+        "pressed",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.thumb.disabled",
+      "kind": "region",
+      "name": "Slider Engraved Thumb Disabled",
+      "texture": "atlas0",
+      "rect_px": [
+        1474,
+        286,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "disabled",
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.focus",
+      "kind": "region",
+      "name": "Slider Engraved Focus",
+      "texture": "atlas0",
+      "rect_px": [
+        1530,
+        286,
+        320,
+        40
+      ],
+      "logical_size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "focus",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.ticks",
+      "kind": "region",
+      "name": "Slider Engraved Ticks",
+      "texture": "atlas0",
+      "rect_px": [
+        10,
+        342,
+        320,
+        40
+      ],
+      "logical_size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders",
+        "ticks"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.track",
+      "kind": "region",
+      "name": "Slider Slim Track",
+      "texture": "atlas0",
+      "rect_px": [
+        346,
+        342,
+        320,
+        40
+      ],
+      "logical_size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders",
+        "track"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.fill",
+      "kind": "region",
+      "name": "Slider Slim Fill",
+      "texture": "atlas0",
+      "rect_px": [
+        682,
+        342,
+        272,
+        10
+      ],
+      "logical_size_px": [
+        272,
+        10
+      ],
+      "tags": [
+        "fantasy",
+        "fill",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.thumb.default",
+      "kind": "region",
+      "name": "Slider Slim Thumb Default",
+      "texture": "atlas0",
+      "rect_px": [
+        970,
+        342,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "default",
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.thumb.hover",
+      "kind": "region",
+      "name": "Slider Slim Thumb Hover",
+      "texture": "atlas0",
+      "rect_px": [
+        1026,
+        342,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "hover",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.thumb.pressed",
+      "kind": "region",
+      "name": "Slider Slim Thumb Pressed",
+      "texture": "atlas0",
+      "rect_px": [
+        1082,
+        342,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "ornate",
+        "pressed",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.thumb.disabled",
+      "kind": "region",
+      "name": "Slider Slim Thumb Disabled",
+      "texture": "atlas0",
+      "rect_px": [
+        1138,
+        342,
+        40,
+        40
+      ],
+      "logical_size_px": [
+        40,
+        40
+      ],
+      "tags": [
+        "disabled",
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.focus",
+      "kind": "region",
+      "name": "Slider Slim Focus",
+      "texture": "atlas0",
+      "rect_px": [
+        1194,
+        342,
+        320,
+        40
+      ],
+      "logical_size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "focus",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.ticks",
+      "kind": "region",
+      "name": "Slider Slim Ticks",
+      "texture": "atlas0",
+      "rect_px": [
+        1530,
+        342,
+        320,
+        40
+      ],
+      "logical_size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "ornate",
+        "rpg",
+        "sliders",
+        "ticks"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.frame.empty",
+      "kind": "region",
+      "name": "Heart Ruby Frame Empty",
+      "texture": "atlas0",
+      "rect_px": [
+        1866,
+        342,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "empty",
+        "fantasy",
+        "gui",
+        "hearts",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.fill.red",
+      "kind": "region",
+      "name": "Heart Ruby Fill Red",
+      "texture": "atlas0",
+      "rect_px": [
+        1930,
+        342,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "hearts",
+        "ornate",
+        "red",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold",
+      "implements": [
+        "smi.slot.ui.fantasy01.heart.ruby.48x48/1"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.fill.golden",
+      "kind": "region",
+      "name": "Heart Ruby Fill Golden",
+      "texture": "atlas0",
+      "rect_px": [
+        10,
+        406,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "golden",
+        "gui",
+        "hearts",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold",
+      "implements": [
+        "smi.slot.ui.fantasy01.heart.ruby.48x48/1"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.fill.poisoned",
+      "kind": "region",
+      "name": "Heart Ruby Fill Poisoned",
+      "texture": "atlas0",
+      "rect_px": [
+        74,
+        406,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "hearts",
+        "ornate",
+        "poisoned",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold",
+      "implements": [
+        "smi.slot.ui.fantasy01.heart.ruby.48x48/1"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.overlay.damage",
+      "kind": "region",
+      "name": "Heart Ruby Overlay Damage",
+      "texture": "atlas0",
+      "rect_px": [
+        138,
+        406,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "damage",
+        "fantasy",
+        "gui",
+        "hearts",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.overlay.low-health",
+      "kind": "region",
+      "name": "Heart Ruby Overlay Low Health",
+      "texture": "atlas0",
+      "rect_px": [
+        202,
+        406,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "hearts",
+        "low-health",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.frame.empty",
+      "kind": "region",
+      "name": "Heart Gold Frame Empty",
+      "texture": "atlas0",
+      "rect_px": [
+        266,
+        406,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "empty",
+        "fantasy",
+        "gui",
+        "hearts",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.fill.red",
+      "kind": "region",
+      "name": "Heart Gold Fill Red",
+      "texture": "atlas0",
+      "rect_px": [
+        330,
+        406,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "hearts",
+        "ornate",
+        "red",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold",
+      "implements": [
+        "smi.slot.ui.fantasy01.heart.gold.48x48/1"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.fill.golden",
+      "kind": "region",
+      "name": "Heart Gold Fill Golden",
+      "texture": "atlas0",
+      "rect_px": [
+        394,
+        406,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "golden",
+        "gui",
+        "hearts",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold",
+      "implements": [
+        "smi.slot.ui.fantasy01.heart.gold.48x48/1"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.fill.poisoned",
+      "kind": "region",
+      "name": "Heart Gold Fill Poisoned",
+      "texture": "atlas0",
+      "rect_px": [
+        458,
+        406,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "hearts",
+        "ornate",
+        "poisoned",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold",
+      "implements": [
+        "smi.slot.ui.fantasy01.heart.gold.48x48/1"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.overlay.damage",
+      "kind": "region",
+      "name": "Heart Gold Overlay Damage",
+      "texture": "atlas0",
+      "rect_px": [
+        522,
+        406,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "damage",
+        "fantasy",
+        "gui",
+        "hearts",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.overlay.low-health",
+      "kind": "region",
+      "name": "Heart Gold Overlay Low Health",
+      "texture": "atlas0",
+      "rect_px": [
+        586,
+        406,
+        48,
+        48
+      ],
+      "logical_size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "fantasy",
+        "gui",
+        "hearts",
+        "low-health",
+        "ornate",
+        "rpg"
+      ],
+      "style": "fantasy-ornate-gold"
+    },
+    {
+      "id": "smi.ui.fantasy01.widget.meter.health",
+      "kind": "composition",
+      "name": "Health Meter \u2014 Royal Gold",
+      "size_px": [
+        360,
+        48
+      ],
+      "tags": [
+        "hud",
+        "resource",
+        "meter",
+        "health",
+        "fantasy",
+        "interactive"
+      ],
+      "inputs": {
+        "value": {
+          "type": "number",
+          "default": 72,
+          "min": 0,
+          "max": 100
+        },
+        "show_effect": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "slots": {
+        "fill": {
+          "label": "Resource fill",
+          "accepts": "smi.slot.ui.fantasy01.meter.fill.290x20/1",
+          "default": "smi.ui.fantasy01.meter.fill.health",
+          "options": [
+            "smi.ui.fantasy01.meter.fill.health",
+            "smi.ui.fantasy01.meter.fill.mana",
+            "smi.ui.fantasy01.meter.fill.stamina",
+            "smi.ui.fantasy01.meter.fill.xp",
+            "smi.ui.fantasy01.meter.fill.shield"
+          ]
+        }
+      },
+      "presets": {
+        "Health": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.health"
+          }
+        },
+        "Mana": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.mana"
+          }
+        },
+        "Stamina": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.stamina"
+          }
+        },
+        "Xp": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.xp"
+          }
+        },
+        "Shield": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.shield"
+          }
+        }
+      },
+      "default_preset": "Health",
+      "layers": [
+        {
+          "id": "shell",
+          "asset": "smi.ui.fantasy01.meter.standard.shell",
+          "offset_px": [
+            40,
+            0
+          ]
+        },
+        {
+          "id": "recess",
+          "asset": "smi.ui.fantasy01.meter.standard.recess",
+          "offset_px": [
+            40,
+            0
+          ]
+        },
+        {
+          "id": "fill",
+          "slot": "fill",
+          "offset_px": [
+            55,
+            14
+          ],
+          "clip": {
+            "input": "value",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "rim",
+          "asset": "smi.ui.fantasy01.meter.standard.rim",
+          "offset_px": [
+            40,
+            0
+          ]
+        },
+        {
+          "id": "effect",
+          "asset": "smi.ui.fantasy01.meter.overlay.damage",
+          "visible_when": {
+            "input": "show_effect",
+            "equals": true
+          }
+        },
+        {
+          "id": "badge",
+          "asset": "smi.ui.fantasy01.meter.badge.hp",
+          "offset_px": [
+            0,
+            0
+          ]
+        }
+      ],
+      "behavior": {
+        "role": "slider",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.widget.meter.mana",
+      "kind": "composition",
+      "name": "Mana Meter \u2014 Royal Gold",
+      "size_px": [
+        360,
+        48
+      ],
+      "tags": [
+        "hud",
+        "resource",
+        "meter",
+        "mana",
+        "fantasy",
+        "interactive"
+      ],
+      "inputs": {
+        "value": {
+          "type": "number",
+          "default": 72,
+          "min": 0,
+          "max": 100
+        },
+        "show_effect": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "slots": {
+        "fill": {
+          "label": "Resource fill",
+          "accepts": "smi.slot.ui.fantasy01.meter.fill.290x20/1",
+          "default": "smi.ui.fantasy01.meter.fill.mana",
+          "options": [
+            "smi.ui.fantasy01.meter.fill.health",
+            "smi.ui.fantasy01.meter.fill.mana",
+            "smi.ui.fantasy01.meter.fill.stamina",
+            "smi.ui.fantasy01.meter.fill.xp",
+            "smi.ui.fantasy01.meter.fill.shield"
+          ]
+        }
+      },
+      "presets": {
+        "Health": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.health"
+          }
+        },
+        "Mana": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.mana"
+          }
+        },
+        "Stamina": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.stamina"
+          }
+        },
+        "Xp": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.xp"
+          }
+        },
+        "Shield": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.shield"
+          }
+        }
+      },
+      "default_preset": "Mana",
+      "layers": [
+        {
+          "id": "shell",
+          "asset": "smi.ui.fantasy01.meter.standard.shell",
+          "offset_px": [
+            40,
+            0
+          ]
+        },
+        {
+          "id": "recess",
+          "asset": "smi.ui.fantasy01.meter.standard.recess",
+          "offset_px": [
+            40,
+            0
+          ]
+        },
+        {
+          "id": "fill",
+          "slot": "fill",
+          "offset_px": [
+            55,
+            14
+          ],
+          "clip": {
+            "input": "value",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "rim",
+          "asset": "smi.ui.fantasy01.meter.standard.rim",
+          "offset_px": [
+            40,
+            0
+          ]
+        },
+        {
+          "id": "effect",
+          "asset": "smi.ui.fantasy01.meter.overlay.damage",
+          "visible_when": {
+            "input": "show_effect",
+            "equals": true
+          }
+        },
+        {
+          "id": "badge",
+          "asset": "smi.ui.fantasy01.meter.badge.mp",
+          "offset_px": [
+            0,
+            0
+          ]
+        }
+      ],
+      "behavior": {
+        "role": "slider",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.widget.meter.stamina",
+      "kind": "composition",
+      "name": "Stamina Meter \u2014 Royal Gold",
+      "size_px": [
+        360,
+        48
+      ],
+      "tags": [
+        "hud",
+        "resource",
+        "meter",
+        "stamina",
+        "fantasy",
+        "interactive"
+      ],
+      "inputs": {
+        "value": {
+          "type": "number",
+          "default": 72,
+          "min": 0,
+          "max": 100
+        },
+        "show_effect": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "slots": {
+        "fill": {
+          "label": "Resource fill",
+          "accepts": "smi.slot.ui.fantasy01.meter.fill.290x20/1",
+          "default": "smi.ui.fantasy01.meter.fill.stamina",
+          "options": [
+            "smi.ui.fantasy01.meter.fill.health",
+            "smi.ui.fantasy01.meter.fill.mana",
+            "smi.ui.fantasy01.meter.fill.stamina",
+            "smi.ui.fantasy01.meter.fill.xp",
+            "smi.ui.fantasy01.meter.fill.shield"
+          ]
+        }
+      },
+      "presets": {
+        "Health": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.health"
+          }
+        },
+        "Mana": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.mana"
+          }
+        },
+        "Stamina": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.stamina"
+          }
+        },
+        "Xp": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.xp"
+          }
+        },
+        "Shield": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.shield"
+          }
+        }
+      },
+      "default_preset": "Stamina",
+      "layers": [
+        {
+          "id": "shell",
+          "asset": "smi.ui.fantasy01.meter.standard.shell",
+          "offset_px": [
+            40,
+            0
+          ]
+        },
+        {
+          "id": "recess",
+          "asset": "smi.ui.fantasy01.meter.standard.recess",
+          "offset_px": [
+            40,
+            0
+          ]
+        },
+        {
+          "id": "fill",
+          "slot": "fill",
+          "offset_px": [
+            55,
+            14
+          ],
+          "clip": {
+            "input": "value",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "rim",
+          "asset": "smi.ui.fantasy01.meter.standard.rim",
+          "offset_px": [
+            40,
+            0
+          ]
+        },
+        {
+          "id": "effect",
+          "asset": "smi.ui.fantasy01.meter.overlay.healing",
+          "visible_when": {
+            "input": "show_effect",
+            "equals": true
+          }
+        },
+        {
+          "id": "badge",
+          "asset": "smi.ui.fantasy01.meter.badge.stamina",
+          "offset_px": [
+            0,
+            0
+          ]
+        }
+      ],
+      "behavior": {
+        "role": "slider",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.widget.meter.xp",
+      "kind": "composition",
+      "name": "Xp Meter \u2014 Royal Gold",
+      "size_px": [
+        320,
+        48
+      ],
+      "tags": [
+        "hud",
+        "resource",
+        "meter",
+        "xp",
+        "fantasy",
+        "interactive"
+      ],
+      "inputs": {
+        "value": {
+          "type": "number",
+          "default": 72,
+          "min": 0,
+          "max": 100
+        },
+        "show_effect": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "slots": {
+        "fill": {
+          "label": "Resource fill",
+          "accepts": "smi.slot.ui.fantasy01.meter.fill.290x20/1",
+          "default": "smi.ui.fantasy01.meter.fill.xp",
+          "options": [
+            "smi.ui.fantasy01.meter.fill.health",
+            "smi.ui.fantasy01.meter.fill.mana",
+            "smi.ui.fantasy01.meter.fill.stamina",
+            "smi.ui.fantasy01.meter.fill.xp",
+            "smi.ui.fantasy01.meter.fill.shield"
+          ]
+        }
+      },
+      "presets": {
+        "Health": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.health"
+          }
+        },
+        "Mana": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.mana"
+          }
+        },
+        "Stamina": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.stamina"
+          }
+        },
+        "Xp": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.xp"
+          }
+        },
+        "Shield": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.shield"
+          }
+        }
+      },
+      "default_preset": "Xp",
+      "layers": [
+        {
+          "id": "shell",
+          "asset": "smi.ui.fantasy01.meter.standard.shell",
+          "offset_px": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "recess",
+          "asset": "smi.ui.fantasy01.meter.standard.recess",
+          "offset_px": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "fill",
+          "slot": "fill",
+          "offset_px": [
+            15,
+            14
+          ],
+          "clip": {
+            "input": "value",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "rim",
+          "asset": "smi.ui.fantasy01.meter.standard.rim",
+          "offset_px": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "effect",
+          "asset": "smi.ui.fantasy01.meter.overlay.healing",
+          "visible_when": {
+            "input": "show_effect",
+            "equals": true
+          }
+        }
+      ],
+      "behavior": {
+        "role": "slider",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.widget.meter.shield",
+      "kind": "composition",
+      "name": "Shield Meter \u2014 Royal Gold",
+      "size_px": [
+        320,
+        48
+      ],
+      "tags": [
+        "hud",
+        "resource",
+        "meter",
+        "shield",
+        "fantasy",
+        "interactive"
+      ],
+      "inputs": {
+        "value": {
+          "type": "number",
+          "default": 72,
+          "min": 0,
+          "max": 100
+        },
+        "show_effect": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "slots": {
+        "fill": {
+          "label": "Resource fill",
+          "accepts": "smi.slot.ui.fantasy01.meter.fill.290x20/1",
+          "default": "smi.ui.fantasy01.meter.fill.shield",
+          "options": [
+            "smi.ui.fantasy01.meter.fill.health",
+            "smi.ui.fantasy01.meter.fill.mana",
+            "smi.ui.fantasy01.meter.fill.stamina",
+            "smi.ui.fantasy01.meter.fill.xp",
+            "smi.ui.fantasy01.meter.fill.shield"
+          ]
+        }
+      },
+      "presets": {
+        "Health": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.health"
+          }
+        },
+        "Mana": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.mana"
+          }
+        },
+        "Stamina": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.stamina"
+          }
+        },
+        "Xp": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.xp"
+          }
+        },
+        "Shield": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.meter.fill.shield"
+          }
+        }
+      },
+      "default_preset": "Shield",
+      "layers": [
+        {
+          "id": "shell",
+          "asset": "smi.ui.fantasy01.meter.standard.shell",
+          "offset_px": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "recess",
+          "asset": "smi.ui.fantasy01.meter.standard.recess",
+          "offset_px": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "fill",
+          "slot": "fill",
+          "offset_px": [
+            15,
+            14
+          ],
+          "clip": {
+            "input": "value",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "rim",
+          "asset": "smi.ui.fantasy01.meter.standard.rim",
+          "offset_px": [
+            0,
+            0
+          ]
+        },
+        {
+          "id": "effect",
+          "asset": "smi.ui.fantasy01.meter.overlay.damage",
+          "visible_when": {
+            "input": "show_effect",
+            "equals": true
+          }
+        }
+      ],
+      "behavior": {
+        "role": "slider",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.thumb.states",
+      "kind": "state_set",
+      "name": "Gem Gem Slider Handle States",
+      "states": {
+        "default": "smi.ui.fantasy01.slider.gem.thumb.default",
+        "hover": "smi.ui.fantasy01.slider.gem.thumb.hover",
+        "pressed": "smi.ui.fantasy01.slider.gem.thumb.pressed",
+        "disabled": "smi.ui.fantasy01.slider.gem.thumb.disabled"
+      },
+      "default_state": "default",
+      "tags": [
+        "slider",
+        "thumb",
+        "hover",
+        "pressed",
+        "disabled",
+        "fantasy"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.widget.slider.gem",
+      "kind": "composition",
+      "name": "Gem Horizontal Slider",
+      "size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "gui",
+        "slider",
+        "horizontal",
+        "interactive",
+        "gem"
+      ],
+      "inputs": {
+        "value": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 45
+        },
+        "appearance": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        },
+        "focused": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "layers": [
+        {
+          "id": "track",
+          "asset": "smi.ui.fantasy01.slider.gem.track"
+        },
+        {
+          "id": "fill",
+          "asset": "smi.ui.fantasy01.slider.gem.fill",
+          "offset_px": [
+            24,
+            15
+          ],
+          "clip": {
+            "input": "value",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "ticks",
+          "asset": "smi.ui.fantasy01.slider.gem.ticks"
+        },
+        {
+          "id": "handle",
+          "asset": "smi.ui.fantasy01.slider.gem.thumb.states",
+          "offset_px": [
+            0,
+            0
+          ],
+          "position_from_input": {
+            "input": "value",
+            "axis": "x",
+            "from_px": 5,
+            "to_px": 275
+          },
+          "state_from_input": "appearance"
+        },
+        {
+          "id": "focus",
+          "asset": "smi.ui.fantasy01.slider.gem.focus",
+          "visible_when": {
+            "input": "focused",
+            "equals": true
+          }
+        }
+      ],
+      "behavior": {
+        "role": "slider",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.thumb.states",
+      "kind": "state_set",
+      "name": "Engraved Gem Slider Handle States",
+      "states": {
+        "default": "smi.ui.fantasy01.slider.engraved.thumb.default",
+        "hover": "smi.ui.fantasy01.slider.engraved.thumb.hover",
+        "pressed": "smi.ui.fantasy01.slider.engraved.thumb.pressed",
+        "disabled": "smi.ui.fantasy01.slider.engraved.thumb.disabled"
+      },
+      "default_state": "default",
+      "tags": [
+        "slider",
+        "thumb",
+        "hover",
+        "pressed",
+        "disabled",
+        "fantasy"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.widget.slider.engraved",
+      "kind": "composition",
+      "name": "Engraved Horizontal Slider",
+      "size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "gui",
+        "slider",
+        "horizontal",
+        "interactive",
+        "engraved"
+      ],
+      "inputs": {
+        "value": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 45
+        },
+        "appearance": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        },
+        "focused": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "layers": [
+        {
+          "id": "track",
+          "asset": "smi.ui.fantasy01.slider.engraved.track"
+        },
+        {
+          "id": "fill",
+          "asset": "smi.ui.fantasy01.slider.engraved.fill",
+          "offset_px": [
+            24,
+            15
+          ],
+          "clip": {
+            "input": "value",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "ticks",
+          "asset": "smi.ui.fantasy01.slider.engraved.ticks"
+        },
+        {
+          "id": "handle",
+          "asset": "smi.ui.fantasy01.slider.engraved.thumb.states",
+          "offset_px": [
+            0,
+            0
+          ],
+          "position_from_input": {
+            "input": "value",
+            "axis": "x",
+            "from_px": 5,
+            "to_px": 275
+          },
+          "state_from_input": "appearance"
+        },
+        {
+          "id": "focus",
+          "asset": "smi.ui.fantasy01.slider.engraved.focus",
+          "visible_when": {
+            "input": "focused",
+            "equals": true
+          }
+        }
+      ],
+      "behavior": {
+        "role": "slider",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.thumb.states",
+      "kind": "state_set",
+      "name": "Slim Gem Slider Handle States",
+      "states": {
+        "default": "smi.ui.fantasy01.slider.slim.thumb.default",
+        "hover": "smi.ui.fantasy01.slider.slim.thumb.hover",
+        "pressed": "smi.ui.fantasy01.slider.slim.thumb.pressed",
+        "disabled": "smi.ui.fantasy01.slider.slim.thumb.disabled"
+      },
+      "default_state": "default",
+      "tags": [
+        "slider",
+        "thumb",
+        "hover",
+        "pressed",
+        "disabled",
+        "fantasy"
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.widget.slider.slim",
+      "kind": "composition",
+      "name": "Slim Horizontal Slider",
+      "size_px": [
+        320,
+        40
+      ],
+      "tags": [
+        "gui",
+        "slider",
+        "horizontal",
+        "interactive",
+        "slim"
+      ],
+      "inputs": {
+        "value": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 45
+        },
+        "appearance": {
+          "type": "enum",
+          "default": "default",
+          "values": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled"
+          ]
+        },
+        "focused": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "layers": [
+        {
+          "id": "track",
+          "asset": "smi.ui.fantasy01.slider.slim.track"
+        },
+        {
+          "id": "fill",
+          "asset": "smi.ui.fantasy01.slider.slim.fill",
+          "offset_px": [
+            24,
+            15
+          ],
+          "clip": {
+            "input": "value",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "ticks",
+          "asset": "smi.ui.fantasy01.slider.slim.ticks"
+        },
+        {
+          "id": "handle",
+          "asset": "smi.ui.fantasy01.slider.slim.thumb.states",
+          "offset_px": [
+            0,
+            0
+          ],
+          "position_from_input": {
+            "input": "value",
+            "axis": "x",
+            "from_px": 5,
+            "to_px": 275
+          },
+          "state_from_input": "appearance"
+        },
+        {
+          "id": "focus",
+          "asset": "smi.ui.fantasy01.slider.slim.focus",
+          "visible_when": {
+            "input": "focused",
+            "equals": true
+          }
+        }
+      ],
+      "behavior": {
+        "role": "slider",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.widget.heart.ruby",
+      "kind": "composition",
+      "name": "Ruby Life Heart",
+      "size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "heart",
+        "life",
+        "hp",
+        "rpg",
+        "fantasy",
+        "fractional"
+      ],
+      "inputs": {
+        "fraction": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "default": 1
+        },
+        "damage": {
+          "type": "boolean",
+          "default": false
+        },
+        "critical": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "slots": {
+        "fill": {
+          "label": "Heart appearance",
+          "accepts": "smi.slot.ui.fantasy01.heart.ruby.48x48/1",
+          "default": "smi.ui.fantasy01.heart.ruby.fill.red",
+          "options": [
+            "smi.ui.fantasy01.heart.ruby.fill.red",
+            "smi.ui.fantasy01.heart.ruby.fill.golden",
+            "smi.ui.fantasy01.heart.ruby.fill.poisoned"
+          ]
+        }
+      },
+      "presets": {
+        "Red": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.heart.ruby.fill.red"
+          }
+        },
+        "Golden": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.heart.ruby.fill.golden"
+          }
+        },
+        "Poisoned": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.heart.ruby.fill.poisoned"
+          }
+        }
+      },
+      "default_preset": "Red",
+      "layers": [
+        {
+          "id": "fill",
+          "slot": "fill",
+          "clip": {
+            "input": "fraction",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "frame",
+          "asset": "smi.ui.fantasy01.heart.ruby.frame.empty"
+        },
+        {
+          "id": "damage",
+          "asset": "smi.ui.fantasy01.heart.ruby.overlay.damage",
+          "visible_when": {
+            "input": "damage",
+            "equals": true
+          }
+        },
+        {
+          "id": "low-health",
+          "asset": "smi.ui.fantasy01.heart.ruby.overlay.low-health",
+          "visible_when": {
+            "input": "critical",
+            "equals": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "smi.ui.fantasy01.widget.heart.gold",
+      "kind": "composition",
+      "name": "Gold Life Heart",
+      "size_px": [
+        48,
+        48
+      ],
+      "tags": [
+        "heart",
+        "life",
+        "hp",
+        "rpg",
+        "fantasy",
+        "fractional"
+      ],
+      "inputs": {
+        "fraction": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "default": 1
+        },
+        "damage": {
+          "type": "boolean",
+          "default": false
+        },
+        "critical": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "slots": {
+        "fill": {
+          "label": "Heart appearance",
+          "accepts": "smi.slot.ui.fantasy01.heart.gold.48x48/1",
+          "default": "smi.ui.fantasy01.heart.gold.fill.red",
+          "options": [
+            "smi.ui.fantasy01.heart.gold.fill.red",
+            "smi.ui.fantasy01.heart.gold.fill.golden",
+            "smi.ui.fantasy01.heart.gold.fill.poisoned"
+          ]
+        }
+      },
+      "presets": {
+        "Red": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.heart.gold.fill.red"
+          }
+        },
+        "Golden": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.heart.gold.fill.golden"
+          }
+        },
+        "Poisoned": {
+          "slots": {
+            "fill": "smi.ui.fantasy01.heart.gold.fill.poisoned"
+          }
+        }
+      },
+      "default_preset": "Red",
+      "layers": [
+        {
+          "id": "fill",
+          "slot": "fill",
+          "clip": {
+            "input": "fraction",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "frame",
+          "asset": "smi.ui.fantasy01.heart.gold.frame.empty"
+        },
+        {
+          "id": "damage",
+          "asset": "smi.ui.fantasy01.heart.gold.overlay.damage",
+          "visible_when": {
+            "input": "damage",
+            "equals": true
+          }
+        },
+        {
+          "id": "low-health",
+          "asset": "smi.ui.fantasy01.heart.gold.overlay.low-health",
+          "visible_when": {
+            "input": "critical",
+            "equals": true
+          }
+        }
+      ]
+    }
+  ]
+}

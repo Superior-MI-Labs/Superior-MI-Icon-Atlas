@@ -1,0 +1,90 @@
+{
+  "schema": "smi-ui-value-fidelity/1",
+  "status": "PASS",
+  "checks": [
+    {
+      "gate": "meter 0..100 proportional rendered area",
+      "result": "PASS",
+      "values": [
+        0,
+        1,
+        5,
+        10,
+        25,
+        50,
+        75,
+        90,
+        99,
+        100
+      ],
+      "changed_pixels": [
+        0,
+        17,
+        148,
+        316,
+        821,
+        1656,
+        2498,
+        2995,
+        3293,
+        3304
+      ],
+      "rightmost_changed_x": [
+        null,
+        51,
+        61,
+        74,
+        113,
+        177,
+        242,
+        280,
+        303,
+        304
+      ]
+    },
+    {
+      "gate": "gem slider shared endpoints and bounded handle",
+      "result": "PASS",
+      "fill_span": [
+        26,
+        294
+      ],
+      "thumb_center_span": [
+        25.0,
+        295.0
+      ],
+      "browser_samples": 10
+    },
+    {
+      "gate": "engraved slider shared endpoints and bounded handle",
+      "result": "PASS",
+      "fill_span": [
+        26,
+        294
+      ],
+      "thumb_center_span": [
+        25.0,
+        295.0
+      ],
+      "browser_samples": 10
+    },
+    {
+      "gate": "slim slider shared endpoints and bounded handle",
+      "result": "PASS",
+      "fill_span": [
+        26,
+        294
+      ],
+      "thumb_center_span": [
+        25.0,
+        295.0
+      ],
+      "browser_samples": 10
+    },
+    {
+      "gate": "badge and meter data span are non-overlapping",
+      "result": "PASS"
+    }
+  ],
+  "notes": "This is a pixel and source-geometry gate; artistic signoff and native pointer input remain separate."
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "smi-ai-acceptance/1",
+  "intent": "Meter slider heart parts render as independently controllable, compatible compositions",
+  "checks": [
+    {
+      "type": "asset_kind",
+      "asset": "smi.ui.fantasy01.widget.meter.health",
+      "kind": "composition"
+    },
+    {
+      "type": "input_declared",
+      "asset": "smi.ui.fantasy01.widget.meter.health",
+      "input": "value",
+      "input_type": "number"
+    },
+    {
+      "type": "preset_selects",
+      "asset": "smi.ui.fantasy01.widget.meter.health",
+      "preset": "Mana",
+      "slot": "fill",
+      "option": "smi.ui.fantasy01.meter.fill.mana"
+    },
+    {
+      "type": "state_contains",
+      "asset": "smi.ui.fantasy01.slider.gem.thumb.states",
+      "state": "hover"
+    },
+    {
+      "type": "state_contains",
+      "asset": "smi.ui.fantasy01.slider.gem.thumb.states",
+      "state": "pressed"
+    },
+    {
+      "type": "input_declared",
+      "asset": "smi.ui.fantasy01.widget.heart.ruby",
+      "input": "fraction",
+      "input_type": "number"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.ui.fantasy01.widget.slider.slim",
+      "kind": "composition"
+    },
+    {
+      "type": "tag_contains",
+      "asset": "smi.ui.fantasy01.widget.slider.slim",
+      "tag": "horizontal"
+    }
+  ]
+}

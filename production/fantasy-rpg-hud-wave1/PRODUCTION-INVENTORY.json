@@ -1,0 +1,2020 @@
+{
+  "schema": "smi-production-inventory/1",
+  "note": "Planning data only. NOT an importable s mi-visual-pack manifest or finished assets.",
+  "collection_id": "smi.ui.fantasy01.hud-essentials",
+  "theme": "ornate high-fantasy, gold filigree, dark enamel, ruby/sapphire/emerald",
+  "art_license_target": "CC0-1.0 only after original artwork and rights clearance",
+  "rights_note": "Emerson character candidate is excluded from this public pack pending artwork/rights approval.",
+  "target_assets": {
+    "regions": 145,
+    "sequences": 4,
+    "state_sets": 8,
+    "widget_compositions": 20,
+    "demo_compositions": 5,
+    "total": 182
+  },
+  "regions": [
+    {
+      "id": "smi.ui.fantasy01.meter.standard.shell",
+      "family": "meters",
+      "part": "meter.standard.shell",
+      "nominal_size_px": [
+        320,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "separate visual plate, not baked fill",
+      "qa_focus": "alpha + layers + nine-slice bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.standard.recess",
+      "family": "meters",
+      "part": "meter.standard.recess",
+      "nominal_size_px": [
+        320,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "separate visual plate, not baked fill",
+      "qa_focus": "alpha + layers + nine-slice bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.standard.rim",
+      "family": "meters",
+      "part": "meter.standard.rim",
+      "nominal_size_px": [
+        320,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "separate visual plate, not baked fill",
+      "qa_focus": "alpha + layers + nine-slice bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.compact.shell",
+      "family": "meters",
+      "part": "meter.compact.shell",
+      "nominal_size_px": [
+        240,
+        36
+      ],
+      "production_wave": 1,
+      "definition": "separate visual plate, not baked fill",
+      "qa_focus": "alpha + layers + nine-slice bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.compact.recess",
+      "family": "meters",
+      "part": "meter.compact.recess",
+      "nominal_size_px": [
+        240,
+        36
+      ],
+      "production_wave": 1,
+      "definition": "separate visual plate, not baked fill",
+      "qa_focus": "alpha + layers + nine-slice bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.compact.rim",
+      "family": "meters",
+      "part": "meter.compact.rim",
+      "nominal_size_px": [
+        240,
+        36
+      ],
+      "production_wave": 1,
+      "definition": "separate visual plate, not baked fill",
+      "qa_focus": "alpha + layers + nine-slice bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.boss.shell",
+      "family": "meters",
+      "part": "meter.boss.shell",
+      "nominal_size_px": [
+        512,
+        68
+      ],
+      "production_wave": 1,
+      "definition": "separate visual plate, not baked fill",
+      "qa_focus": "alpha + layers + nine-slice bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.boss.recess",
+      "family": "meters",
+      "part": "meter.boss.recess",
+      "nominal_size_px": [
+        512,
+        68
+      ],
+      "production_wave": 1,
+      "definition": "separate visual plate, not baked fill",
+      "qa_focus": "alpha + layers + nine-slice bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.boss.rim",
+      "family": "meters",
+      "part": "meter.boss.rim",
+      "nominal_size_px": [
+        512,
+        68
+      ],
+      "production_wave": 1,
+      "definition": "separate visual plate, not baked fill",
+      "qa_focus": "alpha + layers + nine-slice bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.fill.health",
+      "family": "meters",
+      "part": "meter.fill.health",
+      "nominal_size_px": [
+        290,
+        20
+      ],
+      "production_wave": 1,
+      "definition": "isolated fill texture",
+      "qa_focus": "clipping min/mid/max + visual fit",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.fill.mana",
+      "family": "meters",
+      "part": "meter.fill.mana",
+      "nominal_size_px": [
+        290,
+        20
+      ],
+      "production_wave": 1,
+      "definition": "isolated fill texture",
+      "qa_focus": "clipping min/mid/max + visual fit",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.fill.stamina",
+      "family": "meters",
+      "part": "meter.fill.stamina",
+      "nominal_size_px": [
+        290,
+        20
+      ],
+      "production_wave": 1,
+      "definition": "isolated fill texture",
+      "qa_focus": "clipping min/mid/max + visual fit",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.fill.xp",
+      "family": "meters",
+      "part": "meter.fill.xp",
+      "nominal_size_px": [
+        290,
+        20
+      ],
+      "production_wave": 1,
+      "definition": "isolated fill texture",
+      "qa_focus": "clipping min/mid/max + visual fit",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.fill.shield",
+      "family": "meters",
+      "part": "meter.fill.shield",
+      "nominal_size_px": [
+        290,
+        20
+      ],
+      "production_wave": 1,
+      "definition": "isolated fill texture",
+      "qa_focus": "clipping min/mid/max + visual fit",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.overlay.damage",
+      "family": "meters",
+      "part": "meter.overlay.damage",
+      "nominal_size_px": [
+        320,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "separate overlay",
+      "qa_focus": "transparency + visible state",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.overlay.healing",
+      "family": "meters",
+      "part": "meter.overlay.healing",
+      "nominal_size_px": [
+        320,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "separate overlay",
+      "qa_focus": "transparency + visible state",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.overlay.critical",
+      "family": "meters",
+      "part": "meter.overlay.critical",
+      "nominal_size_px": [
+        320,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "separate overlay",
+      "qa_focus": "transparency + visible state",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.overlay.shield-hit",
+      "family": "meters",
+      "part": "meter.overlay.shield-hit",
+      "nominal_size_px": [
+        320,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "separate overlay",
+      "qa_focus": "transparency + visible state",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.badge.hp",
+      "family": "meters",
+      "part": "meter.badge.hp",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "optional badge",
+      "qa_focus": "identity + transparent margin",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.badge.mp",
+      "family": "meters",
+      "part": "meter.badge.mp",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "optional badge",
+      "qa_focus": "identity + transparent margin",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.meter.badge.stamina",
+      "family": "meters",
+      "part": "meter.badge.stamina",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "optional badge",
+      "qa_focus": "identity + transparent margin",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.track",
+      "family": "sliders",
+      "part": "slider.gem.track",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.fill",
+      "family": "sliders",
+      "part": "slider.gem.fill",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.thumb.default",
+      "family": "sliders",
+      "part": "slider.gem.thumb.default",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.thumb.hover",
+      "family": "sliders",
+      "part": "slider.gem.thumb.hover",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.thumb.pressed",
+      "family": "sliders",
+      "part": "slider.gem.thumb.pressed",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.thumb.disabled",
+      "family": "sliders",
+      "part": "slider.gem.thumb.disabled",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.focus",
+      "family": "sliders",
+      "part": "slider.gem.focus",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.gem.ticks",
+      "family": "sliders",
+      "part": "slider.gem.ticks",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.track",
+      "family": "sliders",
+      "part": "slider.engraved.track",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.fill",
+      "family": "sliders",
+      "part": "slider.engraved.fill",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.thumb.default",
+      "family": "sliders",
+      "part": "slider.engraved.thumb.default",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.thumb.hover",
+      "family": "sliders",
+      "part": "slider.engraved.thumb.hover",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.thumb.pressed",
+      "family": "sliders",
+      "part": "slider.engraved.thumb.pressed",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.thumb.disabled",
+      "family": "sliders",
+      "part": "slider.engraved.thumb.disabled",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.focus",
+      "family": "sliders",
+      "part": "slider.engraved.focus",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.engraved.ticks",
+      "family": "sliders",
+      "part": "slider.engraved.ticks",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.track",
+      "family": "sliders",
+      "part": "slider.slim.track",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.fill",
+      "family": "sliders",
+      "part": "slider.slim.fill",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.thumb.default",
+      "family": "sliders",
+      "part": "slider.slim.thumb.default",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.thumb.hover",
+      "family": "sliders",
+      "part": "slider.slim.thumb.hover",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.thumb.pressed",
+      "family": "sliders",
+      "part": "slider.slim.thumb.pressed",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.thumb.disabled",
+      "family": "sliders",
+      "part": "slider.slim.thumb.disabled",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.focus",
+      "family": "sliders",
+      "part": "slider.slim.focus",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slider.slim.ticks",
+      "family": "sliders",
+      "part": "slider.slim.ticks",
+      "nominal_size_px": [
+        320,
+        40
+      ],
+      "production_wave": 1,
+      "definition": "isolated slider part",
+      "qa_focus": "min/mid/max + thumb travel + all states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.frame.empty",
+      "family": "hearts",
+      "part": "heart.ruby.frame.empty",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.fill.red",
+      "family": "hearts",
+      "part": "heart.ruby.fill.red",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.fill.golden",
+      "family": "hearts",
+      "part": "heart.ruby.fill.golden",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.fill.poisoned",
+      "family": "hearts",
+      "part": "heart.ruby.fill.poisoned",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.overlay.damage",
+      "family": "hearts",
+      "part": "heart.ruby.overlay.damage",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.ruby.overlay.low-health",
+      "family": "hearts",
+      "part": "heart.ruby.overlay.low-health",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.frame.empty",
+      "family": "hearts",
+      "part": "heart.gold.frame.empty",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.fill.red",
+      "family": "hearts",
+      "part": "heart.gold.fill.red",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.fill.golden",
+      "family": "hearts",
+      "part": "heart.gold.fill.golden",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.fill.poisoned",
+      "family": "hearts",
+      "part": "heart.gold.fill.poisoned",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.overlay.damage",
+      "family": "hearts",
+      "part": "heart.gold.overlay.damage",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.heart.gold.overlay.low-health",
+      "family": "hearts",
+      "part": "heart.gold.overlay.low-health",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 1,
+      "definition": "independent heart visual layer",
+      "qa_focus": "mask alignment + heart fractions + variants",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.large.background",
+      "family": "buttons",
+      "part": "button.large.background",
+      "nominal_size_px": [
+        320,
+        52
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.large.border",
+      "family": "buttons",
+      "part": "button.large.border",
+      "nominal_size_px": [
+        320,
+        52
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.large.hover",
+      "family": "buttons",
+      "part": "button.large.hover",
+      "nominal_size_px": [
+        320,
+        52
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.large.pressed",
+      "family": "buttons",
+      "part": "button.large.pressed",
+      "nominal_size_px": [
+        320,
+        52
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.large.disabled",
+      "family": "buttons",
+      "part": "button.large.disabled",
+      "nominal_size_px": [
+        320,
+        52
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.large.focus",
+      "family": "buttons",
+      "part": "button.large.focus",
+      "nominal_size_px": [
+        320,
+        52
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.large.socket",
+      "family": "buttons",
+      "part": "button.large.socket",
+      "nominal_size_px": [
+        320,
+        52
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.icon.background",
+      "family": "buttons",
+      "part": "button.icon.background",
+      "nominal_size_px": [
+        56,
+        56
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.icon.border",
+      "family": "buttons",
+      "part": "button.icon.border",
+      "nominal_size_px": [
+        56,
+        56
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.icon.hover",
+      "family": "buttons",
+      "part": "button.icon.hover",
+      "nominal_size_px": [
+        56,
+        56
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.icon.pressed",
+      "family": "buttons",
+      "part": "button.icon.pressed",
+      "nominal_size_px": [
+        56,
+        56
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.icon.disabled",
+      "family": "buttons",
+      "part": "button.icon.disabled",
+      "nominal_size_px": [
+        56,
+        56
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.icon.focus",
+      "family": "buttons",
+      "part": "button.icon.focus",
+      "nominal_size_px": [
+        56,
+        56
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.button.icon.socket",
+      "family": "buttons",
+      "part": "button.icon.socket",
+      "nominal_size_px": [
+        56,
+        56
+      ],
+      "production_wave": 2,
+      "definition": "separable button region",
+      "qa_focus": "pixel distinction for states + 9-slice",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.switch.base",
+      "family": "toggles",
+      "part": "toggle.switch.base",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.switch.mark.off",
+      "family": "toggles",
+      "part": "toggle.switch.mark.off",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.switch.mark.on",
+      "family": "toggles",
+      "part": "toggle.switch.mark.on",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.switch.hover",
+      "family": "toggles",
+      "part": "toggle.switch.hover",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.switch.pressed",
+      "family": "toggles",
+      "part": "toggle.switch.pressed",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.switch.disabled",
+      "family": "toggles",
+      "part": "toggle.switch.disabled",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.checkbox.base",
+      "family": "toggles",
+      "part": "toggle.checkbox.base",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.checkbox.mark.off",
+      "family": "toggles",
+      "part": "toggle.checkbox.mark.off",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.checkbox.mark.on",
+      "family": "toggles",
+      "part": "toggle.checkbox.mark.on",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.checkbox.hover",
+      "family": "toggles",
+      "part": "toggle.checkbox.hover",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.checkbox.pressed",
+      "family": "toggles",
+      "part": "toggle.checkbox.pressed",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.checkbox.disabled",
+      "family": "toggles",
+      "part": "toggle.checkbox.disabled",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.radio.base",
+      "family": "toggles",
+      "part": "toggle.radio.base",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.radio.mark.off",
+      "family": "toggles",
+      "part": "toggle.radio.mark.off",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.radio.mark.on",
+      "family": "toggles",
+      "part": "toggle.radio.mark.on",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.radio.hover",
+      "family": "toggles",
+      "part": "toggle.radio.hover",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.radio.pressed",
+      "family": "toggles",
+      "part": "toggle.radio.pressed",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.toggle.radio.disabled",
+      "family": "toggles",
+      "part": "toggle.radio.disabled",
+      "nominal_size_px": [
+        64,
+        36
+      ],
+      "production_wave": 2,
+      "definition": "separable toggle/control part",
+      "qa_focus": "on/off distinction + focus/disabled presentation",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.dialogue.nine-slice-base",
+      "family": "panels",
+      "part": "panel.dialogue.nine-slice-base",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.dialogue.border",
+      "family": "panels",
+      "part": "panel.dialogue.border",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.dialogue.header",
+      "family": "panels",
+      "part": "panel.dialogue.header",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.dialogue.corner-accent",
+      "family": "panels",
+      "part": "panel.dialogue.corner-accent",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.inventory.nine-slice-base",
+      "family": "panels",
+      "part": "panel.inventory.nine-slice-base",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.inventory.border",
+      "family": "panels",
+      "part": "panel.inventory.border",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.inventory.header",
+      "family": "panels",
+      "part": "panel.inventory.header",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.inventory.corner-accent",
+      "family": "panels",
+      "part": "panel.inventory.corner-accent",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.tooltip.nine-slice-base",
+      "family": "panels",
+      "part": "panel.tooltip.nine-slice-base",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.tooltip.border",
+      "family": "panels",
+      "part": "panel.tooltip.border",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.tooltip.header",
+      "family": "panels",
+      "part": "panel.tooltip.header",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.panel.tooltip.corner-accent",
+      "family": "panels",
+      "part": "panel.tooltip.corner-accent",
+      "nominal_size_px": [
+        320,
+        200
+      ],
+      "production_wave": 2,
+      "definition": "reusable panel region",
+      "qa_focus": "nine-slice corners remain fixed when resized",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.square.background",
+      "family": "slots",
+      "part": "slot.square.background",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.square.border",
+      "family": "slots",
+      "part": "slot.square.border",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.square.hover",
+      "family": "slots",
+      "part": "slot.square.hover",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.square.selected",
+      "family": "slots",
+      "part": "slot.square.selected",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.square.disabled",
+      "family": "slots",
+      "part": "slot.square.disabled",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.square.rarity",
+      "family": "slots",
+      "part": "slot.square.rarity",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.round.background",
+      "family": "slots",
+      "part": "slot.round.background",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.round.border",
+      "family": "slots",
+      "part": "slot.round.border",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.round.hover",
+      "family": "slots",
+      "part": "slot.round.hover",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.round.selected",
+      "family": "slots",
+      "part": "slot.round.selected",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.round.disabled",
+      "family": "slots",
+      "part": "slot.round.disabled",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.slot.round.rarity",
+      "family": "slots",
+      "part": "slot.round.rarity",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 2,
+      "definition": "inventory/hotbar socket layer",
+      "qa_focus": "transparent content area + states",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.status.poison",
+      "family": "status-icons",
+      "part": "status.poison",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone status symbol",
+      "qa_focus": "recognizable symbol + 1x preview",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.status.burn",
+      "family": "status-icons",
+      "part": "status.burn",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone status symbol",
+      "qa_focus": "recognizable symbol + 1x preview",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.status.frost",
+      "family": "status-icons",
+      "part": "status.frost",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone status symbol",
+      "qa_focus": "recognizable symbol + 1x preview",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.status.stun",
+      "family": "status-icons",
+      "part": "status.stun",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone status symbol",
+      "qa_focus": "recognizable symbol + 1x preview",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.status.regen",
+      "family": "status-icons",
+      "part": "status.regen",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone status symbol",
+      "qa_focus": "recognizable symbol + 1x preview",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.status.shielded",
+      "family": "status-icons",
+      "part": "status.shielded",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone status symbol",
+      "qa_focus": "recognizable symbol + 1x preview",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.status.silence",
+      "family": "status-icons",
+      "part": "status.silence",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone status symbol",
+      "qa_focus": "recognizable symbol + 1x preview",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.status.haste",
+      "family": "status-icons",
+      "part": "status.haste",
+      "nominal_size_px": [
+        48,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone status symbol",
+      "qa_focus": "recognizable symbol + 1x preview",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.decor.divider.thin",
+      "family": "decor",
+      "part": "decor.divider.thin",
+      "nominal_size_px": [
+        96,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone ornament",
+      "qa_focus": "no neighboring overlap + composable bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.decor.divider.heavy",
+      "family": "decor",
+      "part": "decor.divider.heavy",
+      "nominal_size_px": [
+        96,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone ornament",
+      "qa_focus": "no neighboring overlap + composable bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.decor.flourish.left",
+      "family": "decor",
+      "part": "decor.flourish.left",
+      "nominal_size_px": [
+        96,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone ornament",
+      "qa_focus": "no neighboring overlap + composable bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.decor.flourish.right",
+      "family": "decor",
+      "part": "decor.flourish.right",
+      "nominal_size_px": [
+        96,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone ornament",
+      "qa_focus": "no neighboring overlap + composable bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.decor.corner.left",
+      "family": "decor",
+      "part": "decor.corner.left",
+      "nominal_size_px": [
+        96,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone ornament",
+      "qa_focus": "no neighboring overlap + composable bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.decor.corner.right",
+      "family": "decor",
+      "part": "decor.corner.right",
+      "nominal_size_px": [
+        96,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone ornament",
+      "qa_focus": "no neighboring overlap + composable bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.decor.crest",
+      "family": "decor",
+      "part": "decor.crest",
+      "nominal_size_px": [
+        96,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone ornament",
+      "qa_focus": "no neighboring overlap + composable bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.decor.label-plate",
+      "family": "decor",
+      "part": "decor.label-plate",
+      "nominal_size_px": [
+        96,
+        48
+      ],
+      "production_wave": 3,
+      "definition": "standalone ornament",
+      "qa_focus": "no neighboring overlap + composable bounds",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.healing.frame00",
+      "family": "effects",
+      "part": "fx.healing.frame00",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.healing.frame01",
+      "family": "effects",
+      "part": "fx.healing.frame01",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.healing.frame02",
+      "family": "effects",
+      "part": "fx.healing.frame02",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.healing.frame03",
+      "family": "effects",
+      "part": "fx.healing.frame03",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.damage.frame00",
+      "family": "effects",
+      "part": "fx.damage.frame00",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.damage.frame01",
+      "family": "effects",
+      "part": "fx.damage.frame01",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.damage.frame02",
+      "family": "effects",
+      "part": "fx.damage.frame02",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.damage.frame03",
+      "family": "effects",
+      "part": "fx.damage.frame03",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.mana.frame00",
+      "family": "effects",
+      "part": "fx.mana.frame00",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.mana.frame01",
+      "family": "effects",
+      "part": "fx.mana.frame01",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.mana.frame02",
+      "family": "effects",
+      "part": "fx.mana.frame02",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.mana.frame03",
+      "family": "effects",
+      "part": "fx.mana.frame03",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.low-health.frame00",
+      "family": "effects",
+      "part": "fx.low-health.frame00",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.low-health.frame01",
+      "family": "effects",
+      "part": "fx.low-health.frame01",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.low-health.frame02",
+      "family": "effects",
+      "part": "fx.low-health.frame02",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    },
+    {
+      "id": "smi.ui.fantasy01.fx.low-health.frame03",
+      "family": "effects",
+      "part": "fx.low-health.frame03",
+      "nominal_size_px": [
+        64,
+        64
+      ],
+      "production_wave": 3,
+      "definition": "real individually drawn animation frame",
+      "qa_focus": "distinct frames + contact sheet + seam",
+      "status": "planned"
+    }
+  ],
+  "sequences": [
+    "smi.ui.fantasy01.fx.healing",
+    "smi.ui.fantasy01.fx.damage",
+    "smi.ui.fantasy01.fx.mana",
+    "smi.ui.fantasy01.fx.low-health"
+  ],
+  "state_sets": [
+    "smi.ui.fantasy01.slider.gem.states",
+    "smi.ui.fantasy01.slider.engraved.states",
+    "smi.ui.fantasy01.slider.slim.states",
+    "smi.ui.fantasy01.button.large.states",
+    "smi.ui.fantasy01.button.icon.states",
+    "smi.ui.fantasy01.toggle.switch.states",
+    "smi.ui.fantasy01.toggle.checkbox.states",
+    "smi.ui.fantasy01.toggle.radio.states"
+  ],
+  "widget_compositions": [
+    "smi.ui.fantasy01.widget.meter.health",
+    "smi.ui.fantasy01.widget.meter.mana",
+    "smi.ui.fantasy01.widget.meter.stamina",
+    "smi.ui.fantasy01.widget.meter.xp",
+    "smi.ui.fantasy01.widget.meter.shield",
+    "smi.ui.fantasy01.widget.slider.gem",
+    "smi.ui.fantasy01.widget.slider.engraved",
+    "smi.ui.fantasy01.widget.slider.slim",
+    "smi.ui.fantasy01.widget.heart",
+    "smi.ui.fantasy01.widget.button.large",
+    "smi.ui.fantasy01.widget.button.icon",
+    "smi.ui.fantasy01.widget.toggle.switch",
+    "smi.ui.fantasy01.widget.toggle.checkbox",
+    "smi.ui.fantasy01.widget.toggle.radio",
+    "smi.ui.fantasy01.widget.panel.dialogue",
+    "smi.ui.fantasy01.widget.panel.inventory",
+    "smi.ui.fantasy01.widget.panel.tooltip",
+    "smi.ui.fantasy01.widget.slot.square",
+    "smi.ui.fantasy01.widget.slot.round",
+    "smi.ui.fantasy01.widget.status-banner"
+  ],
+  "demo_compositions": [
+    "smi.ui.fantasy01.demo.player-hud",
+    "smi.ui.fantasy01.demo.boss-hud",
+    "smi.ui.fantasy01.demo.settings",
+    "smi.ui.fantasy01.demo.inventory",
+    "smi.ui.fantasy01.demo.spellcasting"
+  ],
+  "interface_contracts": [
+    {
+      "id": "smi.slot.ui.meter.fill.280x20/1",
+      "size_px": [
+        280,
+        20
+      ],
+      "approved_options": [
+        "health",
+        "mana",
+        "stamina",
+        "xp",
+        "shield"
+      ]
+    },
+    {
+      "id": "smi.slot.ui.slider.thumb.52x40/1",
+      "size_px": [
+        52,
+        40
+      ],
+      "approved_options": [
+        "gem",
+        "engraved",
+        "slim"
+      ],
+      "note": "Different style families are not cross-compatible until measured and approved."
+    },
+    {
+      "id": "smi.slot.ui.heart.fill.48x48/1",
+      "size_px": [
+        48,
+        48
+      ],
+      "approved_options": [
+        "red",
+        "golden",
+        "poisoned"
+      ]
+    },
+    {
+      "id": "smi.slot.ui.button.icon.56x56/1",
+      "size_px": [
+        56,
+        56
+      ],
+      "approved_options": [
+        "icon"
+      ]
+    },
+    {
+      "id": "smi.slot.ui.inventory.content.64x64/1",
+      "size_px": [
+        64,
+        64
+      ],
+      "approved_options": [
+        "square",
+        "round"
+      ],
+      "note": "Compatible only if mask/anchor preview passes."
+    }
+  ],
+  "rules": [
+    "Source PNGs must be isolated; pack ONLY after inspection and exact pixel placement.",
+    "No generated art grid is a verified texture atlas.",
+    "Do not bake independent frame, fill, thumb, glow or button state into a single part.",
+    "Preserve stable IDs when repacking.",
+    "Actual textures/rectangles, no inferred coordinates.",
+    "No automatic pointer hit-testing is promised by the manifest; game/web host supplies pointer events.",
+    "Generate search/navigation as projections from authored manifests only."
+  ]
+}

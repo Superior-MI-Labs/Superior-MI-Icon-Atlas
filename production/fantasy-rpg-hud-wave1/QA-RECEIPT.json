@@ -1,0 +1,21 @@
+{
+  "schema": "smi-fantasy-wave1-qa/2",
+  "artifact": "Fantasy-RPG-HUD-Wave1-Import.zip",
+  "parts": 57,
+  "assets": 70,
+  "composition_count": 10,
+  "state_set_count": 3,
+  "source_texture_validation": "PASS",
+  "pixel_crop_scan": "PASS: 57/57, zero warnings",
+  "chromium_browser_render": "PASS: 4 scenarios, 40 captures",
+  "value_fidelity": "PASS: 10 values each for meter and 3 sliders",
+  "creator_acceptance": "PASS",
+  "badges_no_fill_occlusion": "PASS",
+  "svg_viewbox_aspect": "PASS",
+  "human_art_direction": "NOT APPROVED \u2014 candidate",
+  "public_github_catalog": "NOT PUBLISHED",
+  "pointer_mouse_dragging": "NOT TESTED (host UI required)",
+  "limitations": [
+    "Rendering proves tested geometry, not artistic excellence or every possible app integration."
+  ]
+}

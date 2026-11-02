@@ -1,0 +1,15 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.ui.fantasy01.hud-wave1",
+  "name": "Fantasy RPG HUD Wave 1 \u2014 Meters, Sliders & Hearts",
+  "version": "0.2.0",
+  "description": "57 source regions and 10 assembled widgets. Approved artwork; meter and slider visual fidelity verified.",
+  "entry_asset": "smi.ui.fantasy01.widget.meter.health",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Fantasy HUD Wave 1",
+      "category": "gui-control"
+    }
+  ]
+}

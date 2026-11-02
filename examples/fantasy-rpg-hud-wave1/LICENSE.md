@@ -1,0 +1,1 @@
+CC0 1.0 Universal: original procedural vector artwork and source imagery created for Superior MI Visual Atlas. No attribution required. The LICENSE grant applies only to this artwork pack, not to other projects or the current candidate icon collection. https://creativecommons.org/publicdomain/zero/1.0/
