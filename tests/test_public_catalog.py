@@ -35,6 +35,9 @@ class PublicCatalogTests(unittest.TestCase):
             site=Path(temp);build(site)
             self.assertEqual(prune(site),1)
             self.assertTrue((site/'demo/fantasy-rpg-hud-wave1.zip').is_file())
+            self.assertIn('fantasy-rpg-hud-wave1.zip',(site/'ai-guide.html').read_text())
+            for doc in (site/'ai').rglob('*.md'):
+                self.assertNotRegex(doc.read_text(),r'\]\((?:\.\./)+demo/(?:icons|animated-icons|character-animations|interactive-hud|starter-pack|potions-collection)\.zip\)')
             for rel in ('catalog-data.js','featured-packs.json','manifest.json','sheets','manifests','demo/starter-pack.zip','demo/animated-icons.zip','demo/interactive-hud.zip'):
                 self.assertFalse((site/rel).exists(),rel)
 

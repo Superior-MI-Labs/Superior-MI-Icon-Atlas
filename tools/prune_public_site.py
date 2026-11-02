@@ -5,6 +5,7 @@ The authored sources stay available for regression/migration; only the Pages
 artifact is pruned. No second source-of-truth asset catalog is introduced.
 """
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -25,6 +26,18 @@ def prune(site:Path):
     for f in demo.glob('*.zip'):
         if f.name not in allowed:f.unlink()
     (demo/'starter-pack.zip').unlink(missing_ok=True)
+    # Hosted authoring docs link to GitHub fixtures, not removed public demo ZIPs.
+    repo='https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas'
+    examples={'icons','animated-icons','character-animations','interactive-hud'}
+    for doc in (site/'ai').rglob('*.md'):
+        source=doc.read_text(encoding='utf-8')
+        def link(match):
+            name=match.group(1)
+            url=(repo+'/tree/main/examples/'+name if name in examples
+                else repo+'/blob/main/web/demo/'+name+'.zip')
+            return ']('+url+')'
+        updated=re.sub(r'\]\((?:\.\./)+demo/([a-z0-9-]+)\.zip\)',link,source)
+        if updated!=source:doc.write_text(updated,encoding='utf-8')
     for p in catalog['packs']:
         if not (site/p['zip']).is_file():raise ValueError('Required approved pack was removed')
     for forbidden in ('catalog-data.js','featured-packs.json','manifest.json','demo/starter-pack.zip'):
