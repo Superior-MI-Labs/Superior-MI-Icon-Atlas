@@ -2,7 +2,7 @@
 
 **Scope:** high-quality frame-based player/NPC characters, independently animated equipment and effects, and optional dialogue portraits. This is an extension of the [general animation recipe](README.md), not a replacement for the [creator preflight](../CREATOR-PREFLIGHT.md), [manifest contract](../FORMAT-API.md), or [release checklist](../RELEASE-CHECKLIST.md). Load this guide **only** for relevant side-scrolling character work.
 
-**First candidate:** [Sky Blue Eyes motion-foundation plan](../../../production/sky-blue-eyes/plan.json). It is a machine-checked preproduction plan, **not** renderable artwork, an approved model sheet, a runtime asset pack, or a working state-machine controller.
+**First candidate:** [Sky Blue Eyes motion-foundation plan](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/plan.json). It is a machine-checked preproduction plan, **not** renderable artwork, an approved model sheet, a runtime asset pack, or a working state-machine controller.
 
 ## What we learned and must preserve
 
@@ -29,7 +29,7 @@ Produce a model-sheet package *as real, separately inspectable art*, not one ima
 
 Create these actual Visual Atlas assets first: relaxed side idle loop; run loop and an authored run-stop transition; separate wing idle motion; and a Sunblade orbit visualization. Build one **self-contained** ZIP using existing `smi-visual-pack/1` kinds and real measured PNG frames. Do not invent a controller property in this strict v1 schema.
 
-The [plan](../../../production/sky-blue-eyes/plan.json) defines clip IDs and evidence gates. Validate it with:
+The [plan](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/plan.json) defines clip IDs and evidence gates. Validate it with:
 
 ```bash
 python3 tools/validate_animation_plan.py production/sky-blue-eyes/plan.json
