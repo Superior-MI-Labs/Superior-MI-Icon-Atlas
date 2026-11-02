@@ -10,6 +10,18 @@
 
 Host application owns actual pointer/keyboard/game input. The manifest must not contain executable code.
 
+## Consumer-facing preview contract
+
+The consumer is a **game or application developer**, not just someone browsing art. Treat the ZIP's first-open experience as part of the deliverable. For every authored `composition` or `state_set`, identify the dimensions a host would reasonably vary, and bind them through existing typed inputs, states, slots or presets—rather than exporting only fixed screenshots.
+
+- For a resource meter: numeric `value`, meaningful min/max/step, and a draggable value control with a live readout. The fill must remain visually truthful across the entire range.
+- For a repeated indicator (hearts, gems, leaves, armor plates): independent current units, capacity, and wrap columns (e.g. 1, 4, 20 items; 2×10 and 4×5 layouts), using existing `layer.repeat` support rather than dozens of hardcoded compositions.
+- For an on/off control: checked/unchecked and disabled states must have visibly distinct renders; exercise the generated boolean control and declared events.
+- For a finite art sequence or radial indicator: provide an explicit state dropdown and step slider; *do not claim* it is continuously animated or 0–100% configurable if the shared renderer cannot do that.
+- For appearance choices: expose actual compatible presets/slots; never rely on merely matching tag words.
+
+**Creator-specific preview matrix:** capture at least the default, each meaningful endpoint/state, an intermediate state, one stress case (capacity/wrapping for repeaters), and a nondefault preset where available. Assert the actual Canvas image changes appropriately and returns to the same pixels after export/reimport. Ensure inputs never silently exceed the displayed capacity.
+
 ## Required GUI interaction production pipeline
 
 1. Define intended host interactions, typed inputs, min/max/default values, output units and named states.
