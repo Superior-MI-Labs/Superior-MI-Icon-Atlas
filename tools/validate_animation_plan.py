@@ -9,7 +9,6 @@ import sys
 from pathlib import Path
 
 ID = re.compile(r"^[a-z][a-z0-9_.-]*$")
-STAGE = re.compile(r"^P[0-9]+$")
 ALLOWED_KINDS = {"region", "sequence", "composition", "state_set"}
 EXPECTED = "smi-character-production-plan/1"
 
@@ -58,7 +57,7 @@ def check(plan: dict) -> list[str]:
     stages = [m.get("id") for m in milestones if isinstance(m, dict)]
     if not stages or stages != [f"P{i}" for i in range(len(stages))]:
         errors.append("Milestones must be contiguous P0..Pn with no duplicates")
-    if not milestones or milestones[0].get("release_scope") != "planning_only":
+    if not milestones or not isinstance(milestones[0], dict) or milestones[0].get("release_scope") != "planning_only":
         errors.append("P0 must be planning-only, not published artwork")
     tracks = plan.get("track_owners") or []
     owners = [t.get("id") for t in tracks if isinstance(t, dict)]
@@ -112,6 +111,9 @@ def check(plan: dict) -> list[str]:
         if isinstance(m, dict) and m.get("gate") not in gates:
             errors.append(f"Milestone {m.get('id')} references missing QA gate")
     for rule in plan.get("transition_checks") or []:
+        if not isinstance(rule, dict):
+            errors.append("Invalid transition record")
+            continue
         src, dst, stage = rule.get("from"), rule.get("to"), rule.get("stage")
         if src not in ids or dst not in ids:
             errors.append(f"Transition {rule.get('id')} references missing clip")
@@ -119,7 +121,7 @@ def check(plan: dict) -> list[str]:
             errors.append(f"Transition {rule.get('id')} has unknown stage")
         if not rule.get("policy"):
             errors.append(f"Transition {rule.get('id')} needs an explicit policy")
-        if stage in stages and src in clip_stages and dst in clip_stages:
+        if stage in stages and src in clip_stages and dst in clip_stages and clip_stages[src] in stages and clip_stages[dst] in stages:
             if stages.index(stage) < max(stages.index(clip_stages[src]), stages.index(clip_stages[dst])):
                 errors.append(f"Transition {rule.get('id')} occurs before its clips")
     provenance = plan.get("provenance") or {}
@@ -147,7 +149,7 @@ def main() -> int:
         print("FAIL: " + issue, file=sys.stderr)
     if issues:
         return 1
-    print(f"PASS: {data['project_id']} | {len(data['qualification_clips'])} declared clips | {len(data['qa_gates'])} evidence gates | PREPRODUCTION DATA ONLY")
+    print(f"PASS: {data['project_id']} | {len(data['qualification_clips'])} declared clips | {len(data['qa_gates'])} evidence gates | PLAN DATA ONLY; artwork is not verified")
     return 0
 
 
