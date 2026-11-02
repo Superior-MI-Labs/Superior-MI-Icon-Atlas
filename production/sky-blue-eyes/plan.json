@@ -1,7 +1,7 @@
 {
   "schema": "smi-character-production-plan/1",
   "project_id": "smi.sky-blue-eyes.motion-foundation",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "status": "PREPRODUCTION",
   "runtime_support": "NOT_IMPLEMENTED",
   "description": "Grounded no-wing veiled desert wanderer: approved base clothing/silhouette, unqualified directional masters and unframed dialogue head. This is a planning manifest, NOT renderable animation artwork.",
@@ -241,6 +241,15 @@
         "Head references for dialogue must be generated as clean isolated unframed assets",
         "Canonical 8-view sources, separately manipulable sword shards and real loops remain pending"
       ]
+    },
+    "hero_master_perspective": {
+      "status": "USER_APPROVED_WITH_POSITIONAL_ADJUSTMENT",
+      "view": "right-facing shallow front-three-quarter, not perfectly flat profile",
+      "note": "The user specifically approved the cropped veiled-wanderer sample with slight perspective depth; it is the hero/reference pose for subsequent image generation. Maintain 8-view coverage separately, including a technically clean pure 90-degree side check.",
+      "body": "preserve hips/shoulder volume and visible front folds, eye read, and grounded paw perspective without drifting into a fully frontal pose",
+      "tail_attachment": "ALL THREE tails originate around the lower back/hip/pelvic area. Lower the upper two tails relative to the tall side-study; they fan backward and slightly downward from the same hip-level zone rather than seeming attached high on the back/shoulder.",
+      "reference_source": "conversation:image(20261102-135059).png",
+      "acceptance": "Candidate can be promoted only after a corrected full-size single-figure view demonstrates the lower roots, three distinct tails and preserved cloak geometry. User approved style and direction, not a broken or uncorrected source frame."
     }
   },
   "reference_slots": [
@@ -284,6 +293,14 @@
       "availability": "conversation_only",
       "approval": "APPROVED",
       "notes": "Creator approved hood, mouth-covering ocher scarf, layered cream/saffron/red tattered robes, ornate gold solar brooch and accents, exposed spotted feline hands and feet, feather accents, and mysterious silhouette. Original image is three-quarter side character illustration with one inset framed head study, NOT an 8-way production turnaround."
+    },
+    {
+      "id": "ref.approved_perspective_tail_placement",
+      "role": "creator_approved_shallow_three_quarter_view_and_lower_triple_tail_roots",
+      "source": "conversation:image(20261102-135059).png",
+      "availability": "conversation_only",
+      "approval": "APPROVED",
+      "notes": "User approved cropped right-facing 3/4-depth desert wanderer. The top two tails of the large right-side candidate are too high; shift tail roots to hip/lower-back area as this image demonstrates. This crop is an angle/root visual guide, not a clean unframed full-resolution master."
     }
   ],
   "canonical_lock": {
@@ -327,7 +344,8 @@
       "cream and saffron layered wraps, tattered red mantle, gold solar brooch and hood emblem match approved wardrobe reference",
       "feline muzzle/ears and spotted warm-brown forearms/hands/feet remain anatomically consistent, no exposed mouth during dialogue",
       "dormant broken cloth-wrapped sword remains visually distinct, separately rendered, tied feathers, no permanent element glow",
-      "shattered Sunblade consists of independently translating and rotating identifiable fragments, coherent energy weaving through live gaps, no rigid welded blade"
+      "shattered Sunblade consists of independently translating and rotating identifiable fragments, coherent energy weaving through live gaps, no rigid welded blade",
+      "three feathered tails anchored to the lower-back/hip region; none starts at shoulder height; accurate overlap in oblique right-facing views"
     ],
     "pending_decisions": [
       "clean isolated full-resolution views with consistent garment seams and left/right asymmetry",
@@ -336,7 +354,8 @@
       "default dormant Sunblade exact silhouette and proportion",
       "unframed head dialogue poses matching same cloak/veil and galaxy eyes",
       "original reference image handoff to durable source repository and rights documentation",
-      "final shard count and stable fragment ID roster, maximal displacement per state and exact energy-tether appearance"
+      "final shard count and stable fragment ID roster, maximal displacement per state and exact energy-tether appearance",
+      "Regenerate corrected full-body right-facing hero study with lower three tail roots and shallow three-quarter perspective; only approve as source after inspection."
     ],
     "confirmed_design_decisions": [
       "approved original reference image source hash",
@@ -345,7 +364,9 @@
       "three feathered tails",
       "cosmic blue/teal iris with dark pupil",
       "two health art tiers split at 36%",
-      "Sunblade fragments independently rotate, translate, flex and reassemble by animated energy cohesion across both floating and hand-held modes"
+      "Sunblade fragments independently rotate, translate, flex and reassemble by animated energy cohesion across both floating and hand-held modes",
+      "Right-facing hero art uses a shallow three-quarter side angle and real volume, not an absolutely flattened lateral profile.",
+      "Three feathered tails attach at lower back/pelvic hip area. Upper two tail origins from tall side candidate must be lowered to align with approved crop."
     ]
   },
   "track_owners": [
@@ -734,6 +755,9 @@
     "weapon_articulation_qualified": false,
     "generated_reference_candidate_reviewed": false,
     "reference_handoff_zip_created": true,
-    "ai_reference_promotion_note": "Source character design is user approved, the new single right-side candidate and all image generation overview panels remain unqualified source art."
+    "ai_reference_promotion_note": "Source character design is user approved, the new single right-side candidate and all image generation overview panels remain unqualified source art.",
+    "pose_direction_approved": true,
+    "lowered_tail_reference_approved": true,
+    "corrected_hero_master_qualified": false
   }
 }
