@@ -85,7 +85,7 @@ class CharacterPlanTests(unittest.TestCase):
         self.assertIn("Hold RT", vortex["gamepad"])
         self.assertIn("Hold F", vortex["keyboard_mouse"])
         self.assertTrue(control["analog_policy"]["no_right_thumb_chord_requirement"])
-        self.assertIn("hilt", self.plan["target"]["weapon"]["articulation"]["canonical_elements"][0]["role"])
+        self.assertEqual(self.plan["target"]["weapon"]["articulation"]["canonical_elements"][0]["id"], "hilt")
         self.assertTrue((ROOT / "production/sky-blue-eyes/CONTROL-AND-COMBO-PROPOSAL.md").is_file())
 
     def test_duplicate_clip_rejected(self):
