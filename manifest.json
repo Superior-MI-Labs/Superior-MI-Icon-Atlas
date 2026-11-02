@@ -39,6 +39,17 @@
       ],
       "bug": [
         "defect"
+      ],
+      "healthbar": [
+        "health meter",
+        "health bar"
+      ],
+      "slider": [
+        "sliders",
+        "slide control"
+      ],
+      "mana": [
+        "mp"
       ]
     }
   },
