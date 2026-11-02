@@ -21,6 +21,13 @@
       "expected_assets": 360,
       "approval": "User approved Royal Forge HUD Resources v1.1 including adaptive hearts/pips and corrected rims",
       "rights": "CC0-1.0 original generated/vector artwork"
+    },
+    {
+      "path": "examples/pixel-fantasy-icons",
+      "published": "2026-11-02",
+      "expected_assets": 65,
+      "approval": "Creator explicitly requested publication of completed 48-item pixel-fantasy collection (Nov 2, 2026). Source-geometry checks passed; continued art cleanup welcome.",
+      "rights": "CC0-1.0 original AI-generated artwork"
     }
   ]
 }

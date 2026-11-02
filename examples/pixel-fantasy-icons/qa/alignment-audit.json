@@ -1,0 +1,1063 @@
+{
+  "schema": "smi-pixel-alignment-qa/1",
+  "item_count": 48,
+  "min_gutter_px": 6,
+  "items": [
+    {
+      "id": "smi.game.pixel01.potion.health",
+      "rect_px": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        16,
+        9,
+        111,
+        118
+      ],
+      "margins_px": [
+        16,
+        9,
+        17,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.potion.mana",
+      "rect_px": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        18,
+        9,
+        109,
+        118
+      ],
+      "margins_px": [
+        18,
+        9,
+        19,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.potion.poison",
+      "rect_px": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        19,
+        9,
+        109,
+        118
+      ],
+      "margins_px": [
+        19,
+        9,
+        19,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.potion.arcane",
+      "rect_px": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        18,
+        9,
+        109,
+        118
+      ],
+      "margins_px": [
+        18,
+        9,
+        19,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.armor.knight_helmet",
+      "rect_px": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        18,
+        9,
+        110,
+        118
+      ],
+      "margins_px": [
+        18,
+        9,
+        18,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.armor.knight_chestplate",
+      "rect_px": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        9,
+        11,
+        118,
+        117
+      ],
+      "margins_px": [
+        9,
+        11,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.armor.leather_boots",
+      "rect_px": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        12,
+        9,
+        116,
+        118
+      ],
+      "margins_px": [
+        12,
+        9,
+        12,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.armor.lion_shield",
+      "rect_px": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        19,
+        9,
+        108,
+        118
+      ],
+      "margins_px": [
+        19,
+        9,
+        20,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.accessory.ruby_ring",
+      "rect_px": [
+        0,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        9,
+        13,
+        118,
+        115
+      ],
+      "margins_px": [
+        9,
+        13,
+        10,
+        13
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.accessory.sapphire_pendant",
+      "rect_px": [
+        128,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        24,
+        9,
+        104,
+        118
+      ],
+      "margins_px": [
+        24,
+        9,
+        24,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.item.sealed_scroll",
+      "rect_px": [
+        256,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        9,
+        11,
+        118,
+        116
+      ],
+      "margins_px": [
+        9,
+        11,
+        10,
+        12
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.item.star_spellbook",
+      "rect_px": [
+        384,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        11,
+        9,
+        117,
+        118
+      ],
+      "margins_px": [
+        11,
+        9,
+        11,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.steel_sword",
+      "rect_px": [
+        0,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        15,
+        9,
+        112,
+        118
+      ],
+      "margins_px": [
+        15,
+        9,
+        16,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.double_axe",
+      "rect_px": [
+        128,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        15,
+        9,
+        113,
+        118
+      ],
+      "margins_px": [
+        15,
+        9,
+        15,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.wooden_bow",
+      "rect_px": [
+        256,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        12,
+        9,
+        115,
+        118
+      ],
+      "margins_px": [
+        12,
+        9,
+        13,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.ability.fireball",
+      "rect_px": [
+        384,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-00.png",
+      "visible_bbox": [
+        9,
+        11,
+        118,
+        116
+      ],
+      "margins_px": [
+        9,
+        11,
+        10,
+        12
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.azure_crystal",
+      "rect_px": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        12,
+        9,
+        116,
+        119
+      ],
+      "margins_px": [
+        12,
+        9,
+        12,
+        9
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.iron_ore",
+      "rect_px": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        9,
+        13,
+        119,
+        114
+      ],
+      "margins_px": [
+        9,
+        13,
+        9,
+        14
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.rolled_leather",
+      "rect_px": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        9,
+        9,
+        119,
+        118
+      ],
+      "margins_px": [
+        9,
+        9,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.timber_log",
+      "rect_px": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        9,
+        15,
+        119,
+        113
+      ],
+      "margins_px": [
+        9,
+        15,
+        9,
+        15
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.ruby_gemstone",
+      "rect_px": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        9,
+        9,
+        118,
+        119
+      ],
+      "margins_px": [
+        9,
+        9,
+        10,
+        9
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.arcane_ink",
+      "rect_px": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        14,
+        9,
+        113,
+        119
+      ],
+      "margins_px": [
+        14,
+        9,
+        15,
+        9
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.tool.rune_hammer",
+      "rect_px": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        13,
+        9,
+        114,
+        119
+      ],
+      "margins_px": [
+        13,
+        9,
+        14,
+        9
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.tool.lockpicks",
+      "rect_px": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        9,
+        10,
+        119,
+        117
+      ],
+      "margins_px": [
+        9,
+        10,
+        9,
+        11
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.ability.frost_ward",
+      "rect_px": [
+        0,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        9,
+        10,
+        119,
+        117
+      ],
+      "margins_px": [
+        9,
+        10,
+        9,
+        11
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.venom_dagger",
+      "rect_px": [
+        128,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        9,
+        12,
+        119,
+        116
+      ],
+      "margins_px": [
+        9,
+        12,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.healing_herb",
+      "rect_px": [
+        256,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        9,
+        9,
+        119,
+        119
+      ],
+      "margins_px": [
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.spiked_mace",
+      "rect_px": [
+        384,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        9,
+        10,
+        119,
+        118
+      ],
+      "margins_px": [
+        9,
+        10,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.potion.energy_elixir",
+      "rect_px": [
+        0,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        18,
+        9,
+        109,
+        119
+      ],
+      "margins_px": [
+        18,
+        9,
+        19,
+        9
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.tool.brass_compass",
+      "rect_px": [
+        128,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        15,
+        9,
+        112,
+        119
+      ],
+      "margins_px": [
+        15,
+        9,
+        16,
+        9
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.ability.necrotic_curse",
+      "rect_px": [
+        256,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        10,
+        9,
+        118,
+        119
+      ],
+      "margins_px": [
+        10,
+        9,
+        10,
+        9
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.crystal_wand",
+      "rect_px": [
+        384,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-01.png",
+      "visible_bbox": [
+        11,
+        9,
+        116,
+        119
+      ],
+      "margins_px": [
+        11,
+        9,
+        12,
+        9
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.quest.ornate_key",
+      "rect_px": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        9,
+        9,
+        118,
+        118
+      ],
+      "margins_px": [
+        9,
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.quest.treasure_chest",
+      "rect_px": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        9,
+        16,
+        118,
+        111
+      ],
+      "margins_px": [
+        9,
+        16,
+        10,
+        17
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.item.traveler_journal",
+      "rect_px": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        9,
+        10,
+        118,
+        117
+      ],
+      "margins_px": [
+        9,
+        10,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.quest.rune_tablet",
+      "rect_px": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        14,
+        9,
+        114,
+        118
+      ],
+      "margins_px": [
+        14,
+        9,
+        14,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.food.forest_mushroom",
+      "rect_px": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        10,
+        9,
+        118,
+        118
+      ],
+      "margins_px": [
+        10,
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.food.rustic_bread",
+      "rect_px": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        9,
+        25,
+        118,
+        102
+      ],
+      "margins_px": [
+        9,
+        25,
+        10,
+        26
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.currency.gold_pouch",
+      "rect_px": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        11,
+        9,
+        116,
+        118
+      ],
+      "margins_px": [
+        11,
+        9,
+        12,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.food.blueberries",
+      "rect_px": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        9,
+        11,
+        118,
+        117
+      ],
+      "margins_px": [
+        9,
+        11,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.flame_sword",
+      "rect_px": [
+        0,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        12,
+        9,
+        115,
+        118
+      ],
+      "margins_px": [
+        12,
+        9,
+        13,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.weapon.verdant_staff",
+      "rect_px": [
+        128,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        9,
+        9,
+        118,
+        118
+      ],
+      "margins_px": [
+        9,
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.ability.lightning_bolt",
+      "rect_px": [
+        256,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        11,
+        9,
+        116,
+        118
+      ],
+      "margins_px": [
+        11,
+        9,
+        12,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.ability.healing_aura",
+      "rect_px": [
+        384,
+        256,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        9,
+        12,
+        118,
+        116
+      ],
+      "margins_px": [
+        9,
+        12,
+        10,
+        12
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.material.amethyst_cluster",
+      "rect_px": [
+        0,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        18,
+        9,
+        109,
+        118
+      ],
+      "margins_px": [
+        18,
+        9,
+        19,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.item.golden_bell",
+      "rect_px": [
+        128,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        20,
+        9,
+        108,
+        118
+      ],
+      "margins_px": [
+        20,
+        9,
+        20,
+        10
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.quest.treasure_map",
+      "rect_px": [
+        256,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        9,
+        16,
+        118,
+        111
+      ],
+      "margins_px": [
+        9,
+        16,
+        10,
+        17
+      ]
+    },
+    {
+      "id": "smi.game.pixel01.accessory.amethyst_necklace",
+      "rect_px": [
+        384,
+        384,
+        128,
+        128
+      ],
+      "source_atlas": "textures/icons-02.png",
+      "visible_bbox": [
+        21,
+        9,
+        106,
+        118
+      ],
+      "margins_px": [
+        21,
+        9,
+        22,
+        10
+      ]
+    }
+  ]
+}

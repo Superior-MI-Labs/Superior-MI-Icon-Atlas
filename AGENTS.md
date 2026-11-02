@@ -12,3 +12,5 @@
 For side-scrolling character requests, route from the existing [animation recipe](docs/ai/animations/README.md) to its focused [production guide](docs/ai/animations/SIDE-SCROLLER-PRODUCTION.md). Validate the candidate production plan with `python3 tools/validate_animation_plan.py production/sky-blue-eyes/plan.json`. Planning PASS is **not** image/animation QA or authorization to publish. Source images from conversation attachments must not be silently treated as approved/relicensed artwork.
 
 Project QA: `bash RUN-ALL.sh`. The public builder runs locally and imports ZIPs privately. Do not modify the existing 2,073 icons or overwrite GitHub `main` without matching the expected branch revision.
+
+**Pixel-art RPG icon tasks:** Read [the dedicated raster icon standard](docs/ai/icons/GAME-PIXEL-ART.md) in addition to the general icon/GUI recipes. Preserve painted pixel-art source; do not turn item creation into vector glyph generation. Do not publish a concept-board extraction without explicit art review and full visual/ZIP QA.

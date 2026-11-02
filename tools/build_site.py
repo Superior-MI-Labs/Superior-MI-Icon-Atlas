@@ -60,9 +60,17 @@ def build(dest:Path|None=None):
     for folder in sorted((ROOT/'examples').iterdir()):
         if not folder.is_dir() or not (folder/'manifest.json').is_file(): continue
         archive=dest/'demo'/(folder.name+'.zip')
+        # Runtime ZIPs contain the manifest's real texture dependencies, not
+        # source images, QA snapshots or editor-only authoring files.
+        pack=json.loads((folder/'manifest.json').read_text())
+        runtime={folder/'manifest.json'}
+        for optional in ('collection.json','README.md'):
+            if (folder/optional).is_file():runtime.add(folder/optional)
+        runtime.update(f for f in folder.glob('LICENSE*') if f.is_file())
+        runtime.update(folder/definition['path'] for definition in pack.get('textures',{}).values())
         with ZipFile(archive,'w',ZIP_DEFLATED,compresslevel=7) as z:
-            for f in sorted(folder.rglob('*')):
-                if not f.is_file() or f.name=='preview.png' or f.suffix.lower() not in {'.json','.png','.md'}: continue
+            for f in sorted(runtime):
+                if not f.is_file():raise ValueError('Missing runtime pack dependency: '+str(f))
                 entry=ZipInfo(f.relative_to(folder).as_posix(),date_time=(2020,1,1,0,0,0))
                 entry.compress_type=ZIP_DEFLATED
                 entry.external_attr=(0o644<<16)

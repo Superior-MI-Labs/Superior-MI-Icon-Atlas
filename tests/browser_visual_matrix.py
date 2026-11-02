@@ -72,6 +72,14 @@ def loaded_html():
 
 
 def draw_sample(page, sample, out_file):
+    # Slot selection uses the authored option value, not a hardcoded UI label.
+    # This exercises each real item via the same Builder composition controls.
+    for slot_key, target in sample.get('slots', {}).items():
+        selects=page.locator('#input-controls select')
+        matches=selects.filter(has=page.locator('option[value="'+target+'"]'))
+        if matches.count()!=1:
+            raise AssertionError(f'Slot {slot_key} option {target} not found uniquely ({matches.count()})')
+        matches.first.select_option(target)
     for key, value in sample.get('inputs', {}).items():
         found = page.locator('#input-controls label').filter(has_text=re.compile(r'^\s*' + re.escape(key) + r'\s*', re.I))
         if found.count() != 1:

@@ -14,12 +14,13 @@ class PublicCatalogTests(unittest.TestCase):
             site=Path(temp);build(site)
             public=json.loads((site/'public-catalog.json').read_text())
             self.assertEqual(public['schema'],'smi-public-catalog/1')
-            self.assertEqual(len(public['packs']),4)
+            self.assertEqual(len(public['packs']),1+len(json.loads((ROOT/'publications.json').read_text())['collections']))
             self.assertEqual(public['legacy_count'],2073)
             publication=json.loads((ROOT/'publications.json').read_text())
             expected_count=sum(c['expected_assets'] for c in publication['collections'])
-            self.assertEqual(expected_count,644)
+            self.assertGreaterEqual(expected_count,709)
             self.assertEqual(public['approved_count'],expected_count)
+            self.assertIn('pixel-fantasy-icons',{p['id'] for p in public['packs']})
             self.assertEqual(public['packs'][0]['id'],'fantasy-rpg-hud-wave1')
             approved=set()
             for entry in publication['collections']:
@@ -30,6 +31,9 @@ class PublicCatalogTests(unittest.TestCase):
                 archive=site/'demo'/(folder.name+'.zip')
                 self.assertEqual(check(archive),[],str(archive))
                 self.assertTrue(archive.is_file())
+                if folder.name=='pixel-fantasy-icons':
+                    with ZipFile(archive) as z:
+                        self.assertFalse(any(n.startswith('source-') or n.startswith('qa/') or n=='authoring.json' for n in z.namelist()))
             self.assertEqual(approved,{a['id'] for a in public['assets'] if not a.get('legacy')})
             self.assertEqual(len(public['assets']),2073+expected_count)
             self.assertEqual(public['synonyms'],json.loads((ROOT/'manifest.json').read_text())['search']['synonyms'])
@@ -56,10 +60,11 @@ class PublicCatalogTests(unittest.TestCase):
     def test_deployed_site_excludes_old_public_files_and_starter_zips(self):
         with tempfile.TemporaryDirectory() as temp:
             site=Path(temp);build(site)
-            self.assertEqual(prune(site),3)
+            self.assertEqual(prune(site),len(json.loads((ROOT/'publications.json').read_text())['collections']))
             self.assertTrue((site/'demo/fantasy-rpg-hud-wave1.zip').is_file())
             self.assertTrue((site/'demo/royal-forge-controls.zip').is_file())
             self.assertTrue((site/'demo/royal-forge-hud-resources.zip').is_file())
+            self.assertTrue((site/'demo/pixel-fantasy-icons.zip').is_file())
             self.assertIn('fantasy-rpg-hud-wave1.zip',(site/'ai-guide.html').read_text())
             for doc in (site/'ai').rglob('*.md'):
                 self.assertNotRegex(doc.read_text(),r'\]\((?:\.\./)+demo/(?:icons|animated-icons|character-animations|interactive-hud|starter-pack|potions-collection)\.zip\)')

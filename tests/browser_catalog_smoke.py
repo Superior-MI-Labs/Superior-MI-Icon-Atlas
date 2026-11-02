@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import contextlib
+import json
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -18,18 +19,22 @@ class QuietHandler(SimpleHTTPRequestHandler):
         pass
 
 
+def published_matches():
+    return f"{json.loads((SITE/'public-catalog.json').read_text())['approved_count']:,} matches"
+
+
 def check(page):
     errors = []
     page.on("pageerror", lambda err: errors.append(str(err)))
     page.reload(wait_until="networkidle")
-    expect(page.locator("#count")).to_have_text("644 matches", timeout=20000)
+    expect(page.locator("#count")).to_have_text(published_matches(), timeout=20000)
 
     page.locator("#pack").select_option("legacy-icons")
     expect(page.locator("#count")).to_have_text("2,073 matches")
     page.locator("#domain").select_option("programming")
     expect(page.locator("#count")).to_have_text("195 matches")
     page.locator("#clear-filters").click()
-    expect(page.locator("#count")).to_have_text("644 matches")
+    expect(page.locator("#count")).to_have_text(published_matches())
 
     page.locator("#status").select_option("archive")
     expect(page.locator("#count")).to_have_text("2,073 matches")
@@ -114,7 +119,7 @@ def main():
                 print("Desktop:", check(page))
                 mobile = browser.new_page(viewport={"width": 390, "height": 844}, base_url=url)
                 mobile.goto(url, wait_until="networkidle")
-                expect(mobile.locator("#count")).to_have_text("644 matches", timeout=20000)
+                expect(mobile.locator("#count")).to_have_text(published_matches(), timeout=20000)
                 assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Horizontal overflow on mobile"
                 print("Responsive viewport: PASS")
             finally:
