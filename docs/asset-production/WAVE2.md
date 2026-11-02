@@ -1,6 +1,6 @@
 # Fantasy RPG HUD Wave 2 — Production specification
 
-**Status:** plan / work in progress, not a public art release. Requires the approved Wave 1 design language and pixel-accurate geometry.
+**Status:** historical Wave 2 production brief. The actual **Royal Forge Core Controls** collection (214 assets) was approved and published November 2, 2026; see [publication policy](../../publications.json) and [source collection](../../examples/royal-forge-controls/). The table below retains original planning estimates, not current inventory. Royal Forge HUD Resource Systems v1.1 is a separate published collection of 360 assets. The quality and interaction requirements below remain active for future packs.
 
 ## Guiding architecture
 
@@ -20,7 +20,7 @@ The browser currently provides generated controls for declared values/events. **
 | Status indicators, counters and pips | 8 | Spent, ready, danger, warning |
 | Panel and tooltip trim parts | 10 | Resize/nine-slice without corner distortion |
 | Small notification / quest badges | 8 | Default, attention, disabled |
-| **Planned** | **74** | Interactive state-family sample collection |
+| **Original estimate** | **74** | Planning figure only; the release contains 214 addressable assets |
 
 Do not generate or advertise the full 74 as complete until they have real isolated images, accurate region rectangles, manifest references and QA.
 
