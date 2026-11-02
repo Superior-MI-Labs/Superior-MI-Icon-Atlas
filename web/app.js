@@ -130,12 +130,7 @@
     node.onclick=()=>openDetail(a);if(cardObserver)cardObserver.observe(node);
     else paint(canvas,a,0,{card:true}).catch(()=>art.textContent='Preview unavailable');return node;}
   function more(){const frag=document.createDocumentFragment();for(const a of matches.slice(shown,shown+PAGE))frag.append(card(a));shown=Math.min(matches.length,shown+PAGE);$('gallery').append(frag);$('more').hidden=shown>=matches.length;}
-  function valueCap(a,key){
-    const layer=(a.layers||[]).find(l=>l.repeat?.value_input===key);
-    if(!layer)return null;
-    const repeat=layer.repeat,limit=controls[repeat.count_input]??a.inputs[repeat.count_input].default;
-    return Math.max(0,Math.floor(Number(limit)||1)*(repeat.levels.length-1));
-  }
+  function valueCap(a,key){return Inputs.bounds(a,key,Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs))?.max??null;}
   function controlsFor(a){const area=$('controls');area.replaceChildren();
     if(a.kind==='state_set'){
       const lab=document.createElement('label');lab.textContent='Appearance';
@@ -151,7 +146,7 @@
     if(a.kind==='composition'&&a.slots){const selected=Slots.resolve(a,preset,slotChoices).slots;for(const [slotName,slot] of Object.entries(a.slots)){
       const lab=document.createElement('label');lab.textContent=slot.label||slotName;const sel=document.createElement('select');for(const id of slot.options)sel.add(new Option(assets.get(id)?.name||id,id));sel.value=selected[slotName];sel.onchange=()=>{slotChoices[slotName]=sel.value};lab.append(sel);area.append(lab);
     }}
-    const defaultValues={...Slots.resolve(a,preset).inputs,...Object.fromEntries(Object.entries(a.inputs||{}).map(([k,v])=>[k,v.default]))};
+    const defaultValues=Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs);
     for(const [key,def] of Object.entries(a.inputs||{})){
       const lab=document.createElement('label');lab.textContent=key;let elem;
       if(def.type==='boolean'){elem=document.createElement('input');elem.type='checkbox';elem.checked=controls[key]??defaultValues[key];elem.onchange=()=>{controls[key]=elem.checked;};}
