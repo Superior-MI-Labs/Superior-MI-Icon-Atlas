@@ -14,19 +14,30 @@ class PublicCatalogTests(unittest.TestCase):
             site=Path(temp);build(site)
             public=json.loads((site/'public-catalog.json').read_text())
             self.assertEqual(public['schema'],'smi-public-catalog/1')
-            self.assertEqual(len(public['packs']),2)
+            self.assertEqual(len(public['packs']),4)
             self.assertEqual(public['legacy_count'],2073)
-            self.assertEqual(public['approved_count'],70)
+            publication=json.loads((ROOT/'publications.json').read_text())
+            expected_count=sum(c['expected_assets'] for c in publication['collections'])
+            self.assertEqual(expected_count,644)
+            self.assertEqual(public['approved_count'],expected_count)
             self.assertEqual(public['packs'][0]['id'],'fantasy-rpg-hud-wave1')
-            pack=json.loads((ROOT/'examples/fantasy-rpg-hud-wave1/manifest.json').read_text())
-            self.assertEqual({a['id'] for a in pack['assets']},{a['id'] for a in public['assets'] if not a.get('legacy')})
-            self.assertEqual(len(public['assets']),2143)
+            approved=set()
+            for entry in publication['collections']:
+                folder=ROOT/entry['path']
+                source=json.loads((folder/'manifest.json').read_text())
+                self.assertEqual(len(source['assets']),entry['expected_assets'])
+                approved.update(a['id'] for a in source['assets'])
+                archive=site/'demo'/(folder.name+'.zip')
+                self.assertEqual(check(archive),[],str(archive))
+                self.assertTrue(archive.is_file())
+            self.assertEqual(approved,{a['id'] for a in public['assets'] if not a.get('legacy')})
+            self.assertEqual(len(public['assets']),2073+expected_count)
             self.assertEqual(public['synonyms'],json.loads((ROOT/'manifest.json').read_text())['search']['synonyms'])
             self.assertIn('white-geometric-monoline',public['styles'])
             archive=[a for a in public['assets'] if a.get('legacy')]
             self.assertTrue(all(a.get('domain') and a.get('review_status') for a in archive))
             self.assertTrue(any(a.get('concept_id') for a in archive))
-            self.assertEqual(len({a['id'] for a in public['assets']}),2143)
+            self.assertEqual(len({a['id'] for a in public['assets']}),2073+expected_count)
             self.assertTrue(all(a.get('style') for a in public['assets']))
             for field in ('domain','style','subject','review','status','license','animated'):
                 self.assertIn('id="'+field+'"',(site/'index.html').read_text())
@@ -45,8 +56,10 @@ class PublicCatalogTests(unittest.TestCase):
     def test_deployed_site_excludes_old_public_files_and_starter_zips(self):
         with tempfile.TemporaryDirectory() as temp:
             site=Path(temp);build(site)
-            self.assertEqual(prune(site),1)
+            self.assertEqual(prune(site),3)
             self.assertTrue((site/'demo/fantasy-rpg-hud-wave1.zip').is_file())
+            self.assertTrue((site/'demo/royal-forge-controls.zip').is_file())
+            self.assertTrue((site/'demo/royal-forge-hud-resources.zip').is_file())
             self.assertIn('fantasy-rpg-hud-wave1.zip',(site/'ai-guide.html').read_text())
             for doc in (site/'ai').rglob('*.md'):
                 self.assertNotRegex(doc.read_text(),r'\]\((?:\.\./)+demo/(?:icons|animated-icons|character-animations|interactive-hud|starter-pack|potions-collection)\.zip\)')
