@@ -20,3 +20,7 @@ Example contract source: [`examples/icons/manifest.json`](https://github.com/Sup
 5. Review every thumbnail/contact-sheet cell at native UI scale and multiple tints/backgrounds.
 6. Test each crop for nonempty alpha, safe margins, neighboring-pixel contamination and semantic accuracy.
 7. Run validator, pixel QA, acceptance tests and final ZIP reimport; mark uncertain symbols NEEDS REVIEW.
+
+## Professional pixel-art game item icons
+
+For fantasy inventory items, abilities, equipment and reusable interaction overlays, read [Game pixel-art production contract](GAME-PIXEL-ART.md). Do **not** default to vector or SVG item artwork: use painted raster pixel art, measured PNG atlas packing and the existing manifest/state/slot renderer. A generated poster is a concept reference, not a production atlas.
