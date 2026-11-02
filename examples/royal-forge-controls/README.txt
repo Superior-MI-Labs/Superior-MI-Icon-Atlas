@@ -1,0 +1,1 @@
+Fantasy RPG HUD Wave 2 Royal Forge: import this ZIP directly into the local-first Visual Atlas Builder. 0.2.0 candidate. Pointer hit-testing and gamepad integration belong to host apps. Art direction, accessibility and in-game scaling need final review.
