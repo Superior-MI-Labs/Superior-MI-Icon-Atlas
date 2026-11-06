@@ -82,7 +82,7 @@ def build(dest:Path|None=None):
             index=json.loads(z.read('collection.json')) if 'collection.json' in files else None
             manifests=[]
             for name in sorted(files):
-                if name.endswith('.json') and z.getinfo(name).file_size<1024*1024:
+                if (name == 'manifest.json' or name.endswith('/manifest.json')) and z.getinfo(name).file_size <= 8 * 1024 * 1024:
                     doc=json.loads(z.read(name))
                     if doc.get('schema')=='smi-visual-pack/1':manifests.append(doc)
             if not manifests:raise ValueError(f'No pack manifest: {path.name}')
