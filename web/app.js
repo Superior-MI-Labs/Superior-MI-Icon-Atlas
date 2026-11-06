@@ -57,7 +57,7 @@
       const zip=await JSZip.loadAsync(blob,{checkCRC32:true});
       const definitions=[];let index=null;
       for(const file of Object.values(zip.files)){
-        if(file.dir||!/\.json$/i.test(file.name)||file._data?.uncompressedSize>1024*1024)continue;
+        if(file.dir||!/(?:^|\/)(?:manifest|collection)\.json$/i.test(file.name)||file._data?.uncompressedSize>8*1024*1024)continue;
         const doc=JSON.parse(await file.async('string'));
         if(doc.schema==='smi-visual-pack/1')definitions.push({path:file.name,pack:doc});
         if(doc.schema==='smi-visual-collection/1'){
