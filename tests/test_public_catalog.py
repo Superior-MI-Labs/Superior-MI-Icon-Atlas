@@ -57,6 +57,50 @@ class PublicCatalogTests(unittest.TestCase):
             self.assertNotIn('catalog-data.js',home)
             self.assertIn('public-catalog.json',(site/'app.js').read_text())
             self.assertIn('asset-renderer.js',(site/'builder.html').read_text())
+    def test_transparent_storyforge_atlas_cells_do_not_cut_through_neighbor_art(self):
+        """Every crop boundary must lie in a transparent gutter, not across an icon."""
+        from PIL import Image
+        atlas_dirs=sorted((ROOT/'examples').glob('storyforge-atlases-*'))
+        sheet_count=0
+        region_count=0
+        for folder in atlas_dirs:
+            manifest=json.loads((folder/'manifest.json').read_text(encoding='utf-8'))
+            for texture_id,texture in manifest['textures'].items():
+                with Image.open(folder/texture['path']) as image:
+                    foreground=image.getchannel('A').point(lambda alpha:255 if alpha>16 else 0)
+                    regions=[a for a in manifest['assets'] if a.get('texture')==texture_id
+                             and a.get('rect_px')!=[0,0,image.width,image.height]]
+                    rows={}
+                    for asset in regions:
+                        x,y,w,h=asset['rect_px']
+                        self.assertGreater(min(w,h),0,asset['id'])
+                        self.assertLessEqual(x+w,image.width,asset['id'])
+                        self.assertLessEqual(y+h,image.height,asset['id'])
+                        self.assertIsNotNone(foreground.crop((x,y,x+w,y+h)).getbbox(),asset['id'])
+                        rows.setdefault(y,[]).append(asset)
+                        region_count+=1
+                    y_end=0
+                    for y,row in sorted(rows.items()):
+                        self.assertEqual(y,y_end,(texture_id,'row start'))
+                        row.sort(key=lambda a:a['rect_px'][0])
+                        x_end=0
+                        for asset in row:
+                            x,_,w,h=asset['rect_px']
+                            self.assertEqual(x,x_end,(asset['id'],'column start'))
+                            if x:
+                                self.assertIsNone(foreground.crop((x,y,x+1,y+h)).getbbox(),
+                                                  (asset['id'],'neighboring icon on left edge'))
+                            x_end=x+w
+                        self.assertEqual(x_end,image.width,(texture_id,'last column'))
+                        if y:
+                            self.assertIsNone(foreground.crop((0,y,image.width,y+1)).getbbox(),
+                                              (texture_id,'neighboring icon on top edge'))
+                        y_end=y+row[0]['rect_px'][3]
+                    self.assertEqual(y_end,image.height,(texture_id,'last row'))
+                    sheet_count+=1
+        self.assertGreaterEqual(sheet_count,24)
+        self.assertGreaterEqual(region_count,1536)
+
     def test_deployed_site_excludes_old_public_files_and_starter_zips(self):
         with tempfile.TemporaryDirectory() as temp:
             site=Path(temp);build(site)
