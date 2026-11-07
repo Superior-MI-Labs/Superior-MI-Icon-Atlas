@@ -4,19 +4,13 @@
 
 [Browse the icon gallery](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Manifest index](manifest.json) · [Architecture](docs/ARCHITECTURE.md) · [Artwork policy](docs/ARTWORK-POLICY.md)
 
-## Current public catalog — November 2, 2026
+## Current public catalog
 
-Published collections are governed by [`publications.json`](publications.json), not the historic README version headings:
+The authoritative published inventory is the [approval registry](publications.json) plus the individual pack manifests; the [live Visual Atlas](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) derives its catalog from them. Do not maintain a competing hardcoded inventory here.
 
-- Fantasy RPG HUD Wave 1: **70** assets.
-- Royal Forge Core Controls: **214** assets.
-- Royal Forge HUD Resource Systems v1.1: **360** assets.
-- Pixel Fantasy Game Items: **48** HD pixel-art icons plus **17** reusable interaction assets, with source artwork and a manifest-driven Builder pack.
-- Historic icon archive: **2,073** searchable candidates, separately flagged for artistic/rights review.
+The browser contains independently searchable icons, reusable composition layers, states, full-sheet previews and animations. The historic 2,073-icon archive is searchable and flagged for art/rights review, but is intentionally excluded from unfiltered homepage recommendations.
 
-The public browser exposes **709 approved visual assets** and **2,073 archived icons** (2,782 addressable records). The repository's earlier v0.13.0 notes below describe the baseline QA release, not the latest public inventory. The current maintenance branch consolidates typed input bounds for both previews, preserves sliders during capacity changes, and sizes multi-layer repeated compositions without clipping negative offsets.
-
-The [Pixel Fantasy collection source](examples/pixel-fantasy-icons/) contains three 512×512 item sheets, one shared effects texture, a 48-icon contact sheet, and documented crop-repair history. Browse or download it from the public catalog. A published first edition may still receive art-quality improvements; transparent-padding checks do not guarantee every original silhouette is perfect.
+See the [catalog coverage and metadata audit](docs/PUBLIC-CATALOG-COVERAGE-AUDIT.md) for details about published source coverage, the Wolfcat category-label pass, archival assets, tutorial packs and production files that are not standalone public assets.
 
 For creator guidance, see [Creator preflight](docs/ai/CREATOR-PREFLIGHT.md), [image-source workflow](docs/ai/IMAGE-ENGINE-WORKFLOW.md), and [release checklist](docs/ai/RELEASE-CHECKLIST.md).
 

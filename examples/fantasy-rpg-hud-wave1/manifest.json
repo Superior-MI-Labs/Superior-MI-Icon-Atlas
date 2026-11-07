@@ -61,7 +61,10 @@
         "rpg",
         "shell"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.standard.recess",
@@ -86,7 +89,10 @@
         "recess",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.standard.rim",
@@ -111,7 +117,10 @@
         "rim",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.compact.shell",
@@ -136,7 +145,10 @@
         "rpg",
         "shell"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.compact.recess",
@@ -161,7 +173,10 @@
         "recess",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.compact.rim",
@@ -186,7 +201,10 @@
         "rim",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.boss.shell",
@@ -211,7 +229,10 @@
         "rpg",
         "shell"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.boss.recess",
@@ -236,7 +257,10 @@
         "recess",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.boss.rim",
@@ -261,7 +285,10 @@
         "rim",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.fill.health",
@@ -289,6 +316,9 @@
       "style": "fantasy-ornate-gold",
       "implements": [
         "smi.slot.ui.fantasy01.meter.fill.290x20/1"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -317,6 +347,9 @@
       "style": "fantasy-ornate-gold",
       "implements": [
         "smi.slot.ui.fantasy01.meter.fill.290x20/1"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -345,6 +378,9 @@
       "style": "fantasy-ornate-gold",
       "implements": [
         "smi.slot.ui.fantasy01.meter.fill.290x20/1"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -373,6 +409,9 @@
       "style": "fantasy-ornate-gold",
       "implements": [
         "smi.slot.ui.fantasy01.meter.fill.290x20/1"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -401,6 +440,9 @@
       "style": "fantasy-ornate-gold",
       "implements": [
         "smi.slot.ui.fantasy01.meter.fill.290x20/1"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -426,7 +468,10 @@
         "ornate",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.overlay.healing",
@@ -451,7 +496,10 @@
         "ornate",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.overlay.critical",
@@ -476,7 +524,10 @@
         "ornate",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.overlay.shield-hit",
@@ -501,7 +552,10 @@
         "rpg",
         "shield-hit"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.badge.hp",
@@ -526,7 +580,10 @@
         "ornate",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.badge.mp",
@@ -551,7 +608,10 @@
         "ornate",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.meter.badge.stamina",
@@ -576,7 +636,10 @@
         "rpg",
         "stamina"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.track",
@@ -601,7 +664,10 @@
         "sliders",
         "track"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.fill",
@@ -626,7 +692,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.thumb.default",
@@ -651,7 +720,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.thumb.hover",
@@ -676,7 +748,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.thumb.pressed",
@@ -701,7 +776,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.thumb.disabled",
@@ -726,7 +804,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.focus",
@@ -751,7 +832,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.ticks",
@@ -776,7 +860,10 @@
         "sliders",
         "ticks"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.track",
@@ -801,7 +888,10 @@
         "sliders",
         "track"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.fill",
@@ -826,7 +916,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.thumb.default",
@@ -851,7 +944,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.thumb.hover",
@@ -876,7 +972,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.thumb.pressed",
@@ -901,7 +1000,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.thumb.disabled",
@@ -926,7 +1028,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.focus",
@@ -951,7 +1056,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.ticks",
@@ -976,7 +1084,10 @@
         "sliders",
         "ticks"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.track",
@@ -1001,7 +1112,10 @@
         "sliders",
         "track"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.fill",
@@ -1026,7 +1140,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.thumb.default",
@@ -1051,7 +1168,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.thumb.hover",
@@ -1076,7 +1196,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.thumb.pressed",
@@ -1101,7 +1224,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.thumb.disabled",
@@ -1126,7 +1252,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.focus",
@@ -1151,7 +1280,10 @@
         "rpg",
         "sliders"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.ticks",
@@ -1176,7 +1308,10 @@
         "sliders",
         "ticks"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.heart.ruby.frame.empty",
@@ -1201,7 +1336,10 @@
         "ornate",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.heart.ruby.fill.red",
@@ -1229,6 +1367,9 @@
       "style": "fantasy-ornate-gold",
       "implements": [
         "smi.slot.ui.fantasy01.heart.ruby.48x48/1"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -1257,6 +1398,9 @@
       "style": "fantasy-ornate-gold",
       "implements": [
         "smi.slot.ui.fantasy01.heart.ruby.48x48/1"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -1285,6 +1429,9 @@
       "style": "fantasy-ornate-gold",
       "implements": [
         "smi.slot.ui.fantasy01.heart.ruby.48x48/1"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -1310,7 +1457,10 @@
         "ornate",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.heart.ruby.overlay.low-health",
@@ -1335,7 +1485,10 @@
         "ornate",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.heart.gold.frame.empty",
@@ -1360,7 +1513,10 @@
         "ornate",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.heart.gold.fill.red",
@@ -1388,6 +1544,9 @@
       "style": "fantasy-ornate-gold",
       "implements": [
         "smi.slot.ui.fantasy01.heart.gold.48x48/1"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -1416,6 +1575,9 @@
       "style": "fantasy-ornate-gold",
       "implements": [
         "smi.slot.ui.fantasy01.heart.gold.48x48/1"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -1444,6 +1606,9 @@
       "style": "fantasy-ornate-gold",
       "implements": [
         "smi.slot.ui.fantasy01.heart.gold.48x48/1"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -1469,7 +1634,10 @@
         "ornate",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.heart.gold.overlay.low-health",
@@ -1494,12 +1662,15 @@
         "ornate",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.widget.meter.health",
       "kind": "composition",
-      "name": "Health Meter \u2014 Royal Gold",
+      "name": "Health Meter — Royal Gold",
       "size_px": [
         360,
         48
@@ -1642,12 +1813,15 @@
             }
           ]
         }
-      }
+      },
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.widget.meter.mana",
       "kind": "composition",
-      "name": "Mana Meter \u2014 Royal Gold",
+      "name": "Mana Meter — Royal Gold",
       "size_px": [
         360,
         48
@@ -1790,12 +1964,15 @@
             }
           ]
         }
-      }
+      },
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.widget.meter.stamina",
       "kind": "composition",
-      "name": "Stamina Meter \u2014 Royal Gold",
+      "name": "Stamina Meter — Royal Gold",
       "size_px": [
         360,
         48
@@ -1938,12 +2115,15 @@
             }
           ]
         }
-      }
+      },
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.widget.meter.xp",
       "kind": "composition",
-      "name": "Xp Meter \u2014 Royal Gold",
+      "name": "Xp Meter — Royal Gold",
       "size_px": [
         320,
         48
@@ -2078,12 +2258,15 @@
             }
           ]
         }
-      }
+      },
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.widget.meter.shield",
       "kind": "composition",
-      "name": "Shield Meter \u2014 Royal Gold",
+      "name": "Shield Meter — Royal Gold",
       "size_px": [
         320,
         48
@@ -2218,7 +2401,10 @@
             }
           ]
         }
-      }
+      },
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.thumb.states",
@@ -2238,6 +2424,9 @@
         "pressed",
         "disabled",
         "fantasy"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -2344,7 +2533,10 @@
             }
           ]
         }
-      }
+      },
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.thumb.states",
@@ -2364,6 +2556,9 @@
         "pressed",
         "disabled",
         "fantasy"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -2470,7 +2665,10 @@
             }
           ]
         }
-      }
+      },
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.thumb.states",
@@ -2490,6 +2688,9 @@
         "pressed",
         "disabled",
         "fantasy"
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -2596,7 +2797,10 @@
             }
           ]
         }
-      }
+      },
+      "subjects": [
+        "games.ui.hud"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.widget.heart.ruby",
@@ -2690,6 +2894,9 @@
             "equals": true
           }
         }
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     },
     {
@@ -2784,6 +2991,9 @@
             "equals": true
           }
         }
+      ],
+      "subjects": [
+        "games.ui.hud"
       ]
     }
   ]

@@ -16,6 +16,23 @@ assert.equal(data.legacy_count,2073);
 assert.deepEqual(new Set(data.packs.map(x=>x.id)),new Set([...approved.map(p=>p.path.split('/').at(-1)),'legacy-icons']));
 assert.ok(data.synonyms.flame.includes('fire'),'Root manifest synonyms must survive projection');
 assert.ok(data.styles['white-geometric-monoline'],'Style registry must survive projection');
+// Discovery metadata must come from the approved source manifests. Avoid
+// a second authored search index or manually maintained public count.
+const published=data.assets.filter(a=>!a.legacy);
+assert.ok(published.every(a=>a.name&&a.style&&a.tags?.length&&a.subjects?.length),
+  'Every published asset needs discoverable names, tags, and subjects');
+const wolfcat=published.filter(a=>a.pack.startsWith('wolfcat-items-'));
+assert.equal(wolfcat.length,3445,'Preserve all 3392 Wolfcat cells and 53 sheet previews');
+const wolfcatCells=wolfcat.filter(a=>!a.id.endsWith('.sheet'));
+assert.equal(wolfcatCells.length,3392);
+assert.ok(wolfcatCells.every(a=>!a.name.startsWith('Uncatalogued sheet')&&a.tags.length>6),
+  'Wolfcat artwork needs a visible subject name and non-generic category tags');
+for(const q of ['bow','sword','helmet','potion','dice','rope','scroll','voucher','armor']){
+  assert.ok(Search.results(data.assets,{...params,query:q}).some(a=>a.pack.startsWith('wolfcat-items-')),
+    'Visually grounded Wolfcat search missing: '+q);
+}
+assert.ok(Search.results(data.assets,{...params,query:'missing image'}).some(a=>a.id.endsWith('.broken_image')),
+  'StoryForge alternative search names must find the broken-image icon');
 const archive=data.assets.filter(a=>a.legacy);
 assert.equal(archive.length,2073);
 assert.ok(archive.every(a=>a.domain&&a.style&&a.review_status),'Original icon facets must be preserved');

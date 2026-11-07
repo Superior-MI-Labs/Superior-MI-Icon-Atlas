@@ -42,7 +42,10 @@
         "default",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.primary.hover",
@@ -63,7 +66,10 @@
         "hover",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.primary.pressed",
@@ -84,7 +90,10 @@
         "pressed",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.primary.disabled",
@@ -105,7 +114,10 @@
         "disabled",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.secondary.default",
@@ -126,7 +138,10 @@
         "default",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.secondary.hover",
@@ -147,7 +162,10 @@
         "hover",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.secondary.pressed",
@@ -168,7 +186,10 @@
         "pressed",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.secondary.disabled",
@@ -189,7 +210,10 @@
         "disabled",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.icon.default",
@@ -210,7 +234,10 @@
         "default",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.icon.hover",
@@ -231,7 +258,10 @@
         "hover",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.icon.pressed",
@@ -252,7 +282,10 @@
         "pressed",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.icon.disabled",
@@ -273,7 +306,10 @@
         "disabled",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.switch.off",
@@ -293,7 +329,10 @@
         "off",
         "game-ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.switch.on",
@@ -313,7 +352,10 @@
         "on",
         "game-ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.switch.hover",
@@ -333,7 +375,10 @@
         "hover",
         "game-ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.switch.pressed",
@@ -353,7 +398,10 @@
         "pressed",
         "game-ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.checkbox.square.unchecked",
@@ -372,7 +420,10 @@
         "unchecked",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.checkbox.square.checked",
@@ -391,7 +442,10 @@
         "checked",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.checkbox.square.disabled",
@@ -410,7 +464,10 @@
         "disabled",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.radio.round.unselected",
@@ -429,7 +486,10 @@
         "unselected",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.radio.round.selected",
@@ -448,7 +508,10 @@
         "selected",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.empty",
@@ -468,7 +531,10 @@
         "empty",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.hover",
@@ -488,7 +554,10 @@
         "hover",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.selected",
@@ -508,7 +577,10 @@
         "selected",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.locked",
@@ -528,7 +600,10 @@
         "locked",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.rare",
@@ -548,7 +623,10 @@
         "rare",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.epic",
@@ -568,7 +646,10 @@
         "epic",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.hotbar.square.ready",
@@ -588,7 +669,10 @@
         "ready",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.hotbar.square.cooldown",
@@ -608,7 +692,10 @@
         "cooldown",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.hotbar.square.active",
@@ -628,7 +715,10 @@
         "active",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.hotbar.square.locked",
@@ -648,7 +738,10 @@
         "locked",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.indicator.pip.ready",
@@ -667,7 +760,10 @@
         "ready",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.indicator.pip.spent",
@@ -686,7 +782,10 @@
         "spent",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.indicator.pip.warning",
@@ -705,7 +804,10 @@
         "warning",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.menu.default",
@@ -724,7 +826,10 @@
         "default",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.menu.hover",
@@ -743,7 +848,10 @@
         "hover",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.menu.selected",
@@ -762,7 +870,10 @@
         "selected",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.menu.disabled",
@@ -781,7 +892,10 @@
         "disabled",
         "ui"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.panel.tooltip",
@@ -800,7 +914,10 @@
         "resizable",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.panel.header",
@@ -819,7 +936,10 @@
         "panel",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.panel.corner",
@@ -838,7 +958,10 @@
         "panel",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.effect.pulse.frame0",
@@ -857,7 +980,10 @@
         "animation",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.effect.pulse.frame1",
@@ -876,7 +1002,10 @@
         "animation",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.effect.pulse.frame2",
@@ -895,7 +1024,10 @@
         "animation",
         "rpg"
       ],
-      "style": "fantasy-ornate-gold"
+      "style": "fantasy-ornate-gold",
+      "subjects": [
+        "games.ui.controls"
+      ]
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.primary.states",
@@ -914,6 +1046,9 @@
         "states",
         "fantasy",
         "rpg"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -933,6 +1068,9 @@
         "states",
         "fantasy",
         "rpg"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -952,6 +1090,9 @@
         "states",
         "fantasy",
         "rpg"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -971,6 +1112,9 @@
         "states",
         "fantasy",
         "rpg"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -989,6 +1133,9 @@
         "states",
         "fantasy",
         "rpg"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -1006,6 +1153,9 @@
         "states",
         "fantasy",
         "rpg"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -1027,6 +1177,9 @@
         "states",
         "fantasy",
         "rpg"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -1046,6 +1199,9 @@
         "states",
         "fantasy",
         "rpg"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -1064,6 +1220,9 @@
         "states",
         "fantasy",
         "rpg"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -1083,6 +1242,9 @@
         "states",
         "fantasy",
         "rpg"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -1107,6 +1269,9 @@
         "glow",
         "animation",
         "highlight"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -1184,6 +1349,9 @@
         "interactive",
         "hover",
         "pressed"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -1244,6 +1412,9 @@
         "on-off",
         "fantasy",
         "interactive"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {
@@ -1273,6 +1444,9 @@
         "panel",
         "fantasy",
         "gui"
+      ],
+      "subjects": [
+        "games.ui.controls"
       ]
     },
     {

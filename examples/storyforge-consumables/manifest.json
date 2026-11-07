@@ -88,7 +88,10 @@
         "health_potion_minor",
         "health_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -113,7 +116,10 @@
         "health_potion_standard",
         "health_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -138,7 +144,10 @@
         "health_potion_major",
         "health_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -163,7 +172,10 @@
         "health_potion_superior",
         "health_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -188,7 +200,10 @@
         "health_potion_supreme",
         "health_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -213,7 +228,10 @@
         "health_potion_rejuvenation",
         "health_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -238,7 +256,10 @@
         "health_potion_battle_heal",
         "health_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -263,7 +284,10 @@
         "health_potion_emergency_restore",
         "health_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -288,7 +312,10 @@
         "icon",
         "mana_potion_minor",
         "mana_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -313,7 +340,10 @@
         "icon",
         "mana_potion_standard",
         "mana_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -338,7 +368,10 @@
         "icon",
         "mana_potion_major",
         "mana_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -363,7 +396,10 @@
         "icon",
         "mana_potion_superior",
         "mana_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -388,7 +424,10 @@
         "icon",
         "mana_potion_supreme",
         "mana_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -413,7 +452,10 @@
         "icon",
         "mana_potion_arcane_focus",
         "mana_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -438,7 +480,10 @@
         "icon",
         "mana_potion_moonwell",
         "mana_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -463,7 +508,10 @@
         "icon",
         "mana_potion_pure_aether",
         "mana_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -488,7 +536,10 @@
         "icon",
         "stamina_potion_minor",
         "stamina_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -513,7 +564,10 @@
         "icon",
         "stamina_potion_standard",
         "stamina_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -538,7 +592,10 @@
         "icon",
         "stamina_potion_major",
         "stamina_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -563,7 +620,10 @@
         "icon",
         "stamina_potion_superior",
         "stamina_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -588,7 +648,10 @@
         "icon",
         "stamina_potion_supreme",
         "stamina_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -613,7 +676,10 @@
         "icon",
         "stamina_potion_shock_tonic",
         "stamina_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -638,7 +704,10 @@
         "icon",
         "stamina_potion_bulwark_tonic",
         "stamina_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -663,7 +732,10 @@
         "icon",
         "stamina_potion_berserker_tonic",
         "stamina_potions",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -688,7 +760,10 @@
         "cure_potion_antidote",
         "cure_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -713,7 +788,10 @@
         "cure_potion_remedy",
         "cure_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -738,7 +816,10 @@
         "cure_potion_antivenom",
         "cure_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -763,7 +844,10 @@
         "cure_potion_curse_cleanse",
         "cure_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -788,7 +872,10 @@
         "cure_potion_herbal_tonic",
         "cure_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -813,7 +900,10 @@
         "cure_potion_guardians_blessing",
         "cure_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -838,7 +928,10 @@
         "cure_potion_panacea",
         "cure_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -863,7 +956,10 @@
         "cure_potion_restoration",
         "cure_potions",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1088,7 +1184,10 @@
         "focus_elixir_mystic_mind",
         "focus_elixirs",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1113,7 +1212,10 @@
         "focus_elixir_arcane_star",
         "focus_elixirs",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1138,7 +1240,10 @@
         "focus_elixir_insight",
         "focus_elixirs",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1163,7 +1268,10 @@
         "focus_elixir_scholars_draught",
         "focus_elixirs",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1188,7 +1296,10 @@
         "focus_elixir_precision",
         "focus_elixirs",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1213,7 +1324,10 @@
         "focus_elixir_true_sight",
         "focus_elixirs",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1238,7 +1352,10 @@
         "focus_elixir_lucid_memory",
         "focus_elixirs",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1263,7 +1380,10 @@
         "focus_elixir_cosmic_focus",
         "focus_elixirs",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1288,7 +1408,10 @@
         "icon",
         "power_elixir_muscle_draught",
         "power_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1313,7 +1436,10 @@
         "icon",
         "power_elixir_rage",
         "power_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1338,7 +1464,10 @@
         "icon",
         "power_elixir_claw_tonic",
         "power_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1363,7 +1492,10 @@
         "icon",
         "power_elixir_smiths_tonic",
         "power_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1388,7 +1520,10 @@
         "icon",
         "power_elixir_beastheart",
         "power_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1413,7 +1548,10 @@
         "icon",
         "power_elixir_impact",
         "power_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1438,7 +1576,10 @@
         "icon",
         "power_elixir_brawler",
         "power_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1463,7 +1604,10 @@
         "icon",
         "power_elixir_titans_fist",
         "power_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1488,7 +1632,10 @@
         "icon",
         "speed_elixir_wingstep",
         "speed_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1513,7 +1660,10 @@
         "icon",
         "speed_elixir_runner",
         "speed_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1538,7 +1688,10 @@
         "icon",
         "speed_elixir_quickspark",
         "speed_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1563,7 +1716,10 @@
         "icon",
         "speed_elixir_featherfall",
         "speed_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1588,7 +1744,10 @@
         "icon",
         "speed_elixir_skywing",
         "speed_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1613,7 +1772,10 @@
         "icon",
         "speed_elixir_vault",
         "speed_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1638,7 +1800,10 @@
         "icon",
         "speed_elixir_sprintburst",
         "speed_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1663,7 +1828,10 @@
         "icon",
         "speed_elixir_shadowstride",
         "speed_elixirs",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1712,7 +1880,10 @@
         "fire_consumables",
         "fire_resist_potion",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1762,7 +1933,10 @@
         "ember_elixir",
         "fire_consumables",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1887,7 +2061,10 @@
         "dragonfire_elixir",
         "fire_consumables",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1912,7 +2089,10 @@
         "frost_consumables",
         "frost_resist_potion",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -1962,7 +2142,10 @@
         "frost_consumables",
         "ice_elixir",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -2062,7 +2245,10 @@
         "consumable",
         "frost_consumables",
         "icon",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -2112,7 +2298,10 @@
         "icon",
         "lightning_consumables",
         "lightning_resist_potion",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -2162,7 +2351,10 @@
         "icon",
         "lightning_consumables",
         "spark_elixir",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -2262,7 +2454,10 @@
         "icon",
         "lightning_consumables",
         "stormcaller_elixir",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -2412,7 +2607,10 @@
         "consumable",
         "icon",
         "poison_consumables",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -2562,7 +2760,10 @@
         "holy_light_consumables",
         "icon",
         "radiant_elixir",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -2662,7 +2863,10 @@
         "holy_light_consumables",
         "icon",
         "storyforge",
-        "sunward_potion"
+        "sunward_potion",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -2712,7 +2916,10 @@
         "icon",
         "shadow_stealth_consumables",
         "shadowcloak_potion",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -2762,7 +2969,10 @@
         "icon",
         "shadow_stealth_consumables",
         "storyforge",
-        "umbra_elixir"
+        "umbra_elixir",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -2887,7 +3097,10 @@
         "icon",
         "shadow_stealth_consumables",
         "softstep_potion",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -2937,7 +3150,10 @@
         "icon",
         "mind_dream_consumables",
         "moonmind_elixir",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3112,7 +3328,10 @@
         "icon",
         "storyforge",
         "travel_survival_consumables",
-        "water_breathing_potion"
+        "water_breathing_potion",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3137,7 +3356,10 @@
         "icon",
         "night_vision_elixir",
         "storyforge",
-        "travel_survival_consumables"
+        "travel_survival_consumables",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3287,7 +3509,10 @@
         "icon",
         "storyforge",
         "travel_survival_consumables",
-        "winterguard_elixir"
+        "winterguard_elixir",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3336,7 +3561,9 @@
         "icon",
         "offensive_scrolls",
         "scroll_firebolt",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3361,7 +3588,9 @@
         "icon",
         "offensive_scrolls",
         "scroll_ice_shard",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3386,7 +3615,9 @@
         "icon",
         "offensive_scrolls",
         "scroll_chain_lightning",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3411,7 +3642,9 @@
         "icon",
         "offensive_scrolls",
         "scroll_corrosive_spray",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3436,7 +3669,9 @@
         "icon",
         "offensive_scrolls",
         "scroll_arcane_burst",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3461,7 +3696,9 @@
         "icon",
         "offensive_scrolls",
         "scroll_meteor",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3486,7 +3723,9 @@
         "icon",
         "offensive_scrolls",
         "scroll_plague_bolt",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3511,7 +3750,9 @@
         "icon",
         "offensive_scrolls",
         "scroll_spectral_blade",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3536,7 +3777,11 @@
         "defensive_scrolls",
         "icon",
         "scroll_guard_shield",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript",
+        "defense",
+        "armor"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3561,7 +3806,9 @@
         "defensive_scrolls",
         "icon",
         "scroll_barrier_orb",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3586,7 +3833,9 @@
         "defensive_scrolls",
         "icon",
         "scroll_hex_wall",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3611,7 +3860,9 @@
         "defensive_scrolls",
         "icon",
         "scroll_ward_sigil",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3636,7 +3887,9 @@
         "defensive_scrolls",
         "icon",
         "scroll_disperse",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3661,7 +3914,9 @@
         "defensive_scrolls",
         "icon",
         "scroll_reflect",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3686,7 +3941,9 @@
         "defensive_scrolls",
         "icon",
         "scroll_stoneskin",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3711,7 +3968,11 @@
         "defensive_scrolls",
         "icon",
         "scroll_arcane_shield",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript",
+        "defense",
+        "armor"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3736,7 +3997,9 @@
         "healing_scrolls",
         "icon",
         "scroll_minor_heal",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3761,7 +4024,9 @@
         "healing_scrolls",
         "icon",
         "scroll_restore",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3786,7 +4051,9 @@
         "healing_scrolls",
         "icon",
         "scroll_recover",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3811,7 +4078,9 @@
         "healing_scrolls",
         "icon",
         "scroll_revive",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3836,7 +4105,9 @@
         "healing_scrolls",
         "icon",
         "scroll_nature_heal",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3861,7 +4132,9 @@
         "healing_scrolls",
         "icon",
         "scroll_cleanse",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3886,7 +4159,9 @@
         "healing_scrolls",
         "icon",
         "scroll_curse_relief",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3911,7 +4186,9 @@
         "healing_scrolls",
         "icon",
         "scroll_purifying_waters",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3936,7 +4213,9 @@
         "icon",
         "scroll_identify",
         "storyforge",
-        "utility_scrolls"
+        "utility_scrolls",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3961,7 +4240,9 @@
         "icon",
         "scroll_teleport",
         "storyforge",
-        "utility_scrolls"
+        "utility_scrolls",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -3986,7 +4267,9 @@
         "icon",
         "scroll_detect_magic",
         "storyforge",
-        "utility_scrolls"
+        "utility_scrolls",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -4011,7 +4294,9 @@
         "icon",
         "scroll_unlock",
         "storyforge",
-        "utility_scrolls"
+        "utility_scrolls",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -4036,7 +4321,9 @@
         "icon",
         "scroll_illumination",
         "storyforge",
-        "utility_scrolls"
+        "utility_scrolls",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -4061,7 +4348,9 @@
         "icon",
         "scroll_invisibility",
         "storyforge",
-        "utility_scrolls"
+        "utility_scrolls",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -4086,7 +4375,9 @@
         "icon",
         "scroll_map_reveal",
         "storyforge",
-        "utility_scrolls"
+        "utility_scrolls",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -4111,7 +4402,9 @@
         "icon",
         "scroll_message",
         "storyforge",
-        "utility_scrolls"
+        "utility_scrolls",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -6410,7 +6703,10 @@
         "icon",
         "rare_exotic_consumables",
         "rare_moon_elixir",
-        "storyforge"
+        "storyforge",
+        "flask",
+        "vial",
+        "alchemy"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -6684,7 +6980,9 @@
         "icon",
         "icon_unknown_scroll",
         "storyforge",
-        "unknown_icons"
+        "unknown_icons",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -6884,7 +7182,9 @@
         "icon",
         "icon_na_scroll",
         "na_icons",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -7184,7 +7484,9 @@
         "empty_misc",
         "icon",
         "icon_empty_scroll",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -7634,7 +7936,9 @@
         "icon",
         "icon_unknown_sealed_scroll",
         "locked_unknown",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
@@ -7809,7 +8113,9 @@
         "consumable",
         "icon",
         "icon_silhouette_scroll",
-        "storyforge"
+        "storyforge",
+        "parchment",
+        "manuscript"
       ],
       "subjects": [
         "storyforge.consumables"
