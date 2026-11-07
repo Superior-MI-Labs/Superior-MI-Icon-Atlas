@@ -32,7 +32,19 @@ assert.equal(Search.results(data.assets,{...params,pack:'legacy-icons'}).length,
 assert.ok(Search.results(data.assets,{...params,query:'fire'}).some(a=>a.legacy));
 assert.ok(Search.results(data.assets,{...params,query:'folder'}).some(a=>a.legacy));
 assert.ok(Search.results(data.assets,{...params,query:'health'}).some(a=>!a.legacy));
-assert.equal(Search.results(data.assets,{...params,kind:'sequence'}).length,4);
+// Expected sequence IDs come from the same approved source manifests as the catalog.
+const expectedSequences=new Set();
+for(const publication of approved){
+  const dir=path.join(root,publication.path);
+  const collection=JSON.parse(fs.readFileSync(path.join(dir,'collection.json'),'utf8'));
+  for(const entry of collection.packs){
+    const manifest=JSON.parse(fs.readFileSync(path.join(dir,entry.manifest),'utf8'));
+    for(const asset of manifest.assets)if(asset.kind==='sequence')expectedSequences.add(asset.id);
+  }
+}
+const foundSequences=Search.results(data.assets,{...params,kind:'sequence'});
+assert.ok(expectedSequences.size>=4,'Previously published animation sequences must remain present');
+assert.deepEqual(new Set(foundSequences.map(a=>a.id)),expectedSequences,'All published animations must remain discoverable by kind');
 assert.equal(Search.results(data.assets,{...params,status:'archive'}).length,2073);
 assert.equal(Search.results(data.assets,{...params,status:'published'}).length,approvedCount);
 assert.ok(Search.results(data.assets,{...params,review:'reviewed'}).length>0);
