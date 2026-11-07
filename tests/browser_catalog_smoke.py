@@ -50,6 +50,8 @@ def check(page):
     assert page.locator("#detail-tags span").count() >= 1, "No manifest keywords in inspector"
     page.locator("#close").click()
 
+    # Recolor is a legacy-only control; newer published assets can rank first for "flame".
+    page.locator("#pack").select_option("legacy-icons")
     page.locator("#search").fill("flame")
     page.locator("#gallery .asset-tile").first.wait_for(timeout=10000)
     page.locator("#gallery .asset-tile").first.click()
