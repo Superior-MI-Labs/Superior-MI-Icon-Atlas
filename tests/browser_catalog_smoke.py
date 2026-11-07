@@ -50,6 +50,8 @@ def check(page):
     assert page.locator("#detail-tags span").count() >= 1, "No manifest keywords in inspector"
     page.locator("#close").click()
 
+    # Clear the previous "healthbar" query before selecting a pack: facets show only matching options.
+    page.locator("#clear-filters").click()
     # Recolor is a legacy-only control; newer published assets can rank first for "flame".
     page.locator("#pack").select_option("legacy-icons")
     page.locator("#search").fill("flame")
