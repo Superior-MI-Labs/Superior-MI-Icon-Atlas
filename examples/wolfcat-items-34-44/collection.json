@@ -1,0 +1,15 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.local.wolfcat.uncatalogued.batch_04",
+  "name": "Wolfcat RPG Items — Sheets 34–44",
+  "version": "1.0.1",
+  "description": "Painted RPG item icon sheets 34–44, measured crop geometry and optimized PNGs. Sheets 001 and 023 are transparent; other Wolfcat source sheets preserve their opaque dark backgrounds where alpha removal could damage the art.",
+  "entry_asset": "smi.local.wolfcat.uncatalogued.sheet_034.r01c01",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Wolfcat RPG Items — Sheets 34–44",
+      "category": "icons"
+    }
+  ]
+}

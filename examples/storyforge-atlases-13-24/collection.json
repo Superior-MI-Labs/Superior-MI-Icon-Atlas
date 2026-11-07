@@ -1,0 +1,15 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.local.storyforge.atlases.13_24",
+  "name": "StoryForge Icons — Atlases 13–24",
+  "version": "1.0.1",
+  "description": "12 transparent fantasy UI icon atlases with named source-derived region IDs and losslessly optimized PNGs.",
+  "entry_asset": "smi.local.storyforge.atlas_13_collaboration_permissions_multiplayer.user",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "StoryForge Icons — Atlases 13–24",
+      "category": "icons"
+    }
+  ]
+}

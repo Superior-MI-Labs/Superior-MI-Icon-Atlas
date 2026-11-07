@@ -1,0 +1,15 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.local.storyforge.consumables.cell_shaded_v1",
+  "name": "StoryForge Consumable Icons",
+  "version": "1.0.0",
+  "description": "Five 8x8 consumable sheets with exact cell rectangles and IDs taken from their source manifests.",
+  "entry_asset": "smi.local.storyforge.consumables.consumables_core_alchemy.health_potion_minor",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "StoryForge Consumable Icons",
+      "category": "icons"
+    }
+  ]
+}

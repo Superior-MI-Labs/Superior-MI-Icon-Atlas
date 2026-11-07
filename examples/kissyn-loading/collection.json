@@ -1,0 +1,15 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.local.kissyn.loading",
+  "name": "Kissyn Loading Animation",
+  "version": "1.0.0",
+  "description": "The 4x4 face sheet and 13-frame awakening sequence use the source sequence map. Progress gating, fades, and loaded pulse remain host behavior.",
+  "entry_asset": "smi.local.kissyn.loading.awakening",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Kissyn Loading Animation",
+      "category": "animations"
+    }
+  ]
+}

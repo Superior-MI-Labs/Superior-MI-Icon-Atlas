@@ -28,6 +28,69 @@
       "expected_assets": 65,
       "approval": "Creator explicitly requested publication of completed 48-item pixel-fantasy collection (Nov 2, 2026). Source-geometry checks passed; continued art cleanup welcome.",
       "rights": "CC0-1.0 original AI-generated artwork"
+    },
+    {
+      "path": "examples/kissyn-loading",
+      "published": "2026-11-07",
+      "expected_assets": 17,
+      "approval": "Owner-requested public release; image and crop QA pending creator review",
+      "rights": "CC0-1.0: I confirm I own or control the artwork and can dedicate it to CC0-1.0"
+    },
+    {
+      "path": "examples/storyforge-atlases-01-12",
+      "published": "2026-11-07",
+      "expected_assets": 780,
+      "approval": "Owner-requested public release; image and crop QA pending creator review",
+      "rights": "CC0-1.0: I confirm I own or control the artwork and can dedicate it to CC0-1.0"
+    },
+    {
+      "path": "examples/storyforge-atlases-13-24",
+      "published": "2026-11-07",
+      "expected_assets": 780,
+      "approval": "Owner-requested public release; image and crop QA pending creator review",
+      "rights": "CC0-1.0: I confirm I own or control the artwork and can dedicate it to CC0-1.0"
+    },
+    {
+      "path": "examples/storyforge-consumables",
+      "published": "2026-11-07",
+      "expected_assets": 325,
+      "approval": "Owner-requested public release; image and crop QA pending creator review",
+      "rights": "CC0-1.0: I confirm I own or control the artwork and can dedicate it to CC0-1.0"
+    },
+    {
+      "path": "examples/wolfcat-items-01-11",
+      "published": "2026-11-07",
+      "expected_assets": 715,
+      "approval": "Owner-requested public release; image and crop QA pending creator review",
+      "rights": "CC0-1.0: I confirm I own or control the artwork and can dedicate it to CC0-1.0"
+    },
+    {
+      "path": "examples/wolfcat-items-12-22",
+      "published": "2026-11-07",
+      "expected_assets": 723,
+      "approval": "Owner-requested public release; image and crop QA pending creator review",
+      "rights": "CC0-1.0: I confirm I own or control the artwork and can dedicate it to CC0-1.0"
+    },
+    {
+      "path": "examples/wolfcat-items-23-33",
+      "published": "2026-11-07",
+      "expected_assets": 715,
+      "approval": "Owner-requested public release; image and crop QA pending creator review",
+      "rights": "CC0-1.0: I confirm I own or control the artwork and can dedicate it to CC0-1.0"
+    },
+    {
+      "path": "examples/wolfcat-items-34-44",
+      "published": "2026-11-07",
+      "expected_assets": 715,
+      "approval": "Owner-requested public release; image and crop QA pending creator review",
+      "rights": "CC0-1.0: I confirm I own or control the artwork and can dedicate it to CC0-1.0"
+    },
+    {
+      "path": "examples/wolfcat-items-45-53",
+      "published": "2026-11-07",
+      "expected_assets": 577,
+      "approval": "Owner-requested public release; image and crop QA pending creator review",
+      "rights": "CC0-1.0: I confirm I own or control the artwork and can dedicate it to CC0-1.0"
     }
   ]
 }

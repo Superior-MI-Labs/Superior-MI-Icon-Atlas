@@ -1,0 +1,463 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.local.kissyn.loading",
+  "version": "1.0.0",
+  "description": "The 4x4 face sheet and 13-frame awakening sequence use the source sequence map. Progress gating, fades, and loaded pulse remain host behavior.",
+  "license": "CC0-1.0",
+  "textures": {
+    "kissyn_loading_4x4": {
+      "path": "textures/kissyn_loading_4x4.png",
+      "width_px": 1254,
+      "height_px": 1254,
+      "sha256": "e559af1d23c2af9c2b4c657e8c79e234dc1a42d8a2c6a92008a55b56f5172c09",
+      "alpha": "straight",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.local.kissyn.loading.face_00",
+      "name": "Face frame 00",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        0,
+        0,
+        314,
+        314
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_01",
+      "name": "Face frame 01",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        314,
+        0,
+        313,
+        314
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_02",
+      "name": "Face frame 02",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        627,
+        0,
+        314,
+        314
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_03",
+      "name": "Face frame 03",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        941,
+        0,
+        313,
+        314
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_04",
+      "name": "Face frame 04",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        0,
+        314,
+        314,
+        313
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_05",
+      "name": "Face frame 05",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        314,
+        314,
+        313,
+        313
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_06",
+      "name": "Face frame 06",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        627,
+        314,
+        314,
+        313
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_07",
+      "name": "Face frame 07",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        941,
+        314,
+        313,
+        313
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_08",
+      "name": "Face frame 08",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        0,
+        627,
+        314,
+        314
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_09",
+      "name": "Face frame 09",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        314,
+        627,
+        313,
+        314
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_10",
+      "name": "Face frame 10",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        627,
+        627,
+        314,
+        314
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_11",
+      "name": "Face frame 11",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        941,
+        627,
+        313,
+        314
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_12",
+      "name": "Face frame 12",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        0,
+        941,
+        314,
+        313
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.face_13",
+      "name": "Face frame 13",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        314,
+        941,
+        313,
+        313
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.ring",
+      "name": "Ring special frame",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        627,
+        941,
+        314,
+        313
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.logo",
+      "name": "Logo special frame",
+      "kind": "region",
+      "texture": "kissyn_loading_4x4",
+      "rect_px": [
+        941,
+        941,
+        313,
+        313
+      ],
+      "description": "Cell location follows the source 4x4, zero-based loading sequence map.",
+      "tags": [
+        "animation",
+        "frame",
+        "kissyn",
+        "loading"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    },
+    {
+      "id": "smi.local.kissyn.loading.awakening",
+      "name": "KisSyn awakening",
+      "kind": "sequence",
+      "description": "One-shot eye-opening frames from the source sequence. Progress gating, fade, and completion pulse are not represented.",
+      "frames": [
+        {
+          "asset": "smi.local.kissyn.loading.face_01"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_02"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_03"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_04"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_05"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_06"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_07"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_08"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_09"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_10"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_11"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_12"
+        },
+        {
+          "asset": "smi.local.kissyn.loading.face_13"
+        }
+      ],
+      "default_fps": 3,
+      "playback": "once",
+      "tags": [
+        "kissyn",
+        "loading",
+        "animation",
+        "awakening"
+      ],
+      "subjects": [
+        "kissyn.loading"
+      ],
+      "license": "CC0-1.0",
+      "style": "illustrated-loading-animation"
+    }
+  ]
+}
