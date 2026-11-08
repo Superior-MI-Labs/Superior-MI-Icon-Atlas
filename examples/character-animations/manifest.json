@@ -173,5 +173,65 @@
         "walk"
       ]
     }
+  ],
+  "preview_profiles": [
+    {
+      "schema": "smi-preview-controls/1",
+      "id": "smi.example.robot.platformer",
+      "name": "Platformer controls",
+      "asset": "smi.example.robot.states",
+      "neutral": {
+        "state": "idle"
+      },
+      "actions": {
+        "move": {
+          "mode": "hold",
+          "target": {
+            "state": "walk"
+          }
+        }
+      },
+      "bindings": [
+        {
+          "device": "keyboard",
+          "code": "ArrowRight",
+          "action": "move"
+        },
+        {
+          "device": "gamepad_button",
+          "button": 15,
+          "action": "move"
+        }
+      ]
+    },
+    {
+      "schema": "smi-preview-controls/1",
+      "id": "smi.example.robot.alternative",
+      "name": "Alternative keyboard controls",
+      "asset": "smi.example.robot.states",
+      "neutral": {
+        "state": "idle"
+      },
+      "actions": {
+        "move": {
+          "mode": "hold",
+          "target": {
+            "state": "walk"
+          }
+        }
+      },
+      "bindings": [
+        {
+          "device": "keyboard",
+          "code": "KeyW",
+          "action": "move"
+        },
+        {
+          "device": "gamepad_button",
+          "button": 12,
+          "action": "move"
+        }
+      ]
+    }
   ]
 }

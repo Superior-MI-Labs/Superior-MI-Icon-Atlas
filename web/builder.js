@@ -16,6 +16,7 @@
   const textures = new Map(); // namespaced texture ID -> {path, blob?, image?}
   const imports = new Set();
   const interfaces = new Map(); // bag/source identifier -> own versioned interface definitions
+  const previewProfiles = new Map(); // profile ID -> authored, genre-neutral input adapter
   const bags = new Map(); // each imported ZIP owns one contained, navigable asset collection
   let bagScope = null, bagGroup = "";
   const bagPersistenceKey = "smi.visualAtlas.saveBagLocally";
@@ -23,8 +24,8 @@
   const timeline = { duration:2000, playback:'loop', exportFps:12 };
   const LIMIT_FRAMES=240;
   const ui = {selected:null, clock:0, playing:true, last:0, speed:1, controls:{}, slots:{}, preset:null, isScene:false};
-  let listLimit=110,listKey='',driveActive=false,gamepadHeld={};
-  const selectAsset=id=>{ui.selected=id;ui.isScene=false;ui.controls={};ui.slots={};ui.preset=library.get(id)?.default_preset||null;driveActive=false;gamepadHeld={};};
+  let listLimit=110,listKey='',driveActive=false,gamepadHeld={},driveDriver=null;
+  const selectAsset=id=>{ui.selected=id;ui.isScene=false;ui.controls={};ui.slots={};ui.preset=library.get(id)?.default_preset||null;driveActive=false;gamepadHeld={};driveDriver=null;};
   const MAX_BYTES = 120 * 1024 * 1024, MAX_ENTRY = 24 * 1024 * 1024;
   const AI_URL = 'https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/ai/START-HERE.md';
   const safePath = s => typeof s === 'string' && !!s && !s.startsWith('/') && !s.includes('\\') && !s.split('/').includes('..') && !s.includes(':') && !s.includes('\0');
@@ -106,6 +107,9 @@
       refs.forEach(walk);
       visiting.delete(id); seen.add(id);
     };
+    const problems=Interactions.validatePreviewProfiles(pack.preview_profiles,id=>ids.get(id)||library.get(id));
+    if(problems.length)throw Error('Invalid preview profile: '+problems[0]);
+    for(const p of pack.preview_profiles||[])if(previewProfiles.has(p.id))throw Error('Existing preview profile ID '+p.id);
     pack.assets.forEach(a=>walk(a.id));
     for(const [id,t] of Object.entries(pack.textures)){
       if(!t||!safePath(t.path)||!Number.isInteger(t.width_px)||!Number.isInteger(t.height_px)||t.width_px<1||t.height_px<1||t.width_px>8192||t.height_px>8192)throw Error('Unsafe or invalid texture: '+id);
@@ -131,6 +135,7 @@
     }
     const prefix='local:'+slug(pack.pack_id)+':'+Date.now().toString(36)+':';
     interfaces.set(ownerBag||pack.pack_id,structuredClone(pack.interfaces||{}));
+    for(const profile of pack.preview_profiles||[])previewProfiles.set(profile.id,{...structuredClone(profile),ownerBag});
     for(const [key,def,blob,img] of pending){textures.set(prefix+key,{blob,path:def.path,image:img,source:pack.pack_id,ownerBag,license:pack.license||'UNSPECIFIED'});}
     for(const a of pack.assets){library.set(a.id,{...a,texture:a.texture?prefix+a.texture:undefined,source:pack.pack_id,ownerBag,license:a.license||pack.license||'UNSPECIFIED'});}
     imports.add(pack.pack_id); selectAsset(pack.assets.filter(a=>a.kind==='composition').at(-1)?.id||pack.assets.at(-1)?.id||ui.selected); refreshList(); renderControlPanel(); setStatus('Imported '+pack.assets.length+' assets from '+pack.pack_id+' (kept in this browser session).');
@@ -174,6 +179,7 @@
     scene.layers=scene.layers.filter(l=>!owned.has(l.asset));scene.selectedLayer=-1;
     if(owned.has(ui.selected))selectAsset(null);
     bags.delete(id);interfaces.delete(id);imports.delete(bag.collectionId);
+    for(const [key,p] of previewProfiles)if(p.ownerBag===id)previewProfiles.delete(key);
     if(bagScope===id){bagScope=null;bagGroup='';}
     if(deleteStored){try{await BagStore?.remove(id);}catch(e){setStatus('Removed from session. Stored copy could not be removed: '+e.message,true);}}
     renderBag();refreshList();renderControlPanel();layerInputs();refreshTimeline();
@@ -407,12 +413,48 @@
     if(result.events.length)setStatus(result.events.map(event=>event.name+' '+JSON.stringify(event.values)).join(' · '));
     return true;
   }
+  function availableProfiles(){
+    return [...previewProfiles.values()].filter(p=>!ui.isScene&&p.asset===ui.selected);
+  }
+  function selectedProfile(){
+    return previewProfiles.get($('test-drive-profile').value)||null;
+  }
+  function applyPreviewTargets(targets){
+    const a=library.get(ui.selected);
+    if(!a)return;
+    for(const target of targets){
+      if(target.state!==undefined){
+        ui.controls._state=target.state;
+        renderControlPanel();
+        $('test-drive-status').textContent='State: '+target.state;
+      }else if(target.event!==undefined){
+        const r=Interactions.dispatch(a,Inputs.reconcile(a,ui.controls,Slots.resolve(a,ui.preset).inputs),target.event);
+        ui.controls=r.values;syncPreviewControls();
+        $('test-drive-status').textContent='Event: '+target.event;
+      }
+      ui.clock=0;
+    }
+  }
+  function stopDrive(){
+    if(driveDriver)applyPreviewTargets(driveDriver.reset());
+    driveActive=false;driveDriver=null;gamepadHeld={};
+    updateDriveAvailability();
+  }
   function updateDriveAvailability(){
-    const a=library.get(ui.selected),profile=!ui.isScene&&Interactions.previewStates(a),btn=$('test-drive'),info=$('test-drive-status');
-    if(!profile)driveActive=false;
-    btn.disabled=!profile;btn.setAttribute('aria-pressed',String(driveActive));btn.textContent='Test drive: '+(driveActive?'On':'Off');
-    info.textContent=profile?(driveActive?'←/A previous · →/D next · Space reset · controller D-pad/A':'Keyboard/controller state audition available'):'Select a stateful asset';
-    $('stage').tabIndex=profile?0:-1;
+    const a=library.get(ui.selected),profiles=availableProfiles(),fallback=!ui.isScene&&Interactions.previewStates(a);
+    const select=$('test-drive-profile'),previous=select.value;
+    select.replaceChildren();
+    for(const p of profiles)select.add(new Option(p.name||p.id,p.id));
+    select.value=profiles.some(p=>p.id===previous)?previous:(profiles[0]?.id||'');
+    select.hidden=!profiles.length;
+    const available=Boolean(profiles.length||fallback),btn=$('test-drive'),info=$('test-drive-status');
+    if(!available){driveActive=false;driveDriver=null;}
+    btn.disabled=!available;btn.setAttribute('aria-pressed',String(driveActive));btn.textContent='Test drive: '+(driveActive?'On':'Off');
+    const profile=profiles.find(p=>p.id===select.value);
+    info.textContent=profile
+      ? (driveActive?'Profile: '+(profile.name||profile.id):'Preview mapping: '+profile.bindings.map(b=>b.device==='keyboard'?b.code:'Pad '+b.button).join(' · '))
+      : fallback?(driveActive?'←/A previous · →/D next · Space reset':'State audition: arrows/A/D to cycle'):'Select a stateful asset';
+    $('stage').tabIndex=available?0:-1;
   }
   function drive(command){
     const a=library.get(ui.selected),profile=Interactions.previewStates(a);
@@ -426,6 +468,12 @@
   function pollGamepad(){
     if(!driveActive||typeof navigator.getGamepads!=='function')return;
     let pad=null;try{pad=[...navigator.getGamepads()].find(Boolean);}catch{return;}
+    const profile=selectedProfile();
+    if(profile&&driveDriver){
+      for(const b of profile.bindings.filter(b=>b.device==='gamepad_button'))
+        applyPreviewTargets(driveDriver.input('gamepad_button',b.button,Boolean(pad?.buttons?.[b.button]?.pressed)));
+      return;
+    }
     const pressed=pad?{
       previous:Boolean(pad.buttons[14]?.pressed||pad.axes[0]<-.65),
       next:Boolean(pad.buttons[15]?.pressed||pad.axes[0]>.65),
@@ -523,7 +571,11 @@
         exportedInterfaces[ref]=value;
       }
     }
+    const exportedProfiles=[...previewProfiles.values()].filter(p=>all.has(p.asset)).map(p=>{
+      const result=structuredClone(p);delete result.ownerBag;return result;
+    });
     const out={schema:'smi-visual-pack/1',pack_id:'smi.user.'+slug($('composition-name').value),version:'1.0.0',description:'Visual Atlas Builder export. Root asset: '+rootId,interfaces:exportedInterfaces,
+      ...(exportedProfiles.length?{preview_profiles:exportedProfiles}:{}),
       textures:Object.fromEntries(Object.values(texMap).map(t=>[t.id,{path:t.path,width_px:t.width_px,height_px:t.height_px}])),assets};
     zip.file('manifest.json',JSON.stringify(out,null,2)+'\n');
     zip.file('SOURCE-NOTICES.txt',`Generated locally with Superior MI Visual Atlas Builder.\nRoot asset: ${rootId}\n\nPer-asset licenses:\n`+assets.map(a=>a.id+' : '+(a.license||'UNSPECIFIED')).join('\n')+'\n\nOriginal asset and code licenses must be respected. Unknown license is not equivalent to CC0.\n');
@@ -604,7 +656,7 @@
       await importZip(file);
       setStatus('Loaded Potion Lab: choose Health, Mana or Poison in the automatic preset controls.');
     }catch(e){setStatus(e.message,true);}});
-    $('clear-imports').addEventListener('click',async()=>{for(const id of [...bags.keys()])await removeBag(id);for(const [id,a] of library)if(a.source!=='Official Icon Atlas')library.delete(id);for(const [key,t] of textures)if(!key.startsWith('official:')){if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);}imports.clear();interfaces.clear();try{await BagStore.clear();}catch{}$('import-info').textContent='Built-in Icon Atlas loaded automatically';bagScope=null;bagGroup='';scene.layers=[];scene.selectedLayer=-1;selectAsset(null);layerInputs();refreshTimeline();renderControlPanel();refreshList();renderBag();setStatus('All private bag imports cleared. Public icons remain.');});
+    $('clear-imports').addEventListener('click',async()=>{for(const id of [...bags.keys()])await removeBag(id);for(const [id,a] of library)if(a.source!=='Official Icon Atlas')library.delete(id);for(const [key,t] of textures)if(!key.startsWith('official:')){if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);}imports.clear();interfaces.clear();previewProfiles.clear();driveDriver=null;try{await BagStore.clear();}catch{}$('import-info').textContent='Built-in Icon Atlas loaded automatically';bagScope=null;bagGroup='';scene.layers=[];scene.selectedLayer=-1;selectAsset(null);layerInputs();refreshTimeline();renderControlPanel();refreshList();renderBag();setStatus('All private bag imports cleared. Public icons remain.');});
     $('bag-show-all').addEventListener('click',()=>{bagScope=null;bagGroup='';renderBag();refreshList();});
     $('bag-group').addEventListener('change',()=>{bagGroup=$('bag-group').value;refreshList();});
     $('save-bag').addEventListener('change',()=>{try{localStorage.setItem(bagPersistenceKey,$('save-bag').checked?'yes':'no');}catch{} if($('save-bag').checked)setStatus('Future ZIP imports will be saved on this device. Existing session ZIPs remain session-only.');else setStatus('Future ZIP imports will stay in this browser session only. Existing stored ZIPs can be removed from My Bag.');});
@@ -620,8 +672,36 @@
     canvas.addEventListener('pointerdown',e=>{try{if(applyPreviewPointer(e,false)){e.preventDefault();heldPointer=e.pointerId;canvas.setPointerCapture(e.pointerId);}}catch(err){setStatus(err.message,true)}});
     canvas.addEventListener('pointermove',e=>{if(heldPointer!==e.pointerId)return;try{applyPreviewPointer(e,true)}catch(err){setStatus(err.message,true)}});
     for(const event of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(event,e=>{if(heldPointer===e.pointerId)heldPointer=null;});
-    $('test-drive').addEventListener('click',()=>{if(!Interactions.previewStates(library.get(ui.selected)))return;driveActive=!driveActive;gamepadHeld={};updateDriveAvailability();if(driveActive)canvas.focus();});
-    canvas.addEventListener('keydown',e=>{if(!driveActive||e.repeat)return;const command=({'ArrowLeft':'previous','KeyA':'previous','ArrowRight':'next','KeyD':'next','Space':'reset'})[e.code];if(command){e.preventDefault();drive(command);}else if(e.code==='Escape'){driveActive=false;updateDriveAvailability();}});
+    $('test-drive-profile').addEventListener('change',()=>stopDrive());
+    $('test-drive').addEventListener('click',()=>{
+      if(driveActive){stopDrive();return;}
+      if(!availableProfiles().length&&!Interactions.previewStates(library.get(ui.selected)))return;
+      driveActive=true;gamepadHeld={};
+      const profile=selectedProfile();driveDriver=profile?Interactions.createPreviewDriver(profile):null;
+      updateDriveAvailability();canvas.focus();
+    });
+    canvas.addEventListener('keydown',e=>{
+      if(!driveActive)return;
+      if(e.code==='Escape'){e.preventDefault();stopDrive();return;}
+      const profile=selectedProfile();
+      if(profile&&driveDriver){
+        if(profile.bindings.some(b=>b.device==='keyboard'&&b.code===e.code)){
+          e.preventDefault();if(!e.repeat)applyPreviewTargets(driveDriver.input('keyboard',e.code,true));
+        }
+        return;
+      }
+      if(e.repeat)return;
+      const command=({'ArrowLeft':'previous','KeyA':'previous','ArrowRight':'next','KeyD':'next','Space':'reset'})[e.code];
+      if(command){e.preventDefault();drive(command);}
+    });
+    canvas.addEventListener('keyup',e=>{
+      if(!driveActive||!driveDriver)return;
+      const profile=selectedProfile();
+      if(profile?.bindings.some(b=>b.device==='keyboard'&&b.code===e.code)){
+        e.preventDefault();applyPreviewTargets(driveDriver.input('keyboard',e.code,false));
+      }
+    });
+    canvas.addEventListener('blur',()=>{if(driveActive)stopDrive();});
     $('add-layer').addEventListener('click',()=>{if(!ui.selected){setStatus('Select an asset first.',true);return;}scene.layers.push({asset:ui.selected,x:0,y:0,enabled:true,values:{},tracks:[],w:Math.min(sizeFor(ui.selected)[0],2048),h:Math.min(sizeFor(ui.selected)[1],2048),opacity:1});scene.selectedLayer=scene.layers.length-1;ui.isScene=true;layerInputs();refreshTimeline();renderControlPanel();});
     $('play').addEventListener('click',()=>{ui.playing=!ui.playing;$('play').textContent=ui.playing?'Pause':'Play';});
     $('step').addEventListener('click',()=>{ui.clock+=1000/12;ui.playing=false;$('play').textContent='Play';});
