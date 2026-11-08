@@ -629,7 +629,7 @@
     if(!hasLayers&&!selected)throw Error('Select an asset or add layers before exporting');
     const selectedIds=hasLayers?scene.layers.filter(l=>l.enabled).map(l=>l.asset):[selected];
     if(!selectedIds.length)throw Error('All composition layers are hidden');
-    const all=new Set();selectedIds.forEach(id=>dependencies(id,all));
+    const all=selectedIds.reduce((closure,id)=>dependencies(id,closure),new Set());
     let rootId=selected;
     const assets=[...all].map(id=>structuredClone(library.get(id)));
     if(hasLayers){rootId='smi.user.'+slug($('composition-name').value)+'.composition';if(all.has(rootId))throw Error('Composition ID conflicts with existing asset ID');
@@ -740,7 +740,7 @@
     zip.file('frames.json',JSON.stringify({schema:'smi-rendered-frames/1',name:$('composition-name').value||'Visual Asset',fps:timeline.exportFps,duration_ms:timeline.duration,playback:timeline.playback,frame_count:frames,size_px:[width,height],times_ms:times,license_note:'See SOURCE-NOTICES.txt in portable manifest export for asset licensing details.'},null,2)+'\n');
     zip.file('README.txt','Rendered PNG frames generated locally by Superior MI Visual Atlas.\nCheck original asset licenses before redistribution.\n');
     const roots=scene.layers.length&&ui.isScene?scene.layers.filter(l=>l.enabled).map(l=>l.asset):[ui.selected].filter(Boolean);
-    const used=new Set();roots.forEach(id=>dependencies(id,used));
+    const used=roots.reduce((closure,id)=>dependencies(id,closure),new Set());
     zip.file('SOURCE-NOTICES.txt','Original asset licenses still apply to flattened frames.\n'+[...used].map(id=>id+' : '+(library.get(id)?.license||'UNSPECIFIED')).join('\n')+'\n');
     const blob=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:4}});
     download(blob,slug($('composition-name').value)+'-frames.zip');setStatus('Exported '+frames+' PNG frames at '+timeline.exportFps+' FPS.');
