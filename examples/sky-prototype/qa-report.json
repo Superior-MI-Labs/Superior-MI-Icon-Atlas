@@ -1,0 +1,92 @@
+{
+  "schema": "smi-animation-prototype-qa/2",
+  "version": "0.2.0",
+  "status": "PROTOTYPE — not production approved",
+  "art_provenance": "Original generated Sky frames plus explicitly disclosed pixel-interpolated transitions",
+  "sources": 9,
+  "derived_sources": [
+    "rise_to_apex",
+    "fall_motion",
+    "land_recover",
+    "attack_seams"
+  ],
+  "textures": 13,
+  "regions": 98,
+  "sequences": 12,
+  "pack_id": "smi.sky.transition.test.v2",
+  "new_transition_approach": "Shared endpoints on jump/attack chains; some intermediate frames are cross-dissolved, not independently drawn.",
+  "seams": {
+    "jump": [
+      {
+        "from": "jump_takeoff",
+        "to": "jump_rise",
+        "mean_rgb_difference": 0,
+        "match": true,
+        "visual_qa": "pending"
+      },
+      {
+        "from": "jump_rise",
+        "to": "jump_apex",
+        "mean_rgb_difference": 0,
+        "match": true,
+        "visual_qa": "pending"
+      },
+      {
+        "from": "jump_apex",
+        "to": "jump_fall",
+        "mean_rgb_difference": 0,
+        "match": true,
+        "visual_qa": "pending"
+      },
+      {
+        "from": "jump_fall",
+        "to": "jump_land",
+        "mean_rgb_difference": 0,
+        "match": true,
+        "visual_qa": "pending"
+      },
+      {
+        "from": "jump_land",
+        "to": "idle",
+        "mean_rgb_difference": 0,
+        "match": true,
+        "visual_qa": "pending"
+      }
+    ],
+    "combo": [
+      {
+        "from": "attack_charge",
+        "to": "attack_slash",
+        "mean_rgb_difference": 0,
+        "match": true,
+        "visual_qa": "pending"
+      },
+      {
+        "from": "attack_slash",
+        "to": "attack_orb",
+        "mean_rgb_difference": 0,
+        "match": true,
+        "visual_qa": "pending"
+      },
+      {
+        "from": "attack_orb",
+        "to": "idle",
+        "mean_rgb_difference": 0,
+        "match": true,
+        "visual_qa": "pending"
+      }
+    ]
+  },
+  "new_generation_excluded": [
+    "hooded_assassin_golden_slash_animation.png",
+    "hooded_rogue_attack_animation.png",
+    "hooded_warrior_golden_attack_combo.png"
+  ],
+  "limitations": [
+    "Movement and pose interpolation can produce ghosting and silhouette changes",
+    "AI-generated source GIFs have art consistency issues",
+    "In-air animation does not implement character physics",
+    "Character art is a review candidate; not suitable for production animation QA claims"
+  ],
+  "publication_rights": "User explicitly authorized public prototype showcasing. No CC0 or commercial reuse license was specified."
+}

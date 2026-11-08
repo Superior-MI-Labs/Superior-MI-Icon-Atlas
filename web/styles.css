@@ -83,3 +83,6 @@
 @media(max-width:520px){.facet-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.browse-summary{flex-wrap:wrap}.browse-layout{margin-top:12px}.browse-facets{padding:12px}}
 
 .detail-stage canvas[data-interactive="true"]{touch-action:none;cursor:pointer}
+
+/* The extended top navigation must wrap instead of overflowing phone viewports. */
+@media(max-width:700px){.topbar{flex-wrap:wrap}.brand{min-width:0}.headright{width:100%;flex-wrap:wrap;gap:8px 14px}.headright a{overflow-wrap:anywhere}}
