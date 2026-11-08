@@ -206,6 +206,10 @@ def check(page):
         with ZipFile(exported) as z:
             copied=json.loads(z.read("manifest.json"))
         assert len(copied.get("stat_profiles",[]))==1
+        exported_ids={a["id"] for a in copied["assets"]}
+        assert {"smi.example.hud.meter","smi.example.hud.frame",
+                "smi.example.hud.fill","smi.example.hud.thumb"} <= exported_ids, exported_ids
+        assert len(copied["textures"])==1, "Export must contain the referenced source texture"
         assert copied["stat_profiles"][0]["stats"]["energy"]["initial"]==72
         assert copied["stat_profiles"][0]["bindings"]==[{"stat":"energy","input":"value"}]
         page.goto(url+"builder.html",wait_until="networkidle")
