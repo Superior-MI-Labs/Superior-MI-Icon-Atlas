@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from atlasctl import load,validate
+from tools.asset_inventory import audit as audit_visual
 
 def audit():
     m=load();checks=validate(deep=True)
@@ -22,9 +23,10 @@ def audit():
             'review_status':dict(bystatus),'domains':dict(bydomain),
             'duplicate_files':duplicates,'leftover_mask_files':names,
             'validation_errors':checks,'preview_images':'inspection-preview.png files retained as explicit review artifacts, not published with the site',
-            'source_images':'source-images retained for provenance and future independent art review'}
+            'source_images':'source-images retained for provenance and future independent art review',
+            'visual_inventory':audit_visual(ROOT)}
     return report
 if __name__=='__main__':
     report=audit()
     print(json.dumps(report,indent=2))
-    sys.exit(bool(report['validation_errors'] or report['leftover_mask_files']))
+    sys.exit(bool(report['validation_errors'] or report['leftover_mask_files'] or report['visual_inventory']['errors']))

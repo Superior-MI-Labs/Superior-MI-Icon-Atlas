@@ -83,5 +83,21 @@
       bag:{id:collectionId,name,version:index?.version||'1.0.0',description:index?.description||'',entry,groups:groupInfo,assetIds:[...assetIds],textureCount:texturePaths.size}
     };
   }
-  return Object.freeze({safePath,join,resolveCollection,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
+  // A single deterministic dependency traversal for public export, private export,
+  // and package QA. Dependency extraction is injected from the canonical slot core.
+  function dependencyClosure(roots,getAsset,refs,existing=new Set()){
+    const closure=new Set(existing),active=new Set();
+    function walk(id){
+      if(active.has(id))throw Error('Cyclic asset dependency: '+id);
+      if(closure.has(id))return;
+      const asset=getAsset(id);
+      if(!asset)throw Error('Missing asset dependency: '+id);
+      active.add(id);closure.add(id);
+      for(const ref of refs(asset))walk(ref);
+      active.delete(id);
+    }
+    for(const id of roots)walk(id);
+    return closure;
+  }
+  return Object.freeze({safePath,join,resolveCollection,dependencyClosure,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
 });

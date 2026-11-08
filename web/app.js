@@ -167,11 +167,33 @@
         lab.append(info);
       }
       else{elem=document.createElement('select');for(const item of def.values||[])elem.add(new Option(item,item));elem.value=controls[key]??defaultValues[key];elem.onchange=()=>{controls[key]=elem.value;};}
-      lab.append(elem);area.append(lab);
+      elem.dataset.inputKey=key;lab.append(elem);area.append(lab);
     }
     for(const event of Object.keys(a.behavior?.on||{})){
       const button=document.createElement('button');button.textContent='Send '+event;button.onclick=()=>{try{const r=Interactions.dispatch(a,{...defaultValues,...controls},event);controls=r.values;controlsFor(a);notify(r.events.map(e=>e.name).join(', ')||'Event handled')}catch(e){notify(e.message)}};area.append(button);
     }
+  }
+  function syncDetailInputs(a){
+    const normalized=Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs);controls=normalized;
+    for(const elem of $('controls').querySelectorAll('[data-input-key]')){
+      const key=elem.dataset.inputKey,def=a.inputs?.[key];if(!def)continue;
+      if(def.type==='number'){
+        const bound=Inputs.bounds(a,key,normalized);elem.min=bound.min;elem.max=bound.max;elem.step=bound.step;elem.value=normalized[key];
+        const output=elem.parentElement.querySelector('output');if(output)output.textContent=elem.value+' / '+bound.max;
+      }else if(def.type==='boolean')elem.checked=normalized[key];else elem.value=normalized[key];
+    }
+  }
+  function directPointer(e,drag){
+    if(!current)return false;
+    const a=assets.get(current.id);if(!Interactions.canPoint(a))return false;
+    const canvas=$('detail-canvas'),rect=canvas.getBoundingClientRect();if(!rect.width||!rect.height)return false;
+    const geometry=renderer.geometryFor(a.id,new Set(),Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs));
+    const point={x:(e.clientX-rect.left)/rect.width*geometry.width+geometry.minX,y:(e.clientY-rect.top)/rect.height*geometry.height+geometry.minY};
+    const action=Interactions.pointerTarget(a,point,id=>renderer.sizeFor(id),drag);if(!action)return false;
+    const result=Interactions.dispatch(a,Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs),action.event,action.payload);
+    controls=result.values;syncDetailInputs(a);
+    if(result.events.length)notify(result.events.map(item=>item.name).join(', '));
+    return true;
   }
   async function openDetail(a){current=a;clock=0;playing=true;preset=null;chosenState=null;controls={};slotChoices={};
     $('detail-title').textContent=a.name;$('detail-type').textContent=a.kind.replace('_',' ').toUpperCase();$('detail-id').textContent=a.id;
@@ -183,7 +205,7 @@
       $('open-builder').href='builder.html?example='+encodeURIComponent(collections.get(a.pack).zip.split('/').at(-1))+'&asset='+encodeURIComponent(a.id);}
     $('detail-meta').textContent=[a.category,facetLabel('style',a.style||''),a.license,
       a.review_status&&facetLabel('review',a.review_status),
-      a.legacy?'Archive candidate · rights review pending':''].filter(Boolean).join(' · ');
+      a.legacy?'Archive candidate · rights review pending':'',a.visual_qa==='pending'?'Visual QA pending':a.visual_qa==='reviewed'?'Visual QA reviewed':''].filter(Boolean).join(' · ');
     const tags=$('detail-tags');tags.replaceChildren();
     for(const tag of [...new Set([...(a.subjects||[]),...(a.tags||[])])].slice(0,18)){
       const label=document.createElement('span');label.textContent=tag;tags.append(label);
@@ -191,7 +213,7 @@
     $('tint-options').hidden=!a.legacy;$('tint-enabled').checked=false;
     try{
       await ready(a.pack);if(current?.id!==a.id)return;
-      controlsFor(assets.get(a.id));$('detail').showModal();activePreview++;
+      controlsFor(assets.get(a.id));$('detail-canvas').dataset.interactive=String(Interactions.canPoint(assets.get(a.id)));$('detail').showModal();activePreview++;
       const url=new URL(location.href);url.searchParams.set('asset',a.id);
       history.replaceState(null,'',url);
     }catch(e){notify('Preview failed: '+e.message);}
@@ -209,8 +231,9 @@
       zip.file('SOURCE-NOTICES.txt','Historical icon candidate. Rights review is pending. Original ID: '+asset.id+'\n');
       save(await zip.generateAsync({type:'blob',compression:'DEFLATE'}),current.id+'.zip');return;
     }
-    const data=await ready(current.pack);const closure=new Set();function walk(id){if(closure.has(id))return;const a=assets.get(id);if(!a)throw Error('Missing dependency '+id);closure.add(id);Slots.refs(a).forEach(walk);}
-    walk(current.id);const chosen=[...closure].map(id=>structuredClone(assets.get(id)));const required=new Set(chosen.filter(a=>a.kind==='region').map(a=>a.texture.split('::')[1]));
+    const data=await ready(current.pack);
+    const closure=Collections.dependencyClosure([current.id],id=>assets.get(id),Slots.refs);
+    const chosen=[...closure].map(id=>structuredClone(assets.get(id)));const required=new Set(chosen.filter(a=>a.kind==='region').map(a=>a.texture.split('::')[1]));
     const main=data.manifests[0];const zip=new JSZip();const defs={};
     for(const a of chosen){if(a.kind==='region')a.texture=a.texture.split('::')[1];for(const key of ['pack','sourcePack','sourceGroup','sourceLabel','ownerBag','source'])delete a[key];for(const contract of [...(a.implements||[]),...Object.values(a.slots||{}).map(s=>s.accepts)]){
       if(!main.interfaces?.[contract])throw Error('Missing compatible interface '+contract);defs[contract]=main.interfaces[contract];
@@ -240,6 +263,10 @@
     const found=requested&&entries.find(a=>a.id===requested);
     if(found)openDetail(found);
   }
+  const previewCanvas=$('detail-canvas');let detailPointer=null;
+  previewCanvas.addEventListener('pointerdown',e=>{try{if(directPointer(e,false)){e.preventDefault();detailPointer=e.pointerId;previewCanvas.setPointerCapture(e.pointerId);}}catch(err){notify(err.message)}});
+  previewCanvas.addEventListener('pointermove',e=>{if(detailPointer!==e.pointerId)return;try{directPointer(e,true)}catch(err){notify(err.message)}});
+  for(const event of ['pointerup','pointercancel','lostpointercapture'])previewCanvas.addEventListener(event,e=>{if(detailPointer===e.pointerId)detailPointer=null;});
   $('more').onclick=more;for(const id of ['search','sort',...FACETS])$(id).addEventListener('input',update);
   $('clear-filters').onclick=()=>{$('search').value='';for(const id of FACETS)$(id).value='';update()};
   $('copy-id').onclick=()=>{if(current)navigator.clipboard.writeText(current.id).then(()=>notify('Asset ID copied')).catch(()=>notify('Clipboard unavailable'))};

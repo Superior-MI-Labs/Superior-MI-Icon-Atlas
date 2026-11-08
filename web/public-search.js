@@ -29,7 +29,7 @@
     const terms=tokens(query);if(!terms.length)return 1;
     const aliases=thesaurus(synonyms);
     const fields=[
-      [asset.name,85],[asset.id,75],[asset.aliases,70],[asset.tags,45],
+      [asset.name,85],[asset.id,75],[asset.aliases,70],[asset.tags,45],[asset.description,25],
       [asset.subjects,35],[asset.concept_id,35],[asset.domain,12],
       [asset.style,10],[asset.category,9],[asset.variant,7]
     ];
@@ -71,7 +71,7 @@
   function results(entries,params={}){
     const p={query:'',sort:'recommended',...params},hasDiscovery=Boolean(p.query.trim()||FILTERS.some(k=>p[k]));
     const ranked=entries.filter(a=>matches(a,p)&&(!a.legacy||hasDiscovery)).map(a=>({a,score:rank(a,p.query,p.synonyms)}));
-    ranked.sort((x,y)=>p.sort==='name'?x.a.name.localeCompare(y.a.name)||x.a.id.localeCompare(y.a.id):
+    ranked.sort((x,y)=>p.sort==='name'?String(x.a.name||x.a.id).localeCompare(String(y.a.name||y.a.id))||x.a.id.localeCompare(y.a.id):
       p.sort==='newest'?String(y.a.published).localeCompare(String(x.a.published))||y.score-x.score||x.a.id.localeCompare(y.a.id):
       y.score-x.score||String(y.a.published).localeCompare(String(x.a.published))||x.a.id.localeCompare(y.a.id));
     return ranked.map(x=>x.a);

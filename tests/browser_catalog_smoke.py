@@ -104,6 +104,41 @@ def check(page):
     on=page.locator("#detail-canvas").evaluate("(e)=>e.toDataURL()")
     assert on!=off, "On/off toggle must visibly change when checked"
     page.locator("#close").click()
+    # Direct pointer interaction must dispatch through the same value contract
+    # as the ordinary control, on both public and local Builder previews.
+    page.goto(url+"?asset=smi.ui.fantasy01.widget.slider.gem",wait_until="networkidle")
+    page.locator("#detail[open]").wait_for(timeout=20000)
+    canvas=page.locator("#detail-canvas")
+    assert canvas.get_attribute("data-interactive")=="true", "Published slider should support direct preview drag"
+    box=canvas.bounding_box()
+    assert box and box["width"]>0 and box["height"]>0
+    y=box["y"]+box["height"]/2
+    page.mouse.move(box["x"]+box["width"]*0.22,y)
+    page.mouse.down()
+    page.mouse.move(box["x"]+box["width"]*0.78,y,steps=5)
+    page.mouse.up()
+    value=int(page.locator('#controls input[data-input-key="value"]').input_value())
+    assert 65<=value<=95, f"Drag did not update authored slider value: {value}"
+    page.locator("#close").click()
+
+    page.goto(url+"builder.html?example=royal-forge-controls.zip&asset=smi.ui.fantasy01.wave2.widget.scroll-horizontal",wait_until="networkidle")
+    stage=page.locator("#stage")
+    expect(stage).to_have_attribute("data-interactive","true",timeout=20000)
+    stage.scroll_into_view_if_needed()
+    box=stage.bounding_box()
+    assert box and box["width"]>0 and box["height"]>0
+    # The builder centers the selected 268 x 44 asset in a 320 x 240 stage.
+    start_x=box["x"]+box["width"]*.25
+    finish_x=box["x"]+box["width"]*.75
+    stage_y=box["y"]+box["height"]*.5
+    assert page.evaluate("([x,y])=>document.elementFromPoint(x,y)?.id",[start_x,stage_y])=="stage", "Canvas must be visible before a pointer test"
+    page.mouse.move(start_x,stage_y)
+    page.mouse.down()
+    page.mouse.move(finish_x,stage_y,steps=5)
+    page.mouse.up()
+    imported_value=int(page.locator('#input-controls input[data-input-key="value"]').input_value())
+    assert imported_value>60, f"Builder drag did not update canonical input: {imported_value}; status: {page.locator('#builder-status').inner_text()}"
+    page.goto(url,wait_until="networkidle")
     assert not errors, "Browser JavaScript errors: " + repr(errors)
     return page.locator("#count").inner_text()
 

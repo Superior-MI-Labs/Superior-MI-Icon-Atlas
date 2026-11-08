@@ -4,11 +4,12 @@
   const $ = id => document.getElementById(id);
   const Timeline = window.VisualAtlasTimeline, VisualCore = window.VisualAtlasVisualCore;
   if(!VisualCore)throw Error('Missing visual-core.js');
-  const Collections = window.VisualAtlasCollections, BagStore = window.VisualAtlasBagStore, Interactions = window.VisualAtlasInteraction, Slots = window.VisualAtlasSlots, Inputs = window.VisualAtlasInputs;
+  const Collections = window.VisualAtlasCollections, BagStore = window.VisualAtlasBagStore, Interactions = window.VisualAtlasInteraction, Slots = window.VisualAtlasSlots, Inputs = window.VisualAtlasInputs, Search = window.VisualAtlasSearch;
   if(!Collections)throw Error('Missing collection-core.js');
   if(!Interactions)throw Error('Missing interaction-core.js');
   if(!Slots)throw Error('Missing slot-core.js');
   if(!Inputs)throw Error('Missing input-core.js');
+  if(!Search)throw Error('Missing public-search.js');
   if(!Timeline)throw Error('Missing timeline-core.js');
   if (!window.JSZip) { $('builder-status').textContent = 'Local ZIP library missing: vendor/jszip.min.js'; return; }
   const library = new Map(); // unique asset ID -> authored/legacy asset
@@ -22,7 +23,8 @@
   const timeline = { duration:2000, playback:'loop', exportFps:12 };
   const LIMIT_FRAMES=240;
   const ui = {selected:null, clock:0, playing:true, last:0, speed:1, controls:{}, slots:{}, preset:null, isScene:false};
-  const selectAsset=id=>{ui.selected=id;ui.isScene=false;ui.controls={};ui.slots={};ui.preset=library.get(id)?.default_preset||null;};
+  let listLimit=110,listKey='',driveActive=false,gamepadHeld={};
+  const selectAsset=id=>{ui.selected=id;ui.isScene=false;ui.controls={};ui.slots={};ui.preset=library.get(id)?.default_preset||null;driveActive=false;gamepadHeld={};};
   const MAX_BYTES = 120 * 1024 * 1024, MAX_ENTRY = 24 * 1024 * 1024;
   const AI_URL = 'https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/ai/START-HERE.md';
   const safePath = s => typeof s === 'string' && !!s && !s.startsWith('/') && !s.includes('\\') && !s.split('/').includes('..') && !s.includes(':') && !s.includes('\0');
@@ -273,8 +275,12 @@
     const q=$('asset-search').value.toLowerCase().trim(),kind=$('asset-kind').value;
     const kinds=[...new Set([...library.values()].map(a=>a.kind))].sort();
     const select=$('asset-kind'),current=select.value;select.replaceChildren(new Option('All asset types',''));for(const k of kinds)select.add(new Option(k,k));select.value=current;
-    const results=[...library.values()].filter(a=>(!bagScope||a.ownerBag===bagScope)&&(!bagGroup||a.sourceGroup===bagGroup)&&(!kind||a.kind===kind)&&(!q||[a.name,a.id,a.kind,a.sourceLabel,...(a.tags||[]),...(a.subjects||[])].join(' ').toLowerCase().includes(q))).slice(0,110);
-    $('asset-count').textContent=results.length+' shown / '+library.size.toLocaleString();
+    const scopeKey=JSON.stringify([q,kind,bagScope,bagGroup]);if(scopeKey!==listKey){listLimit=110;listKey=scopeKey;}
+    const candidates=[...library.values()].filter(a=>(!bagScope||a.ownerBag===bagScope)&&(!bagGroup||a.sourceGroup===bagGroup)&&(!kind||a.kind===kind));
+    const found=Search.results(candidates,{query:q,sort:q?'recommended':'name'});
+    const results=found.slice(0,listLimit);
+    $('asset-count').textContent=results.length+' shown / '+found.length.toLocaleString()+' matching';
+    $('asset-more').hidden=results.length>=found.length;
     const list=$('asset-list');list.replaceChildren();
     for(const a of results){
       const btn=document.createElement('button');btn.type='button';btn.className='asset-entry';btn.dataset.assetId=a.id;btn.setAttribute('aria-current',String(a.id===ui.selected));
@@ -286,6 +292,8 @@
   function renderControlPanel(){
     const a=library.get(ui.selected),controls=$('input-controls');controls.replaceChildren();
     $('preview-name').textContent=ui.isScene?'Composition':a?metaName(a):'Select an asset';
+    updateDriveAvailability();
+    $('stage').dataset.interactive=String(!ui.isScene&&Interactions.canPoint(a));
     $('preview-details').textContent=a?'ID: '+a.id+' · '+a.kind+' · License: '+(a.license||'unspecified'): 'Select any asset in the list';
     if(!a||ui.isScene)return;
     const presetInputs=Slots.resolve(a,ui.preset).inputs;
@@ -326,14 +334,7 @@
       const label=document.createElement('label');label.textContent=key;let input;
       const applyValue=value=>{
         ui.controls=Inputs.reconcile(a,{...ui.controls,[key]:value},presetInputs);
-        // Keep pointer capture by updating controls in place, not reconstructing DOM.
-        for(const slider of controls.querySelectorAll('input[data-input-key]')){
-          const target=slider.dataset.inputKey,bound=Inputs.bounds(a,target,ui.controls);
-          slider.min=bound.min;slider.max=bound.max;slider.step=bound.step;
-          slider.value=ui.controls[target];
-          slider.parentElement.querySelector('output').textContent=slider.value+' / '+bound.max;
-        }
-        renderOutputs();
+        syncPreviewControls();
       };
       if(def.type==='boolean'){
         input=document.createElement('input');input.type='checkbox';input.checked=displayed[key];
@@ -350,6 +351,7 @@
         for(const v of def.values||[])input.add(new Option(v,v));
         input.value=displayed[key];input.onchange=()=>applyValue(input.value);
       }
+      input.dataset.inputKey=key;
       label.append(input);controls.append(label);
     }
     if(a.behavior){
@@ -365,6 +367,74 @@
   function renderOutputs(){
     const a=library.get(ui.selected),view=$('interaction-outputs');
     if(view&&a?.behavior){const vals=Interactions.outputValues(a,{...Slots.resolve(a,ui.preset).inputs,...ui.controls});view.textContent='Outputs: '+(Object.keys(vals).length?JSON.stringify(vals):'no exported values');}
+  }
+
+  function syncPreviewControls(){
+    const a=library.get(ui.selected);if(!a)return;
+    const values=Inputs.reconcile(a,ui.controls,Slots.resolve(a,ui.preset).inputs);
+    ui.controls={...ui.controls,...values};
+    for(const elem of $('input-controls').querySelectorAll('[data-input-key]')){
+      const key=elem.dataset.inputKey,def=a.inputs?.[key];
+      if(!def)continue;
+      if(def.type==='number'){
+        const bound=Inputs.bounds(a,key,values);
+        elem.min=bound.min;elem.max=bound.max;elem.step=bound.step;elem.value=values[key];
+        const output=elem.parentElement.querySelector('output');
+        if(output)output.textContent=elem.value+' / '+bound.max;
+      }else if(def.type==='boolean')elem.checked=values[key];
+      else elem.value=values[key];
+    }
+    renderOutputs();
+  }
+  function pointerPoint(e,a){
+    const canvas=$('stage'),rect=canvas.getBoundingClientRect();
+    if(!rect.width||!rect.height)return null;
+    const cw=range($('canvas-width').value,16,4096),ch=range($('canvas-height').value,16,4096);
+    const geometry=sharedRenderer.geometryFor(a.id,new Set(),Inputs.reconcile(a,ui.controls,Slots.resolve(a,ui.preset).inputs));
+    const factor=Math.min(cw/geometry.width,ch/geometry.height,3);
+    return {
+      x:((e.clientX-rect.left)/rect.width*cw-Math.max(0,(cw-geometry.width*factor)/2))/factor+geometry.minX,
+      y:((e.clientY-rect.top)/rect.height*ch-Math.max(0,(ch-geometry.height*factor)/2))/factor+geometry.minY
+    };
+  }
+  function applyPreviewPointer(e,drag){
+    const a=library.get(ui.selected);
+    if(ui.isScene||!Interactions.canPoint(a))return false;
+    const action=Interactions.pointerTarget(a,pointerPoint(e,a),id=>sizeFor(id),drag);
+    if(!action)return false;
+    const result=Interactions.dispatch(a,Inputs.reconcile(a,ui.controls,Slots.resolve(a,ui.preset).inputs),action.event,action.payload);
+    ui.controls=result.values;syncPreviewControls();
+    if(result.events.length)setStatus(result.events.map(event=>event.name+' '+JSON.stringify(event.values)).join(' · '));
+    return true;
+  }
+  function updateDriveAvailability(){
+    const a=library.get(ui.selected),profile=!ui.isScene&&Interactions.previewStates(a),btn=$('test-drive'),info=$('test-drive-status');
+    if(!profile)driveActive=false;
+    btn.disabled=!profile;btn.setAttribute('aria-pressed',String(driveActive));btn.textContent='Test drive: '+(driveActive?'On':'Off');
+    info.textContent=profile?(driveActive?'←/A previous · →/D next · Space reset · controller D-pad/A':'Keyboard/controller state audition available'):'Select a stateful asset';
+    $('stage').tabIndex=profile?0:-1;
+  }
+  function drive(command){
+    const a=library.get(ui.selected),profile=Interactions.previewStates(a);
+    if(!driveActive||!profile)return;
+    const step=Interactions.previewStep(a,ui.controls[profile.input]||profile.initial,command);
+    if(!step)return;
+    ui.controls[step.input]=step.value;ui.clock=0;
+    if(step.input==='_state')renderControlPanel();else syncPreviewControls();
+    $('test-drive-status').textContent='State: '+step.value;
+  }
+  function pollGamepad(){
+    if(!driveActive||typeof navigator.getGamepads!=='function')return;
+    let pad=null;try{pad=[...navigator.getGamepads()].find(Boolean);}catch{return;}
+    const pressed=pad?{
+      previous:Boolean(pad.buttons[14]?.pressed||pad.axes[0]<-.65),
+      next:Boolean(pad.buttons[15]?.pressed||pad.axes[0]>.65),
+      reset:Boolean(pad.buttons[0]?.pressed)
+    }:{};
+    for(const command of ['previous','next','reset']){
+      if(pressed[command]&&!gamepadHeld[command])drive(command);
+      gamepadHeld[command]=Boolean(pressed[command]);
+    }
   }
   function layerInputs(){
     const container=$('layer-list');container.replaceChildren();
@@ -406,14 +476,13 @@
     if(ui.last&&ui.playing)ui.clock+=(now-ui.last)*ui.speed;
     ui.last=now;
     updatePlayhead();
+    pollGamepad();
     if(!rendering){rendering=true;try{await renderFrame()}finally{rendering=false;}}
     requestAnimationFrame(tick);
   }
   function download(blob,name){const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),30000);}
   function dependencies(id,closure=new Set()){
-    if(closure.has(id))return closure;const a=library.get(id);if(!a)throw Error('Unresolved '+id);closure.add(id);
-    const refs=Slots.refs(a);
-    for(const r of refs)dependencies(r,closure);return closure;
+    return Collections.dependencyClosure([id],key=>library.get(key),Slots.refs,closure);
   }
   async function exportPack(){
     const hasLayers=ui.isScene&&scene.layers.length>0,selected=ui.selected;
@@ -546,6 +615,13 @@
     drop.addEventListener('drop',async e=>{leaving(e);const files=[...e.dataTransfer.files].filter(f=>/\.zip$/i.test(f.name));if(!files.length){setStatus('Drop .zip files containing one or more Visual Atlas pack manifests.',true);return;}for(const f of files){try{await importZip(f);}catch(err){setStatus(f.name+': '+err.message,true);}}});
 
     let searchDebounce;for(const id of ['asset-search','asset-kind'])$(id).addEventListener('input',()=>{clearTimeout(searchDebounce);searchDebounce=setTimeout(refreshList,80)});
+    $('asset-more').addEventListener('click',()=>{listLimit+=110;refreshList();});
+    const canvas=$('stage');let heldPointer=null;
+    canvas.addEventListener('pointerdown',e=>{try{if(applyPreviewPointer(e,false)){e.preventDefault();heldPointer=e.pointerId;canvas.setPointerCapture(e.pointerId);}}catch(err){setStatus(err.message,true)}});
+    canvas.addEventListener('pointermove',e=>{if(heldPointer!==e.pointerId)return;try{applyPreviewPointer(e,true)}catch(err){setStatus(err.message,true)}});
+    for(const event of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(event,e=>{if(heldPointer===e.pointerId)heldPointer=null;});
+    $('test-drive').addEventListener('click',()=>{if(!Interactions.previewStates(library.get(ui.selected)))return;driveActive=!driveActive;gamepadHeld={};updateDriveAvailability();if(driveActive)canvas.focus();});
+    canvas.addEventListener('keydown',e=>{if(!driveActive||e.repeat)return;const command=({'ArrowLeft':'previous','KeyA':'previous','ArrowRight':'next','KeyD':'next','Space':'reset'})[e.code];if(command){e.preventDefault();drive(command);}else if(e.code==='Escape'){driveActive=false;updateDriveAvailability();}});
     $('add-layer').addEventListener('click',()=>{if(!ui.selected){setStatus('Select an asset first.',true);return;}scene.layers.push({asset:ui.selected,x:0,y:0,enabled:true,values:{},tracks:[],w:Math.min(sizeFor(ui.selected)[0],2048),h:Math.min(sizeFor(ui.selected)[1],2048),opacity:1});scene.selectedLayer=scene.layers.length-1;ui.isScene=true;layerInputs();refreshTimeline();renderControlPanel();});
     $('play').addEventListener('click',()=>{ui.playing=!ui.playing;$('play').textContent=ui.playing?'Pause':'Play';});
     $('step').addEventListener('click',()=>{ui.clock+=1000/12;ui.playing=false;$('play').textContent='Play';});

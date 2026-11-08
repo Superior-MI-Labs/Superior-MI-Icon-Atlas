@@ -10,6 +10,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from atlasctl import load,validate
+from tools.asset_inventory import audit as audit_assets
 
 
 def build(dest:Path|None=None):
@@ -113,6 +114,9 @@ def build(dest:Path|None=None):
     # tutorial/demo ZIPs, private browser bags, or the archival monoline catalog.
     publication=json.loads((ROOT/'publications.json').read_text(encoding='utf-8'))
     if publication.get('schema')!='smi-publications/1':raise ValueError('Invalid publication policy')
+    inventory=audit_assets(ROOT)
+    if inventory['errors']:raise ValueError('Asset inventory: '+'; '.join(inventory['errors'][:5]))
+    (dest/'asset-inventory.json').write_text(json.dumps(inventory,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     public_assets=[];public_packs=[];seen_ids=set();seen_paths=set()
     for record in publication['collections']:
         folder=Path(record['path']); full=ROOT/folder
@@ -120,6 +124,7 @@ def build(dest:Path|None=None):
             raise ValueError('Unsafe/duplicate published collection: '+str(folder))
         seen_paths.add(folder)
         if not record.get('approval') or not record.get('rights'):raise ValueError('Unapproved public collection')
+        if record.get('visual_qa') not in ('reviewed','pending'):raise ValueError('Review status must be explicit')
         index=json.loads((full/'collection.json').read_text(encoding='utf-8'))
         if index.get('schema')!='smi-visual-collection/1':raise ValueError('Invalid public collection index')
         manifests=[]
@@ -137,7 +142,7 @@ def build(dest:Path|None=None):
         zip_name=pack_name+'.zip'
         if not (dest/'demo'/zip_name).is_file():raise ValueError('Missing published runtime ZIP: '+zip_name)
         pubpack={'id':pack_name,'name':index.get('name',pack_name),'zip':'demo/'+zip_name,
-                 'published':record['published'],'entry':index['entry_asset'],
+                 'published':record['published'],'visual_qa':record['visual_qa'],'entry':index['entry_asset'],
                  'license':sorted({p.get('license','UNSPECIFIED') for p in manifests})}
         if any(l in ('UNSPECIFIED','UNKNOWN','') for l in pubpack['license']):raise ValueError('Unknown public license')
         public_packs.append(pubpack)
@@ -157,7 +162,7 @@ def build(dest:Path|None=None):
                     'aliases':a.get('aliases',[]),'concept_id':a.get('concept_id'),
                     'variant':a.get('variant',''),'domain':a.get('domain') or index.get('name',pack_name),
                     'pack':pack_name,
-                    'published':record['published'],'license':a.get('license',pack.get('license','')),
+                    'published':record['published'],'visual_qa':record['visual_qa'],'license':a.get('license',pack.get('license','')),
                     'category':index.get('name',pack_name),
                     'animated':a['kind']=='sequence' or bool(a.get('duration_ms')),
                     'previewable':a['kind']!='region' or bool(a.get('rect_px'))
