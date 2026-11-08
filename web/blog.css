@@ -1,0 +1,14 @@
+.notes-main{width:min(900px,calc(100% - 32px));margin:0 auto;padding:34px 0 64px}
+.notes-intro{padding:10px 0 26px;border-bottom:1px solid var(--border);margin-bottom:24px}
+.notes-intro h2{font-size:clamp(28px,5vw,44px);letter-spacing:-.045em;margin:4px 0}
+.notes-intro p:not(.eyebrow){color:var(--muted);max-width:700px}
+.notes-feed{display:grid;gap:22px}
+.note{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:clamp(18px,4vw,32px)}
+.note time{font-size:12px;letter-spacing:.04em;color:#bed4ff}
+.note h2{font-size:clamp(20px,3vw,27px);margin:8px 0 4px}
+.note p{color:#d3deee;line-height:1.7;max-width:780px}
+.note .note-summary{font-size:16px;color:#a8c8ff;margin:4px 0 18px}
+.note .note-links{margin:24px 0 0;padding-top:14px;border-top:1px solid var(--border)}
+.note figure{margin:20px 0}.note video,.note img{display:block;max-width:100%;max-height:520px;border-radius:10px;background:#0a0f17}
+.note figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+@media(max-width:750px){.topbar{flex-wrap:wrap}.headright{flex-wrap:wrap;gap:10px 16px}.notes-main{padding-top:22px}}

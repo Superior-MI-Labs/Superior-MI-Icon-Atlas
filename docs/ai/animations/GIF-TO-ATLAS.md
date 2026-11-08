@@ -22,3 +22,16 @@ but cannot automatically certify, frame continuity, anatomy, color fidelity,
 foot contacts, or character consistency. Never claim that running or blocking
 motion is correct from structural checks alone. These outputs are private
 preview candidates; they are not automatically added to the public catalog.
+
+## Video and other animated sources
+
+Use the same inspected frame/atlas sequence pipeline through
+`python3 tools/import_animation.py INPUT --out /tmp/review`.
+Animated GIF, APNG, and WebP use their source frame timing. MP4, WebM, MOV,
+M4V, and MKV use FFmpeg to sample a selected segment at a declared frame rate.
+
+An ordinary AI-generated video is normally opaque. Character sprite conversion
+stops at the alpha/visual gate; do not silently assume background removal.
+The explicit `--allow-opaque` option is for scenes and visual backdrops.
+Both workflows package the same canonical `region`/`sequence` assets.
+Read [Video source workflow](VIDEO-TO-ATLAS.md) before model tests.

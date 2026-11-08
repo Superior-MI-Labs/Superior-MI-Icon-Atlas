@@ -27,3 +27,5 @@ The creator describes *what* to make. The assistant loads the short core instruc
 The ZIPs are real, downloadable, manifest-driven test fixtures and can be opened privately in the builder. Their artwork is deliberately simple; **reuse the contracts, not necessarily the visuals**. The builder accepts a ZIP containing many manifests and texture sheets. An AI should include complete assets, dependencies, and truthful licensing metadata.
 
 **HD fantasy game item icons and interaction states:** [Pixel-art item production contract](icons/GAME-PIXEL-ART.md). This requires raster source art, true measured transparent crops, a shared effect composition and publication QA, not procedural vector substitutes.
+
+**AI video / APNG / animated WebP to Atlas:** [video source workflow](animations/VIDEO-TO-ATLAS.md). This is an offline adapter to the existing region/sequence pipeline, not a new video asset type or browser-side model runner.
