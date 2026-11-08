@@ -8,7 +8,7 @@
   let preset=null,chosenState=null,controls={},slotChoices={};
   let activePreview=0,cardObserver,detailRendering=false;
   let synonyms={},styleLabels={};
-  const FACETS=['kind','pack','domain','style','subject','status','review','license','animated'];
+  const FACETS=['kind','pack','domain','style','subject','status','review','license','animated','experience'];
   const legacyImageCache=new Map();
   const PAGE=24;
   const renderer=Renderer.create({getAsset:id=>assets.get(id),getImage:imageFor,slots:Slots,timeline:Timeline,visualCore:VisualCore});
@@ -22,6 +22,7 @@
     if(key==='status')return value==='archive'?'Legacy archive':'Published';
     if(key==='review')return value==='reviewed'?'Semantics reviewed':'Needs visual review';
     if(key==='kind')return value==='state_set'?'State variants':human(value);
+    if(key==='experience')return value==='playable'?'Playable demos':human(value);
     if(key==='subject')return value.split('.').map(human).join(' › ');
     return human(value);
   }
@@ -123,12 +124,32 @@
     if(!matches.length){$('gallery').textContent='No matching assets. Remove a filter or try another keyword.';$('more').hidden=true;return;}
     more();
   }
-  function card(a){const node=document.createElement('button');node.type='button';node.className='asset-tile';node.dataset.assetId=a.id;
-    const art=document.createElement('div');art.className='art checker';const canvas=document.createElement('canvas');canvas.width=190;canvas.height=108;canvas.setAttribute('aria-hidden','true');art.append(canvas);
-    const body=document.createElement('div');body.className='tile-details';const kind=document.createElement('span');kind.className='chip';kind.textContent=a.legacy?'Legacy · Review':a.kind==='composition'?'Ready-to-use':a.kind==='state_set'?'State variants':a.kind;
-    const name=document.createElement('strong');name.textContent=a.name;const meta=document.createElement('div');meta.className='tile-meta';const label=document.createElement('span');label.textContent=a.style||'Visual asset';const src=document.createElement('span');src.textContent=collections.get(a.pack)?.name||a.pack;meta.append(label,src);body.append(kind,name,meta);node.append(art,body);
-    node.onclick=()=>openDetail(a);if(cardObserver)cardObserver.observe(node);
-    else paint(canvas,a,0,{card:true}).catch(()=>art.textContent='Preview unavailable');return node;}
+  function card(a){
+    const node=document.createElement('button');node.type='button';node.className='asset-tile';node.dataset.assetId=a.id;
+    const demos=a.showcases||[];
+    const art=document.createElement('div');art.className='art checker';
+    const canvas=document.createElement('canvas');canvas.width=190;canvas.height=108;canvas.setAttribute('aria-hidden','true');art.append(canvas);
+    const body=document.createElement('div');body.className='tile-details';
+    const kind=document.createElement('span');kind.className='chip';
+    kind.textContent=demos.length?'Interactive demo':a.legacy?'Legacy · Review':a.kind==='composition'?'Ready-to-use':a.kind==='state_set'?'State variants':a.kind;
+    const name=document.createElement('strong');name.textContent=a.name;
+    const meta=document.createElement('div');meta.className='tile-meta';
+    const label=document.createElement('span');label.textContent=demos.length?'Playable preview':a.style||'Visual asset';
+    const source=document.createElement('span');source.textContent=collections.get(a.pack)?.name||a.pack;
+    meta.append(label,source);body.append(kind,name,meta);node.append(art,body);
+    node.onclick=()=>openDetail(a);
+    if(cardObserver)cardObserver.observe(node);
+    else paint(canvas,a,0,{card:true}).catch(()=>art.textContent='Preview unavailable');
+    if(!demos.length)return node;
+    // Sibling links avoid interactive elements nested inside a button.
+    const wrapper=document.createElement('div');wrapper.className='showcase-card';wrapper.append(node);
+    const actions=document.createElement('div');actions.className='showcase-actions';
+    for(const demo of demos){
+      const link=document.createElement('a');link.href=demo.page;link.className='showcase-link';
+      link.textContent=demo.label;actions.append(link);
+    }
+    wrapper.append(actions);return wrapper;
+  }
   function more(){const frag=document.createDocumentFragment();for(const a of matches.slice(shown,shown+PAGE))frag.append(card(a));shown=Math.min(matches.length,shown+PAGE);$('gallery').append(frag);$('more').hidden=shown>=matches.length;}
   function controlsFor(a){const area=$('controls');area.replaceChildren();
     if(a.kind==='state_set'){
@@ -210,6 +231,12 @@
     for(const tag of [...new Set([...(a.subjects||[]),...(a.tags||[])])].slice(0,18)){
       const label=document.createElement('span');label.textContent=tag;tags.append(label);
     }
+    const demos=$('detail-showcases');demos.replaceChildren();
+    for(const demo of a.showcases||[]){
+      const link=document.createElement('a');link.href=demo.page;link.className='showcase-link';
+      link.textContent=demo.label;demos.append(link);
+    }
+    demos.hidden=!demos.children.length;
     $('tint-options').hidden=!a.legacy;$('tint-enabled').checked=false;
     try{
       await ready(a.pack);if(current?.id!==a.id)return;

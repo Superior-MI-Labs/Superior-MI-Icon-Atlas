@@ -86,3 +86,12 @@
 
 /* The extended top navigation must wrap instead of overflowing phone viewports. */
 @media(max-width:700px){.topbar{flex-wrap:wrap}.brand{min-width:0}.headright{width:100%;flex-wrap:wrap;gap:8px 14px}.headright a{overflow-wrap:anywhere}}
+
+/* Authored showcase links share the asset search grid; no parallel demo directory. */
+.showcase-card{display:flex;flex-direction:column;min-width:0;border:1px solid #597aa7;border-radius:12px;overflow:hidden;background:var(--surface)}
+.showcase-card .asset-tile{width:100%;flex:1;border:0;border-radius:0}
+.showcase-actions{display:flex;flex-wrap:wrap;gap:8px;padding:0 12px 12px}
+.showcase-link{display:inline-flex;align-items:center;justify-content:center;min-height:39px;padding:8px 13px;color:#f4f7ff;background:#294e82;border:1px solid #7395c5;border-radius:8px;font-size:12px;font-weight:650;text-align:center}
+.showcase-link:hover{background:#346198;color:#fff;text-decoration:none}
+.detail-showcases{display:grid;gap:8px;margin:2px 0 10px}
+.detail-showcases[hidden]{display:none}
