@@ -120,15 +120,15 @@ def validate_stat_profiles(packs, ids):
                 event=action.get('emit')
                 if event and event not in (asset.get('behavior') or {}).get('on',{}):
                     problems.append(label+': unknown visual event '+key+'/'+event)
-            bound=set()
+            bound=set();bound_stats=set()
             for bind in profile['bindings']:
                 stat=stats.get(bind['stat'])
                 inp=asset.get('inputs',{}).get(bind['input'])
                 if (not stat or not inp or inp['type']!='number' or
                     stat['min']<inp.get('min',0) or stat['max']>inp.get('max',1) or
-                    bind['input'] in bound):
+                    bind['input'] in bound or bind['stat'] in bound_stats):
                     problems.append(label+': invalid stat binding '+bind['stat']+'/'+bind['input'])
-                bound.add(bind['input'])
+                bound.add(bind['input']);bound_stats.add(bind['stat'])
     return problems
 
 

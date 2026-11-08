@@ -1089,7 +1089,8 @@
           "const": "smi-stat-profile/1"
         },
         "id": {
-          "$ref": "#/$defs/nonblank"
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
         },
         "asset": {
           "$ref": "#/$defs/nonblank"

@@ -8,6 +8,7 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Thread
+from tempfile import TemporaryDirectory
 from zipfile import ZipFile
 
 from playwright.sync_api import expect, sync_playwright
@@ -199,16 +200,18 @@ def check(page):
     # into a clean Builder and confirm the initial stat is restored.
     with page.expect_download() as saved:
         page.locator("#export").click()
-    exported=saved.value.path()
-    with ZipFile(exported) as z:
-        copied=json.loads(z.read("manifest.json"))
-    assert len(copied.get("stat_profiles",[]))==1
-    assert copied["stat_profiles"][0]["stats"]["energy"]["initial"]==72
-    assert copied["stat_profiles"][0]["bindings"]==[{"stat":"energy","input":"value"}]
-    page.goto(url+"builder.html",wait_until="networkidle")
-    page.locator("#upload").set_input_files(str(exported))
-    expect(page.locator("#stat-panel")).to_be_visible()
-    expect(page.locator('#input-controls input[data-input-key="value"]')).to_have_value("72")
+    with TemporaryDirectory() as temp:
+        exported=Path(temp)/"stat-roundtrip.zip"
+        saved.value.save_as(str(exported))
+        with ZipFile(exported) as z:
+            copied=json.loads(z.read("manifest.json"))
+        assert len(copied.get("stat_profiles",[]))==1
+        assert copied["stat_profiles"][0]["stats"]["energy"]["initial"]==72
+        assert copied["stat_profiles"][0]["bindings"]==[{"stat":"energy","input":"value"}]
+        page.goto(url+"builder.html",wait_until="networkidle")
+        page.locator("#upload").set_input_files(str(exported))
+        expect(page.locator("#stat-panel")).to_be_visible()
+        expect(page.locator('#input-controls input[data-input-key="value"]')).to_have_value("72")
     page.goto(url,wait_until="networkidle")
     assert not errors, "Browser JavaScript errors: " + repr(errors)
     return page.locator("#count").inner_text()

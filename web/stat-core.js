@@ -50,12 +50,12 @@
       if(!Array.isArray(p.bindings)||!p.bindings.length||p.bindings.length>32){
         errors.push(p.id+': invalid stat bindings');continue;
       }
-      const used=new Set();
+      const used=new Set(),boundStats=new Set();
       for(const bind of p.bindings){
         const def=asset.inputs?.[bind?.input],stat=p.stats[bind?.stat];
         if(!stat||def?.type!=='number'||used.has(bind.input)||stat.min<(def.min??0)||stat.max>(def.max??1))
           errors.push(p.id+': invalid stat-to-visual binding '+bind?.stat+'/'+bind?.input);
-        used.add(bind?.input);
+        used.add(bind?.input);boundStats.add(bind?.stat);
       }
     }
     return errors;
