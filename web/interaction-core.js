@@ -118,5 +118,78 @@
     const value=command==='reset'?profile.initial:profile.values[(index<0?0:index+(command==='next'?1:-1)+profile.values.length)%profile.values.length];
     return {input:profile.input,value};
   }
-  return Object.freeze({check,initial,dispatch,outputValues,pointerTarget,canPoint,previewStates,previewStep});
+
+  // An authored preview profile is a removable input adapter, never a game
+  // controller or a second definition of an animation state.
+  function validatePreviewProfiles(profiles,getAsset){
+    const errors=[],seen=new Set();
+    if(profiles===undefined)return errors;
+    if(!Array.isArray(profiles)||profiles.length>64)return ['Invalid preview profile collection'];
+    for(const p of profiles){
+      if(!p||p.schema!=='smi-preview-controls/1'||typeof p.id!=='string'||!p.id||seen.has(p.id)){
+        errors.push('Invalid or duplicate preview profile '+p?.id);continue;
+      }
+      seen.add(p.id);
+      const a=getAsset(p.asset);
+      if(!a||!['state_set','composition'].includes(a.kind)){errors.push(p.id+': target asset must be a state_set or composition');continue;}
+      const targetOk=target=>{
+        if(!target||typeof target!=='object'||Array.isArray(target)||Object.keys(target).length!==1)return false;
+        if(a.kind==='state_set')return typeof target.state==='string'&&Object.hasOwn(a.states||{},target.state);
+        return typeof target.event==='string'&&Object.hasOwn(a.behavior?.on||{},target.event);
+      };
+      const actions=p.actions||{},bindings=p.bindings;
+      if(typeof actions!=='object'||Array.isArray(actions)||!Object.keys(actions).length||Object.keys(actions).length>32){
+        errors.push(p.id+': invalid action list');continue;
+      }
+      for(const [id,def] of Object.entries(actions)){
+        if(!name(id)||!def||!['hold','tap'].includes(def.mode)||!targetOk(def.target))
+          errors.push(p.id+': invalid action '+id);
+        if(def?.mode==='hold'&&!targetOk(p.neutral))
+          errors.push(p.id+': hold actions require valid neutral target');
+      }
+      if(!Array.isArray(bindings)||!bindings.length||bindings.length>128){errors.push(p.id+': invalid bindings');continue;}
+      const seenBinding=new Set();
+      for(const b of bindings){
+        if(!b||!Object.hasOwn(actions,b.action)||!['keyboard','gamepad_button'].includes(b.device)){
+          errors.push(p.id+': unknown binding action/device');continue;
+        }
+        const valid=b.device==='keyboard'
+          ? typeof b.code==='string'&&/^[A-Za-z][A-Za-z0-9]{1,31}$/.test(b.code)&&b.button===undefined
+          : Number.isInteger(b.button)&&b.button>=0&&b.button<=31&&b.code===undefined;
+        const key=b.device+':'+(b.device==='keyboard'?b.code:b.button);
+        if(!valid||seenBinding.has(key))errors.push(p.id+': duplicate or invalid control '+key);
+        seenBinding.add(key);
+      }
+      if(p.neutral!==undefined&&!targetOk(p.neutral))errors.push(p.id+': invalid neutral target');
+    }
+    return errors;
+  }
+  function createPreviewDriver(profile){
+    const held=new Map();let active=null;
+    const bindings=new Map(profile.bindings.map(b=>[b.device+':'+(b.device==='keyboard'?b.code:b.button),b.action]));
+    function input(device,code,down){
+      const key=device+':'+code,action=bindings.get(key);
+      if(!action)return [];
+      if(down){
+        if(held.has(key))return [];
+        const def=profile.actions[action];
+        held.set(key,{action,mode:def.mode});
+        if(def.mode==='tap')return [def.target];
+        if(active===action)return [];
+        active=action;return [def.target];
+      }
+      if(!held.delete(key))return [];
+      const last=[...held.values()].filter(v=>v.mode==='hold').at(-1);
+      const next=last?.action||null;
+      if(next===active)return [];
+      active=next;
+      return next?[profile.actions[next].target]:profile.neutral?[profile.neutral]:[];
+    }
+    function reset(){
+      held.clear();active=null;
+      return profile.neutral?[profile.neutral]:[];
+    }
+    return Object.freeze({input,reset,heldCount:()=>held.size});
+  }
+  return Object.freeze({check,initial,dispatch,outputValues,pointerTarget,canPoint,previewStates,previewStep,validatePreviewProfiles,createPreviewDriver});
 });

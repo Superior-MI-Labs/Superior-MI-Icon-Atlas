@@ -37,3 +37,28 @@ assert.deepEqual([...closure],['smi.demo.character','smi.demo.frame0','smi.demo.
 assert.throws(()=>C.dependencyClosure(['missing'],id=>byId.get(id),()=>[]),/Missing asset dependency/);
 const cycle=new Map([['a',{ref:'b'}],['b',{ref:'a'}]]);
 assert.throws(()=>C.dependencyClosure(['a'],id=>cycle.get(id),a=>[a.ref]),/Cyclic asset dependency/);
+
+const platformer={schema:'smi-preview-controls/1',id:'platformer.robot',asset:'smi.demo.character',
+ actions:{move:{mode:'hold',target:{event:'walk'}},jump:{mode:'tap',target:{event:'jump'}}},
+ neutral:{event:'idle'},bindings:[{device:'keyboard',code:'ArrowLeft',action:'move'},{device:'gamepad_button',button:14,action:'move'},{device:'keyboard',code:'Space',action:'jump'}]};
+const actorProfile={kind:'composition',behavior:{on:{walk:[{op:'set',input:'animation',value:'walk'}],jump:[{op:'set',input:'animation',value:'jump'}],idle:[{op:'set',input:'animation',value:'idle'}]}},inputs:{animation:{type:'enum',default:'idle',values:['idle','walk','jump']}}};
+assert.deepEqual(I.validatePreviewProfiles([platformer],id=>id==='smi.demo.character'?actorProfile:null),[]);
+let drive=I.createPreviewDriver(platformer);
+assert.deepEqual(drive.input('keyboard','ArrowLeft',true),[{event:'walk'}]);
+assert.deepEqual(drive.input('keyboard','ArrowLeft',true),[],'key repeat ignored');
+assert.deepEqual(drive.input('gamepad_button',14,true),[],'duplicate held action does not retrigger');
+assert.deepEqual(drive.input('keyboard','Space',true),[{event:'jump'}]);
+assert.deepEqual(drive.input('keyboard','Space',false),[]);
+assert.deepEqual(drive.input('keyboard','ArrowLeft',false),[],'second device still holds walk');
+assert.deepEqual(drive.input('gamepad_button',14,false),[{event:'idle'}]);
+assert.deepEqual(drive.reset(),[{event:'idle'}]);
+assert.ok(I.validatePreviewProfiles([{...platformer,bindings:[...platformer.bindings,platformer.bindings[0]]}],id=>actorProfile).some(x=>x.includes('duplicate')));
+assert.ok(I.validatePreviewProfiles([{...platformer,actions:{move:{mode:'hold',target:{event:'bad'}}}}],id=>actorProfile).length);
+const isometric={...platformer,id:'isometric.robot',actions:{north:{mode:'hold',target:{event:'walk'}},south:{mode:'hold',target:{event:'walk'}}},
+ bindings:[{device:'keyboard',code:'KeyW',action:'north'},{device:'keyboard',code:'KeyS',action:'south'}]};
+assert.deepEqual(I.validatePreviewProfiles([platformer,isometric],id=>actorProfile),[]);
+drive=I.createPreviewDriver(isometric);
+assert.deepEqual(drive.input('keyboard','KeyW',true),[{event:'walk'}]);
+assert.deepEqual(drive.input('keyboard','KeyS',true),[{event:'walk'}]);
+assert.deepEqual(drive.input('keyboard','KeyS',false),[{event:'walk'}],'return to prior held directional action');
+assert.deepEqual(drive.input('keyboard','KeyW',false),[{event:'idle'}]);

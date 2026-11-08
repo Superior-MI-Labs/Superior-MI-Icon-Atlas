@@ -31,3 +31,10 @@ Contract source: [`examples/character-animations/manifest.json`](https://github.
 15. Release only with passing gates; else mark **NEEDS FIXES** and repeat affected validation.
 
 The shared [browser visual matrix](../../../tests/visual-scenarios.json) captures real icon/character frames, state changes and exact loop repeats. Add cases for all requested states and motion; inspect adjacent-frame and seam quality visually as well as with automated differences.
+
+### Test drive without a genre-specific Builder
+
+For input-driven previews, use optional [manifest-defined preview profiles](PREVIEW-CONTROLS.md).
+They point at existing animation states or behavior events. Platformer,
+isometric and fighter previews can use different profiles and controls,
+without creating new asset types or implementing game physics in Visual Atlas.

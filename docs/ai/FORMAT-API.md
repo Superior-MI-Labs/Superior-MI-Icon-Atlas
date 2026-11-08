@@ -98,3 +98,24 @@ connected controller's D-pad/A button. This is **state preview navigation**,
 not a gameplay movement, input-binding or combat engine. The editor's transport
 keys are not persisted as gameplay behavior. All states and input choices
 still originate from the canonical manifest.
+
+## Game-neutral preview control profiles
+
+An optional `preview_profiles` array lives at the pack root. Each entry has
+`schema: "smi-preview-controls/1"`, a stable profile ID and an `asset` reference.
+It maps **logical action names** to existing state keys (`state_set`) or authored
+`behavior.on` events (compositions), and independently maps keyboard codes and
+Gamepad API button indices to those actions. No copy of animation frames, states
+or renderer logic is permitted. One asset can have many profiles, and each
+profile can use different controls without redefining its artwork.
+
+A `hold` action stays active until released. On release, the most recently
+pressed remaining hold action resumes; otherwise the declared `neutral`
+target applies. A `tap` triggers once per key/button press and does not invent
+an end-of-animation transition. Physical keyboard repeats are ignored.
+Input is captured only while the Builder preview stage has focus. This is a
+**visual audition**, not a physics, collision, movement, frame-advantage or
+combat engine. Host applications own their own full gameplay runtime.
+
+See [Preview input profiles](animations/PREVIEW-CONTROLS.md) for examples and
+[the robot reference pack](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/character-animations/manifest.json).
