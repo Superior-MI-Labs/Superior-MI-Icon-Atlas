@@ -701,7 +701,7 @@
         e.preventDefault();applyPreviewTargets(driveDriver.input('keyboard',e.code,false));
       }
     });
-    canvas.addEventListener('blur',()=>{if(driveActive)stopDrive();});
+    canvas.addEventListener('blur',e=>{if(driveActive&&e.relatedTarget!==$('test-drive')&&e.relatedTarget!==$('test-drive-profile'))stopDrive();});
     $('add-layer').addEventListener('click',()=>{if(!ui.selected){setStatus('Select an asset first.',true);return;}scene.layers.push({asset:ui.selected,x:0,y:0,enabled:true,values:{},tracks:[],w:Math.min(sizeFor(ui.selected)[0],2048),h:Math.min(sizeFor(ui.selected)[1],2048),opacity:1});scene.selectedLayer=scene.layers.length-1;ui.isScene=true;layerInputs();refreshTimeline();renderControlPanel();});
     $('play').addEventListener('click',()=>{ui.playing=!ui.playing;$('play').textContent=ui.playing?'Pause':'Play';});
     $('step').addEventListener('click',()=>{ui.clock+=1000/12;ui.playing=false;$('play').textContent='Play';});
