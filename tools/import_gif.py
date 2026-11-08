@@ -48,12 +48,12 @@ def decode(path: Path):
             delays.append(max(10, round(delay / 10) * 10))
     return frames, delays, warnings
 
-def inspect(frames, delays, warnings=()):
+def inspect(frames, delays, warnings=(), allow_opaque=False):
     errors = []
     warnings = list(warnings)
     opaque = [i for i, frame in enumerate(frames) if frame.getchannel("A").getextrema()[0] == 255]
     if opaque:
-        errors.append("Frames with fully opaque backgrounds: " + str(opaque[:20]))
+        (warnings if allow_opaque else errors).append("Frames with fully opaque backgrounds: " + str(opaque[:20]))
     hashes = [hashlib.sha256(frame.tobytes()).hexdigest() for frame in frames]
     if len(set(hashes)) < 2:
         errors.append("All frames are identical")
@@ -145,7 +145,7 @@ def package(frames, delays, ident, license_id, playback, report, target):
                 "playback": playback, "frames": sequence_frames}
     manifest = {"schema": "smi-visual-pack/1", "pack_id": ident + ".pack",
                 "version": "1.0.0", "license": license_id,
-                "description": "User-approved GIF conversion; see qa-report.json",
+                "description": "Reviewed animation source conversion; see qa-report.json",
                 "textures": textures, "assets": regions + [sequence]}
     def write(archive, name, payload):
         info = ZipInfo(name, date_time=(2020, 1, 1, 0, 0, 0))

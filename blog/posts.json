@@ -1,0 +1,26 @@
+{
+  "schema": "smi-lab-notes/1",
+  "posts": [
+    {
+      "slug": "sky-animation-motion-experiments",
+      "date": "2026-11-08",
+      "title": "Exploring Better Character Animation",
+      "summary": "Keyframes, RIFE interpolation, optical flow, and video generation experiments for Sky.",
+      "paragraphs": [
+        "We have been experimenting with animation workflows for Sky, our hooded feline wanderer, to find a better balance between painterly detail and smooth motion.",
+        "Our initial walking study used four distinct poses. RIFE interpolation helped make fabric and feather motion more continuous. Additional optical-flow frames sometimes improved flow, but also caused foot ghosting and silhouette distortions. More frames do not automatically mean better animation.",
+        "Next we are testing video-generated motion, more deliberate gait keyframes, and a common video-to-Atlas import path. These are experiments, not production-approved game sprites. The publicly playable Sky prototype remains explicitly labeled experimental."
+      ],
+      "links": [
+        {
+          "label": "Play the experimental Sky prototype",
+          "url": "sky-prototype.html"
+        },
+        {
+          "label": "View the Visual Atlas repository",
+          "url": "https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas"
+        }
+      ]
+    }
+  ]
+}

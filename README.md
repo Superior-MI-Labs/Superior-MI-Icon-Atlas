@@ -2,7 +2,7 @@
 
 **Reusable transparent icon atlases, a typed manifest vocabulary, and a searchable static browser.**
 
-[Browse the icon gallery](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Manifest index](manifest.json) · [Architecture](docs/ARCHITECTURE.md) · [Artwork policy](docs/ARTWORK-POLICY.md)
+[Browse the icon gallery](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/) · [Lab Notes](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/blog.html) · [Manifest index](manifest.json) · [Architecture](docs/ARCHITECTURE.md) · [Artwork policy](docs/ARTWORK-POLICY.md)
 
 ## Current public catalog
 
