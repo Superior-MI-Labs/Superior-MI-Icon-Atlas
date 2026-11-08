@@ -14,7 +14,7 @@
 
 **Shared authoring:** [Creator preflight](CREATOR-PREFLIGHT.md) · [Image source workflow](IMAGE-ENGINE-WORKFLOW.md) (when relevant).
 
-**Side-scrolling character production:** [Canonical references, action families, animation transitions and first motion qualification](animations/SIDE-SCROLLER-PRODUCTION.md) (only for applicable requests).
+**GIF inspection and animation import:** [Review before converting GIFs to canonical texture sheets](animations/GIF-TO-ATLAS.md). Inspect first; packaging requires explicit human approval.\n\n**Side-scrolling character production:** [Canonical references, action families, animation transitions and first motion qualification](animations/SIDE-SCROLLER-PRODUCTION.md) (only for applicable requests).
 
 **Shared reference:** [Manifest/API contract](FORMAT-API.md) · [QA release checklist](RELEASE-CHECKLIST.md) · [Request examples](PROMPT-EXAMPLES.md) · [Grid starters](../templates/authoring-grids.zip).
 

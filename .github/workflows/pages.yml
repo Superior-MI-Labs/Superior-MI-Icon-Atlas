@@ -8,7 +8,9 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: github-pages
+  # PR qualification must not cancel an in-progress main-site deployment.
+  # New commits to the same PR still supersede older runs to conserve minutes.
+  group: github-pages-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   build:
