@@ -178,3 +178,18 @@ The Apache-2.0 root license applies to project code and metadata. Art assets wer
 734 of 2,073 icons now have inspected visual names, narrowly scoped subjects and useful search tags. This patch adds 685 visual reviews across programming-adjacent tools, networking, hardware, data/AI, files/media and UI controls. The remaining 1,339 are explicitly unreviewed and have no invented semantic tags. Visual labeling does not confer legal or artwork-clearance status.
 
 Search scores direct token matches above related-word matches to prevent a broad synonym like `heat` from returning unrelated hardware when looking for `fire`. Exact asset IDs and crops are unchanged.
+
+### Release inventory and visual QA
+
+Source manifests and `publications.json` remain authoritative. Produce a read-only
+report of *all* example packs, unpublished assets, missing metadata, duplicate IDs,
+and unreferenced texture files locally (no GitHub Actions):
+
+```bash
+python3 tools/asset_inventory.py --out /tmp/visual-atlas-inventory.json
+```
+
+The static-site build derives `asset-inventory.json` from the same inputs.
+Every published collection must declare `visual_qa: reviewed|pending`. A pending
+record may be distributed with explicit owner authorization and valid rights,
+but must **never** be presented as having passed human visual review.

@@ -205,7 +205,7 @@
       $('open-builder').href='builder.html?example='+encodeURIComponent(collections.get(a.pack).zip.split('/').at(-1))+'&asset='+encodeURIComponent(a.id);}
     $('detail-meta').textContent=[a.category,facetLabel('style',a.style||''),a.license,
       a.review_status&&facetLabel('review',a.review_status),
-      a.legacy?'Archive candidate · rights review pending':''].filter(Boolean).join(' · ');
+      a.legacy?'Archive candidate · rights review pending':'',a.visual_qa==='pending'?'Visual QA pending':a.visual_qa==='reviewed'?'Visual QA reviewed':''].filter(Boolean).join(' · ');
     const tags=$('detail-tags');tags.replaceChildren();
     for(const tag of [...new Set([...(a.subjects||[]),...(a.tags||[])])].slice(0,18)){
       const label=document.createElement('span');label.textContent=tag;tags.append(label);

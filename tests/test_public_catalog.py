@@ -20,6 +20,8 @@ class PublicCatalogTests(unittest.TestCase):
             expected_count=sum(c['expected_assets'] for c in publication['collections'])
             self.assertGreaterEqual(expected_count,709)
             self.assertEqual(public['approved_count'],expected_count)
+            self.assertTrue(all(c['visual_qa'] in ('pending','reviewed') for c in publication['collections']))
+            self.assertEqual({a['visual_qa'] for a in public['assets'] if not a.get('legacy')},{'reviewed','pending'})
             self.assertIn('pixel-fantasy-icons',{p['id'] for p in public['packs']})
             self.assertEqual(public['packs'][0]['id'],'fantasy-rpg-hud-wave1')
             approved=set()
