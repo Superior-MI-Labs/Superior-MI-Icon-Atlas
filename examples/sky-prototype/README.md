@@ -20,7 +20,7 @@ The **run/walk/idle/guard** clips are loops; other clips are one-shots. The prev
 
 ## Import into Visual Atlas
 
-Upload the separately provided `Sky_Animation_States_Builder_Import_v1.zip` directly into the [Visual Atlas Builder](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/builder.html). It contains the canonical `smi-visual-pack/1` manifest, source PNG atlas sheets, named sequences and a state-set asset. In the Builder, select **Sky prototype animation states** and use the Preview Profile to audition individual states.
+Download `demo/sky-prototype.zip` from the published site (or build the repository locally to produce `site/demo/sky-prototype.zip`), then upload that ZIP into the [Visual Atlas Builder](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/builder.html). It contains the canonical `smi-visual-pack/1` manifest, source PNG atlas sheets, named sequences and a state-set asset. In the Builder, select **Sky prototype animation states** and use the Preview Profile to audition individual states.
 
 This imported state-set does **not** include the prototype world physics/combo implementation. `scenario.json` is intentionally a separate experimental companion contract. We have not changed the canonical Atlas schema to include world simulation rules.
 
