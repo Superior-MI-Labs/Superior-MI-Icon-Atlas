@@ -634,6 +634,22 @@
         },
         "default_preset": {
           "$ref": "#/$defs/nonblank"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonblank"
+          },
+          "uniqueItems": true
+        },
+        "concept_id": {
+          "$ref": "#/$defs/nonblank"
+        },
+        "domain": {
+          "$ref": "#/$defs/nonblank"
+        },
+        "variant": {
+          "type": "string"
         }
       },
       "allOf": [
