@@ -193,3 +193,10 @@ The static-site build derives `asset-inventory.json` from the same inputs.
 Every published collection must declare `visual_qa: reviewed|pending`. A pending
 record may be distributed with explicit owner authorization and valid rights,
 but must **never** be presented as having passed human visual review.
+
+### Stat and action lab
+
+Optional manifest-driven `stat_profiles` now support bounded numeric resources,
+atomic costs and additive changes, direct HUD input bindings and authored animation
+event triggers. The Builder's simulated values do not overwrite source manifests.
+See [stat/action guide](docs/ai/STATS-ACTIONS.md).
