@@ -362,7 +362,7 @@
         input.min=bound.min;input.max=bound.max;input.step=bound.step;input.value=displayed[key];
         const readout=document.createElement('output');readout.textContent=input.value+' / '+bound.max;
         const computed=statProfile?.bindings?.find(b=>b.input===key&&statProfile.derived?.[b.stat]);
-        if(computed){input.disabled=true;input.title='Computed from other stats; edit its sources in the Stat Lab';}
+        if(computed){input.disabled=true;input.step='any';input.value=displayed[key];input.title='Computed from other stats; edit its sources in the Stat Lab';}
         else input.oninput=()=>applyValue(Number(input.value));
         label.append(readout);
       }else{
@@ -500,7 +500,7 @@
       if(!def)continue;
       if(def.type==='number'){
         const bound=Inputs.bounds(a,key,values);
-        elem.min=bound.min;elem.max=bound.max;elem.step=bound.step;elem.value=values[key];
+        elem.min=bound.min;elem.max=bound.max;elem.step=elem.disabled?'any':bound.step;elem.value=values[key];
         const output=elem.parentElement.querySelector('output');
         if(output)output.textContent=elem.value+' / '+bound.max;
       }else if(def.type==='boolean')elem.checked=values[key];
