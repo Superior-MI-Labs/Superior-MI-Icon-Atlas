@@ -81,3 +81,5 @@
 @media(max-width:1050px){.browse-layout{grid-template-columns:200px minmax(0,1fr);gap:14px}.browse-facets{padding:12px}.asset-grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}}
 @media(max-width:760px){.browse-layout{grid-template-columns:1fr}.browse-facets{position:static}.facet-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.facet-footnote{margin-top:10px}}
 @media(max-width:520px){.facet-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.browse-summary{flex-wrap:wrap}.browse-layout{margin-top:12px}.browse-facets{padding:12px}}
+
+.detail-stage canvas[data-interactive="true"]{touch-action:none;cursor:pointer}
