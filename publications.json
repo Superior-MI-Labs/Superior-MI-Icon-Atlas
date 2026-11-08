@@ -104,6 +104,14 @@
       "approval": "Owner-requested public release; image and crop QA pending creator review",
       "rights": "CC0-1.0: I confirm I own or control the artwork and can dedicate it to CC0-1.0",
       "visual_qa": "pending"
+    },
+    {
+      "path": "examples/sky-prototype",
+      "published": "2026-11-08",
+      "expected_assets": 111,
+      "approval": "Explicit creator request to release Sky as Prototype / Experimental, 2026-11-08. Interpolated frames are not artist-approved final animation.",
+      "rights": "Original AI-generated art; owner approved public experimental showcasing. Evaluation-only: no commercial redistribution or CC0 dedication.",
+      "visual_qa": "pending"
     }
   ]
 }

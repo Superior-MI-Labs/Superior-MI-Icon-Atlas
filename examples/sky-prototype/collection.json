@@ -1,0 +1,15 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.collection.sky.prototype",
+  "name": "Sky — Character & HUD Playground (Experimental)",
+  "version": "0.2.0",
+  "description": "EXPERIMENTAL / PROTOTYPING. Sky animated states, jump and attack combos, playable HUD demo; visual QA pending.",
+  "entry_asset": "smi.sky.proto.actor.states",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Sky Prototype States",
+      "category": "character-animation"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Sky — Animation Transition Playground</title>
+<style>
+:root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#101923;color:#f0eee7}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(1100px 580px at 44% -10%,#273646 0,#111922 70%);padding:28px 16px 70px}
+.shell{max-width:1120px;margin:auto}.eyebrow{font-size:12px;letter-spacing:.22em;color:#f4bc83;text-transform:uppercase}.title{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;margin:8px 0 20px}h1{font-size:clamp(24px,4vw,38px);line-height:1.1;margin:0}h2{font-size:17px;margin:0 0 8px}p{color:#c0c9d0;line-height:1.5}.pill{border:1px solid #475666;padding:6px 12px;border-radius:50px;color:#e0e5e6;font-size:12px}
+.panel{background:linear-gradient(160deg,rgba(38,50,60,.94),rgba(21,30,41,.98));border:1px solid #364755;border-radius:16px;box-shadow:0 14px 48px #050b1470;overflow:hidden}
+.hud{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;background:#111924e8;border-bottom:1px solid #43515e;flex-wrap:wrap}
+.identity{display:flex;flex-direction:column;font-weight:700}.identity small{font-size:11px;letter-spacing:.13em;color:#d1aa7a;font-weight:500;margin-top:4px}.meters{flex:1;min-width:240px;max-width:490px;display:grid;gap:7px}.meter{display:flex;align-items:center;gap:9px;font-size:11px;color:#cfd9dd}.meter strong{width:40px}.bar{flex:1;position:relative;background:#1a2431;border:1px solid #52606e;height:12px;border-radius:3px;overflow:hidden}.fill{height:100%;transition:width 180ms linear;background:linear-gradient(90deg,#80392c,#df7351)}#sta-fill{background:linear-gradient(90deg,#2b7896,#69cdd9)}.meter output{width:66px;text-align:right;font-variant-numeric:tabular-nums}
+button{cursor:pointer;color:#f5f0e5;border:1px solid #6c6758;background:#2d3944;border-radius:9px;padding:9px 12px;font-weight:600;font-size:12px}button:hover{background:#495765}button.primary{background:#906143;border-color:#d6a873}button:focus-visible{outline:2px solid #f8b874;outline-offset:2px}
+.stage-wrap{position:relative;background:#0d1420}.stage-wrap canvas{display:block;width:100%;aspect-ratio:16/9;touch-action:pan-y}.screen{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#0b1422b8;backdrop-filter:blur(5px);padding:18px}.screen[hidden]{display:none}.modal{width:min(480px,100%);padding:24px;background:#1a2733;border:1px solid #d0a677a1;border-radius:15px;text-align:center}.modal p{font-size:14px}.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:15px 0}.slot{border:1px dashed #718290;border-radius:8px;height:60px;display:grid;place-items:center;color:#aab7c1;background:#13202c;font-size:13px}
+.foot{padding:14px 16px;display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap;align-items:center}.controls{display:flex;gap:7px;flex-wrap:wrap}.kbd{background:#172330;border:1px solid #61707e;border-bottom-width:3px;border-radius:5px;padding:3px 6px;color:#e0e9e9;font-size:11px}.hint{color:#aab9c4;font-size:12px;line-height:1.5}.lower{display:grid;grid-template-columns:1.15fr 1fr;gap:14px;margin-top:15px}.sub{padding:16px}.stateflow{display:flex;gap:5px;align-items:center;flex-wrap:wrap;margin:11px 0}.node{padding:6px 8px;border-radius:6px;border:1px solid #48586a;background:#19232e;font-size:11px;color:#c1ccd3}.node.active{border-color:#efbc76;background:#674f35;color:#fff}.arrow{font-size:12px;color:#7c91a1}.eventlog{max-height:188px;overflow:auto;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;line-height:1.75;color:#a4b9c8}.eventlog div{border-bottom:1px solid #33414e60}.eventlog time{color:#eab67a;margin-right:10px}.notice{font-size:12px;border-left:2px solid #d6a46a;padding-left:10px;margin-top:14px}.touch{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 15px;justify-content:space-between}.touch .group{display:flex;gap:6px}.touch button{min-width:52px;min-height:40px}
+@media(max-width:780px){.lower{grid-template-columns:1fr}.meters{max-width:none}.touch{display:flex}.title{align-items:flex-start}}@media(min-width:1100px){.touch{display:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+<div class="eyebrow">Visual Atlas / Prototype Lab / Sky</div>
+<div class="title"><h1>Animation Transition Playground</h1><span class="pill">12 canonical clips · 2 chained actions · QA candidate</span></div>
+<div class="panel">
+<div class="hud"><div class="identity">SKY <small>PHOENIX-TABAXI · LEVEL TEST</small></div>
+ <div class="meters"><div class="meter"><strong>HP</strong><div class="bar"><div id="hp-fill" class="fill" style="width:100%"></div></div><output id="hp">120 / 120</output></div><div class="meter"><strong>STA</strong><div class="bar"><div id="sta-fill" class="fill" style="width:100%"></div></div><output id="sta">100 / 100</output></div></div>
+ <div class="controls"><button id="inventory" title="I">Inventory (I)</button><button id="pause" title="P">Pause (P)</button><button id="reset">Reset</button></div>
+</div>
+<div class="stage-wrap"><canvas id="world" width="960" height="540" aria-label="Playable Sky animation transition demo"></canvas>
+  <div id="pause-screen" class="screen" hidden><div class="modal"><h2>PAUSED</h2><p>Simulation and animation are frozen together. Resume to continue.</p><button id="resume" class="primary">Resume</button></div></div>
+  <div id="inventory-screen" class="screen" hidden><div class="modal"><h2>SKY'S INVENTORY</h2><p>Interface navigation test; items and equipment are illustrative.</p><div class="slots"><div class="slot">Potion</div><div class="slot">Ring</div><div class="slot">Blade</div><div class="slot">—</div><div class="slot">—</div><div class="slot">—</div><div class="slot">—</div><div class="slot">—</div></div><button id="close-inventory" class="primary">Return to game</button></div></div>
+</div>
+<div class="foot"><div class="hint"><span class="kbd">A</span>/<span class="kbd">D</span> Move · <span class="kbd">Shift</span> Run · <span class="kbd">Space</span> Jump · <span class="kbd">J</span> Combo · <span class="kbd">K</span> Guard · <span class="kbd">H</span> Take damage</div><div class="hint" id="state">State: idle</div></div>
+<div class="touch"><div class="group"><button data-hold="KeyA">◀</button><button data-hold="KeyD">▶</button><button data-hold="ShiftLeft">Run</button></div><div class="group"><button data-tap="Space">Jump</button><button data-tap="KeyJ">Combo</button><button data-hold="KeyK">Guard</button></div></div>
+</div>
+<div class="lower"><div class="panel sub"><h2>Animation chain</h2><div class="hint">Transitions reference canonical state names. Physics decides ascent, apex, fall, and ground collision; each phase has its own clip.</div><div class="stateflow" id="jump-graph"></div><div class="stateflow" id="attack-graph"></div><p class="notice">The fall and landing artwork is provisional. The state transitions work as a demonstrator; the pose seams still need dedicated art QA before release.</p></div><div class="panel sub"><h2>Event trace</h2><div class="hint">Fixed-step simulation, frame-accurate clip selection and visible state transitions.</div><div class="eventlog" id="events" aria-live="polite"></div></div></div>
+<p class="hint" style="margin:14px 4px">Standalone test harness generated from the canonical Visual Atlas animation manifest and separate experimental scenario. It does not change the published Builder, implement a general game engine, or certify the artwork as production-ready.</p>
+</div>
+<script id="sky-pack" type="application/json">__SKY_PACK_JSON__</script>
+<script id="sky-scenario" type="application/json">__SKY_SCENARIO_JSON__</script>
+<script>
+(()=>{
+'use strict';
+const pack=JSON.parse(document.getElementById('sky-pack').textContent);
+const scenario=JSON.parse(document.getElementById('sky-scenario').textContent);
+const asset=new Map(pack.assets.map(x=>[x.id,x]));
+const states=asset.get(scenario.actor).states;
+const seq=Object.fromEntries(Object.entries(states).map(([key,id])=>[key,asset.get(id)]));
+const durations=Object.fromEntries(Object.entries(seq).map(([name,s])=>[name,s.frames.reduce((n,f)=>n+(f.duration_ms??1000/s.default_fps),0)]));
+const textures={};let loaded=0;
+for(const [key,record] of Object.entries(pack.textures)){
+ const image=new Image();image.src=record.path;image.onload=()=>{loaded++};image.onerror=()=>log('Missing texture '+key);
+ textures[key]=image;
+}
+const canvas=document.getElementById('world'),ctx=canvas.getContext('2d');
+const input=new Set(),world={x:250,h:0,vy:0,grounded:true,hp:120,stamina:100,mode:'idle',time:0,elapsed:0,attack:null,attIndex:0,attackPhase:0,landing:false,paused:false,inventory:false};
+const cfg=scenario.simulation, graphed={jump:scenario.graph.jump,attack:scenario.graph.combo};
+const maxHp=120,maxSta=100;let last=0,accumulator=0,seconds=0;
+function log(s){const area=document.getElementById('events'),row=document.createElement('div');const time=document.createElement('time');time.textContent=seconds.toFixed(2)+'s';row.append(time,document.createTextNode(s));area.prepend(row);while(area.children.length>35)area.lastChild.remove();}
+function showState(mode){if(world.mode===mode)return;world.mode=mode;world.elapsed=0;document.getElementById('state').textContent='State: '+mode.replaceAll('_',' ');log('state → '+mode);refreshGraph();}
+function refreshGraph(){for(const child of document.querySelectorAll('.stateflow .node'))child.classList.toggle('active',child.dataset.state===world.mode)}
+function initializeGraphs(){for(const [name,list] of Object.entries(graphed)){
+ const node=document.getElementById(name+'-graph');list.forEach((state,i)=>{const b=document.createElement('span');b.className='node';b.textContent=state.replace('jump_','').replace('attack_','').replaceAll('_',' ');b.dataset.state=state;node.append(b);if(i<list.length-1){const arrow=document.createElement('span');arrow.textContent='›';arrow.className='arrow';node.append(arrow)}})
+}}initializeGraphs();refreshGraph();
+function updateHud(){const hp=Math.max(0,world.hp/maxHp),sta=Math.max(0,world.stamina/maxSta);document.getElementById('hp-fill').style.width=hp*100+'%';document.getElementById('sta-fill').style.width=sta*100+'%';document.getElementById('hp').textContent=Math.round(world.hp)+' / '+maxHp;document.getElementById('sta').textContent=Math.round(world.stamina)+' / '+maxSta;}
+function spend(cost){if(world.stamina<cost){log('denied: stamina '+Math.round(world.stamina)+' < '+cost);return false}world.stamina-=cost;updateHud();return true;}
+function jump(){if(!world.grounded||world.attack||world.landing||!spend(10))return;world.grounded=false;world.vy=cfg.jump_velocity_px_s;world.h=0;showState('jump_takeoff');log('jump impulse '+world.vy);}
+function combo(){if(!world.grounded||world.attack||world.landing||!spend(25))return;world.attack=['attack_charge','attack_slash','attack_orb'];world.attIndex=0;showState(world.attack[0]);log('combo begin 1/3');}
+function hit(){world.hp=Math.max(0,world.hp-12);log('hit · -12 HP');updateHud();}
+function reset(){Object.assign(world,{x:250,h:0,vy:0,grounded:true,hp:120,stamina:100,mode:'idle',time:0,elapsed:0,attack:null,attIndex:0,landing:false,paused:false,inventory:false});input.clear();document.getElementById('pause-screen').hidden=true;document.getElementById('inventory-screen').hidden=true;updateHud();refreshGraph();log('reset');}
+function overlay(kind){const wantPause=kind==='pause',wantInv=kind==='inventory';world.paused=wantPause;world.inventory=wantInv;document.getElementById('pause-screen').hidden=!wantPause;document.getElementById('inventory-screen').hidden=!wantInv;input.clear();log(wantPause?'paused':wantInv?'inventory opened':'resumed');}
+function eventKey(code){if(code==='Space')jump();if(code==='KeyJ')combo();if(code==='KeyH')hit();if(code==='KeyP')overlay(world.paused?null:'pause');if(code==='KeyI')overlay(world.inventory?null:'inventory');if(code==='KeyR')reset()}
+window.addEventListener('keydown',e=>{if(['Space','ArrowLeft','ArrowRight'].includes(e.code))e.preventDefault();if(!e.repeat&&!world.paused&&!world.inventory)eventKey(e.code);else if(!e.repeat&&(e.code==='KeyP'||e.code==='KeyI'||e.code==='Escape'))overlay(null);input.add(e.code)});
+window.addEventListener('keyup',e=>input.delete(e.code));window.addEventListener('blur',()=>input.clear());
+for(const b of document.querySelectorAll('[data-hold]')){const code=b.dataset.hold;for(const type of ['pointerdown','pointerup','pointercancel','pointerleave'])b.addEventListener(type,e=>{e.preventDefault();if(type==='pointerdown')input.add(code);else input.delete(code)})}
+for(const b of document.querySelectorAll('[data-tap]'))b.addEventListener('click',()=>eventKey(b.dataset.tap));
+document.getElementById('pause').onclick=()=>overlay('pause');document.getElementById('inventory').onclick=()=>overlay('inventory');document.getElementById('reset').onclick=reset;document.getElementById('resume').onclick=()=>overlay(null);document.getElementById('close-inventory').onclick=()=>overlay(null);
+function tick(dt){if(world.paused||world.inventory)return;seconds+=dt;world.time+=dt;world.elapsed+=dt*1000;
+ const left=input.has('KeyA')||input.has('ArrowLeft'),right=input.has('KeyD')||input.has('ArrowRight');
+ const moving=(right?1:0)-(left?1:0),running=(input.has('ShiftLeft')||input.has('ShiftRight'));
+ const guard=input.has('KeyK')&&world.grounded&&!world.attack&&!world.landing;
+ if(world.attack){const current=world.attack[world.attIndex];if(world.elapsed>=durations[current]){
+  world.attIndex++;if(world.attIndex>=world.attack.length){world.attack=null;showState('idle');log('combo complete')}
+  else{showState(world.attack[world.attIndex]);log('combo '+(world.attIndex+1)+'/3')}
+ }}else if(!world.grounded){
+  world.h+=world.vy*dt;world.vy-=cfg.gravity_px_s2*dt;
+  if(world.h<=0&&world.vy<0){world.h=0;world.vy=0;world.grounded=true;world.landing=true;showState('jump_land');log('ground contact')}
+  else if(world.mode==='jump_takeoff'&&world.elapsed<220){}
+  else if(world.vy>cfg.apex_velocity_band_px_s)showState('jump_rise');
+  else if(world.vy>=-cfg.apex_velocity_band_px_s)showState('jump_apex');
+  else showState('jump_fall');
+ }else if(world.landing){if(world.elapsed>=durations.jump_land){world.landing=false;showState('idle');}}
+ else if(guard){showState('guard');world.stamina=Math.max(0,world.stamina-2.5*dt)}
+ else if(moving!==0){showState(running?'run':'walk')}
+ else showState('idle');
+ if(!world.attack&&!world.landing&&!guard){world.x=Math.min(900,Math.max(35,world.x+moving*(running?cfg.run_speed_px_s:cfg.walk_speed_px_s)*dt));}
+ if(world.grounded&&!world.attack&&(!guard)){world.stamina=Math.min(maxSta,world.stamina+(moving&&running?1:7)*dt)}
+ updateHud();
+}
+function frameAt(state,elapsed){const clip=seq[state]||seq.idle;if(!clip)return null;const total=durations[state],play=clip.playback==='loop'?(elapsed%total):Math.min(elapsed,total-1);
+ let t=play;for(const frame of clip.frames){const duration=frame.duration_ms??1000/clip.default_fps;if(t<duration)return asset.get(frame.asset);t-=duration}return asset.get(clip.frames.at(-1).asset)}
+function draw(){const W=canvas.width,H=canvas.height;
+ const bg=ctx.createLinearGradient(0,0,0,H);bg.addColorStop(0,'#202c45');bg.addColorStop(.52,'#745862');bg.addColorStop(1,'#c28c6a');ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+ for(let i=0;i<25;i++){ctx.globalAlpha=.35;ctx.fillStyle='#fae1b0';ctx.beginPath();ctx.arc((i*197%W),(i*71%225)+14,1.2,0,6.29);ctx.fill()}ctx.globalAlpha=1;
+ ctx.fillStyle='#ffe1a4';ctx.beginPath();ctx.arc(760,122,43,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle='#3d425b';ctx.beginPath();ctx.moveTo(0,350);for(let x=0;x<=W;x+=20)ctx.lineTo(x,305+60*Math.sin(x*.008)+18*Math.cos(x*.03));ctx.lineTo(W,480);ctx.lineTo(0,480);ctx.fill();
+ ctx.fillStyle='#654b58';ctx.beginPath();ctx.moveTo(0,405);for(let x=0;x<=W;x+=20)ctx.lineTo(x,365+34*Math.sin(x*.012+1));ctx.lineTo(W,480);ctx.lineTo(0,480);ctx.fill();
+ ctx.fillStyle='#a17a63';ctx.fillRect(0,437,W,103);ctx.fillStyle='#d0a383';ctx.fillRect(0,431,W,7);
+ for(let i=0;i<32;i++){ctx.fillStyle=i%2?'#73565a':'#81616a';ctx.fillRect(i*38%W,444+(i*13%85),26,3)}
+ ctx.fillStyle='#c99a65';ctx.fillRect(766,297,12,134);ctx.fillStyle='#e5b985';ctx.beginPath();ctx.arc(772,286,29,0,Math.PI*2);ctx.fill();ctx.fillStyle='#643f3c';ctx.beginPath();ctx.arc(772,286,19,0,Math.PI*2);ctx.fill();ctx.fillStyle='#ffcd94';ctx.beginPath();ctx.arc(772,286,7,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle='#e8d6bb';ctx.font='14px system-ui';ctx.fillText('TRAINING DUMMY',705,236);
+ const r=frameAt(world.mode,world.elapsed);if(r){const tex= textures[r.texture];if(tex?.complete&&tex.naturalWidth){const [sx,sy,sw,sh]=r.rect_px,scale=.79;
+  const left=world.x-sw*scale*.48,top=430-world.h-sh*scale*.96;
+  ctx.save();if(input.has('KeyA')||input.has('ArrowLeft')){ctx.translate(left+sw*scale,0);ctx.scale(-1,1);ctx.drawImage(tex,sx,sy,sw,sh,0,top,sw*scale,sh*scale)}
+  else ctx.drawImage(tex,sx,sy,sw,sh,left,top,sw*scale,sh*scale);ctx.restore()}}
+ ctx.fillStyle='#e4d9c8';ctx.font='bold 13px system-ui';ctx.fillText('STATE  '+world.mode.replaceAll('_',' ').toUpperCase(),24,32);ctx.font='12px system-ui';ctx.fillText('HEIGHT '+Math.round(world.h)+'px   ·   VY '+Math.round(world.vy)+'px/s   ·   STAMINA '+Math.round(world.stamina),24,54);
+ if(loaded<Object.keys(textures).length){ctx.fillStyle='#f4dcc0';ctx.font='16px system-ui';ctx.fillText('Loading atlases '+loaded+'/'+Object.keys(textures).length,24,95)}
+}
+function animation(now){if(!last)last=now;const delta=Math.min(.08,(now-last)/1000);last=now;accumulator+=delta;
+ const step=1/60;let count=0;while(accumulator>=step&&count<5){tick(step);accumulator-=step;count++}draw();requestAnimationFrame(animation)}
+updateHud();log('prototype loaded');requestAnimationFrame(animation);
+})();
+</script>
+</body></html>

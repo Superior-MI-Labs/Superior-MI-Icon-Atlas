@@ -200,3 +200,7 @@ Optional manifest-driven `stat_profiles` now support bounded numeric resources,
 atomic costs and additive changes, direct HUD input bindings and authored animation
 event triggers. The Builder's simulated values do not overwrite source manifests.
 See [stat/action guide](docs/ai/STATS-ACTIONS.md).
+
+### Sky character + HUD prototype
+
+[Try the experimental Sky playground](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/sky-prototype.html). [Source manifest](examples/sky-prototype/manifest.json), [scenario](examples/sky-prototype/scenario.json) and [QA report](examples/sky-prototype/qa-report.json) are published with **visual QA pending**. Source assets are only licensed for prototype evaluation, not CC0.

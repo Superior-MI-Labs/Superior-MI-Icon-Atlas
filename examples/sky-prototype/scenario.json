@@ -1,0 +1,128 @@
+{
+  "schema": "sky-transition-playground/0.2-experimental",
+  "asset_manifest": "manifest.json",
+  "actor": "smi.sky.proto.actor.states",
+  "states": {
+    "idle": {
+      "asset": "smi.sky.proto.anim.idle",
+      "loop": true,
+      "duration_ms": 1120
+    },
+    "walk": {
+      "asset": "smi.sky.proto.anim.walk",
+      "loop": true,
+      "duration_ms": 960
+    },
+    "run": {
+      "asset": "smi.sky.proto.anim.run",
+      "loop": true,
+      "duration_ms": 720
+    },
+    "guard": {
+      "asset": "smi.sky.proto.anim.guard",
+      "loop": true,
+      "duration_ms": 1120
+    },
+    "jump_takeoff": {
+      "asset": "smi.sky.proto.anim.jump_takeoff",
+      "loop": false,
+      "duration_ms": 480
+    },
+    "jump_rise": {
+      "asset": "smi.sky.proto.anim.jump_rise",
+      "loop": false,
+      "duration_ms": 850
+    },
+    "jump_apex": {
+      "asset": "smi.sky.proto.anim.jump_apex",
+      "loop": true,
+      "duration_ms": 300
+    },
+    "jump_fall": {
+      "asset": "smi.sky.proto.anim.jump_fall",
+      "loop": true,
+      "duration_ms": 720
+    },
+    "jump_land": {
+      "asset": "smi.sky.proto.anim.jump_land",
+      "loop": false,
+      "duration_ms": 810
+    },
+    "attack_charge": {
+      "asset": "smi.sky.proto.anim.attack_charge",
+      "loop": false,
+      "duration_ms": 1330
+    },
+    "attack_slash": {
+      "asset": "smi.sky.proto.anim.attack_slash",
+      "loop": false,
+      "duration_ms": 1090
+    },
+    "attack_orb": {
+      "asset": "smi.sky.proto.anim.attack_orb",
+      "loop": false,
+      "duration_ms": 1090
+    }
+  },
+  "graph": {
+    "jump": [
+      "jump_takeoff",
+      "jump_rise",
+      "jump_apex",
+      "jump_fall",
+      "jump_land",
+      "idle"
+    ],
+    "combo": [
+      "attack_charge",
+      "attack_slash",
+      "attack_orb",
+      "idle"
+    ]
+  },
+  "rules": {
+    "jump_takeoff": {
+      "trigger": "jump",
+      "requires": "grounded",
+      "then": "jump_rise"
+    },
+    "jump_rise": {
+      "condition": "velocity_up > 110",
+      "then": "jump_apex"
+    },
+    "jump_apex": {
+      "condition": "abs(vertical_velocity) <= 110",
+      "then": "jump_fall"
+    },
+    "jump_fall": {
+      "condition": "velocity_down > 110",
+      "then": "jump_land on ground collision"
+    },
+    "jump_land": {
+      "trigger": "touch_ground",
+      "then": "idle on animation_complete"
+    },
+    "attack_charge": {
+      "trigger": "combo_start",
+      "then": "attack_slash on animation_complete"
+    },
+    "attack_slash": {
+      "then": "attack_orb on animation_complete"
+    },
+    "attack_orb": {
+      "then": "idle on animation_complete"
+    }
+  },
+  "simulation": {
+    "gravity_px_s2": 1320,
+    "jump_velocity_px_s": 610,
+    "walk_speed_px_s": 145,
+    "run_speed_px_s": 250,
+    "apex_velocity_band_px_s": 110
+  },
+  "notes": [
+    "Prototype scene behavior is not a proposed generic engine contract",
+    "Fall and landing motion frames are transparent interpolated prototypes, not production motion-captured frames",
+    "Attack seam frames are explicit visual transitions. Game-world simulation is separate from authored animation assets."
+  ]
+}

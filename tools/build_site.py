@@ -110,6 +110,44 @@ def build(dest:Path|None=None):
             item['preview']='showcase/'+target.name
     (dest/'featured-packs.json').write_text(json.dumps({'schema':'smi-featured-packs/1','packs':featured},indent=2)+'\n',encoding='utf-8')
 
+    # Generate the playable prototype from the same authored ZIP as the Builder.
+    # No second editable copy of animations or texture assets is published.
+    sky=ROOT/'examples'/'sky-prototype'
+    if (sky/'preview-template.html').is_file():
+        html=(sky/'preview-template.html').read_text(encoding='utf-8')
+        doc=json.loads((sky/'manifest.json').read_text(encoding='utf-8'))
+        scene=json.loads((sky/'scenario.json').read_text(encoding='utf-8'))
+        def embed(value):
+            return json.dumps(value,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
+        if html.count('__SKY_PACK_JSON__')!=1 or html.count('__SKY_SCENARIO_JSON__')!=1:
+            raise ValueError('Sky template lost canonical placeholders')
+        html=html.replace('__SKY_PACK_JSON__',embed(doc)).replace('__SKY_SCENARIO_JSON__',embed(scene))
+        opener='<script>\n(()=>{'
+        if html.count(opener)!=1 or html.count('image.src=record.path;')!=1:
+            raise ValueError('Unexpected Sky playground script structure')
+        html=html.replace(opener,'<script src="vendor/jszip.min.js"></script>\n<script>\n(async()=>{')
+        loader="""const zipResponse=await fetch('demo/sky-prototype.zip');
+if(!zipResponse.ok)throw Error('Prototype ZIP unavailable: '+zipResponse.status);
+const zip=await JSZip.loadAsync(await zipResponse.arrayBuffer());
+const textureUrls={};
+for(const texture of Object.values(pack.textures)){
+ const file=zip.file(texture.path);
+ if(!file)throw Error('Missing texture '+texture.path);
+ textureUrls[texture.path]=URL.createObjectURL(new Blob([await file.async('uint8array')],{type:'image/png'}));
+}
+"""
+        html=html.replace('const textures={};let loaded=0;',loader+'const textures={};let loaded=0;')
+        html=html.replace('image.src=record.path;','image.src=textureUrls[record.path];')
+        ending='})();\n</script>'
+        if html.count(ending)!=1:raise ValueError('Sky template terminator changed')
+        html=html.replace(ending,"""})().catch(err=>{
+ const p=document.createElement('p');p.textContent='Prototype failed to load: '+err.message;
+ document.querySelector('.shell')?.prepend(p);
+});
+</script>""")
+        (dest/'sky-prototype.html').write_text(html,encoding='utf-8')
+
+
     # Public discovery is derived from *approved* source manifests, never from
     # tutorial/demo ZIPs, private browser bags, or the archival monoline catalog.
     publication=json.loads((ROOT/'publications.json').read_text(encoding='utf-8'))

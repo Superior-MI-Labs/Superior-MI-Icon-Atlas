@@ -1,0 +1,3016 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.sky.transition.test.v2",
+  "version": "0.2.0",
+  "description": "Sky character playable animation prototype v0.2. Original generated source + provisional interpolated fall/landing/attack seam frames. Not production approved.",
+  "license": "PROTOTYPE-EVALUATION-ONLY",
+  "textures": {
+    "idle": {
+      "path": "textures/idle.png",
+      "width_px": 1772,
+      "height_px": 886,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "1a751dc11862654915da6e78b6a6560381bd31b410e9aff14e33bd8db7f57007"
+    },
+    "walk": {
+      "path": "textures/walk.png",
+      "width_px": 1772,
+      "height_px": 886,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "a3707a4f616fb43152eb6ed1c5027d0acbba2d5c210d525a5efd6e60f17b1959"
+    },
+    "run": {
+      "path": "textures/run.png",
+      "width_px": 1772,
+      "height_px": 886,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "db356b50616c75a005795f98387e511edb12fe4841a051149028bfc25996ca1f"
+    },
+    "jump": {
+      "path": "textures/jump.png",
+      "width_px": 1772,
+      "height_px": 886,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "00c6e2dc663a18d33b03b780b969781e5bc764cce86283372481657a833f1467"
+    },
+    "hover": {
+      "path": "textures/hover.png",
+      "width_px": 1772,
+      "height_px": 886,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "13ee40e1080f2d41bfb847d5294ce0e78cfd6ababd55c49f67d93789f8eee548"
+    },
+    "guard": {
+      "path": "textures/guard.png",
+      "width_px": 1772,
+      "height_px": 886,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "4d12eca5e7f60aa3745d75a5a9c2fe595ff6a96a884e22917b6287b5fdb82538"
+    },
+    "charge": {
+      "path": "textures/charge.png",
+      "width_px": 1772,
+      "height_px": 886,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "cc4f407abfbc79f15a829efe6f84ba665882e99f05c35b85200c6f27bd196581"
+    },
+    "slash": {
+      "path": "textures/slash.png",
+      "width_px": 1772,
+      "height_px": 886,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "fa359071a3228f76c4970ce10de664b7abb406b8a0ee7852e99bbd29491e0501"
+    },
+    "orb": {
+      "path": "textures/orb.png",
+      "width_px": 1772,
+      "height_px": 886,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "5eee603283c66a83b8685cb8db3e4751cc45aaea5e5db42459fedb801b62e2fb"
+    },
+    "rise_to_apex": {
+      "path": "textures/rise_to_apex.png",
+      "width_px": 1772,
+      "height_px": 443,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "afe668e0243d86ce83611cf49f1b98ab7c9a2dc546c4c285823f6f26aa0897a9"
+    },
+    "fall_motion": {
+      "path": "textures/fall_motion.png",
+      "width_px": 1772,
+      "height_px": 886,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "53d3b569b2dad377389095dc341457ee6307bce2ddf7a0d8564c8e349a232700"
+    },
+    "land_recover": {
+      "path": "textures/land_recover.png",
+      "width_px": 1772,
+      "height_px": 1329,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "9182906d732dbc1ccd2f2c89fa645a7c6ed22ac3ba05682b52d024b67af5e0be"
+    },
+    "attack_seams": {
+      "path": "textures/attack_seams.png",
+      "width_px": 1772,
+      "height_px": 886,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "e5b7e7bfbfa36a79846287cd57e08f7fab9c7709bf84df357e38b14f2946a35f"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.sky.proto.source.attack_seams.06",
+      "kind": "region",
+      "name": "Attack Seams prototype frame 6",
+      "texture": "attack_seams",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.attack_seams.05",
+      "kind": "region",
+      "name": "Attack Seams prototype frame 5",
+      "texture": "attack_seams",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.attack_seams.04",
+      "kind": "region",
+      "name": "Attack Seams prototype frame 4",
+      "texture": "attack_seams",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.attack_seams.03",
+      "kind": "region",
+      "name": "Attack Seams prototype frame 3",
+      "texture": "attack_seams",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.attack_seams.02",
+      "kind": "region",
+      "name": "Attack Seams prototype frame 2",
+      "texture": "attack_seams",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.attack_seams.01",
+      "kind": "region",
+      "name": "Attack Seams prototype frame 1",
+      "texture": "attack_seams",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.attack_seams.00",
+      "kind": "region",
+      "name": "Attack Seams prototype frame 0",
+      "texture": "attack_seams",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.land_recover.08",
+      "kind": "region",
+      "name": "Land Recover prototype frame 8",
+      "texture": "land_recover",
+      "rect_px": [
+        0,
+        886,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.land_recover.07",
+      "kind": "region",
+      "name": "Land Recover prototype frame 7",
+      "texture": "land_recover",
+      "rect_px": [
+        1329,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.land_recover.06",
+      "kind": "region",
+      "name": "Land Recover prototype frame 6",
+      "texture": "land_recover",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.land_recover.05",
+      "kind": "region",
+      "name": "Land Recover prototype frame 5",
+      "texture": "land_recover",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.land_recover.04",
+      "kind": "region",
+      "name": "Land Recover prototype frame 4",
+      "texture": "land_recover",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.land_recover.03",
+      "kind": "region",
+      "name": "Land Recover prototype frame 3",
+      "texture": "land_recover",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.land_recover.02",
+      "kind": "region",
+      "name": "Land Recover prototype frame 2",
+      "texture": "land_recover",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.land_recover.01",
+      "kind": "region",
+      "name": "Land Recover prototype frame 1",
+      "texture": "land_recover",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.land_recover.00",
+      "kind": "region",
+      "name": "Land Recover prototype frame 0",
+      "texture": "land_recover",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.fall_motion.07",
+      "kind": "region",
+      "name": "Fall Motion prototype frame 7",
+      "texture": "fall_motion",
+      "rect_px": [
+        1329,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.fall_motion.06",
+      "kind": "region",
+      "name": "Fall Motion prototype frame 6",
+      "texture": "fall_motion",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.fall_motion.05",
+      "kind": "region",
+      "name": "Fall Motion prototype frame 5",
+      "texture": "fall_motion",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.fall_motion.04",
+      "kind": "region",
+      "name": "Fall Motion prototype frame 4",
+      "texture": "fall_motion",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.fall_motion.03",
+      "kind": "region",
+      "name": "Fall Motion prototype frame 3",
+      "texture": "fall_motion",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.fall_motion.02",
+      "kind": "region",
+      "name": "Fall Motion prototype frame 2",
+      "texture": "fall_motion",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.fall_motion.01",
+      "kind": "region",
+      "name": "Fall Motion prototype frame 1",
+      "texture": "fall_motion",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.fall_motion.00",
+      "kind": "region",
+      "name": "Fall Motion prototype frame 0",
+      "texture": "fall_motion",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.rise_to_apex.01",
+      "kind": "region",
+      "name": "Rise To Apex prototype frame 1",
+      "texture": "rise_to_apex",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.rise_to_apex.00",
+      "kind": "region",
+      "name": "Rise To Apex prototype frame 0",
+      "texture": "rise_to_apex",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "tags": [
+        "sky",
+        "animation",
+        "prototype",
+        "motion-interpolation",
+        "visual-review-pending"
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.idle.00",
+      "kind": "region",
+      "name": "idle reference frame 0",
+      "texture": "idle",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.idle.01",
+      "kind": "region",
+      "name": "idle reference frame 1",
+      "texture": "idle",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.idle.02",
+      "kind": "region",
+      "name": "idle reference frame 2",
+      "texture": "idle",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.idle.03",
+      "kind": "region",
+      "name": "idle reference frame 3",
+      "texture": "idle",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.idle.04",
+      "kind": "region",
+      "name": "idle reference frame 4",
+      "texture": "idle",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.idle.05",
+      "kind": "region",
+      "name": "idle reference frame 5",
+      "texture": "idle",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.idle.06",
+      "kind": "region",
+      "name": "idle reference frame 6",
+      "texture": "idle",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.idle.07",
+      "kind": "region",
+      "name": "idle reference frame 7",
+      "texture": "idle",
+      "rect_px": [
+        1329,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.walk.00",
+      "kind": "region",
+      "name": "walk reference frame 0",
+      "texture": "walk",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.walk.01",
+      "kind": "region",
+      "name": "walk reference frame 1",
+      "texture": "walk",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.walk.02",
+      "kind": "region",
+      "name": "walk reference frame 2",
+      "texture": "walk",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.walk.03",
+      "kind": "region",
+      "name": "walk reference frame 3",
+      "texture": "walk",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.walk.04",
+      "kind": "region",
+      "name": "walk reference frame 4",
+      "texture": "walk",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.walk.05",
+      "kind": "region",
+      "name": "walk reference frame 5",
+      "texture": "walk",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.walk.06",
+      "kind": "region",
+      "name": "walk reference frame 6",
+      "texture": "walk",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.walk.07",
+      "kind": "region",
+      "name": "walk reference frame 7",
+      "texture": "walk",
+      "rect_px": [
+        1329,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.run.00",
+      "kind": "region",
+      "name": "run reference frame 0",
+      "texture": "run",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.run.01",
+      "kind": "region",
+      "name": "run reference frame 1",
+      "texture": "run",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.run.02",
+      "kind": "region",
+      "name": "run reference frame 2",
+      "texture": "run",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.run.03",
+      "kind": "region",
+      "name": "run reference frame 3",
+      "texture": "run",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.run.04",
+      "kind": "region",
+      "name": "run reference frame 4",
+      "texture": "run",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.run.05",
+      "kind": "region",
+      "name": "run reference frame 5",
+      "texture": "run",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.run.06",
+      "kind": "region",
+      "name": "run reference frame 6",
+      "texture": "run",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.run.07",
+      "kind": "region",
+      "name": "run reference frame 7",
+      "texture": "run",
+      "rect_px": [
+        1329,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.jump.00",
+      "kind": "region",
+      "name": "jump reference frame 0",
+      "texture": "jump",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.jump.01",
+      "kind": "region",
+      "name": "jump reference frame 1",
+      "texture": "jump",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.jump.02",
+      "kind": "region",
+      "name": "jump reference frame 2",
+      "texture": "jump",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.jump.03",
+      "kind": "region",
+      "name": "jump reference frame 3",
+      "texture": "jump",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.jump.04",
+      "kind": "region",
+      "name": "jump reference frame 4",
+      "texture": "jump",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.jump.05",
+      "kind": "region",
+      "name": "jump reference frame 5",
+      "texture": "jump",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.jump.06",
+      "kind": "region",
+      "name": "jump reference frame 6",
+      "texture": "jump",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.jump.07",
+      "kind": "region",
+      "name": "jump reference frame 7",
+      "texture": "jump",
+      "rect_px": [
+        1329,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.hover.00",
+      "kind": "region",
+      "name": "hover reference frame 0",
+      "texture": "hover",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.hover.01",
+      "kind": "region",
+      "name": "hover reference frame 1",
+      "texture": "hover",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.hover.02",
+      "kind": "region",
+      "name": "hover reference frame 2",
+      "texture": "hover",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.hover.03",
+      "kind": "region",
+      "name": "hover reference frame 3",
+      "texture": "hover",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.hover.04",
+      "kind": "region",
+      "name": "hover reference frame 4",
+      "texture": "hover",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.hover.05",
+      "kind": "region",
+      "name": "hover reference frame 5",
+      "texture": "hover",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.hover.06",
+      "kind": "region",
+      "name": "hover reference frame 6",
+      "texture": "hover",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.hover.07",
+      "kind": "region",
+      "name": "hover reference frame 7",
+      "texture": "hover",
+      "rect_px": [
+        1329,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.guard.00",
+      "kind": "region",
+      "name": "guard reference frame 0",
+      "texture": "guard",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.guard.01",
+      "kind": "region",
+      "name": "guard reference frame 1",
+      "texture": "guard",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.guard.02",
+      "kind": "region",
+      "name": "guard reference frame 2",
+      "texture": "guard",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.guard.03",
+      "kind": "region",
+      "name": "guard reference frame 3",
+      "texture": "guard",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.guard.04",
+      "kind": "region",
+      "name": "guard reference frame 4",
+      "texture": "guard",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.guard.05",
+      "kind": "region",
+      "name": "guard reference frame 5",
+      "texture": "guard",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.guard.06",
+      "kind": "region",
+      "name": "guard reference frame 6",
+      "texture": "guard",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.guard.07",
+      "kind": "region",
+      "name": "guard reference frame 7",
+      "texture": "guard",
+      "rect_px": [
+        1329,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.charge.00",
+      "kind": "region",
+      "name": "charge reference frame 0",
+      "texture": "charge",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.charge.01",
+      "kind": "region",
+      "name": "charge reference frame 1",
+      "texture": "charge",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.charge.02",
+      "kind": "region",
+      "name": "charge reference frame 2",
+      "texture": "charge",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.charge.03",
+      "kind": "region",
+      "name": "charge reference frame 3",
+      "texture": "charge",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.charge.04",
+      "kind": "region",
+      "name": "charge reference frame 4",
+      "texture": "charge",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.charge.05",
+      "kind": "region",
+      "name": "charge reference frame 5",
+      "texture": "charge",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.charge.06",
+      "kind": "region",
+      "name": "charge reference frame 6",
+      "texture": "charge",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.charge.07",
+      "kind": "region",
+      "name": "charge reference frame 7",
+      "texture": "charge",
+      "rect_px": [
+        1329,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.slash.00",
+      "kind": "region",
+      "name": "slash reference frame 0",
+      "texture": "slash",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.slash.01",
+      "kind": "region",
+      "name": "slash reference frame 1",
+      "texture": "slash",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.slash.02",
+      "kind": "region",
+      "name": "slash reference frame 2",
+      "texture": "slash",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.slash.03",
+      "kind": "region",
+      "name": "slash reference frame 3",
+      "texture": "slash",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.slash.04",
+      "kind": "region",
+      "name": "slash reference frame 4",
+      "texture": "slash",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.slash.05",
+      "kind": "region",
+      "name": "slash reference frame 5",
+      "texture": "slash",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.slash.06",
+      "kind": "region",
+      "name": "slash reference frame 6",
+      "texture": "slash",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.slash.07",
+      "kind": "region",
+      "name": "slash reference frame 7",
+      "texture": "slash",
+      "rect_px": [
+        1329,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.orb.00",
+      "kind": "region",
+      "name": "orb reference frame 0",
+      "texture": "orb",
+      "rect_px": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.orb.01",
+      "kind": "region",
+      "name": "orb reference frame 1",
+      "texture": "orb",
+      "rect_px": [
+        443,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.orb.02",
+      "kind": "region",
+      "name": "orb reference frame 2",
+      "texture": "orb",
+      "rect_px": [
+        886,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.orb.03",
+      "kind": "region",
+      "name": "orb reference frame 3",
+      "texture": "orb",
+      "rect_px": [
+        1329,
+        0,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.orb.04",
+      "kind": "region",
+      "name": "orb reference frame 4",
+      "texture": "orb",
+      "rect_px": [
+        0,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.orb.05",
+      "kind": "region",
+      "name": "orb reference frame 5",
+      "texture": "orb",
+      "rect_px": [
+        443,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.orb.06",
+      "kind": "region",
+      "name": "orb reference frame 6",
+      "texture": "orb",
+      "rect_px": [
+        886,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.source.orb.07",
+      "kind": "region",
+      "name": "orb reference frame 7",
+      "texture": "orb",
+      "rect_px": [
+        1329,
+        443,
+        443,
+        443
+      ],
+      "logical_size_px": [
+        443,
+        443
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.idle",
+      "kind": "sequence",
+      "name": "Idle",
+      "description": "Neutral idle · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "experimental",
+        "idle",
+        "prototype",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending"
+      ],
+      "default_fps": 7.1429,
+      "playback": "loop",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.idle.00",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.idle.01",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.idle.02",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.idle.03",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.idle.04",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.idle.05",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.idle.06",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.idle.07",
+          "duration_ms": 140
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.walk",
+      "kind": "sequence",
+      "name": "Walk",
+      "description": "Walking cycle · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "experimental",
+        "prototype",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending",
+        "walk"
+      ],
+      "default_fps": 8.3333,
+      "playback": "loop",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.walk.00",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.walk.01",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.walk.02",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.walk.03",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.walk.04",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.walk.05",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.walk.06",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.walk.07",
+          "duration_ms": 120
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.run",
+      "kind": "sequence",
+      "name": "Run",
+      "description": "Running cycle · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "experimental",
+        "prototype",
+        "run",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending"
+      ],
+      "default_fps": 11.1111,
+      "playback": "loop",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.run.00",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.run.01",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.run.02",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.run.03",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.run.04",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.run.05",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.run.06",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.run.07",
+          "duration_ms": 90
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.guard",
+      "kind": "sequence",
+      "name": "Guard",
+      "description": "Combat readiness hold · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "experimental",
+        "guard",
+        "prototype",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending"
+      ],
+      "default_fps": 7.1429,
+      "playback": "loop",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.guard.00",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.guard.01",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.guard.02",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.guard.03",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.guard.04",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.guard.05",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.guard.06",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.guard.07",
+          "duration_ms": 140
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.jump_takeoff",
+      "kind": "sequence",
+      "name": "Jump Takeoff",
+      "description": "Crouch, compression, takeoff · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "experimental",
+        "jump-takeoff",
+        "prototype",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending"
+      ],
+      "default_fps": 8.3333,
+      "playback": "once",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.jump.00",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.jump.01",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.jump.02",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.jump.03",
+          "duration_ms": 120
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.jump_rise",
+      "kind": "sequence",
+      "name": "Jump Rise",
+      "description": "Ascending airborne poses · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "experimental",
+        "jump-rise",
+        "prototype",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending"
+      ],
+      "default_fps": 9.41176,
+      "playback": "once",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.jump.03",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.jump.04",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.jump.05",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.jump.06",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.jump.07",
+          "duration_ms": 120
+        },
+        {
+          "asset": "smi.sky.proto.source.rise_to_apex.00",
+          "duration_ms": 75
+        },
+        {
+          "asset": "smi.sky.proto.source.rise_to_apex.01",
+          "duration_ms": 75
+        },
+        {
+          "asset": "smi.sky.proto.source.hover.03",
+          "duration_ms": 100
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.jump_apex",
+      "kind": "sequence",
+      "name": "Jump Apex",
+      "description": "Near-apex hover hold · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "experimental",
+        "jump-apex",
+        "prototype",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending"
+      ],
+      "default_fps": 10,
+      "playback": "loop",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.hover.03",
+          "duration_ms": 100
+        },
+        {
+          "asset": "smi.sky.proto.source.hover.04",
+          "duration_ms": 100
+        },
+        {
+          "asset": "smi.sky.proto.source.hover.05",
+          "duration_ms": 100
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.jump_fall",
+      "kind": "sequence",
+      "name": "Jump Fall",
+      "description": "Descending airborne placeholder · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "experimental",
+        "jump-fall",
+        "prototype",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending"
+      ],
+      "default_fps": 11.11111,
+      "playback": "loop",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.fall_motion.00",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.fall_motion.01",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.fall_motion.02",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.fall_motion.03",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.fall_motion.04",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.fall_motion.05",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.fall_motion.06",
+          "duration_ms": 90
+        },
+        {
+          "asset": "smi.sky.proto.source.fall_motion.07",
+          "duration_ms": 90
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.jump_land",
+      "kind": "sequence",
+      "name": "Jump Land",
+      "description": "Landing compression and recovery placeholder · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "experimental",
+        "jump-land",
+        "prototype",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending"
+      ],
+      "default_fps": 11.11111,
+      "playback": "once",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.land_recover.00",
+          "duration_ms": 85
+        },
+        {
+          "asset": "smi.sky.proto.source.land_recover.01",
+          "duration_ms": 85
+        },
+        {
+          "asset": "smi.sky.proto.source.land_recover.02",
+          "duration_ms": 85
+        },
+        {
+          "asset": "smi.sky.proto.source.land_recover.03",
+          "duration_ms": 85
+        },
+        {
+          "asset": "smi.sky.proto.source.land_recover.04",
+          "duration_ms": 85
+        },
+        {
+          "asset": "smi.sky.proto.source.land_recover.05",
+          "duration_ms": 85
+        },
+        {
+          "asset": "smi.sky.proto.source.land_recover.06",
+          "duration_ms": 100
+        },
+        {
+          "asset": "smi.sky.proto.source.land_recover.07",
+          "duration_ms": 100
+        },
+        {
+          "asset": "smi.sky.proto.source.land_recover.08",
+          "duration_ms": 100
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.attack_charge",
+      "kind": "sequence",
+      "name": "Attack Charge",
+      "description": "Magical attack preparation · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "attack-charge",
+        "experimental",
+        "prototype",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending"
+      ],
+      "default_fps": 8.27068,
+      "playback": "once",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.charge.00",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.charge.01",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.charge.02",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.charge.03",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.charge.04",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.charge.05",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.charge.06",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.charge.07",
+          "duration_ms": 140
+        },
+        {
+          "asset": "smi.sky.proto.source.attack_seams.00",
+          "duration_ms": 70
+        },
+        {
+          "asset": "smi.sky.proto.source.attack_seams.01",
+          "duration_ms": 70
+        },
+        {
+          "asset": "smi.sky.proto.source.slash.00",
+          "duration_ms": 70
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.attack_slash",
+      "kind": "sequence",
+      "name": "Attack Slash",
+      "description": "Energy blade slash · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "attack-slash",
+        "experimental",
+        "prototype",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending"
+      ],
+      "default_fps": 10.09174,
+      "playback": "once",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.slash.00",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.slash.01",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.slash.02",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.slash.03",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.slash.04",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.slash.05",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.slash.06",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.slash.07",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.attack_seams.02",
+          "duration_ms": 70
+        },
+        {
+          "asset": "smi.sky.proto.source.attack_seams.03",
+          "duration_ms": 70
+        },
+        {
+          "asset": "smi.sky.proto.source.orb.00",
+          "duration_ms": 70
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.anim.attack_orb",
+      "kind": "sequence",
+      "name": "Attack Orb",
+      "description": "Golden orb release · Prototyping: may include pose interpolation and AI generated frame drift.",
+      "tags": [
+        "animation",
+        "attack-orb",
+        "experimental",
+        "prototype",
+        "sky",
+        "test-candidate",
+        "visual-qa-pending"
+      ],
+      "default_fps": 10.09174,
+      "playback": "once",
+      "frames": [
+        {
+          "asset": "smi.sky.proto.source.orb.00",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.orb.01",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.orb.02",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.orb.03",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.orb.04",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.orb.05",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.orb.06",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.orb.07",
+          "duration_ms": 110
+        },
+        {
+          "asset": "smi.sky.proto.source.attack_seams.04",
+          "duration_ms": 70
+        },
+        {
+          "asset": "smi.sky.proto.source.attack_seams.05",
+          "duration_ms": 70
+        },
+        {
+          "asset": "smi.sky.proto.source.attack_seams.06",
+          "duration_ms": 70
+        }
+      ]
+    },
+    {
+      "id": "smi.sky.proto.actor.states",
+      "kind": "state_set",
+      "name": "Sky prototype animation states",
+      "tags": [
+        "animation",
+        "character",
+        "experimental",
+        "prototype",
+        "sky",
+        "states",
+        "visual-qa-pending"
+      ],
+      "states": {
+        "idle": "smi.sky.proto.anim.idle",
+        "walk": "smi.sky.proto.anim.walk",
+        "run": "smi.sky.proto.anim.run",
+        "guard": "smi.sky.proto.anim.guard",
+        "jump_takeoff": "smi.sky.proto.anim.jump_takeoff",
+        "jump_rise": "smi.sky.proto.anim.jump_rise",
+        "jump_apex": "smi.sky.proto.anim.jump_apex",
+        "jump_fall": "smi.sky.proto.anim.jump_fall",
+        "jump_land": "smi.sky.proto.anim.jump_land",
+        "attack_charge": "smi.sky.proto.anim.attack_charge",
+        "attack_slash": "smi.sky.proto.anim.attack_slash",
+        "attack_orb": "smi.sky.proto.anim.attack_orb"
+      },
+      "default_state": "idle"
+    }
+  ],
+  "preview_profiles": [
+    {
+      "schema": "smi-preview-controls/1",
+      "id": "smi.sky.proto.audition",
+      "name": "Animation audition keys",
+      "asset": "smi.sky.proto.actor.states",
+      "actions": {
+        "walk": {
+          "mode": "hold",
+          "target": {
+            "state": "walk"
+          }
+        },
+        "run": {
+          "mode": "hold",
+          "target": {
+            "state": "run"
+          }
+        },
+        "jump": {
+          "mode": "tap",
+          "target": {
+            "state": "jump_takeoff"
+          }
+        },
+        "rise": {
+          "mode": "tap",
+          "target": {
+            "state": "jump_rise"
+          }
+        },
+        "apex": {
+          "mode": "tap",
+          "target": {
+            "state": "jump_apex"
+          }
+        },
+        "fall": {
+          "mode": "tap",
+          "target": {
+            "state": "jump_fall"
+          }
+        },
+        "land": {
+          "mode": "tap",
+          "target": {
+            "state": "jump_land"
+          }
+        },
+        "attack": {
+          "mode": "tap",
+          "target": {
+            "state": "attack_slash"
+          }
+        },
+        "orb": {
+          "mode": "tap",
+          "target": {
+            "state": "attack_orb"
+          }
+        }
+      },
+      "neutral": {
+        "state": "idle"
+      },
+      "bindings": [
+        {
+          "device": "keyboard",
+          "code": "KeyA",
+          "action": "walk"
+        },
+        {
+          "device": "keyboard",
+          "code": "KeyD",
+          "action": "run"
+        },
+        {
+          "device": "keyboard",
+          "code": "Space",
+          "action": "jump"
+        },
+        {
+          "device": "keyboard",
+          "code": "KeyU",
+          "action": "rise"
+        },
+        {
+          "device": "keyboard",
+          "code": "KeyI",
+          "action": "apex"
+        },
+        {
+          "device": "keyboard",
+          "code": "KeyO",
+          "action": "fall"
+        },
+        {
+          "device": "keyboard",
+          "code": "KeyP",
+          "action": "land"
+        },
+        {
+          "device": "keyboard",
+          "code": "KeyJ",
+          "action": "attack"
+        },
+        {
+          "device": "keyboard",
+          "code": "KeyK",
+          "action": "orb"
+        }
+      ]
+    }
+  ]
+}
