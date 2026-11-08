@@ -277,7 +277,7 @@
     const select=$('asset-kind'),current=select.value;select.replaceChildren(new Option('All asset types',''));for(const k of kinds)select.add(new Option(k,k));select.value=current;
     const scopeKey=JSON.stringify([q,kind,bagScope,bagGroup]);if(scopeKey!==listKey){listLimit=110;listKey=scopeKey;}
     const candidates=[...library.values()].filter(a=>(!bagScope||a.ownerBag===bagScope)&&(!bagGroup||a.sourceGroup===bagGroup)&&(!kind||a.kind===kind));
-    const found=Search.results(candidates,{query:q,sort:'name'});
+    const found=Search.results(candidates,{query:q,sort:q?'recommended':'name'});
     const results=found.slice(0,listLimit);
     $('asset-count').textContent=results.length+' shown / '+found.length.toLocaleString()+' matching';
     $('asset-more').hidden=results.length>=found.length;
