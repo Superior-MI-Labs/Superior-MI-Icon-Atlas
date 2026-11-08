@@ -136,7 +136,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.attack_seams.05",
@@ -163,7 +164,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.attack_seams.04",
@@ -190,7 +192,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.attack_seams.03",
@@ -217,7 +220,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.attack_seams.02",
@@ -244,7 +248,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.attack_seams.01",
@@ -271,7 +276,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.attack_seams.00",
@@ -298,7 +304,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.land_recover.08",
@@ -325,7 +332,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.land_recover.07",
@@ -352,7 +360,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.land_recover.06",
@@ -379,7 +388,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.land_recover.05",
@@ -406,7 +416,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.land_recover.04",
@@ -433,7 +444,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.land_recover.03",
@@ -460,7 +472,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.land_recover.02",
@@ -487,7 +500,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.land_recover.01",
@@ -514,7 +528,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.land_recover.00",
@@ -541,7 +556,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.fall_motion.07",
@@ -568,7 +584,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.fall_motion.06",
@@ -595,7 +612,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.fall_motion.05",
@@ -622,7 +640,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.fall_motion.04",
@@ -649,7 +668,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.fall_motion.03",
@@ -676,7 +696,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.fall_motion.02",
@@ -703,7 +724,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.fall_motion.01",
@@ -730,7 +752,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.fall_motion.00",
@@ -757,7 +780,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.rise_to_apex.01",
@@ -784,7 +808,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.rise_to_apex.00",
@@ -811,7 +836,8 @@
         "prototype",
         "motion-interpolation",
         "visual-review-pending"
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.idle.00",
@@ -831,7 +857,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.idle.01",
@@ -851,7 +878,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.idle.02",
@@ -871,7 +899,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.idle.03",
@@ -891,7 +920,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.idle.04",
@@ -911,7 +941,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.idle.05",
@@ -931,7 +962,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.idle.06",
@@ -951,7 +983,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.idle.07",
@@ -971,7 +1004,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.walk.00",
@@ -991,7 +1025,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.walk.01",
@@ -1011,7 +1046,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.walk.02",
@@ -1031,7 +1067,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.walk.03",
@@ -1051,7 +1088,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.walk.04",
@@ -1071,7 +1109,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.walk.05",
@@ -1091,7 +1130,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.walk.06",
@@ -1111,7 +1151,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.walk.07",
@@ -1131,7 +1172,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.run.00",
@@ -1151,7 +1193,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.run.01",
@@ -1171,7 +1214,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.run.02",
@@ -1191,7 +1235,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.run.03",
@@ -1211,7 +1256,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.run.04",
@@ -1231,7 +1277,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.run.05",
@@ -1251,7 +1298,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.run.06",
@@ -1271,7 +1319,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.run.07",
@@ -1291,7 +1340,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.jump.00",
@@ -1311,7 +1361,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.jump.01",
@@ -1331,7 +1382,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.jump.02",
@@ -1351,7 +1403,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.jump.03",
@@ -1371,7 +1424,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.jump.04",
@@ -1391,7 +1445,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.jump.05",
@@ -1411,7 +1466,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.jump.06",
@@ -1431,7 +1487,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.jump.07",
@@ -1451,7 +1508,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.hover.00",
@@ -1471,7 +1529,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.hover.01",
@@ -1491,7 +1550,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.hover.02",
@@ -1511,7 +1571,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.hover.03",
@@ -1531,7 +1592,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.hover.04",
@@ -1551,7 +1613,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.hover.05",
@@ -1571,7 +1634,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.hover.06",
@@ -1591,7 +1655,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.hover.07",
@@ -1611,7 +1676,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.guard.00",
@@ -1631,7 +1697,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.guard.01",
@@ -1651,7 +1718,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.guard.02",
@@ -1671,7 +1739,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.guard.03",
@@ -1691,7 +1760,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.guard.04",
@@ -1711,7 +1781,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.guard.05",
@@ -1731,7 +1802,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.guard.06",
@@ -1751,7 +1823,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.guard.07",
@@ -1771,7 +1844,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.charge.00",
@@ -1791,7 +1865,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.charge.01",
@@ -1811,7 +1886,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.charge.02",
@@ -1831,7 +1907,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.charge.03",
@@ -1851,7 +1928,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.charge.04",
@@ -1871,7 +1949,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.charge.05",
@@ -1891,7 +1970,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.charge.06",
@@ -1911,7 +1991,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.charge.07",
@@ -1931,7 +2012,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.slash.00",
@@ -1951,7 +2033,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.slash.01",
@@ -1971,7 +2054,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.slash.02",
@@ -1991,7 +2075,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.slash.03",
@@ -2011,7 +2096,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.slash.04",
@@ -2031,7 +2117,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.slash.05",
@@ -2051,7 +2138,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.slash.06",
@@ -2071,7 +2159,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.slash.07",
@@ -2091,7 +2180,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.orb.00",
@@ -2111,7 +2201,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.orb.01",
@@ -2131,7 +2222,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.orb.02",
@@ -2151,7 +2243,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.orb.03",
@@ -2171,7 +2264,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.orb.04",
@@ -2191,7 +2285,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.orb.05",
@@ -2211,7 +2306,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.orb.06",
@@ -2231,7 +2327,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.source.orb.07",
@@ -2251,7 +2348,8 @@
       "pivot": [
         0.5,
         0.9
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.idle",
@@ -2302,7 +2400,8 @@
           "asset": "smi.sky.proto.source.idle.07",
           "duration_ms": 140
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.walk",
@@ -2353,7 +2452,8 @@
           "asset": "smi.sky.proto.source.walk.07",
           "duration_ms": 120
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.run",
@@ -2404,7 +2504,8 @@
           "asset": "smi.sky.proto.source.run.07",
           "duration_ms": 90
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.guard",
@@ -2455,7 +2556,8 @@
           "asset": "smi.sky.proto.source.guard.07",
           "duration_ms": 140
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.jump_takeoff",
@@ -2490,7 +2592,8 @@
           "asset": "smi.sky.proto.source.jump.03",
           "duration_ms": 120
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.jump_rise",
@@ -2541,7 +2644,8 @@
           "asset": "smi.sky.proto.source.hover.03",
           "duration_ms": 100
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.jump_apex",
@@ -2572,7 +2676,8 @@
           "asset": "smi.sky.proto.source.hover.05",
           "duration_ms": 100
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.jump_fall",
@@ -2623,7 +2728,8 @@
           "asset": "smi.sky.proto.source.fall_motion.07",
           "duration_ms": 90
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.jump_land",
@@ -2678,7 +2784,8 @@
           "asset": "smi.sky.proto.source.land_recover.08",
           "duration_ms": 100
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.attack_charge",
@@ -2741,7 +2848,8 @@
           "asset": "smi.sky.proto.source.slash.00",
           "duration_ms": 70
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.attack_slash",
@@ -2804,7 +2912,8 @@
           "asset": "smi.sky.proto.source.orb.00",
           "duration_ms": 70
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.anim.attack_orb",
@@ -2867,7 +2976,8 @@
           "asset": "smi.sky.proto.source.attack_seams.06",
           "duration_ms": 70
         }
-      ]
+      ],
+      "style": "fantasy-character-prototype"
     },
     {
       "id": "smi.sky.proto.actor.states",
@@ -2896,7 +3006,8 @@
         "attack_slash": "smi.sky.proto.anim.attack_slash",
         "attack_orb": "smi.sky.proto.anim.attack_orb"
       },
-      "default_state": "idle"
+      "default_state": "idle",
+      "style": "fantasy-character-prototype"
     }
   ],
   "preview_profiles": [

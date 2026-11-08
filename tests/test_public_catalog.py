@@ -48,7 +48,13 @@ class PublicCatalogTests(unittest.TestCase):
             for field in ('domain','style','subject','review','status','license','animated'):
                 self.assertIn('id="'+field+'"',(site/'index.html').read_text())
             self.assertEqual(check(site/'demo/fantasy-rpg-hud-wave1.zip'),[])
-            self.assertTrue(all(a['license']=='CC0-1.0' for a in public['assets'] if not a.get('legacy')))
+            # Existing commercial-ready packs remain CC0; Sky is a deliberately
+            # restricted prototype, not an implicit CC0 license grant.
+            licensed=[a for a in public['assets'] if not a.get('legacy')]
+            self.assertTrue(all(a.get('license') not in ('','UNKNOWN','UNSPECIFIED') for a in licensed))
+            self.assertEqual({a['license'] for a in licensed if a['pack']=='sky-prototype'},
+                             {'PROTOTYPE-EVALUATION-ONLY'})
+            self.assertTrue(all(a['license']=='CC0-1.0' for a in licensed if a['pack']!='sky-prototype'))
             self.assertEqual(sum(a.get('legacy',False) for a in public['assets']),2073)
             home=(site/'index.html').read_text().lower()
             self.assertNotIn('browse the 2,073-icon library',home)
