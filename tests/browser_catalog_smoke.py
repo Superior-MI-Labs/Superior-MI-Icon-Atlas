@@ -138,7 +138,8 @@ def check(page):
     page.mouse.up()
     imported_value=int(page.locator('#input-controls input[data-input-key="value"]').input_value())
     assert imported_value>60, f"Builder drag did not update canonical input: {imported_value}; status: {page.locator('#builder-status').inner_text()}"
-    page.goto(url+"builder.html?example=character-animations.zip&asset=smi.example.robot.states",wait_until="networkidle")
+    page.goto(url+"builder.html",wait_until="networkidle")
+    page.locator("#upload").set_input_files(str(SITE/"demo"/"character-animations.zip"))
     option=page.locator("#test-drive-profile")
     expect(option).to_have_value("smi.example.robot.platformer",timeout=20000)
     stage=page.locator("#stage")
