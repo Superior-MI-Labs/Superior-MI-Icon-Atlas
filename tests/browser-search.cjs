@@ -49,6 +49,15 @@ assert.equal(Search.results(data.assets,{...params,pack:'legacy-icons'}).length,
 assert.ok(Search.results(data.assets,{...params,query:'fire'}).some(a=>a.legacy));
 assert.ok(Search.results(data.assets,{...params,query:'folder'}).some(a=>a.legacy));
 assert.ok(Search.results(data.assets,{...params,query:'health'}).some(a=>!a.legacy));
+const playable=data.assets.filter(a=>a.showcases?.length);
+assert.equal(playable.length,1,'Sky state set should be the single playable showcase candidate');
+assert.equal(playable[0].id,'smi.sky.proto.actor.states');
+assert.deepEqual(playable[0].showcases,[{page:'sky-prototype.html',label:'Play Sky interactive prototype'}]);
+assert.ok(Search.results(data.assets,{...params,query:'playable interactive demo'})[0].id===playable[0].id);
+assert.deepEqual(Search.results(data.assets,{...params,experience:'playable'}).map(a=>a.id),[playable[0].id]);
+assert.ok(Search.facets(data.assets,params).experience.some(x=>x.value==='playable'&&x.count===1));
+assert.ok(Search.results(data.assets,params)[0].kind==='composition','Playable demos do not displace finished default compositions');
+
 // Expected sequence IDs come from the same approved source manifests as the catalog.
 const expectedSequences=new Set();
 for(const publication of approved){

@@ -2,6 +2,7 @@
 """Derive static browser projection from canonical per-atlas manifests, stdlib only."""
 from __future__ import annotations
 import json
+import re
 from zipfile import ZipFile, ZIP_DEFLATED, ZipInfo
 from pathlib import Path
 import shutil
@@ -11,6 +12,24 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from atlasctl import load,validate
 from tools.asset_inventory import audit as audit_assets
+
+
+def resolve_showcases(index,manifests,dest):
+    """Project optional published demo links onto real assets, never pseudo-assets."""
+    authored_ids={a['id'] for pack in manifests for a in pack['assets']}
+    links,keywords,seen={},{},set()
+    for showcase in index.get('showcases',[]):
+        asset_id=showcase['asset'];page=showcase['page'];label=showcase['label']
+        if (asset_id not in authored_ids or
+            not re.fullmatch(r'[a-z0-9][a-z0-9_-]*\.html',page) or
+            not (dest/page).is_file() or
+            (asset_id,page) in seen or
+            not isinstance(label,str) or not label.strip()):
+            raise ValueError('Invalid/unpublished showcase: '+str(showcase))
+        seen.add((asset_id,page))
+        links.setdefault(asset_id,[]).append({'page':page,'label':label})
+        keywords.setdefault(asset_id,[]).extend([label,*showcase.get('keywords',[])])
+    return links,keywords
 
 
 def build(dest:Path|None=None):
@@ -184,6 +203,7 @@ for(const texture of Object.values(pack.textures)){
                  'license':sorted({p.get('license','UNSPECIFIED') for p in manifests})}
         if any(l in ('UNSPECIFIED','UNKNOWN','') for l in pubpack['license']):raise ValueError('Unknown public license')
         public_packs.append(pubpack)
+        showcases,keywords=resolve_showcases(index,manifests,dest)
         for pack in manifests:
             # Inherit style only when every styled source region agrees.
             region_styles={a['style'] for a in pack['assets'] if a['kind']=='region' and a.get('style')}
@@ -197,7 +217,9 @@ for(const texture of Object.values(pack.textures)){
                     'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
                     'kind':a['kind'],'style':a.get('style') or inherited_style,
                     'tags':a.get('tags',[]),'subjects':a.get('subjects',[]),
-                    'aliases':a.get('aliases',[]),'concept_id':a.get('concept_id'),
+                    'aliases':[*a.get('aliases',[]),*keywords.get(ident,[])],'concept_id':a.get('concept_id'),
+                    'showcases':showcases.get(ident,[]),
+                    'description':index.get('description','') if ident in showcases else a.get('description',''),
                     'variant':a.get('variant',''),'domain':a.get('domain') or index.get('name',pack_name),
                     'pack':pack_name,
                     'published':record['published'],'visual_qa':record['visual_qa'],'license':a.get('license',pack.get('license','')),

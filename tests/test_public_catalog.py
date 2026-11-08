@@ -44,6 +44,14 @@ class PublicCatalogTests(unittest.TestCase):
             self.assertTrue(all(a.get('domain') and a.get('review_status') for a in archive))
             self.assertTrue(any(a.get('concept_id') for a in archive))
             self.assertEqual(len({a['id'] for a in public['assets']}),2073+expected_count)
+            # A playable showcase is metadata on a real asset, not an extra asset.
+            demos=[a for a in public['assets'] if a.get('showcases')]
+            self.assertEqual(len(demos),1)
+            self.assertEqual(demos[0]['id'],'smi.sky.proto.actor.states')
+            self.assertEqual(demos[0]['showcases'],[{'page':'sky-prototype.html','label':'Play Sky interactive prototype'}])
+            self.assertIn('playable',demos[0]['aliases'])
+            self.assertTrue((site/'sky-prototype.html').is_file())
+
             self.assertTrue(all(a.get('style') for a in public['assets']))
             for field in ('domain','style','subject','review','status','license','animated'):
                 self.assertIn('id="'+field+'"',(site/'index.html').read_text())
@@ -65,6 +73,27 @@ class PublicCatalogTests(unittest.TestCase):
             self.assertNotIn('catalog-data.js',home)
             self.assertIn('public-catalog.json',(site/'app.js').read_text())
             self.assertIn('asset-renderer.js',(site/'builder.html').read_text())
+    def test_showcase_reference_contract_rejects_unsafe_or_unpublished_pages(self):
+        from tools.build_site import resolve_showcases
+        with tempfile.TemporaryDirectory() as root:
+            dest=Path(root)
+            (dest/'demo.html').write_text('Prototype')
+            packs=[{'assets':[{'id':'demo.actor'}]}]
+            original={'showcases':[{'asset':'demo.actor','page':'demo.html',
+                                    'label':'Play demo','keywords':['playable']}]}
+            links,terms=resolve_showcases(original,packs,dest)
+            self.assertEqual(links,{'demo.actor':[{'page':'demo.html','label':'Play demo'}]})
+            self.assertEqual(terms['demo.actor'],['Play demo','playable'])
+            for updates in ({'asset':'missing'}, {'page':'../demo.html'},
+                            {'page':'https://example.com'}, {'page':'missing.html'},
+                            {'label':' '}):
+                bad=dict(original['showcases'][0],**updates)
+                with self.subTest(updates=updates):
+                    with self.assertRaises(ValueError):
+                        resolve_showcases({'showcases':[bad]},packs,dest)
+            with self.assertRaises(ValueError):
+                resolve_showcases({'showcases':original['showcases']*2},packs,dest)
+
     def test_transparent_storyforge_atlas_cells_do_not_cut_through_neighbor_art(self):
         """Every crop boundary must lie in a transparent gutter, not across an icon."""
         from PIL import Image

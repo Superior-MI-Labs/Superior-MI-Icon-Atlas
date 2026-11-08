@@ -52,6 +52,23 @@ def check(page):
     assert page.locator("#detail-tags span").count() >= 1, "No manifest keywords in inspector"
     page.locator("#close").click()
 
+    # A playable demo remains the canonical published Sky asset, but gets
+    # a separate direct-play link in its normal search card and detail view.
+    page.locator("#clear-filters").click()
+    page.locator("#experience").select_option("playable")
+    expect(page.locator("#count")).to_have_text("1 matches")
+    sky=page.locator("#gallery .showcase-card")
+    expect(sky).to_have_count(1)
+    expect(sky.locator("a.showcase-link")).to_have_attribute("href","sky-prototype.html")
+    sky.locator("button.asset-tile").click()
+    expect(page.locator("#detail[open]")).to_be_visible()
+    expect(page.locator("#detail-showcases a.showcase-link")).to_have_attribute("href","sky-prototype.html")
+    page.locator("#close").click()
+    page.locator("#clear-filters").click()
+    page.locator("#search").fill("playable interactive demo")
+    expect(page.locator("#gallery .showcase-card")).to_have_count(1)
+    page.locator("#clear-filters").click()
+
     # Clear the previous "healthbar" query before selecting a pack: facets show only matching options.
     page.locator("#clear-filters").click()
     # Recolor is a legacy-only control; newer published assets can rank first for "flame".

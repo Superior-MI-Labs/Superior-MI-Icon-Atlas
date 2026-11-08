@@ -3,7 +3,7 @@
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;root.VisualAtlasSearch=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
   const clean=value=>String(value??'').normalize('NFKD').toLowerCase().replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
   const tokens=value=>clean(value).split(/\s+/).filter(Boolean);
-  const FILTERS=['kind','pack','domain','style','subject','review','status','license','animated'];
+  const FILTERS=['kind','pack','domain','style','subject','review','status','license','animated','experience'];
   const synonymCache=new WeakMap();
   function thesaurus(groups={}){
     if(synonymCache.has(groups))return synonymCache.get(groups);
@@ -53,6 +53,7 @@
     key==='review'?a.review_status||'':
     key==='status'?(a.legacy?'archive':'published'):
     key==='animated'?(a.animated?'yes':'no'):
+    key==='experience'?(a.showcases?.length?'playable':''):
     key==='license'?a.license||'':
     a[key]||'';
   function matches(a,params,ignore=''){
@@ -65,8 +66,8 @@
   }
   function rank(a,query,synonyms={}){
     const relevance=score(a,query,synonyms);
-    if(query.trim())return relevance+(a.kind==='composition'?14:0)+(a.legacy?0:12);
-    return relevance+(a.legacy?0:250)+(a.kind==='composition'?120:a.kind==='sequence'?60:a.kind==='state_set'?35:0);
+    if(query.trim())return relevance+(a.kind==='composition'?14:0)+(a.legacy?0:12)+(a.showcases?.length?140:0);
+    return relevance+(a.legacy?0:250)+(a.kind==='composition'?120:a.kind==='sequence'?60:a.kind==='state_set'?35:0)+(a.showcases?.length?70:0);
   }
   function results(entries,params={}){
     const p={query:'',sort:'recommended',...params},hasDiscovery=Boolean(p.query.trim()||FILTERS.some(k=>p[k]));

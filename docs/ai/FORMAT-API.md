@@ -135,3 +135,25 @@ The same stat profile also supports optional `derived` linear formulas and
 `effects` with timed additive/multiplicative modifiers. Simulated time advances
 only through explicit bounded steps, and derived values are never written into
 base stats. See [stat and action examples](STATS-ACTIONS.md).
+
+## Playable showcases in the public asset browser
+
+Published `smi-visual-collection/1` indexes may declare optional
+`showcases`, each referencing an asset already owned by that collection:
+
+```json
+"showcases": [{
+  "asset": "example.character.states",
+  "page": "example-playground.html",
+  "label": "Play interactive prototype",
+  "keywords": ["playable", "interactive", "demo"]
+}]
+```
+
+The site builder verifies that the target asset belongs to the published
+collection and the named local HTML page was generated. It projects this
+metadata onto the **existing** asset record in `public-catalog.json`, rather
+than creating a fake asset, copying artwork, or maintaining another search
+database. Search and the Playable Demos filter find the linked asset; its card
+and inspector expose direct play links. Future showcases use the same optional
+contract and keep the normal published/rights/visual-QA gates.
