@@ -137,7 +137,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "attack animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.attack_seams.05",
@@ -165,7 +170,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "attack animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.attack_seams.04",
@@ -193,7 +203,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "attack animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.attack_seams.03",
@@ -221,7 +236,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "attack animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.attack_seams.02",
@@ -249,7 +269,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "attack animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.attack_seams.01",
@@ -277,7 +302,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "attack animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.attack_seams.00",
@@ -305,7 +335,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "attack animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.land_recover.08",
@@ -333,7 +368,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.land_recover.07",
@@ -361,7 +401,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.land_recover.06",
@@ -389,7 +434,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.land_recover.05",
@@ -417,7 +467,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.land_recover.04",
@@ -445,7 +500,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.land_recover.03",
@@ -473,7 +533,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.land_recover.02",
@@ -501,7 +566,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.land_recover.01",
@@ -529,7 +599,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.land_recover.00",
@@ -557,7 +632,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.fall_motion.07",
@@ -585,7 +665,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "fall animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.fall_motion.06",
@@ -613,7 +698,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "fall animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.fall_motion.05",
@@ -641,7 +731,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "fall animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.fall_motion.04",
@@ -669,7 +764,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "fall animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.fall_motion.03",
@@ -697,7 +797,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "fall animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.fall_motion.02",
@@ -725,7 +830,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "fall animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.fall_motion.01",
@@ -753,7 +863,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "fall animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.fall_motion.00",
@@ -781,7 +896,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "fall animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.rise_to_apex.01",
@@ -809,7 +929,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "rise animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.rise_to_apex.00",
@@ -837,7 +962,12 @@
         "motion-interpolation",
         "visual-review-pending"
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "rise animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.idle.00",
@@ -858,7 +988,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "idle animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.idle.01",
@@ -879,7 +1014,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "idle animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.idle.02",
@@ -900,7 +1040,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "idle animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.idle.03",
@@ -921,7 +1066,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "idle animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.idle.04",
@@ -942,7 +1092,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "idle animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.idle.05",
@@ -963,7 +1118,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "idle animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.idle.06",
@@ -984,7 +1144,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "idle animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.idle.07",
@@ -1005,7 +1170,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "idle animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.walk.00",
@@ -1026,7 +1196,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "walk animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.walk.01",
@@ -1047,7 +1222,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "walk animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.walk.02",
@@ -1068,7 +1248,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "walk animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.walk.03",
@@ -1089,7 +1274,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "walk animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.walk.04",
@@ -1110,7 +1300,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "walk animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.walk.05",
@@ -1131,7 +1326,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "walk animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.walk.06",
@@ -1152,7 +1352,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "walk animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.walk.07",
@@ -1173,7 +1378,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "walk animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.run.00",
@@ -1194,7 +1404,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "run animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.run.01",
@@ -1215,7 +1430,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "run animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.run.02",
@@ -1236,7 +1456,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "run animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.run.03",
@@ -1257,7 +1482,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "run animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.run.04",
@@ -1278,7 +1508,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "run animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.run.05",
@@ -1299,7 +1534,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "run animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.run.06",
@@ -1320,7 +1560,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "run animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.run.07",
@@ -1341,7 +1586,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "run animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.jump.00",
@@ -1362,7 +1612,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.jump.01",
@@ -1383,7 +1638,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.jump.02",
@@ -1404,7 +1664,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.jump.03",
@@ -1425,7 +1690,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.jump.04",
@@ -1446,7 +1716,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.jump.05",
@@ -1467,7 +1742,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.jump.06",
@@ -1488,7 +1768,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.jump.07",
@@ -1509,7 +1794,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.hover.00",
@@ -1530,7 +1820,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "hover animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.hover.01",
@@ -1551,7 +1846,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "hover animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.hover.02",
@@ -1572,7 +1872,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "hover animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.hover.03",
@@ -1593,7 +1898,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "hover animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.hover.04",
@@ -1614,7 +1924,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "hover animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.hover.05",
@@ -1635,7 +1950,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "hover animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.hover.06",
@@ -1656,7 +1976,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "hover animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.hover.07",
@@ -1677,7 +2002,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "hover animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.guard.00",
@@ -1698,7 +2028,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "guard animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.guard.01",
@@ -1719,7 +2054,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "guard animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.guard.02",
@@ -1740,7 +2080,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "guard animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.guard.03",
@@ -1761,7 +2106,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "guard animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.guard.04",
@@ -1782,7 +2132,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "guard animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.guard.05",
@@ -1803,7 +2158,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "guard animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.guard.06",
@@ -1824,7 +2184,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "guard animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.guard.07",
@@ -1845,7 +2210,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "guard animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.charge.00",
@@ -1866,7 +2236,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "charge animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.charge.01",
@@ -1887,7 +2262,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "charge animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.charge.02",
@@ -1908,7 +2288,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "charge animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.charge.03",
@@ -1929,7 +2314,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "charge animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.charge.04",
@@ -1950,7 +2340,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "charge animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.charge.05",
@@ -1971,7 +2366,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "charge animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.charge.06",
@@ -1992,7 +2392,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "charge animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.charge.07",
@@ -2013,7 +2418,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "charge animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.slash.00",
@@ -2034,7 +2444,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "slash animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.slash.01",
@@ -2055,7 +2470,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "slash animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.slash.02",
@@ -2076,7 +2496,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "slash animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.slash.03",
@@ -2097,7 +2522,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "slash animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.slash.04",
@@ -2118,7 +2548,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "slash animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.slash.05",
@@ -2139,7 +2574,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "slash animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.slash.06",
@@ -2160,7 +2600,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "slash animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.slash.07",
@@ -2181,7 +2626,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "slash animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.orb.00",
@@ -2202,7 +2652,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "orb animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.orb.01",
@@ -2223,7 +2678,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "orb animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.orb.02",
@@ -2244,7 +2704,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "orb animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.orb.03",
@@ -2265,7 +2730,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "orb animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.orb.04",
@@ -2286,7 +2756,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "orb animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.orb.05",
@@ -2307,7 +2782,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "orb animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.orb.06",
@@ -2328,7 +2808,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "orb animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.source.orb.07",
@@ -2349,7 +2834,12 @@
         0.5,
         0.9
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "orb animation",
+        "sprite animation frame"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.idle",
@@ -2401,7 +2891,12 @@
           "duration_ms": 140
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "idle animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.walk",
@@ -2453,7 +2948,12 @@
           "duration_ms": 120
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "walk animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.run",
@@ -2505,7 +3005,12 @@
           "duration_ms": 90
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "run animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.guard",
@@ -2557,7 +3062,12 @@
           "duration_ms": 140
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "guard animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.jump_takeoff",
@@ -2593,7 +3103,12 @@
           "duration_ms": 120
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.jump_rise",
@@ -2645,7 +3160,12 @@
           "duration_ms": 100
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.jump_apex",
@@ -2677,7 +3197,12 @@
           "duration_ms": 100
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.jump_fall",
@@ -2729,7 +3254,12 @@
           "duration_ms": 90
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.jump_land",
@@ -2785,7 +3315,12 @@
           "duration_ms": 100
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "jump animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.attack_charge",
@@ -2849,7 +3384,12 @@
           "duration_ms": 70
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "attack animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.attack_slash",
@@ -2913,7 +3453,12 @@
           "duration_ms": 70
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "attack animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.anim.attack_orb",
@@ -2977,7 +3522,12 @@
           "duration_ms": 70
         }
       ],
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "attack animation",
+        "animated sequence"
+      ]
     },
     {
       "id": "smi.sky.proto.actor.states",
@@ -3007,7 +3557,12 @@
         "attack_orb": "smi.sky.proto.anim.attack_orb"
       },
       "default_state": "idle",
-      "style": "fantasy-character-prototype"
+      "style": "fantasy-character-prototype",
+      "subjects": [
+        "Sky fantasy feline character",
+        "animation",
+        "animation states"
+      ]
     }
   ],
   "preview_profiles": [
