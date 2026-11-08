@@ -44,7 +44,7 @@
       }
       for(const [key,d] of entries(derived)){
         if(!name(key)||has(stats,key)||!object(d)||!finite(d.min)||!finite(d.max)||
-           d.max<=d.min||!finite(d.offset)||Math.abs(d.offset)>1e9||
+           d.max<=d.min||(d.offset!==undefined&&(!finite(d.offset)||Math.abs(d.offset)>1e9))||
            !Array.isArray(d.terms)||!d.terms.length||d.terms.length>8){
           errors.push(p.id+": invalid derived "+key);continue;
         }

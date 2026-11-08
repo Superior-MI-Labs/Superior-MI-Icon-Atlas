@@ -130,3 +130,8 @@ inputs. Denied costs change nothing and emit nothing. The Builder's Stat & actio
 lab lets creators interact with those values and immediately preview the HUD or
 animation through the shared renderer. Simulation values are temporary;
 export preserves definitions. [Full stat profile guide](STATS-ACTIONS.md).
+
+The same stat profile also supports optional `derived` linear formulas and
+`effects` with timed additive/multiplicative modifiers. Simulated time advances
+only through explicit bounded steps, and derived values are never written into
+base stats. See [stat and action examples](STATS-ACTIONS.md).
