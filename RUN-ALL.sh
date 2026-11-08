@@ -46,5 +46,6 @@ if command -v node >/dev/null 2>&1; then
   node tests/slots-presets.cjs
   node tests/repeat-layout.cjs
   node tests/animation-pivot.cjs
+  node tests/preview-interaction.cjs
 else echo 'WARNING: Node tests unavailable (Node not installed). GitHub CI will run these tests.'; fi
 printf '\nPASS: All locally available validations. Run: bash RUN-LOCALLY.sh\n'
