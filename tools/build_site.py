@@ -14,6 +14,24 @@ from atlasctl import load,validate
 from tools.asset_inventory import audit as audit_assets
 
 
+def resolve_showcases(index,manifests,dest):
+    """Project optional published demo links onto real assets, never pseudo-assets."""
+    authored_ids={a['id'] for pack in manifests for a in pack['assets']}
+    links,keywords,seen={},{},set()
+    for showcase in index.get('showcases',[]):
+        asset_id=showcase['asset'];page=showcase['page'];label=showcase['label']
+        if (asset_id not in authored_ids or
+            not re.fullmatch(r'[a-z0-9][a-z0-9_-]*\.html',page) or
+            not (dest/page).is_file() or
+            (asset_id,page) in seen or
+            not isinstance(label,str) or not label.strip()):
+            raise ValueError('Invalid/unpublished showcase: '+str(showcase))
+        seen.add((asset_id,page))
+        links.setdefault(asset_id,[]).append({'page':page,'label':label})
+        keywords.setdefault(asset_id,[]).extend([label,*showcase.get('keywords',[])])
+    return links,keywords
+
+
 def build(dest:Path|None=None):
     dest=Path(dest or ROOT/'site').resolve()
     m=load(ROOT)
@@ -185,25 +203,7 @@ for(const texture of Object.values(pack.textures)){
                  'license':sorted({p.get('license','UNSPECIFIED') for p in manifests})}
         if any(l in ('UNSPECIFIED','UNKNOWN','') for l in pubpack['license']):raise ValueError('Unknown public license')
         public_packs.append(pubpack)
-        # Optional playable experiences are editorial links attached to *real*
-        # published assets. They do not create pseudo-assets or another catalog.
-        # Only safe, actually-generated local pages may be linked.
-        authored_ids={a['id'] for pack in manifests for a in pack['assets']}
-        showcases={}
-        keywords={}
-        declared=set()
-        for showcase in index.get('showcases',[]):
-            asset_id=showcase['asset']; page=showcase['page']
-            label=showcase['label']
-            if (asset_id not in authored_ids or
-                not re.fullmatch(r'[a-z0-9][a-z0-9_-]*\.html',page) or
-                not (dest/page).is_file() or
-                (asset_id,page) in declared or
-                not isinstance(label,str) or not label.strip()):
-                raise ValueError('Invalid/unpublished showcase in '+str(folder)+': '+str(showcase))
-            declared.add((asset_id,page))
-            showcases.setdefault(asset_id,[]).append({'page':page,'label':label})
-            keywords.setdefault(asset_id,[]).extend([label,*showcase.get('keywords',[])])
+        showcases,keywords=resolve_showcases(index,manifests,dest)
         for pack in manifests:
             # Inherit style only when every styled source region agrees.
             region_styles={a['style'] for a in pack['assets'] if a['kind']=='region' and a.get('style')}
