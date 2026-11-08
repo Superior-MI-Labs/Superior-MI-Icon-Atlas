@@ -124,23 +124,20 @@ def check(page):
     page.goto(url+"builder.html?example=royal-forge-controls.zip&asset=smi.ui.fantasy01.wave2.widget.scroll-horizontal",wait_until="networkidle")
     stage=page.locator("#stage")
     expect(stage).to_have_attribute("data-interactive","true",timeout=20000)
+    stage.scroll_into_view_if_needed()
     box=stage.bounding_box()
     assert box and box["width"]>0 and box["height"]>0
     # The builder centers the selected 268 x 44 asset in a 320 x 240 stage.
-    stage.evaluate("(el)=>{el._pointerDiagnostics=[];for(const kind of ['pointerdown','pointermove','pointerup','lostpointercapture'])el.addEventListener(kind,e=>el._pointerDiagnostics.push({kind,x:e.clientX,y:e.clientY}),{capture:true})}")
     start_x=box["x"]+box["width"]*.25
     finish_x=box["x"]+box["width"]*.75
     stage_y=box["y"]+box["height"]*.5
-    at_start=page.evaluate("([x,y])=>document.elementFromPoint(x,y)?.id||document.elementFromPoint(x,y)?.tagName",[start_x,stage_y])
+    assert page.evaluate("([x,y])=>document.elementFromPoint(x,y)?.id",[start_x,stage_y])=="stage", "Canvas must be visible before a pointer test"
     page.mouse.move(start_x,stage_y)
     page.mouse.down()
-    value_on_down=page.locator('#input-controls input[data-input-key="value"]').input_value()
     page.mouse.move(finish_x,stage_y,steps=5)
     page.mouse.up()
     imported_value=int(page.locator('#input-controls input[data-input-key="value"]').input_value())
-    diagnostic=stage.evaluate("(e)=>e._pointerDiagnostics")
-    status=page.locator("#builder-status").inner_text()
-    assert imported_value>60, f"Builder drag value {imported_value}, after down {value_on_down}, topmost {at_start}, stage {box}, events {diagnostic}, status {status}"
+    assert imported_value>60, f"Builder drag did not update canonical input: {imported_value}; status: {page.locator('#builder-status').inner_text()}"
     page.goto(url,wait_until="networkidle")
     assert not errors, "Browser JavaScript errors: " + repr(errors)
     return page.locator("#count").inner_text()
