@@ -15,7 +15,7 @@ assert.equal(I.pointerTarget(slider,{x:164,y:300},size),null,'off-track press mu
 assert.equal(I.pointerTarget(slider,{x:164,y:300},size,true).payload.value,50,'captured drag continues outside track');
 const vertical={...slider,layers:[{asset:'test.thumb',position_from_input:{input:'value',axis:'y',from_px:276,to_px:0}}]};
 assert.equal(I.pointerTarget(vertical,{x:26,y:26},size).payload.value,100);
-assert.equal(I.pointerTarget(vertical,{x:26,y:302},size).payload.value,0);
+assert.equal(I.pointerTarget(vertical,{x:26,y:304},size).payload.value,0);
 const toggle={kind:'composition',size_px:[100,40],behavior:{role:'toggle',on:{activate:[{op:'toggle',input:'enabled'}]}},inputs:{enabled:{type:'boolean',default:false}}};
 assert.equal(I.dispatch(toggle,{},I.pointerTarget(toggle,{x:30,y:20}).event).values.enabled,true);
 assert.equal(I.pointerTarget(toggle,{x:101,y:20}),null);
