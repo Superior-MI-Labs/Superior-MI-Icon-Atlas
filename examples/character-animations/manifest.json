@@ -202,6 +202,12 @@
           "min": 0,
           "max": 100,
           "default": 60
+        },
+        "mobility": {
+          "type": "number",
+          "default": 11,
+          "min": 0,
+          "max": 40
         }
       },
       "behavior": {
@@ -209,6 +215,9 @@
         "outputs": {
           "stamina": {
             "from_input": "stamina"
+          },
+          "mobility": {
+            "from_input": "mobility"
           }
         },
         "on": {
@@ -327,14 +336,55 @@
             "stamina": 25
           },
           "emit": "recover"
+        },
+        "haste": {
+          "costs": {
+            "stamina": 10
+          },
+          "activate": "haste"
+        },
+        "remove_haste": {
+          "remove": "haste"
         }
       },
       "bindings": [
         {
           "stat": "stamina",
           "input": "stamina"
+        },
+        {
+          "stat": "mobility",
+          "input": "mobility"
         }
-      ]
+      ],
+      "derived": {
+        "mobility": {
+          "min": 0,
+          "max": 40,
+          "offset": 0,
+          "terms": [
+            {
+              "stat": "speed",
+              "coefficient": 2
+            },
+            {
+              "stat": "stamina",
+              "coefficient": 0.05
+            }
+          ]
+        }
+      },
+      "effects": {
+        "haste": {
+          "duration_ms": 3000,
+          "modifiers": [
+            {
+              "stat": "speed",
+              "multiply": 1.5
+            }
+          ]
+        }
+      }
     }
   ]
 }
