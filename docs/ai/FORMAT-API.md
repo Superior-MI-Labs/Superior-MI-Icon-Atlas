@@ -80,3 +80,21 @@ Manifests define the geometry, defaults, frames, state mapping, layer order and 
 The creator may specify a number input with `min:0, max:100` or `min:40, max:60`. The manifest stores native values and outputs (e.g. 72%, 50°C). Preview clipping and position bindings convert those values to a unit fraction using `(value-min)/(max-min)`. Never feed 72 directly to a renderer that expects a 0..1 fraction. Check min / mid / max **visually**, including layer occlusion. Invalid numeric range (max <= min) is not a working contract.
 
 For production GUI controls with numeric output, the additional required [visual geometry and range acceptance rules](gui/VALUE-GEOMETRY.md) cover low-end visibility, actual pixel extent, thumb-trail alignment and SVG aspect correctness.
+
+## Direct manipulation and state audition (shared renderer)
+
+In the public asset inspector and private Builder, `behavior.role: "slider"` with
+an event assigning `source: "event.value"` can be dragged directly on
+the rendered preview when a layer declares `position_from_input` for that input.
+The hit range comes from the authored travel endpoints, layer offset and thumb
+dimensions. Mouse and touch use pointer capture; updates run through the
+same typed interaction dispatcher and input reconciler as the ordinary sliders.
+A `button` or `toggle` with an `activate` event can be clicked on its preview.
+
+The Builder also offers **Test drive** on `state_set` assets and actor compositions
+whose enum input is bound through `state_from_input`. Focus the stage, use
+left/right (or A/D) to audition previous/next states, Space to reset, or a
+connected controller's D-pad/A button. This is **state preview navigation**,
+not a gameplay movement, input-binding or combat engine. The editor's transport
+keys are not persisted as gameplay behavior. All states and input choices
+still originate from the canonical manifest.
