@@ -44,6 +44,25 @@ class StatProfileValidationTests(unittest.TestCase):
             with self.subTest(mutation=mutate):
                 self.assertTrue(self.qualify(folder,pack))
 
+    def test_invalid_derived_effects_and_bindings(self):
+        folder,base=self.fixture("character-animations")
+        edits=[
+            lambda p:p["stat_profiles"][0]["derived"]["mobility"]["terms"][0].update({"stat":"ghost"}),
+            lambda p:p["stat_profiles"][0]["derived"]["mobility"]["terms"].append(
+                copy.deepcopy(p["stat_profiles"][0]["derived"]["mobility"]["terms"][0])),
+            lambda p:p["stat_profiles"][0]["derived"]["mobility"].update({"min":50,"max":10}),
+            lambda p:p["stat_profiles"][0]["effects"]["haste"]["modifiers"][0].update({"stat":"ghost"}),
+            lambda p:p["stat_profiles"][0]["effects"]["haste"]["modifiers"].append(
+                copy.deepcopy(p["stat_profiles"][0]["effects"]["haste"]["modifiers"][0])),
+            lambda p:p["stat_profiles"][0]["actions"]["haste"].update({"activate":"ghost"}),
+            lambda p:p["stat_profiles"][0]["bindings"].append(
+                copy.deepcopy(p["stat_profiles"][0]["bindings"][-1])),
+        ]
+        for change in edits:
+            pack=copy.deepcopy(base);change(pack)
+            with self.subTest(change=change):
+                self.assertTrue(self.qualify(folder,pack))
+
     def test_incompatible_input_range(self):
         folder,pack=self.fixture("interactive-hud")
         pack["stat_profiles"][0]["stats"]["energy"]["max"]=200

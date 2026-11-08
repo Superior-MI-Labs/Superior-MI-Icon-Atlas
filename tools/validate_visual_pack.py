@@ -95,7 +95,7 @@ def validate_preview_profiles(packs, ids):
 
 
 def validate_stat_profiles(packs, ids):
-    """Stat definitions remain canonical; visual inputs are presentation bindings."""
+    """Stat profile semantics; the JSON Schema owns structural constraints."""
     problems, names = [], set()
     for pack in packs:
         for profile in pack.get('stat_profiles', []):
@@ -107,11 +107,30 @@ def validate_stat_profiles(packs, ids):
                 problems.append(label+': stat target must be a composition')
                 continue
             stats=profile['stats']
-            for key,stat in stats.items():
-                if stat['max']<=stat['min'] or not stat['min']<=stat['initial']<=stat['max']:
+            derived=profile.get('derived', {})
+            effects=profile.get('effects', {})
+            for key,d in stats.items():
+                if d['max']<=d['min'] or not d['min']<=d['initial']<=d['max']:
                     problems.append(label+': invalid stat range '+key)
+            for key,d in derived.items():
+                if key in stats or d['max']<=d['min']:
+                    problems.append(label+': invalid derived '+key)
+                used=set()
+                for term in d['terms']:
+                    stat=term['stat']
+                    if stat not in stats or stat in used or term['coefficient']==0:
+                        problems.append(label+': invalid derived term '+key+'/'+stat)
+                    used.add(stat)
+            for key,effect in effects.items():
+                used=set()
+                for modifier in effect['modifiers']:
+                    stat=modifier['stat']
+                    if (stat not in stats or stat in used or
+                        (modifier.get('add',0)==0 and modifier.get('multiply',1)==1)):
+                        problems.append(label+': invalid modifier '+key+'/'+stat)
+                    used.add(stat)
             for key,action in profile['actions'].items():
-                if not action.get('costs') and not action.get('deltas') and not action.get('emit'):
+                if not any(action.get(prop) for prop in ('costs','deltas','emit','activate','remove')):
                     problems.append(label+': empty stat action '+key)
                 for stat,cost in action.get('costs',{}).items():
                     if stat not in stats or cost<=0:problems.append(label+': invalid cost '+key+'/'+stat)
@@ -120,9 +139,12 @@ def validate_stat_profiles(packs, ids):
                 event=action.get('emit')
                 if event and event not in (asset.get('behavior') or {}).get('on',{}):
                     problems.append(label+': unknown visual event '+key+'/'+event)
+                for kind in ('activate','remove'):
+                    name=action.get(kind)
+                    if name and name not in effects:problems.append(label+': unknown effect '+key+'/'+name)
             bound=set();bound_stats=set()
             for bind in profile['bindings']:
-                stat=stats.get(bind['stat'])
+                stat=stats.get(bind['stat']) or derived.get(bind['stat'])
                 inp=asset.get('inputs',{}).get(bind['input'])
                 if (not stat or not inp or inp['type']!='number' or
                     stat['min']<inp.get('min',0) or stat['max']>inp.get('max',1) or
@@ -130,6 +152,7 @@ def validate_stat_profiles(packs, ids):
                     problems.append(label+': invalid stat binding '+bind['stat']+'/'+bind['input'])
                 bound.add(bind['input']);bound_stats.add(bind['stat'])
     return problems
+
 
 
 def check(pack_path: Path):

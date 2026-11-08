@@ -175,6 +175,19 @@ def check(page):
     page.locator('#stat-actions button[data-stat-action="recover"]').click()
     expect(page.locator('#input-controls input[data-input-key="stamina"]')).to_have_value("65")
     expect(page.locator('#input-controls select[data-input-key="animation"]')).to_have_value("idle")
+    expect(page.locator('#stat-derived-values')).to_contain_text('"mobility":11.25')
+    page.locator('#stat-actions button[data-stat-action="haste"]').click()
+    expect(page.locator('#stat-derived-values')).to_contain_text('"mobility":14.75')
+    expect(page.locator('#stat-effective-values')).to_contain_text('"speed":6')
+    expect(page.locator('#input-controls input[data-input-key="mobility"]')).to_have_value("14.75")
+    assert page.locator('#input-controls input[data-input-key="mobility"]').is_disabled()
+    page.locator('#stat-advance').click()
+    expect(page.locator('#stat-effects-status')).to_contain_text("2000 ms")
+    page.locator('#stat-step-ms').fill("2000")
+    page.locator('#stat-advance').click()
+    expect(page.locator('#stat-effects-status')).to_have_text("No active effects")
+    expect(page.locator('#stat-derived-values')).to_contain_text('"mobility":10.75')
+    expect(page.locator('#input-controls select[data-input-key="animation"]')).to_have_value("idle")
 
     # HUD: stat costs must reject atomically and bound visual sliders remain
     # synchronized in both directions. The same Builder opens both pack types.
@@ -195,6 +208,14 @@ def check(page):
     expect(page.locator('output[data-stat-value="energy"]')).to_have_text("88")
     page.locator('#stat-actions button[data-stat-action="dash"]').click()
     expect(energy).to_have_value("68")
+    page.locator('#stat-actions button[data-stat-action="focus"]').click()
+    expect(energy).to_have_value("68") # 10 spent and +10 temporary modifier
+    expect(page.locator('output[data-stat-value="energy"]')).to_have_text("58")
+    expect(page.locator('#stat-effects-status')).to_contain_text("3000 ms")
+    page.locator('#stat-step-ms').fill("3000")
+    page.locator('#stat-advance').click()
+    expect(energy).to_have_value("58")
+    expect(page.locator('#stat-derived-values')).to_contain_text('"readiness":49')
 
     # Export definitions, never current simulation values. Reimport the ZIP
     # into a clean Builder and confirm the initial stat is restored.
@@ -212,6 +233,8 @@ def check(page):
         assert len(copied["textures"])==1, "Export must contain the referenced source texture"
         assert copied["stat_profiles"][0]["stats"]["energy"]["initial"]==72
         assert copied["stat_profiles"][0]["bindings"]==[{"stat":"energy","input":"value"}]
+        assert copied["stat_profiles"][0]["effects"]["focus"]["duration_ms"]==3000
+        assert "readiness" in copied["stat_profiles"][0]["derived"]
         page.goto(url+"builder.html",wait_until="networkidle")
         page.locator("#upload").set_input_files(str(exported))
         expect(page.locator("#stat-panel")).to_be_visible()

@@ -361,7 +361,9 @@
         input=document.createElement('input');input.type='range';input.dataset.inputKey=key;
         input.min=bound.min;input.max=bound.max;input.step=bound.step;input.value=displayed[key];
         const readout=document.createElement('output');readout.textContent=input.value+' / '+bound.max;
-        input.oninput=()=>applyValue(Number(input.value));
+        const computed=statProfile?.bindings?.find(b=>b.input===key&&statProfile.derived?.[b.stat]);
+        if(computed){input.disabled=true;input.step='any';input.value=displayed[key];input.title='Computed from other stats; edit its sources in the Stat Lab';}
+        else input.oninput=()=>applyValue(Number(input.value));
         label.append(readout);
       }else{
         input=document.createElement('select');
@@ -374,7 +376,7 @@
     if(a.behavior){
       for(const event of Object.keys(a.behavior.on||{})){
         const btn=document.createElement('button');btn.type='button';btn.textContent='Send: '+event;btn.className='compact';
-        btn.onclick=()=>{try{const result=Interactions.dispatch(a,ui.controls,event);ui.controls=result.values;pullStatsFromPreview();renderControlPanel();if(result.events.length)setStatus(result.events.map(e=>e.name+' '+JSON.stringify(e.values)).join(' · '));}catch(err){setStatus(err.message,true);}};
+        btn.onclick=()=>{try{const previous={...ui.controls};const result=Interactions.dispatch(a,ui.controls,event);ui.controls=result.values;pullStatsFromPreview(previous);renderControlPanel();if(result.events.length)setStatus(result.events.map(e=>e.name+' '+JSON.stringify(e.values)).join(' · '));}catch(err){setStatus(err.message,true);}};
         controls.append(btn);
       }
       const output=document.createElement('div');output.id='interaction-outputs';output.className='helper';output.setAttribute('aria-live','polite');controls.append(output);
@@ -398,30 +400,52 @@
   }
   function bindStatsToPreview(profile){
     if(!statRuntime)return;
-    const values=statRuntime.snapshot();
-    for(const b of profile.bindings)ui.controls[b.input]=values[b.stat];
+    const state=statRuntime.state();
+    for(const b of profile.bindings)
+      ui.controls[b.input]=Object.hasOwn(state.derived,b.stat)?state.derived[b.stat]:state.effective[b.stat];
   }
-  function pullStatsFromPreview(){
+  function pullStatsFromPreview(previous={}){
     const profile=ensureStatRuntime();
     if(!profile)return;
-    for(const b of profile.bindings)if(Number.isFinite(ui.controls[b.input]))statRuntime.set(b.stat,ui.controls[b.input]);
-    updateStatReadouts();
+    // Only actual user-driven changes mutate a base stat. An existing
+    // effective/derived visual value is never fed back as a raw base value.
+    for(const b of profile.bindings){
+      if(profile.derived?.[b.stat])continue;
+      const value=ui.controls[b.input];
+      if(Number.isFinite(value)&&value!==previous[b.input])statRuntime.set(b.stat,value);
+    }
+    bindStatsToPreview(profile);updateStatReadouts();
   }
   function updateStatFromPreview(input,value){
     const profile=ensureStatRuntime();
     if(!profile||!Number.isFinite(value))return;
-    for(const b of profile.bindings)if(b.input===input)statRuntime.set(b.stat,value);
-    updateStatReadouts();
+    for(const b of profile.bindings){
+      if(b.input===input&&!profile.derived?.[b.stat])statRuntime.set(b.stat,value);
+    }
+    bindStatsToPreview(profile);updateStatReadouts();
   }
   function updateStatReadouts(){
     if(!statRuntime)return;
-    const values=statRuntime.snapshot();
+    const state=statRuntime.state();
     for(const input of $('stat-panel').querySelectorAll('input[data-stat]')){
       const key=input.dataset.stat;
-      input.value=values[key];
+      input.value=state.base[key];
       const output=$('stat-panel').querySelector('output[data-stat-value="'+key+'"]');
-      if(output)output.textContent=values[key];
+      if(output)output.textContent=state.base[key];
     }
+    $('stat-effective-values').textContent='Effective: '+JSON.stringify(state.effective);
+    $('stat-derived-values').textContent=Object.keys(state.derived).length?'Derived: '+JSON.stringify(state.derived):'No derived stats';
+    $('stat-effects-status').textContent=state.effects.length
+      ? 'Active effects: '+state.effects.map(e=>e.id+' ('+e.remaining_ms+' ms)').join(' · ')
+      : 'No active effects';
+  }
+  function advanceStats(){
+    const profile=ensureStatRuntime();
+    if(!profile)return;
+    const ms=Number($('stat-step-ms').value);
+    const result=statRuntime.advance(ms);
+    bindStatsToPreview(profile);syncPreviewControls();updateStatReadouts();
+    setStatus('Advanced simulation '+ms+' ms'+(result.expired.length?' · expired: '+result.expired.join(', '):''));
   }
   function executeStatAction(action){
     const profile=ensureStatRuntime();
@@ -476,7 +500,7 @@
       if(!def)continue;
       if(def.type==='number'){
         const bound=Inputs.bounds(a,key,values);
-        elem.min=bound.min;elem.max=bound.max;elem.step=bound.step;elem.value=values[key];
+        elem.min=bound.min;elem.max=bound.max;elem.step=elem.disabled?'any':bound.step;elem.value=values[key];
         const output=elem.parentElement.querySelector('output');
         if(output)output.textContent=elem.value+' / '+bound.max;
       }else if(def.type==='boolean')elem.checked=values[key];
@@ -500,8 +524,9 @@
     if(ui.isScene||!Interactions.canPoint(a))return false;
     const action=Interactions.pointerTarget(a,pointerPoint(e,a),id=>sizeFor(id),drag);
     if(!action)return false;
+    const previous={...ui.controls};
     const result=Interactions.dispatch(a,Inputs.reconcile(a,ui.controls,Slots.resolve(a,ui.preset).inputs),action.event,action.payload);
-    ui.controls=result.values;pullStatsFromPreview();syncPreviewControls();
+    ui.controls=result.values;pullStatsFromPreview(previous);syncPreviewControls();
     if(result.events.length)setStatus(result.events.map(event=>event.name+' '+JSON.stringify(event.values)).join(' · '));
     return true;
   }
@@ -747,6 +772,7 @@
   }
   function wire(){
     $('stat-profile').addEventListener('change',()=>{activeStatId=$('stat-profile').value;statRuntime=null;renderControlPanel();});
+    $('stat-advance').addEventListener('click',()=>{try{advanceStats()}catch(err){setStatus(err.message,true)}});
     $('stat-reset').addEventListener('click',()=>{const p=ensureStatRuntime();if(!p)return;statRuntime.reset();bindStatsToPreview(p);syncPreviewControls();updateStatReadouts();setStatus('Restored stat defaults for '+p.id);});
     $('upload').addEventListener('change',async e=>{try{const files=[...e.target.files];for(const f of files.filter(f=>/\.zip$/i.test(f.name)))await importZip(f);const others=files.filter(f=>!/\.zip$/i.test(f.name));if(others.length)await importFiles(others);$('import-info').textContent=imports.size+' local files/packs loaded';}catch(err){setStatus(err.message,true)}finally{e.target.value='';}});
     $('load-demo').addEventListener('click',async()=>{try{const response=await fetch('demo/starter-pack.zip');if(!response.ok)throw Error('Could not load demo pack');const blob=await response.blob();await importZip(blob);$('import-info').textContent=imports.size+' local files/packs loaded';}catch(e){setStatus(e.message,true)}});

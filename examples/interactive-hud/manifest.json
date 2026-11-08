@@ -159,6 +159,15 @@
           "deltas": {
             "energy": -30
           }
+        },
+        "focus": {
+          "costs": {
+            "energy": 10
+          },
+          "activate": "focus"
+        },
+        "dispel_focus": {
+          "remove": "focus"
         }
       },
       "bindings": [
@@ -166,7 +175,35 @@
           "stat": "energy",
           "input": "value"
         }
-      ]
+      ],
+      "derived": {
+        "readiness": {
+          "min": 0,
+          "max": 100,
+          "offset": 0,
+          "terms": [
+            {
+              "stat": "energy",
+              "coefficient": 0.5
+            },
+            {
+              "stat": "speed",
+              "coefficient": 4
+            }
+          ]
+        }
+      },
+      "effects": {
+        "focus": {
+          "duration_ms": 3000,
+          "modifiers": [
+            {
+              "stat": "energy",
+              "add": 10
+            }
+          ]
+        }
+      }
     }
   ]
 }

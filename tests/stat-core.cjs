@@ -41,3 +41,44 @@ assert.ok(Stats.validate([{...energy,stats:{energy:{min:0,max:100,initial:150}}}
 assert.ok(Stats.validate([{...p,actions:{dash:{emit:'not_declared'}}}],id=>robot.assets.find(a=>a.id===id)).length);
 assert.ok(Stats.validate([energy,energy],id=>hud.assets.find(a=>a.id===id)).length);
 console.log('Stat core/collection round-trip + event integration PASS');
+
+
+// Deterministic effects and derived values share the existing stat runtime.
+const h=Stats.create(energy);
+assert.equal(h.state().derived.readiness,56); // 72*.5 + 5*4
+const focus=h.apply('focus');
+assert.equal(focus.ok,true);
+assert.equal(focus.state.base.energy,62,'cost changes only base');
+assert.equal(focus.state.effective.energy,72,'modifier adds 10 without altering base');
+assert.equal(focus.state.derived.readiness,56,'derived uses effective values');
+assert.equal(h.advance(1000).state.effects[0].remaining_ms,2000);
+assert.equal(h.apply('focus').state.effects[0].remaining_ms,3000,'reapplication refreshes, does not stack');
+assert.equal(h.advance(2999).state.effects[0].remaining_ms,1);
+assert.deepEqual(h.advance(1).expired,['focus']);
+assert.equal(h.state().effective.energy,52,'expired modifier drops without changing base');
+assert.deepEqual(h.advance(1000).expired,[],'expired effect fires only once');
+assert.throws(()=>h.advance(-1),/step/);
+assert.throws(()=>h.advance(60001),/step/);
+assert.throws(()=>h.advance(0.5),/step/);
+assert.equal(h.apply('dispel_focus').ok,true,'remove inactive effect is harmless');
+const activated=h.apply('focus');
+assert.ok(activated.state.effects.length);
+assert.ok(h.apply('dispel_focus').state.effects.length===0);
+h.reset();
+assert.equal(h.state().effects.length,0,'reset clears all effects');
+assert.equal(h.state().derived.readiness,56);
+
+const mobility=Stats.create(p);
+assert.equal(mobility.state().derived.mobility,11);
+assert.equal(mobility.apply('haste').state.effective.speed,6);
+assert.equal(mobility.state().derived.mobility,14.5,'read-only formula uses effective stats');
+assert.equal(mobility.state().base.speed,4,'effect does not change base speed');
+assert.equal(mobility.advance(3000).state.derived.mobility,10.5);
+assert.equal(mobility.state().base.stamina,50,'time advances do not regenerate resources');
+assert.ok(Stats.validate([{...p,derived:{mobility:{...p.derived.mobility,terms:[{stat:'unknown',coefficient:2}]}}}],id=>actor).length);
+assert.ok(Stats.validate([{...p,derived:{mobility:{...p.derived.mobility,terms:[{stat:'stamina',coefficient:2},{stat:'stamina',coefficient:1}]}}}],id=>actor).length);
+assert.ok(Stats.validate([{...p,effects:{haste:{...p.effects.haste,modifiers:[{stat:'unknown',multiply:2}]}}}],id=>actor).length);
+assert.ok(Stats.validate([{...p,actions:{haste:{activate:'not_defined'}}}],id=>actor).length);
+assert.ok(Stats.validate([{...p,derived:{speed:p.derived.mobility}}],id=>actor).length);
+assert.ok(Stats.validate([{...p,bindings:[...p.bindings,{stat:'mobility',input:'mobility'}]}],id=>actor).length);
+console.log('Derived, modifier, effect expiry, refresh and semantic regression PASS');
