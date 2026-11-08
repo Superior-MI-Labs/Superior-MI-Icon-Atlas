@@ -118,4 +118,4 @@ Input is captured only while the Builder preview stage has focus. This is a
 combat engine. Host applications own their own full gameplay runtime.
 
 See [Preview input profiles](animations/PREVIEW-CONTROLS.md) for examples and
-[the robot reference pack](../../examples/character-animations/manifest.json).
+[the robot reference pack](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/character-animations/manifest.json).
