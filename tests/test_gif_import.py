@@ -15,7 +15,9 @@ class GifImportTests(unittest.TestCase):
             draw=ImageDraw.Draw(image)
             draw.ellipse((24+4*i,30,52+4*i,60),fill=(250,106,12,255))
             frames.append(image)
-        frames[0].save(path,save_all=True,append_images=frames[1:],duration=[80,90,120,70],loop=0,disposal=2,transparency=0,optimize=False)
+        kwargs={"save_all":True,"append_images":frames[1:],"duration":[80,90,120,70],"loop":0,"disposal":2,"optimize":False}
+        if not opaque:kwargs["transparency"]=0
+        frames[0].save(path,**kwargs)
     def test_review_gate_and_runtime_pack(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);gif=root/"good.gif";self.create_gif(gif)
