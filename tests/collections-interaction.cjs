@@ -30,3 +30,10 @@ assert.ok(I.check({...slider,behavior:{on:{activate:[{op:'evil_script',source:'j
 const actor={inputs:{animation:{type:'enum',default:'idle',values:['idle','attack','hurt']}},behavior:{role:'actor',outputs:{state:{from_input:'animation'}},on:{hit:[{op:'set',input:'animation',value:'hurt'},{op:'emit',event:'state_changed'}]}}};
 assert.equal(I.dispatch(actor,{},'hit').outputs.state,'hurt');
 console.log('Collections / interactions: PASS; 20 manifests, cross-sheet composition, typed toggle/slider/actor events');
+
+const byId=new Map(resolved.assets.map(a=>[a.id,a]));
+const closure=C.dependencyClosure(['smi.demo.character'],id=>byId.get(id),a=>a.kind==='composition'?a.layers.map(l=>l.asset):[]);
+assert.deepEqual([...closure],['smi.demo.character','smi.demo.frame0','smi.demo.frame19']);
+assert.throws(()=>C.dependencyClosure(['missing'],id=>byId.get(id),()=>[]),/Missing asset dependency/);
+const cycle=new Map([['a',{ref:'b'}],['b',{ref:'a'}]]);
+assert.throws(()=>C.dependencyClosure(['a'],id=>cycle.get(id),a=>[a.ref]),/Cyclic asset dependency/);

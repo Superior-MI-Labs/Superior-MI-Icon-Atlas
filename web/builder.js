@@ -482,9 +482,7 @@
   }
   function download(blob,name){const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),30000);}
   function dependencies(id,closure=new Set()){
-    if(closure.has(id))return closure;const a=library.get(id);if(!a)throw Error('Unresolved '+id);closure.add(id);
-    const refs=Slots.refs(a);
-    for(const r of refs)dependencies(r,closure);return closure;
+    return Collections.dependencyClosure([id],key=>library.get(key),Slots.refs,closure);
   }
   async function exportPack(){
     const hasLayers=ui.isScene&&scene.layers.length>0,selected=ui.selected;

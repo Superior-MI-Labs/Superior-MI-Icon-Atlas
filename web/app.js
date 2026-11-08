@@ -231,8 +231,9 @@
       zip.file('SOURCE-NOTICES.txt','Historical icon candidate. Rights review is pending. Original ID: '+asset.id+'\n');
       save(await zip.generateAsync({type:'blob',compression:'DEFLATE'}),current.id+'.zip');return;
     }
-    const data=await ready(current.pack);const closure=new Set();function walk(id){if(closure.has(id))return;const a=assets.get(id);if(!a)throw Error('Missing dependency '+id);closure.add(id);Slots.refs(a).forEach(walk);}
-    walk(current.id);const chosen=[...closure].map(id=>structuredClone(assets.get(id)));const required=new Set(chosen.filter(a=>a.kind==='region').map(a=>a.texture.split('::')[1]));
+    const data=await ready(current.pack);
+    const closure=Collections.dependencyClosure([current.id],id=>assets.get(id),Slots.refs);
+    const chosen=[...closure].map(id=>structuredClone(assets.get(id)));const required=new Set(chosen.filter(a=>a.kind==='region').map(a=>a.texture.split('::')[1]));
     const main=data.manifests[0];const zip=new JSZip();const defs={};
     for(const a of chosen){if(a.kind==='region')a.texture=a.texture.split('::')[1];for(const key of ['pack','sourcePack','sourceGroup','sourceLabel','ownerBag','source'])delete a[key];for(const contract of [...(a.implements||[]),...Object.values(a.slots||{}).map(s=>s.accepts)]){
       if(!main.interfaces?.[contract])throw Error('Missing compatible interface '+contract);defs[contract]=main.interfaces[contract];
