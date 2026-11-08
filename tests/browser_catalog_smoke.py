@@ -180,7 +180,7 @@ def check(page):
     # synchronized in both directions. The same Builder opens both pack types.
     page.locator("#upload").set_input_files(str(SITE/"demo"/"interactive-hud.zip"))
     expect(page.locator("#stat-panel")).to_be_visible()
-    assert page.locator("#stat-profile").input_value()=="smi.example.hud.energy-lab"
+    expect(page.locator("#stat-profile")).to_have_value("smi.example.hud.energy-lab",timeout=20000)
     energy=page.locator('#input-controls input[data-input-key="value"]')
     expect(energy).to_have_value("72")
     for _ in range(3):
