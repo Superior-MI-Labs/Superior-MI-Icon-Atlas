@@ -60,6 +60,40 @@ def validate_behavior(asset):
                 if defn['type'] == 'enum' and val not in defn['values']: errors.append(f'{asset["id"]}: invalid enum set {key}')
     return errors
 
+def validate_preview_profiles(packs, ids):
+    """Profile metadata adapts input to already-declared states/events, not gameplay."""
+    problems, names = [], set()
+    for pack in packs:
+        for profile in pack.get('preview_profiles', []):
+            label = profile['id']
+            if label in names:problems.append('Duplicate preview profile: ' + label)
+            names.add(label)
+            asset = ids.get(profile['asset'])
+            if not asset or asset['kind'] not in ('state_set', 'composition'):
+                problems.append(label + ': missing or incompatible target asset')
+                continue
+            def target_ok(target):
+                if not isinstance(target, dict) or len(target) != 1:return False
+                if asset['kind'] == 'state_set':
+                    return target.get('state') in asset.get('states', {})
+                return target.get('event') in (asset.get('behavior') or {}).get('on', {})
+            if profile.get('neutral') is not None and not target_ok(profile['neutral']):
+                problems.append(label + ': invalid neutral target')
+            for name, action in profile['actions'].items():
+                if not target_ok(action['target']):
+                    problems.append(label + ': unknown state/event for ' + name)
+                if action['mode'] == 'hold' and not target_ok(profile.get('neutral')):
+                    problems.append(label + ': hold action missing neutral target')
+            pressed = set()
+            for bind in profile['bindings']:
+                if bind['action'] not in profile['actions']:
+                    problems.append(label + ': unknown bound action ' + bind['action'])
+                key = (bind['device'], bind.get('code', bind.get('button')))
+                if key in pressed:problems.append(label + ': duplicate physical binding ' + str(key))
+                pressed.add(key)
+    return problems
+
+
 def check(pack_path: Path):
     errors = []
     if not pack_path.is_file():return [f'ZIP missing: {pack_path}']
@@ -189,6 +223,7 @@ def check(pack_path: Path):
             value_max=asset.get('inputs',{}).get(r['value_input'],{}).get('max',0)
             if value_max<count_max*(len(r['levels'])-1):
                 errors.append(f'{asset["id"]}: repeat value must cover full capacity')
+        errors.extend(validate_preview_profiles(valid_packs, ids))
         errors.extend(check_slots(valid_packs))
         if index and index.get('entry_asset') and index['entry_asset'] not in ids:errors.append('Unknown collection entry_asset: ' + index['entry_asset'])
         seen, active = set(), set()

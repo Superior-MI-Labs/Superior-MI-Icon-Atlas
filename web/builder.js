@@ -446,7 +446,7 @@
     select.replaceChildren();
     for(const p of profiles)select.add(new Option(p.name||p.id,p.id));
     select.value=profiles.some(p=>p.id===previous)?previous:(profiles[0]?.id||'');
-    select.hidden=!profiles.length;
+    $('test-drive-profile-label').hidden=!profiles.length;
     const available=Boolean(profiles.length||fallback),btn=$('test-drive'),info=$('test-drive-status');
     if(!available){driveActive=false;driveDriver=null;}
     btn.disabled=!available;btn.setAttribute('aria-pressed',String(driveActive));btn.textContent='Test drive: '+(driveActive?'On':'Off');
