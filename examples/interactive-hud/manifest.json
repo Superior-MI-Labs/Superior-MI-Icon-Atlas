@@ -125,5 +125,48 @@
         }
       ]
     }
+  ],
+  "stat_profiles": [
+    {
+      "schema": "smi-stat-profile/1",
+      "id": "smi.example.hud.energy-lab",
+      "name": "Energy cost laboratory",
+      "asset": "smi.example.hud.meter",
+      "stats": {
+        "energy": {
+          "min": 0,
+          "max": 100,
+          "initial": 72
+        },
+        "speed": {
+          "min": 1,
+          "max": 10,
+          "initial": 5
+        }
+      },
+      "actions": {
+        "dash": {
+          "costs": {
+            "energy": 20
+          }
+        },
+        "restore": {
+          "deltas": {
+            "energy": 15
+          }
+        },
+        "hit": {
+          "deltas": {
+            "energy": -30
+          }
+        }
+      },
+      "bindings": [
+        {
+          "stat": "energy",
+          "input": "value"
+        }
+      ]
+    }
   ]
 }
