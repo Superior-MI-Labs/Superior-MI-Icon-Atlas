@@ -150,6 +150,7 @@ def check(page):
     page.keyboard.up("ArrowRight")
     expect(page.locator("#input-controls select").first).to_have_value("idle")
     page.locator("#test-drive").click()
+    expect(page.locator("#test-drive")).to_have_attribute("aria-pressed","false")
     option.select_option("smi.example.robot.alternative")
     page.locator("#test-drive").click()
     stage.focus()
