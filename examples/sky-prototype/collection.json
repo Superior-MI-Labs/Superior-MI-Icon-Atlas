@@ -11,5 +11,25 @@
       "label": "Sky Prototype States",
       "category": "character-animation"
     }
+  ],
+  "showcases": [
+    {
+      "asset": "smi.sky.proto.actor.states",
+      "page": "sky-prototype.html",
+      "label": "Play Sky interactive prototype",
+      "keywords": [
+        "playable",
+        "interactive",
+        "demo",
+        "game",
+        "HUD",
+        "character",
+        "jump",
+        "attack",
+        "pause",
+        "inventory",
+        "test world"
+      ]
+    }
   ]
 }

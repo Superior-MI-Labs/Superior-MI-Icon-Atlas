@@ -2,6 +2,7 @@
 """Derive static browser projection from canonical per-atlas manifests, stdlib only."""
 from __future__ import annotations
 import json
+import re
 from zipfile import ZipFile, ZIP_DEFLATED, ZipInfo
 from pathlib import Path
 import shutil
@@ -184,6 +185,25 @@ for(const texture of Object.values(pack.textures)){
                  'license':sorted({p.get('license','UNSPECIFIED') for p in manifests})}
         if any(l in ('UNSPECIFIED','UNKNOWN','') for l in pubpack['license']):raise ValueError('Unknown public license')
         public_packs.append(pubpack)
+        # Optional playable experiences are editorial links attached to *real*
+        # published assets. They do not create pseudo-assets or another catalog.
+        # Only safe, actually-generated local pages may be linked.
+        authored_ids={a['id'] for pack in manifests for a in pack['assets']}
+        showcases={}
+        keywords={}
+        declared=set()
+        for showcase in index.get('showcases',[]):
+            asset_id=showcase['asset']; page=showcase['page']
+            label=showcase['label']
+            if (asset_id not in authored_ids or
+                not re.fullmatch(r'[a-z0-9][a-z0-9_-]*\.html',page) or
+                not (dest/page).is_file() or
+                (asset_id,page) in declared or
+                not isinstance(label,str) or not label.strip()):
+                raise ValueError('Invalid/unpublished showcase in '+str(folder)+': '+str(showcase))
+            declared.add((asset_id,page))
+            showcases.setdefault(asset_id,[]).append({'page':page,'label':label})
+            keywords.setdefault(asset_id,[]).extend([label,*showcase.get('keywords',[])])
         for pack in manifests:
             # Inherit style only when every styled source region agrees.
             region_styles={a['style'] for a in pack['assets'] if a['kind']=='region' and a.get('style')}
@@ -197,7 +217,9 @@ for(const texture of Object.values(pack.textures)){
                     'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
                     'kind':a['kind'],'style':a.get('style') or inherited_style,
                     'tags':a.get('tags',[]),'subjects':a.get('subjects',[]),
-                    'aliases':a.get('aliases',[]),'concept_id':a.get('concept_id'),
+                    'aliases':[*a.get('aliases',[]),*keywords.get(ident,[])],'concept_id':a.get('concept_id'),
+                    'showcases':showcases.get(ident,[]),
+                    'description':index.get('description','') if ident in showcases else a.get('description',''),
                     'variant':a.get('variant',''),'domain':a.get('domain') or index.get('name',pack_name),
                     'pack':pack_name,
                     'published':record['published'],'visual_qa':record['visual_qa'],'license':a.get('license',pack.get('license','')),
