@@ -432,6 +432,7 @@
     for(const event of result.events.filter(e=>e.type==='visual_event')){
       const dispatched=Interactions.dispatch(asset,Inputs.reconcile(asset,ui.controls,Slots.resolve(asset,ui.preset).inputs),event.name);
       ui.controls=dispatched.values;
+      ui.clock=0; // New animation state starts at its first authored frame.
     }
     bindStatsToPreview(profile);
     syncPreviewControls();
@@ -638,8 +639,10 @@
       const root=assets.find(a=>a.id===selected);
       if(root?.kind==='composition'&&(root.slots||root.presets)){
         const chosen=Slots.resolve(root,ui.preset,ui.slots);
-        if(Object.keys(ui.slots).length||Object.keys(ui.controls).some(k=>k!=='_state')){
-          const inputs={...chosen.inputs,...Object.fromEntries(Object.entries(ui.controls).filter(([k])=>k!=='_state'))};
+        const previewOnly=new Set([...statProfiles.values()].filter(p=>p.asset===selected).flatMap(p=>p.bindings.map(b=>b.input)));
+        const authoredInputs=Object.fromEntries(Object.entries(ui.controls).filter(([k])=>k!=='_state'&&!previewOnly.has(k)));
+        if(Object.keys(ui.slots).length||Object.keys(authoredInputs).length){
+          const inputs={...chosen.inputs,...authoredInputs};
           root.presets={...(root.presets||{}),'Exported Selection':{slots:chosen.slots,inputs}};
           root.default_preset='Exported Selection';
         }else if(ui.preset)root.default_preset=ui.preset;
