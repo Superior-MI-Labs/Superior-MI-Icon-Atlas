@@ -63,6 +63,13 @@
           }
         }
       }
+    },
+    "preview_profiles": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "$ref": "#/$defs/preview_profile"
+      }
     }
   },
   "$defs": {
@@ -917,6 +924,139 @@
           }
         }
       ]
+    },
+    "preview_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "required": [
+            "state"
+          ],
+          "properties": {
+            "state": {
+              "$ref": "#/$defs/nonblank"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "event": {
+              "$ref": "#/$defs/nonblank"
+            }
+          }
+        }
+      ]
+    },
+    "preview_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "id",
+        "asset",
+        "actions",
+        "bindings"
+      ],
+      "properties": {
+        "schema": {
+          "const": "smi-preview-controls/1"
+        },
+        "id": {
+          "$ref": "#/$defs/nonblank"
+        },
+        "asset": {
+          "$ref": "#/$defs/nonblank"
+        },
+        "name": {
+          "type": "string"
+        },
+        "neutral": {
+          "$ref": "#/$defs/preview_target"
+        },
+        "actions": {
+          "type": "object",
+          "minProperties": 1,
+          "maxProperties": 32,
+          "patternProperties": {
+            "^[a-z][a-z0-9_]{0,63}$": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "mode",
+                "target"
+              ],
+              "properties": {
+                "mode": {
+                  "enum": [
+                    "tap",
+                    "hold"
+                  ]
+                },
+                "target": {
+                  "$ref": "#/$defs/preview_target"
+                }
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "bindings": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 128,
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "device",
+                  "code",
+                  "action"
+                ],
+                "properties": {
+                  "device": {
+                    "const": "keyboard"
+                  },
+                  "code": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z][A-Za-z0-9]{1,31}$"
+                  },
+                  "action": {
+                    "$ref": "#/$defs/nonblank"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "device",
+                  "button",
+                  "action"
+                ],
+                "properties": {
+                  "device": {
+                    "const": "gamepad_button"
+                  },
+                  "button": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 31
+                  },
+                  "action": {
+                    "$ref": "#/$defs/nonblank"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
     }
   }
 }
