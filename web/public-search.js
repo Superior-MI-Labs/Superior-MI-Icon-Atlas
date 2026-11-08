@@ -29,7 +29,7 @@
     const terms=tokens(query);if(!terms.length)return 1;
     const aliases=thesaurus(synonyms);
     const fields=[
-      [asset.name,85],[asset.id,75],[asset.aliases,70],[asset.tags,45],
+      [asset.name,85],[asset.id,75],[asset.aliases,70],[asset.tags,45],[asset.description,25],
       [asset.subjects,35],[asset.concept_id,35],[asset.domain,12],
       [asset.style,10],[asset.category,9],[asset.variant,7]
     ];
