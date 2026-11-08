@@ -42,3 +42,5 @@
 /* Legacy tutorial packs are internal test fixtures, not public featured content. */
 #load-demo,#load-potions{display:none}
 #asset-more{align-self:stretch}.stage canvas[data-interactive="true"]{touch-action:none;cursor:pointer}#test-drive[aria-pressed="true"]{border-color:var(--accent);background:#284a70}
+
+.stat-lab{margin-top:12px;padding:12px;border:1px solid var(--border, #4b5563);border-radius:8px}.stat-lab .panel-heading{display:flex;align-items:center;justify-content:space-between}.stat-lab h3{font-size:1rem}.stat-lab .input-controls label{min-width:150px}

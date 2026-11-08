@@ -4,9 +4,10 @@
   const $ = id => document.getElementById(id);
   const Timeline = window.VisualAtlasTimeline, VisualCore = window.VisualAtlasVisualCore;
   if(!VisualCore)throw Error('Missing visual-core.js');
-  const Collections = window.VisualAtlasCollections, BagStore = window.VisualAtlasBagStore, Interactions = window.VisualAtlasInteraction, Slots = window.VisualAtlasSlots, Inputs = window.VisualAtlasInputs, Search = window.VisualAtlasSearch;
+  const Collections = window.VisualAtlasCollections, BagStore = window.VisualAtlasBagStore, Interactions = window.VisualAtlasInteraction, Slots = window.VisualAtlasSlots, Inputs = window.VisualAtlasInputs, Search = window.VisualAtlasSearch, Stats = window.VisualAtlasStats;
   if(!Collections)throw Error('Missing collection-core.js');
   if(!Interactions)throw Error('Missing interaction-core.js');
+  if(!Stats)throw Error('Missing stat-core.js');
   if(!Slots)throw Error('Missing slot-core.js');
   if(!Inputs)throw Error('Missing input-core.js');
   if(!Search)throw Error('Missing public-search.js');
@@ -17,6 +18,7 @@
   const imports = new Set();
   const interfaces = new Map(); // bag/source identifier -> own versioned interface definitions
   const previewProfiles = new Map(); // profile ID -> authored, genre-neutral input adapter
+  const statProfiles = new Map(); // profile ID -> authored numeric state/actions/visual binding
   const bags = new Map(); // each imported ZIP owns one contained, navigable asset collection
   let bagScope = null, bagGroup = "";
   const bagPersistenceKey = "smi.visualAtlas.saveBagLocally";
@@ -25,7 +27,8 @@
   const LIMIT_FRAMES=240;
   const ui = {selected:null, clock:0, playing:true, last:0, speed:1, controls:{}, slots:{}, preset:null, isScene:false};
   let listLimit=110,listKey='',driveActive=false,gamepadHeld={},driveDriver=null;
-  const selectAsset=id=>{ui.selected=id;ui.isScene=false;ui.controls={};ui.slots={};ui.preset=library.get(id)?.default_preset||null;driveActive=false;gamepadHeld={};driveDriver=null;};
+  let activeStatId=null,statRuntime=null;
+  const selectAsset=id=>{ui.selected=id;ui.isScene=false;ui.controls={};ui.slots={};ui.preset=library.get(id)?.default_preset||null;driveActive=false;gamepadHeld={};driveDriver=null;activeStatId=null;statRuntime=null;};
   const MAX_BYTES = 120 * 1024 * 1024, MAX_ENTRY = 24 * 1024 * 1024;
   const AI_URL = 'https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/ai/START-HERE.md';
   const safePath = s => typeof s === 'string' && !!s && !s.startsWith('/') && !s.includes('\\') && !s.split('/').includes('..') && !s.includes(':') && !s.includes('\0');
@@ -109,7 +112,10 @@
     };
     const problems=Interactions.validatePreviewProfiles(pack.preview_profiles,id=>ids.get(id)||library.get(id));
     if(problems.length)throw Error('Invalid preview profile: '+problems[0]);
+    const statProblems=Stats.validate(pack.stat_profiles,id=>ids.get(id)||library.get(id));
+    if(statProblems.length)throw Error('Invalid stat profile: '+statProblems[0]);
     for(const p of pack.preview_profiles||[])if(previewProfiles.has(p.id))throw Error('Existing preview profile ID '+p.id);
+    for(const p of pack.stat_profiles||[])if(statProfiles.has(p.id))throw Error('Existing stat profile ID '+p.id);
     pack.assets.forEach(a=>walk(a.id));
     for(const [id,t] of Object.entries(pack.textures)){
       if(!t||!safePath(t.path)||!Number.isInteger(t.width_px)||!Number.isInteger(t.height_px)||t.width_px<1||t.height_px<1||t.width_px>8192||t.height_px>8192)throw Error('Unsafe or invalid texture: '+id);
@@ -136,6 +142,7 @@
     const prefix='local:'+slug(pack.pack_id)+':'+Date.now().toString(36)+':';
     interfaces.set(ownerBag||pack.pack_id,structuredClone(pack.interfaces||{}));
     for(const profile of pack.preview_profiles||[])previewProfiles.set(profile.id,{...structuredClone(profile),ownerBag});
+    for(const profile of pack.stat_profiles||[])statProfiles.set(profile.id,{...structuredClone(profile),ownerBag});
     for(const [key,def,blob,img] of pending){textures.set(prefix+key,{blob,path:def.path,image:img,source:pack.pack_id,ownerBag,license:pack.license||'UNSPECIFIED'});}
     for(const a of pack.assets){library.set(a.id,{...a,texture:a.texture?prefix+a.texture:undefined,source:pack.pack_id,ownerBag,license:a.license||pack.license||'UNSPECIFIED'});}
     imports.add(pack.pack_id); selectAsset(pack.assets.filter(a=>a.kind==='composition').at(-1)?.id||pack.assets.at(-1)?.id||ui.selected); refreshList(); renderControlPanel(); setStatus('Imported '+pack.assets.length+' assets from '+pack.pack_id+' (kept in this browser session).');
@@ -180,6 +187,7 @@
     if(owned.has(ui.selected))selectAsset(null);
     bags.delete(id);interfaces.delete(id);imports.delete(bag.collectionId);
     for(const [key,p] of previewProfiles)if(p.ownerBag===id)previewProfiles.delete(key);
+    for(const [key,p] of statProfiles)if(p.ownerBag===id)statProfiles.delete(key);
     if(bagScope===id){bagScope=null;bagGroup='';}
     if(deleteStored){try{await BagStore?.remove(id);}catch(e){setStatus('Removed from session. Stored copy could not be removed: '+e.message,true);}}
     renderBag();refreshList();renderControlPanel();layerInputs();refreshTimeline();
@@ -301,7 +309,9 @@
     updateDriveAvailability();
     $('stage').dataset.interactive=String(!ui.isScene&&Interactions.canPoint(a));
     $('preview-details').textContent=a?'ID: '+a.id+' · '+a.kind+' · License: '+(a.license||'unspecified'): 'Select any asset in the list';
-    if(!a||ui.isScene)return;
+    if(!a||ui.isScene){$('stat-panel').hidden=true;return;}
+    const statProfile=ensureStatRuntime();
+    if(statProfile)bindStatsToPreview(statProfile);
     const presetInputs=Slots.resolve(a,ui.preset).inputs;
     const displayed=Inputs.reconcile(a,ui.controls,presetInputs);
     if(a.kind==='composition'&&(Object.keys(a.presets||{}).length||Object.keys(a.slots||{}).length)){
@@ -340,6 +350,7 @@
       const label=document.createElement('label');label.textContent=key;let input;
       const applyValue=value=>{
         ui.controls=Inputs.reconcile(a,{...ui.controls,[key]:value},presetInputs);
+        updateStatFromPreview(key,ui.controls[key]);
         syncPreviewControls();
       };
       if(def.type==='boolean'){
@@ -363,18 +374,98 @@
     if(a.behavior){
       for(const event of Object.keys(a.behavior.on||{})){
         const btn=document.createElement('button');btn.type='button';btn.textContent='Send: '+event;btn.className='compact';
-        btn.onclick=()=>{try{const result=Interactions.dispatch(a,ui.controls,event);ui.controls=result.values;renderControlPanel();if(result.events.length)setStatus(result.events.map(e=>e.name+' '+JSON.stringify(e.values)).join(' · '));}catch(err){setStatus(err.message,true);}};
+        btn.onclick=()=>{try{const result=Interactions.dispatch(a,ui.controls,event);ui.controls=result.values;pullStatsFromPreview();renderControlPanel();if(result.events.length)setStatus(result.events.map(e=>e.name+' '+JSON.stringify(e.values)).join(' · '));}catch(err){setStatus(err.message,true);}};
         controls.append(btn);
       }
       const output=document.createElement('div');output.id='interaction-outputs';output.className='helper';output.setAttribute('aria-live','polite');controls.append(output);
       renderOutputs();
     }
+    renderStatPanel();
   }
   function renderOutputs(){
     const a=library.get(ui.selected),view=$('interaction-outputs');
     if(view&&a?.behavior){const vals=Interactions.outputValues(a,{...Slots.resolve(a,ui.preset).inputs,...ui.controls});view.textContent='Outputs: '+(Object.keys(vals).length?JSON.stringify(vals):'no exported values');}
   }
 
+
+  function statOptions(){return [...statProfiles.values()].filter(p=>!ui.isScene&&p.asset===ui.selected);}
+  function ensureStatRuntime(){
+    const options=statOptions();
+    const chosen=options.find(p=>p.id===activeStatId)||options[0];
+    if(!chosen){statRuntime=null;activeStatId=null;return null;}
+    if(!statRuntime||activeStatId!==chosen.id){activeStatId=chosen.id;statRuntime=Stats.create(chosen);}
+    return chosen;
+  }
+  function bindStatsToPreview(profile){
+    if(!statRuntime)return;
+    const values=statRuntime.snapshot();
+    for(const b of profile.bindings)ui.controls[b.input]=values[b.stat];
+  }
+  function pullStatsFromPreview(){
+    const profile=ensureStatRuntime();
+    if(!profile)return;
+    for(const b of profile.bindings)if(Number.isFinite(ui.controls[b.input]))statRuntime.set(b.stat,ui.controls[b.input]);
+    updateStatReadouts();
+  }
+  function updateStatFromPreview(input,value){
+    const profile=ensureStatRuntime();
+    if(!profile||!Number.isFinite(value))return;
+    for(const b of profile.bindings)if(b.input===input)statRuntime.set(b.stat,value);
+    updateStatReadouts();
+  }
+  function updateStatReadouts(){
+    if(!statRuntime)return;
+    const values=statRuntime.snapshot();
+    for(const input of $('stat-panel').querySelectorAll('input[data-stat]')){
+      const key=input.dataset.stat;
+      input.value=values[key];
+      const output=$('stat-panel').querySelector('output[data-stat-value="'+key+'"]');
+      if(output)output.textContent=values[key];
+    }
+  }
+  function executeStatAction(action){
+    const profile=ensureStatRuntime();
+    if(!profile)return;
+    const result=statRuntime.apply(action);
+    if(!result.ok){setStatus(action+': '+result.reason,true);return;}
+    const asset=library.get(ui.selected);
+    for(const event of result.events.filter(e=>e.type==='visual_event')){
+      const dispatched=Interactions.dispatch(asset,Inputs.reconcile(asset,ui.controls,Slots.resolve(asset,ui.preset).inputs),event.name);
+      ui.controls=dispatched.values;
+    }
+    bindStatsToPreview(profile);
+    syncPreviewControls();
+    updateStatReadouts();
+    setStatus('Stat action '+action+' applied. '+JSON.stringify(result.values));
+  }
+  function renderStatPanel(){
+    const panel=$('stat-panel'),select=$('stat-profile'),profile=ensureStatRuntime();
+    panel.hidden=!profile;
+    if(!profile)return;
+    select.replaceChildren();
+    for(const option of statOptions())select.add(new Option(option.name||option.id,option.id));
+    select.value=profile.id;
+    const stats=$('stat-values');stats.replaceChildren();
+    for(const [key,d] of Object.entries(profile.stats)){
+      const label=document.createElement('label');label.textContent=key+' ';
+      const slider=document.createElement('input');slider.type='range';slider.dataset.stat=key;
+      slider.min=d.min;slider.max=d.max;slider.step='any';slider.value=statRuntime.snapshot()[key];
+      const out=document.createElement('output');out.dataset.statValue=key;out.textContent=slider.value;
+      slider.oninput=()=>{
+        statRuntime.set(key,Number(slider.value));
+        bindStatsToPreview(profile);syncPreviewControls();updateStatReadouts();
+      };
+      label.append(slider,out);stats.append(label);
+    }
+    const actions=$('stat-actions');actions.replaceChildren();
+    for(const key of Object.keys(profile.actions)){
+      const button=document.createElement('button');button.type='button';button.className='compact';button.dataset.statAction=key;
+      button.textContent=key.replaceAll('_',' ');
+      button.onclick=()=>{try{executeStatAction(key)}catch(err){setStatus(err.message,true)}};
+      actions.append(button);
+    }
+    updateStatReadouts();
+  }
   function syncPreviewControls(){
     const a=library.get(ui.selected);if(!a)return;
     const values=Inputs.reconcile(a,ui.controls,Slots.resolve(a,ui.preset).inputs);
@@ -409,7 +500,7 @@
     const action=Interactions.pointerTarget(a,pointerPoint(e,a),id=>sizeFor(id),drag);
     if(!action)return false;
     const result=Interactions.dispatch(a,Inputs.reconcile(a,ui.controls,Slots.resolve(a,ui.preset).inputs),action.event,action.payload);
-    ui.controls=result.values;syncPreviewControls();
+    ui.controls=result.values;pullStatsFromPreview();syncPreviewControls();
     if(result.events.length)setStatus(result.events.map(event=>event.name+' '+JSON.stringify(event.values)).join(' · '));
     return true;
   }
@@ -574,8 +665,12 @@
     const exportedProfiles=[...previewProfiles.values()].filter(p=>all.has(p.asset)).map(p=>{
       const result=structuredClone(p);delete result.ownerBag;return result;
     });
+    const exportedStats=[...statProfiles.values()].filter(p=>all.has(p.asset)).map(p=>{
+      const result=structuredClone(p);delete result.ownerBag;return result;
+    });
     const out={schema:'smi-visual-pack/1',pack_id:'smi.user.'+slug($('composition-name').value),version:'1.0.0',description:'Visual Atlas Builder export. Root asset: '+rootId,interfaces:exportedInterfaces,
       ...(exportedProfiles.length?{preview_profiles:exportedProfiles}:{}),
+      ...(exportedStats.length?{stat_profiles:exportedStats}:{}),
       textures:Object.fromEntries(Object.values(texMap).map(t=>[t.id,{path:t.path,width_px:t.width_px,height_px:t.height_px}])),assets};
     zip.file('manifest.json',JSON.stringify(out,null,2)+'\n');
     zip.file('SOURCE-NOTICES.txt',`Generated locally with Superior MI Visual Atlas Builder.\nRoot asset: ${rootId}\n\nPer-asset licenses:\n`+assets.map(a=>a.id+' : '+(a.license||'UNSPECIFIED')).join('\n')+'\n\nOriginal asset and code licenses must be respected. Unknown license is not equivalent to CC0.\n');
@@ -648,6 +743,8 @@
     download(blob,slug($('composition-name').value)+'-frames.zip');setStatus('Exported '+frames+' PNG frames at '+timeline.exportFps+' FPS.');
   }
   function wire(){
+    $('stat-profile').addEventListener('change',()=>{activeStatId=$('stat-profile').value;statRuntime=null;renderControlPanel();});
+    $('stat-reset').addEventListener('click',()=>{const p=ensureStatRuntime();if(!p)return;statRuntime.reset();bindStatsToPreview(p);syncPreviewControls();updateStatReadouts();setStatus('Restored stat defaults for '+p.id);});
     $('upload').addEventListener('change',async e=>{try{const files=[...e.target.files];for(const f of files.filter(f=>/\.zip$/i.test(f.name)))await importZip(f);const others=files.filter(f=>!/\.zip$/i.test(f.name));if(others.length)await importFiles(others);$('import-info').textContent=imports.size+' local files/packs loaded';}catch(err){setStatus(err.message,true)}finally{e.target.value='';}});
     $('load-demo').addEventListener('click',async()=>{try{const response=await fetch('demo/starter-pack.zip');if(!response.ok)throw Error('Could not load demo pack');const blob=await response.blob();await importZip(blob);$('import-info').textContent=imports.size+' local files/packs loaded';}catch(e){setStatus(e.message,true)}});
     $('load-potions').addEventListener('click',async()=>{try{
@@ -656,7 +753,7 @@
       await importZip(file);
       setStatus('Loaded Potion Lab: choose Health, Mana or Poison in the automatic preset controls.');
     }catch(e){setStatus(e.message,true);}});
-    $('clear-imports').addEventListener('click',async()=>{for(const id of [...bags.keys()])await removeBag(id);for(const [id,a] of library)if(a.source!=='Official Icon Atlas')library.delete(id);for(const [key,t] of textures)if(!key.startsWith('official:')){if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);}imports.clear();interfaces.clear();previewProfiles.clear();driveDriver=null;try{await BagStore.clear();}catch{}$('import-info').textContent='Built-in Icon Atlas loaded automatically';bagScope=null;bagGroup='';scene.layers=[];scene.selectedLayer=-1;selectAsset(null);layerInputs();refreshTimeline();renderControlPanel();refreshList();renderBag();setStatus('All private bag imports cleared. Public icons remain.');});
+    $('clear-imports').addEventListener('click',async()=>{for(const id of [...bags.keys()])await removeBag(id);for(const [id,a] of library)if(a.source!=='Official Icon Atlas')library.delete(id);for(const [key,t] of textures)if(!key.startsWith('official:')){if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);}imports.clear();interfaces.clear();previewProfiles.clear();statProfiles.clear();driveDriver=null;activeStatId=null;statRuntime=null;try{await BagStore.clear();}catch{}$('import-info').textContent='Built-in Icon Atlas loaded automatically';bagScope=null;bagGroup='';scene.layers=[];scene.selectedLayer=-1;selectAsset(null);layerInputs();refreshTimeline();renderControlPanel();refreshList();renderBag();setStatus('All private bag imports cleared. Public icons remain.');});
     $('bag-show-all').addEventListener('click',()=>{bagScope=null;bagGroup='';renderBag();refreshList();});
     $('bag-group').addEventListener('change',()=>{bagGroup=$('bag-group').value;refreshList();});
     $('save-bag').addEventListener('change',()=>{try{localStorage.setItem(bagPersistenceKey,$('save-bag').checked?'yes':'no');}catch{} if($('save-bag').checked)setStatus('Future ZIP imports will be saved on this device. Existing session ZIPs remain session-only.');else setStatus('Future ZIP imports will stay in this browser session only. Existing stored ZIPs can be removed from My Bag.');});
