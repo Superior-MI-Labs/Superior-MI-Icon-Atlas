@@ -32,7 +32,7 @@
     }else{
       groups=[...manifests.keys()].sort().map(path=>({path,label:manifests.get(path).pack_id,category:''}));
     }
-    const assets=[],textures={},interfaces={},previewProfiles=[],profileIds=new Set(),assetIds=new Set(),packIds=new Set(),texturePaths=new Set(),groupInfo=[];
+    const assets=[],textures={},interfaces={},previewProfiles=[],profileIds=new Set(),statProfiles=[],statIds=new Set(),assetIds=new Set(),packIds=new Set(),texturePaths=new Set(),groupInfo=[];
     const licenseSet=new Set();
     for(let n=0;n<groups.length;n++){
       const group=groups[n],pack=manifests.get(group.path),prefix='p'+n+'_';
@@ -42,6 +42,10 @@
       for(const profile of pack.preview_profiles||[]){
         if(profileIds.has(profile.id))throw Error('Duplicate preview profile '+profile.id);
         profileIds.add(profile.id);previewProfiles.push(structuredClone(profile));
+      }
+      for(const profile of pack.stat_profiles||[]){
+        if(statIds.has(profile.id))throw Error('Duplicate stat profile '+profile.id);
+        statIds.add(profile.id);statProfiles.push(structuredClone(profile));
       }
       for(const [id,def] of Object.entries(pack.interfaces||{})){
         if(Object.hasOwn(interfaces,id)&&JSON.stringify(interfaces[id])!==JSON.stringify(def))throw Error('Conflicting interface contract '+id);
@@ -75,6 +79,7 @@
     if(assets.length>MAX_ASSETS||Object.keys(textures).length>MAX_TEXTURES)throw Error('Collection exceeds asset or texture limit');
     const exists=id=>assetIds.has(id);
     for(const profile of previewProfiles)if(!exists(profile.asset))throw Error('Unknown preview profile asset '+profile.asset);
+    for(const profile of statProfiles)if(!exists(profile.asset))throw Error('Unknown stat profile asset '+profile.asset);
     for(const a of assets){
       const refs=a.kind==='sequence'? (a.frames||[]).map(f=>f.asset):a.kind==='state_set'?Object.values(a.states||{}):a.kind==='composition'?[...(a.layers||[]).filter(l=>l.asset).map(l=>l.asset),...Object.values(a.slots||{}).flatMap(s=>s.options||[])]:[];
       for(const ref of refs)if(!exists(ref))throw Error('Unknown collection reference '+ref+' from '+a.id);
@@ -84,7 +89,7 @@
     const name=(index&&typeof index.name==='string'&&index.name.trim()&&index.name)||fallbackName;
     const collectionId=index?.collection_id||'smi.local.'+String(fallbackName).replace(/[^a-zA-Z0-9.-]/g,'-');
     return {
-      pack:{schema:'smi-visual-pack/1',pack_id:collectionId,version:index?.version||'1.0.0',description:'Resolved collection: '+name,license:licenseSet.size===1?[...licenseSet][0]:'MIXED',interfaces,preview_profiles:previewProfiles,textures,assets},
+      pack:{schema:'smi-visual-pack/1',pack_id:collectionId,version:index?.version||'1.0.0',description:'Resolved collection: '+name,license:licenseSet.size===1?[...licenseSet][0]:'MIXED',interfaces,preview_profiles:previewProfiles,stat_profiles:statProfiles,textures,assets},
       bag:{id:collectionId,name,version:index?.version||'1.0.0',description:index?.description||'',entry,groups:groupInfo,assetIds:[...assetIds],textureCount:texturePaths.size}
     };
   }

@@ -8,6 +8,8 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Thread
+from tempfile import TemporaryDirectory
+from zipfile import ZipFile
 
 from playwright.sync_api import expect, sync_playwright
 
@@ -140,6 +142,7 @@ def check(page):
     assert imported_value>60, f"Builder drag did not update canonical input: {imported_value}; status: {page.locator('#builder-status').inner_text()}"
     page.goto(url+"builder.html",wait_until="networkidle")
     page.locator("#upload").set_input_files(str(SITE/"demo"/"character-animations.zip"))
+    page.locator('#asset-list button[data-asset-id="smi.example.robot.states"]').click()
     option=page.locator("#test-drive-profile")
     expect(option).to_have_value("smi.example.robot.platformer",timeout=20000)
     stage=page.locator("#stage")
@@ -160,6 +163,59 @@ def check(page):
     page.keyboard.up("w")
     expect(page.locator("#input-controls select").first).to_have_value("idle")
     page.locator("#test-drive").click()
+
+    # Robot: one stat action changes both the resource and an existing
+    # animated enum through the authored behavior.on event.
+    page.locator('#asset-list button[data-asset-id="smi.example.robot.actor"]').click()
+    expect(page.locator("#stat-panel")).to_be_visible()
+    assert page.locator('#stat-profile').input_value()=="smi.example.robot.stamina-lab"
+    page.locator('#stat-actions button[data-stat-action="dash"]').click()
+    expect(page.locator('#input-controls input[data-input-key="stamina"]')).to_have_value("40")
+    expect(page.locator('#input-controls select[data-input-key="animation"]')).to_have_value("walk")
+    page.locator('#stat-actions button[data-stat-action="recover"]').click()
+    expect(page.locator('#input-controls input[data-input-key="stamina"]')).to_have_value("65")
+    expect(page.locator('#input-controls select[data-input-key="animation"]')).to_have_value("idle")
+
+    # HUD: stat costs must reject atomically and bound visual sliders remain
+    # synchronized in both directions. The same Builder opens both pack types.
+    page.locator("#upload").set_input_files(str(SITE/"demo"/"interactive-hud.zip"))
+    expect(page.locator("#stat-panel")).to_be_visible()
+    expect(page.locator("#stat-profile")).to_have_value("smi.example.hud.energy-lab",timeout=20000)
+    energy=page.locator('#input-controls input[data-input-key="value"]')
+    expect(energy).to_have_value("72")
+    for _ in range(3):
+        page.locator('#stat-actions button[data-stat-action="dash"]').click()
+    expect(energy).to_have_value("12")
+    page.locator('#stat-actions button[data-stat-action="dash"]').click()
+    expect(energy).to_have_value("12")
+    assert "Insufficient energy" in page.locator("#builder-status").inner_text()
+    page.locator('#stat-actions button[data-stat-action="restore"]').click()
+    expect(energy).to_have_value("27")
+    energy.evaluate("(el)=>{el.value='88';el.dispatchEvent(new Event('input',{bubbles:true}))}")
+    expect(page.locator('output[data-stat-value="energy"]')).to_have_text("88")
+    page.locator('#stat-actions button[data-stat-action="dash"]').click()
+    expect(energy).to_have_value("68")
+
+    # Export definitions, never current simulation values. Reimport the ZIP
+    # into a clean Builder and confirm the initial stat is restored.
+    with page.expect_download() as saved:
+        page.locator("#export").click()
+    with TemporaryDirectory() as temp:
+        exported=Path(temp)/"stat-roundtrip.zip"
+        saved.value.save_as(str(exported))
+        with ZipFile(exported) as z:
+            copied=json.loads(z.read("manifest.json"))
+        assert len(copied.get("stat_profiles",[]))==1
+        exported_ids={a["id"] for a in copied["assets"]}
+        assert {"smi.example.hud.meter","smi.example.hud.frame",
+                "smi.example.hud.fill","smi.example.hud.thumb"} <= exported_ids, exported_ids
+        assert len(copied["textures"])==1, "Export must contain the referenced source texture"
+        assert copied["stat_profiles"][0]["stats"]["energy"]["initial"]==72
+        assert copied["stat_profiles"][0]["bindings"]==[{"stat":"energy","input":"value"}]
+        page.goto(url+"builder.html",wait_until="networkidle")
+        page.locator("#upload").set_input_files(str(exported))
+        expect(page.locator("#stat-panel")).to_be_visible()
+        expect(page.locator('#input-controls input[data-input-key="value"]')).to_have_value("72")
     page.goto(url,wait_until="networkidle")
     assert not errors, "Browser JavaScript errors: " + repr(errors)
     return page.locator("#count").inner_text()

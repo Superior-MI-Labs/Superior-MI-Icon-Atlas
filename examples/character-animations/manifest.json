@@ -172,6 +172,69 @@
         "idle",
         "walk"
       ]
+    },
+    {
+      "id": "smi.example.robot.actor",
+      "kind": "composition",
+      "name": "Robot stat action preview",
+      "size_px": [
+        128,
+        128
+      ],
+      "tags": [
+        "robot",
+        "animation",
+        "statistics",
+        "interactive",
+        "demo"
+      ],
+      "inputs": {
+        "animation": {
+          "type": "enum",
+          "default": "idle",
+          "values": [
+            "idle",
+            "walk"
+          ]
+        },
+        "stamina": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 60
+        }
+      },
+      "behavior": {
+        "role": "actor",
+        "outputs": {
+          "stamina": {
+            "from_input": "stamina"
+          }
+        },
+        "on": {
+          "dash": [
+            {
+              "op": "set",
+              "input": "animation",
+              "value": "walk"
+            }
+          ],
+          "recover": [
+            {
+              "op": "set",
+              "input": "animation",
+              "value": "idle"
+            }
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "robot",
+          "asset": "smi.example.robot.states",
+          "state_from_input": "animation"
+        }
+      ]
     }
   ],
   "preview_profiles": [
@@ -230,6 +293,46 @@
           "device": "gamepad_button",
           "button": 12,
           "action": "move"
+        }
+      ]
+    }
+  ],
+  "stat_profiles": [
+    {
+      "schema": "smi-stat-profile/1",
+      "id": "smi.example.robot.stamina-lab",
+      "name": "Robot stamina & animation",
+      "asset": "smi.example.robot.actor",
+      "stats": {
+        "stamina": {
+          "initial": 60,
+          "min": 0,
+          "max": 100
+        },
+        "speed": {
+          "initial": 4,
+          "min": 1,
+          "max": 10
+        }
+      },
+      "actions": {
+        "dash": {
+          "costs": {
+            "stamina": 20
+          },
+          "emit": "dash"
+        },
+        "recover": {
+          "deltas": {
+            "stamina": 25
+          },
+          "emit": "recover"
+        }
+      },
+      "bindings": [
+        {
+          "stat": "stamina",
+          "input": "stamina"
         }
       ]
     }

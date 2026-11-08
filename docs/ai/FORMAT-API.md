@@ -119,3 +119,14 @@ combat engine. Host applications own their own full gameplay runtime.
 
 See [Preview input profiles](animations/PREVIEW-CONTROLS.md) for examples and
 [the robot reference pack](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/character-animations/manifest.json).
+
+## Stat/action previews (canonical extension)
+
+Optional pack-level `stat_profiles` use `smi-stat-profile/1`, referencing an existing
+composition. They define bounded numeric stats, atomic resource costs, signed
+stat deltas and optional events referencing its existing `behavior.on`.
+Stat-to-input bindings project simulation values into existing authored visual
+inputs. Denied costs change nothing and emit nothing. The Builder's Stat & action
+lab lets creators interact with those values and immediately preview the HUD or
+animation through the shared renderer. Simulation values are temporary;
+export preserves definitions. [Full stat profile guide](STATS-ACTIONS.md).

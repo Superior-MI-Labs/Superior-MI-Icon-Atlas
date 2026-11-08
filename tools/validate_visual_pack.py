@@ -94,6 +94,44 @@ def validate_preview_profiles(packs, ids):
     return problems
 
 
+def validate_stat_profiles(packs, ids):
+    """Stat definitions remain canonical; visual inputs are presentation bindings."""
+    problems, names = [], set()
+    for pack in packs:
+        for profile in pack.get('stat_profiles', []):
+            label=profile['id']
+            if label in names:problems.append('Duplicate stat profile: '+label)
+            names.add(label)
+            asset=ids.get(profile['asset'])
+            if not asset or asset['kind']!='composition':
+                problems.append(label+': stat target must be a composition')
+                continue
+            stats=profile['stats']
+            for key,stat in stats.items():
+                if stat['max']<=stat['min'] or not stat['min']<=stat['initial']<=stat['max']:
+                    problems.append(label+': invalid stat range '+key)
+            for key,action in profile['actions'].items():
+                if not action.get('costs') and not action.get('deltas') and not action.get('emit'):
+                    problems.append(label+': empty stat action '+key)
+                for stat,cost in action.get('costs',{}).items():
+                    if stat not in stats or cost<=0:problems.append(label+': invalid cost '+key+'/'+stat)
+                for stat,delta in action.get('deltas',{}).items():
+                    if stat not in stats or delta==0:problems.append(label+': invalid delta '+key+'/'+stat)
+                event=action.get('emit')
+                if event and event not in (asset.get('behavior') or {}).get('on',{}):
+                    problems.append(label+': unknown visual event '+key+'/'+event)
+            bound=set();bound_stats=set()
+            for bind in profile['bindings']:
+                stat=stats.get(bind['stat'])
+                inp=asset.get('inputs',{}).get(bind['input'])
+                if (not stat or not inp or inp['type']!='number' or
+                    stat['min']<inp.get('min',0) or stat['max']>inp.get('max',1) or
+                    bind['input'] in bound or bind['stat'] in bound_stats):
+                    problems.append(label+': invalid stat binding '+bind['stat']+'/'+bind['input'])
+                bound.add(bind['input']);bound_stats.add(bind['stat'])
+    return problems
+
+
 def check(pack_path: Path):
     errors = []
     if not pack_path.is_file():return [f'ZIP missing: {pack_path}']
@@ -223,6 +261,7 @@ def check(pack_path: Path):
             value_max=asset.get('inputs',{}).get(r['value_input'],{}).get('max',0)
             if value_max<count_max*(len(r['levels'])-1):
                 errors.append(f'{asset["id"]}: repeat value must cover full capacity')
+        errors.extend(validate_stat_profiles(valid_packs, ids))
         errors.extend(validate_preview_profiles(valid_packs, ids))
         errors.extend(check_slots(valid_packs))
         if index and index.get('entry_asset') and index['entry_asset'] not in ids:errors.append('Unknown collection entry_asset: ' + index['entry_asset'])
