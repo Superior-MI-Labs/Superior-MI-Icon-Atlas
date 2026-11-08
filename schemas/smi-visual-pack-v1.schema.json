@@ -949,7 +949,15 @@
             }
           }
         }
-      ]
+      ],
+      "properties": {
+        "state": {
+          "$ref": "#/$defs/nonblank"
+        },
+        "event": {
+          "$ref": "#/$defs/nonblank"
+        }
+      }
     },
     "preview_profile": {
       "type": "object",
