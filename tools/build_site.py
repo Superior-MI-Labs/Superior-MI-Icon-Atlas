@@ -40,8 +40,13 @@ def build(dest:Path|None=None):
     if dest==ROOT or ROOT in dest.parents and 'sheets' in dest.parts:
         raise ValueError('Refusing to build over source')
     dest.mkdir(parents=True,exist_ok=True)
-    for name in ('index.html','styles.css','public-search.js','app.js','builder.html','builder.css','timeline-core.js','visual-core.js','input-core.js','collection-core.js','bag-store.js','interaction-core.js','stat-core.js','slot-core.js','asset-renderer.js','builder.js','ai-guide.html','featured.js'):
+    for name in ('index.html','styles.css','public-search.js','app.js','builder.html','builder.css','timeline-core.js','visual-core.js','input-core.js','collection-core.js','bag-store.js','interaction-core.js','stat-core.js','slot-core.js','asset-renderer.js','builder.js','ai-guide.html','featured.js','sky-motion-lab.html'):
         shutil.copy2(ROOT/'web'/name,dest/name)
+    # Experimental preview sources; not a second Visual Atlas asset registry.
+    motion_source=ROOT/'web'/'sky-motion-lab'
+    motion_target=dest/'sky-motion-lab'
+    if motion_target.exists():shutil.rmtree(motion_target)
+    shutil.copytree(motion_source,motion_target)
     vendor=ROOT/'web'/'vendor'
     if not (vendor/'jszip.min.js').is_file() or not (vendor/'JSZip-LICENSE.md').is_file(): raise ValueError('Missing bundled offline ZIP library')
     (dest/'vendor').mkdir(exist_ok=True)
