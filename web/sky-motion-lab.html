@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Sky motion lab: compare AI video-derived animation candidates and play a custom sequence of motions.">
+<title>Sky Motion Lab · Superior MI Visual Atlas</title>
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="sky-motion-lab/style.css">
+<script src="sky-motion-lab/app.js" defer></script></head>
+<body>
+<header class="topbar"><div class="brand"><span class="mark" aria-hidden="true">◈</span><div><p class="eyebrow">SUPERIOR MI LABS</p><h1>Visual Atlas</h1></div></div>
+<nav class="headright" aria-label="Main navigation"><a href="index.html">Browse Assets</a><a href="builder.html">Builder</a><a href="sky-prototype.html">Sky Prototype</a><a href="sky-motion-lab.html" aria-current="page">Motion Lab</a><a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas">GitHub</a></nav></header>
+<main class="motion-shell">
+<section class="motion-intro"><p class="eyebrow">EXPERIMENTAL ANIMATION SHOWCASE</p><h2>Sky Motion Lab</h2><p>Inspect each video-derived motion, then chain actions into a playable sequence. These clips are research candidates; the transparency, anatomy, tail count, sword consistency and loop seams still require art review.</p></section>
+<div class="motion-grid">
+<section class="motion-view" aria-labelledby="stage-title"><h3 id="stage-title">Preview</h3><div class="motion-stage checker" id="motion-stage"><video id="motion-video" playsinline preload="metadata" aria-label="Selected Sky motion animation"></video><div id="motion-placeholder">Choose a motion to preview</div></div>
+<div class="motion-now"><strong id="motion-name">No animation selected</strong><span id="motion-progress" aria-live="off">0:00 / 0:00</span></div>
+<div class="motion-controls"><button id="motion-play">Play</button><button id="motion-pause">Pause</button><button id="motion-stop">Stop</button><button id="motion-next">Next</button></div>
+<div class="motion-options"><label>Preview <select id="motion-format"><option value="webm">Transparent WebM candidate</option><option value="mp4">Original MP4</option></select></label>
+<label>Background <select id="motion-background"><option value="checker">Dark checkerboard</option><option value="light">Light</option><option value="dark">Solid dark</option></select></label>
+<label><input id="motion-loop-single" type="checkbox" checked> Loop single clip</label></div>
+<p id="motion-message" class="motion-note" role="status" aria-live="polite">Choose an animation below.</p>
+</section>
+<section class="motion-queue-panel" aria-labelledby="queue-title"><div class="motion-panel-head"><h3 id="queue-title">Animation sequence</h3><span class="motion-tag">Editable queue</span></div><p class="motion-note">Add several motions in any order. Rearrange them and press <strong>Play sequence</strong>. Each motion finishes before the next one starts. This is a demonstration of state sequencing, not seamless transitions.</p>
+<ol id="motion-queue" class="motion-queue" aria-label="Current queued animations"><li class="motion-empty">Queue is empty. Add animations below.</li></ol>
+<label class="motion-repeat"><input type="checkbox" id="motion-loop-queue"> Repeat entire sequence</label>
+<div class="motion-queue-controls"><button id="motion-play-queue" class="primary">Play sequence</button><button id="motion-clear-queue">Clear queue</button><button id="motion-export-queue">Export sequence JSON</button></div>
+</section></div>
+<section class="motion-list-section" aria-labelledby="list-title"><div class="motion-panel-head"><h3 id="list-title">Available motions</h3><span class="motion-tag" id="motion-count">Loading…</span></div>
+<div id="motion-clips" class="motion-cards"></div></section>
+<p class="motion-disclaimer">Source video is 640×360 at 24 FPS. The transparent preview and experimental Atlas frames are sampled at 16 FPS, 480×270. No new character design is approved by this demo. Original uploads and full evaluation assets should be kept as working sources until the visual QA gate passes.</p>
+</main>
+<footer>Experimental animation research · <a href="index.html">Visual Atlas asset browser</a> · <a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas">Source repository</a></footer>
+</body></html>

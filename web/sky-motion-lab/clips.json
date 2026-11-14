@@ -1,0 +1,83 @@
+{
+  "schema": "smi-video-showcase/1",
+  "description": "Sky video-derived motion candidates; previews only",
+  "clips": [
+    {
+      "id": "idle",
+      "title": "Idle breathing",
+      "kind": "idle",
+      "duration_ms": 5000,
+      "fps": 16,
+      "frames": 80,
+      "webm": "sky-motion-lab/media/idle.webm",
+      "mp4": "sky-motion-lab/media/idle.mp4",
+      "poster": "sky-motion-lab/media/idle.jpg",
+      "warnings": [
+        "Automated matte: inspect feather/robe edges against light AND dark backgrounds",
+        "Motion/generated anatomy, sword and exact tail count not certified",
+        "Idle source differs from newer two-tail design; do not treat as canonical",
+        "Potential visible last-to-first loop seam"
+      ]
+    },
+    {
+      "id": "run",
+      "title": "Run \u2014 variant A",
+      "kind": "run",
+      "duration_ms": 3000,
+      "fps": 16,
+      "frames": 48,
+      "webm": "sky-motion-lab/media/run.webm",
+      "mp4": "sky-motion-lab/media/run.mp4",
+      "poster": "sky-motion-lab/media/run.jpg",
+      "warnings": [
+        "Automated matte: inspect feather/robe edges against light AND dark backgrounds",
+        "Motion/generated anatomy, sword and exact tail count not certified"
+      ]
+    },
+    {
+      "id": "sprint_a",
+      "title": "Sprint \u2014 variant A",
+      "kind": "sprint",
+      "duration_ms": 3000,
+      "fps": 16,
+      "frames": 48,
+      "webm": "sky-motion-lab/media/sprint_a.webm",
+      "mp4": "sky-motion-lab/media/sprint_a.mp4",
+      "poster": "sky-motion-lab/media/sprint_a.jpg",
+      "warnings": [
+        "Automated matte: inspect feather/robe edges against light AND dark backgrounds",
+        "Motion/generated anatomy, sword and exact tail count not certified"
+      ]
+    },
+    {
+      "id": "sprint_b",
+      "title": "Sprint \u2014 variant B",
+      "kind": "sprint",
+      "duration_ms": 3000,
+      "fps": 16,
+      "frames": 48,
+      "webm": "sky-motion-lab/media/sprint_b.webm",
+      "mp4": "sky-motion-lab/media/sprint_b.mp4",
+      "poster": "sky-motion-lab/media/sprint_b.jpg",
+      "warnings": [
+        "Automated matte: inspect feather/robe edges against light AND dark backgrounds",
+        "Motion/generated anatomy, sword and exact tail count not certified"
+      ]
+    },
+    {
+      "id": "sprint_c",
+      "title": "Sprint \u2014 variant C",
+      "kind": "sprint",
+      "duration_ms": 3000,
+      "fps": 16,
+      "frames": 48,
+      "webm": "sky-motion-lab/media/sprint_c.webm",
+      "mp4": "sky-motion-lab/media/sprint_c.mp4",
+      "poster": "sky-motion-lab/media/sprint_c.jpg",
+      "warnings": [
+        "Automated matte: inspect feather/robe edges against light AND dark backgrounds",
+        "Motion/generated anatomy, sword and exact tail count not certified"
+      ]
+    }
+  ]
+}
