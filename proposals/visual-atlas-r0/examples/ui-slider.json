@@ -1,0 +1,114 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.demo.ui-slider",
+  "version": "0.1.0",
+  "textures": {
+    "ui": {
+      "path": "textures/slider.png",
+      "width_px": 512,
+      "height_px": 128
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.ui.slider.track",
+      "kind": "region",
+      "texture": "ui",
+      "rect_px": [
+        0,
+        0,
+        320,
+        32
+      ],
+      "nine_slice_px": [
+        12,
+        8,
+        12,
+        8
+      ]
+    },
+    {
+      "id": "smi.ui.slider.fill",
+      "kind": "region",
+      "texture": "ui",
+      "rect_px": [
+        0,
+        40,
+        296,
+        16
+      ]
+    },
+    {
+      "id": "smi.ui.slider.thumb",
+      "kind": "region",
+      "texture": "ui",
+      "rect_px": [
+        320,
+        0,
+        32,
+        32
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "smi.ui.slider.control",
+      "kind": "composition",
+      "name": "Value slider",
+      "tags": [
+        "slider",
+        "gui",
+        "input",
+        "control",
+        "progress"
+      ],
+      "size_px": [
+        320,
+        40
+      ],
+      "inputs": {
+        "value": {
+          "type": "number",
+          "default": 0.5,
+          "min": 0,
+          "max": 1
+        }
+      },
+      "layers": [
+        {
+          "id": "track",
+          "asset": "smi.ui.slider.track"
+        },
+        {
+          "id": "fill",
+          "asset": "smi.ui.slider.fill",
+          "offset_px": [
+            12,
+            8
+          ],
+          "clip": {
+            "input": "value",
+            "axis": "x",
+            "origin": "start"
+          }
+        },
+        {
+          "id": "thumb",
+          "asset": "smi.ui.slider.thumb",
+          "offset_px": [
+            0,
+            0
+          ],
+          "position_from_input": {
+            "input": "value",
+            "axis": "x",
+            "from_px": 12,
+            "to_px": 276
+          }
+        }
+      ]
+    }
+  ]
+}
