@@ -197,6 +197,8 @@ def main():
                     page.add_script_tag(content=src)
                 page.locator('#builder-status').get_by_text('Opened '+case['pack'],exact=False).wait_for(timeout=15000)
                 if case.get('asset'):
+                    # Exact IDs must work even when the asset is outside the initial page.
+                    page.locator('#asset-search').fill(case['asset'])
                     page.locator(f'#asset-list .asset-entry[data-asset-id="{case["asset"]}"]').click(timeout=5000)
                 page.locator('#preview-name').get_by_text(case['preview_name'],exact=True).wait_for(timeout=5000)
                 page.locator('#play').click() # freeze clock for deterministic captures

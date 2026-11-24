@@ -3,13 +3,13 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from tools.asset_inventory import audit
+from tools.asset_inventory import audit, source_collections, read_collection, runtime_files
 from tools.build_site import ROOT
 
 class InventoryTests(unittest.TestCase):
     def test_source_to_public_registry_reconciliation(self):
         r=audit(ROOT);self.assertEqual(r["errors"],[],r["errors"])
-        sources={p.parent.relative_to(ROOT).as_posix() for p in (ROOT/"examples").glob("*/manifest.json")}
+        sources={p.relative_to(ROOT).as_posix() for p in source_collections(ROOT)}
         self.assertEqual(sources,{c["path"] for c in r["collections"]})
         policy=json.loads((ROOT/"publications.json").read_text())
         self.assertEqual({p["path"] for p in policy["collections"]},
@@ -29,6 +29,36 @@ class InventoryTests(unittest.TestCase):
             self.assertEqual(audit(root)["errors"],[])
             policy["collections"].clear();(root/"publications.json").write_text(json.dumps(policy))
             self.assertEqual(audit(root)["summary"]["unpublished_collections"],1)
+    def test_multi_manifest_source_and_payload_agree(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);folder=root/"examples"/"multi"
+            for name in ("first","second"):
+                pack_dir=folder/"packs"/name
+                (pack_dir/"textures").mkdir(parents=True)
+                (pack_dir/"textures"/"sheet.png").write_bytes(b"fixture")
+                (pack_dir/"LICENSE.txt").write_text("fixture notice")
+                (pack_dir/"manifest.json").write_text(json.dumps({
+                    "schema":"smi-visual-pack/1","pack_id":name,
+                    "assets":[{"id":name,"name":name,"tags":["fixture"]}],
+                    "textures":{"sheet":{"path":"textures/sheet.png"}}}))
+            index={"schema":"smi-visual-collection/1","packs":[
+                {"manifest":"packs/first/manifest.json"},{"manifest":"packs/second/manifest.json"}]}
+            (folder/"collection.json").write_text(json.dumps(index))
+            policy={"schema":"smi-publications/1","collections":[{"path":"examples/multi",
+                "expected_assets":2,"approval":"owner","rights":"owned","visual_qa":"pending"}]}
+            (root/"publications.json").write_text(json.dumps(policy))
+            report=audit(root)
+            self.assertEqual(report["errors"],[])
+            self.assertEqual(report["summary"]["published_assets"],2)
+            loaded,packs=read_collection(folder);files,textures=runtime_files(folder,loaded,packs)
+            self.assertEqual(len(textures),2)
+            self.assertEqual({p.relative_to(folder).as_posix() for p in files},
+                {"collection.json",*(f"packs/{name}/{file}" for name in ("first","second")
+                 for file in ("manifest.json","textures/sheet.png","LICENSE.txt"))})
+            index["packs"][1]["manifest"]="../escape.json"
+            (folder/"collection.json").write_text(json.dumps(index))
+            self.assertTrue(any("unsafe source path" in error for error in audit(root)["errors"]))
+
     def test_orphan_and_id_collision_visible(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d)

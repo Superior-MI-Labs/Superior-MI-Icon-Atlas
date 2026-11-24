@@ -5,6 +5,7 @@ import unittest
 from pathlib import Path
 from zipfile import ZipFile
 from tools.build_site import build,ROOT
+from tools.asset_inventory import read_collection
 from tools.prune_public_site import prune
 from tools.validate_visual_pack import check
 
@@ -27,9 +28,10 @@ class PublicCatalogTests(unittest.TestCase):
             approved=set()
             for entry in publication['collections']:
                 folder=ROOT/entry['path']
-                source=json.loads((folder/'manifest.json').read_text())
-                self.assertEqual(len(source['assets']),entry['expected_assets'])
-                approved.update(a['id'] for a in source['assets'])
+                _,packs=read_collection(folder)
+                source=[a for _,pack in packs for a in pack['assets']]
+                self.assertEqual(len(source),entry['expected_assets'])
+                approved.update(a['id'] for a in source)
                 archive=site/'demo'/(folder.name+'.zip')
                 self.assertEqual(check(archive),[],str(archive))
                 self.assertTrue(archive.is_file())

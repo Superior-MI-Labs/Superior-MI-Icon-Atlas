@@ -41,6 +41,26 @@ def check(packs):
         slots = asset.get('slots', {})
         used = set()
         for layer in asset['layers']:
+            if 'input_bindings' in layer or 'preset' in layer:
+                choices = slots.get(layer.get('slot'), {}).get('options', []) if 'slot' in layer else [layer.get('asset')]
+                if layer.get('repeat') or not choices:
+                    errors.append(asset['id'] + ': invalid nested layer configuration')
+                for target_id in choices:
+                    target = assets.get(target_id, {})
+                    if target.get('kind') != 'composition':
+                        errors.append(asset['id'] + ': nested bindings/preset require composition ' + str(target_id))
+                        continue
+                    if 'preset' in layer and layer['preset'] not in target.get('presets', {}):
+                        errors.append(asset['id'] + ': unknown child preset ' + layer['preset'])
+                    for to, source in layer.get('input_bindings', {}).items():
+                        src = asset.get('inputs', {}).get(source, {})
+                        dst = target.get('inputs', {}).get(to, {})
+                        kind = src.get('type')
+                        compatible = (kind is not None and kind == dst.get('type') and
+                            ((kind == 'number' and src.get('min', 0) >= dst.get('min', 0) and src.get('max', 1) <= dst.get('max', 1)) or
+                             (kind == 'enum' and set(src.get('values', [])) <= set(dst.get('values', []))) or kind == 'boolean'))
+                        if not compatible or to in layer.get('input_values', {}):
+                            errors.append(asset['id'] + ': incompatible child input binding ' + to + ' <- ' + source)
             if 'slot' in layer:
                 used.add(layer['slot'])
                 if layer['slot'] not in slots: errors.append(asset['id'] + ' undeclared layer slot ' + layer['slot'])

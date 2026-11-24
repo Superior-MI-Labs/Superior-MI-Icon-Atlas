@@ -12,18 +12,18 @@
     {
       "path": "examples/royal-forge-controls",
       "published": "2026-11-02",
-      "expected_assets": 214,
-      "approval": "Approved Royal Forge fantasy GUI Controls Wave 2; 214-addressable-asset collection",
+      "expected_assets": 219,
+      "approval": "Approved Royal Forge fantasy GUI Controls Wave 2; 214-addressable-asset collection; v0.3 assembles existing approved parts into reusable action/inventory controls under the owner's HUD direction; layout review pending",
       "rights": "CC0-1.0 original generated/vector artwork",
-      "visual_qa": "reviewed"
+      "visual_qa": "pending"
     },
     {
       "path": "examples/royal-forge-hud-resources",
       "published": "2026-11-02",
-      "expected_assets": 360,
-      "approval": "User approved Royal Forge HUD Resources v1.1 including adaptive hearts/pips and corrected rims",
+      "expected_assets": 362,
+      "approval": "User approved Royal Forge HUD Resources v1.1 including adaptive hearts/pips and corrected rims; v1.2 consolidates existing approved artwork and adds an assembled resource HUD under the owner's HUD development direction; new layout visual review pending",
       "rights": "CC0-1.0 original generated/vector artwork",
-      "visual_qa": "reviewed"
+      "visual_qa": "pending"
     },
     {
       "path": "examples/pixel-fantasy-icons",

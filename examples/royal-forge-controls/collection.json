@@ -2,9 +2,9 @@
   "schema": "smi-visual-collection/1",
   "collection_id": "smi.ui.fantasy01.wave2",
   "name": "Fantasy RPG HUD Wave 2 — Royal Forge Core Controls",
-  "version": "0.2.0",
-  "description": "Original fantasy RPG controls kit: per-state texture parts, interactive compositions, menus and chrome. Host handles pointer/keyboard navigation.",
-  "entry_asset": "smi.ui.fantasy01.wave2.widget.button-arcane",
+  "version": "0.3.0",
+  "description": "Original fantasy RPG controls kit: per-state texture parts, interactive compositions, menus and chrome. Host handles pointer/keyboard navigation. Includes configurable ability sockets, six-slot hotbar, inventory grid and status strip.",
+  "entry_asset": "smi.ui.fantasy01.wave2.widget.action-inventory-hud",
   "packs": [
     {
       "manifest": "manifest.json",

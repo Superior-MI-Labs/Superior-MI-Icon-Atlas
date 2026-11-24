@@ -32,6 +32,23 @@
     if(Object.keys(slots).length>64||Object.keys(presets).length>100)errors.push(a.id+': too many slots or presets');
     const used=new Set();
     for(const layer of a.layers||[]){
+      if(layer.input_bindings!==undefined||layer.preset!==undefined){
+        const choices=layer.slot?slots[layer.slot]?.options||[]:[layer.asset];
+        const binds=layer.input_bindings||{};
+        if(layer.repeat||!choices.length||typeof binds!=='object'||Array.isArray(binds)||binds===null)errors.push(a.id+': invalid nested layer configuration '+layer.id);
+        else for(const id of choices){
+          const child=ids.get(id);
+          if(child?.kind!=='composition'){errors.push(a.id+': nested bindings/preset require composition '+id);continue;}
+          if(layer.preset!==undefined&&!own(child.presets||{},layer.preset))errors.push(a.id+': unknown child preset '+layer.preset);
+          for(const [to,from] of Object.entries(binds)){
+            const src=a.inputs?.[from],dst=child.inputs?.[to];
+            const compatible=src&&dst&&src.type===dst.type&&(src.type==='number'?
+              (src.min??0)>=(dst.min??0)&&(src.max??1)<=(dst.max??1):
+              src.type==='enum'?src.values.every(v=>dst.values.includes(v)):src.type==='boolean');
+            if(!compatible||own(layer.input_values||{},to))errors.push(a.id+': incompatible child input binding '+to+' <- '+from);
+          }
+        }
+      }
       if(layer.slot!==undefined){
         if(!validName(layer.slot)||!own(slots,layer.slot))errors.push(a.id+': unknown layer slot '+layer.slot);
         else used.add(layer.slot);

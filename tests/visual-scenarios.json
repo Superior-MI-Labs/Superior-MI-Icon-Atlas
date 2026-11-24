@@ -7,14 +7,47 @@
       "pack": "interactive-hud.zip",
       "preview_name": "Interactive energy meter",
       "samples": [
-        {"id":"empty", "inputs":{"value":0}},
-        {"id":"half", "inputs":{"value":50}},
-        {"id":"full", "inputs":{"value":100}}
+        {
+          "id": "empty",
+          "inputs": {
+            "value": 0
+          }
+        },
+        {
+          "id": "half",
+          "inputs": {
+            "value": 50
+          }
+        },
+        {
+          "id": "full",
+          "inputs": {
+            "value": 100
+          }
+        }
       ],
       "assertions": [
-        {"type":"green_increases", "samples":["empty","half","full"], "min_step":500},
-        {"type":"output_equals", "sample":"half", "field":"value", "equals":50},
-        {"type":"different", "a":"empty", "b":"full", "min_changed_pixels":1000}
+        {
+          "type": "green_increases",
+          "samples": [
+            "empty",
+            "half",
+            "full"
+          ],
+          "min_step": 500
+        },
+        {
+          "type": "output_equals",
+          "sample": "half",
+          "field": "value",
+          "equals": 50
+        },
+        {
+          "type": "different",
+          "a": "empty",
+          "b": "full",
+          "min_changed_pixels": 1000
+        }
       ]
     },
     {
@@ -22,62 +55,352 @@
       "pack": "character-animations.zip",
       "preview_name": "Robot animation states",
       "samples": [
-        {"id":"idle", "state":"idle", "time_ms":0},
-        {"id":"walk-start", "state":"walk", "time_ms":0},
-        {"id":"walk-next", "state":"walk", "time_ms":140},
-        {"id":"walk-loop", "state":"walk", "time_ms":500}
+        {
+          "id": "idle",
+          "state": "idle",
+          "time_ms": 0
+        },
+        {
+          "id": "walk-start",
+          "state": "walk",
+          "time_ms": 0
+        },
+        {
+          "id": "walk-next",
+          "state": "walk",
+          "time_ms": 140
+        },
+        {
+          "id": "walk-loop",
+          "state": "walk",
+          "time_ms": 500
+        }
       ],
       "assertions": [
-        {"type":"different", "a":"idle", "b":"walk-start", "min_changed_pixels":20},
-        {"type":"different", "a":"walk-start", "b":"walk-next", "min_changed_pixels":20},
-        {"type":"same", "a":"walk-start", "b":"walk-loop", "max_changed_pixels":0}
+        {
+          "type": "different",
+          "a": "idle",
+          "b": "walk-start",
+          "min_changed_pixels": 20
+        },
+        {
+          "type": "different",
+          "a": "walk-start",
+          "b": "walk-next",
+          "min_changed_pixels": 20
+        },
+        {
+          "type": "same",
+          "a": "walk-start",
+          "b": "walk-loop",
+          "max_changed_pixels": 0
+        }
       ]
     },
     {
-      "id":"animated-icon-frames",
-      "pack":"animated-icons.zip",
-      "preview_name":"Looping pulse",
-      "samples":[
-        {"id":"frame-a", "time_ms":0},
-        {"id":"frame-b", "time_ms":200},
-        {"id":"repeat", "time_ms":500}
+      "id": "animated-icon-frames",
+      "pack": "animated-icons.zip",
+      "preview_name": "Looping pulse",
+      "samples": [
+        {
+          "id": "frame-a",
+          "time_ms": 0
+        },
+        {
+          "id": "frame-b",
+          "time_ms": 200
+        },
+        {
+          "id": "repeat",
+          "time_ms": 500
+        }
       ],
-      "assertions":[
-        {"type":"different", "a":"frame-a", "b":"frame-b", "min_changed_pixels":30},
-        {"type":"same", "a":"frame-a", "b":"repeat", "max_changed_pixels":0}
+      "assertions": [
+        {
+          "type": "different",
+          "a": "frame-a",
+          "b": "frame-b",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "same",
+          "a": "frame-a",
+          "b": "repeat",
+          "max_changed_pixels": 0
+        }
       ]
     },
     {
-      "id":"glass-layer-controls",
-      "pack":"starter-pack.zip",
-      "preview_name":"Reactive glass and rain",
-      "asset":"demo.glass.panel",
-      "samples":[
-        {"id":"clear", "inputs":{"damage":"intact", "raining":false},"time_ms":0},
-        {"id":"cracked", "inputs":{"damage":"shattered", "raining":false},"time_ms":0},
-        {"id":"wet-a", "inputs":{"damage":"shattered", "raining":true},"time_ms":0},
-        {"id":"wet-b", "inputs":{"damage":"shattered", "raining":true},"time_ms":270}
+      "id": "glass-layer-controls",
+      "pack": "starter-pack.zip",
+      "preview_name": "Reactive glass and rain",
+      "asset": "demo.glass.panel",
+      "samples": [
+        {
+          "id": "clear",
+          "inputs": {
+            "damage": "intact",
+            "raining": false
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "cracked",
+          "inputs": {
+            "damage": "shattered",
+            "raining": false
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "wet-a",
+          "inputs": {
+            "damage": "shattered",
+            "raining": true
+          },
+          "time_ms": 0
+        },
+        {
+          "id": "wet-b",
+          "inputs": {
+            "damage": "shattered",
+            "raining": true
+          },
+          "time_ms": 270
+        }
       ],
-      "assertions":[
-        {"type":"different", "a":"clear", "b":"cracked", "min_changed_pixels":30},
-        {"type":"different", "a":"cracked", "b":"wet-a", "min_changed_pixels":30},
-        {"type":"different", "a":"wet-a", "b":"wet-b", "min_changed_pixels":30}
+      "assertions": [
+        {
+          "type": "different",
+          "a": "clear",
+          "b": "cracked",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "cracked",
+          "b": "wet-a",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "wet-a",
+          "b": "wet-b",
+          "min_changed_pixels": 30
+        }
       ]
     },
     {
-      "id":"potion-presets",
-      "pack":"potions-collection.zip",
-      "preview_name":"Potion bottle with compatible fluids",
-      "samples":[
-        {"id":"health", "preset":"Health", "time_ms":0},
-        {"id":"mana-a", "preset":"Mana", "time_ms":0},
-        {"id":"mana-b", "preset":"Mana", "time_ms":200},
-        {"id":"poison", "preset":"Poison", "time_ms":0}
+      "id": "potion-presets",
+      "pack": "potions-collection.zip",
+      "preview_name": "Potion bottle with compatible fluids",
+      "samples": [
+        {
+          "id": "health",
+          "preset": "Health",
+          "time_ms": 0
+        },
+        {
+          "id": "mana-a",
+          "preset": "Mana",
+          "time_ms": 0
+        },
+        {
+          "id": "mana-b",
+          "preset": "Mana",
+          "time_ms": 200
+        },
+        {
+          "id": "poison",
+          "preset": "Poison",
+          "time_ms": 0
+        }
       ],
-      "assertions":[
-        {"type":"different", "a":"health", "b":"mana-a", "min_changed_pixels":30},
-        {"type":"different", "a":"mana-a", "b":"mana-b", "min_changed_pixels":10},
-        {"type":"different", "a":"mana-a", "b":"poison", "min_changed_pixels":30}
+      "assertions": [
+        {
+          "type": "different",
+          "a": "health",
+          "b": "mana-a",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "mana-a",
+          "b": "mana-b",
+          "min_changed_pixels": 10
+        },
+        {
+          "type": "different",
+          "a": "mana-a",
+          "b": "poison",
+          "min_changed_pixels": 30
+        }
+      ]
+    },
+    {
+      "id": "royal-forge-adventurer-hud",
+      "pack": "royal-forge-hud-resources.zip",
+      "asset": "smi.hud.royalforge02.hud.adventurer",
+      "preview_name": "Royal Forge Adventurer HUD",
+      "samples": [
+        {
+          "id": "empty",
+          "inputs": {
+            "health": 0,
+            "mana": 0,
+            "stamina": 0,
+            "shield": 0,
+            "experience": 0,
+            "boss_health": 0,
+            "charges": 0
+          }
+        },
+        {
+          "id": "health-only",
+          "inputs": {
+            "health": 100
+          }
+        },
+        {
+          "id": "mana-only",
+          "inputs": {
+            "health": 0,
+            "mana": 100
+          }
+        },
+        {
+          "id": "full",
+          "inputs": {
+            "health": 100,
+            "mana": 100,
+            "stamina": 100,
+            "shield": 100,
+            "experience": 100,
+            "boss_health": 100,
+            "charges": 6
+          }
+        },
+        {
+          "id": "empty-again",
+          "inputs": {
+            "health": 0,
+            "mana": 0,
+            "stamina": 0,
+            "shield": 0,
+            "experience": 0,
+            "boss_health": 0,
+            "charges": 0
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "empty",
+          "b": "health-only",
+          "min_changed_pixels": 100
+        },
+        {
+          "type": "different",
+          "a": "health-only",
+          "b": "mana-only",
+          "min_changed_pixels": 100
+        },
+        {
+          "type": "different",
+          "a": "empty",
+          "b": "full",
+          "min_changed_pixels": 500
+        },
+        {
+          "type": "same",
+          "a": "empty",
+          "b": "empty-again",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "royal-forge-action-inventory",
+      "pack": "royal-forge-controls.zip",
+      "asset": "smi.ui.fantasy01.wave2.widget.action-inventory-hud",
+      "preview_name": "Royal Forge Action and Inventory HUD",
+      "samples": [
+        {
+          "id": "baseline",
+          "inputs": {
+            "ability_1_mode": "ready",
+            "ability_1_cooldown": 0,
+            "inventory_1": "empty",
+            "status_1": "ready"
+          }
+        },
+        {
+          "id": "half-cooldown",
+          "inputs": {
+            "ability_1_cooldown": 50
+          }
+        },
+        {
+          "id": "full-cooldown",
+          "inputs": {
+            "ability_1_cooldown": 100
+          }
+        },
+        {
+          "id": "locked",
+          "inputs": {
+            "ability_1_mode": "locked"
+          }
+        },
+        {
+          "id": "inventory-status",
+          "inputs": {
+            "inventory_1": "epic",
+            "status_1": "warning"
+          }
+        },
+        {
+          "id": "restored",
+          "inputs": {
+            "ability_1_mode": "ready",
+            "ability_1_cooldown": 0,
+            "inventory_1": "empty",
+            "status_1": "ready"
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "baseline",
+          "b": "half-cooldown",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "half-cooldown",
+          "b": "full-cooldown",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "full-cooldown",
+          "b": "locked",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "locked",
+          "b": "inventory-status",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "same",
+          "a": "baseline",
+          "b": "restored",
+          "max_changed_pixels": 0
+        }
       ]
     }
   ]
