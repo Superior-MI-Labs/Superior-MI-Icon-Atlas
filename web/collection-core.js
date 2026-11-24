@@ -48,7 +48,7 @@
         statIds.add(profile.id);statProfiles.push(structuredClone(profile));
       }
       for(const [id,def] of Object.entries(pack.interfaces||{})){
-        if(Object.hasOwn(interfaces,id)&&JSON.stringify(interfaces[id])!==JSON.stringify(def))throw Error('Conflicting interface contract '+id);
+        if(Object.hasOwn(interfaces,id)&&!equivalent(interfaces[id],def))throw Error('Conflicting interface contract '+id);
         interfaces[id]=structuredClone(def);
       }
       const groupIds=[];
@@ -152,7 +152,7 @@
       for(const ref of [...(a.implements||[]),...Object.values(a.slots||{}).map(s=>s.accepts)]){
         const def=getInterfaces(a)?.[ref];
         if(!def)throw Error('Missing interface '+ref+' for '+a.id);
-        if(Object.hasOwn(interfaces,ref)&&JSON.stringify(interfaces[ref])!==JSON.stringify(def))throw Error('Conflicting interface '+ref);
+        if(Object.hasOwn(interfaces,ref)&&!equivalent(interfaces[ref],def))throw Error('Conflicting interface '+ref);
         interfaces[ref]=def;
       }
       for(const key of ['pack','source','sourcePack','sourceGroup','sourceLabel','ownerBag','review_status'])delete a[key];

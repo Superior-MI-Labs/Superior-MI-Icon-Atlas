@@ -78,7 +78,7 @@
       if (visiting.has(id)) throw Error('Asset reference cycle at '+id);
       if (seen.has(id)) return;
       const a=ids.get(id);
-      if (!a) { if (library.has(id)) return; throw Error('Missing asset reference: '+id); }
+      if (!a) { throw Error('Missing asset reference: '+id+'; import a self-contained pack'); }
       visiting.add(id);
       let refs=[];
       if(a.kind==='region') {
@@ -147,7 +147,8 @@
       const blob=data instanceof Blob?data:blobOf(data,mime(t.path));
       const shared=new Set(overlap.filter(a=>a.texture===key).map(a=>library.get(a.id).texture));
       for(const existing of shared){
-        if(!await Collections.sameBytes(blob,textures.get(existing)?.blob))throw Error('Conflicting texture bytes for existing asset in '+t.path);
+        const original=textures.get(existing);
+        if(original?.image?.naturalWidth!==t.width_px||original?.image?.naturalHeight!==t.height_px||!await Collections.sameBytes(blob,original.blob))throw Error('Conflicting texture bytes for existing asset in '+t.path);
       }
       // Only allocate textures actually needed by newly registered regions.
       if(!pack.assets.some(a=>a.texture===key&&!library.has(a.id)))continue;
@@ -197,7 +198,8 @@
     $('asset-search').value='';$('asset-kind').value='';renderBag();refreshList();renderControlPanel();
     setStatus('Opened '+bag.name+': '+bag.assetIds.length+' assets across '+bag.groups.length+' manifest(s).');
   }
-  async function removeBag(id,deleteStored=true){
+  function removeBag(id,deleteStored=true){return mutateRegistry(()=>releaseBag(id,deleteStored));}
+  async function releaseBag(id,deleteStored=true){
     const bag=bagItem(id);if(!bag)return;
     bags.delete(id);
     const remaining=[...bags.values()],removed=new Set();
@@ -227,12 +229,13 @@
   }
   function isPersistEnabled(){return Boolean($('save-bag')?.checked);}
   // Imports are serialized: two async decodes cannot race the unique-ID registry.
-  let importQueue=Promise.resolve();
-  function importZip(file,options={}){
-    const job=importQueue.then(()=>readZip(file,options));
-    importQueue=job.catch(()=>{});
+  let registryQueue=Promise.resolve();
+  function mutateRegistry(operation){
+    const job=registryQueue.then(operation);
+    registryQueue=job.catch(()=>{});
     return job;
   }
+  function importZip(file,options={}){return mutateRegistry(()=>readZip(file,options));}
   async function readZip(file,options={}){
     if(file.size>MAX_BYTES)throw Error('ZIP exceeds 120 MB import limit');
     // Validate central directory before inflating any archive member.
@@ -266,16 +269,16 @@
     const bagId=options.id||'bag-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,8);
     if(bags.has(bagId))throw Error('This ZIP is already in My Bag');
     const sourcePack=resolved.pack;
+    const notices=[];
+    for(const entry of entries.filter(e=>/(?:^|\/)(?:LICENSE[^/]*|NOTICE[^/]*|SOURCE-NOTICES[^/]*)$/i.test(e.name)||/(?:^|\/)LICENSES\//i.test(e.name))){
+      if(entry._data.uncompressedSize<=MAX_ENTRY)notices.push({path:entry.name,blob:await entry.async('blob')});
+    }
     // One transaction: decode every texture and validate every cross-pack reference before registering assets.
     await importPack(sourcePack,async path=>{
       const entry=zip.file(path);if(!entry)return null;
       if(entry._data?.uncompressedSize>MAX_ENTRY)throw Error('Oversized texture '+path);
       return entry.async('uint8array');
     },'',bagId);
-    const notices=[];
-    for(const entry of entries.filter(e=>/(?:^|\/)(?:LICENSE[^/]*|NOTICE[^/]*|SOURCE-NOTICES[^/]*)$/i.test(e.name)||/(?:^|\/)LICENSES\//i.test(e.name))){
-      if(entry._data.uncompressedSize<=MAX_ENTRY)notices.push({path:entry.name,blob:await entry.async('blob')});
-    }
     const bag={...resolved.bag,id:bagId,collectionId:sourcePack.pack_id,filename:file.name||'visual-assets.zip',file,notices,
       previewIds:(sourcePack.preview_profiles||[]).map(p=>p.id),statIds:(sourcePack.stat_profiles||[]).map(p=>p.id)};
     bags.set(bagId,bag);openBag(bagId);
@@ -296,7 +299,8 @@
       }
     }catch(err){setStatus('Local bag storage unavailable: '+err.message,true);}
   }
-  async function importFiles(files){
+  function importFiles(files){return mutateRegistry(()=>readFiles(files));}
+  async function readFiles(files){
     const jsons=files.filter(f=>/\.json$/i.test(f.name));
     const imgs=files.filter(f=>/\.(png|jpg|jpeg|webp|gif)$/i.test(f.name));
     if(jsons.length){for(const f of jsons){const pack=JSON.parse(await f.text());await importPack(pack,async(_path,original)=>imgs.find(i=>i.name===original||i.webkitRelativePath===original)||null);}}
@@ -558,7 +562,7 @@
     const canvas=$('stage'),rect=canvas.getBoundingClientRect();
     if(!rect.width||!rect.height)return null;
     const cw=range($('canvas-width').value,16,4096),ch=range($('canvas-height').value,16,4096);
-    const geometry=sharedRenderer.geometryFor(a.id,new Set(),Inputs.reconcile(a,ui.controls,Slots.resolve(a,ui.preset).inputs));
+    const geometry=sharedRenderer.geometryFor(a.id,new Set(),Inputs.reconcile(a,ui.controls,Slots.resolve(a,ui.preset).inputs),ui.preset,ui.slots);
     const factor=Math.min(cw/geometry.width,ch/geometry.height,3);
     return {
       x:((e.clientX-rect.left)/rect.width*cw-Math.max(0,(cw-geometry.width*factor)/2))/factor+geometry.minX,
@@ -678,7 +682,7 @@
         const lw=(l.w||ww)*(l.scale_x??1),lh=(l.h||hh)*(l.scale_y??1);
         if(l.rotation_deg){const cx=px+lw/2,cy=py+lh/2;ctx.translate(cx,cy);ctx.rotate(l.rotation_deg*Math.PI/180);ctx.translate(-cx,-cy);}
         await drawAsset(l.asset,ctx,px,py,lw,lh,time,l.values||{},l.state||null);ctx.restore();}}
-      else if(ui.selected){const [aw,ah]=sizeFor(ui.selected,new Set(),ui.controls),factor=Math.min(cw/aw,ch/ah,3);await drawAsset(ui.selected,ctx,Math.max(0,(cw-aw*factor)/2),Math.max(0,(ch-ah*factor)/2),aw*factor,ah*factor,time,ui.controls,ui.controls._state||null,new Set(),ui.slots,ui.preset);}
+      else if(ui.selected){const [aw,ah]=sizeFor(ui.selected,new Set(),ui.controls,ui.preset,ui.slots),factor=Math.min(cw/aw,ch/ah,3);await drawAsset(ui.selected,ctx,Math.max(0,(cw-aw*factor)/2),Math.max(0,(ch-ah*factor)/2),aw*factor,ah*factor,time,ui.controls,ui.controls._state||null,new Set(),ui.slots,ui.preset);}
     }catch(e){setStatus(e.message,true);}finally{ctx.restore();}
   }
   async function renderFrame(){await renderAt($('stage'),ui.clock,false);}
@@ -810,7 +814,7 @@
       await importZip(file);
       setStatus('Loaded Potion Lab: choose Health, Mana or Poison in the automatic preset controls.');
     }catch(e){setStatus(e.message,true);}});
-    $('clear-imports').addEventListener('click',async()=>{for(const id of [...bags.keys()])await removeBag(id);for(const [id,a] of library)if(a.source!=='Official Icon Atlas')library.delete(id);for(const [key,t] of textures)if(!key.startsWith('official:')){if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);}imports.clear();interfaces.clear();previewProfiles.clear();statProfiles.clear();driveDriver=null;activeStatId=null;statRuntime=null;try{await BagStore.clear();}catch{}$('import-info').textContent='Built-in Icon Atlas loaded automatically';bagScope=null;bagGroup='';scene.layers=[];scene.selectedLayer=-1;selectAsset(null);layerInputs();refreshTimeline();renderControlPanel();refreshList();renderBag();setStatus('All private bag imports cleared. Public icons remain.');});
+    $('clear-imports').addEventListener('click',()=>mutateRegistry(async()=>{for(const id of [...bags.keys()])await releaseBag(id);for(const [id,a] of library)if(a.source!=='Official Icon Atlas')library.delete(id);for(const [key,t] of textures)if(!key.startsWith('official:')){if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);}imports.clear();interfaces.clear();previewProfiles.clear();statProfiles.clear();driveDriver=null;activeStatId=null;statRuntime=null;try{await BagStore.clear();}catch{}$('import-info').textContent='Built-in Icon Atlas loaded automatically';bagScope=null;bagGroup='';scene.layers=[];scene.selectedLayer=-1;selectAsset(null);layerInputs();refreshTimeline();renderControlPanel();refreshList();renderBag();setStatus('All private bag imports cleared. Public icons remain.');}));
     $('bag-show-all').addEventListener('click',()=>{bagScope=null;bagGroup='';renderBag();refreshList();});
     $('bag-group').addEventListener('change',()=>{bagGroup=$('bag-group').value;refreshList();});
     $('save-bag').addEventListener('change',()=>{try{localStorage.setItem(bagPersistenceKey,$('save-bag').checked?'yes':'no');}catch{} if($('save-bag').checked)setStatus('Future ZIP imports will be saved on this device. Existing session ZIPs remain session-only.');else setStatus('Future ZIP imports will stay in this browser session only. Existing stored ZIPs can be removed from My Bag.');});

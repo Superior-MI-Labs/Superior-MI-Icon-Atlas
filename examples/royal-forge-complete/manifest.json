@@ -364,6 +364,58 @@
             "unit": "charges"
           }
         }
+      },
+      "presets": {
+        "Exploration": {
+          "inputs": {
+            "health": 100,
+            "mana": 90,
+            "stamina": 100,
+            "shield": 100,
+            "experience": 20,
+            "boss_health": 100,
+            "charges": 6,
+            "ability_1_cooldown": 0,
+            "ability_2_cooldown": 0,
+            "ability_3_mode": "ready",
+            "ability_4_mode": "locked",
+            "ability_5_cooldown": 0,
+            "status_1": "ready",
+            "status_2": "ready",
+            "status_3": "ready"
+          }
+        },
+        "Combat": {
+          "inputs": {
+            "health": 65,
+            "mana": 40,
+            "stamina": 55,
+            "shield": 25,
+            "experience": 60,
+            "boss_health": 45,
+            "charges": 3,
+            "ability_1_cooldown": 75,
+            "ability_2_cooldown": 25,
+            "ability_3_mode": "active",
+            "status_2": "warning"
+          }
+        },
+        "Low resources": {
+          "inputs": {
+            "health": 15,
+            "mana": 5,
+            "stamina": 10,
+            "shield": 0,
+            "boss_health": 30,
+            "charges": 0,
+            "ability_1_cooldown": 100,
+            "ability_2_cooldown": 100,
+            "ability_3_mode": "locked",
+            "status_1": "warning",
+            "status_2": "spent",
+            "status_3": "spent"
+          }
+        }
       }
     }
   ]

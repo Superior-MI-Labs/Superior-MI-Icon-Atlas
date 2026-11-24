@@ -103,7 +103,7 @@
     const {assets,renderer}=await ready(entry.pack);
     const asset=assets.get(entry.id);
     const values=Inputs.reconcile(asset,options.controls||{},Slots.resolve(asset,options.preset).inputs);
-    const size=renderer.sizeFor(entry.id,new Set(),values),width=Math.max(1,size[0]),height=Math.max(1,size[1]);
+    const size=renderer.sizeFor(entry.id,new Set(),values,options.preset,options.slots),width=Math.max(1,size[0]),height=Math.max(1,size[1]);
     const maxW=options.card?200:520,maxH=options.card?124:255;
     const scale=Math.min(1,maxW/width,maxH/height);
     canvas.width=Math.max(1,Math.round(width*scale));canvas.height=Math.max(1,Math.round(height*scale));
@@ -209,7 +209,7 @@
     if(!current)return false;
     const a=assetFor(current),renderer=context(current.pack)?.renderer;if(!renderer||!Interactions.canPoint(a))return false;
     const canvas=$('detail-canvas'),rect=canvas.getBoundingClientRect();if(!rect.width||!rect.height)return false;
-    const geometry=renderer.geometryFor(a.id,new Set(),Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs));
+    const geometry=renderer.geometryFor(a.id,new Set(),Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs),preset,slotChoices);
     const point={x:(e.clientX-rect.left)/rect.width*geometry.width+geometry.minX,y:(e.clientY-rect.top)/rect.height*geometry.height+geometry.minY};
     const action=Interactions.pointerTarget(a,point,id=>renderer.sizeFor(id),drag);if(!action)return false;
     const result=Interactions.dispatch(a,Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs),action.event,action.payload);

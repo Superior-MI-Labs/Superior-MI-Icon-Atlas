@@ -291,6 +291,45 @@
             "boss_health": 0,
             "charges": 0
           }
+        },
+        {
+          "id": "royal-skin",
+          "preset": "Royal",
+          "inputs": {
+            "health": 50,
+            "mana": 50,
+            "stamina": 50,
+            "shield": 50,
+            "experience": 50,
+            "boss_health": 50,
+            "charges": 3
+          }
+        },
+        {
+          "id": "runic-skin",
+          "preset": "Runic",
+          "inputs": {
+            "health": 50,
+            "mana": 50,
+            "stamina": 50,
+            "shield": 50,
+            "experience": 50,
+            "boss_health": 50,
+            "charges": 3
+          }
+        },
+        {
+          "id": "iron-skin",
+          "preset": "Iron",
+          "inputs": {
+            "health": 50,
+            "mana": 50,
+            "stamina": 50,
+            "shield": 50,
+            "experience": 50,
+            "boss_health": 50,
+            "charges": 3
+          }
         }
       ],
       "assertions": [
@@ -317,6 +356,18 @@
           "a": "empty",
           "b": "empty-again",
           "max_changed_pixels": 0
+        },
+        {
+          "type": "different",
+          "a": "royal-skin",
+          "b": "runic-skin",
+          "min_changed_pixels": 100
+        },
+        {
+          "type": "different",
+          "a": "runic-skin",
+          "b": "iron-skin",
+          "min_changed_pixels": 100
         }
       ]
     },
