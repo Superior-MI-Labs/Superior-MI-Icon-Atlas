@@ -274,19 +274,18 @@
       zip.file('SOURCE-NOTICES.txt','Historical icon candidate. Rights review is pending. Original ID: '+asset.id+'\n');
       save(await zip.generateAsync({type:'blob',compression:'DEFLATE'}),current.id+'.zip');return;
     }
-    const data=await ready(current.pack);
-    const closure=Collections.dependencyClosure([current.id],id=>assets.get(id),Slots.refs);
-    const chosen=[...closure].map(id=>structuredClone(assets.get(id)));const required=new Set(chosen.filter(a=>a.kind==='region').map(a=>a.texture.split('::')[1]));
-    const main=data.manifests[0];const zip=new JSZip();const defs={};
-    for(const a of chosen){if(a.kind==='region')a.texture=a.texture.split('::')[1];for(const key of ['pack','sourcePack','sourceGroup','sourceLabel','ownerBag','source'])delete a[key];for(const contract of [...(a.implements||[]),...Object.values(a.slots||{}).map(s=>s.accepts)]){
-      if(!main.interfaces?.[contract])throw Error('Missing compatible interface '+contract);defs[contract]=main.interfaces[contract];
-    }}
-    const textures=Object.fromEntries([...required].map(key=>[key,main.textures[key]]));
-    for(const key of required){const t=data.textureMap.get(key);if(!t)throw Error('Missing texture '+key);zip.file(t.info.path,await t.file.async('blob'));}
-    zip.file('manifest.json',JSON.stringify({schema:'smi-visual-pack/1',pack_id:main.pack_id+'.selection',version:main.version,description:'Portable asset: '+current.id,license:main.license,interfaces:defs,textures,assets:chosen,...(main.preview_profiles?.some(p=>closure.has(p.asset))?{preview_profiles:main.preview_profiles.filter(p=>closure.has(p.asset))}:{}),...(main.stat_profiles?.some(p=>closure.has(p.asset))?{stat_profiles:main.stat_profiles.filter(p=>closure.has(p.asset))}:{})},null,2)+'\n');
-    zip.file('SOURCE-NOTICES.txt',`Original asset: ${current.id}\nSource: ${collections.get(current.pack).name}\nLicense: ${main.license}\nPreserve source rights and notices.\n`);
+    const {id:rootId,pack}=current;
+    const data=await ready(pack);
+    const closure=Collections.dependencyClosure([rootId],id=>assets.get(id),Slots.refs);
+    const main=data.manifests[0],zip=new JSZip();
+    await Collections.writeSelection(zip,{
+      assets:[...closure].map(id=>assets.get(id)),rootId,packId:main.pack_id+'.selection',version:main.version,
+      getInterfaces:()=>main.interfaces,previewProfiles:main.preview_profiles,statProfiles:main.stat_profiles,
+      getTexture:async key=>{const t=data.textureMap.get(key.split('::')[1]);if(!t)throw Error('Missing texture '+key);return {...t.info,blob:await t.file.async('blob')};},
+      licenseText:async()=>{const response=await fetch('LICENSE');return response.ok?response.text():null;}
+    });
     const out=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:6}});
-    save(out,current.id+'.zip');
+    save(out,rootId+'.zip');
   }
   function save(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),15000);}
   function tick(ts){if(!previous)previous=ts;const dt=Math.min(80,ts-previous);previous=ts;if(playing)clock+=dt;

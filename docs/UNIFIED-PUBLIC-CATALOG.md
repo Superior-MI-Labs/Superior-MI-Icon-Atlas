@@ -74,3 +74,5 @@ No marketplace database, no publicly writable asset submissions, no browser-side
 
 ## Discovery update — functional assets first
 The complete generated index remains addressable, but default discovery excludes explicitly classified component and hidden assets. Optional asset-level `discovery` is `standalone` (default), `component` (component/all scope), or `hidden` (direct ID or dependency inspection only). This is presentation metadata, not a rights or access-control boundary. Exact IDs and URL links remain available. The pack directory derives its entries from the existing publication index. Dependency inspection traverses the canonical asset graph and shows reverse references within the loaded collection. Selection exports preserve stat and preview profiles targeting the exported dependency closure.
+
+Public and Builder selection exports share the same portable archive serializer in `collection-core.js`. The legacy cropped icon route remains separate because it deliberately materializes a single region rather than retaining a shared atlas.

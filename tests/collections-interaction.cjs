@@ -62,3 +62,20 @@ assert.deepEqual(drive.input('keyboard','KeyW',true),[{event:'walk'}]);
 assert.deepEqual(drive.input('keyboard','KeyS',true),[{event:'walk'}]);
 assert.deepEqual(drive.input('keyboard','KeyS',false),[{event:'walk'}],'return to prior held directional action');
 assert.deepEqual(drive.input('keyboard','KeyW',false),[{event:'idle'}]);
+
+/* Shared selection packaging preserves profile definitions and deduplicates shared textures. */
+(async()=>{
+  const C=require('../web/collection-core.js');
+  const assert=require('node:assert/strict'),written=new Map();
+  const zip={file:(path,value)=>written.set(path,value)};
+  const region=id=>({id,kind:'region',texture:'shared',rect_px:[0,0,2,2],license:'CC0-1.0',discovery:'component'});
+  const root={id:'hud',kind:'composition',size_px:[2,2],layers:[{id:'a',asset:'a'},{id:'b',asset:'b'}],license:'CC0-1.0'};
+  let reads=0;
+  const result=await C.writeSelection(zip,{assets:[root,region('a'),region('b')],rootId:'hud',packId:'test.hud',
+    getTexture:async()=>{reads++;return {path:'a.png',width_px:2,height_px:2,blob:{size:4}};},getInterfaces:()=>({}),
+    statProfiles:[{id:'stat',asset:'hud'},{id:'other',asset:'unrelated'}],previewProfiles:[{id:'preview',asset:'hud'}]});
+  assert.equal(reads,1);assert.equal(Object.keys(result.textures).length,1);
+  assert.deepEqual(result.stat_profiles,[{id:'stat',asset:'hud'}]);assert.equal(result.preview_profiles.length,1);
+  assert.equal(result.assets[1].discovery,'component');assert.equal(result.license,'CC0-1.0');
+  assert.equal(JSON.parse(written.get('manifest.json')).assets.length,3);
+})().catch(error=>{console.error(error);process.exitCode=1;});
