@@ -74,7 +74,7 @@ assert.deepEqual(new Set(foundSequences.map(a=>a.id)),expectedSequences,'All pub
 assert.equal(Search.results(data.assets,{...params,status:'archive'}).length,2073);
 assert.equal(Search.results(data.assets,{...params,status:'published',scope:'all'}).length,approvedCount);
 assert.ok(Search.results(data.assets,{...params,review:'reviewed'}).length>0);
-for(const [pack,count] of [['royal-forge-controls',214],['royal-forge-hud-resources',362]]){
+for(const [pack,count] of [['royal-forge-controls',219],['royal-forge-hud-resources',362]]){
   const matches=Search.results(data.assets,{...params,pack,scope:'all'});
   assert.equal(matches.length,count,pack+' must remain entirely discoverable and downloadable');
   assert.ok(matches.some(a=>a.kind==='composition'),pack+' must expose assembled interactive widgets');
@@ -100,7 +100,7 @@ assert.deepEqual(new Set(facets.status.map(x=>x.value)),new Set(['published','ar
 const filteredFacets=Search.facets(data.assets,{...params,domain:'programming'});
 assert.ok(filteredFacets.subject.every(x=>x.count<=2073));
 const components=published.filter(a=>a.discovery==='component');
-assert.equal(components.length,363);
+assert.equal(components.length,439);
 assert.equal(defaults.length,data.discoverable_count);
 assert.ok(defaults.every(a=>a.discovery!=='component'));
 assert.equal(Search.results(data.assets,{...params,scope:'components'}).length,components.length);
@@ -109,4 +109,6 @@ assert.ok(rim);
 assert.equal(Search.results(data.assets,{...params,query:rim.id})[0].id,rim.id);
 assert.ok(!Search.results(data.assets,{...params,query:'health'}).some(a=>a.discovery==='component'));
 assert.ok(Search.results(data.assets,{...params,pack:rim.pack,scope:'components'}).some(a=>a.id===rim.id));
+assert.ok(Search.results(data.assets,{...params,query:'action inventory hud'}).some(a=>a.id==='smi.ui.fantasy01.wave2.widget.action-inventory-hud'));
+assert.ok(!defaults.some(a=>/\.widget\.(hearts|pips)\.[^.]+\.(hp\d+|\d+of\d+)$/.test(a.id)));
 console.log('Manifest-derived unified catalog, archive search and facets: PASS');

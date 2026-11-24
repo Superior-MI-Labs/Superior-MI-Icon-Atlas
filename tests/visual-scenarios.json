@@ -241,7 +241,7 @@
       "id": "royal-forge-adventurer-hud",
       "pack": "royal-forge-hud-resources.zip",
       "asset": "smi.hud.royalforge02.hud.adventurer",
-      "preview_name": "Independent resource HUD controls",
+      "preview_name": "Royal Forge Adventurer HUD",
       "samples": [
         {
           "id": "empty",
@@ -316,6 +316,89 @@
           "type": "same",
           "a": "empty",
           "b": "empty-again",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "royal-forge-action-inventory",
+      "pack": "royal-forge-controls.zip",
+      "asset": "smi.ui.fantasy01.wave2.widget.action-inventory-hud",
+      "preview_name": "Royal Forge Action and Inventory HUD",
+      "samples": [
+        {
+          "id": "baseline",
+          "inputs": {
+            "ability_1_mode": "ready",
+            "ability_1_cooldown": 0,
+            "inventory_1": "empty",
+            "status_1": "ready"
+          }
+        },
+        {
+          "id": "half-cooldown",
+          "inputs": {
+            "ability_1_cooldown": 50
+          }
+        },
+        {
+          "id": "full-cooldown",
+          "inputs": {
+            "ability_1_cooldown": 100
+          }
+        },
+        {
+          "id": "locked",
+          "inputs": {
+            "ability_1_mode": "locked"
+          }
+        },
+        {
+          "id": "inventory-status",
+          "inputs": {
+            "inventory_1": "epic",
+            "status_1": "warning"
+          }
+        },
+        {
+          "id": "restored",
+          "inputs": {
+            "ability_1_mode": "ready",
+            "ability_1_cooldown": 0,
+            "inventory_1": "empty",
+            "status_1": "ready"
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "baseline",
+          "b": "half-cooldown",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "half-cooldown",
+          "b": "full-cooldown",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "full-cooldown",
+          "b": "locked",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "locked",
+          "b": "inventory-status",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "same",
+          "a": "baseline",
+          "b": "restored",
           "max_changed_pixels": 0
         }
       ]

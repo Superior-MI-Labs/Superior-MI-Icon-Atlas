@@ -91,3 +91,26 @@ assert.deepEqual(renderer.sizeFor(P+'static'),[72,72]);
   assert.ok(Slots.validate(invalid).some(e=>e.includes('incompatible child input binding')));
   console.log('50 shared meter variants and independent HUD bindings: PASS');
 })().catch(e=>{console.error(e);process.exitCode=1;});
+
+/* Real authored control panel: six independent slot bindings and host-owned
+ * cooldown masking. Locked and active modes must never display cooldown. */
+(async()=>{
+  const fs=require('node:fs'),path=require('node:path');
+  const pack=JSON.parse(fs.readFileSync(path.join(__dirname,'../examples/royal-forge-controls/manifest.json'),'utf8'));
+  const map=new Map(pack.assets.map(a=>[a.id,a])),Slots=require('../web/slot-core.js'),Visual=require('../web/visual-core.js');
+  assert.deepEqual(Slots.validate(pack),[]);
+  const clips=[],draws=[];
+  const ctx={save(){},restore(){},translate(){},scale(){},beginPath(){},rect(...r){clips.push(r)},clip(){},drawImage(_img,...args){draws.push(args.slice(0,4))},globalAlpha:1};
+  const render=create({getAsset:id=>map.get(id),getImage:async()=>({}),slots:Slots,timeline:{layerAt:l=>l},visualCore:Visual});
+  const panel=map.get('smi.ui.fantasy01.wave2.widget.action-inventory-hud'),values=Object.fromEntries(Object.entries(panel.inputs).map(([k,d])=>[k,d.default]));
+  for(const [i,mode,cooldown] of [[1,'ready',25],[2,'ready',75],[3,'locked',100],[4,'active',100],[5,'ready',0],[6,'ready',100]]){
+    values['ability_'+i+'_mode']=mode;values['ability_'+i+'_cooldown']=cooldown;
+  }
+  values.inventory_1='epic';values.status_1='warning';
+  await render.drawAsset(panel.id,ctx,0,0,...panel.size_px,0,values);
+  assert.deepEqual(clips.map(r=>r[3]),[22,66,0,88]);
+  assert.deepEqual(draws.slice(0,6),['ready','cooldown','ready','cooldown','locked','active'].map(k=>map.get('smi.ui.fantasy01.wave2.hotbar.square.'+k).rect_px));
+  assert.deepEqual(draws[10],map.get('smi.ui.fantasy01.wave2.inventory.square.epic').rect_px);
+  assert.deepEqual(draws[16],map.get('smi.ui.fantasy01.wave2.indicator.pip.warning').rect_px);
+  console.log('Independent hotbar cooldowns, inventory and status: PASS');
+})().catch(e=>{console.error(e);process.exitCode=1;});

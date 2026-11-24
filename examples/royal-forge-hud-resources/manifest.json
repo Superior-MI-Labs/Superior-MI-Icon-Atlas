@@ -988,13 +988,12 @@
         "bar",
         "royal",
         "health",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "health-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1053,13 +1052,12 @@
         "bar",
         "royal",
         "mana",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "mana-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1118,13 +1116,12 @@
         "bar",
         "royal",
         "stamina",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "stamina-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1183,13 +1180,12 @@
         "bar",
         "royal",
         "shield",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "shield-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1248,13 +1244,12 @@
         "bar",
         "royal",
         "experience",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "experience-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1313,13 +1308,12 @@
         "bar",
         "royal",
         "rage",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "rage-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1378,13 +1372,12 @@
         "bar",
         "royal",
         "oxygen",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "oxygen-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1443,13 +1436,12 @@
         "bar",
         "royal",
         "focus",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "focus-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1508,13 +1500,12 @@
         "bar",
         "royal",
         "heat",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "heat-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1573,13 +1564,12 @@
         "bar",
         "royal",
         "corruption",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "corruption-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1638,13 +1628,12 @@
         "bar",
         "runic",
         "health",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "health-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1703,13 +1692,12 @@
         "bar",
         "runic",
         "mana",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "mana-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1768,13 +1756,12 @@
         "bar",
         "runic",
         "stamina",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "stamina-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1833,13 +1820,12 @@
         "bar",
         "runic",
         "shield",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "shield-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1898,13 +1884,12 @@
         "bar",
         "runic",
         "experience",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "experience-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -1963,13 +1948,12 @@
         "bar",
         "runic",
         "rage",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "rage-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2028,13 +2012,12 @@
         "bar",
         "runic",
         "oxygen",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "oxygen-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2093,13 +2076,12 @@
         "bar",
         "runic",
         "focus",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "focus-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2158,13 +2140,12 @@
         "bar",
         "runic",
         "heat",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "heat-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2223,13 +2204,12 @@
         "bar",
         "runic",
         "corruption",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "corruption-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2288,13 +2268,12 @@
         "bar",
         "iron",
         "health",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "health-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2353,13 +2332,12 @@
         "bar",
         "iron",
         "mana",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "mana-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2418,13 +2396,12 @@
         "bar",
         "iron",
         "stamina",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "stamina-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2483,13 +2460,12 @@
         "bar",
         "iron",
         "shield",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "shield-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2548,13 +2524,12 @@
         "bar",
         "iron",
         "experience",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "experience-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2613,13 +2588,12 @@
         "bar",
         "iron",
         "rage",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "rage-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2678,13 +2652,12 @@
         "bar",
         "iron",
         "oxygen",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "oxygen-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2743,13 +2716,12 @@
         "bar",
         "iron",
         "focus",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "focus-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2808,13 +2780,12 @@
         "bar",
         "iron",
         "heat",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "heat-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2873,13 +2844,12 @@
         "bar",
         "iron",
         "corruption",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "corruption-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -2938,13 +2908,12 @@
         "bar",
         "verdant",
         "health",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "health-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3003,13 +2972,12 @@
         "bar",
         "verdant",
         "mana",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "mana-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3068,13 +3036,12 @@
         "bar",
         "verdant",
         "stamina",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "stamina-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3133,13 +3100,12 @@
         "bar",
         "verdant",
         "shield",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "shield-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3198,13 +3164,12 @@
         "bar",
         "verdant",
         "experience",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "experience-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3263,13 +3228,12 @@
         "bar",
         "verdant",
         "rage",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "rage-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3328,13 +3292,12 @@
         "bar",
         "verdant",
         "oxygen",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "oxygen-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3393,13 +3356,12 @@
         "bar",
         "verdant",
         "focus",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "focus-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3458,13 +3420,12 @@
         "bar",
         "verdant",
         "heat",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "heat-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3523,13 +3484,12 @@
         "bar",
         "verdant",
         "corruption",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "corruption-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3588,13 +3548,12 @@
         "bar",
         "arcane",
         "health",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "health-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3653,13 +3612,12 @@
         "bar",
         "arcane",
         "mana",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "mana-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3718,13 +3676,12 @@
         "bar",
         "arcane",
         "stamina",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "stamina-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3783,13 +3740,12 @@
         "bar",
         "arcane",
         "shield",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "shield-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3848,13 +3804,12 @@
         "bar",
         "arcane",
         "experience",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "experience-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3913,13 +3868,12 @@
         "bar",
         "arcane",
         "rage",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "rage-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -3978,13 +3932,12 @@
         "bar",
         "arcane",
         "oxygen",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "oxygen-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -4043,13 +3996,12 @@
         "bar",
         "arcane",
         "focus",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "focus-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -4108,13 +4060,12 @@
         "bar",
         "arcane",
         "heat",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "heat-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -4173,13 +4124,12 @@
         "bar",
         "arcane",
         "corruption",
-        "health-bar",
-        "mana-bar",
         "progress",
         "resource",
         "fantasy",
         "rpg",
-        "hud"
+        "hud",
+        "corruption-bar"
       ],
       "subjects": [
         "ui.hud.bars"
@@ -5392,7 +5342,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp01",
@@ -5451,7 +5402,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp02",
@@ -5510,7 +5462,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp03",
@@ -5569,7 +5522,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp04",
@@ -5628,7 +5582,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp05",
@@ -5687,7 +5642,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp06",
@@ -5746,7 +5702,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp07",
@@ -5805,7 +5762,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp08",
@@ -5864,7 +5822,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp09",
@@ -5923,7 +5882,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp10",
@@ -5982,7 +5942,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp11",
@@ -6041,7 +6002,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp12",
@@ -6100,7 +6062,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp13",
@@ -6159,7 +6122,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp14",
@@ -6218,7 +6182,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp15",
@@ -6277,7 +6242,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.ruby.hp16",
@@ -6336,7 +6302,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.hearts.ruby.counter.states",
@@ -6437,7 +6404,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp01",
@@ -6496,7 +6464,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp02",
@@ -6555,7 +6524,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp03",
@@ -6614,7 +6584,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp04",
@@ -6673,7 +6644,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp05",
@@ -6732,7 +6704,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp06",
@@ -6791,7 +6764,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp07",
@@ -6850,7 +6824,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp08",
@@ -6909,7 +6884,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp09",
@@ -6968,7 +6944,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp10",
@@ -7027,7 +7004,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp11",
@@ -7086,7 +7064,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp12",
@@ -7145,7 +7124,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp13",
@@ -7204,7 +7184,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp14",
@@ -7263,7 +7244,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp15",
@@ -7322,7 +7304,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.hearts.crystal.hp16",
@@ -7381,7 +7364,8 @@
       ],
       "subjects": [
         "ui.hud.hearts"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.hearts.crystal.counter.states",
@@ -7670,7 +7654,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.ruby-gem.1of6",
@@ -7743,7 +7728,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.ruby-gem.2of6",
@@ -7816,7 +7802,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.ruby-gem.3of6",
@@ -7889,7 +7876,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.ruby-gem.4of6",
@@ -7962,7 +7950,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.ruby-gem.5of6",
@@ -8035,7 +8024,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.ruby-gem.6of6",
@@ -8108,7 +8098,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.pips.ruby-gem.meter.states",
@@ -8386,7 +8377,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.mana-gem.1of6",
@@ -8459,7 +8451,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.mana-gem.2of6",
@@ -8532,7 +8525,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.mana-gem.3of6",
@@ -8605,7 +8599,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.mana-gem.4of6",
@@ -8678,7 +8673,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.mana-gem.5of6",
@@ -8751,7 +8747,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.mana-gem.6of6",
@@ -8824,7 +8821,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.pips.mana-gem.meter.states",
@@ -9102,7 +9100,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.shield-plate.1of6",
@@ -9175,7 +9174,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.shield-plate.2of6",
@@ -9248,7 +9248,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.shield-plate.3of6",
@@ -9321,7 +9322,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.shield-plate.4of6",
@@ -9394,7 +9396,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.shield-plate.5of6",
@@ -9467,7 +9470,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.shield-plate.6of6",
@@ -9540,7 +9544,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.pips.shield-plate.meter.states",
@@ -9818,7 +9823,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.stamina-leaf.1of6",
@@ -9891,7 +9897,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.stamina-leaf.2of6",
@@ -9964,7 +9971,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.stamina-leaf.3of6",
@@ -10037,7 +10045,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.stamina-leaf.4of6",
@@ -10110,7 +10119,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.stamina-leaf.5of6",
@@ -10183,7 +10193,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.stamina-leaf.6of6",
@@ -10256,7 +10267,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.pips.stamina-leaf.meter.states",
@@ -10534,7 +10546,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.arcane-rune.1of6",
@@ -10607,7 +10620,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.arcane-rune.2of6",
@@ -10680,7 +10694,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.arcane-rune.3of6",
@@ -10753,7 +10768,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.arcane-rune.4of6",
@@ -10826,7 +10842,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.arcane-rune.5of6",
@@ -10899,7 +10916,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.arcane-rune.6of6",
@@ -10972,7 +10990,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.pips.arcane-rune.meter.states",
@@ -11250,7 +11269,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.rage-ember.1of6",
@@ -11323,7 +11343,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.rage-ember.2of6",
@@ -11396,7 +11417,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.rage-ember.3of6",
@@ -11469,7 +11491,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.rage-ember.4of6",
@@ -11542,7 +11565,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.rage-ember.5of6",
@@ -11615,7 +11639,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.widget.pips.rage-ember.6of6",
@@ -11688,7 +11713,8 @@
       ],
       "subjects": [
         "ui.hud.pips"
-      ]
+      ],
+      "discovery": "component"
     },
     {
       "id": "smi.hud.royalforge02.pips.rage-ember.meter.states",

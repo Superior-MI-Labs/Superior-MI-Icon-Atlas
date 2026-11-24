@@ -1,7 +1,7 @@
 {
   "schema": "smi-visual-pack/1",
   "pack_id": "smi.ui.fantasy01.wave2.controls",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Royal Forge core controls expansion: new buttons, switches, navigation, steppers, selectors, dials, scroll parts and panels; retains all original Wave 2 IDs.",
   "license": "CC0-1.0",
   "textures": {
@@ -6950,6 +6950,946 @@
       ],
       "style": "fantasy-ornate-gold",
       "description": "Nine-slice-free composed panel at its native authored size. Host handles layout and text."
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.ability-socket",
+      "kind": "composition",
+      "name": "Royal Forge Ability Socket",
+      "description": "Host-driven slot mode and remaining cooldown percentage. Zero is ready; 100 is fully covered. Active and locked modes override cooldown appearance. No internal game timer.",
+      "size_px": [
+        88,
+        88
+      ],
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "fantasy",
+        "rpg",
+        "hud",
+        "interactive",
+        "hotbar",
+        "ability",
+        "slot",
+        "cooldown"
+      ],
+      "subjects": [
+        "games.ui.controls"
+      ],
+      "inputs": {
+        "mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        }
+      },
+      "layers": [
+        {
+          "id": "socket",
+          "asset": "smi.ui.fantasy01.wave2.hotbar.square.states",
+          "state_from_input": "mode"
+        },
+        {
+          "id": "cooldown",
+          "asset": "smi.ui.fantasy01.wave2.hotbar.square.cooldown",
+          "visible_when": {
+            "input": "mode",
+            "equals": "ready"
+          },
+          "clip": {
+            "input": "cooldown",
+            "axis": "y",
+            "origin": "end"
+          }
+        }
+      ],
+      "behavior": {
+        "role": "generic",
+        "outputs": {
+          "mode": {
+            "from_input": "mode"
+          },
+          "cooldown": {
+            "from_input": "cooldown",
+            "unit": "percent"
+          }
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.hotbar",
+      "kind": "composition",
+      "name": "Royal Forge Six-Slot Hotbar",
+      "description": "Six independently configurable ability sockets; cooldown is a host-supplied percentage.",
+      "size_px": [
+        578,
+        88
+      ],
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "fantasy",
+        "rpg",
+        "hud",
+        "interactive",
+        "hotbar",
+        "ability",
+        "cooldown",
+        "action bar"
+      ],
+      "subjects": [
+        "games.ui.controls"
+      ],
+      "inputs": {
+        "ability_1_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_1_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        },
+        "ability_2_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_2_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 50,
+          "step": 1
+        },
+        "ability_3_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "active"
+        },
+        "ability_3_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        },
+        "ability_4_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "locked"
+        },
+        "ability_4_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        },
+        "ability_5_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_5_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 100,
+          "step": 1
+        },
+        "ability_6_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_6_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        }
+      },
+      "layers": [
+        {
+          "id": "slot_1",
+          "asset": "smi.ui.fantasy01.wave2.widget.ability-socket",
+          "offset_px": [
+            0,
+            0
+          ],
+          "input_bindings": {
+            "mode": "ability_1_mode",
+            "cooldown": "ability_1_cooldown"
+          }
+        },
+        {
+          "id": "slot_2",
+          "asset": "smi.ui.fantasy01.wave2.widget.ability-socket",
+          "offset_px": [
+            98,
+            0
+          ],
+          "input_bindings": {
+            "mode": "ability_2_mode",
+            "cooldown": "ability_2_cooldown"
+          }
+        },
+        {
+          "id": "slot_3",
+          "asset": "smi.ui.fantasy01.wave2.widget.ability-socket",
+          "offset_px": [
+            196,
+            0
+          ],
+          "input_bindings": {
+            "mode": "ability_3_mode",
+            "cooldown": "ability_3_cooldown"
+          }
+        },
+        {
+          "id": "slot_4",
+          "asset": "smi.ui.fantasy01.wave2.widget.ability-socket",
+          "offset_px": [
+            294,
+            0
+          ],
+          "input_bindings": {
+            "mode": "ability_4_mode",
+            "cooldown": "ability_4_cooldown"
+          }
+        },
+        {
+          "id": "slot_5",
+          "asset": "smi.ui.fantasy01.wave2.widget.ability-socket",
+          "offset_px": [
+            392,
+            0
+          ],
+          "input_bindings": {
+            "mode": "ability_5_mode",
+            "cooldown": "ability_5_cooldown"
+          }
+        },
+        {
+          "id": "slot_6",
+          "asset": "smi.ui.fantasy01.wave2.widget.ability-socket",
+          "offset_px": [
+            490,
+            0
+          ],
+          "input_bindings": {
+            "mode": "ability_6_mode",
+            "cooldown": "ability_6_cooldown"
+          }
+        }
+      ],
+      "behavior": {
+        "role": "generic",
+        "outputs": {
+          "ability_1_mode": {
+            "from_input": "ability_1_mode"
+          },
+          "ability_1_cooldown": {
+            "from_input": "ability_1_cooldown",
+            "unit": "percent"
+          },
+          "ability_2_mode": {
+            "from_input": "ability_2_mode"
+          },
+          "ability_2_cooldown": {
+            "from_input": "ability_2_cooldown",
+            "unit": "percent"
+          },
+          "ability_3_mode": {
+            "from_input": "ability_3_mode"
+          },
+          "ability_3_cooldown": {
+            "from_input": "ability_3_cooldown",
+            "unit": "percent"
+          },
+          "ability_4_mode": {
+            "from_input": "ability_4_mode"
+          },
+          "ability_4_cooldown": {
+            "from_input": "ability_4_cooldown",
+            "unit": "percent"
+          },
+          "ability_5_mode": {
+            "from_input": "ability_5_mode"
+          },
+          "ability_5_cooldown": {
+            "from_input": "ability_5_cooldown",
+            "unit": "percent"
+          },
+          "ability_6_mode": {
+            "from_input": "ability_6_mode"
+          },
+          "ability_6_cooldown": {
+            "from_input": "ability_6_cooldown",
+            "unit": "percent"
+          }
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.inventory-grid",
+      "kind": "composition",
+      "name": "Royal Forge Six-Socket Inventory",
+      "description": "Six independently controlled inventory sockets. The host owns item identity, selection, drag-and-drop and equipment rules.",
+      "size_px": [
+        284,
+        186
+      ],
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "fantasy",
+        "rpg",
+        "hud",
+        "interactive",
+        "inventory",
+        "equipment",
+        "slots",
+        "grid"
+      ],
+      "subjects": [
+        "games.ui.controls"
+      ],
+      "inputs": {
+        "inventory_1": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "empty"
+        },
+        "inventory_2": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "selected"
+        },
+        "inventory_3": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "rare"
+        },
+        "inventory_4": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "epic"
+        },
+        "inventory_5": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "locked"
+        },
+        "inventory_6": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "hover"
+        }
+      },
+      "layers": [
+        {
+          "id": "inventory_1",
+          "asset": "smi.ui.fantasy01.wave2.inventory.square.states",
+          "offset_px": [
+            0,
+            0
+          ],
+          "state_from_input": "inventory_1"
+        },
+        {
+          "id": "inventory_2",
+          "asset": "smi.ui.fantasy01.wave2.inventory.square.states",
+          "offset_px": [
+            98,
+            0
+          ],
+          "state_from_input": "inventory_2"
+        },
+        {
+          "id": "inventory_3",
+          "asset": "smi.ui.fantasy01.wave2.inventory.square.states",
+          "offset_px": [
+            196,
+            0
+          ],
+          "state_from_input": "inventory_3"
+        },
+        {
+          "id": "inventory_4",
+          "asset": "smi.ui.fantasy01.wave2.inventory.square.states",
+          "offset_px": [
+            0,
+            98
+          ],
+          "state_from_input": "inventory_4"
+        },
+        {
+          "id": "inventory_5",
+          "asset": "smi.ui.fantasy01.wave2.inventory.square.states",
+          "offset_px": [
+            98,
+            98
+          ],
+          "state_from_input": "inventory_5"
+        },
+        {
+          "id": "inventory_6",
+          "asset": "smi.ui.fantasy01.wave2.inventory.square.states",
+          "offset_px": [
+            196,
+            98
+          ],
+          "state_from_input": "inventory_6"
+        }
+      ],
+      "behavior": {
+        "role": "generic",
+        "outputs": {
+          "inventory_1": {
+            "from_input": "inventory_1"
+          },
+          "inventory_2": {
+            "from_input": "inventory_2"
+          },
+          "inventory_3": {
+            "from_input": "inventory_3"
+          },
+          "inventory_4": {
+            "from_input": "inventory_4"
+          },
+          "inventory_5": {
+            "from_input": "inventory_5"
+          },
+          "inventory_6": {
+            "from_input": "inventory_6"
+          }
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.status-strip",
+      "kind": "composition",
+      "name": "Royal Forge Status Strip",
+      "description": "Three independent status indicators; the host supplies ready, warning or spent state.",
+      "size_px": [
+        168,
+        48
+      ],
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "fantasy",
+        "rpg",
+        "hud",
+        "interactive",
+        "status",
+        "indicator",
+        "buff",
+        "warning"
+      ],
+      "subjects": [
+        "games.ui.controls"
+      ],
+      "inputs": {
+        "status_1": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "spent",
+            "warning"
+          ],
+          "default": "ready"
+        },
+        "status_2": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "spent",
+            "warning"
+          ],
+          "default": "warning"
+        },
+        "status_3": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "spent",
+            "warning"
+          ],
+          "default": "spent"
+        }
+      },
+      "layers": [
+        {
+          "id": "status_1",
+          "asset": "smi.ui.fantasy01.wave2.indicator.pip.states",
+          "offset_px": [
+            0,
+            0
+          ],
+          "state_from_input": "status_1"
+        },
+        {
+          "id": "status_2",
+          "asset": "smi.ui.fantasy01.wave2.indicator.pip.states",
+          "offset_px": [
+            60,
+            0
+          ],
+          "state_from_input": "status_2"
+        },
+        {
+          "id": "status_3",
+          "asset": "smi.ui.fantasy01.wave2.indicator.pip.states",
+          "offset_px": [
+            120,
+            0
+          ],
+          "state_from_input": "status_3"
+        }
+      ],
+      "behavior": {
+        "role": "generic",
+        "outputs": {
+          "status_1": {
+            "from_input": "status_1"
+          },
+          "status_2": {
+            "from_input": "status_2"
+          },
+          "status_3": {
+            "from_input": "status_3"
+          }
+        }
+      }
+    },
+    {
+      "id": "smi.ui.fantasy01.wave2.widget.action-inventory-hud",
+      "kind": "composition",
+      "name": "Royal Forge Action and Inventory HUD",
+      "description": "Reusable action and inventory panel with 21 independent host-controlled inputs; no game rules or duplicated simulation runtime.",
+      "size_px": [
+        610,
+        326
+      ],
+      "style": "fantasy-ornate-gold",
+      "tags": [
+        "fantasy",
+        "rpg",
+        "hud",
+        "interactive",
+        "action bar",
+        "hotbar",
+        "inventory",
+        "status",
+        "cooldown",
+        "complete panel"
+      ],
+      "subjects": [
+        "games.ui.controls"
+      ],
+      "inputs": {
+        "ability_1_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_1_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        },
+        "ability_2_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_2_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 50,
+          "step": 1
+        },
+        "ability_3_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "active"
+        },
+        "ability_3_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        },
+        "ability_4_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "locked"
+        },
+        "ability_4_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        },
+        "ability_5_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_5_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 100,
+          "step": 1
+        },
+        "ability_6_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_6_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        },
+        "inventory_1": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "empty"
+        },
+        "inventory_2": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "selected"
+        },
+        "inventory_3": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "rare"
+        },
+        "inventory_4": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "epic"
+        },
+        "inventory_5": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "locked"
+        },
+        "inventory_6": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "hover"
+        },
+        "status_1": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "spent",
+            "warning"
+          ],
+          "default": "ready"
+        },
+        "status_2": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "spent",
+            "warning"
+          ],
+          "default": "warning"
+        },
+        "status_3": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "spent",
+            "warning"
+          ],
+          "default": "spent"
+        }
+      },
+      "layers": [
+        {
+          "id": "hotbar",
+          "asset": "smi.ui.fantasy01.wave2.widget.hotbar",
+          "offset_px": [
+            16,
+            16
+          ],
+          "input_bindings": {
+            "ability_1_mode": "ability_1_mode",
+            "ability_1_cooldown": "ability_1_cooldown",
+            "ability_2_mode": "ability_2_mode",
+            "ability_2_cooldown": "ability_2_cooldown",
+            "ability_3_mode": "ability_3_mode",
+            "ability_3_cooldown": "ability_3_cooldown",
+            "ability_4_mode": "ability_4_mode",
+            "ability_4_cooldown": "ability_4_cooldown",
+            "ability_5_mode": "ability_5_mode",
+            "ability_5_cooldown": "ability_5_cooldown",
+            "ability_6_mode": "ability_6_mode",
+            "ability_6_cooldown": "ability_6_cooldown"
+          }
+        },
+        {
+          "id": "inventory",
+          "asset": "smi.ui.fantasy01.wave2.widget.inventory-grid",
+          "offset_px": [
+            16,
+            124
+          ],
+          "input_bindings": {
+            "inventory_1": "inventory_1",
+            "inventory_2": "inventory_2",
+            "inventory_3": "inventory_3",
+            "inventory_4": "inventory_4",
+            "inventory_5": "inventory_5",
+            "inventory_6": "inventory_6"
+          }
+        },
+        {
+          "id": "status",
+          "asset": "smi.ui.fantasy01.wave2.widget.status-strip",
+          "offset_px": [
+            325,
+            124
+          ],
+          "input_bindings": {
+            "status_1": "status_1",
+            "status_2": "status_2",
+            "status_3": "status_3"
+          }
+        }
+      ],
+      "behavior": {
+        "role": "generic",
+        "outputs": {
+          "ability_1_mode": {
+            "from_input": "ability_1_mode"
+          },
+          "ability_1_cooldown": {
+            "from_input": "ability_1_cooldown",
+            "unit": "percent"
+          },
+          "ability_2_mode": {
+            "from_input": "ability_2_mode"
+          },
+          "ability_2_cooldown": {
+            "from_input": "ability_2_cooldown",
+            "unit": "percent"
+          },
+          "ability_3_mode": {
+            "from_input": "ability_3_mode"
+          },
+          "ability_3_cooldown": {
+            "from_input": "ability_3_cooldown",
+            "unit": "percent"
+          },
+          "ability_4_mode": {
+            "from_input": "ability_4_mode"
+          },
+          "ability_4_cooldown": {
+            "from_input": "ability_4_cooldown",
+            "unit": "percent"
+          },
+          "ability_5_mode": {
+            "from_input": "ability_5_mode"
+          },
+          "ability_5_cooldown": {
+            "from_input": "ability_5_cooldown",
+            "unit": "percent"
+          },
+          "ability_6_mode": {
+            "from_input": "ability_6_mode"
+          },
+          "ability_6_cooldown": {
+            "from_input": "ability_6_cooldown",
+            "unit": "percent"
+          },
+          "inventory_1": {
+            "from_input": "inventory_1"
+          },
+          "inventory_2": {
+            "from_input": "inventory_2"
+          },
+          "inventory_3": {
+            "from_input": "inventory_3"
+          },
+          "inventory_4": {
+            "from_input": "inventory_4"
+          },
+          "inventory_5": {
+            "from_input": "inventory_5"
+          },
+          "inventory_6": {
+            "from_input": "inventory_6"
+          },
+          "status_1": {
+            "from_input": "status_1"
+          },
+          "status_2": {
+            "from_input": "status_2"
+          },
+          "status_3": {
+            "from_input": "status_3"
+          }
+        }
+      }
     }
   ]
 }
