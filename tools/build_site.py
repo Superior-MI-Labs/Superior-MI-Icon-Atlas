@@ -220,7 +220,7 @@ for(const texture of Object.values(pack.textures)){
                 # Exact names and tags come from the canonical manifest.
                 public_assets.append({
                     'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
-                    'kind':a['kind'],'style':a.get('style') or inherited_style,
+                    'kind':a['kind'],'discovery':a.get('discovery','standalone'),'style':a.get('style') or inherited_style,
                     'tags':a.get('tags',[]),'subjects':a.get('subjects',[]),
                     'aliases':[*a.get('aliases',[]),*keywords.get(ident,[])],'concept_id':a.get('concept_id'),
                     'showcases':showcases.get(ident,[]),
@@ -260,7 +260,7 @@ for(const texture of Object.values(pack.textures)){
     (dest/'public-catalog.json').write_text(json.dumps({'schema':'smi-public-catalog/1',
         'assets':public_assets,'packs':public_packs,
         'synonyms':m.get('search',{}).get('synonyms',{}),'styles':m.get('styles',{}),
-        'approved_count':approved_count,'legacy_count':len(m['icons'])},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        'approved_count':approved_count,'discoverable_count':sum(not a.get('legacy') and a.get('discovery','standalone')=='standalone' for a in public_assets),'legacy_count':len(m['icons'])},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 
     src_files=['manifest.json','LICENSE','NOTICE.md']

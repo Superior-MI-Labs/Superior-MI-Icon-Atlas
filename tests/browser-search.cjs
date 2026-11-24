@@ -72,10 +72,10 @@ const foundSequences=Search.results(data.assets,{...params,kind:'sequence'});
 assert.ok(expectedSequences.size>=4,'Previously published animation sequences must remain present');
 assert.deepEqual(new Set(foundSequences.map(a=>a.id)),expectedSequences,'All published animations must remain discoverable by kind');
 assert.equal(Search.results(data.assets,{...params,status:'archive'}).length,2073);
-assert.equal(Search.results(data.assets,{...params,status:'published'}).length,approvedCount);
+assert.equal(Search.results(data.assets,{...params,status:'published',scope:'all'}).length,approvedCount);
 assert.ok(Search.results(data.assets,{...params,review:'reviewed'}).length>0);
 for(const [pack,count] of [['royal-forge-controls',214],['royal-forge-hud-resources',360]]){
-  const matches=Search.results(data.assets,{...params,pack});
+  const matches=Search.results(data.assets,{...params,pack,scope:'all'});
   assert.equal(matches.length,count,pack+' must remain entirely discoverable and downloadable');
   assert.ok(matches.some(a=>a.kind==='composition'),pack+' must expose assembled interactive widgets');
 }
@@ -99,4 +99,14 @@ assert.ok(facets.review.some(x=>x.value==='reviewed'));
 assert.deepEqual(new Set(facets.status.map(x=>x.value)),new Set(['published','archive']));
 const filteredFacets=Search.facets(data.assets,{...params,domain:'programming'});
 assert.ok(filteredFacets.subject.every(x=>x.count<=2073));
+const components=published.filter(a=>a.discovery==='component');
+assert.equal(components.length,363);
+assert.equal(defaults.length,data.discoverable_count);
+assert.ok(defaults.every(a=>a.discovery!=='component'));
+assert.equal(Search.results(data.assets,{...params,scope:'components'}).length,components.length);
+const rim=components.find(a=>a.id.endsWith('.rim'));
+assert.ok(rim);
+assert.equal(Search.results(data.assets,{...params,query:rim.id})[0].id,rim.id);
+assert.ok(!Search.results(data.assets,{...params,query:'health'}).some(a=>a.discovery==='component'));
+assert.ok(Search.results(data.assets,{...params,pack:rim.pack,scope:'components'}).some(a=>a.id===rim.id));
 console.log('Manifest-derived unified catalog, archive search and facets: PASS');

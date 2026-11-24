@@ -25,6 +25,7 @@
   "assets": [
     {
       "id": "smi.ui.fantasy01.wave2.button.primary.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Primary Default",
       "texture": "atlas0",
@@ -49,6 +50,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.primary.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Primary Hover",
       "texture": "atlas0",
@@ -73,6 +75,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.primary.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Primary Pressed",
       "texture": "atlas0",
@@ -97,6 +100,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.primary.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Primary Disabled",
       "texture": "atlas0",
@@ -121,6 +125,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.secondary.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Secondary Default",
       "texture": "atlas0",
@@ -145,6 +150,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.secondary.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Secondary Hover",
       "texture": "atlas0",
@@ -169,6 +175,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.secondary.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Secondary Pressed",
       "texture": "atlas0",
@@ -193,6 +200,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.secondary.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Secondary Disabled",
       "texture": "atlas0",
@@ -217,6 +225,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.icon.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Icon Default",
       "texture": "atlas0",
@@ -241,6 +250,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.icon.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Icon Hover",
       "texture": "atlas0",
@@ -265,6 +275,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.icon.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Icon Pressed",
       "texture": "atlas0",
@@ -289,6 +300,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.icon.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Icon Disabled",
       "texture": "atlas0",
@@ -313,6 +325,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.switch.off",
+      "discovery": "component",
       "kind": "region",
       "name": "Toggle Switch Off",
       "texture": "atlas0",
@@ -336,6 +349,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.switch.on",
+      "discovery": "component",
       "kind": "region",
       "name": "Toggle Switch On",
       "texture": "atlas0",
@@ -359,6 +373,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.switch.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Toggle Switch Hover",
       "texture": "atlas0",
@@ -382,6 +397,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.switch.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Toggle Switch Pressed",
       "texture": "atlas0",
@@ -405,6 +421,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.checkbox.square.unchecked",
+      "discovery": "component",
       "kind": "region",
       "name": "Checkbox Square Unchecked",
       "texture": "atlas0",
@@ -427,6 +444,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.checkbox.square.checked",
+      "discovery": "component",
       "kind": "region",
       "name": "Checkbox Square Checked",
       "texture": "atlas0",
@@ -449,6 +467,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.checkbox.square.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Checkbox Square Disabled",
       "texture": "atlas0",
@@ -471,6 +490,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.radio.round.unselected",
+      "discovery": "component",
       "kind": "region",
       "name": "Radio Round Unselected",
       "texture": "atlas0",
@@ -493,6 +513,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.radio.round.selected",
+      "discovery": "component",
       "kind": "region",
       "name": "Radio Round Selected",
       "texture": "atlas0",
@@ -515,6 +536,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.empty",
+      "discovery": "component",
       "kind": "region",
       "name": "Inventory Square Empty",
       "texture": "atlas0",
@@ -538,6 +560,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Inventory Square Hover",
       "texture": "atlas0",
@@ -561,6 +584,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.selected",
+      "discovery": "component",
       "kind": "region",
       "name": "Inventory Square Selected",
       "texture": "atlas0",
@@ -584,6 +608,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.locked",
+      "discovery": "component",
       "kind": "region",
       "name": "Inventory Square Locked",
       "texture": "atlas0",
@@ -607,6 +632,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.rare",
+      "discovery": "component",
       "kind": "region",
       "name": "Inventory Square Rare",
       "texture": "atlas0",
@@ -630,6 +656,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.inventory.square.epic",
+      "discovery": "component",
       "kind": "region",
       "name": "Inventory Square Epic",
       "texture": "atlas0",
@@ -653,6 +680,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.hotbar.square.ready",
+      "discovery": "component",
       "kind": "region",
       "name": "Hotbar Square Ready",
       "texture": "atlas0",
@@ -676,6 +704,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.hotbar.square.cooldown",
+      "discovery": "component",
       "kind": "region",
       "name": "Hotbar Square Cooldown",
       "texture": "atlas0",
@@ -699,6 +728,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.hotbar.square.active",
+      "discovery": "component",
       "kind": "region",
       "name": "Hotbar Square Active",
       "texture": "atlas0",
@@ -722,6 +752,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.hotbar.square.locked",
+      "discovery": "component",
       "kind": "region",
       "name": "Hotbar Square Locked",
       "texture": "atlas0",
@@ -745,6 +776,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.indicator.pip.ready",
+      "discovery": "component",
       "kind": "region",
       "name": "Indicator Pip Ready",
       "texture": "atlas0",
@@ -767,6 +799,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.indicator.pip.spent",
+      "discovery": "component",
       "kind": "region",
       "name": "Indicator Pip Spent",
       "texture": "atlas0",
@@ -789,6 +822,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.indicator.pip.warning",
+      "discovery": "component",
       "kind": "region",
       "name": "Indicator Pip Warning",
       "texture": "atlas0",
@@ -811,6 +845,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.menu.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Tab Menu Default",
       "texture": "atlas0",
@@ -833,6 +868,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.menu.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Tab Menu Hover",
       "texture": "atlas0",
@@ -855,6 +891,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.menu.selected",
+      "discovery": "component",
       "kind": "region",
       "name": "Tab Menu Selected",
       "texture": "atlas0",
@@ -877,6 +914,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.menu.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Tab Menu Disabled",
       "texture": "atlas0",
@@ -899,6 +937,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.panel.tooltip",
+      "discovery": "component",
       "kind": "region",
       "name": "Panel Tooltip",
       "texture": "atlas0",
@@ -921,6 +960,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.panel.header",
+      "discovery": "component",
       "kind": "region",
       "name": "Panel Header",
       "texture": "atlas0",
@@ -965,6 +1005,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.effect.pulse.frame0",
+      "discovery": "component",
       "kind": "region",
       "name": "Effect Pulse Frame0",
       "texture": "atlas0",
@@ -987,6 +1028,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.effect.pulse.frame1",
+      "discovery": "component",
       "kind": "region",
       "name": "Effect Pulse Frame1",
       "texture": "atlas0",
@@ -1009,6 +1051,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.effect.pulse.frame2",
+      "discovery": "component",
       "kind": "region",
       "name": "Effect Pulse Frame2",
       "texture": "atlas0",
@@ -1451,6 +1494,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.danger.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Danger Default",
       "texture": "atlas1",
@@ -1477,6 +1521,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.danger.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Danger Hover",
       "texture": "atlas1",
@@ -1503,6 +1548,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.danger.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Danger Pressed",
       "texture": "atlas1",
@@ -1529,6 +1575,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.danger.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Danger Disabled",
       "texture": "atlas1",
@@ -1664,6 +1711,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.accept.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Accept Default",
       "texture": "atlas1",
@@ -1690,6 +1738,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.accept.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Accept Hover",
       "texture": "atlas1",
@@ -1716,6 +1765,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.accept.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Accept Pressed",
       "texture": "atlas1",
@@ -1742,6 +1792,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.accept.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Accept Disabled",
       "texture": "atlas1",
@@ -1877,6 +1928,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.arcane.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Arcane Default",
       "texture": "atlas1",
@@ -1903,6 +1955,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.arcane.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Arcane Hover",
       "texture": "atlas1",
@@ -1929,6 +1982,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.arcane.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Arcane Pressed",
       "texture": "atlas1",
@@ -1955,6 +2009,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.arcane.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Arcane Disabled",
       "texture": "atlas1",
@@ -2090,6 +2145,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.night.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Night Default",
       "texture": "atlas1",
@@ -2116,6 +2172,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.night.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Night Hover",
       "texture": "atlas1",
@@ -2142,6 +2199,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.night.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Night Pressed",
       "texture": "atlas1",
@@ -2168,6 +2226,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.night.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Night Disabled",
       "texture": "atlas1",
@@ -2303,6 +2362,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.compact.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Compact Default",
       "texture": "atlas1",
@@ -2329,6 +2389,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.compact.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Compact Hover",
       "texture": "atlas1",
@@ -2355,6 +2416,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.compact.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Compact Pressed",
       "texture": "atlas1",
@@ -2381,6 +2443,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.button.compact.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Button Compact Disabled",
       "texture": "atlas1",
@@ -2516,6 +2579,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.ruby.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Ruby Default",
       "texture": "atlas1",
@@ -2544,6 +2608,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.ruby.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Ruby Hover",
       "texture": "atlas1",
@@ -2572,6 +2637,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.ruby.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Ruby Pressed",
       "texture": "atlas1",
@@ -2600,6 +2666,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.ruby.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Ruby Disabled",
       "texture": "atlas1",
@@ -2737,6 +2804,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.aqua.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Aqua Default",
       "texture": "atlas1",
@@ -2765,6 +2833,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.aqua.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Aqua Hover",
       "texture": "atlas1",
@@ -2793,6 +2862,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.aqua.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Aqua Pressed",
       "texture": "atlas1",
@@ -2821,6 +2891,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.aqua.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Aqua Disabled",
       "texture": "atlas1",
@@ -2958,6 +3029,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.jade.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Jade Default",
       "texture": "atlas1",
@@ -2986,6 +3058,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.jade.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Jade Hover",
       "texture": "atlas1",
@@ -3014,6 +3087,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.jade.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Jade Pressed",
       "texture": "atlas1",
@@ -3042,6 +3116,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.round.jade.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Round Jade Disabled",
       "texture": "atlas1",
@@ -3179,6 +3254,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.up.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Up Default",
       "texture": "atlas1",
@@ -3207,6 +3283,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.up.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Up Hover",
       "texture": "atlas1",
@@ -3235,6 +3312,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.up.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Up Pressed",
       "texture": "atlas1",
@@ -3263,6 +3341,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.up.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Up Disabled",
       "texture": "atlas1",
@@ -3397,6 +3476,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.down.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Down Default",
       "texture": "atlas1",
@@ -3425,6 +3505,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.down.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Down Hover",
       "texture": "atlas1",
@@ -3453,6 +3534,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.down.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Down Pressed",
       "texture": "atlas1",
@@ -3481,6 +3563,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.down.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Down Disabled",
       "texture": "atlas1",
@@ -3615,6 +3698,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.left.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Left Default",
       "texture": "atlas1",
@@ -3643,6 +3727,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.left.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Left Hover",
       "texture": "atlas1",
@@ -3671,6 +3756,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.left.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Left Pressed",
       "texture": "atlas1",
@@ -3699,6 +3785,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.left.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Left Disabled",
       "texture": "atlas1",
@@ -3833,6 +3920,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.right.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Right Default",
       "texture": "atlas1",
@@ -3861,6 +3949,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.right.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Right Hover",
       "texture": "atlas1",
@@ -3889,6 +3978,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.right.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Right Pressed",
       "texture": "atlas1",
@@ -3917,6 +4007,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.arrow.right.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Arrow Right Disabled",
       "texture": "atlas1",
@@ -4051,6 +4142,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.lever.off",
+      "discovery": "component",
       "kind": "region",
       "name": "Toggle Lever Off",
       "texture": "atlas1",
@@ -4078,6 +4170,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.lever.on",
+      "discovery": "component",
       "kind": "region",
       "name": "Toggle Lever On",
       "texture": "atlas1",
@@ -4105,6 +4198,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.lever.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Toggle Lever Disabled",
       "texture": "atlas1",
@@ -4221,6 +4315,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.jewel.off",
+      "discovery": "component",
       "kind": "region",
       "name": "Toggle Jewel Off",
       "texture": "atlas1",
@@ -4248,6 +4343,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.jewel.on",
+      "discovery": "component",
       "kind": "region",
       "name": "Toggle Jewel On",
       "texture": "atlas1",
@@ -4275,6 +4371,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.toggle.jewel.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Toggle Jewel Disabled",
       "texture": "atlas1",
@@ -4391,6 +4488,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.checkbox.diamond.unchecked",
+      "discovery": "component",
       "kind": "region",
       "name": "Checkbox Diamond Unchecked",
       "texture": "atlas1",
@@ -4417,6 +4515,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.checkbox.diamond.checked",
+      "discovery": "component",
       "kind": "region",
       "name": "Checkbox Diamond Checked",
       "texture": "atlas1",
@@ -4443,6 +4542,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.checkbox.diamond.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Checkbox Diamond Hover",
       "texture": "atlas1",
@@ -4469,6 +4569,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.checkbox.diamond.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Checkbox Diamond Disabled",
       "texture": "atlas1",
@@ -4585,6 +4686,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.radio.gem.unselected",
+      "discovery": "component",
       "kind": "region",
       "name": "Radio Gem Unselected",
       "texture": "atlas1",
@@ -4611,6 +4713,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.radio.gem.selected",
+      "discovery": "component",
       "kind": "region",
       "name": "Radio Gem Selected",
       "texture": "atlas1",
@@ -4637,6 +4740,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.radio.gem.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Radio Gem Disabled",
       "texture": "atlas1",
@@ -4752,6 +4856,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.segment.royal.left",
+      "discovery": "component",
       "kind": "region",
       "name": "Segment Royal Left",
       "texture": "atlas1",
@@ -4780,6 +4885,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.segment.royal.center",
+      "discovery": "component",
       "kind": "region",
       "name": "Segment Royal Center",
       "texture": "atlas1",
@@ -4808,6 +4914,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.segment.royal.right",
+      "discovery": "component",
       "kind": "region",
       "name": "Segment Royal Right",
       "texture": "atlas1",
@@ -4920,6 +5027,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.vertical.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Tab Vertical Default",
       "texture": "atlas1",
@@ -4946,6 +5054,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.vertical.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Tab Vertical Hover",
       "texture": "atlas1",
@@ -4972,6 +5081,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.vertical.selected",
+      "discovery": "component",
       "kind": "region",
       "name": "Tab Vertical Selected",
       "texture": "atlas1",
@@ -4998,6 +5108,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.tab.vertical.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Tab Vertical Disabled",
       "texture": "atlas1",
@@ -5110,6 +5221,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.scroll.horizontal.track",
+      "discovery": "component",
       "kind": "region",
       "name": "Scroll Horizontal Track",
       "texture": "atlas1",
@@ -5137,6 +5249,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.scroll.horizontal.thumb",
+      "discovery": "component",
       "kind": "region",
       "name": "Scroll Horizontal Thumb",
       "texture": "atlas1",
@@ -5234,6 +5347,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.scroll.vertical.track",
+      "discovery": "component",
       "kind": "region",
       "name": "Scroll Vertical Track",
       "texture": "atlas1",
@@ -5261,6 +5375,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.scroll.vertical.thumb",
+      "discovery": "component",
       "kind": "region",
       "name": "Scroll Vertical Thumb",
       "texture": "atlas1",
@@ -5358,6 +5473,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.stepper.plus.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Stepper Plus Default",
       "texture": "atlas1",
@@ -5385,6 +5501,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.stepper.plus.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Stepper Plus Hover",
       "texture": "atlas1",
@@ -5412,6 +5529,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.stepper.plus.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Stepper Plus Pressed",
       "texture": "atlas1",
@@ -5439,6 +5557,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.stepper.plus.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Stepper Plus Disabled",
       "texture": "atlas1",
@@ -5572,6 +5691,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.stepper.minus.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Stepper Minus Default",
       "texture": "atlas1",
@@ -5599,6 +5719,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.stepper.minus.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Stepper Minus Hover",
       "texture": "atlas1",
@@ -5626,6 +5747,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.stepper.minus.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Stepper Minus Pressed",
       "texture": "atlas1",
@@ -5653,6 +5775,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.stepper.minus.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Stepper Minus Disabled",
       "texture": "atlas1",
@@ -5786,6 +5909,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.dial.arcane.0",
+      "discovery": "component",
       "kind": "region",
       "name": "Dial Arcane 0",
       "texture": "atlas1",
@@ -5814,6 +5938,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.dial.arcane.25",
+      "discovery": "component",
       "kind": "region",
       "name": "Dial Arcane 25",
       "texture": "atlas1",
@@ -5842,6 +5967,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.dial.arcane.50",
+      "discovery": "component",
       "kind": "region",
       "name": "Dial Arcane 50",
       "texture": "atlas1",
@@ -5870,6 +5996,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.dial.arcane.75",
+      "discovery": "component",
       "kind": "region",
       "name": "Dial Arcane 75",
       "texture": "atlas1",
@@ -5898,6 +6025,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.dial.arcane.100",
+      "discovery": "component",
       "kind": "region",
       "name": "Dial Arcane 100",
       "texture": "atlas1",
@@ -6014,6 +6142,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.dial.sunstone.0",
+      "discovery": "component",
       "kind": "region",
       "name": "Dial Sunstone 0",
       "texture": "atlas1",
@@ -6042,6 +6171,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.dial.sunstone.25",
+      "discovery": "component",
       "kind": "region",
       "name": "Dial Sunstone 25",
       "texture": "atlas1",
@@ -6070,6 +6200,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.dial.sunstone.50",
+      "discovery": "component",
       "kind": "region",
       "name": "Dial Sunstone 50",
       "texture": "atlas1",
@@ -6098,6 +6229,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.dial.sunstone.75",
+      "discovery": "component",
       "kind": "region",
       "name": "Dial Sunstone 75",
       "texture": "atlas1",
@@ -6126,6 +6258,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.dial.sunstone.100",
+      "discovery": "component",
       "kind": "region",
       "name": "Dial Sunstone 100",
       "texture": "atlas1",
@@ -6543,6 +6676,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.panel.banner",
+      "discovery": "component",
       "kind": "region",
       "name": "Panel Banner",
       "texture": "atlas1",
@@ -6570,6 +6704,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.panel.window",
+      "discovery": "component",
       "kind": "region",
       "name": "Panel Window",
       "texture": "atlas1",
@@ -6624,6 +6759,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.effect.highlight.frame0",
+      "discovery": "component",
       "kind": "region",
       "name": "Effect Highlight Frame0",
       "texture": "atlas1",
@@ -6653,6 +6789,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.effect.highlight.frame1",
+      "discovery": "component",
       "kind": "region",
       "name": "Effect Highlight Frame1",
       "texture": "atlas1",
@@ -6682,6 +6819,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.effect.highlight.frame2",
+      "discovery": "component",
       "kind": "region",
       "name": "Effect Highlight Frame2",
       "texture": "atlas1",
@@ -6711,6 +6849,7 @@
     },
     {
       "id": "smi.ui.fantasy01.wave2.effect.highlight.frame3",
+      "discovery": "component",
       "kind": "region",
       "name": "Effect Highlight Frame3",
       "texture": "atlas1",

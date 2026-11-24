@@ -673,39 +673,20 @@
         }else if(ui.preset)root.default_preset=ui.preset;
       }
     }
-    const zip=new JSZip(),texMap={},textureIDs=new Set(assets.filter(a=>a.kind==='region').map(a=>a.texture));let index=0;
-    for(const key of textureIDs){const t=textures.get(key);if(!t)throw Error('Missing texture '+key);let blob=t.blob;
-      if(!blob){const result=await fetch(t.src);if(!result.ok)throw Error('Cannot fetch official texture '+t.src);blob=await result.blob();}
-      if(blob.size>MAX_ENTRY)throw Error('Texture exceeds per-entry size limit: '+key);
-      const img=await imageFor(key),filename='textures/'+String(index++).padStart(3,'0')+(t.path.match(/\.(png|jpe?g|webp|gif)$/i)?.[0].toLowerCase()||'.png');
-      texMap[key]='t'+String(index);zip.file(filename,blob);texMap[key]={id:'t'+index,path:filename,width_px:img.naturalWidth,height_px:img.naturalHeight};
-    }
-    for(const a of assets){if(a.kind==='region')a.texture=texMap[a.texture].id;for(const transient of ['source','review_status','sourcePack','sourceGroup','sourceLabel','ownerBag'])delete a[transient];}
-    const exportedInterfaces={};
-    for(const id of all){
-      const asset=library.get(id),defs=interfaces.get(asset.ownerBag||asset.source)||{};
-      for(const ref of [...(asset.implements||[]),...Object.values(asset.slots||{}).map(s=>s.accepts)]){
-        const value=defs[ref];if(!value)throw Error('Missing source interface '+ref+' for '+asset.id);
-        if(exportedInterfaces[ref]&&JSON.stringify(exportedInterfaces[ref])!==JSON.stringify(value))throw Error('Conflicting versioned interface '+ref+' across imported bags');
-        exportedInterfaces[ref]=value;
-      }
-    }
-    const exportedProfiles=[...previewProfiles.values()].filter(p=>all.has(p.asset)).map(p=>{
-      const result=structuredClone(p);delete result.ownerBag;return result;
+    const zip=new JSZip();
+    const out=await Collections.writeSelection(zip,{
+      assets,rootId,packId:'smi.user.'+slug($('composition-name').value),
+      getInterfaces:a=>interfaces.get(a.ownerBag||a.source)||{},
+      previewProfiles:[...previewProfiles.values()],statProfiles:[...statProfiles.values()],maxEntry:MAX_ENTRY,
+      getTexture:async key=>{
+        const t=textures.get(key);if(!t)throw Error('Missing texture '+key);
+        let blob=t.blob;if(!blob){const response=await fetch(t.src);if(!response.ok)throw Error('Cannot fetch texture '+key);blob=await response.blob();}
+        const img=await imageFor(key);return {path:t.path,blob,width_px:img.naturalWidth,height_px:img.naturalHeight};
+      },
+      licenseText:async()=>{const response=await fetch('LICENSE');return response.ok?response.text():null;}
     });
-    const exportedStats=[...statProfiles.values()].filter(p=>all.has(p.asset)).map(p=>{
-      const result=structuredClone(p);delete result.ownerBag;return result;
-    });
-    const out={schema:'smi-visual-pack/1',pack_id:'smi.user.'+slug($('composition-name').value),version:'1.0.0',description:'Visual Atlas Builder export. Root asset: '+rootId,interfaces:exportedInterfaces,
-      ...(exportedProfiles.length?{preview_profiles:exportedProfiles}:{}),
-      ...(exportedStats.length?{stat_profiles:exportedStats}:{}),
-      textures:Object.fromEntries(Object.values(texMap).map(t=>[t.id,{path:t.path,width_px:t.width_px,height_px:t.height_px}])),assets};
-    zip.file('manifest.json',JSON.stringify(out,null,2)+'\n');
-    zip.file('SOURCE-NOTICES.txt',`Generated locally with Superior MI Visual Atlas Builder.\nRoot asset: ${rootId}\n\nPer-asset licenses:\n`+assets.map(a=>a.id+' : '+(a.license||'UNSPECIFIED')).join('\n')+'\n\nOriginal asset and code licenses must be respected. Unknown license is not equivalent to CC0.\n');
-    const usesOfficial=assets.some(a=>(a.license||'')==='Apache-2.0');
-    if(usesOfficial){const response=await fetch('LICENSE');if(response.ok)zip.file('LICENSES/Apache-2.0.txt',await response.text());}
     const data=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:5}});
-    download(data,slug($('composition-name').value)+'.zip');setStatus('Exported '+assets.length+' assets and '+textureIDs.size+' textures. No files were uploaded.');
+    download(data,slug($('composition-name').value)+'.zip');setStatus('Exported '+assets.length+' assets and '+Object.keys(out.textures).length+' textures. No files were uploaded.');
   }
   function updatePlayhead(){
     const time=Timeline.timelineTime(ui.clock,timeline.duration,timeline.playback);

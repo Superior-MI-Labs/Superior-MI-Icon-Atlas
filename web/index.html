@@ -17,6 +17,10 @@
 <label><span class="sr-only">Asset type</span><select id="kind"><option value="">All asset types</option></select></label>
 <label><span class="sr-only">Collection</span><select id="pack"><option value="">All collections</option></select></label>
 <label><span class="sr-only">Sort</span><select id="sort"><option value="recommended">Featured and recent</option><option value="newest">Newest</option><option value="name">Name A–Z</option></select></label></section>
+<section class="browse-tools" aria-label="Discovery and collections">
+<label>Browse <select id="scope"><option value="">Ready-to-use &amp; standalone</option><option value="components">Reusable components</option><option value="all">All listed assets</option></select></label>
+<details id="pack-directory"><summary>Browse downloadable asset packs</summary><div id="pack-links" class="detail-showcases"></div></details>
+</section>
 <div class="browse-layout">
 <aside class="browse-facets" aria-label="Refine results">
 <div class="facets-head"><h3><span aria-hidden="true">☷</span> Refine results</h3><button type="button" id="clear-filters" class="text-action">Clear all</button></div>
@@ -43,6 +47,7 @@
 <div class="asset-information"><span class="fieldlabel">Asset ID</span><code id="detail-id"></code><div id="detail-meta" class="asset-meta"></div>
 <div id="detail-tags" class="detail-tags" aria-label="Searchable keywords"></div>
 <div id="detail-showcases" class="detail-showcases" aria-label="Interactive demonstrations" hidden></div>
+<details id="detail-components" hidden><summary>Inspect dependencies and related assets</summary><div id="detail-related" class="detail-showcases"></div></details>
 <div class="detail-utilities"><button type="button" id="copy-id">Copy ID</button><button type="button" id="copy-link">Copy link</button></div>
 <label class="tint-control" id="tint-options" hidden><input id="tint-enabled" type="checkbox"> Recolor icon <input id="tint-color" type="color" value="#4b9cff" aria-label="Tint color"></label>
 <h3>Download</h3>

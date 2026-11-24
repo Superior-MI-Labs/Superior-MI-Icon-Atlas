@@ -109,5 +109,40 @@
     for(const id of roots)walk(id);
     return closure;
   }
-  return Object.freeze({safePath,join,resolveCollection,dependencyClosure,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
+  // Selection state belongs to the host. The portable archive contract is shared.
+  async function writeSelection(zip,{assets,rootId,packId,version='1.0.0',getTexture,getInterfaces,previewProfiles=[],statProfiles=[],licenseText=null,maxEntry=24*1024*1024}){
+    if(!assets.some(a=>a.id===rootId))throw Error('Missing export root '+rootId);
+    const ids=new Set(assets.map(a=>a.id)),textures={},mapping=new Map(),interfaces={};
+    const chosen=assets.map(a=>structuredClone(a));
+    for(const a of chosen){
+      if(a.kind==='region'){
+        if(!mapping.has(a.texture)){
+          const t=await getTexture(a.texture);
+          if(!t?.blob||!Number.isInteger(t.width_px)||!Number.isInteger(t.height_px)||t.width_px<1||t.height_px<1||t.blob.size>maxEntry)throw Error('Invalid or oversized texture '+a.texture);
+          const id='t'+(mapping.size+1),ext=t.path?.match(/\.(png|jpe?g|webp|gif)$/i)?.[0].toLowerCase()||'.png';
+          const path='textures/'+id+ext;
+          mapping.set(a.texture,id);textures[id]={path,width_px:t.width_px,height_px:t.height_px};zip.file(path,t.blob);
+        }
+        a.texture=mapping.get(a.texture);
+      }
+      for(const ref of [...(a.implements||[]),...Object.values(a.slots||{}).map(s=>s.accepts)]){
+        const def=getInterfaces(a)?.[ref];
+        if(!def)throw Error('Missing interface '+ref+' for '+a.id);
+        if(Object.hasOwn(interfaces,ref)&&JSON.stringify(interfaces[ref])!==JSON.stringify(def))throw Error('Conflicting interface '+ref);
+        interfaces[ref]=def;
+      }
+      for(const key of ['pack','source','sourcePack','sourceGroup','sourceLabel','ownerBag','review_status'])delete a[key];
+    }
+    const profiles=items=>items.filter(p=>ids.has(p.asset)).map(p=>{const copy=structuredClone(p);delete copy.ownerBag;return copy;});
+    const previews=profiles(previewProfiles),stats=profiles(statProfiles);
+    const licenses=new Set(chosen.map(a=>a.license||'UNSPECIFIED'));
+    const manifest={schema:'smi-visual-pack/1',pack_id:packId,version,description:'Portable asset: '+rootId,
+      license:licenses.size===1?[...licenses][0]:'MIXED',interfaces,textures,assets:chosen,
+      ...(previews.length?{preview_profiles:previews}:{}),...(stats.length?{stat_profiles:stats}:{})};
+    zip.file('manifest.json',JSON.stringify(manifest,null,2)+'\n');
+    zip.file('SOURCE-NOTICES.txt','Root asset: '+rootId+'\n\nPer-asset licenses:\n'+chosen.map(a=>a.id+' : '+(a.license||'UNSPECIFIED')).join('\n')+'\nPreserve source rights and notices. Unknown license is not equivalent to CC0.\n');
+    if(licenseText&&licenses.has('Apache-2.0')){const notice=await licenseText();if(notice)zip.file('LICENSES/Apache-2.0.txt',notice);}
+    return manifest;
+  }
+  return Object.freeze({safePath,join,resolveCollection,dependencyClosure,writeSelection,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
 });
