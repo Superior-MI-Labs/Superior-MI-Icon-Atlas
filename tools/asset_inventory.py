@@ -5,6 +5,65 @@ import json
 
 REVIEWS={"pending","reviewed"}
 
+def source_collections(root):
+    """A collection index or single root manifest defines a source directory."""
+    return [folder for folder in sorted((Path(root)/"examples").iterdir())
+            if folder.is_dir() and ((folder/"collection.json").is_file() or (folder/"manifest.json").is_file())]
+
+def source_path(folder, relative):
+    """Resolve archive-relative paths without traversal or symlink escapes."""
+    if not isinstance(relative,str) or not relative or "\\" in relative or ":" in relative or any(p in ("", ".", "..") for p in relative.split("/")):
+        raise ValueError("unsafe source path: "+str(relative))
+    file=folder/relative
+    if not file.resolve().is_relative_to(folder.resolve()) or not file.is_file():
+        raise ValueError("unsafe/missing source file: "+relative)
+    return file
+
+def read_collection(folder):
+    """Return the one authored index and its ordered, archive-relative manifests."""
+    folder=Path(folder)
+    index_file=folder/"collection.json"
+    index=json.loads(index_file.read_text(encoding="utf-8")) if index_file.is_file() else None
+    if index is not None:
+        if index.get("schema")!="smi-visual-collection/1" or not isinstance(index.get("packs"),list) or not index["packs"]:
+            raise ValueError("invalid collection index")
+        names=[ref["manifest"] for ref in index["packs"]]
+    else:
+        names=["manifest.json"]
+    if len(names)!=len(set(names)):raise ValueError("duplicate manifest path")
+    packs=[]
+    pack_ids=set()
+    for name in names:
+        file=source_path(folder,name)
+        pack=json.loads(file.read_text(encoding="utf-8"))
+        if pack.get("schema")!="smi-visual-pack/1" or not isinstance(pack.get("assets"),list) or not isinstance(pack.get("textures"),dict):
+            raise ValueError("invalid manifest "+name)
+        ident=pack.get("pack_id")
+        if ident in pack_ids:raise ValueError("duplicate pack ID "+str(ident))
+        pack_ids.add(ident)
+        packs.append((file,pack))
+    return index,packs
+
+def runtime_files(folder,index,packs):
+    """Exact archive payload, shared by inventory and deterministic ZIP build."""
+    files={file for file,_ in packs}
+    textures=set()
+    if index is not None:files.add(source_path(folder,"collection.json"))
+    for file,pack in packs:
+        for texture in pack["textures"].values():
+            target=source_path(file.parent,texture.get("path"))
+            if not target.resolve().is_relative_to(folder.resolve()):
+                raise ValueError("texture outside collection")
+            textures.add(target)
+        files.update(p for p in file.parent.glob("LICENSE*") if p.is_file())
+        if (file.parent/"README.md").is_file():files.add(file.parent/"README.md")
+    files.update(p for p in folder.glob("LICENSE*") if p.is_file())
+    if (folder/"README.md").is_file():files.add(folder/"README.md")
+    if any(not file.resolve().is_relative_to(folder.resolve()) for file in files):
+        raise ValueError("runtime file outside collection")
+    return files|textures,textures
+
+
 def audit(root):
     root=Path(root);errors=[];warnings=[]
     policy=json.loads((root/"publications.json").read_text())
@@ -18,24 +77,18 @@ def audit(root):
         if not record.get("approval") or not record.get("rights"):errors.append("Missing release approval/rights for "+key)
         pub[key]=record
     groups=[];seen=defaultdict(list);reviews=Counter()
-    for folder in sorted((root/"examples").glob("*")):
-        file=folder/"manifest.json"
-        if not file.is_file():continue
+    for folder in source_collections(root):
         key=folder.relative_to(root).as_posix()
-        try:pack=json.loads(file.read_text())
-        except (ValueError,OSError) as ex:errors.append(key+": unreadable manifest "+str(ex));continue
-        if pack.get("schema")!="smi-visual-pack/1":errors.append(key+": invalid manifest");continue
-        items=pack.get("assets",[]);textures=pack.get("textures",{})
-        if not isinstance(items,list) or not isinstance(textures,dict):
-            errors.append(key+": invalid assets/textures");continue
-        refs=set()
-        for texture in textures.values():
-            name=texture.get("path","");p=Path(name)
-            if p.is_absolute() or ".." in p.parts or not (folder/p).is_file():
-                errors.append(key+": unsafe/missing texture "+name)
-            else:refs.add(p.as_posix())
-        unreferenced=sorted(x.relative_to(folder).as_posix() for x in (folder/"textures").rglob("*")
-            if x.is_file() and x.suffix.lower() in (".png",".webp",".jpg",".jpeg",".gif")
+        try:
+            index,packs=read_collection(folder)
+            _,textures=runtime_files(folder,index,packs)
+            items=[asset for _,pack in packs for asset in pack["assets"]]
+        except (ValueError,OSError,KeyError,TypeError) as ex:
+            errors.append(key+": "+str(ex));continue
+        refs={file.relative_to(folder).as_posix() for file in textures}
+        unreferenced=sorted(x.relative_to(folder).as_posix() for x in folder.rglob("*")
+            if x.is_file() and "textures" in x.relative_to(folder).parts[:-1]
+            and x.suffix.lower() in (".png",".webp",".jpg",".jpeg",".gif")
             and x.relative_to(folder).as_posix() not in refs)
         if unreferenced:warnings.append(key+": "+str(len(unreferenced))+" unreferenced texture(s)")
         record=pub.get(key)
@@ -49,7 +102,7 @@ def audit(root):
             "missing_names":sum(not a.get("name") for a in items),
             "missing_tags":sum(not a.get("tags") for a in items)})
     for key in pub:
-        if not (root/key/"manifest.json").is_file():errors.append(key+": published collection missing root manifest")
+        if key not in {group["path"] for group in groups}:errors.append(key+": published collection missing or invalid source")
     for key,owners in seen.items():
         if not isinstance(key,str) or not key:errors.append("Missing asset ID in "+str(owners))
         elif len(owners)>1:errors.append("Duplicate asset ID "+key+" in "+", ".join(owners))

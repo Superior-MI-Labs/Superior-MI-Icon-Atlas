@@ -74,7 +74,7 @@ assert.deepEqual(renderer.sizeFor(P+'static'),[72,72]);
   const clips=[],draws=[];
   const ctx={save(){},restore(){},translate(){},scale(){},beginPath(){},rect(...args){clips.push(args)},clip(){},drawImage(_img,...args){draws.push(args)},globalAlpha:1};
   const render=create({getAsset:id=>map.get(id),getImage:async()=>({}),slots:Slots,timeline:{layerAt:l=>l},visualCore:Visual});
-  const template=map.get('smi.hud.royalforge02.widget.resource-meter'),bars=pack.assets.filter(a=>/\\.widget\\.bar\\.[^.]+\\.[^.]+$/.test(a.id));
+  const template=map.get('smi.hud.royalforge02.widget.resource-meter'),bars=pack.assets.filter(a=>/\.widget\.bar\.[^.]+\.[^.]+$/.test(a.id));
   assert.equal(bars.length,50);assert.equal(Object.keys(template.presets).length,50);
   for(const bar of bars){
     const values={value:50};clips.length=0;draws.length=0;

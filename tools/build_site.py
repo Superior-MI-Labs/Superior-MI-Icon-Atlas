@@ -11,7 +11,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from atlasctl import load,validate
-from tools.asset_inventory import audit as audit_assets
+from tools.asset_inventory import audit as audit_assets, source_collections, read_collection, runtime_files
 
 
 def resolve_showcases(index,manifests,dest):
@@ -82,17 +82,10 @@ def build(dest:Path|None=None):
     shutil.copy2(ROOT/'web'/'demo'/'potions-collection.zip',dest/'demo'/'potions-collection.zip')
     # Authored examples/ are the source of truth. Deterministic downloadable ZIPs are
     # generated here, never maintained as a second editable copy.
-    for folder in sorted((ROOT/'examples').iterdir()):
-        if not folder.is_dir() or not (folder/'manifest.json').is_file(): continue
+    for folder in source_collections(ROOT):
         archive=dest/'demo'/(folder.name+'.zip')
-        # Runtime ZIPs contain the manifest's real texture dependencies, not
-        # source images, QA snapshots or editor-only authoring files.
-        pack=json.loads((folder/'manifest.json').read_text())
-        runtime={folder/'manifest.json'}
-        for optional in ('collection.json','README.md'):
-            if (folder/optional).is_file():runtime.add(folder/optional)
-        runtime.update(f for f in folder.glob('LICENSE*') if f.is_file())
-        runtime.update(folder/definition['path'] for definition in pack.get('textures',{}).values())
+        index,packs=read_collection(folder)
+        runtime,_=runtime_files(folder,index,packs)
         with ZipFile(archive,'w',ZIP_DEFLATED,compresslevel=7) as z:
             for f in sorted(runtime):
                 if not f.is_file():raise ValueError('Missing runtime pack dependency: '+str(f))
@@ -187,14 +180,9 @@ for(const texture of Object.values(pack.textures)){
         seen_paths.add(folder)
         if not record.get('approval') or not record.get('rights'):raise ValueError('Unapproved public collection')
         if record.get('visual_qa') not in ('reviewed','pending'):raise ValueError('Review status must be explicit')
-        index=json.loads((full/'collection.json').read_text(encoding='utf-8'))
-        if index.get('schema')!='smi-visual-collection/1':raise ValueError('Invalid public collection index')
-        manifests=[]
-        for ref in index['packs']:
-            relpath=Path(ref['manifest'])
-            if relpath.is_absolute() or '..' in relpath.parts:raise ValueError('Unsafe manifest path')
-            manifests.append(json.loads((full/relpath).read_text(encoding='utf-8')))
-        if not manifests:raise ValueError('Empty public collection')
+        index,source_packs=read_collection(full)
+        if index is None:raise ValueError('Published collection requires index: '+str(folder))
+        manifests=[pack for _,pack in source_packs]
         expected=record.get('expected_assets')
         actual=sum(len(pack.get('assets',[])) for pack in manifests)
         if not isinstance(expected,int) or isinstance(expected,bool) or expected<1 or expected!=actual:
