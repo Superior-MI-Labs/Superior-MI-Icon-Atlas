@@ -44,3 +44,7 @@ For a machine-verifiable preview, extend [visual scenarios](../../../tests/visua
 ## Approved Fantasy HUD reference
 
 The [Wave 1 source contract and measured value-fidelity regression](../../asset-production/FANTASY-HUD-WAVE1.md) is the baseline for more RPG controls. The [Wave 2 production inventory and QA requirements](../../asset-production/WAVE2.md) reuse this architecture. Only mark authored artwork published when its actual PNG/manifest files are committed and CI succeeds.
+
+## Multi-widget HUD composition
+
+A nested composition layer may declare `input_bindings` (child input name → parent input name) and `preset` (a named child preset). Bindings require compatible declared input types/ranges; a child input cannot be both bound and statically overridden. Explicit bindings or a child preset isolate the child from implicit inherited parent inputs; legacy layers retain their behavior. Use `input_values` for fixed child settings, e.g. pip capacity. Royal Forge uses a shared resource meter template, 50 stable-ID variants, and the Adventurer HUD with independent player/boss resource inputs and a Builder stat profile. No new renderer or simulation engine is required.

@@ -20,10 +20,10 @@
     {
       "path": "examples/royal-forge-hud-resources",
       "published": "2026-11-02",
-      "expected_assets": 360,
-      "approval": "User approved Royal Forge HUD Resources v1.1 including adaptive hearts/pips and corrected rims",
+      "expected_assets": 362,
+      "approval": "User approved Royal Forge HUD Resources v1.1 including adaptive hearts/pips and corrected rims; v1.2 consolidates existing approved artwork and adds an assembled resource HUD under the owner's HUD development direction; new layout visual review pending",
       "rights": "CC0-1.0 original generated/vector artwork",
-      "visual_qa": "reviewed"
+      "visual_qa": "pending"
     },
     {
       "path": "examples/pixel-fantasy-icons",

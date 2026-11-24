@@ -74,7 +74,7 @@ assert.deepEqual(new Set(foundSequences.map(a=>a.id)),expectedSequences,'All pub
 assert.equal(Search.results(data.assets,{...params,status:'archive'}).length,2073);
 assert.equal(Search.results(data.assets,{...params,status:'published',scope:'all'}).length,approvedCount);
 assert.ok(Search.results(data.assets,{...params,review:'reviewed'}).length>0);
-for(const [pack,count] of [['royal-forge-controls',214],['royal-forge-hud-resources',360]]){
+for(const [pack,count] of [['royal-forge-controls',214],['royal-forge-hud-resources',362]]){
   const matches=Search.results(data.assets,{...params,pack,scope:'all'});
   assert.equal(matches.length,count,pack+' must remain entirely discoverable and downloadable');
   assert.ok(matches.some(a=>a.kind==='composition'),pack+' must expose assembled interactive widgets');

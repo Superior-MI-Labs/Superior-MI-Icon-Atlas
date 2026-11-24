@@ -22,6 +22,12 @@
         width:columns*size[0]+(columns-1)*gx,
         height:rows*size[1]+(rows-1)*gy};
     }
+    // Explicit bindings isolate each instance; old layers retain their original
+    // inherited-input behavior for compatibility with already published packs.
+    function childValues(layer,inputs){
+      const mapped=Object.fromEntries(Object.entries(layer.input_bindings||{}).map(([to,from])=>[to,inputs[from]]));
+      return {...(layer.input_bindings!==undefined||layer.preset!==undefined?{}:inputs),...(layer.input_values||{}),...mapped};
+    }
     function geometryFor(id,seen=new Set(),values=null){
       if(seen.has(id))throw Error('Cyclic asset dimensions: '+id);
       const a=getAsset(id);if(!a)throw Error('Missing asset '+id);
@@ -42,7 +48,7 @@
       for(const layer of a.layers){
         const target=layer.asset||(layer.slot&&a.slots?.[layer.slot]?.default);
         if(!target)continue;
-        const child=geometryFor(target,next,layer.input_values||null);
+        const child=geometryFor(target,next,layer.input_bindings!==undefined?childValues(layer,inputs):layer.input_values||null);
         const [lw,lh]=layer.size_px||[child.width,child.height];
         const size=layer.repeat?repeatLayout(layer,inputs,[lw,lh]):{width:lw,height:lh};
         const x=(layer.offset_px?.[0]||0)+(layer.x||0);
@@ -135,7 +141,8 @@
           const layer=timeline.layerAt(rawLayer,time,a.duration_ms,a.playback||'loop');
           if(layer.visible_when&&inputs[layer.visible_when.input]!==layer.visible_when.equals)continue;
           const target=layer.slot?slotState.slots[layer.slot]:layer.asset;
-          const [lw,lh]=layer.size_px||sizeFor(target);
+          const childInput=childValues(layer,inputs);
+          const [lw,lh]=layer.size_px||sizeFor(target,new Set(),layer.input_bindings!==undefined?childInput:null);
           let px=(layer.offset_px?.[0]||0)+(layer.x||0),py=(layer.offset_px?.[1]||0)+(layer.y||0);
           if(layer.position_from_input){const bind=layer.position_from_input;const v=visualCore.unitValue(a,inputs,bind.input),pos=bind.from_px+(bind.to_px-bind.from_px)*v;if(bind.axis==='x')px+=pos;else py+=pos;}
           ctx.save();
@@ -158,7 +165,7 @@
                 await drawAsset(target,ctx,px+(i%plan.columns)*plan.stepX,
                   py+Math.floor(i/plan.columns)*plan.stepY,lw,lh,time,inputs,state,next);
               }
-            }else await drawAsset(target,ctx,px,py,lw,lh,time,{...inputs,...(layer.input_values||{})},layer.state_from_input?inputs[layer.state_from_input]:(layer.state||null),next);
+            }else await drawAsset(target,ctx,px,py,lw,lh,time,childInput,layer.state_from_input?inputs[layer.state_from_input]:(layer.state||null),next,null,layer.preset||null);
           }finally{ctx.restore();}
         }
       }finally{ctx.restore();}

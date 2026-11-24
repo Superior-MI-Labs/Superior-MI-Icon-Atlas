@@ -436,6 +436,17 @@
               "$ref": "#/$defs/px2"
             }
           }
+        },
+        "input_bindings": {
+          "type": "object",
+          "minProperties": 1,
+          "maxProperties": 32,
+          "additionalProperties": {
+            "$ref": "#/$defs/nonblank"
+          }
+        },
+        "preset": {
+          "$ref": "#/$defs/nonblank"
         }
       },
       "oneOf": [

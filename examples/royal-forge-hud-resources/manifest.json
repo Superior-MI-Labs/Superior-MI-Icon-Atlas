@@ -1,7 +1,7 @@
 {
   "schema": "smi-visual-pack/1",
   "pack_id": "smi.hud.royalforge02.resources",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Royal Forge fantasy RPG resource systems: bars, partial hearts, pips, orbs, vials, boss bars, and discrete radial gauges. Original vector artwork.",
   "license": "CC0-1.0",
   "textures": {
@@ -43,7 +43,10 @@
         350,
         62
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.base/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.royal.rim",
@@ -73,7 +76,10 @@
         350,
         62
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.rim/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.runic.base",
@@ -103,7 +109,10 @@
         350,
         62
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.base/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.runic.rim",
@@ -133,7 +142,10 @@
         350,
         62
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.rim/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.iron.base",
@@ -163,7 +175,10 @@
         350,
         62
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.base/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.iron.rim",
@@ -193,7 +208,10 @@
         350,
         62
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.rim/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.verdant.base",
@@ -223,7 +241,10 @@
         350,
         62
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.base/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.verdant.rim",
@@ -253,7 +274,10 @@
         350,
         62
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.rim/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.arcane.base",
@@ -283,7 +307,10 @@
         350,
         62
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.base/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.arcane.rim",
@@ -313,7 +340,10 @@
         350,
         62
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.rim/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.health",
@@ -341,7 +371,10 @@
         306,
         22
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.fill/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.mana",
@@ -369,7 +402,10 @@
         306,
         22
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.fill/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.stamina",
@@ -397,7 +433,10 @@
         306,
         22
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.fill/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.shield",
@@ -425,7 +464,10 @@
         306,
         22
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.fill/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.experience",
@@ -453,7 +495,10 @@
         306,
         22
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.fill/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.rage",
@@ -481,7 +526,10 @@
         306,
         22
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.fill/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.oxygen",
@@ -509,7 +557,10 @@
         306,
         22
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.fill/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.focus",
@@ -537,7 +588,10 @@
         306,
         22
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.fill/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.heat",
@@ -565,7 +619,10 @@
         306,
         22
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.fill/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.corruption",
@@ -593,7 +650,10 @@
         306,
         22
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.fill/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.emblem.health",
@@ -621,7 +681,10 @@
         55,
         55
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.emblem/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.emblem.mana",
@@ -649,7 +712,10 @@
         55,
         55
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.emblem/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.emblem.stamina",
@@ -677,7 +743,10 @@
         55,
         55
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.emblem/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.emblem.shield",
@@ -705,7 +774,10 @@
         55,
         55
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.emblem/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.emblem.experience",
@@ -733,7 +805,10 @@
         55,
         55
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.emblem/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.emblem.rage",
@@ -761,7 +836,10 @@
         55,
         55
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.emblem/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.emblem.oxygen",
@@ -789,7 +867,10 @@
         55,
         55
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.emblem/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.emblem.focus",
@@ -817,7 +898,10 @@
         55,
         55
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.emblem/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.emblem.heat",
@@ -845,7 +929,10 @@
         55,
         55
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.emblem/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.emblem.corruption",
@@ -873,7 +960,10 @@
         55,
         55
       ],
-      "description": "Original illustrated game-ready Royal Forge resource element."
+      "description": "Original illustrated game-ready Royal Forge resource element.",
+      "implements": [
+        "smi.hud.royalforge02.interface.bar.emblem/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.royal.health",
@@ -885,41 +975,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.royal.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.health",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Royal Health",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.royal.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.health",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -979,41 +1040,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.royal.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.mana",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Royal Mana",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.royal.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.mana",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -1073,41 +1105,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.royal.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.stamina",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Royal Stamina",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.royal.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.stamina",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -1167,41 +1170,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.royal.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.shield",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Royal Shield",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.royal.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.shield",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -1261,41 +1235,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.royal.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.experience",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Royal Experience",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.royal.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.experience",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -1355,41 +1300,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.royal.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.rage",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Royal Rage",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.royal.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.rage",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -1449,41 +1365,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.royal.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.oxygen",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Royal Oxygen",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.royal.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.oxygen",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -1543,41 +1430,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.royal.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.focus",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Royal Focus",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.royal.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.focus",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -1637,41 +1495,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.royal.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.heat",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Royal Heat",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.royal.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.heat",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -1731,41 +1560,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.royal.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.corruption",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Royal Corruption",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.royal.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.corruption",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -1825,41 +1625,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.runic.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.health",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Runic Health",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.runic.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.health",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -1919,41 +1690,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.runic.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.mana",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Runic Mana",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.runic.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.mana",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -2013,41 +1755,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.runic.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.stamina",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Runic Stamina",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.runic.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.stamina",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -2107,41 +1820,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.runic.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.shield",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Runic Shield",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.runic.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.shield",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -2201,41 +1885,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.runic.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.experience",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Runic Experience",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.runic.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.experience",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -2295,41 +1950,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.runic.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.rage",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Runic Rage",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.runic.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.rage",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -2389,41 +2015,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.runic.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.oxygen",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Runic Oxygen",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.runic.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.oxygen",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -2483,41 +2080,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.runic.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.focus",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Runic Focus",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.runic.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.focus",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -2577,41 +2145,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.runic.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.heat",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Runic Heat",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.runic.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.heat",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -2671,41 +2210,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.runic.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.corruption",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Runic Corruption",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.runic.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.corruption",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -2765,41 +2275,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.iron.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.health",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Iron Health",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.iron.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.health",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -2859,41 +2340,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.iron.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.mana",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Iron Mana",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.iron.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.mana",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -2953,41 +2405,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.iron.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.stamina",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Iron Stamina",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.iron.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.stamina",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -3047,41 +2470,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.iron.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.shield",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Iron Shield",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.iron.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.shield",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -3141,41 +2535,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.iron.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.experience",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Iron Experience",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.iron.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.experience",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -3235,41 +2600,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.iron.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.rage",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Iron Rage",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.iron.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.rage",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -3329,41 +2665,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.iron.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.oxygen",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Iron Oxygen",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.iron.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.oxygen",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -3423,41 +2730,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.iron.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.focus",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Iron Focus",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.iron.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.focus",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -3517,41 +2795,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.iron.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.heat",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Iron Heat",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.iron.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.heat",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -3611,41 +2860,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.iron.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.corruption",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Iron Corruption",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.iron.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.corruption",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -3705,41 +2925,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.verdant.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.health",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Verdant Health",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.verdant.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.health",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -3799,41 +2990,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.verdant.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.mana",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Verdant Mana",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.verdant.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.mana",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -3893,41 +3055,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.verdant.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.stamina",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Verdant Stamina",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.verdant.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.stamina",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -3987,41 +3120,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.verdant.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.shield",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Verdant Shield",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.verdant.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.shield",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -4081,41 +3185,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.verdant.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.experience",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Verdant Experience",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.verdant.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.experience",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -4175,41 +3250,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.verdant.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.rage",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Verdant Rage",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.verdant.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.rage",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -4269,41 +3315,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.verdant.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.oxygen",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Verdant Oxygen",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.verdant.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.oxygen",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -4363,41 +3380,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.verdant.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.focus",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Verdant Focus",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.verdant.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.focus",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -4457,41 +3445,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.verdant.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.heat",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Verdant Heat",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.verdant.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.heat",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -4551,41 +3510,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.verdant.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.corruption",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Verdant Corruption",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.verdant.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.corruption",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -4645,41 +3575,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.arcane.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.health",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Arcane Health",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.arcane.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.health",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -4739,41 +3640,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.arcane.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.mana",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Arcane Mana",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.arcane.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.mana",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -4833,41 +3705,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.arcane.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.stamina",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Arcane Stamina",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.arcane.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.stamina",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -4927,41 +3770,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.arcane.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.shield",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Arcane Shield",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.arcane.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.shield",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -5021,41 +3835,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.arcane.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.experience",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Arcane Experience",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.arcane.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.experience",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -5115,41 +3900,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.arcane.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.rage",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Arcane Rage",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.arcane.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.rage",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -5209,41 +3965,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.arcane.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.oxygen",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Arcane Oxygen",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.arcane.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.oxygen",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -5303,41 +4030,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.arcane.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.focus",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Arcane Focus",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.arcane.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.focus",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -5397,41 +4095,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.arcane.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.heat",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Arcane Heat",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.arcane.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.heat",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -5491,41 +4160,12 @@
       ],
       "layers": [
         {
-          "id": "backplate",
-          "asset": "smi.hud.royalforge02.bar.arcane.base",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "fill",
-          "asset": "smi.hud.royalforge02.bar.fill.corruption",
-          "offset_px": [
-            61,
-            25
-          ],
-          "clip": {
-            "input": "value",
-            "axis": "x",
-            "origin": "start"
+          "id": "meter",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "preset": "Arcane Corruption",
+          "input_bindings": {
+            "value": "value"
           }
-        },
-        {
-          "id": "gold-rim",
-          "asset": "smi.hud.royalforge02.bar.arcane.rim",
-          "offset_px": [
-            40,
-            5
-          ]
-        },
-        {
-          "id": "resource-emblem",
-          "asset": "smi.hud.royalforge02.emblem.corruption",
-          "offset_px": [
-            1,
-            9
-          ]
         }
       ],
       "style": "royal-forge-dark-gold",
@@ -18697,6 +17337,970 @@
       "subjects": [
         "ui.hud.effects"
       ]
+    },
+    {
+      "id": "smi.hud.royalforge02.widget.resource-meter",
+      "kind": "composition",
+      "name": "Royal Forge Configurable Resource Meter",
+      "description": "Shared resource meter with five frame styles and ten resource presets per style.",
+      "size_px": [
+        399,
+        72
+      ],
+      "style": "royal-forge-dark-gold",
+      "tags": [
+        "hud",
+        "resource",
+        "meter",
+        "health",
+        "mana",
+        "stamina",
+        "shield",
+        "experience",
+        "fantasy",
+        "rpg",
+        "interactive"
+      ],
+      "subjects": [
+        "ui.hud.bars"
+      ],
+      "inputs": {
+        "value": {
+          "type": "number",
+          "default": 72,
+          "min": 0,
+          "max": 100
+        }
+      },
+      "behavior": {
+        "role": "meter",
+        "outputs": {
+          "value": {
+            "from_input": "value",
+            "unit": "percent"
+          }
+        },
+        "on": {
+          "set_value": [
+            {
+              "op": "set",
+              "input": "value",
+              "source": "event.value"
+            },
+            {
+              "op": "emit",
+              "event": "value_changed"
+            }
+          ]
+        }
+      },
+      "slots": {
+        "base": {
+          "label": "Base",
+          "accepts": "smi.hud.royalforge02.interface.bar.base/1",
+          "default": "smi.hud.royalforge02.bar.royal.base",
+          "options": [
+            "smi.hud.royalforge02.bar.royal.base",
+            "smi.hud.royalforge02.bar.runic.base",
+            "smi.hud.royalforge02.bar.iron.base",
+            "smi.hud.royalforge02.bar.verdant.base",
+            "smi.hud.royalforge02.bar.arcane.base"
+          ]
+        },
+        "rim": {
+          "label": "Rim",
+          "accepts": "smi.hud.royalforge02.interface.bar.rim/1",
+          "default": "smi.hud.royalforge02.bar.royal.rim",
+          "options": [
+            "smi.hud.royalforge02.bar.royal.rim",
+            "smi.hud.royalforge02.bar.runic.rim",
+            "smi.hud.royalforge02.bar.iron.rim",
+            "smi.hud.royalforge02.bar.verdant.rim",
+            "smi.hud.royalforge02.bar.arcane.rim"
+          ]
+        },
+        "fill": {
+          "label": "Fill",
+          "accepts": "smi.hud.royalforge02.interface.bar.fill/1",
+          "default": "smi.hud.royalforge02.bar.fill.health",
+          "options": [
+            "smi.hud.royalforge02.bar.fill.health",
+            "smi.hud.royalforge02.bar.fill.mana",
+            "smi.hud.royalforge02.bar.fill.stamina",
+            "smi.hud.royalforge02.bar.fill.shield",
+            "smi.hud.royalforge02.bar.fill.experience",
+            "smi.hud.royalforge02.bar.fill.rage",
+            "smi.hud.royalforge02.bar.fill.oxygen",
+            "smi.hud.royalforge02.bar.fill.focus",
+            "smi.hud.royalforge02.bar.fill.heat",
+            "smi.hud.royalforge02.bar.fill.corruption"
+          ]
+        },
+        "emblem": {
+          "label": "Emblem",
+          "accepts": "smi.hud.royalforge02.interface.bar.emblem/1",
+          "default": "smi.hud.royalforge02.emblem.health",
+          "options": [
+            "smi.hud.royalforge02.emblem.health",
+            "smi.hud.royalforge02.emblem.mana",
+            "smi.hud.royalforge02.emblem.stamina",
+            "smi.hud.royalforge02.emblem.shield",
+            "smi.hud.royalforge02.emblem.experience",
+            "smi.hud.royalforge02.emblem.rage",
+            "smi.hud.royalforge02.emblem.oxygen",
+            "smi.hud.royalforge02.emblem.focus",
+            "smi.hud.royalforge02.emblem.heat",
+            "smi.hud.royalforge02.emblem.corruption"
+          ]
+        }
+      },
+      "presets": {
+        "Royal Health": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.royal.base",
+            "fill": "smi.hud.royalforge02.bar.fill.health",
+            "rim": "smi.hud.royalforge02.bar.royal.rim",
+            "emblem": "smi.hud.royalforge02.emblem.health"
+          }
+        },
+        "Royal Mana": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.royal.base",
+            "fill": "smi.hud.royalforge02.bar.fill.mana",
+            "rim": "smi.hud.royalforge02.bar.royal.rim",
+            "emblem": "smi.hud.royalforge02.emblem.mana"
+          }
+        },
+        "Royal Stamina": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.royal.base",
+            "fill": "smi.hud.royalforge02.bar.fill.stamina",
+            "rim": "smi.hud.royalforge02.bar.royal.rim",
+            "emblem": "smi.hud.royalforge02.emblem.stamina"
+          }
+        },
+        "Royal Shield": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.royal.base",
+            "fill": "smi.hud.royalforge02.bar.fill.shield",
+            "rim": "smi.hud.royalforge02.bar.royal.rim",
+            "emblem": "smi.hud.royalforge02.emblem.shield"
+          }
+        },
+        "Royal Experience": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.royal.base",
+            "fill": "smi.hud.royalforge02.bar.fill.experience",
+            "rim": "smi.hud.royalforge02.bar.royal.rim",
+            "emblem": "smi.hud.royalforge02.emblem.experience"
+          }
+        },
+        "Royal Rage": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.royal.base",
+            "fill": "smi.hud.royalforge02.bar.fill.rage",
+            "rim": "smi.hud.royalforge02.bar.royal.rim",
+            "emblem": "smi.hud.royalforge02.emblem.rage"
+          }
+        },
+        "Royal Oxygen": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.royal.base",
+            "fill": "smi.hud.royalforge02.bar.fill.oxygen",
+            "rim": "smi.hud.royalforge02.bar.royal.rim",
+            "emblem": "smi.hud.royalforge02.emblem.oxygen"
+          }
+        },
+        "Royal Focus": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.royal.base",
+            "fill": "smi.hud.royalforge02.bar.fill.focus",
+            "rim": "smi.hud.royalforge02.bar.royal.rim",
+            "emblem": "smi.hud.royalforge02.emblem.focus"
+          }
+        },
+        "Royal Heat": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.royal.base",
+            "fill": "smi.hud.royalforge02.bar.fill.heat",
+            "rim": "smi.hud.royalforge02.bar.royal.rim",
+            "emblem": "smi.hud.royalforge02.emblem.heat"
+          }
+        },
+        "Royal Corruption": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.royal.base",
+            "fill": "smi.hud.royalforge02.bar.fill.corruption",
+            "rim": "smi.hud.royalforge02.bar.royal.rim",
+            "emblem": "smi.hud.royalforge02.emblem.corruption"
+          }
+        },
+        "Runic Health": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.runic.base",
+            "fill": "smi.hud.royalforge02.bar.fill.health",
+            "rim": "smi.hud.royalforge02.bar.runic.rim",
+            "emblem": "smi.hud.royalforge02.emblem.health"
+          }
+        },
+        "Runic Mana": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.runic.base",
+            "fill": "smi.hud.royalforge02.bar.fill.mana",
+            "rim": "smi.hud.royalforge02.bar.runic.rim",
+            "emblem": "smi.hud.royalforge02.emblem.mana"
+          }
+        },
+        "Runic Stamina": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.runic.base",
+            "fill": "smi.hud.royalforge02.bar.fill.stamina",
+            "rim": "smi.hud.royalforge02.bar.runic.rim",
+            "emblem": "smi.hud.royalforge02.emblem.stamina"
+          }
+        },
+        "Runic Shield": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.runic.base",
+            "fill": "smi.hud.royalforge02.bar.fill.shield",
+            "rim": "smi.hud.royalforge02.bar.runic.rim",
+            "emblem": "smi.hud.royalforge02.emblem.shield"
+          }
+        },
+        "Runic Experience": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.runic.base",
+            "fill": "smi.hud.royalforge02.bar.fill.experience",
+            "rim": "smi.hud.royalforge02.bar.runic.rim",
+            "emblem": "smi.hud.royalforge02.emblem.experience"
+          }
+        },
+        "Runic Rage": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.runic.base",
+            "fill": "smi.hud.royalforge02.bar.fill.rage",
+            "rim": "smi.hud.royalforge02.bar.runic.rim",
+            "emblem": "smi.hud.royalforge02.emblem.rage"
+          }
+        },
+        "Runic Oxygen": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.runic.base",
+            "fill": "smi.hud.royalforge02.bar.fill.oxygen",
+            "rim": "smi.hud.royalforge02.bar.runic.rim",
+            "emblem": "smi.hud.royalforge02.emblem.oxygen"
+          }
+        },
+        "Runic Focus": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.runic.base",
+            "fill": "smi.hud.royalforge02.bar.fill.focus",
+            "rim": "smi.hud.royalforge02.bar.runic.rim",
+            "emblem": "smi.hud.royalforge02.emblem.focus"
+          }
+        },
+        "Runic Heat": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.runic.base",
+            "fill": "smi.hud.royalforge02.bar.fill.heat",
+            "rim": "smi.hud.royalforge02.bar.runic.rim",
+            "emblem": "smi.hud.royalforge02.emblem.heat"
+          }
+        },
+        "Runic Corruption": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.runic.base",
+            "fill": "smi.hud.royalforge02.bar.fill.corruption",
+            "rim": "smi.hud.royalforge02.bar.runic.rim",
+            "emblem": "smi.hud.royalforge02.emblem.corruption"
+          }
+        },
+        "Iron Health": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.iron.base",
+            "fill": "smi.hud.royalforge02.bar.fill.health",
+            "rim": "smi.hud.royalforge02.bar.iron.rim",
+            "emblem": "smi.hud.royalforge02.emblem.health"
+          }
+        },
+        "Iron Mana": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.iron.base",
+            "fill": "smi.hud.royalforge02.bar.fill.mana",
+            "rim": "smi.hud.royalforge02.bar.iron.rim",
+            "emblem": "smi.hud.royalforge02.emblem.mana"
+          }
+        },
+        "Iron Stamina": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.iron.base",
+            "fill": "smi.hud.royalforge02.bar.fill.stamina",
+            "rim": "smi.hud.royalforge02.bar.iron.rim",
+            "emblem": "smi.hud.royalforge02.emblem.stamina"
+          }
+        },
+        "Iron Shield": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.iron.base",
+            "fill": "smi.hud.royalforge02.bar.fill.shield",
+            "rim": "smi.hud.royalforge02.bar.iron.rim",
+            "emblem": "smi.hud.royalforge02.emblem.shield"
+          }
+        },
+        "Iron Experience": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.iron.base",
+            "fill": "smi.hud.royalforge02.bar.fill.experience",
+            "rim": "smi.hud.royalforge02.bar.iron.rim",
+            "emblem": "smi.hud.royalforge02.emblem.experience"
+          }
+        },
+        "Iron Rage": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.iron.base",
+            "fill": "smi.hud.royalforge02.bar.fill.rage",
+            "rim": "smi.hud.royalforge02.bar.iron.rim",
+            "emblem": "smi.hud.royalforge02.emblem.rage"
+          }
+        },
+        "Iron Oxygen": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.iron.base",
+            "fill": "smi.hud.royalforge02.bar.fill.oxygen",
+            "rim": "smi.hud.royalforge02.bar.iron.rim",
+            "emblem": "smi.hud.royalforge02.emblem.oxygen"
+          }
+        },
+        "Iron Focus": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.iron.base",
+            "fill": "smi.hud.royalforge02.bar.fill.focus",
+            "rim": "smi.hud.royalforge02.bar.iron.rim",
+            "emblem": "smi.hud.royalforge02.emblem.focus"
+          }
+        },
+        "Iron Heat": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.iron.base",
+            "fill": "smi.hud.royalforge02.bar.fill.heat",
+            "rim": "smi.hud.royalforge02.bar.iron.rim",
+            "emblem": "smi.hud.royalforge02.emblem.heat"
+          }
+        },
+        "Iron Corruption": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.iron.base",
+            "fill": "smi.hud.royalforge02.bar.fill.corruption",
+            "rim": "smi.hud.royalforge02.bar.iron.rim",
+            "emblem": "smi.hud.royalforge02.emblem.corruption"
+          }
+        },
+        "Verdant Health": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.verdant.base",
+            "fill": "smi.hud.royalforge02.bar.fill.health",
+            "rim": "smi.hud.royalforge02.bar.verdant.rim",
+            "emblem": "smi.hud.royalforge02.emblem.health"
+          }
+        },
+        "Verdant Mana": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.verdant.base",
+            "fill": "smi.hud.royalforge02.bar.fill.mana",
+            "rim": "smi.hud.royalforge02.bar.verdant.rim",
+            "emblem": "smi.hud.royalforge02.emblem.mana"
+          }
+        },
+        "Verdant Stamina": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.verdant.base",
+            "fill": "smi.hud.royalforge02.bar.fill.stamina",
+            "rim": "smi.hud.royalforge02.bar.verdant.rim",
+            "emblem": "smi.hud.royalforge02.emblem.stamina"
+          }
+        },
+        "Verdant Shield": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.verdant.base",
+            "fill": "smi.hud.royalforge02.bar.fill.shield",
+            "rim": "smi.hud.royalforge02.bar.verdant.rim",
+            "emblem": "smi.hud.royalforge02.emblem.shield"
+          }
+        },
+        "Verdant Experience": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.verdant.base",
+            "fill": "smi.hud.royalforge02.bar.fill.experience",
+            "rim": "smi.hud.royalforge02.bar.verdant.rim",
+            "emblem": "smi.hud.royalforge02.emblem.experience"
+          }
+        },
+        "Verdant Rage": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.verdant.base",
+            "fill": "smi.hud.royalforge02.bar.fill.rage",
+            "rim": "smi.hud.royalforge02.bar.verdant.rim",
+            "emblem": "smi.hud.royalforge02.emblem.rage"
+          }
+        },
+        "Verdant Oxygen": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.verdant.base",
+            "fill": "smi.hud.royalforge02.bar.fill.oxygen",
+            "rim": "smi.hud.royalforge02.bar.verdant.rim",
+            "emblem": "smi.hud.royalforge02.emblem.oxygen"
+          }
+        },
+        "Verdant Focus": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.verdant.base",
+            "fill": "smi.hud.royalforge02.bar.fill.focus",
+            "rim": "smi.hud.royalforge02.bar.verdant.rim",
+            "emblem": "smi.hud.royalforge02.emblem.focus"
+          }
+        },
+        "Verdant Heat": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.verdant.base",
+            "fill": "smi.hud.royalforge02.bar.fill.heat",
+            "rim": "smi.hud.royalforge02.bar.verdant.rim",
+            "emblem": "smi.hud.royalforge02.emblem.heat"
+          }
+        },
+        "Verdant Corruption": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.verdant.base",
+            "fill": "smi.hud.royalforge02.bar.fill.corruption",
+            "rim": "smi.hud.royalforge02.bar.verdant.rim",
+            "emblem": "smi.hud.royalforge02.emblem.corruption"
+          }
+        },
+        "Arcane Health": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.arcane.base",
+            "fill": "smi.hud.royalforge02.bar.fill.health",
+            "rim": "smi.hud.royalforge02.bar.arcane.rim",
+            "emblem": "smi.hud.royalforge02.emblem.health"
+          }
+        },
+        "Arcane Mana": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.arcane.base",
+            "fill": "smi.hud.royalforge02.bar.fill.mana",
+            "rim": "smi.hud.royalforge02.bar.arcane.rim",
+            "emblem": "smi.hud.royalforge02.emblem.mana"
+          }
+        },
+        "Arcane Stamina": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.arcane.base",
+            "fill": "smi.hud.royalforge02.bar.fill.stamina",
+            "rim": "smi.hud.royalforge02.bar.arcane.rim",
+            "emblem": "smi.hud.royalforge02.emblem.stamina"
+          }
+        },
+        "Arcane Shield": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.arcane.base",
+            "fill": "smi.hud.royalforge02.bar.fill.shield",
+            "rim": "smi.hud.royalforge02.bar.arcane.rim",
+            "emblem": "smi.hud.royalforge02.emblem.shield"
+          }
+        },
+        "Arcane Experience": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.arcane.base",
+            "fill": "smi.hud.royalforge02.bar.fill.experience",
+            "rim": "smi.hud.royalforge02.bar.arcane.rim",
+            "emblem": "smi.hud.royalforge02.emblem.experience"
+          }
+        },
+        "Arcane Rage": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.arcane.base",
+            "fill": "smi.hud.royalforge02.bar.fill.rage",
+            "rim": "smi.hud.royalforge02.bar.arcane.rim",
+            "emblem": "smi.hud.royalforge02.emblem.rage"
+          }
+        },
+        "Arcane Oxygen": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.arcane.base",
+            "fill": "smi.hud.royalforge02.bar.fill.oxygen",
+            "rim": "smi.hud.royalforge02.bar.arcane.rim",
+            "emblem": "smi.hud.royalforge02.emblem.oxygen"
+          }
+        },
+        "Arcane Focus": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.arcane.base",
+            "fill": "smi.hud.royalforge02.bar.fill.focus",
+            "rim": "smi.hud.royalforge02.bar.arcane.rim",
+            "emblem": "smi.hud.royalforge02.emblem.focus"
+          }
+        },
+        "Arcane Heat": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.arcane.base",
+            "fill": "smi.hud.royalforge02.bar.fill.heat",
+            "rim": "smi.hud.royalforge02.bar.arcane.rim",
+            "emblem": "smi.hud.royalforge02.emblem.heat"
+          }
+        },
+        "Arcane Corruption": {
+          "slots": {
+            "base": "smi.hud.royalforge02.bar.arcane.base",
+            "fill": "smi.hud.royalforge02.bar.fill.corruption",
+            "rim": "smi.hud.royalforge02.bar.arcane.rim",
+            "emblem": "smi.hud.royalforge02.emblem.corruption"
+          }
+        }
+      },
+      "default_preset": "Royal Health",
+      "layers": [
+        {
+          "id": "backplate",
+          "offset_px": [
+            40,
+            5
+          ],
+          "slot": "base"
+        },
+        {
+          "id": "fill",
+          "offset_px": [
+            61,
+            25
+          ],
+          "clip": {
+            "input": "value",
+            "axis": "x",
+            "origin": "start"
+          },
+          "slot": "fill"
+        },
+        {
+          "id": "gold-rim",
+          "offset_px": [
+            40,
+            5
+          ],
+          "slot": "rim"
+        },
+        {
+          "id": "resource-emblem",
+          "offset_px": [
+            1,
+            9
+          ],
+          "slot": "emblem"
+        }
+      ]
+    },
+    {
+      "id": "smi.hud.royalforge02.hud.adventurer",
+      "kind": "composition",
+      "name": "Royal Forge Adventurer HUD",
+      "description": "Complete resource-focused RPG HUD: player meters, boss health and ability charges. Independently bound inputs and optional stat/action simulation in Builder.",
+      "size_px": [
+        900,
+        430
+      ],
+      "style": "royal-forge-dark-gold",
+      "tags": [
+        "hud",
+        "complete hud",
+        "rpg",
+        "fantasy",
+        "royal forge",
+        "health",
+        "mana",
+        "stamina",
+        "shield",
+        "experience",
+        "boss",
+        "charges",
+        "interactive"
+      ],
+      "subjects": [
+        "ui.hud.bars",
+        "ui.hud.pips"
+      ],
+      "inputs": {
+        "health": {
+          "type": "number",
+          "default": 80,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "mana": {
+          "type": "number",
+          "default": 65,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "stamina": {
+          "type": "number",
+          "default": 90,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "shield": {
+          "type": "number",
+          "default": 45,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "experience": {
+          "type": "number",
+          "default": 35,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "boss_health": {
+          "type": "number",
+          "default": 78,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "charges": {
+          "type": "number",
+          "default": 4,
+          "min": 0,
+          "max": 6,
+          "step": 1
+        }
+      },
+      "behavior": {
+        "role": "generic",
+        "outputs": {
+          "health": {
+            "from_input": "health",
+            "unit": "percent"
+          },
+          "mana": {
+            "from_input": "mana",
+            "unit": "percent"
+          },
+          "stamina": {
+            "from_input": "stamina",
+            "unit": "percent"
+          },
+          "shield": {
+            "from_input": "shield",
+            "unit": "percent"
+          },
+          "experience": {
+            "from_input": "experience",
+            "unit": "percent"
+          },
+          "boss_health": {
+            "from_input": "boss_health",
+            "unit": "percent"
+          },
+          "charges": {
+            "from_input": "charges",
+            "unit": "charges"
+          }
+        }
+      },
+      "layers": [
+        {
+          "id": "boss",
+          "asset": "smi.hud.royalforge02.widget.boss.royal.health",
+          "offset_px": [
+            157,
+            10
+          ],
+          "size_px": [
+            585,
+            81
+          ],
+          "input_bindings": {
+            "value": "boss_health"
+          }
+        },
+        {
+          "id": "health",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "offset_px": [
+            25,
+            102
+          ],
+          "size_px": [
+            399,
+            62
+          ],
+          "input_bindings": {
+            "value": "health"
+          },
+          "preset": "Royal Health"
+        },
+        {
+          "id": "mana",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "offset_px": [
+            25,
+            164
+          ],
+          "size_px": [
+            399,
+            62
+          ],
+          "input_bindings": {
+            "value": "mana"
+          },
+          "preset": "Royal Mana"
+        },
+        {
+          "id": "stamina",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "offset_px": [
+            25,
+            226
+          ],
+          "size_px": [
+            399,
+            62
+          ],
+          "input_bindings": {
+            "value": "stamina"
+          },
+          "preset": "Royal Stamina"
+        },
+        {
+          "id": "shield",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "offset_px": [
+            25,
+            288
+          ],
+          "size_px": [
+            399,
+            62
+          ],
+          "input_bindings": {
+            "value": "shield"
+          },
+          "preset": "Royal Shield"
+        },
+        {
+          "id": "experience",
+          "asset": "smi.hud.royalforge02.widget.resource-meter",
+          "offset_px": [
+            25,
+            350
+          ],
+          "size_px": [
+            399,
+            62
+          ],
+          "input_bindings": {
+            "value": "experience"
+          },
+          "preset": "Royal Experience"
+        },
+        {
+          "id": "health-globe",
+          "asset": "smi.hud.royalforge02.widget.orb.health",
+          "offset_px": [
+            492,
+            112
+          ],
+          "size_px": [
+            120,
+            120
+          ],
+          "input_bindings": {
+            "value": "health"
+          }
+        },
+        {
+          "id": "mana-globe",
+          "asset": "smi.hud.royalforge02.widget.orb.mana",
+          "offset_px": [
+            642,
+            112
+          ],
+          "size_px": [
+            120,
+            120
+          ],
+          "input_bindings": {
+            "value": "mana"
+          }
+        },
+        {
+          "id": "charges",
+          "asset": "smi.hud.royalforge02.widget.pips.arcane-rune.adaptive",
+          "offset_px": [
+            470,
+            263
+          ],
+          "size_px": [
+            384,
+            64
+          ],
+          "input_bindings": {
+            "value": "charges"
+          },
+          "input_values": {
+            "max": 6,
+            "columns": 6
+          }
+        }
+      ]
+    }
+  ],
+  "interfaces": {
+    "smi.hud.royalforge02.interface.bar.base/1": {
+      "size_px": [
+        350,
+        62
+      ],
+      "allow_scale": false
+    },
+    "smi.hud.royalforge02.interface.bar.rim/1": {
+      "size_px": [
+        350,
+        62
+      ],
+      "allow_scale": false
+    },
+    "smi.hud.royalforge02.interface.bar.fill/1": {
+      "size_px": [
+        306,
+        22
+      ],
+      "allow_scale": false
+    },
+    "smi.hud.royalforge02.interface.bar.emblem/1": {
+      "size_px": [
+        55,
+        55
+      ],
+      "allow_scale": false
+    }
+  },
+  "stat_profiles": [
+    {
+      "schema": "smi-stat-profile/1",
+      "id": "smi.hud.royalforge02.adventurer-lab",
+      "name": "Adventurer resource simulation",
+      "asset": "smi.hud.royalforge02.hud.adventurer",
+      "stats": {
+        "health": {
+          "min": 0,
+          "max": 100,
+          "initial": 80
+        },
+        "mana": {
+          "min": 0,
+          "max": 100,
+          "initial": 65
+        },
+        "stamina": {
+          "min": 0,
+          "max": 100,
+          "initial": 90
+        },
+        "shield": {
+          "min": 0,
+          "max": 100,
+          "initial": 45
+        },
+        "experience": {
+          "min": 0,
+          "max": 100,
+          "initial": 35
+        },
+        "boss_health": {
+          "min": 0,
+          "max": 100,
+          "initial": 78
+        },
+        "charges": {
+          "min": 0,
+          "max": 6,
+          "initial": 4
+        }
+      },
+      "bindings": [
+        {
+          "stat": "health",
+          "input": "health"
+        },
+        {
+          "stat": "mana",
+          "input": "mana"
+        },
+        {
+          "stat": "stamina",
+          "input": "stamina"
+        },
+        {
+          "stat": "shield",
+          "input": "shield"
+        },
+        {
+          "stat": "experience",
+          "input": "experience"
+        },
+        {
+          "stat": "boss_health",
+          "input": "boss_health"
+        },
+        {
+          "stat": "charges",
+          "input": "charges"
+        }
+      ],
+      "actions": {
+        "take_damage": {
+          "deltas": {
+            "health": -20
+          }
+        },
+        "cast_spell": {
+          "costs": {
+            "mana": 15,
+            "charges": 1
+          },
+          "deltas": {
+            "boss_health": -10
+          }
+        },
+        "dash": {
+          "costs": {
+            "stamina": 20
+          }
+        },
+        "guard": {
+          "costs": {
+            "shield": 10
+          }
+        },
+        "gain_experience": {
+          "deltas": {
+            "experience": 10
+          }
+        },
+        "rest": {
+          "deltas": {
+            "health": 100,
+            "mana": 100,
+            "stamina": 100,
+            "shield": 100,
+            "charges": 6
+          }
+        }
+      }
     }
   ]
 }

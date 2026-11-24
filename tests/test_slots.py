@@ -43,6 +43,17 @@ class SlotPackContracts(unittest.TestCase):
         err=self.check_mutation('packs/bottle/manifest.json',lambda p:p['assets'][2]['presets']['Mana']['slots'].update({'fluid':'smi.unknown'}))
         self.assertTrue(any('bad preset slot' in e for e in err),err)
 
+    def test_nested_hud_binding_contract(self):
+        from tools.validate_slots import check as check_slots
+        pack=json.loads((ROOT/'examples/royal-forge-hud-resources/manifest.json').read_text())
+        self.assertEqual(check_slots([pack]),[])
+        hud=next(a for a in pack['assets'] if a['id']=='smi.hud.royalforge02.hud.adventurer')
+        hud['layers'][1]['input_bindings']['value']='missing'
+        self.assertTrue(any('incompatible child input binding' in e for e in check_slots([pack])))
+        hud['layers'][1]['input_bindings']['value']='health'
+        hud['layers'][1]['preset']='nonexistent'
+        self.assertTrue(any('unknown child preset' in e for e in check_slots([pack])))
+
     def test_invalid_schema_must_not_crash_validator(self):
         err=self.check_mutation('packs/bottle/manifest.json',lambda p:p['assets'][2]['slots']['fluid'].pop('accepts'))
         self.assertTrue(err)

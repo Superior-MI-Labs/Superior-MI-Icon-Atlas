@@ -62,3 +62,32 @@ assert.deepEqual(renderer.sizeFor(P+'static'),[72,72]);
   assert.ok(translates.some(([x,y])=>x===8&&y===3),'Negative content origin must be translated into canvas');
   console.log('Adaptive state-family layout, quarter fill, max capacity and wrapped rows: PASS');
 })().catch(e=>{console.error(e);process.exitCode=1});
+
+/* Every Royal Forge compatibility ID must retain its geometry and render the
+ * exact selected slots; multiple instances may bind distinct parent inputs. */
+(async()=>{
+  const fs=require('node:fs'),path=require('node:path');
+  const pack=JSON.parse(fs.readFileSync(path.join(__dirname,'../examples/royal-forge-hud-resources/manifest.json'),'utf8'));
+  const map=new Map(pack.assets.map(a=>[a.id,a])),Slots=require('../web/slot-core.js');
+  const Visual=require('../web/visual-core.js');
+  assert.deepEqual(Slots.validate(pack),[]);
+  const clips=[],draws=[];
+  const ctx={save(){},restore(){},translate(){},scale(){},beginPath(){},rect(...args){clips.push(args)},clip(){},drawImage(_img,...args){draws.push(args)},globalAlpha:1};
+  const render=create({getAsset:id=>map.get(id),getImage:async()=>({}),slots:Slots,timeline:{layerAt:l=>l},visualCore:Visual});
+  const template=map.get('smi.hud.royalforge02.widget.resource-meter'),bars=pack.assets.filter(a=>/\\.widget\\.bar\\.[^.]+\\.[^.]+$/.test(a.id));
+  assert.equal(bars.length,50);assert.equal(Object.keys(template.presets).length,50);
+  for(const bar of bars){
+    const values={value:50};clips.length=0;draws.length=0;
+    await render.drawAsset(bar.id,ctx,0,0,...bar.size_px,0,values);
+    assert.equal(draws.length,4,bar.id);assert.equal(clips[0][2],153,bar.id);
+    const choices=template.presets[bar.layers[0].preset].slots;
+    assert.deepEqual(draws.map(d=>d.slice(0,4)),['base','fill','rim','emblem'].map(k=>map.get(choices[k]).rect_px));
+  }
+  clips.length=0;
+  const hud=map.get('smi.hud.royalforge02.hud.adventurer');
+  await render.drawAsset(hud.id,ctx,0,0,...hud.size_px,0,{health:0,mana:100,stamina:25,shield:75,experience:50,boss_health:20,charges:2});
+  assert.deepEqual(clips.slice(1,6).map(c=>c[2]),[0,306,76.5,229.5,153]);
+  const invalid=JSON.parse(JSON.stringify(pack));invalid.assets.find(a=>a.id===hud.id).layers[1].input_bindings.value='unknown';
+  assert.ok(Slots.validate(invalid).some(e=>e.includes('incompatible child input binding')));
+  console.log('50 shared meter variants and independent HUD bindings: PASS');
+})().catch(e=>{console.error(e);process.exitCode=1;});
