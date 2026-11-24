@@ -1,0 +1,14 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.hud.royalforge.complete.pack",
+  "name": "Royal Forge Complete Gameplay HUD",
+  "version": "1.0.0",
+  "description": "Complete resource, ability, inventory and status HUD assembled from two source-owned Royal Forge collections. Host supplies independent values and gameplay state.",
+  "entry_asset": "smi.hud.royalforge.complete",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Complete HUD layout"
+    }
+  ]
+}

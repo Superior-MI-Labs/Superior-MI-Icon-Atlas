@@ -16,9 +16,9 @@ class VisualScenarioContractTests(unittest.TestCase):
 
     def test_scenario_schema_and_coverage(self):
         module.verify_spec(self.data)
-        self.assertEqual(len(self.data['cases']), 7)
+        self.assertEqual(len(self.data['cases']), 8)
         names={case['pack'] for case in self.data['cases']}
-        self.assertEqual(names, {'interactive-hud.zip','character-animations.zip','animated-icons.zip','starter-pack.zip','potions-collection.zip','royal-forge-hud-resources.zip','royal-forge-controls.zip'})
+        self.assertEqual(names, {'interactive-hud.zip','character-animations.zip','animated-icons.zip','starter-pack.zip','potions-collection.zip','royal-forge-hud-resources.zip','royal-forge-controls.zip','royal-forge-complete.zip'})
         for name in names:
             self.assertTrue((ROOT/'web/demo'/name).is_file() or (ROOT/'examples'/name.removesuffix('.zip')/'manifest.json').is_file(),name)
 

@@ -85,6 +85,18 @@ def check(page):
     page.locator("#tint-enabled").check()
     page.locator("#detail-canvas").wait_for()
     page.locator("#close").click()
+    # Overlapping bundles can coexist in one browser session. Navigate via
+    # the dependency inspector, rather than resetting the loaded ZIP cache.
+    page.locator("#clear-filters").click()
+    page.locator("#search").fill("smi.hud.royalforge.complete")
+    page.locator("#gallery .asset-tile").first.click()
+    expect(page.locator("#detail-title")).to_have_text("Royal Forge Complete Gameplay HUD")
+    page.locator("#detail[open]").wait_for(timeout=20000)
+    expect(page.locator("#controls [data-input-key]")).to_have_count(28)
+    page.locator("#detail-components summary").click()
+    page.locator('#detail-related button[title="smi.hud.royalforge02.hud.adventurer"]').click()
+    expect(page.locator("#controls [data-input-key]")).to_have_count(7)
+    page.locator("#close").click()
     # Import both published ZIPs via their real public entrypoints and inspect controls.
     url=page.url.split('?',1)[0]
     page.goto(url+"?asset=smi.hud.royalforge02.widget.hearts.ruby.adaptive",wait_until="networkidle")

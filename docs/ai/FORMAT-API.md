@@ -157,3 +157,6 @@ than creating a fake asset, copying artwork, or maintaining another search
 database. Search and the Playable Demos filter find the linked asset; its card
 and inspector expose direct play links. Future showcases use the same optional
 contract and keep the normal published/rights/visual-QA gates.
+
+### Source-owned portable bundles
+The repository publication record may list `includes` of distinct directly authored published collections. Build output expands the local collection index and packages included manifests, textures and notices under `packs/<source>/`. The authored bundle owns only its new composition IDs; included assets remain cataloged once under their original collections. Runtime ZIPs use the unchanged `smi-visual-collection/1` format and resolve offline. Import the complete bundle as one Builder bag, rather than also importing overlapping individual source ZIPs. The public browser keeps each ZIP's renderer and assets in its own context.

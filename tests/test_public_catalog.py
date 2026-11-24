@@ -35,6 +35,16 @@ class PublicCatalogTests(unittest.TestCase):
                 archive=site/'demo'/(folder.name+'.zip')
                 self.assertEqual(check(archive),[],str(archive))
                 self.assertTrue(archive.is_file())
+                if folder.name=='royal-forge-complete':
+                    with ZipFile(archive) as z:
+                        index=json.loads(z.read('collection.json'))
+                        self.assertEqual(len(index['packs']),3)
+                        bundled=[json.loads(z.read(ref['manifest'])) for ref in index['packs']]
+                        ids=[a['id'] for pack in bundled for a in pack['assets']]
+                        self.assertEqual(len(ids),len(set(ids)))
+                        self.assertEqual(len(ids),1+362+219)
+                        self.assertIn('smi.hud.royalforge.complete',ids)
+                        self.assertEqual(len([n for n in z.namelist() if n.endswith('.png')]),3)
                 if folder.name=='pixel-fantasy-icons':
                     with ZipFile(archive) as z:
                         self.assertFalse(any(n.startswith('source-') or n.startswith('qa/') or n=='authoring.json' for n in z.namelist()))
@@ -147,6 +157,7 @@ class PublicCatalogTests(unittest.TestCase):
             self.assertTrue((site/'demo/fantasy-rpg-hud-wave1.zip').is_file())
             self.assertTrue((site/'demo/royal-forge-controls.zip').is_file())
             self.assertTrue((site/'demo/royal-forge-hud-resources.zip').is_file())
+            self.assertTrue((site/'demo/royal-forge-complete.zip').is_file())
             self.assertTrue((site/'demo/pixel-fantasy-icons.zip').is_file())
             self.assertIn('fantasy-rpg-hud-wave1.zip',(site/'ai-guide.html').read_text())
             for doc in (site/'ai').rglob('*.md'):

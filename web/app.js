@@ -3,7 +3,7 @@
 (()=>{
   const $=id=>document.getElementById(id);
   const {VisualAtlasRenderer:Renderer,VisualAtlasSlots:Slots,VisualAtlasTimeline:Timeline,VisualAtlasVisualCore:VisualCore,VisualAtlasInteraction:Interactions,VisualAtlasInputs:Inputs,VisualAtlasCollections:Collections}=window;
-  const assets=new Map(),collections=new Map(),pending=new Map(),loaded=new Map();
+  const legacyAssets=new Map(),collections=new Map(),pending=new Map(),loaded=new Map();
   let entries=[],matches=[],shown=0,current=null,clock=0,playing=true,previous=0;
   let preset=null,chosenState=null,controls={},slotChoices={};
   let activePreview=0,cardObserver,detailRendering=false;
@@ -11,7 +11,10 @@
   const FACETS=['kind','pack','domain','style','subject','status','review','license','animated','experience'];
   const legacyImageCache=new Map();
   const PAGE=24;
-  const renderer=Renderer.create({getAsset:id=>assets.get(id),getImage:imageFor,slots:Slots,timeline:Timeline,visualCore:VisualCore});
+  function contextFor(assets){return {assets,renderer:Renderer.create({getAsset:id=>assets.get(id),getImage:imageFor,slots:Slots,timeline:Timeline,visualCore:VisualCore})};}
+  const legacyContext=contextFor(legacyAssets);
+  const context=pack=>pack==='legacy-icons'?legacyContext:loaded.get(pack);
+  const assetFor=entry=>context(entry.pack)?.assets.get(entry.id);
   const notify=message=>{const box=$('notice');box.textContent=message;box.hidden=false;clearTimeout(notify.timer);notify.timer=setTimeout(()=>box.hidden=true,3200);};
   const human=value=>String(value).replace(/[._-]+/g,' ').replace(/\\b\\w/g,m=>m.toUpperCase());
   function filterValues(){return Object.fromEntries(FACETS.map(id=>[id,$(id).value]));}
@@ -69,17 +72,16 @@
       const resolved=Collections.resolveCollection(index,definitions,pack.name);
       const merged=resolved.pack;
       if(Slots.validate(merged).length)throw Error('Invalid compatibility definitions in '+pack.name);
-      const textureMap=new Map();
+      const textureMap=new Map(),assets=new Map();
       for(const a of merged.assets){
-        if(assets.has(a.id))throw Error('Duplicate public asset '+a.id);
-        assets.set(a.id,{...a,pack:id});
+        assets.set(a.id,{...a,pack:id,...(a.kind==='region'?{texture:id+'::'+a.texture}:{})});
       }
       for(const [key,t] of Object.entries(merged.textures)){
         const member=zip.file(t.path);if(!member)throw Error('Missing source texture: '+t.path);
         textureMap.set(key,{info:t,file:member});
       }
       const manifests=[merged];
-      const cache={zip,textureMap,images:new Map(),manifests};loaded.set(id,cache);return cache;
+      const cache={zip,textureMap,images:new Map(),manifests,...contextFor(assets)};loaded.set(id,cache);return cache;
     })();pending.set(id,loader);try{return await loader;}finally{pending.delete(id);}
   }
   async function imageFor(key){const [packId,textureKey]=key.split('::');
@@ -96,10 +98,9 @@
       try{return await new Promise((res,rej)=>{const img=new Image();img.onload=()=>res(img);img.onerror=()=>rej(Error('Texture decode failed'));img.src=url;});}
       finally{URL.revokeObjectURL(url);}
     })());}return data.images.get(key);}
-  function bindTextures(packId){for(const a of assets.values())if(a.pack===packId&&a.kind==='region'&&!a.texture.includes('::'))a.texture=packId+'::'+a.texture;}
-  async function ready(id){if(id==='legacy-icons')return null;const data=await loadCollection(id);bindTextures(id);return data;}
+  async function ready(id){return id==='legacy-icons'?legacyContext:loadCollection(id);}
   async function paint(canvas,entry,time=0,options={}){
-    await ready(entry.pack);
+    const {assets,renderer}=await ready(entry.pack);
     const asset=assets.get(entry.id);
     const values=Inputs.reconcile(asset,options.controls||{},Slots.resolve(asset,options.preset).inputs);
     const size=renderer.sizeFor(entry.id,new Set(),values),width=Math.max(1,size[0]),height=Math.max(1,size[1]);
@@ -164,7 +165,7 @@
     }
     if(a.kind==='composition'&&a.presets){const lab=document.createElement('label');lab.textContent='Preset';const sel=document.createElement('select');sel.add(new Option('Default',''));for(const name of Object.keys(a.presets))sel.add(new Option(name,name));sel.value=preset||'';sel.onchange=()=>{preset=sel.value||null;controls={};clock=0;controlsFor(a)};lab.append(sel);area.append(lab);}
     if(a.kind==='composition'&&a.slots){const selected=Slots.resolve(a,preset,slotChoices).slots;for(const [slotName,slot] of Object.entries(a.slots)){
-      const lab=document.createElement('label');lab.textContent=slot.label||slotName;const sel=document.createElement('select');for(const id of slot.options)sel.add(new Option(assets.get(id)?.name||id,id));sel.value=selected[slotName];sel.onchange=()=>{slotChoices[slotName]=sel.value};lab.append(sel);area.append(lab);
+      const lab=document.createElement('label');lab.textContent=slot.label||slotName;const sel=document.createElement('select');for(const id of slot.options)sel.add(new Option(context(a.pack)?.assets.get(id)?.name||id,id));sel.value=selected[slotName];sel.onchange=()=>{slotChoices[slotName]=sel.value};lab.append(sel);area.append(lab);
     }}
     const defaultValues=Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs);
     for(const [key,def] of Object.entries(a.inputs||{})){
@@ -206,7 +207,7 @@
   }
   function directPointer(e,drag){
     if(!current)return false;
-    const a=assets.get(current.id);if(!Interactions.canPoint(a))return false;
+    const a=assetFor(current),renderer=context(current.pack)?.renderer;if(!renderer||!Interactions.canPoint(a))return false;
     const canvas=$('detail-canvas'),rect=canvas.getBoundingClientRect();if(!rect.width||!rect.height)return false;
     const geometry=renderer.geometryFor(a.id,new Set(),Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs));
     const point={x:(e.clientX-rect.left)/rect.width*geometry.width+geometry.minX,y:(e.clientY-rect.top)/rect.height*geometry.height+geometry.minY};
@@ -218,7 +219,7 @@
   }
   function relatedAssets(a){
     const panel=$('detail-components'),list=$('detail-related');list.replaceChildren();panel.open=false;
-    const root=assets.get(a.id);
+    const assets=context(a.pack).assets,root=assets.get(a.id);
     const children=root?[...Collections.dependencyClosure([a.id],id=>assets.get(id),Slots.refs)].filter(id=>id!==a.id):[];
     const parents=[...assets.values()].filter(x=>x.pack===a.pack&&Slots.refs(x).includes(a.id)).map(x=>x.id);
     const entryMap=new Map(entries.map(x=>[x.id,x]));
@@ -256,7 +257,7 @@
     $('tint-options').hidden=!a.legacy;$('tint-enabled').checked=false;
     try{
       await ready(a.pack);if(current?.id!==a.id)return;
-      controlsFor(assets.get(a.id));relatedAssets(a);$('detail-canvas').dataset.interactive=String(Interactions.canPoint(assets.get(a.id)));if(!$('detail').open)$('detail').showModal();activePreview++;
+      controlsFor(assetFor(a));relatedAssets(a);$('detail-canvas').dataset.interactive=String(Interactions.canPoint(assetFor(a)));if(!$('detail').open)$('detail').showModal();activePreview++;
       const url=new URL(location.href);url.searchParams.set('asset',a.id);
       history.replaceState(null,'',url);
     }catch(e){notify('Preview failed: '+e.message);}
@@ -264,7 +265,7 @@
   async function downloadAsset(){if(!current)return;
     if(current.legacy){
       // One icon, one real cropped texture; no unrelated sheet cells in the ZIP.
-      const asset=assets.get(current.id),src=await imageFor(asset.texture);
+      const asset=assetFor(current),src=await imageFor(asset.texture);
       const [x,y,w,h]=asset.rect_px,c=document.createElement('canvas');c.width=w;c.height=h;
       c.getContext('2d').drawImage(src,x,y,w,h,0,0,w,h);
       const png=await new Promise((resolve,reject)=>c.toBlob(b=>b?resolve(b):reject(Error('PNG encoding failed')),'image/png'));
@@ -275,7 +276,7 @@
       save(await zip.generateAsync({type:'blob',compression:'DEFLATE'}),current.id+'.zip');return;
     }
     const {id:rootId,pack}=current;
-    const data=await ready(pack);
+    const data=await ready(pack),assets=data.assets;
     const closure=Collections.dependencyClosure([rootId],id=>assets.get(id),Slots.refs);
     const main=data.manifests[0],zip=new JSZip();
     await Collections.writeSelection(zip,{
@@ -304,7 +305,7 @@
       };
       download.href=pack.zip;download.download='';download.textContent='Download ZIP';group.append(browse,download);$('pack-links').append(group);
     }
-    for(const a of entries.filter(a=>a.legacy))assets.set(a.id,{...a,texture:'legacy-icons::'+a.texture});
+    for(const a of entries.filter(a=>a.legacy))legacyAssets.set(a.id,{...a,texture:'legacy-icons::'+a.texture});
     $('count').title=`${index.discoverable_count??index.approved_count} standalone listings; ${index.approved_count||0} addressable published assets; ${index.legacy_count||0} legacy icons`;
 
     cardObserver=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){cardObserver.unobserve(e.target);const a=entries.find(x=>x.id===e.target.dataset.assetId);if(a)paint(e.target.querySelector('canvas'),a,0,{card:true}).catch(()=>{e.target.querySelector('.art').textContent='Preview unavailable'});}}, {rootMargin:'260px'});
