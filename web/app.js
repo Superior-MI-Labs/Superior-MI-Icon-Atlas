@@ -114,13 +114,13 @@
     }
   }
   function update(){
-    const query=$('search').value,params={...filterValues(),query,synonyms,sort:$('sort').value};
+    const query=$('search').value,params={...filterValues(),query,synonyms,scope:$('scope').value,sort:$('sort').value};
     refreshFacets(params);activeChips();
     matches=VisualAtlasSearch.results(entries,params);shown=0;$('gallery').replaceChildren();
     $('count').textContent=matches.length.toLocaleString()+' matches';
-    const refining=Boolean(query.trim()||FACETS.some(key=>params[key]));
+    const refining=Boolean(query.trim()||params.scope||FACETS.some(key=>params[key]));
     $('browse-title').textContent=query?'Search results':refining?'Filtered assets':'Explore assets';
-    $('browse-subtitle').textContent=refining?'Results are ranked by matching names, synonyms and manifest metadata.':'Finished compositions first. Explore icon collections and styles with filters.';
+    $('browse-subtitle').textContent=refining?'Results are ranked by matching names, synonyms and manifest metadata.':'Finished compositions and standalone art. Switch Browse to inspect reusable components.';
     if(!matches.length){$('gallery').textContent='No matching assets. Remove a filter or try another keyword.';$('more').hidden=true;return;}
     more();
   }
@@ -131,7 +131,7 @@
     const canvas=document.createElement('canvas');canvas.width=190;canvas.height=108;canvas.setAttribute('aria-hidden','true');art.append(canvas);
     const body=document.createElement('div');body.className='tile-details';
     const kind=document.createElement('span');kind.className='chip';
-    kind.textContent=demos.length?'Interactive demo':a.legacy?'Legacy · Review':a.kind==='composition'?'Ready-to-use':a.kind==='state_set'?'State variants':a.kind;
+    kind.textContent=demos.length?'Interactive demo':a.legacy?'Legacy · Review':a.discovery==='component'?'Component':a.kind==='composition'?'Ready-to-use':a.kind==='state_set'?'State variants':a.kind;
     const name=document.createElement('strong');name.textContent=a.name;
     const meta=document.createElement('div');meta.className='tile-meta';
     const label=document.createElement('span');label.textContent=demos.length?'Playable preview':a.style||'Visual asset';
@@ -216,6 +216,22 @@
     if(result.events.length)notify(result.events.map(item=>item.name).join(', '));
     return true;
   }
+  function relatedAssets(a){
+    const panel=$('detail-components'),list=$('detail-related');list.replaceChildren();panel.open=false;
+    const root=assets.get(a.id);
+    const children=root?[...Collections.dependencyClosure([a.id],id=>assets.get(id),Slots.refs)].filter(id=>id!==a.id):[];
+    const parents=[...assets.values()].filter(x=>x.pack===a.pack&&Slots.refs(x).includes(a.id)).map(x=>x.id);
+    const entryMap=new Map(entries.map(x=>[x.id,x]));
+    for(const [label,ids] of [['Uses',children],['Used by',parents]]){
+      if(!ids.length)continue;
+      const title=document.createElement('strong');title.textContent=label+' ('+ids.length+')';list.append(title);
+      for(const id of ids){const entry=entryMap.get(id);if(!entry)continue;
+        const link=document.createElement('button');link.type='button';link.textContent=entry.name;
+        link.title=id;link.onclick=()=>openDetail(entry);list.append(link);
+      }
+    }
+    panel.hidden=!list.children.length;
+  }
   async function openDetail(a){current=a;clock=0;playing=true;preset=null;chosenState=null;controls={};slotChoices={};
     $('detail-title').textContent=a.name;$('detail-type').textContent=a.kind.replace('_',' ').toUpperCase();$('detail-id').textContent=a.id;
     $('detail-pack').textContent=collections.get(a.pack)?.name||a.pack;
@@ -240,7 +256,7 @@
     $('tint-options').hidden=!a.legacy;$('tint-enabled').checked=false;
     try{
       await ready(a.pack);if(current?.id!==a.id)return;
-      controlsFor(assets.get(a.id));$('detail-canvas').dataset.interactive=String(Interactions.canPoint(assets.get(a.id)));$('detail').showModal();activePreview++;
+      controlsFor(assets.get(a.id));relatedAssets(a);$('detail-canvas').dataset.interactive=String(Interactions.canPoint(assets.get(a.id)));if(!$('detail').open)$('detail').showModal();activePreview++;
       const url=new URL(location.href);url.searchParams.set('asset',a.id);
       history.replaceState(null,'',url);
     }catch(e){notify('Preview failed: '+e.message);}
@@ -267,7 +283,7 @@
     }}
     const textures=Object.fromEntries([...required].map(key=>[key,main.textures[key]]));
     for(const key of required){const t=data.textureMap.get(key);if(!t)throw Error('Missing texture '+key);zip.file(t.info.path,await t.file.async('blob'));}
-    zip.file('manifest.json',JSON.stringify({schema:'smi-visual-pack/1',pack_id:main.pack_id+'.selection',version:main.version,description:'Portable asset: '+current.id,license:main.license,interfaces:defs,textures,assets:chosen},null,2)+'\n');
+    zip.file('manifest.json',JSON.stringify({schema:'smi-visual-pack/1',pack_id:main.pack_id+'.selection',version:main.version,description:'Portable asset: '+current.id,license:main.license,interfaces:defs,textures,assets:chosen,...(main.preview_profiles?.some(p=>closure.has(p.asset))?{preview_profiles:main.preview_profiles.filter(p=>closure.has(p.asset))}:{}),...(main.stat_profiles?.some(p=>closure.has(p.asset))?{stat_profiles:main.stat_profiles.filter(p=>closure.has(p.asset))}:{})},null,2)+'\n');
     zip.file('SOURCE-NOTICES.txt',`Original asset: ${current.id}\nSource: ${collections.get(current.pack).name}\nLicense: ${main.license}\nPreserve source rights and notices.\n`);
     const out=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:6}});
     save(out,current.id+'.zip');
@@ -281,8 +297,16 @@
     const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Public catalog unavailable');const index=await response.json();if(index.schema!=='smi-public-catalog/1')throw Error('Unsupported public catalog');
     entries=index.assets;if(!Array.isArray(entries)||!entries.length)throw Error('No assets in catalog');for(const pack of index.packs)collections.set(pack.id,pack);
     synonyms=index.synonyms||{};styleLabels=index.styles||{};
+    for(const pack of index.packs.filter(p=>p.zip)){
+      const group=document.createElement('div'),browse=document.createElement('button'),download=document.createElement('a');
+      browse.type='button';browse.textContent=pack.name; browse.onclick=()=>{
+        $('search').value='';$('scope').value='';for(const key of FACETS)$(key).value='';
+        update();$('pack').value=pack.id;update();$('pack-directory').open=false;
+      };
+      download.href=pack.zip;download.download='';download.textContent='Download ZIP';group.append(browse,download);$('pack-links').append(group);
+    }
     for(const a of entries.filter(a=>a.legacy))assets.set(a.id,{...a,texture:'legacy-icons::'+a.texture});
-    $('count').title=`${index.approved_count||0} approved assets and ${index.legacy_count||0} legacy icons`;
+    $('count').title=`${index.discoverable_count??index.approved_count} standalone listings; ${index.approved_count||0} addressable published assets; ${index.legacy_count||0} legacy icons`;
 
     cardObserver=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){cardObserver.unobserve(e.target);const a=entries.find(x=>x.id===e.target.dataset.assetId);if(a)paint(e.target.querySelector('canvas'),a,0,{card:true}).catch(()=>{e.target.querySelector('.art').textContent='Preview unavailable'});}}, {rootMargin:'260px'});
     update();
@@ -294,8 +318,8 @@
   previewCanvas.addEventListener('pointerdown',e=>{try{if(directPointer(e,false)){e.preventDefault();detailPointer=e.pointerId;previewCanvas.setPointerCapture(e.pointerId);}}catch(err){notify(err.message)}});
   previewCanvas.addEventListener('pointermove',e=>{if(detailPointer!==e.pointerId)return;try{directPointer(e,true)}catch(err){notify(err.message)}});
   for(const event of ['pointerup','pointercancel','lostpointercapture'])previewCanvas.addEventListener(event,e=>{if(detailPointer===e.pointerId)detailPointer=null;});
-  $('more').onclick=more;for(const id of ['search','sort',...FACETS])$(id).addEventListener('input',update);
-  $('clear-filters').onclick=()=>{$('search').value='';for(const id of FACETS)$(id).value='';update()};
+  $('more').onclick=more;for(const id of ['search','sort','scope',...FACETS])$(id).addEventListener('input',update);
+  $('clear-filters').onclick=()=>{$('search').value='';$('scope').value='';for(const id of FACETS)$(id).value='';update()};
   $('copy-id').onclick=()=>{if(current)navigator.clipboard.writeText(current.id).then(()=>notify('Asset ID copied')).catch(()=>notify('Clipboard unavailable'))};
   $('copy-link').onclick=()=>{if(current){const url=new URL(location.href);url.searchParams.set('asset',current.id);navigator.clipboard.writeText(url.href).then(()=>notify('Asset link copied')).catch(()=>notify('Clipboard unavailable'))}};
   $('close').onclick=()=>$('detail').close();$('detail').addEventListener('close',()=>{

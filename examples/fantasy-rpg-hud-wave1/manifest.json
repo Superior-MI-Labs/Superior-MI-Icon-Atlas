@@ -40,6 +40,7 @@
   "assets": [
     {
       "id": "smi.ui.fantasy01.meter.standard.shell",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Standard Shell",
       "texture": "atlas0",
@@ -68,6 +69,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.standard.recess",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Standard Recess",
       "texture": "atlas0",
@@ -96,6 +98,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.standard.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Standard Rim",
       "texture": "atlas0",
@@ -292,6 +295,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.fill.health",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Fill Health",
       "texture": "atlas0",
@@ -323,6 +327,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.fill.mana",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Fill Mana",
       "texture": "atlas0",
@@ -354,6 +359,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.fill.stamina",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Fill Stamina",
       "texture": "atlas0",
@@ -385,6 +391,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.fill.xp",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Fill Xp",
       "texture": "atlas0",
@@ -416,6 +423,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.fill.shield",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Fill Shield",
       "texture": "atlas0",
@@ -447,6 +455,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.overlay.damage",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Overlay Damage",
       "texture": "atlas0",
@@ -475,6 +484,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.overlay.healing",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Overlay Healing",
       "texture": "atlas0",
@@ -559,6 +569,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.badge.hp",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Badge Hp",
       "texture": "atlas0",
@@ -587,6 +598,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.badge.mp",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Badge Mp",
       "texture": "atlas0",
@@ -615,6 +627,7 @@
     },
     {
       "id": "smi.ui.fantasy01.meter.badge.stamina",
+      "discovery": "component",
       "kind": "region",
       "name": "Meter Badge Stamina",
       "texture": "atlas0",
@@ -643,6 +656,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.track",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Gem Track",
       "texture": "atlas0",
@@ -671,6 +685,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.fill",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Gem Fill",
       "texture": "atlas0",
@@ -699,6 +714,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.thumb.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Gem Thumb Default",
       "texture": "atlas0",
@@ -727,6 +743,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.thumb.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Gem Thumb Hover",
       "texture": "atlas0",
@@ -755,6 +772,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.thumb.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Gem Thumb Pressed",
       "texture": "atlas0",
@@ -783,6 +801,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.thumb.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Gem Thumb Disabled",
       "texture": "atlas0",
@@ -811,6 +830,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.focus",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Gem Focus",
       "texture": "atlas0",
@@ -839,6 +859,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.gem.ticks",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Gem Ticks",
       "texture": "atlas0",
@@ -867,6 +888,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.track",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Engraved Track",
       "texture": "atlas0",
@@ -895,6 +917,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.fill",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Engraved Fill",
       "texture": "atlas0",
@@ -923,6 +946,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.thumb.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Engraved Thumb Default",
       "texture": "atlas0",
@@ -951,6 +975,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.thumb.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Engraved Thumb Hover",
       "texture": "atlas0",
@@ -979,6 +1004,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.thumb.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Engraved Thumb Pressed",
       "texture": "atlas0",
@@ -1007,6 +1033,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.thumb.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Engraved Thumb Disabled",
       "texture": "atlas0",
@@ -1035,6 +1062,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.focus",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Engraved Focus",
       "texture": "atlas0",
@@ -1063,6 +1091,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.engraved.ticks",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Engraved Ticks",
       "texture": "atlas0",
@@ -1091,6 +1120,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.track",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Slim Track",
       "texture": "atlas0",
@@ -1119,6 +1149,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.fill",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Slim Fill",
       "texture": "atlas0",
@@ -1147,6 +1178,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.thumb.default",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Slim Thumb Default",
       "texture": "atlas0",
@@ -1175,6 +1207,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.thumb.hover",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Slim Thumb Hover",
       "texture": "atlas0",
@@ -1203,6 +1236,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.thumb.pressed",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Slim Thumb Pressed",
       "texture": "atlas0",
@@ -1231,6 +1265,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.thumb.disabled",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Slim Thumb Disabled",
       "texture": "atlas0",
@@ -1259,6 +1294,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.focus",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Slim Focus",
       "texture": "atlas0",
@@ -1287,6 +1323,7 @@
     },
     {
       "id": "smi.ui.fantasy01.slider.slim.ticks",
+      "discovery": "component",
       "kind": "region",
       "name": "Slider Slim Ticks",
       "texture": "atlas0",
@@ -1315,6 +1352,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.ruby.frame.empty",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Ruby Frame Empty",
       "texture": "atlas0",
@@ -1343,6 +1381,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.ruby.fill.red",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Ruby Fill Red",
       "texture": "atlas0",
@@ -1374,6 +1413,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.ruby.fill.golden",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Ruby Fill Golden",
       "texture": "atlas0",
@@ -1405,6 +1445,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.ruby.fill.poisoned",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Ruby Fill Poisoned",
       "texture": "atlas0",
@@ -1436,6 +1477,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.ruby.overlay.damage",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Ruby Overlay Damage",
       "texture": "atlas0",
@@ -1464,6 +1506,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.ruby.overlay.low-health",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Ruby Overlay Low Health",
       "texture": "atlas0",
@@ -1492,6 +1535,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.gold.frame.empty",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Gold Frame Empty",
       "texture": "atlas0",
@@ -1520,6 +1564,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.gold.fill.red",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Gold Fill Red",
       "texture": "atlas0",
@@ -1551,6 +1596,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.gold.fill.golden",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Gold Fill Golden",
       "texture": "atlas0",
@@ -1582,6 +1628,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.gold.fill.poisoned",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Gold Fill Poisoned",
       "texture": "atlas0",
@@ -1613,6 +1660,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.gold.overlay.damage",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Gold Overlay Damage",
       "texture": "atlas0",
@@ -1641,6 +1689,7 @@
     },
     {
       "id": "smi.ui.fantasy01.heart.gold.overlay.low-health",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Gold Overlay Low Health",
       "texture": "atlas0",

@@ -22,7 +22,7 @@ class QuietHandler(SimpleHTTPRequestHandler):
 
 
 def published_matches():
-    return f"{json.loads((SITE/'public-catalog.json').read_text())['approved_count']:,} matches"
+    return f"{json.loads((SITE/'public-catalog.json').read_text())['discoverable_count']:,} matches"
 
 
 def check(page):
@@ -44,6 +44,10 @@ def check(page):
     expect(page.locator("#count")).to_have_text("734 matches")
     page.locator("#clear-filters").click()
 
+    page.locator("#scope").select_option("components")
+    expect(page.locator("#count")).to_have_text("363 matches")
+    page.locator("#clear-filters").click()
+    expect(page.locator("#count")).to_have_text(published_matches())
     page.locator("#search").fill("healthbar")
     page.locator("#gallery .asset-tile").first.wait_for(timeout=10000)
     assert "Health Meter" in page.locator("#gallery").inner_text(), "Synonym search failed"

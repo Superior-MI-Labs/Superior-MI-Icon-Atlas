@@ -17,6 +17,7 @@
   "assets": [
     {
       "id": "smi.hud.royalforge02.bar.royal.base",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Royal Base",
       "style": "royal-forge-dark-gold",
@@ -46,6 +47,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.royal.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Royal Rim",
       "style": "royal-forge-dark-gold",
@@ -75,6 +77,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.runic.base",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Runic Base",
       "style": "royal-forge-dark-gold",
@@ -104,6 +107,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.runic.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Runic Rim",
       "style": "royal-forge-dark-gold",
@@ -133,6 +137,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.iron.base",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Iron Base",
       "style": "royal-forge-dark-gold",
@@ -162,6 +167,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.iron.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Iron Rim",
       "style": "royal-forge-dark-gold",
@@ -191,6 +197,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.verdant.base",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Verdant Base",
       "style": "royal-forge-dark-gold",
@@ -220,6 +227,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.verdant.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Verdant Rim",
       "style": "royal-forge-dark-gold",
@@ -249,6 +257,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.arcane.base",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Arcane Base",
       "style": "royal-forge-dark-gold",
@@ -278,6 +287,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.arcane.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Arcane Rim",
       "style": "royal-forge-dark-gold",
@@ -307,6 +317,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.health",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Fill Health",
       "style": "royal-forge-dark-gold",
@@ -334,6 +345,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.mana",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Fill Mana",
       "style": "royal-forge-dark-gold",
@@ -361,6 +373,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.stamina",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Fill Stamina",
       "style": "royal-forge-dark-gold",
@@ -388,6 +401,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.shield",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Fill Shield",
       "style": "royal-forge-dark-gold",
@@ -415,6 +429,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.experience",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Fill Experience",
       "style": "royal-forge-dark-gold",
@@ -442,6 +457,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.rage",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Fill Rage",
       "style": "royal-forge-dark-gold",
@@ -469,6 +485,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.oxygen",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Fill Oxygen",
       "style": "royal-forge-dark-gold",
@@ -496,6 +513,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.focus",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Fill Focus",
       "style": "royal-forge-dark-gold",
@@ -523,6 +541,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.heat",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Fill Heat",
       "style": "royal-forge-dark-gold",
@@ -550,6 +569,7 @@
     },
     {
       "id": "smi.hud.royalforge02.bar.fill.corruption",
+      "discovery": "component",
       "kind": "region",
       "name": "Bar Fill Corruption",
       "style": "royal-forge-dark-gold",
@@ -577,6 +597,7 @@
     },
     {
       "id": "smi.hud.royalforge02.emblem.health",
+      "discovery": "component",
       "kind": "region",
       "name": "Emblem Health",
       "style": "royal-forge-dark-gold",
@@ -604,6 +625,7 @@
     },
     {
       "id": "smi.hud.royalforge02.emblem.mana",
+      "discovery": "component",
       "kind": "region",
       "name": "Emblem Mana",
       "style": "royal-forge-dark-gold",
@@ -631,6 +653,7 @@
     },
     {
       "id": "smi.hud.royalforge02.emblem.stamina",
+      "discovery": "component",
       "kind": "region",
       "name": "Emblem Stamina",
       "style": "royal-forge-dark-gold",
@@ -658,6 +681,7 @@
     },
     {
       "id": "smi.hud.royalforge02.emblem.shield",
+      "discovery": "component",
       "kind": "region",
       "name": "Emblem Shield",
       "style": "royal-forge-dark-gold",
@@ -685,6 +709,7 @@
     },
     {
       "id": "smi.hud.royalforge02.emblem.experience",
+      "discovery": "component",
       "kind": "region",
       "name": "Emblem Experience",
       "style": "royal-forge-dark-gold",
@@ -712,6 +737,7 @@
     },
     {
       "id": "smi.hud.royalforge02.emblem.rage",
+      "discovery": "component",
       "kind": "region",
       "name": "Emblem Rage",
       "style": "royal-forge-dark-gold",
@@ -739,6 +765,7 @@
     },
     {
       "id": "smi.hud.royalforge02.emblem.oxygen",
+      "discovery": "component",
       "kind": "region",
       "name": "Emblem Oxygen",
       "style": "royal-forge-dark-gold",
@@ -766,6 +793,7 @@
     },
     {
       "id": "smi.hud.royalforge02.emblem.focus",
+      "discovery": "component",
       "kind": "region",
       "name": "Emblem Focus",
       "style": "royal-forge-dark-gold",
@@ -793,6 +821,7 @@
     },
     {
       "id": "smi.hud.royalforge02.emblem.heat",
+      "discovery": "component",
       "kind": "region",
       "name": "Emblem Heat",
       "style": "royal-forge-dark-gold",
@@ -820,6 +849,7 @@
     },
     {
       "id": "smi.hud.royalforge02.emblem.corruption",
+      "discovery": "component",
       "kind": "region",
       "name": "Emblem Corruption",
       "style": "royal-forge-dark-gold",
@@ -5547,6 +5577,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.ruby.q0",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Ruby Q0",
       "style": "royal-forge-dark-gold",
@@ -5577,6 +5608,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.ruby.q1",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Ruby Q1",
       "style": "royal-forge-dark-gold",
@@ -5607,6 +5639,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.ruby.q2",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Ruby Q2",
       "style": "royal-forge-dark-gold",
@@ -5637,6 +5670,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.ruby.q3",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Ruby Q3",
       "style": "royal-forge-dark-gold",
@@ -5667,6 +5701,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.ruby.q4",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Ruby Q4",
       "style": "royal-forge-dark-gold",
@@ -5725,6 +5760,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.crystal.q0",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Crystal Q0",
       "style": "royal-forge-dark-gold",
@@ -5755,6 +5791,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.crystal.q1",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Crystal Q1",
       "style": "royal-forge-dark-gold",
@@ -5785,6 +5822,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.crystal.q2",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Crystal Q2",
       "style": "royal-forge-dark-gold",
@@ -5815,6 +5853,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.crystal.q3",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Crystal Q3",
       "style": "royal-forge-dark-gold",
@@ -5845,6 +5884,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.crystal.q4",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Crystal Q4",
       "style": "royal-forge-dark-gold",
@@ -5903,6 +5943,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.amber.q0",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Amber Q0",
       "style": "royal-forge-dark-gold",
@@ -5933,6 +5974,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.amber.q1",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Amber Q1",
       "style": "royal-forge-dark-gold",
@@ -5963,6 +6005,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.amber.q2",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Amber Q2",
       "style": "royal-forge-dark-gold",
@@ -5993,6 +6036,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.amber.q3",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Amber Q3",
       "style": "royal-forge-dark-gold",
@@ -6023,6 +6067,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.amber.q4",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Amber Q4",
       "style": "royal-forge-dark-gold",
@@ -6081,6 +6126,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.soul.q0",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Soul Q0",
       "style": "royal-forge-dark-gold",
@@ -6111,6 +6157,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.soul.q1",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Soul Q1",
       "style": "royal-forge-dark-gold",
@@ -6141,6 +6188,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.soul.q2",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Soul Q2",
       "style": "royal-forge-dark-gold",
@@ -6171,6 +6219,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.soul.q3",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Soul Q3",
       "style": "royal-forge-dark-gold",
@@ -6201,6 +6250,7 @@
     },
     {
       "id": "smi.hud.royalforge02.heart.soul.q4",
+      "discovery": "component",
       "kind": "region",
       "name": "Heart Soul Q4",
       "style": "royal-forge-dark-gold",
@@ -8737,6 +8787,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.ruby-gem.empty",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Ruby Gem Empty",
       "style": "royal-forge-dark-gold",
@@ -8764,6 +8815,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.ruby-gem.full",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Ruby Gem Full",
       "style": "royal-forge-dark-gold",
@@ -9451,6 +9503,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.mana-gem.empty",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Mana Gem Empty",
       "style": "royal-forge-dark-gold",
@@ -9478,6 +9531,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.mana-gem.full",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Mana Gem Full",
       "style": "royal-forge-dark-gold",
@@ -10165,6 +10219,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.shield-plate.empty",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Shield Plate Empty",
       "style": "royal-forge-dark-gold",
@@ -10192,6 +10247,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.shield-plate.full",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Shield Plate Full",
       "style": "royal-forge-dark-gold",
@@ -10879,6 +10935,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.stamina-leaf.empty",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Stamina Leaf Empty",
       "style": "royal-forge-dark-gold",
@@ -10906,6 +10963,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.stamina-leaf.full",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Stamina Leaf Full",
       "style": "royal-forge-dark-gold",
@@ -11593,6 +11651,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.arcane-rune.empty",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Arcane Rune Empty",
       "style": "royal-forge-dark-gold",
@@ -11620,6 +11679,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.arcane-rune.full",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Arcane Rune Full",
       "style": "royal-forge-dark-gold",
@@ -12307,6 +12367,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.rage-ember.empty",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Rage Ember Empty",
       "style": "royal-forge-dark-gold",
@@ -12334,6 +12395,7 @@
     },
     {
       "id": "smi.hud.royalforge02.pip.rage-ember.full",
+      "discovery": "component",
       "kind": "region",
       "name": "Pip Rage Ember Full",
       "style": "royal-forge-dark-gold",
@@ -13021,6 +13083,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.health.backplate",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Health Backplate",
       "style": "royal-forge-dark-gold",
@@ -13048,6 +13111,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.health.fluid",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Health Fluid",
       "style": "royal-forge-dark-gold",
@@ -13075,6 +13139,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.health.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Health Rim",
       "style": "royal-forge-dark-gold",
@@ -13187,6 +13252,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.mana.backplate",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Mana Backplate",
       "style": "royal-forge-dark-gold",
@@ -13214,6 +13280,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.mana.fluid",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Mana Fluid",
       "style": "royal-forge-dark-gold",
@@ -13241,6 +13308,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.mana.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Mana Rim",
       "style": "royal-forge-dark-gold",
@@ -13353,6 +13421,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.stamina.backplate",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Stamina Backplate",
       "style": "royal-forge-dark-gold",
@@ -13380,6 +13449,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.stamina.fluid",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Stamina Fluid",
       "style": "royal-forge-dark-gold",
@@ -13407,6 +13477,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.stamina.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Stamina Rim",
       "style": "royal-forge-dark-gold",
@@ -13519,6 +13590,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.shield.backplate",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Shield Backplate",
       "style": "royal-forge-dark-gold",
@@ -13546,6 +13618,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.shield.fluid",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Shield Fluid",
       "style": "royal-forge-dark-gold",
@@ -13573,6 +13646,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.shield.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Shield Rim",
       "style": "royal-forge-dark-gold",
@@ -13685,6 +13759,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.experience.backplate",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Experience Backplate",
       "style": "royal-forge-dark-gold",
@@ -13712,6 +13787,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.experience.fluid",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Experience Fluid",
       "style": "royal-forge-dark-gold",
@@ -13739,6 +13815,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.experience.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Experience Rim",
       "style": "royal-forge-dark-gold",
@@ -13851,6 +13928,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.corruption.backplate",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Corruption Backplate",
       "style": "royal-forge-dark-gold",
@@ -13878,6 +13956,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.corruption.fluid",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Corruption Fluid",
       "style": "royal-forge-dark-gold",
@@ -13905,6 +13984,7 @@
     },
     {
       "id": "smi.hud.royalforge02.orb.corruption.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Orb Corruption Rim",
       "style": "royal-forge-dark-gold",
@@ -14017,6 +14097,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.health.backplate",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Health Backplate",
       "style": "royal-forge-dark-gold",
@@ -14045,6 +14126,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.health.fluid",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Health Fluid",
       "style": "royal-forge-dark-gold",
@@ -14073,6 +14155,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.health.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Health Rim",
       "style": "royal-forge-dark-gold",
@@ -14185,6 +14268,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.mana.backplate",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Mana Backplate",
       "style": "royal-forge-dark-gold",
@@ -14213,6 +14297,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.mana.fluid",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Mana Fluid",
       "style": "royal-forge-dark-gold",
@@ -14241,6 +14326,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.mana.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Mana Rim",
       "style": "royal-forge-dark-gold",
@@ -14353,6 +14439,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.stamina.backplate",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Stamina Backplate",
       "style": "royal-forge-dark-gold",
@@ -14381,6 +14468,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.stamina.fluid",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Stamina Fluid",
       "style": "royal-forge-dark-gold",
@@ -14409,6 +14497,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.stamina.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Stamina Rim",
       "style": "royal-forge-dark-gold",
@@ -14521,6 +14610,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.experience.backplate",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Experience Backplate",
       "style": "royal-forge-dark-gold",
@@ -14549,6 +14639,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.experience.fluid",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Experience Fluid",
       "style": "royal-forge-dark-gold",
@@ -14577,6 +14668,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.experience.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Experience Rim",
       "style": "royal-forge-dark-gold",
@@ -14689,6 +14781,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.corruption.backplate",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Corruption Backplate",
       "style": "royal-forge-dark-gold",
@@ -14717,6 +14810,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.corruption.fluid",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Corruption Fluid",
       "style": "royal-forge-dark-gold",
@@ -14745,6 +14839,7 @@
     },
     {
       "id": "smi.hud.royalforge02.vial.corruption.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Vial Corruption Rim",
       "style": "royal-forge-dark-gold",
@@ -14857,6 +14952,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.health.pct000",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Health Pct000",
       "style": "royal-forge-dark-gold",
@@ -14886,6 +14982,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.health.pct010",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Health Pct010",
       "style": "royal-forge-dark-gold",
@@ -14915,6 +15012,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.health.pct020",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Health Pct020",
       "style": "royal-forge-dark-gold",
@@ -14944,6 +15042,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.health.pct030",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Health Pct030",
       "style": "royal-forge-dark-gold",
@@ -14973,6 +15072,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.health.pct040",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Health Pct040",
       "style": "royal-forge-dark-gold",
@@ -15002,6 +15102,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.health.pct050",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Health Pct050",
       "style": "royal-forge-dark-gold",
@@ -15031,6 +15132,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.health.pct060",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Health Pct060",
       "style": "royal-forge-dark-gold",
@@ -15060,6 +15162,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.health.pct070",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Health Pct070",
       "style": "royal-forge-dark-gold",
@@ -15089,6 +15192,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.health.pct080",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Health Pct080",
       "style": "royal-forge-dark-gold",
@@ -15118,6 +15222,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.health.pct090",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Health Pct090",
       "style": "royal-forge-dark-gold",
@@ -15147,6 +15252,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.health.pct100",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Health Pct100",
       "style": "royal-forge-dark-gold",
@@ -15210,6 +15316,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.mana.pct000",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Mana Pct000",
       "style": "royal-forge-dark-gold",
@@ -15239,6 +15346,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.mana.pct010",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Mana Pct010",
       "style": "royal-forge-dark-gold",
@@ -15268,6 +15376,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.mana.pct020",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Mana Pct020",
       "style": "royal-forge-dark-gold",
@@ -15297,6 +15406,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.mana.pct030",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Mana Pct030",
       "style": "royal-forge-dark-gold",
@@ -15326,6 +15436,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.mana.pct040",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Mana Pct040",
       "style": "royal-forge-dark-gold",
@@ -15355,6 +15466,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.mana.pct050",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Mana Pct050",
       "style": "royal-forge-dark-gold",
@@ -15384,6 +15496,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.mana.pct060",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Mana Pct060",
       "style": "royal-forge-dark-gold",
@@ -15413,6 +15526,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.mana.pct070",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Mana Pct070",
       "style": "royal-forge-dark-gold",
@@ -15442,6 +15556,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.mana.pct080",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Mana Pct080",
       "style": "royal-forge-dark-gold",
@@ -15471,6 +15586,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.mana.pct090",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Mana Pct090",
       "style": "royal-forge-dark-gold",
@@ -15500,6 +15616,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.mana.pct100",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Mana Pct100",
       "style": "royal-forge-dark-gold",
@@ -15563,6 +15680,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.stamina.pct000",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Stamina Pct000",
       "style": "royal-forge-dark-gold",
@@ -15592,6 +15710,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.stamina.pct010",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Stamina Pct010",
       "style": "royal-forge-dark-gold",
@@ -15621,6 +15740,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.stamina.pct020",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Stamina Pct020",
       "style": "royal-forge-dark-gold",
@@ -15650,6 +15770,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.stamina.pct030",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Stamina Pct030",
       "style": "royal-forge-dark-gold",
@@ -15679,6 +15800,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.stamina.pct040",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Stamina Pct040",
       "style": "royal-forge-dark-gold",
@@ -15708,6 +15830,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.stamina.pct050",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Stamina Pct050",
       "style": "royal-forge-dark-gold",
@@ -15737,6 +15860,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.stamina.pct060",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Stamina Pct060",
       "style": "royal-forge-dark-gold",
@@ -15766,6 +15890,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.stamina.pct070",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Stamina Pct070",
       "style": "royal-forge-dark-gold",
@@ -15795,6 +15920,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.stamina.pct080",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Stamina Pct080",
       "style": "royal-forge-dark-gold",
@@ -15824,6 +15950,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.stamina.pct090",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Stamina Pct090",
       "style": "royal-forge-dark-gold",
@@ -15853,6 +15980,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.stamina.pct100",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Stamina Pct100",
       "style": "royal-forge-dark-gold",
@@ -15916,6 +16044,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.shield.pct000",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Shield Pct000",
       "style": "royal-forge-dark-gold",
@@ -15945,6 +16074,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.shield.pct010",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Shield Pct010",
       "style": "royal-forge-dark-gold",
@@ -15974,6 +16104,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.shield.pct020",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Shield Pct020",
       "style": "royal-forge-dark-gold",
@@ -16003,6 +16134,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.shield.pct030",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Shield Pct030",
       "style": "royal-forge-dark-gold",
@@ -16032,6 +16164,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.shield.pct040",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Shield Pct040",
       "style": "royal-forge-dark-gold",
@@ -16061,6 +16194,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.shield.pct050",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Shield Pct050",
       "style": "royal-forge-dark-gold",
@@ -16090,6 +16224,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.shield.pct060",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Shield Pct060",
       "style": "royal-forge-dark-gold",
@@ -16119,6 +16254,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.shield.pct070",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Shield Pct070",
       "style": "royal-forge-dark-gold",
@@ -16148,6 +16284,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.shield.pct080",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Shield Pct080",
       "style": "royal-forge-dark-gold",
@@ -16177,6 +16314,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.shield.pct090",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Shield Pct090",
       "style": "royal-forge-dark-gold",
@@ -16206,6 +16344,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.shield.pct100",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Shield Pct100",
       "style": "royal-forge-dark-gold",
@@ -16269,6 +16408,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.experience.pct000",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Experience Pct000",
       "style": "royal-forge-dark-gold",
@@ -16298,6 +16438,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.experience.pct010",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Experience Pct010",
       "style": "royal-forge-dark-gold",
@@ -16327,6 +16468,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.experience.pct020",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Experience Pct020",
       "style": "royal-forge-dark-gold",
@@ -16356,6 +16498,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.experience.pct030",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Experience Pct030",
       "style": "royal-forge-dark-gold",
@@ -16385,6 +16528,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.experience.pct040",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Experience Pct040",
       "style": "royal-forge-dark-gold",
@@ -16414,6 +16558,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.experience.pct050",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Experience Pct050",
       "style": "royal-forge-dark-gold",
@@ -16443,6 +16588,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.experience.pct060",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Experience Pct060",
       "style": "royal-forge-dark-gold",
@@ -16472,6 +16618,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.experience.pct070",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Experience Pct070",
       "style": "royal-forge-dark-gold",
@@ -16501,6 +16648,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.experience.pct080",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Experience Pct080",
       "style": "royal-forge-dark-gold",
@@ -16530,6 +16678,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.experience.pct090",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Experience Pct090",
       "style": "royal-forge-dark-gold",
@@ -16559,6 +16708,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.experience.pct100",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Experience Pct100",
       "style": "royal-forge-dark-gold",
@@ -16622,6 +16772,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.heat.pct000",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Heat Pct000",
       "style": "royal-forge-dark-gold",
@@ -16651,6 +16802,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.heat.pct010",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Heat Pct010",
       "style": "royal-forge-dark-gold",
@@ -16680,6 +16832,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.heat.pct020",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Heat Pct020",
       "style": "royal-forge-dark-gold",
@@ -16709,6 +16862,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.heat.pct030",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Heat Pct030",
       "style": "royal-forge-dark-gold",
@@ -16738,6 +16892,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.heat.pct040",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Heat Pct040",
       "style": "royal-forge-dark-gold",
@@ -16767,6 +16922,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.heat.pct050",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Heat Pct050",
       "style": "royal-forge-dark-gold",
@@ -16796,6 +16952,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.heat.pct060",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Heat Pct060",
       "style": "royal-forge-dark-gold",
@@ -16825,6 +16982,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.heat.pct070",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Heat Pct070",
       "style": "royal-forge-dark-gold",
@@ -16854,6 +17012,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.heat.pct080",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Heat Pct080",
       "style": "royal-forge-dark-gold",
@@ -16883,6 +17042,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.heat.pct090",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Heat Pct090",
       "style": "royal-forge-dark-gold",
@@ -16912,6 +17072,7 @@
     },
     {
       "id": "smi.hud.royalforge02.radial.heat.pct100",
+      "discovery": "component",
       "kind": "region",
       "name": "Radial Heat Pct100",
       "style": "royal-forge-dark-gold",
@@ -16975,6 +17136,7 @@
     },
     {
       "id": "smi.hud.royalforge02.boss.royal.base",
+      "discovery": "component",
       "kind": "region",
       "name": "Boss Royal Base",
       "style": "royal-forge-dark-gold",
@@ -17003,6 +17165,7 @@
     },
     {
       "id": "smi.hud.royalforge02.boss.royal.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Boss Royal Rim",
       "style": "royal-forge-dark-gold",
@@ -17030,6 +17193,7 @@
     },
     {
       "id": "smi.hud.royalforge02.boss.runic.base",
+      "discovery": "component",
       "kind": "region",
       "name": "Boss Runic Base",
       "style": "royal-forge-dark-gold",
@@ -17058,6 +17222,7 @@
     },
     {
       "id": "smi.hud.royalforge02.boss.runic.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Boss Runic Rim",
       "style": "royal-forge-dark-gold",
@@ -17085,6 +17250,7 @@
     },
     {
       "id": "smi.hud.royalforge02.boss.iron.base",
+      "discovery": "component",
       "kind": "region",
       "name": "Boss Iron Base",
       "style": "royal-forge-dark-gold",
@@ -17113,6 +17279,7 @@
     },
     {
       "id": "smi.hud.royalforge02.boss.iron.rim",
+      "discovery": "component",
       "kind": "region",
       "name": "Boss Iron Rim",
       "style": "royal-forge-dark-gold",
@@ -18229,6 +18396,7 @@
     },
     {
       "id": "smi.hud.royalforge02.fx.sparkle.0",
+      "discovery": "component",
       "kind": "region",
       "name": "Fx Sparkle 0",
       "style": "royal-forge-dark-gold",
@@ -18258,6 +18426,7 @@
     },
     {
       "id": "smi.hud.royalforge02.fx.sparkle.1",
+      "discovery": "component",
       "kind": "region",
       "name": "Fx Sparkle 1",
       "style": "royal-forge-dark-gold",
@@ -18287,6 +18456,7 @@
     },
     {
       "id": "smi.hud.royalforge02.fx.sparkle.2",
+      "discovery": "component",
       "kind": "region",
       "name": "Fx Sparkle 2",
       "style": "royal-forge-dark-gold",
@@ -18316,6 +18486,7 @@
     },
     {
       "id": "smi.hud.royalforge02.fx.sparkle.3",
+      "discovery": "component",
       "kind": "region",
       "name": "Fx Sparkle 3",
       "style": "royal-forge-dark-gold",
@@ -18377,6 +18548,7 @@
     },
     {
       "id": "smi.hud.royalforge02.fx.pulse.0",
+      "discovery": "component",
       "kind": "region",
       "name": "Fx Pulse 0",
       "style": "royal-forge-dark-gold",
@@ -18406,6 +18578,7 @@
     },
     {
       "id": "smi.hud.royalforge02.fx.pulse.1",
+      "discovery": "component",
       "kind": "region",
       "name": "Fx Pulse 1",
       "style": "royal-forge-dark-gold",
@@ -18435,6 +18608,7 @@
     },
     {
       "id": "smi.hud.royalforge02.fx.pulse.2",
+      "discovery": "component",
       "kind": "region",
       "name": "Fx Pulse 2",
       "style": "royal-forge-dark-gold",
@@ -18464,6 +18638,7 @@
     },
     {
       "id": "smi.hud.royalforge02.fx.pulse.3",
+      "discovery": "component",
       "kind": "region",
       "name": "Fx Pulse 3",
       "style": "royal-forge-dark-gold",

@@ -664,6 +664,13 @@
         },
         "variant": {
           "type": "string"
+        },
+        "discovery": {
+          "enum": [
+            "standalone",
+            "component",
+            "hidden"
+          ]
         }
       },
       "allOf": [
