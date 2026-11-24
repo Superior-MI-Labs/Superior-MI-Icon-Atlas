@@ -72,19 +72,21 @@ def loaded_html():
 
 
 def draw_sample(page, sample, out_file):
+    if 'preset' in sample:
+        page.locator('#input-controls select[data-preset]').select_option(sample['preset'])
     # Slot selection uses the authored option value, not a hardcoded UI label.
     # This exercises each real item via the same Builder composition controls.
     for slot_key, target in sample.get('slots', {}).items():
-        selects=page.locator('#input-controls select')
-        matches=selects.filter(has=page.locator('option[value="'+target+'"]'))
+        matches=page.locator('#input-controls select[data-slot-key]').filter(has=page.locator('option[value="'+target+'"]'))
+        if matches.count()!=1:
+            matches=page.locator('#input-controls select[data-slot-key="'+slot_key+'"]')
         if matches.count()!=1:
             raise AssertionError(f'Slot {slot_key} option {target} not found uniquely ({matches.count()})')
         matches.first.select_option(target)
     for key, value in sample.get('inputs', {}).items():
-        found = page.locator('#input-controls label').filter(has_text=re.compile(r'^\s*' + re.escape(key) + r'\s*', re.I))
-        if found.count() != 1:
-            raise AssertionError(f'Input {key} not found uniquely ({found.count()} controls)')
-        control = found.locator('input,select').first
+        control = page.locator('#input-controls [data-input-key="'+key+'"]')
+        if control.count() != 1:
+            raise AssertionError(f'Input {key} not found uniquely ({control.count()} controls)')
         tag, kind = control.evaluate('(e)=>[e.tagName.toLowerCase(),e.type]')
         if kind == 'checkbox':
             control.set_checked(bool(value))
@@ -96,9 +98,6 @@ def draw_sample(page, sample, out_file):
     if 'state' in sample:
         control = page.locator('#input-controls label').filter(has_text=re.compile(r'^\s*State\s*', re.I)).locator('select').first
         control.select_option(sample['state'])
-    if 'preset' in sample:
-        control = page.locator('#input-controls label').filter(has_text=re.compile(r'^\s*Preset\s*', re.I)).locator('select').first
-        control.select_option(sample['preset'])
     # Paused render clock controlled by the same public playhead the user can edit.
     page.locator('#playhead').evaluate('''(e,v)=>{
       e.value=String(v);e.dispatchEvent(new Event('input',{bubbles:true}));
@@ -177,12 +176,12 @@ def main():
                 page.on('pageerror',lambda e:errors.append(str(e)))
                 page.set_content(loaded_html())
                 for css in ('styles.css','builder.css'):page.add_style_tag(content=(SITE/css).read_text())
-                payload={'registry':json.loads((SITE/'featured-packs.json').read_text()),'zip':base64.b64encode(archive.read_bytes()).decode()}
+                payload={'registry':{'packs':[{'id':case['id'],'name':case['preview_name'],'zip':'demo/'+case['pack']}]},'zip':base64.b64encode(archive.read_bytes()).decode()}
                 page.evaluate('''(data)=>{
                   window.ICON_ATLAS_DATA={version:'visual-QA',sheets:[],icons:[]};
                   window.fetch=async url=>{
                     const s=String(url);
-                    if(s==='featured-packs.json')return new Response(JSON.stringify(data.registry),{status:200});
+                    if(s==='public-catalog.json')return new Response(JSON.stringify(data.registry),{status:200});
                     if(s==='demo/'+data.filename){
                       const raw=atob(data.zip),out=new Uint8Array(raw.length);
                       for(let i=0;i<raw.length;i++)out[i]=raw.charCodeAt(i);
@@ -193,7 +192,7 @@ def main():
                 }''',{**payload,'filename':case['pack']})
                 for path in SCRIPTS:
                     src=(SITE/path).read_text()
-                    if path=='builder.js':src=src.replace("new URLSearchParams(location.search).get('example')",json.dumps(case['pack'])).replace("fetch('public-catalog.json')","fetch('featured-packs.json')").replace("p.zip==='demo/'+requested","p.filename===requested")
+                    if path=='builder.js':src=src.replace("new URLSearchParams(location.search).get('example')",json.dumps(case['pack']))
                     page.add_script_tag(content=src)
                 page.locator('#builder-status').get_by_text('Opened '+case['pack'],exact=False).wait_for(timeout=15000)
                 if case.get('asset'):

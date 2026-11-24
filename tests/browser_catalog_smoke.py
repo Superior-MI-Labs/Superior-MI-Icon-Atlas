@@ -2,6 +2,7 @@
 """Smoke-test the actual public browsing page, facets and asset inspector."""
 from __future__ import annotations
 
+import argparse
 import contextlib
 import json
 from functools import partial
@@ -25,7 +26,7 @@ def published_matches():
     return f"{json.loads((SITE/'public-catalog.json').read_text())['discoverable_count']:,} matches"
 
 
-def check(page):
+def check(page,published_only=False):
     errors = []
     page.on("pageerror", lambda err: errors.append(str(err)))
     page.reload(wait_until="networkidle")
@@ -173,105 +174,114 @@ def check(page):
     page.mouse.up()
     imported_value=int(page.locator('#input-controls input[data-input-key="value"]').input_value())
     assert imported_value>60, f"Builder drag did not update canonical input: {imported_value}; status: {page.locator('#builder-status').inner_text()}"
-    page.goto(url+"builder.html",wait_until="networkidle")
-    page.locator("#upload").set_input_files(str(SITE/"demo"/"character-animations.zip"))
-    page.locator('#asset-list button[data-asset-id="smi.example.robot.states"]').click()
-    option=page.locator("#test-drive-profile")
-    expect(option).to_have_value("smi.example.robot.platformer",timeout=20000)
-    stage=page.locator("#stage")
-    stage.scroll_into_view_if_needed()
-    page.locator("#test-drive").click()
-    stage.focus()
-    page.keyboard.down("ArrowRight")
-    expect(page.locator("#input-controls select").first).to_have_value("walk")
-    page.keyboard.up("ArrowRight")
-    expect(page.locator("#input-controls select").first).to_have_value("idle")
-    page.locator("#test-drive").click()
-    expect(page.locator("#test-drive")).to_have_attribute("aria-pressed","false")
-    option.select_option("smi.example.robot.alternative")
-    page.locator("#test-drive").click()
-    stage.focus()
-    page.keyboard.down("w")
-    expect(page.locator("#input-controls select").first).to_have_value("walk")
-    page.keyboard.up("w")
-    expect(page.locator("#input-controls select").first).to_have_value("idle")
-    page.locator("#test-drive").click()
-
-    # Robot: one stat action changes both the resource and an existing
-    # animated enum through the authored behavior.on event.
-    page.locator('#asset-list button[data-asset-id="smi.example.robot.actor"]').click()
-    expect(page.locator("#stat-panel")).to_be_visible()
-    assert page.locator('#stat-profile').input_value()=="smi.example.robot.stamina-lab"
-    page.locator('#stat-actions button[data-stat-action="dash"]').click()
-    expect(page.locator('#input-controls input[data-input-key="stamina"]')).to_have_value("40")
-    expect(page.locator('#input-controls select[data-input-key="animation"]')).to_have_value("walk")
-    page.locator('#stat-actions button[data-stat-action="recover"]').click()
-    expect(page.locator('#input-controls input[data-input-key="stamina"]')).to_have_value("65")
-    expect(page.locator('#input-controls select[data-input-key="animation"]')).to_have_value("idle")
-    expect(page.locator('#stat-derived-values')).to_contain_text('"mobility":11.25')
-    page.locator('#stat-actions button[data-stat-action="haste"]').click()
-    expect(page.locator('#stat-derived-values')).to_contain_text('"mobility":14.75')
-    expect(page.locator('#stat-effective-values')).to_contain_text('"speed":6')
-    expect(page.locator('#input-controls input[data-input-key="mobility"]')).to_have_value("14.75")
-    assert page.locator('#input-controls input[data-input-key="mobility"]').is_disabled()
-    page.locator('#stat-advance').click()
-    expect(page.locator('#stat-effects-status')).to_contain_text("2000 ms")
-    page.locator('#stat-step-ms').fill("2000")
-    page.locator('#stat-advance').click()
-    expect(page.locator('#stat-effects-status')).to_have_text("No active effects")
-    expect(page.locator('#stat-derived-values')).to_contain_text('"mobility":10.75')
-    expect(page.locator('#input-controls select[data-input-key="animation"]')).to_have_value("idle")
-
-    # HUD: stat costs must reject atomically and bound visual sliders remain
-    # synchronized in both directions. The same Builder opens both pack types.
-    page.locator("#upload").set_input_files(str(SITE/"demo"/"interactive-hud.zip"))
-    expect(page.locator("#stat-panel")).to_be_visible()
-    expect(page.locator("#stat-profile")).to_have_value("smi.example.hud.energy-lab",timeout=20000)
-    energy=page.locator('#input-controls input[data-input-key="value"]')
-    expect(energy).to_have_value("72")
-    for _ in range(3):
-        page.locator('#stat-actions button[data-stat-action="dash"]').click()
-    expect(energy).to_have_value("12")
-    page.locator('#stat-actions button[data-stat-action="dash"]').click()
-    expect(energy).to_have_value("12")
-    assert "Insufficient energy" in page.locator("#builder-status").inner_text()
-    page.locator('#stat-actions button[data-stat-action="restore"]').click()
-    expect(energy).to_have_value("27")
-    energy.evaluate("(el)=>{el.value='88';el.dispatchEvent(new Event('input',{bubbles:true}))}")
-    expect(page.locator('output[data-stat-value="energy"]')).to_have_text("88")
-    page.locator('#stat-actions button[data-stat-action="dash"]').click()
-    expect(energy).to_have_value("68")
-    page.locator('#stat-actions button[data-stat-action="focus"]').click()
-    expect(energy).to_have_value("68") # 10 spent and +10 temporary modifier
-    expect(page.locator('output[data-stat-value="energy"]')).to_have_text("58")
-    expect(page.locator('#stat-effects-status')).to_contain_text("3000 ms")
-    page.locator('#stat-step-ms').fill("3000")
-    page.locator('#stat-advance').click()
-    expect(energy).to_have_value("58")
-    expect(page.locator('#stat-derived-values')).to_contain_text('"readiness":49')
-
-    # Export definitions, never current simulation values. Reimport the ZIP
-    # into a clean Builder and confirm the initial stat is restored.
-    with page.expect_download() as saved:
-        page.locator("#export").click()
-    with TemporaryDirectory() as temp:
-        exported=Path(temp)/"stat-roundtrip.zip"
-        saved.value.save_as(str(exported))
-        with ZipFile(exported) as z:
-            copied=json.loads(z.read("manifest.json"))
-        assert len(copied.get("stat_profiles",[]))==1
-        exported_ids={a["id"] for a in copied["assets"]}
-        assert {"smi.example.hud.meter","smi.example.hud.frame",
-                "smi.example.hud.fill","smi.example.hud.thumb"} <= exported_ids, exported_ids
-        assert len(copied["textures"])==1, "Export must contain the referenced source texture"
-        assert copied["stat_profiles"][0]["stats"]["energy"]["initial"]==72
-        assert copied["stat_profiles"][0]["bindings"]==[{"stat":"energy","input":"value"}]
-        assert copied["stat_profiles"][0]["effects"]["focus"]["duration_ms"]==3000
-        assert "readiness" in copied["stat_profiles"][0]["derived"]
+    if not published_only:
         page.goto(url+"builder.html",wait_until="networkidle")
-        page.locator("#upload").set_input_files(str(exported))
+        page.locator("#upload").set_input_files(str(SITE/"demo"/"character-animations.zip"))
+        page.locator('#asset-list button[data-asset-id="smi.example.robot.states"]').click()
+        option=page.locator("#test-drive-profile")
+        expect(option).to_have_value("smi.example.robot.platformer",timeout=20000)
+        stage=page.locator("#stage")
+        stage.scroll_into_view_if_needed()
+        page.locator("#test-drive").click()
+        stage.focus()
+        page.keyboard.down("ArrowRight")
+        expect(page.locator("#input-controls select").first).to_have_value("walk")
+        page.keyboard.up("ArrowRight")
+        expect(page.locator("#input-controls select").first).to_have_value("idle")
+        page.locator("#test-drive").click()
+        expect(page.locator("#test-drive")).to_have_attribute("aria-pressed","false")
+        option.select_option("smi.example.robot.alternative")
+        page.locator("#test-drive").click()
+        stage.focus()
+        page.keyboard.down("w")
+        expect(page.locator("#input-controls select").first).to_have_value("walk")
+        page.keyboard.up("w")
+        expect(page.locator("#input-controls select").first).to_have_value("idle")
+        page.locator("#test-drive").click()
+
+        # Robot: one stat action changes both the resource and an existing
+        # animated enum through the authored behavior.on event.
+        page.locator('#asset-list button[data-asset-id="smi.example.robot.actor"]').click()
         expect(page.locator("#stat-panel")).to_be_visible()
-        expect(page.locator('#input-controls input[data-input-key="value"]')).to_have_value("72")
+        assert page.locator('#stat-profile').input_value()=="smi.example.robot.stamina-lab"
+        page.locator('#stat-actions button[data-stat-action="dash"]').click()
+        expect(page.locator('#input-controls input[data-input-key="stamina"]')).to_have_value("40")
+        expect(page.locator('#input-controls select[data-input-key="animation"]')).to_have_value("walk")
+        page.locator('#stat-actions button[data-stat-action="recover"]').click()
+        expect(page.locator('#input-controls input[data-input-key="stamina"]')).to_have_value("65")
+        expect(page.locator('#input-controls select[data-input-key="animation"]')).to_have_value("idle")
+        expect(page.locator('#stat-derived-values')).to_contain_text('"mobility":11.25')
+        page.locator('#stat-actions button[data-stat-action="haste"]').click()
+        expect(page.locator('#stat-derived-values')).to_contain_text('"mobility":14.75')
+        expect(page.locator('#stat-effective-values')).to_contain_text('"speed":6')
+        expect(page.locator('#input-controls input[data-input-key="mobility"]')).to_have_value("14.75")
+        assert page.locator('#input-controls input[data-input-key="mobility"]').is_disabled()
+        page.locator('#stat-advance').click()
+        expect(page.locator('#stat-effects-status')).to_contain_text("2000 ms")
+        page.locator('#stat-step-ms').fill("2000")
+        page.locator('#stat-advance').click()
+        expect(page.locator('#stat-effects-status')).to_have_text("No active effects")
+        expect(page.locator('#stat-derived-values')).to_contain_text('"mobility":10.75')
+        expect(page.locator('#input-controls select[data-input-key="animation"]')).to_have_value("idle")
+
+        # HUD: stat costs must reject atomically and bound visual sliders remain
+        # synchronized in both directions. The same Builder opens both pack types.
+        page.locator("#upload").set_input_files(str(SITE/"demo"/"interactive-hud.zip"))
+        expect(page.locator("#stat-panel")).to_be_visible()
+        expect(page.locator("#stat-profile")).to_have_value("smi.example.hud.energy-lab",timeout=20000)
+        energy=page.locator('#input-controls input[data-input-key="value"]')
+        expect(energy).to_have_value("72")
+        for _ in range(3):
+            page.locator('#stat-actions button[data-stat-action="dash"]').click()
+        expect(energy).to_have_value("12")
+        page.locator('#stat-actions button[data-stat-action="dash"]').click()
+        expect(energy).to_have_value("12")
+        assert "Insufficient energy" in page.locator("#builder-status").inner_text()
+        page.locator('#stat-actions button[data-stat-action="restore"]').click()
+        expect(energy).to_have_value("27")
+        energy.evaluate("(el)=>{el.value='88';el.dispatchEvent(new Event('input',{bubbles:true}))}")
+        expect(page.locator('output[data-stat-value="energy"]')).to_have_text("88")
+        page.locator('#stat-actions button[data-stat-action="dash"]').click()
+        expect(energy).to_have_value("68")
+        page.locator('#stat-actions button[data-stat-action="focus"]').click()
+        expect(energy).to_have_value("68") # 10 spent and +10 temporary modifier
+        expect(page.locator('output[data-stat-value="energy"]')).to_have_text("58")
+        expect(page.locator('#stat-effects-status')).to_contain_text("3000 ms")
+        page.locator('#stat-step-ms').fill("3000")
+        page.locator('#stat-advance').click()
+        expect(energy).to_have_value("58")
+        expect(page.locator('#stat-derived-values')).to_contain_text('"readiness":49')
+
+        # Export definitions, never current simulation values. Reimport the ZIP
+        # into a clean Builder and confirm the initial stat is restored.
+        with page.expect_download() as saved:
+            page.locator("#export").click()
+        with TemporaryDirectory() as temp:
+            exported=Path(temp)/"stat-roundtrip.zip"
+            saved.value.save_as(str(exported))
+            with ZipFile(exported) as z:
+                copied=json.loads(z.read("manifest.json"))
+            assert len(copied.get("stat_profiles",[]))==1
+            exported_ids={a["id"] for a in copied["assets"]}
+            assert {"smi.example.hud.meter","smi.example.hud.frame",
+                    "smi.example.hud.fill","smi.example.hud.thumb"} <= exported_ids, exported_ids
+            assert len(copied["textures"])==1, "Export must contain the referenced source texture"
+            assert copied["stat_profiles"][0]["stats"]["energy"]["initial"]==72
+            assert copied["stat_profiles"][0]["bindings"]==[{"stat":"energy","input":"value"}]
+            assert copied["stat_profiles"][0]["effects"]["focus"]["duration_ms"]==3000
+            assert "readiness" in copied["stat_profiles"][0]["derived"]
+            page.goto(url+"builder.html",wait_until="networkidle")
+            page.locator("#upload").set_input_files(str(exported))
+            expect(page.locator("#stat-panel")).to_be_visible()
+            expect(page.locator('#input-controls input[data-input-key="value"]')).to_have_value("72")
+    # Public Builder quick-open must never point to unpublished test fixtures.
+    page.goto(url+"builder.html",wait_until="networkidle")
+    picker=page.locator("#public-example")
+    expect(picker.locator('option[value="royal-forge-complete.zip"]')).to_have_count(1)
+    assert picker.locator('option[value="starter-pack.zip"]').count()==0
+    picker.select_option("royal-forge-complete.zip")
+    page.locator("#load-demo").click()
+    expect(page.locator("#preview-name")).to_have_text("Royal Forge Complete Gameplay HUD",timeout=20000)
     # Overlapping ZIPs share identical IDs, and removing one bag must not
     # remove assets still owned by the other.
     page.goto(url+"builder.html",wait_until="networkidle")
@@ -306,6 +316,7 @@ def check(page):
 
 
 def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--published-only',action='store_true');args=parser.parse_args()
     assert (SITE / "public-catalog.json").exists(), "Build site before browser smoke"
     server = ThreadingHTTPServer(("127.0.0.1", 0), partial(QuietHandler, directory=str(SITE)))
     thread = Thread(target=server.serve_forever, daemon=True)
@@ -317,7 +328,7 @@ def main():
             try:
                 page = browser.new_page(viewport={"width": 1440, "height": 1000}, base_url=url)
                 page.goto(url, wait_until="networkidle")
-                print("Desktop:", check(page))
+                print("Desktop:", check(page,args.published_only))
                 mobile = browser.new_page(viewport={"width": 390, "height": 844}, base_url=url)
                 mobile.goto(url, wait_until="networkidle")
                 expect(mobile.locator("#count")).to_have_text(published_matches(), timeout=20000)

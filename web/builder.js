@@ -368,6 +368,7 @@
       if(Object.keys(a.presets||{}).length){
         const label=document.createElement('label');label.textContent='Preset';
         const select=document.createElement('select');
+        select.dataset.preset='';
         select.add(new Option('Default options',''));
         for(const key of Object.keys(a.presets))select.add(new Option(key,key));
         select.value=ui.preset||'';
@@ -377,7 +378,7 @@
       const resolved=Slots.resolve(a,ui.preset,ui.slots);
       for(const [key,slot] of Object.entries(a.slots||{})){
         const label=document.createElement('label');label.textContent=slot.label||key;
-        const select=document.createElement('select');
+        const select=document.createElement('select');select.dataset.slotKey=key;
         for(const id of slot.options){const target=library.get(id);select.add(new Option(metaName(target||{id}),id));}
         select.value=resolved.slots[key];
         select.onchange=()=>{ui.slots[key]=select.value;setStatus('Selected '+key+': '+metaName(library.get(select.value)));};
@@ -807,13 +808,12 @@
     $('stat-advance').addEventListener('click',()=>{try{advanceStats()}catch(err){setStatus(err.message,true)}});
     $('stat-reset').addEventListener('click',()=>{const p=ensureStatRuntime();if(!p)return;statRuntime.reset();bindStatsToPreview(p);syncPreviewControls();updateStatReadouts();setStatus('Restored stat defaults for '+p.id);});
     $('upload').addEventListener('change',async e=>{try{const files=[...e.target.files];for(const f of files.filter(f=>/\.zip$/i.test(f.name)))await importZip(f);const others=files.filter(f=>!/\.zip$/i.test(f.name));if(others.length)await importFiles(others);$('import-info').textContent=imports.size+' local files/packs loaded';}catch(err){setStatus(err.message,true)}finally{e.target.value='';}});
-    $('load-demo').addEventListener('click',async()=>{try{const response=await fetch('demo/starter-pack.zip');if(!response.ok)throw Error('Could not load demo pack');const blob=await response.blob();await importZip(blob);$('import-info').textContent=imports.size+' local files/packs loaded';}catch(e){setStatus(e.message,true)}});
-    $('load-potions').addEventListener('click',async()=>{try{
-      const response=await fetch('demo/potions-collection.zip');if(!response.ok)throw Error('Could not load potion template');
-      const file=new File([await response.blob()],'Potion-Lab-template.zip',{type:'application/zip'});
-      await importZip(file);
-      setStatus('Loaded Potion Lab: choose Health, Mana or Poison in the automatic preset controls.');
-    }catch(e){setStatus(e.message,true);}});
+    // Examples are published entries, not hardcoded private fixture downloads.
+    $('public-example').addEventListener('change',()=>{$('load-demo').disabled=!$('public-example').value;});
+    $('load-demo').addEventListener('click',async()=>{
+      const requested=$('public-example').value;if(!requested)return;
+      try{await openPublished(requested);}catch(e){setStatus(e.message,true);}
+    });
     $('clear-imports').addEventListener('click',()=>mutateRegistry(async()=>{for(const id of [...bags.keys()])await releaseBag(id);for(const [id,a] of library)if(a.source!=='Official Icon Atlas')library.delete(id);for(const [key,t] of textures)if(!key.startsWith('official:')){if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);}imports.clear();interfaces.clear();previewProfiles.clear();statProfiles.clear();driveDriver=null;activeStatId=null;statRuntime=null;try{await BagStore.clear();}catch{}$('import-info').textContent='Built-in Icon Atlas loaded automatically';bagScope=null;bagGroup='';scene.layers=[];scene.selectedLayer=-1;selectAsset(null);layerInputs();refreshTimeline();renderControlPanel();refreshList();renderBag();setStatus('All private bag imports cleared. Public icons remain.');}));
     $('bag-show-all').addEventListener('click',()=>{bagScope=null;bagGroup='';renderBag();refreshList();});
     $('bag-group').addEventListener('change',()=>{bagGroup=$('bag-group').value;refreshList();});
@@ -878,25 +878,29 @@
   addOfficialIcons();
   try{$('save-bag').checked=localStorage.getItem(bagPersistenceKey)==='yes';}catch{}
   wire();renderBag();refreshList();renderControlPanel();layerInputs();refreshTimeline();requestAnimationFrame(tick);const restored=restoreBag();
-  // Example links use only filenames explicitly generated from the bundled demo ZIPs.
-  // Private ZIPs from the user's computer are never fetched or submitted to a server.
+  // One allowlisted entrypoint for manual selection and public deep links.
+  let publicPacks=[];
+  async function openPublished(requested,desired=null){
+    if(!/^[a-z0-9-]+\.zip$/.test(requested)||!publicPacks.some(p=>p.zip==='demo/'+requested))throw Error('Unknown or unpublished collection');
+    const response=await fetch('demo/'+requested);if(!response.ok)throw Error('Example archive unavailable');
+    const file=new File([await response.blob()],requested,{type:'application/zip'});
+    const bag=await importZip(file);
+    if(desired){
+      if(!bag.assetIds.includes(desired))throw Error('Asset not found in approved collection');
+      selectAsset(desired);refreshList();renderControlPanel();
+    }
+    setStatus('Opened '+(desired||requested)+' from Browse. All files stay local to your browser.');
+    return bag;
+  }
   (async()=>{
     const requested=new URLSearchParams(location.search).get('example');
-    if(!requested)return;
-    await restored;
+    const select=$('public-example');
     try{
       const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Published asset catalog unavailable');
       const data=await response.json();
-      if(!data.packs?.some(p=>p.zip==='demo/'+requested)||!(/^[a-z0-9-]+\.zip$/.test(requested)))throw Error('Unknown or unpublished collection');
-      const downloadResponse=await fetch('demo/'+requested);if(!downloadResponse.ok)throw Error('Example archive unavailable');
-      const file=new File([await downloadResponse.blob()],requested,{type:'application/zip'});
-      const bag=await importZip(file);
-      const desired=new URLSearchParams(location.search).get('asset');
-      if(desired){
-        if(!bag.assetIds.includes(desired))throw Error('Asset not found in approved collection');
-        selectAsset(desired);refreshList();renderControlPanel();
-      }
-      setStatus('Opened '+(desired||requested)+' from Browse. All files stay local to your browser.');
-    }catch(e){setStatus('Could not open example: '+e.message,true)}
+      publicPacks=(data.packs||[]).filter(p=>/^demo\/[a-z0-9-]+\.zip$/.test(p.zip||''));
+      for(const pack of publicPacks)select.add(new Option(pack.name||pack.id,pack.zip.split('/').at(-1)));
+      if(requested){await restored;await openPublished(requested,new URLSearchParams(location.search).get('asset'));}
+    }catch(e){if(requested)setStatus('Could not open example: '+e.message,true);}
   })();
 })();

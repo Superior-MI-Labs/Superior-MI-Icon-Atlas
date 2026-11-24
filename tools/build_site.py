@@ -40,7 +40,7 @@ def build(dest:Path|None=None):
     if dest==ROOT or ROOT in dest.parents and 'sheets' in dest.parts:
         raise ValueError('Refusing to build over source')
     dest.mkdir(parents=True,exist_ok=True)
-    for name in ('index.html','styles.css','public-search.js','app.js','builder.html','builder.css','timeline-core.js','visual-core.js','input-core.js','collection-core.js','bag-store.js','interaction-core.js','stat-core.js','slot-core.js','asset-renderer.js','builder.js','ai-guide.html','featured.js','sky-motion-lab.html'):
+    for name in ('index.html','styles.css','public-search.js','app.js','builder.html','builder.css','timeline-core.js','visual-core.js','input-core.js','collection-core.js','bag-store.js','interaction-core.js','stat-core.js','slot-core.js','asset-renderer.js','builder.js','ai-guide.html','sky-motion-lab.html'):
         shutil.copy2(ROOT/'web'/name,dest/name)
     # Experimental preview sources; not a second Visual Atlas asset registry.
     motion_source=ROOT/'web'/'sky-motion-lab'
