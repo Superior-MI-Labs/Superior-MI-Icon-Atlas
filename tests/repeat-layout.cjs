@@ -114,3 +114,14 @@ assert.deepEqual(renderer.sizeFor(P+'static'),[72,72]);
   assert.deepEqual(draws[16],map.get('smi.ui.fantasy01.wave2.indicator.pip.warning').rect_px);
   console.log('Independent hotbar cooldowns, inventory and status: PASS');
 })().catch(e=>{console.error(e);process.exitCode=1;});
+
+/* Nested adaptive layout must measure the selected preset before drawing. */
+(()=>{
+  const Slots=require('../web/slot-core.js');
+  const hearts={...assets.get(P+'hearts'),presets:{Small:{inputs:{max:2,columns:2,value:4}}}};
+  const parent={id:P+'nested',kind:'composition',size_px:[400,400],layers:[{id:'child',asset:hearts.id,preset:'Small'}]};
+  const map=new Map(assets);map.set(hearts.id,hearts);map.set(parent.id,parent);
+  const r=create({getAsset:id=>map.get(id),getImage:async()=>({}),slots:Slots,timeline:{layerAt:l=>l},visualCore:{unitValue:()=>0}});
+  assert.deepEqual(r.sizeFor(hearts.id,new Set(),{},'Small'),[146,72]);
+  console.log('Nested preset geometry: PASS');
+})();

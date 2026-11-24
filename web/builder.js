@@ -61,13 +61,13 @@
   function validRect(r,w,h) {
     return Array.isArray(r)&&r.length===4&&r.every(Number.isInteger)&&r[0]>=0&&r[1]>=0&&r[2]>0&&r[3]>0&&r[0]+r[2]<=w&&r[1]+r[3]<=h;
   }
-  function checkPack(pack) {
+  function checkPack(pack,ownerBag=null) {
     if (pack?.schema!=='smi-visual-pack/1'||!pack.pack_id||!Array.isArray(pack.assets)||typeof pack.textures!=='object') throw Error('Expected a smi-visual-pack/1 manifest with assets and textures');
     if (pack.assets.length>Collections.MAX_ASSETS||Object.keys(pack.textures).length>Collections.MAX_TEXTURES) throw Error('Too many assets or textures in one pack');
     const slotErrors=Slots.validate(pack);if(slotErrors.length)throw Error('Invalid slot/preset: '+slotErrors[0]);
     const ids=new Map();
     for (const a of pack.assets) {
-      if (!a.id||ids.has(a.id)||library.has(a.id)) throw Error('Duplicate or existing asset ID: '+a.id);
+      if (!a.id||ids.has(a.id)||(library.has(a.id)&&(!ownerBag||!library.get(a.id).ownerBag))) throw Error('Duplicate or existing asset ID: '+a.id);
       if (!['region','sequence','composition','state_set'].includes(a.kind)) throw Error('Invalid asset kind: '+a.id);
       const behaviorProblems=Interactions.check(a);
       if(behaviorProblems.length)throw Error(a.id+': '+behaviorProblems[0]);
@@ -114,8 +114,12 @@
     if(problems.length)throw Error('Invalid preview profile: '+problems[0]);
     const statProblems=Stats.validate(pack.stat_profiles,id=>ids.get(id)||library.get(id));
     if(statProblems.length)throw Error('Invalid stat profile: '+statProblems[0]);
-    for(const p of pack.preview_profiles||[])if(previewProfiles.has(p.id))throw Error('Existing preview profile ID '+p.id);
-    for(const p of pack.stat_profiles||[])if(statProfiles.has(p.id))throw Error('Existing stat profile ID '+p.id);
+    for(const [profiles,known] of [[pack.preview_profiles||[],previewProfiles],[pack.stat_profiles||[],statProfiles]]){
+      for(const p of profiles)if(known.has(p.id)){
+        const {ownerBag:previousOwner,...old}=known.get(p.id);
+        if(!ownerBag||!previousOwner||!Collections.equivalent(old,p))throw Error('Conflicting profile ID '+p.id);
+      }
+    }
     pack.assets.forEach(a=>walk(a.id));
     for(const [id,t] of Object.entries(pack.textures)){
       if(!t||!safePath(t.path)||!Number.isInteger(t.width_px)||!Number.isInteger(t.height_px)||t.width_px<1||t.height_px<1||t.width_px>8192||t.height_px>8192)throw Error('Unsafe or invalid texture: '+id);
@@ -127,24 +131,39 @@
     return p;
   }
   async function importPack(pack,getTexture,packDirectory='',ownerBag=null) {
-    checkPack(pack);
+    checkPack(pack,ownerBag);
     let total=0;
     const pending=[];
-    for(const [key,t] of Object.entries(pack.textures)){
+    const overlap=pack.assets.filter(a=>library.has(a.id));
+    for(const a of overlap){
+      const old=library.get(a.id);
+      if(!Collections.sameAsset({...a,license:a.license||pack.license||'UNSPECIFIED'},old,pack.interfaces||{},interfaces.get(old.ownerBag)||{}))
+        throw Error('Conflicting asset ID '+a.id+'; remove the incompatible collection first');
+    }
+    try{for(const [key,t] of Object.entries(pack.textures)){
       const path=resolveZipPath(packDirectory,t.path),data=await getTexture(path,t.path);
       if(!data) throw Error('Missing texture '+t.path);
       total+=binarySize(data); if(binarySize(data)>MAX_ENTRY||total>MAX_BYTES)throw Error('Imported textures exceed size limits');
       const blob=data instanceof Blob?data:blobOf(data,mime(t.path));
+      const shared=new Set(overlap.filter(a=>a.texture===key).map(a=>library.get(a.id).texture));
+      for(const existing of shared){
+        if(!await Collections.sameBytes(blob,textures.get(existing)?.blob))throw Error('Conflicting texture bytes for existing asset in '+t.path);
+      }
+      // Only allocate textures actually needed by newly registered regions.
+      if(!pack.assets.some(a=>a.texture===key&&!library.has(a.id)))continue;
       const img=await imageFromBlob(blob);
-      if(img.naturalWidth!==t.width_px||img.naturalHeight!==t.height_px) throw Error('Texture dimensions disagree with manifest: '+t.path);
+      if(img.naturalWidth!==t.width_px||img.naturalHeight!==t.height_px){
+        URL.revokeObjectURL(img.src);throw Error('Texture dimensions disagree with manifest: '+t.path);
+      }
       pending.push([key,t,blob,img]);
     }
-    const prefix='local:'+slug(pack.pack_id)+':'+Date.now().toString(36)+':';
+    }catch(error){for(const [,,,img] of pending)URL.revokeObjectURL(img.src);throw error;}
+    const prefix='local:'+(ownerBag||slug(pack.pack_id)+':'+Date.now().toString(36))+':';
     interfaces.set(ownerBag||pack.pack_id,structuredClone(pack.interfaces||{}));
-    for(const profile of pack.preview_profiles||[])previewProfiles.set(profile.id,{...structuredClone(profile),ownerBag});
-    for(const profile of pack.stat_profiles||[])statProfiles.set(profile.id,{...structuredClone(profile),ownerBag});
+    for(const profile of pack.preview_profiles||[])if(!previewProfiles.has(profile.id))previewProfiles.set(profile.id,{...structuredClone(profile),ownerBag});
+    for(const profile of pack.stat_profiles||[])if(!statProfiles.has(profile.id))statProfiles.set(profile.id,{...structuredClone(profile),ownerBag});
     for(const [key,def,blob,img] of pending){textures.set(prefix+key,{blob,path:def.path,image:img,source:pack.pack_id,ownerBag,license:pack.license||'UNSPECIFIED'});}
-    for(const a of pack.assets){library.set(a.id,{...a,texture:a.texture?prefix+a.texture:undefined,source:pack.pack_id,ownerBag,license:a.license||pack.license||'UNSPECIFIED'});}
+    for(const a of pack.assets){if(library.has(a.id))continue;library.set(a.id,{...a,texture:a.texture?prefix+a.texture:undefined,source:pack.pack_id,ownerBag,license:a.license||pack.license||'UNSPECIFIED'});}
     imports.add(pack.pack_id); selectAsset(pack.assets.filter(a=>a.kind==='composition').at(-1)?.id||pack.assets.at(-1)?.id||ui.selected); refreshList(); renderControlPanel(); setStatus('Imported '+pack.assets.length+' assets from '+pack.pack_id+' (kept in this browser session).');
   }
   async function imageFromBlob(blob){
@@ -180,21 +199,41 @@
   }
   async function removeBag(id,deleteStored=true){
     const bag=bagItem(id);if(!bag)return;
-    const owned=new Set(bag.assetIds);
-    for(const [assetId,a] of library)if(a.ownerBag===id)library.delete(assetId);
-    for(const [key,t] of textures)if(t.ownerBag===id){if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);}
-    scene.layers=scene.layers.filter(l=>!owned.has(l.asset));scene.selectedLayer=-1;
-    if(owned.has(ui.selected))selectAsset(null);
-    bags.delete(id);interfaces.delete(id);imports.delete(bag.collectionId);
-    for(const [key,p] of previewProfiles)if(p.ownerBag===id)previewProfiles.delete(key);
-    for(const [key,p] of statProfiles)if(p.ownerBag===id)statProfiles.delete(key);
+    bags.delete(id);
+    const remaining=[...bags.values()],removed=new Set();
+    for(const [assetId,a] of library)if(a.ownerBag===id){
+      const next=remaining.find(b=>b.assetIds.includes(assetId));
+      if(next)a.ownerBag=next.id;
+      else{library.delete(assetId);removed.add(assetId);}
+    }
+    const usedTextures=new Set([...library.values()].map(a=>a.texture).filter(Boolean));
+    for(const [key,t] of textures)if(t.ownerBag&&!usedTextures.has(key)){
+      if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);
+    }
+    scene.layers=scene.layers.filter(l=>!removed.has(l.asset));scene.selectedLayer=-1;
+    if(removed.has(ui.selected))selectAsset(null);
+    interfaces.delete(id);
+    if(!remaining.some(b=>b.collectionId===bag.collectionId))imports.delete(bag.collectionId);
+    for(const [profiles,field] of [[previewProfiles,'previewIds'],[statProfiles,'statIds']]){
+      for(const [key,p] of profiles)if(p.ownerBag===id){
+        const next=remaining.find(b=>b[field]?.includes(key));
+        if(next)p.ownerBag=next.id;else profiles.delete(key);
+      }
+    }
     if(bagScope===id){bagScope=null;bagGroup='';}
     if(deleteStored){try{await BagStore?.remove(id);}catch(e){setStatus('Removed from session. Stored copy could not be removed: '+e.message,true);}}
     renderBag();refreshList();renderControlPanel();layerInputs();refreshTimeline();
     if(deleteStored)setStatus('Removed '+bag.name+' from My Bag.');
   }
   function isPersistEnabled(){return Boolean($('save-bag')?.checked);}
-  async function importZip(file,options={}){
+  // Imports are serialized: two async decodes cannot race the unique-ID registry.
+  let importQueue=Promise.resolve();
+  function importZip(file,options={}){
+    const job=importQueue.then(()=>readZip(file,options));
+    importQueue=job.catch(()=>{});
+    return job;
+  }
+  async function readZip(file,options={}){
     if(file.size>MAX_BYTES)throw Error('ZIP exceeds 120 MB import limit');
     // Validate central directory before inflating any archive member.
     const zip=await JSZip.loadAsync(file,{checkCRC32:false});
@@ -233,7 +272,12 @@
       if(entry._data?.uncompressedSize>MAX_ENTRY)throw Error('Oversized texture '+path);
       return entry.async('uint8array');
     },'',bagId);
-    const bag={...resolved.bag,id:bagId,collectionId:sourcePack.pack_id,filename:file.name||'visual-assets.zip',file};
+    const notices=[];
+    for(const entry of entries.filter(e=>/(?:^|\/)(?:LICENSE[^/]*|NOTICE[^/]*|SOURCE-NOTICES[^/]*)$/i.test(e.name)||/(?:^|\/)LICENSES\//i.test(e.name))){
+      if(entry._data.uncompressedSize<=MAX_ENTRY)notices.push({path:entry.name,blob:await entry.async('blob')});
+    }
+    const bag={...resolved.bag,id:bagId,collectionId:sourcePack.pack_id,filename:file.name||'visual-assets.zip',file,notices,
+      previewIds:(sourcePack.preview_profiles||[]).map(p=>p.id),statIds:(sourcePack.stat_profiles||[]).map(p=>p.id)};
     bags.set(bagId,bag);openBag(bagId);
     if(!options.restoring&&isPersistEnabled()){
       try{await BagStore.put({id:bagId,name:bag.filename,file});}
@@ -290,7 +334,9 @@
     const kinds=[...new Set([...library.values()].map(a=>a.kind))].sort();
     const select=$('asset-kind'),current=select.value;select.replaceChildren(new Option('All asset types',''));for(const k of kinds)select.add(new Option(k,k));select.value=current;
     const scopeKey=JSON.stringify([q,kind,bagScope,bagGroup]);if(scopeKey!==listKey){listLimit=110;listKey=scopeKey;}
-    const candidates=[...library.values()].filter(a=>(!bagScope||a.ownerBag===bagScope)&&(!bagGroup||a.sourceGroup===bagGroup)&&(!kind||a.kind===kind));
+    const bag=bags.get(bagScope);
+    const allowed=bag?new Set(bagGroup?bag.groups.find(g=>g.path===bagGroup)?.ids||[]:bag.assetIds):null;
+    const candidates=[...library.values()].filter(a=>(!allowed||allowed.has(a.id))&&(!kind||a.kind===kind));
     const found=Search.results(candidates,{query:q,scope:'all',sort:q?'recommended':'name'});
     const results=found.slice(0,listLimit);
     $('asset-count').textContent=results.length+' shown / '+found.length.toLocaleString()+' matching';
@@ -678,6 +724,7 @@
       assets,rootId,packId:'smi.user.'+slug($('composition-name').value),
       getInterfaces:a=>interfaces.get(a.ownerBag||a.source)||{},
       previewProfiles:[...previewProfiles.values()],statProfiles:[...statProfiles.values()],maxEntry:MAX_ENTRY,
+      sourceNotices:[...new Set(assets.map(a=>a.ownerBag).filter(Boolean))].flatMap(id=>bags.get(id)?.notices||[]),
       getTexture:async key=>{
         const t=textures.get(key);if(!t)throw Error('Missing texture '+key);
         let blob=t.blob;if(!blob){const response=await fetch(t.src);if(!response.ok)throw Error('Cannot fetch texture '+key);blob=await response.blob();}
@@ -826,12 +873,13 @@
   }
   addOfficialIcons();
   try{$('save-bag').checked=localStorage.getItem(bagPersistenceKey)==='yes';}catch{}
-  wire();renderBag();refreshList();renderControlPanel();layerInputs();refreshTimeline();requestAnimationFrame(tick);restoreBag();
+  wire();renderBag();refreshList();renderControlPanel();layerInputs();refreshTimeline();requestAnimationFrame(tick);const restored=restoreBag();
   // Example links use only filenames explicitly generated from the bundled demo ZIPs.
   // Private ZIPs from the user's computer are never fetched or submitted to a server.
   (async()=>{
     const requested=new URLSearchParams(location.search).get('example');
     if(!requested)return;
+    await restored;
     try{
       const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Published asset catalog unavailable');
       const data=await response.json();

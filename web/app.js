@@ -6,7 +6,7 @@
   const legacyAssets=new Map(),collections=new Map(),pending=new Map(),loaded=new Map();
   let entries=[],matches=[],shown=0,current=null,clock=0,playing=true,previous=0;
   let preset=null,chosenState=null,controls={},slotChoices={};
-  let activePreview=0,cardObserver,detailRendering=false;
+  let activePreview=0,cardObserver,detailRendering=false,lastDetailSignature=null;
   let synonyms={},styleLabels={};
   const FACETS=['kind','pack','domain','style','subject','status','review','license','animated','experience'];
   const legacyImageCache=new Map();
@@ -283,6 +283,7 @@
       assets:[...closure].map(id=>assets.get(id)),rootId,packId:main.pack_id+'.selection',version:main.version,
       getInterfaces:()=>main.interfaces,previewProfiles:main.preview_profiles,statProfiles:main.stat_profiles,
       getTexture:async key=>{const t=data.textureMap.get(key.split('::')[1]);if(!t)throw Error('Missing texture '+key);return {...t.info,blob:await t.file.async('blob')};},
+      sourceNotices:await Promise.all(Object.values(data.zip.files).filter(e=>!e.dir&&e._data?.uncompressedSize<=24*1024*1024&&(/(?:^|\/)(?:LICENSE[^/]*|NOTICE[^/]*|SOURCE-NOTICES[^/]*)$/i.test(e.name)||/(?:^|\/)LICENSES\//i.test(e.name))).map(async e=>({path:e.name,blob:await e.async('blob')}))),
       licenseText:async()=>{const response=await fetch('LICENSE');return response.ok?response.text():null;}
     });
     const out=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:6}});
@@ -290,7 +291,28 @@
   }
   function save(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),15000);}
   function tick(ts){if(!previous)previous=ts;const dt=Math.min(80,ts-previous);previous=ts;if(playing)clock+=dt;
-    const a=current;if(a&&$('detail').open&&!detailRendering){const token=activePreview;detailRendering=true;paint($('detail-canvas'),a,clock,{controls,state:chosenState,preset,slots:slotChoices}).catch(e=>{if(token===activePreview)notify(e.message)}).finally(()=>{detailRendering=false});$('time-value').textContent=(clock/1000).toFixed(1)+'s';}
+    const a=current;if(a&&$('detail').open&&!detailRendering){
+      const data=context(a.pack);
+      if(data){
+        if(!data.motion)data.motion=new Map();
+        if(!data.motion.has(a.id)){
+          const ids=Collections.dependencyClosure([a.id],id=>data.assets.get(id),Slots.refs);
+          data.motion.set(a.id,[...ids].some(id=>{const x=data.assets.get(id);return x.kind==='sequence'||Boolean(x.duration_ms);}));
+        }
+        const animated=data.motion.get(a.id),signature=JSON.stringify([activePreview,a.id,controls,chosenState,preset,slotChoices,$('tint-enabled').checked,$('tint-color').value,animated?clock:0]);
+        if(signature!==lastDetailSignature){
+          const token=activePreview;detailRendering=true;
+          // Render offscreen so a slow previous selection cannot overwrite the new one.
+          const canvas=document.createElement('canvas');
+          paint(canvas,a,clock,{controls:{...controls},state:chosenState,preset,slots:{...slotChoices}}).then(()=>{
+            if(token!==activePreview||current?.id!==a.id)return;
+            const target=$('detail-canvas');target.width=canvas.width;target.height=canvas.height;
+            target.getContext('2d').drawImage(canvas,0,0);lastDetailSignature=signature;
+          }).catch(e=>{if(token===activePreview){lastDetailSignature=signature;notify(e.message);}}).finally(()=>{detailRendering=false});
+        }
+      }
+      $('time-value').textContent=(clock/1000).toFixed(1)+'s';
+    }
     requestAnimationFrame(tick);
   }
   async function init(){

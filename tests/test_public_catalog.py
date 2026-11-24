@@ -166,6 +166,7 @@ class PublicCatalogTests(unittest.TestCase):
                 self.assertFalse((site/rel).exists(),rel)
             self.assertEqual(len(list(site.glob('sheets/*/atlas.png'))),20)
             self.assertFalse(list(site.glob('sheets/*/black-outline.png')))
+            self.assertTrue((site/'LICENSE').is_file())
 
     def test_legacy_sources_remain_archived(self):
         self.assertTrue((ROOT/'manifest.json').is_file())

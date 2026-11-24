@@ -272,6 +272,20 @@ def check(page):
         page.locator("#upload").set_input_files(str(exported))
         expect(page.locator("#stat-panel")).to_be_visible()
         expect(page.locator('#input-controls input[data-input-key="value"]')).to_have_value("72")
+    # Overlapping ZIPs share identical IDs, and removing one bag must not
+    # remove assets still owned by the other.
+    page.goto(url+"builder.html",wait_until="networkidle")
+    page.locator("#upload").set_input_files(str(SITE/"demo"/"royal-forge-controls.zip"))
+    expect(page.locator("#bag-count")).to_have_text("1 ZIP")
+    page.locator("#upload").set_input_files(str(SITE/"demo"/"royal-forge-complete.zip"))
+    expect(page.locator("#bag-count")).to_have_text("2 ZIPs")
+    expect(page.locator("#preview-name")).to_have_text("Royal Forge Complete Gameplay HUD")
+    page.locator("#bag-list .bag-card").filter(has_text="Royal Forge Core Controls").get_by_role("button",name="Remove").click()
+    expect(page.locator("#bag-count")).to_have_text("1 ZIP")
+    expect(page.locator("#preview-name")).to_have_text("Royal Forge Complete Gameplay HUD")
+    page.locator("#asset-search").fill("smi.ui.fantasy01.wave2.widget.action-inventory-hud")
+    page.locator('#asset-list [data-asset-id="smi.ui.fantasy01.wave2.widget.action-inventory-hud"]').click()
+    expect(page.locator("#preview-name")).to_have_text("Royal Forge Action and Inventory HUD")
     # Experimental Sky scene: one canonical authored ZIP drives both the
     # interactive preview and catalog Builder import; no duplicated art data.
     page.goto(url+"sky-prototype.html",wait_until="domcontentloaded")

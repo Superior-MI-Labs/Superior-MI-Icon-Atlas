@@ -43,6 +43,7 @@ def prune(site:Path):
         source=doc.read_text(encoding='utf-8')
         def link(match):
             name=match.group(1)
+            if name+'.zip' in allowed:return match.group(0)
             url=(repo+'/tree/main/examples/'+name if name in examples
                 else repo+'/blob/main/web/demo/'+name+'.zip')
             return ']('+url+')'
