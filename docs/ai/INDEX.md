@@ -25,7 +25,7 @@
 
 ## Why the directions are separated
 
-The creator describes *what* to make. The assistant loads the short core instructions, then just one relevant recipe and the common release gate. Do not paste all guides into a long prompt. Other recipes are available if the deliverable actually combines those features. The assistant should not override the user's actual request with a template's demo aesthetics.
+The creator describes *what* to make. The assistant loads the short core instructions, then just one relevant recipe and the common release gate. The guides govern the production agent. For image generation, delegate just the relevant positive visual brief through the [image workflow](IMAGE-ENGINE-WORKFLOW.md). Load engineering references when needed for packing or qualification. Other recipes are available if the deliverable combines those features. The assistant should not override the user's actual request with a template's demo aesthetics.
 
 ## About examples
 
