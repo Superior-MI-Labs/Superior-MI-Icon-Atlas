@@ -19,6 +19,10 @@ class BuilderContractTests(unittest.TestCase):
             self.assertIn('vendor/jszip.min.js',html)
             self.assertIn('timeline-core.js',html)
             self.assertIn('id="playhead"',html)
+            self.assertIn('id="public-example"',html)
+            self.assertIn('id="open-collection"',html)
+            self.assertNotIn('load-demo',html)
+            self.assertNotIn('load-potions',(Path(temp)/'builder.css').read_text())
             self.assertIn('id="export-frames"',html)
             self.assertNotIn('https://cdn.',html)
     def test_schema_validation_and_dependency_graph(self):

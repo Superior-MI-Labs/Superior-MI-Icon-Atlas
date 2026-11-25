@@ -809,10 +809,13 @@
     $('stat-reset').addEventListener('click',()=>{const p=ensureStatRuntime();if(!p)return;statRuntime.reset();bindStatsToPreview(p);syncPreviewControls();updateStatReadouts();setStatus('Restored stat defaults for '+p.id);});
     $('upload').addEventListener('change',async e=>{try{const files=[...e.target.files];for(const f of files.filter(f=>/\.zip$/i.test(f.name)))await importZip(f);const others=files.filter(f=>!/\.zip$/i.test(f.name));if(others.length)await importFiles(others);$('import-info').textContent=imports.size+' local files/packs loaded';}catch(err){setStatus(err.message,true)}finally{e.target.value='';}});
     // Examples are published entries, not hardcoded private fixture downloads.
-    $('public-example').addEventListener('change',()=>{$('load-demo').disabled=!$('public-example').value;});
-    $('load-demo').addEventListener('click',async()=>{
-      const requested=$('public-example').value;if(!requested)return;
-      try{await openPublished(requested);}catch(e){setStatus(e.message,true);}
+    $('public-example').addEventListener('change',()=>{$('open-collection').disabled=!$('public-example').value;});
+    $('open-collection').addEventListener('click',async()=>{
+      const picker=$('public-example'),button=$('open-collection'),requested=picker.value;
+      if(!requested)return;
+      picker.disabled=button.disabled=true;
+      try{await restored;await openPublished(requested);}catch(e){setStatus(e.message,true);}
+      finally{picker.disabled=false;button.disabled=!picker.value;}
     });
     $('clear-imports').addEventListener('click',()=>mutateRegistry(async()=>{for(const id of [...bags.keys()])await releaseBag(id);for(const [id,a] of library)if(a.source!=='Official Icon Atlas')library.delete(id);for(const [key,t] of textures)if(!key.startsWith('official:')){if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);}imports.clear();interfaces.clear();previewProfiles.clear();statProfiles.clear();driveDriver=null;activeStatId=null;statRuntime=null;try{await BagStore.clear();}catch{}$('import-info').textContent='Built-in Icon Atlas loaded automatically';bagScope=null;bagGroup='';scene.layers=[];scene.selectedLayer=-1;selectAsset(null);layerInputs();refreshTimeline();renderControlPanel();refreshList();renderBag();setStatus('All private bag imports cleared. Public icons remain.');}));
     $('bag-show-all').addEventListener('click',()=>{bagScope=null;bagGroup='';renderBag();refreshList();});

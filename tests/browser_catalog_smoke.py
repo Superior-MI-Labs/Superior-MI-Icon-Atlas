@@ -279,8 +279,12 @@ def check(page,published_only=False):
     picker=page.locator("#public-example")
     expect(picker.locator('option[value="royal-forge-complete.zip"]')).to_have_count(1)
     assert picker.locator('option[value="starter-pack.zip"]').count()==0
+    button=page.locator("#open-collection")
+    expect(button).to_be_visible()
+    expect(button).to_be_disabled()
     picker.select_option("royal-forge-complete.zip")
-    page.locator("#load-demo").click()
+    expect(button).to_be_enabled()
+    button.click()
     expect(page.locator("#preview-name")).to_have_text("Royal Forge Complete Gameplay HUD",timeout=20000)
     # Overlapping ZIPs share identical IDs, and removing one bag must not
     # remove assets still owned by the other.
@@ -296,6 +300,43 @@ def check(page,published_only=False):
     page.locator("#asset-search").fill("smi.ui.fantasy01.wave2.widget.action-inventory-hud")
     page.locator('#asset-list [data-asset-id="smi.ui.fantasy01.wave2.widget.action-inventory-hud"]').click()
     expect(page.locator("#preview-name")).to_have_text("Royal Forge Action and Inventory HUD")
+    # Reverse ownership order: the complete pack's regions must survive its
+    # removal when a standalone source bag is still present.
+    if not published_only:
+        page.goto(url+"builder.html",wait_until="networkidle")
+        for filename,count in (("royal-forge-complete.zip",1),("royal-forge-controls.zip",2)):
+            page.locator("#upload").set_input_files(str(SITE/"demo"/filename))
+            expect(page.locator("#bag-count")).to_have_text(f"{count} ZIP"+("s" if count!=1 else ""),timeout=20000)
+        # A failed conflicting import must not replace assets or add a bag.
+        with TemporaryDirectory() as temp:
+            conflict=Path(temp)/"conflict.zip"
+            with ZipFile(SITE/"demo"/"royal-forge-controls.zip") as original, ZipFile(conflict,"w") as mutated:
+                for entry in original.infolist():
+                    data=original.read(entry.filename)
+                    if entry.filename=="manifest.json":
+                        doc=json.loads(data)
+                        doc["assets"][0]["name"]+=" conflicting copy"
+                        data=json.dumps(doc).encode()
+                    mutated.writestr(entry,data)
+            page.locator("#upload").set_input_files(str(conflict))
+            expect(page.locator("#builder-status")).to_contain_text("Conflicting asset ID",timeout=20000)
+            expect(page.locator("#bag-count")).to_have_text("2 ZIPs")
+        page.locator("#bag-list .bag-card").filter(has_text="Royal Forge Complete Gameplay HUD").get_by_role("button",name="Remove").click()
+        expect(page.locator("#bag-count")).to_have_text("1 ZIP")
+        expect(page.locator("#preview-name")).to_have_text("Royal Forge Action and Inventory HUD")
+        # Export the retained asset and re-open its portable dependency closure.
+        with page.expect_download() as saved:
+            page.locator("#export").click()
+        with TemporaryDirectory() as temp:
+            exported=Path(temp)/"retained-hud.zip"
+            saved.value.save_as(str(exported))
+            with ZipFile(exported) as archive:
+                index=json.loads(archive.read("collection.json"))
+                assert index["entry_asset"]=="smi.ui.fantasy01.wave2.widget.action-inventory-hud"
+                assert len(json.loads(archive.read("manifest.json"))["assets"])<219
+            page.goto(url+"builder.html",wait_until="networkidle")
+            page.locator("#upload").set_input_files(str(exported))
+            expect(page.locator("#preview-name")).to_have_text("Royal Forge Action and Inventory HUD",timeout=20000)
     # Experimental Sky scene: one canonical authored ZIP drives both the
     # interactive preview and catalog Builder import; no duplicated art data.
     page.goto(url+"sky-prototype.html",wait_until="domcontentloaded")
