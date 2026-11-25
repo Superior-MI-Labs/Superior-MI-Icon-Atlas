@@ -89,6 +89,22 @@ class PublicCatalogTests(unittest.TestCase):
             self.assertNotIn('catalog-data.js',home)
             self.assertIn('public-catalog.json',(site/'app.js').read_text())
             self.assertIn('asset-renderer.js',(site/'builder.html').read_text())
+    def test_derived_capabilities_propagate_animation_not_semantic_claims(self):
+        from tools.build_site import visual_capabilities
+        assets={
+            'r':{'id':'r','kind':'region','pivot':[.5,1],'tags':['wind-responsive']},
+            's':{'id':'s','kind':'sequence','frames':[{'asset':'r'}]},
+            'v':{'id':'v','kind':'state_set','states':{'idle':'r','walk':'s'}},
+            'c':{'id':'c','kind':'composition','layers':[{'asset':'v'}],
+                 'inputs':{'open':{'type':'boolean','default':False}},
+                 'behavior':{'on':{'use':[{'op':'toggle','input':'open'}]}}}
+        }
+        memo={}
+        self.assertEqual(visual_capabilities(assets['r'],assets,memo),['authored-pivot'])
+        self.assertEqual(visual_capabilities(assets['v'],assets,memo),['animated','states'])
+        self.assertEqual(visual_capabilities(assets['c'],assets,memo),['animated','layered','typed-inputs','visual-events','world-use'])
+        self.assertNotIn('wind-responsive',memo['r'])
+
     def test_showcase_reference_contract_rejects_unsafe_or_unpublished_pages(self):
         from tools.build_site import resolve_showcases
         with tempfile.TemporaryDirectory() as root:

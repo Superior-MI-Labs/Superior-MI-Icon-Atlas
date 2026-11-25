@@ -8,7 +8,7 @@
   let preset=null,chosenState=null,controls={},slotChoices={};
   let activePreview=0,cardObserver,detailRendering=false,lastDetailSignature=null;
   let synonyms={},styleLabels={};
-  const FACETS=['kind','pack','domain','style','subject','status','review','license','animated','experience'];
+  const FACETS=['kind','pack','domain','style','subject','status','review','license','animated','experience','capability','interface'];
   const legacyImageCache=new Map();
   const PAGE=24;
   function contextFor(assets){return {assets,renderer:Renderer.create({getAsset:id=>assets.get(id),getImage:imageFor,slots:Slots,timeline:Timeline,visualCore:VisualCore})};}
@@ -27,6 +27,7 @@
     if(key==='kind')return value==='state_set'?'State variants':human(value);
     if(key==='experience')return value==='playable'?'Playable demos':human(value);
     if(key==='subject')return value.split('.').map(human).join(' › ');
+    if(key==='interface')return value;
     return human(value);
   }
   function refreshFacets(params){

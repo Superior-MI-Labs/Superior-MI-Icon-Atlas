@@ -33,6 +33,35 @@ def resolve_showcases(index,manifests,dest):
     return links,keywords
 
 
+def visual_capabilities(asset, lookup, memo, active=None):
+    """Derived affordances, not a certification of host or art compatibility."""
+    ident=asset['id']
+    if ident in memo:return memo[ident]
+    active=set() if active is None else active
+    if ident in active:raise ValueError('Cyclic published asset '+ident)
+    active.add(ident)
+    kind=asset['kind'];caps=set()
+    if kind=='sequence' or asset.get('duration_ms'):caps.add('animated')
+    if kind=='state_set':caps.add('states')
+    if kind=='composition':
+        caps.add('layered')
+        if asset.get('inputs'):caps.add('typed-inputs')
+        if asset.get('slots'):caps.add('compatible-slots')
+        if asset.get('presets'):caps.add('presets')
+        if asset.get('behavior',{}).get('on'):caps.add('visual-events')
+        if 'use' in asset.get('behavior',{}).get('on',{}):caps.add('world-use')
+    if asset.get('pivot') is not None:caps.add('authored-pivot')
+    if asset.get('implements'):caps.add('slot-component')
+    refs=([f['asset'] for f in asset['frames']] if kind=='sequence' else
+          list(asset['states'].values()) if kind=='state_set' else
+          [l['asset'] for l in asset.get('layers',[]) if 'asset' in l]+
+          [v for s in asset.get('slots',{}).values() for v in s['options']] if kind=='composition' else [])
+    for ref in refs:
+        if ref not in lookup:raise ValueError('Missing published dependency '+ref)
+        if 'animated' in visual_capabilities(lookup[ref],lookup,memo,active):caps.add('animated')
+    active.remove(ident);memo[ident]=sorted(caps);return memo[ident]
+
+
 def build(dest:Path|None=None):
     dest=Path(dest or ROOT/'site').resolve()
     m=load(ROOT)
@@ -201,6 +230,11 @@ for(const texture of Object.values(pack.textures)){
         if any(l in ('UNSPECIFIED','UNKNOWN','') for l in pubpack['license']):raise ValueError('Unknown public license')
         public_packs.append(pubpack)
         showcases,keywords=resolve_showcases(index,manifests,dest)
+        # Resolve dependencies from the exact derived archive (including bundled packs).
+        with ZipFile(dest/'demo'/zip_name) as archive:
+            runtime_index=json.loads(archive.read('collection.json'))
+            runtime_packs=[json.loads(archive.read(ref['manifest'])) for ref in runtime_index['packs']]
+        lookup={a['id']:a for pack in runtime_packs for a in pack['assets']};cap_memo={}
         for pack in manifests:
             # Inherit style only when every styled source region agrees.
             region_styles={a['style'] for a in pack['assets'] if a['kind']=='region' and a.get('style')}
@@ -210,7 +244,10 @@ for(const texture of Object.values(pack.textures)){
                 if ident in seen_ids:raise ValueError('Duplicate public asset: '+ident)
                 seen_ids.add(ident)
                 # Exact names and tags come from the canonical manifest.
+                capabilities=visual_capabilities(a,lookup,cap_memo)
                 public_assets.append({
+                    'capabilities':capabilities,'interfaces':sorted(a.get('implements',[])),
+                    'slot_interfaces':sorted({v['accepts'] for v in a.get('slots',{}).values()}),
                     'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
                     'kind':a['kind'],'discovery':a.get('discovery','standalone'),'style':a.get('style') or inherited_style,
                     'tags':a.get('tags',[]),'subjects':a.get('subjects',[]),
@@ -221,7 +258,7 @@ for(const texture of Object.values(pack.textures)){
                     'pack':pack_name,
                     'published':record['published'],'visual_qa':record['visual_qa'],'license':a.get('license',pack.get('license','')),
                     'category':index.get('name',pack_name),
-                    'animated':a['kind']=='sequence' or bool(a.get('duration_ms')),
+                    'animated':'animated' in capabilities,
                     'previewable':a['kind']!='region' or bool(a.get('rect_px'))
                 })
     if not any(a['kind']=='composition' for a in public_assets):raise ValueError('No published finished compositions')
