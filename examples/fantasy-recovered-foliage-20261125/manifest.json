@@ -1,0 +1,595 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.world.fantasy.recovered.foliage-20261125",
+  "version": "0.1.0",
+  "description": "Curated recovered foliage billboard previews",
+  "license": "CC0-1.0",
+  "textures": {
+    "sheet": {
+      "path": "textures/sheet.png",
+      "width_px": 1024,
+      "height_px": 566,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "333ea6a0575bc2e25fac82e16b41a2c083c2efeba8afeadbc6d84c152658a12f"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.azure-leaf",
+      "kind": "region",
+      "name": "Azure Leaf",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        8,
+        8,
+        168,
+        160
+      ],
+      "logical_size_px": [
+        168,
+        160
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "azure leaf"
+      ],
+      "spatial": {
+        "height_ft": 1.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.ruby-round-bush",
+      "kind": "region",
+      "name": "Ruby Round Bush",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        192,
+        8,
+        143,
+        130
+      ],
+      "logical_size_px": [
+        143,
+        130
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "ruby round bush"
+      ],
+      "spatial": {
+        "height_ft": 2.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.scarlet-vine-shrub",
+      "kind": "region",
+      "name": "Scarlet Vine Shrub",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        351,
+        8,
+        140,
+        143
+      ],
+      "logical_size_px": [
+        140,
+        143
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "scarlet vine shrub"
+      ],
+      "spatial": {
+        "height_ft": 1.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.emerald-fern",
+      "kind": "region",
+      "name": "Emerald Fern",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        507,
+        8,
+        153,
+        154
+      ],
+      "logical_size_px": [
+        153,
+        154
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "emerald fern"
+      ],
+      "spatial": {
+        "height_ft": 1.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.blue-tipped-fern",
+      "kind": "region",
+      "name": "Blue Tipped Fern",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        676,
+        8,
+        149,
+        153
+      ],
+      "logical_size_px": [
+        149,
+        153
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "blue tipped fern"
+      ],
+      "spatial": {
+        "height_ft": 1.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.teal-round-bush",
+      "kind": "region",
+      "name": "Teal Round Bush",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        841,
+        8,
+        156,
+        143
+      ],
+      "logical_size_px": [
+        156,
+        143
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "teal round bush"
+      ],
+      "spatial": {
+        "height_ft": 2.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.sunset-shrub",
+      "kind": "region",
+      "name": "Sunset Shrub",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        8,
+        184,
+        174,
+        133
+      ],
+      "logical_size_px": [
+        174,
+        133
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "sunset shrub"
+      ],
+      "spatial": {
+        "height_ft": 1.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.gem-bush",
+      "kind": "region",
+      "name": "Gem Bush",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        198,
+        184,
+        146,
+        132
+      ],
+      "logical_size_px": [
+        146,
+        132
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "gem bush"
+      ],
+      "spatial": {
+        "height_ft": 2.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.orange-round-bush",
+      "kind": "region",
+      "name": "Orange Round Bush",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        360,
+        184,
+        154,
+        151
+      ],
+      "logical_size_px": [
+        154,
+        151
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "orange round bush"
+      ],
+      "spatial": {
+        "height_ft": 2.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.natural-fern",
+      "kind": "region",
+      "name": "Natural Fern",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        530,
+        184,
+        144,
+        110
+      ],
+      "logical_size_px": [
+        144,
+        110
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "natural fern"
+      ],
+      "spatial": {
+        "height_ft": 1.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.natural-round-bush",
+      "kind": "region",
+      "name": "Natural Round Bush",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        690,
+        184,
+        160,
+        150
+      ],
+      "logical_size_px": [
+        160,
+        150
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "natural round bush"
+      ],
+      "spatial": {
+        "height_ft": 2.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.berry-bush",
+      "kind": "region",
+      "name": "Berry Bush",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        866,
+        184,
+        130,
+        116
+      ],
+      "logical_size_px": [
+        130,
+        116
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "berry bush"
+      ],
+      "spatial": {
+        "height_ft": 2.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.blueberry-bush",
+      "kind": "region",
+      "name": "Blueberry Bush",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        8,
+        351,
+        152,
+        134
+      ],
+      "logical_size_px": [
+        152,
+        134
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "blueberry bush"
+      ],
+      "spatial": {
+        "height_ft": 2.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.painted-hydrangea",
+      "kind": "region",
+      "name": "Painted Hydrangea",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "painted fantasy",
+      "texture": "sheet",
+      "rect_px": [
+        176,
+        351,
+        227,
+        201
+      ],
+      "logical_size_px": [
+        227,
+        201
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "painted hydrangea"
+      ],
+      "spatial": {
+        "height_ft": 3
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.painted-fern-cluster",
+      "kind": "region",
+      "name": "Painted Fern Cluster",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "painted fantasy",
+      "texture": "sheet",
+      "rect_px": [
+        419,
+        351,
+        231,
+        207
+      ],
+      "logical_size_px": [
+        231,
+        207
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "painted fern cluster"
+      ],
+      "spatial": {
+        "height_ft": 2
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.foliage-20261125.painted-agaric-cluster",
+      "kind": "region",
+      "name": "Painted Agaric Cluster",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "painted fantasy",
+      "texture": "sheet",
+      "rect_px": [
+        666,
+        351,
+        221,
+        197
+      ],
+      "logical_size_px": [
+        221,
+        197
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "foliage",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "foliage",
+        "painted agaric cluster"
+      ],
+      "spatial": {
+        "height_ft": 1.5
+      }
+    }
+  ]
+}

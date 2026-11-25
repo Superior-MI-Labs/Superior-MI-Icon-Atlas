@@ -1,0 +1,46 @@
+{
+  "smi.world.fantasy.recovered.chests-20261125.weathered-wood-chest": {
+    "source": "Isometric_chest_sprite_sheet_grid_93bf6a08.jpg",
+    "sheet": 17,
+    "row": 0,
+    "col": 5,
+    "size": [
+      192,
+      188
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.chests-20261125.brass-bound-chest": {
+    "source": "Isometric_chest_sprite_sheet_grid_93bf6a08.jpg",
+    "sheet": 17,
+    "row": 1,
+    "col": 0,
+    "size": [
+      180,
+      174
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.chests-20261125.royal-gold-chest": {
+    "source": "Isometric_chest_sprite_sheet_grid_93bf6a08.jpg",
+    "sheet": 17,
+    "row": 2,
+    "col": 0,
+    "size": [
+      190,
+      181
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.chests-20261125.azure-runic-chest": {
+    "source": "Isometric_chest_sprite_sheet_grid_93bf6a08.jpg",
+    "sheet": 17,
+    "row": 3,
+    "col": 0,
+    "size": [
+      176,
+      181
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  }
+}

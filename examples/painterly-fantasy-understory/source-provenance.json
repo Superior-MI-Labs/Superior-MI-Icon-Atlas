@@ -1,0 +1,22 @@
+{
+  "smi.world.fantasy.woodland-understory.clover": {
+    "source": "Previous generated woodland collection painterly-fantasy-understory",
+    "method": "Unchanged texture bytes and IDs from earlier package; selected for compact billboard or upright/attached detail."
+  },
+  "smi.world.fantasy.woodland-understory.broadleaf": {
+    "source": "Previous generated woodland collection painterly-fantasy-understory",
+    "method": "Unchanged texture bytes and IDs from earlier package; selected for compact billboard or upright/attached detail."
+  },
+  "smi.world.fantasy.woodland-understory.bramble": {
+    "source": "Previous generated woodland collection painterly-fantasy-understory",
+    "method": "Unchanged texture bytes and IDs from earlier package; selected for compact billboard or upright/attached detail."
+  },
+  "smi.world.fantasy.woodland-understory.anemones": {
+    "source": "Previous generated woodland collection painterly-fantasy-understory",
+    "method": "Unchanged texture bytes and IDs from earlier package; selected for compact billboard or upright/attached detail."
+  },
+  "smi.world.fantasy.woodland-understory.succulent": {
+    "source": "Previous generated woodland collection painterly-fantasy-understory",
+    "method": "Unchanged texture bytes and IDs from earlier package; selected for compact billboard or upright/attached detail."
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "schema": "smi-visual-scenarios/1",
+  "description": "Curated single-view foliage preview; no exact isometric angle certified.",
+  "cases": [
+    {
+      "id": "painterly-fantasy-woodland-region-0",
+      "pack": "painterly-fantasy-woodland.zip",
+      "asset": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.woodland-fern",
+      "preview_name": "Woodland fern",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-woodland-region-1",
+      "pack": "painterly-fantasy-woodland.zip",
+      "asset": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.wildflower-cluster",
+      "preview_name": "Wildflower cluster",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-woodland-region-2",
+      "pack": "painterly-fantasy-woodland.zip",
+      "asset": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.berry-bush",
+      "preview_name": "Woodland berry bush",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-woodland-region-3",
+      "pack": "painterly-fantasy-woodland.zip",
+      "asset": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.large-fern",
+      "preview_name": "Large woodland fern",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-woodland-region-4",
+      "pack": "painterly-fantasy-woodland.zip",
+      "asset": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.crimson-bush",
+      "preview_name": "Crimson berry bush",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-woodland-region-5",
+      "pack": "painterly-fantasy-woodland.zip",
+      "asset": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.cattail-cluster",
+      "preview_name": "Cattail cluster",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-woodland-region-6",
+      "pack": "painterly-fantasy-woodland.zip",
+      "asset": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.marsh-reeds",
+      "preview_name": "Marsh reeds",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-woodland-region-7",
+      "pack": "painterly-fantasy-woodland.zip",
+      "asset": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.trailing-ivy",
+      "preview_name": "Trailing ivy",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-woodland-region-8",
+      "pack": "painterly-fantasy-woodland.zip",
+      "asset": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.flowering-vine",
+      "preview_name": "Flowering hanging vine",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    }
+  ]
+}

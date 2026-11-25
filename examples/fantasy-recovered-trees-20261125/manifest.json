@@ -1,0 +1,91 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.world.fantasy.recovered.trees-20261125",
+  "version": "0.1.0",
+  "description": "Curated recovered trees billboard previews",
+  "license": "CC0-1.0",
+  "textures": {
+    "sheet": {
+      "path": "textures/sheet.png",
+      "width_px": 1024,
+      "height_px": 242,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "c11322a1a20cab75c9e3521efff8541a6de0713d505dbd173e82ff0740ec7b9f"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.world.fantasy.recovered.trees-20261125.golden-tree",
+      "kind": "region",
+      "name": "Golden Tree",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        8,
+        8,
+        110,
+        158
+      ],
+      "logical_size_px": [
+        110,
+        158
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "trees",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "trees",
+        "golden tree"
+      ],
+      "spatial": {
+        "height_ft": 16
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.trees-20261125.painted-broadleaf-tree",
+      "kind": "region",
+      "name": "Painted Broadleaf Tree",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "painted fantasy",
+      "texture": "sheet",
+      "rect_px": [
+        134,
+        8,
+        219,
+        226
+      ],
+      "logical_size_px": [
+        219,
+        226
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "trees",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "trees",
+        "painted broadleaf tree"
+      ],
+      "spatial": {
+        "height_ft": 18
+      }
+    }
+  ]
+}

@@ -26,7 +26,13 @@ jobs:
       - name: Install browser visual QA dependencies
         run: python3 -m pip install playwright && python3 -m playwright install --with-deps chromium
       - name: Check animated states, GUI fills, layered effects and preset visuals
-        run: python3 tests/browser_visual_matrix.py --spec tests/visual-scenarios.json --out /tmp/smi-visual-render-qa
+        run: |
+          python3 tests/browser_visual_matrix.py --spec tests/visual-scenarios.json --out /tmp/smi-visual-render-qa
+          for spec in tests/visual-packs/*/*.json; do
+            [ -f "$spec" ] || continue
+            slug=$(basename "$(dirname "$spec")")
+            python3 tests/browser_visual_matrix.py --spec "$spec" --out "/tmp/smi-visual-render-qa/packs/$slug/$(basename "$spec" .json)"
+          done
       - name: Render all 48 published pixel icons and item interactions in the actual Builder
         run: python3 tests/browser_visual_matrix.py --spec tests/pixel-release-scenarios.json --out /tmp/smi-pixel-visual-qa
       - name: Smoke-test the public browser and responsive filters

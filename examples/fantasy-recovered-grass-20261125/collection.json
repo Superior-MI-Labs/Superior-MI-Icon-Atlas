@@ -1,0 +1,14 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.world.fantasy.recovered.grass-20261125.collection",
+  "name": "Fantasy Recovered Grass 20261125",
+  "version": "0.1.0",
+  "description": "Recovered grass as single-view sprites, suitable for review at small game scale. Chests and asymmetric trees are static previews, not six-angle production sets.",
+  "entry_asset": "smi.world.fantasy.recovered.grass-20261125.green-grass-01",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Fantasy Recovered Grass 20261125"
+    }
+  ]
+}

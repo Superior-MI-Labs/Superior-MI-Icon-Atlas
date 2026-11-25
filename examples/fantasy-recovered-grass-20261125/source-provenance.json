@@ -1,0 +1,134 @@
+{
+  "smi.world.fantasy.recovered.grass-20261125.green-grass-01": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 0,
+    "col": 0,
+    "size": [
+      135,
+      93
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.grass-20261125.green-grass-02": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 0,
+    "col": 2,
+    "size": [
+      129,
+      100
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.grass-20261125.green-grass-03": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 0,
+    "col": 4,
+    "size": [
+      129,
+      99
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.grass-20261125.golden-dry-grass-01": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 1,
+    "col": 0,
+    "size": [
+      148,
+      167
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.grass-20261125.golden-dry-grass-02": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 1,
+    "col": 2,
+    "size": [
+      149,
+      145
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.grass-20261125.golden-dry-grass-03": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 1,
+    "col": 4,
+    "size": [
+      161,
+      157
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.grass-20261125.violet-fantasy-grass-01": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 2,
+    "col": 0,
+    "size": [
+      129,
+      141
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.grass-20261125.violet-fantasy-grass-02": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 2,
+    "col": 2,
+    "size": [
+      142,
+      135
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.grass-20261125.violet-fantasy-grass-03": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 2,
+    "col": 4,
+    "size": [
+      122,
+      129
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.grass-20261125.teal-grass-01": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 3,
+    "col": 0,
+    "size": [
+      158,
+      155
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.grass-20261125.teal-grass-02": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 3,
+    "col": 2,
+    "size": [
+      151,
+      156
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.grass-20261125.teal-grass-03": {
+    "source": "Isometric_grass_asset_sprite_sheet_cebf675e.jpg",
+    "sheet": 12,
+    "row": 3,
+    "col": 4,
+    "size": [
+      154,
+      150
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  }
+}

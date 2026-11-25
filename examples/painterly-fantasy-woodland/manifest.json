@@ -1,0 +1,397 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31",
+  "version": "0.1.0",
+  "description": "Curated single-view foliage preview; no exact isometric angle certified.",
+  "license": "CC0-1.0",
+  "textures": {
+    "large-fern": {
+      "path": "textures/large-fern.png",
+      "width_px": 721,
+      "height_px": 512,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "61a6bde14fe3cbc681d7a5be727c68902a58b7b38e57675c24959c10cad8f492"
+    },
+    "trailing-ivy": {
+      "path": "textures/trailing-ivy.png",
+      "width_px": 300,
+      "height_px": 386,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "6d518879aa4d7b379bbd50cb4d469e1e3f65bdb44c21212c7734fc0c02fd5373"
+    },
+    "crimson-bush": {
+      "path": "textures/crimson-bush.png",
+      "width_px": 450,
+      "height_px": 318,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "db734c93f8cded36d08f85cbaed762e008c966ea5f47f1ed5374a695d77b8f07"
+    },
+    "cattail-cluster": {
+      "path": "textures/cattail-cluster.png",
+      "width_px": 352,
+      "height_px": 325,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "330887a811a826e41c7ecb42f7d5de2a2b92059cf70c11c12fe3e4ea25a94946"
+    },
+    "wildflower-cluster": {
+      "path": "textures/wildflower-cluster.png",
+      "width_px": 271,
+      "height_px": 256,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "98b508a099421f15c0994c9958c24718f070e52c977af1d7081c66ac6455e6ab"
+    },
+    "flowering-vine": {
+      "path": "textures/flowering-vine.png",
+      "width_px": 325,
+      "height_px": 380,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "6dc393b4531de7cf9ac044ff11f1b95731069348630a2456c0e0382b85a0b808"
+    },
+    "woodland-fern": {
+      "path": "textures/woodland-fern.png",
+      "width_px": 620,
+      "height_px": 512,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "b0d4a2193c6624f28e6950f6667ec740a47eac18d355a7ff07ce9834c3bf5d6e"
+    },
+    "berry-bush": {
+      "path": "textures/berry-bush.png",
+      "width_px": 654,
+      "height_px": 512,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "971b441804406832dae126934e2df2842bbeb9bad9da58df14b5467b0c2492ae"
+    },
+    "marsh-reeds": {
+      "path": "textures/marsh-reeds.png",
+      "width_px": 365,
+      "height_px": 381,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "59caf1a1845668e7e14f72ab9cd5cf8a5a09b4aa1f11efa01aed3a38a4c4653e"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.woodland-fern",
+      "kind": "region",
+      "name": "Woodland fern",
+      "description": "Independent painterly fantasy vegetation sprite with an estimated root anchor.",
+      "style": "painterly fantasy",
+      "texture": "woodland-fern",
+      "rect_px": [
+        0,
+        0,
+        620,
+        512
+      ],
+      "logical_size_px": [
+        620,
+        512
+      ],
+      "pivot": [
+        0.498769,
+        0.736717
+      ],
+      "tags": [
+        "fern",
+        "foliage",
+        "woodland",
+        "green",
+        "fantasy"
+      ],
+      "subjects": [
+        "fern",
+        "vegetation",
+        "foliage"
+      ],
+      "domain": "world-environment"
+    },
+    {
+      "id": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.wildflower-cluster",
+      "kind": "region",
+      "name": "Wildflower cluster",
+      "description": "Independent painterly fantasy vegetation sprite with an estimated root anchor.",
+      "style": "painterly fantasy",
+      "texture": "wildflower-cluster",
+      "rect_px": [
+        0,
+        0,
+        271,
+        256
+      ],
+      "logical_size_px": [
+        271,
+        256
+      ],
+      "pivot": [
+        0.496697,
+        0.861037
+      ],
+      "tags": [
+        "wildflowers",
+        "foliage",
+        "flowers",
+        "meadow",
+        "fantasy"
+      ],
+      "subjects": [
+        "wildflowers",
+        "flowers",
+        "vegetation"
+      ],
+      "domain": "world-environment"
+    },
+    {
+      "id": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.berry-bush",
+      "kind": "region",
+      "name": "Woodland berry bush",
+      "description": "Independent painterly fantasy vegetation sprite with an estimated root anchor.",
+      "style": "painterly fantasy",
+      "texture": "berry-bush",
+      "rect_px": [
+        0,
+        0,
+        654,
+        512
+      ],
+      "logical_size_px": [
+        654,
+        512
+      ],
+      "pivot": [
+        0.503209,
+        0.949521
+      ],
+      "tags": [
+        "berries",
+        "bush",
+        "foliage",
+        "woodland",
+        "fantasy"
+      ],
+      "subjects": [
+        "berry bush",
+        "shrub",
+        "foliage"
+      ],
+      "domain": "world-environment"
+    },
+    {
+      "id": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.large-fern",
+      "kind": "region",
+      "name": "Large woodland fern",
+      "description": "Independent painterly fantasy sprite with visually estimated root anchor.",
+      "style": "painterly fantasy",
+      "texture": "large-fern",
+      "rect_px": [
+        0,
+        0,
+        721,
+        512
+      ],
+      "logical_size_px": [
+        721,
+        512
+      ],
+      "pivot": [
+        0.510948,
+        0.850388
+      ],
+      "tags": [
+        "fern",
+        "woodland",
+        "green",
+        "foliage",
+        "fantasy"
+      ],
+      "subjects": [
+        "fern",
+        "vegetation",
+        "foliage"
+      ],
+      "domain": "world-environment"
+    },
+    {
+      "id": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.crimson-bush",
+      "kind": "region",
+      "name": "Crimson berry bush",
+      "description": "Independent painterly fantasy sprite with visually estimated root anchor.",
+      "style": "painterly fantasy",
+      "texture": "crimson-bush",
+      "rect_px": [
+        0,
+        0,
+        450,
+        318
+      ],
+      "logical_size_px": [
+        450,
+        318
+      ],
+      "pivot": [
+        0.493333,
+        0.95283
+      ],
+      "tags": [
+        "bush",
+        "crimson",
+        "berries",
+        "foliage",
+        "fantasy"
+      ],
+      "subjects": [
+        "berry bush",
+        "shrub",
+        "foliage"
+      ],
+      "domain": "world-environment"
+    },
+    {
+      "id": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.cattail-cluster",
+      "kind": "region",
+      "name": "Cattail cluster",
+      "description": "Independent painterly fantasy sprite with visually estimated root anchor.",
+      "style": "painterly fantasy",
+      "texture": "cattail-cluster",
+      "rect_px": [
+        0,
+        0,
+        352,
+        325
+      ],
+      "logical_size_px": [
+        352,
+        325
+      ],
+      "pivot": [
+        0.517045,
+        0.944615
+      ],
+      "tags": [
+        "wetland",
+        "cattails",
+        "reeds",
+        "foliage",
+        "fantasy"
+      ],
+      "subjects": [
+        "cattails",
+        "reeds",
+        "wetland vegetation"
+      ],
+      "domain": "world-environment"
+    },
+    {
+      "id": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.marsh-reeds",
+      "kind": "region",
+      "name": "Marsh reeds",
+      "description": "Independent painterly fantasy sprite with visually estimated root anchor.",
+      "style": "painterly fantasy",
+      "texture": "marsh-reeds",
+      "rect_px": [
+        0,
+        0,
+        365,
+        381
+      ],
+      "logical_size_px": [
+        365,
+        381
+      ],
+      "pivot": [
+        0.473973,
+        0.963255
+      ],
+      "tags": [
+        "wetland",
+        "reeds",
+        "grass",
+        "foliage",
+        "fantasy"
+      ],
+      "subjects": [
+        "reeds",
+        "wetland vegetation"
+      ],
+      "domain": "world-environment"
+    },
+    {
+      "id": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.trailing-ivy",
+      "kind": "region",
+      "name": "Trailing ivy",
+      "description": "Independent painterly fantasy sprite with visually estimated attachment anchor.",
+      "style": "painterly fantasy",
+      "texture": "trailing-ivy",
+      "rect_px": [
+        0,
+        0,
+        300,
+        386
+      ],
+      "logical_size_px": [
+        300,
+        386
+      ],
+      "pivot": [
+        0.51,
+        0.049223
+      ],
+      "tags": [
+        "ivy",
+        "vine",
+        "hanging",
+        "foliage",
+        "fantasy"
+      ],
+      "subjects": [
+        "ivy",
+        "vine",
+        "foliage"
+      ],
+      "domain": "world-environment"
+    },
+    {
+      "id": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.flowering-vine",
+      "kind": "region",
+      "name": "Flowering hanging vine",
+      "description": "Independent painterly fantasy sprite with visually estimated attachment anchor.",
+      "style": "painterly fantasy",
+      "texture": "flowering-vine",
+      "rect_px": [
+        0,
+        0,
+        325,
+        380
+      ],
+      "logical_size_px": [
+        325,
+        380
+      ],
+      "pivot": [
+        0.507692,
+        0.05
+      ],
+      "tags": [
+        "flowers",
+        "vine",
+        "hanging",
+        "foliage",
+        "fantasy"
+      ],
+      "subjects": [
+        "flowering vine",
+        "vine",
+        "flowers"
+      ],
+      "domain": "world-environment"
+    }
+  ]
+}

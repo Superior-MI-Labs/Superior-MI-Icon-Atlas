@@ -1,0 +1,390 @@
+{
+  "schema": "smi-visual-scenarios/1",
+  "description": "Recovered foliage as single-view sprites, suitable for review at small game scale. Chests and asymmetric trees are static previews, not six-angle production sets.",
+  "cases": [
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-0",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.azure-leaf",
+      "preview_name": "Azure Leaf",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-1",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.ruby-round-bush",
+      "preview_name": "Ruby Round Bush",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-2",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.scarlet-vine-shrub",
+      "preview_name": "Scarlet Vine Shrub",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-3",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.emerald-fern",
+      "preview_name": "Emerald Fern",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-4",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.blue-tipped-fern",
+      "preview_name": "Blue Tipped Fern",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-5",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.teal-round-bush",
+      "preview_name": "Teal Round Bush",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-6",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.sunset-shrub",
+      "preview_name": "Sunset Shrub",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-7",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.gem-bush",
+      "preview_name": "Gem Bush",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-8",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.orange-round-bush",
+      "preview_name": "Orange Round Bush",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-9",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.natural-fern",
+      "preview_name": "Natural Fern",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-10",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.natural-round-bush",
+      "preview_name": "Natural Round Bush",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-11",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.berry-bush",
+      "preview_name": "Berry Bush",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-12",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.blueberry-bush",
+      "preview_name": "Blueberry Bush",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-13",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.painted-hydrangea",
+      "preview_name": "Painted Hydrangea",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-14",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.painted-fern-cluster",
+      "preview_name": "Painted Fern Cluster",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-foliage-20261125-region-15",
+      "pack": "fantasy-recovered-foliage-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.foliage-20261125.painted-agaric-cluster",
+      "preview_name": "Painted Agaric Cluster",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    }
+  ]
+}

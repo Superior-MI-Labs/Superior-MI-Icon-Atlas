@@ -1,0 +1,294 @@
+{
+  "schema": "smi-visual-scenarios/1",
+  "description": "Recovered grass as single-view sprites, suitable for review at small game scale. Chests and asymmetric trees are static previews, not six-angle production sets.",
+  "cases": [
+    {
+      "id": "fantasy-recovered-grass-20261125-region-0",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.green-grass-01",
+      "preview_name": "Green Grass 01",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-grass-20261125-region-1",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.green-grass-02",
+      "preview_name": "Green Grass 02",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-grass-20261125-region-2",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.green-grass-03",
+      "preview_name": "Green Grass 03",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-grass-20261125-region-3",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.golden-dry-grass-01",
+      "preview_name": "Golden Dry Grass 01",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-grass-20261125-region-4",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.golden-dry-grass-02",
+      "preview_name": "Golden Dry Grass 02",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-grass-20261125-region-5",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.golden-dry-grass-03",
+      "preview_name": "Golden Dry Grass 03",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-grass-20261125-region-6",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.violet-fantasy-grass-01",
+      "preview_name": "Violet Fantasy Grass 01",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-grass-20261125-region-7",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.violet-fantasy-grass-02",
+      "preview_name": "Violet Fantasy Grass 02",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-grass-20261125-region-8",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.violet-fantasy-grass-03",
+      "preview_name": "Violet Fantasy Grass 03",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-grass-20261125-region-9",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.teal-grass-01",
+      "preview_name": "Teal Grass 01",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-grass-20261125-region-10",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.teal-grass-02",
+      "preview_name": "Teal Grass 02",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-grass-20261125-region-11",
+      "pack": "fantasy-recovered-grass-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.grass-20261125.teal-grass-03",
+      "preview_name": "Teal Grass 03",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    }
+  ]
+}

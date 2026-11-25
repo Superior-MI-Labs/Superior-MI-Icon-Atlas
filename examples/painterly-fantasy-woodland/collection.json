@@ -1,0 +1,14 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.collection",
+  "name": "Painterly Fantasy Woodland",
+  "version": "0.1.0",
+  "description": "Curated single-view foliage preview; no exact isometric angle certified.",
+  "entry_asset": "smi.hex.fantasy.foliage.woodland-pilot-261b9a31.woodland-fern",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Painterly Fantasy Woodland"
+    }
+  ]
+}
