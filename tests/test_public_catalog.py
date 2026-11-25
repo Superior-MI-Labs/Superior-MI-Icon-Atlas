@@ -158,6 +158,7 @@ class PublicCatalogTests(unittest.TestCase):
             self.assertTrue((site/'demo/royal-forge-controls.zip').is_file())
             self.assertTrue((site/'demo/royal-forge-hud-resources.zip').is_file())
             self.assertTrue((site/'demo/royal-forge-complete.zip').is_file())
+            self.assertTrue((site/'demo/minimal-white-tech.zip').is_file())
             self.assertTrue((site/'demo/pixel-fantasy-icons.zip').is_file())
             self.assertIn('fantasy-rpg-hud-wave1.zip',(site/'ai-guide.html').read_text())
             for doc in (site/'ai').rglob('*.md'):

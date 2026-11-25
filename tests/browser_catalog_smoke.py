@@ -46,7 +46,7 @@ def check(page,published_only=False):
     page.locator("#clear-filters").click()
 
     page.locator("#scope").select_option("components")
-    expect(page.locator("#count")).to_have_text("439 matches")
+    expect(page.locator("#count")).to_have_text("639 matches")
     page.locator("#clear-filters").click()
     expect(page.locator("#count")).to_have_text(published_matches())
     page.locator("#search").fill("healthbar")

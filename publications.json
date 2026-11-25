@@ -124,6 +124,14 @@
         "examples/royal-forge-hud-resources",
         "examples/royal-forge-controls"
       ]
+    },
+    {
+      "path": "examples/minimal-white-tech",
+      "published": "2026-11-25",
+      "approval": "Creator explicitly requested public release and CC0-1.0 dedication, attribution welcome but not required. Automated validation required; manual artistic QA pending.",
+      "rights": "CC0-1.0 original geometric artwork; attribution welcome, not required",
+      "expected_assets": 362,
+      "visual_qa": "pending"
     }
   ]
 }
