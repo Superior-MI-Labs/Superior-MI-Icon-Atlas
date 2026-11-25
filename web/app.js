@@ -57,19 +57,8 @@
     const loader=(async()=>{
       const pack=collections.get(id);if(!pack)throw Error('Unknown collection '+id);
       const response=await fetch(pack.zip);if(!response.ok)throw Error('Could not retrieve '+pack.name);
-      const blob=await response.blob();if(blob.size>120*1024*1024)throw Error('Oversize collection');
-      const zip=await JSZip.loadAsync(blob,{checkCRC32:true});
-      const definitions=[];let index=null;
-      for(const file of Object.values(zip.files)){
-        if(file.dir||!/(?:^|\/)(?:manifest|collection)\.json$/i.test(file.name)||file._data?.uncompressedSize>8*1024*1024)continue;
-        const doc=JSON.parse(await file.async('string'));
-        if(doc.schema==='smi-visual-pack/1')definitions.push({path:file.name,pack:doc});
-        if(doc.schema==='smi-visual-collection/1'){
-          if(index)throw Error('Multiple collection indexes');index=doc;
-        }
-      }
-      if(!definitions.length)throw Error('No visual manifest found');
-      const resolved=Collections.resolveCollection(index,definitions,pack.name);
+      const blob=await response.blob();
+      const {zip,resolved}=await VisualAtlasZip.read(blob,{JSZip,Collections,name:pack.name});
       const merged=resolved.pack;
       if(Slots.validate(merged).length)throw Error('Invalid compatibility definitions in '+pack.name);
       const textureMap=new Map(),assets=new Map();

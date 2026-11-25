@@ -1,5 +1,6 @@
 """Public catalog is built only from explicitly approved source collections."""
 import json
+import hashlib
 import tempfile
 import unittest
 from pathlib import Path
@@ -35,6 +36,9 @@ class PublicCatalogTests(unittest.TestCase):
                 archive=site/'demo'/(folder.name+'.zip')
                 self.assertEqual(check(archive),[],str(archive))
                 self.assertTrue(archive.is_file())
+                pubpack=next(p for p in public['packs'] if p['id']==folder.name)
+                self.assertEqual(pubpack['archive_sha256'],hashlib.sha256(archive.read_bytes()).hexdigest())
+                self.assertTrue((site/'zip-core.js').is_file())
                 if folder.name=='royal-forge-complete':
                     with ZipFile(archive) as z:
                         index=json.loads(z.read('collection.json'))

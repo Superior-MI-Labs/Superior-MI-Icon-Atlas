@@ -2,6 +2,7 @@
 """Derive static browser projection from canonical per-atlas manifests, stdlib only."""
 from __future__ import annotations
 import json
+import hashlib
 import re
 from zipfile import ZipFile, ZIP_DEFLATED, ZipInfo
 from pathlib import Path
@@ -40,7 +41,7 @@ def build(dest:Path|None=None):
     if dest==ROOT or ROOT in dest.parents and 'sheets' in dest.parts:
         raise ValueError('Refusing to build over source')
     dest.mkdir(parents=True,exist_ok=True)
-    for name in ('index.html','styles.css','public-search.js','app.js','builder.html','builder.css','timeline-core.js','visual-core.js','input-core.js','collection-core.js','bag-store.js','interaction-core.js','stat-core.js','slot-core.js','asset-renderer.js','builder.js','ai-guide.html','sky-motion-lab.html'):
+    for name in ('index.html','styles.css','public-search.js','app.js','builder.html','builder.css','timeline-core.js','visual-core.js','input-core.js','collection-core.js','zip-core.js','bag-store.js','interaction-core.js','stat-core.js','slot-core.js','asset-renderer.js','builder.js','ai-guide.html','sky-motion-lab.html'):
         shutil.copy2(ROOT/'web'/name,dest/name)
     # Experimental preview sources; not a second Visual Atlas asset registry.
     motion_source=ROOT/'web'/'sky-motion-lab'
@@ -195,6 +196,7 @@ for(const texture of Object.values(pack.textures)){
         if not (dest/'demo'/zip_name).is_file():raise ValueError('Missing published runtime ZIP: '+zip_name)
         pubpack={'id':pack_name,'name':index.get('name',pack_name),'zip':'demo/'+zip_name,
                  'published':record['published'],'visual_qa':record['visual_qa'],'entry':index['entry_asset'],
+                 'archive_sha256':hashlib.sha256((dest/'demo'/zip_name).read_bytes()).hexdigest(),
                  'license':sorted({p.get('license','UNSPECIFIED') for p in manifests})}
         if any(l in ('UNSPECIFIED','UNKNOWN','') for l in pubpack['license']):raise ValueError('Unknown public license')
         public_packs.append(pubpack)
