@@ -29,7 +29,15 @@ Use a fresh visual-only context or explicit prompt/reference inputs when the ava
 
 Use the available tool's transparency control where supported. If the interface automatically derives prompts from the conversation and cannot isolate context, state the concise visual brief immediately before the call. This is a mitigation, not a guarantee. Never claim access to hidden rewritten prompts, seeds, session controls or reference controls.
 
-## 3. Generate, inspect, then expand
+## 3. Select a sheet layout reference
+
+For any generated multi-asset or multi-frame sheet, choose the closest [transparent grid reference](../templates/sprite-grids/index.html). Download its PNG and attach it as the layout reference when the image tool supports reference images. Use a separate approved art reference for style or identity if needed. Keep the visual brief positive: "Fill the referenced 3 × 2 arrangement with six individual woodland plants, one complete silhouette centered in each cell, with transparent gaps."
+
+Select by usable pixels per subject, not maximum count. Cell pitch is canvas width / columns and canvas height / rows; use the largest practical cell size for detailed artwork. For example, a 1024 × 1024 canvas with 2 × 2 cells and a 2048 × 1024 canvas with 4 × 2 cells both give nominal 512 × 512 cells. The thin gray lines are layout guides only; the finished artwork has transparent space between subjects. Request the closest supported aspect ratio and output size; the engine may resize the reference or alter spacing.
+
+If references cannot be attached, describe the same layout in the short visual brief and record that limitation. Single isolated objects and seamless textures need no grid. Inspect actual output geometry and alpha before packing; use measured crops, remove any guide contamination without damaging the art, and never assume the generated cells match the reference coordinates.
+
+## 4. Generate, inspect, then expand
 
 Start with a representative slice. For independent objects, 2–6 well-separated subjects is a practical starting group; adjust density to detail, spacing and actual successful yield. Use a single object for complex silhouettes. Expand groups and batch accepted processing when the slice works.
 
@@ -39,7 +47,7 @@ Classify each result ACCEPT (usable source), CORRECT (specific repair) or REJECT
 
 Record attempted groups, accepted/rejected sources, usable regions, correction method and actual available controls. Track usable regions per generation and quality, not advertised asset counts. Record observations separately from hypotheses about why a model failed. Routine production can provide this evidence; a separate benchmark is optional.
 
-## 4. Process source art deterministically
+## 5. Process source art deterministically
 
 Image generation supplies artistic pixels, not measured asset geometry or working behavior. Use actual pixel bounds, alpha and anchors to crop/repack into the existing canonical manifest. Create contact sheets, labels, overlays, documentation and QA receipts using deterministic tools after generation. Use genuine direction-specific artwork or vetted rigs for motion; avoid transforms that break identity or anatomy.
 
