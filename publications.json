@@ -112,6 +112,18 @@
       "approval": "Explicit creator request to release Sky as Prototype / Experimental, 2026-11-08. Interpolated frames are not artist-approved final animation.",
       "rights": "Original AI-generated art; owner approved public experimental showcasing. Evaluation-only: no commercial redistribution or CC0 dedication.",
       "visual_qa": "pending"
+    },
+    {
+      "path": "examples/royal-forge-complete",
+      "published": "2026-11-24",
+      "approval": "Owner-directed Royal Forge HUD consolidation using existing approved CC0 artwork; assembled layout pending visual review",
+      "rights": "CC0-1.0 original source artwork",
+      "expected_assets": 1,
+      "visual_qa": "pending",
+      "includes": [
+        "examples/royal-forge-hud-resources",
+        "examples/royal-forge-controls"
+      ]
     }
   ]
 }

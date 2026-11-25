@@ -64,6 +64,47 @@ def runtime_files(folder,index,packs):
     return files|textures,textures
 
 
+def archive_payload(root, folder, index, packs, record, publications):
+    """Package source-owned dependencies into an offline ZIP without copied source art."""
+    runtime,_=runtime_files(folder,index,packs)
+    files={file.relative_to(folder).as_posix():file for file in runtime}
+    includes=record.get("includes", []) if record else []
+    if not isinstance(includes,list) or any(not isinstance(key,str) for key in includes) or len(includes)!=len(set(includes)):
+        raise ValueError("invalid bundle dependencies")
+    if not includes:return files,None
+    if index is None:raise ValueError("bundle requires collection index")
+    registry={item["path"]:item for item in publications}
+    generated={**index,"packs":[dict(ref) for ref in index["packs"]]}
+    pack_ids={pack["pack_id"] for _,pack in packs}
+    asset_ids={asset["id"] for _,pack in packs for asset in pack["assets"]}
+    for key in includes:
+        source=registry.get(key)
+        if not source or key==record["path"] or source.get("includes"):
+            raise ValueError("bundle dependency must be a distinct, directly authored published collection: "+key)
+        path=Path(key)
+        if path.is_absolute() or len(path.parts)!=2 or path.parts[0]!="examples" or ".." in path.parts:
+            raise ValueError("unsafe bundle dependency: "+key)
+        source_folder=Path(root)/path
+        source_index,source_packs=read_collection(source_folder)
+        if source_index is None:raise ValueError("bundle dependency requires collection index: "+key)
+        prefix="packs/"+source_folder.name+"/"
+        for _,pack in source_packs:
+            if pack["pack_id"] in pack_ids:raise ValueError("duplicate bundled pack ID "+pack["pack_id"])
+            pack_ids.add(pack["pack_id"])
+            for asset in pack["assets"]:
+                if asset["id"] in asset_ids:raise ValueError("duplicate bundled asset ID "+asset["id"])
+                asset_ids.add(asset["id"])
+        for ref in source_index["packs"]:
+            generated["packs"].append({**ref,"manifest":prefix+ref["manifest"]})
+        payload,_=runtime_files(source_folder,source_index,source_packs)
+        for file in payload:
+            name=file.relative_to(source_folder).as_posix()
+            if name=="collection.json":continue
+            member=prefix+name
+            if member in files:raise ValueError("duplicate bundled path "+member)
+            files[member]=file
+    return files,generated
+
 def audit(root):
     root=Path(root);errors=[];warnings=[]
     policy=json.loads((root/"publications.json").read_text())
@@ -82,6 +123,8 @@ def audit(root):
         try:
             index,packs=read_collection(folder)
             _,textures=runtime_files(folder,index,packs)
+            if key in pub and "includes" in pub[key]:
+                archive_payload(root,folder,index,packs,pub[key],list(pub.values()))
             items=[asset for _,pack in packs for asset in pack["assets"]]
         except (ValueError,OSError,KeyError,TypeError) as ex:
             errors.append(key+": "+str(ex));continue

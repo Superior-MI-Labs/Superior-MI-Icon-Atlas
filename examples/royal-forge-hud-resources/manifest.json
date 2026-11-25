@@ -1027,7 +1027,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.royal.mana",
@@ -1091,7 +1094,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.royal.stamina",
@@ -1155,7 +1161,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.royal.shield",
@@ -1219,7 +1228,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.royal.experience",
@@ -1283,7 +1295,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.royal.rage",
@@ -1667,7 +1682,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.runic.mana",
@@ -1731,7 +1749,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.runic.stamina",
@@ -1795,7 +1816,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.runic.shield",
@@ -1859,7 +1883,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.runic.experience",
@@ -1923,7 +1950,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.runic.rage",
@@ -2307,7 +2337,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.iron.mana",
@@ -2371,7 +2404,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.iron.stamina",
@@ -2435,7 +2471,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.iron.shield",
@@ -2499,7 +2538,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.iron.experience",
@@ -2563,7 +2605,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.iron.rage",
@@ -2947,7 +2992,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.verdant.mana",
@@ -3011,7 +3059,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.verdant.stamina",
@@ -3075,7 +3126,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.verdant.shield",
@@ -3139,7 +3193,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.verdant.experience",
@@ -3203,7 +3260,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.verdant.rage",
@@ -3587,7 +3647,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.arcane.mana",
@@ -3651,7 +3714,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.arcane.stamina",
@@ -3715,7 +3781,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.arcane.shield",
@@ -3779,7 +3848,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.arcane.experience",
@@ -3843,7 +3915,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.resource-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.bar.arcane.rage",
@@ -16059,7 +16134,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.boss-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.boss.royal.shield",
@@ -16422,7 +16500,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.boss-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.boss.runic.shield",
@@ -16785,7 +16866,10 @@
             }
           ]
         }
-      }
+      },
+      "implements": [
+        "smi.hud.royalforge02.interface.widget.boss-bar/1"
+      ]
     },
     {
       "id": "smi.hud.royalforge02.widget.boss.iron.shield",
@@ -17927,7 +18011,7 @@
       "id": "smi.hud.royalforge02.hud.adventurer",
       "kind": "composition",
       "name": "Royal Forge Adventurer HUD",
-      "description": "Complete resource-focused RPG HUD: player meters, boss health and ability charges. Independently bound inputs and optional stat/action simulation in Builder.",
+      "description": "Complete resource-focused RPG HUD: player meters, boss health and ability charges. Independently bound inputs and optional stat/action simulation in Builder. Five interchangeable resource meter skins; boss art follows Royal, Runic and Iron where available.",
       "size_px": [
         900,
         430
@@ -18039,7 +18123,6 @@
       "layers": [
         {
           "id": "boss",
-          "asset": "smi.hud.royalforge02.widget.boss.royal.health",
           "offset_px": [
             157,
             10
@@ -18050,11 +18133,11 @@
           ],
           "input_bindings": {
             "value": "boss_health"
-          }
+          },
+          "slot": "boss"
         },
         {
           "id": "health",
-          "asset": "smi.hud.royalforge02.widget.resource-meter",
           "offset_px": [
             25,
             102
@@ -18066,11 +18149,10 @@
           "input_bindings": {
             "value": "health"
           },
-          "preset": "Royal Health"
+          "slot": "health"
         },
         {
           "id": "mana",
-          "asset": "smi.hud.royalforge02.widget.resource-meter",
           "offset_px": [
             25,
             164
@@ -18082,11 +18164,10 @@
           "input_bindings": {
             "value": "mana"
           },
-          "preset": "Royal Mana"
+          "slot": "mana"
         },
         {
           "id": "stamina",
-          "asset": "smi.hud.royalforge02.widget.resource-meter",
           "offset_px": [
             25,
             226
@@ -18098,11 +18179,10 @@
           "input_bindings": {
             "value": "stamina"
           },
-          "preset": "Royal Stamina"
+          "slot": "stamina"
         },
         {
           "id": "shield",
-          "asset": "smi.hud.royalforge02.widget.resource-meter",
           "offset_px": [
             25,
             288
@@ -18114,11 +18194,10 @@
           "input_bindings": {
             "value": "shield"
           },
-          "preset": "Royal Shield"
+          "slot": "shield"
         },
         {
           "id": "experience",
-          "asset": "smi.hud.royalforge02.widget.resource-meter",
           "offset_px": [
             25,
             350
@@ -18130,7 +18209,7 @@
           "input_bindings": {
             "value": "experience"
           },
-          "preset": "Royal Experience"
+          "slot": "experience"
         },
         {
           "id": "health-globe",
@@ -18181,7 +18260,132 @@
             "columns": 6
           }
         }
-      ]
+      ],
+      "slots": {
+        "health": {
+          "label": "Health meter",
+          "accepts": "smi.hud.royalforge02.interface.widget.resource-bar/1",
+          "options": [
+            "smi.hud.royalforge02.widget.bar.royal.health",
+            "smi.hud.royalforge02.widget.bar.runic.health",
+            "smi.hud.royalforge02.widget.bar.iron.health",
+            "smi.hud.royalforge02.widget.bar.verdant.health",
+            "smi.hud.royalforge02.widget.bar.arcane.health"
+          ],
+          "default": "smi.hud.royalforge02.widget.bar.royal.health"
+        },
+        "mana": {
+          "label": "Mana meter",
+          "accepts": "smi.hud.royalforge02.interface.widget.resource-bar/1",
+          "options": [
+            "smi.hud.royalforge02.widget.bar.royal.mana",
+            "smi.hud.royalforge02.widget.bar.runic.mana",
+            "smi.hud.royalforge02.widget.bar.iron.mana",
+            "smi.hud.royalforge02.widget.bar.verdant.mana",
+            "smi.hud.royalforge02.widget.bar.arcane.mana"
+          ],
+          "default": "smi.hud.royalforge02.widget.bar.royal.mana"
+        },
+        "stamina": {
+          "label": "Stamina meter",
+          "accepts": "smi.hud.royalforge02.interface.widget.resource-bar/1",
+          "options": [
+            "smi.hud.royalforge02.widget.bar.royal.stamina",
+            "smi.hud.royalforge02.widget.bar.runic.stamina",
+            "smi.hud.royalforge02.widget.bar.iron.stamina",
+            "smi.hud.royalforge02.widget.bar.verdant.stamina",
+            "smi.hud.royalforge02.widget.bar.arcane.stamina"
+          ],
+          "default": "smi.hud.royalforge02.widget.bar.royal.stamina"
+        },
+        "shield": {
+          "label": "Shield meter",
+          "accepts": "smi.hud.royalforge02.interface.widget.resource-bar/1",
+          "options": [
+            "smi.hud.royalforge02.widget.bar.royal.shield",
+            "smi.hud.royalforge02.widget.bar.runic.shield",
+            "smi.hud.royalforge02.widget.bar.iron.shield",
+            "smi.hud.royalforge02.widget.bar.verdant.shield",
+            "smi.hud.royalforge02.widget.bar.arcane.shield"
+          ],
+          "default": "smi.hud.royalforge02.widget.bar.royal.shield"
+        },
+        "experience": {
+          "label": "Experience meter",
+          "accepts": "smi.hud.royalforge02.interface.widget.resource-bar/1",
+          "options": [
+            "smi.hud.royalforge02.widget.bar.royal.experience",
+            "smi.hud.royalforge02.widget.bar.runic.experience",
+            "smi.hud.royalforge02.widget.bar.iron.experience",
+            "smi.hud.royalforge02.widget.bar.verdant.experience",
+            "smi.hud.royalforge02.widget.bar.arcane.experience"
+          ],
+          "default": "smi.hud.royalforge02.widget.bar.royal.experience"
+        },
+        "boss": {
+          "label": "Boss meter",
+          "accepts": "smi.hud.royalforge02.interface.widget.boss-bar/1",
+          "options": [
+            "smi.hud.royalforge02.widget.boss.royal.health",
+            "smi.hud.royalforge02.widget.boss.runic.health",
+            "smi.hud.royalforge02.widget.boss.iron.health"
+          ],
+          "default": "smi.hud.royalforge02.widget.boss.royal.health"
+        }
+      },
+      "presets": {
+        "Royal": {
+          "slots": {
+            "health": "smi.hud.royalforge02.widget.bar.royal.health",
+            "mana": "smi.hud.royalforge02.widget.bar.royal.mana",
+            "stamina": "smi.hud.royalforge02.widget.bar.royal.stamina",
+            "shield": "smi.hud.royalforge02.widget.bar.royal.shield",
+            "experience": "smi.hud.royalforge02.widget.bar.royal.experience",
+            "boss": "smi.hud.royalforge02.widget.boss.royal.health"
+          }
+        },
+        "Runic": {
+          "slots": {
+            "health": "smi.hud.royalforge02.widget.bar.runic.health",
+            "mana": "smi.hud.royalforge02.widget.bar.runic.mana",
+            "stamina": "smi.hud.royalforge02.widget.bar.runic.stamina",
+            "shield": "smi.hud.royalforge02.widget.bar.runic.shield",
+            "experience": "smi.hud.royalforge02.widget.bar.runic.experience",
+            "boss": "smi.hud.royalforge02.widget.boss.runic.health"
+          }
+        },
+        "Iron": {
+          "slots": {
+            "health": "smi.hud.royalforge02.widget.bar.iron.health",
+            "mana": "smi.hud.royalforge02.widget.bar.iron.mana",
+            "stamina": "smi.hud.royalforge02.widget.bar.iron.stamina",
+            "shield": "smi.hud.royalforge02.widget.bar.iron.shield",
+            "experience": "smi.hud.royalforge02.widget.bar.iron.experience",
+            "boss": "smi.hud.royalforge02.widget.boss.iron.health"
+          }
+        },
+        "Verdant": {
+          "slots": {
+            "health": "smi.hud.royalforge02.widget.bar.verdant.health",
+            "mana": "smi.hud.royalforge02.widget.bar.verdant.mana",
+            "stamina": "smi.hud.royalforge02.widget.bar.verdant.stamina",
+            "shield": "smi.hud.royalforge02.widget.bar.verdant.shield",
+            "experience": "smi.hud.royalforge02.widget.bar.verdant.experience",
+            "boss": "smi.hud.royalforge02.widget.boss.royal.health"
+          }
+        },
+        "Arcane": {
+          "slots": {
+            "health": "smi.hud.royalforge02.widget.bar.arcane.health",
+            "mana": "smi.hud.royalforge02.widget.bar.arcane.mana",
+            "stamina": "smi.hud.royalforge02.widget.bar.arcane.stamina",
+            "shield": "smi.hud.royalforge02.widget.bar.arcane.shield",
+            "experience": "smi.hud.royalforge02.widget.bar.arcane.experience",
+            "boss": "smi.hud.royalforge02.widget.boss.royal.health"
+          }
+        }
+      },
+      "default_preset": "Royal"
     }
   ],
   "interfaces": {
@@ -18210,6 +18414,20 @@
       "size_px": [
         55,
         55
+      ],
+      "allow_scale": false
+    },
+    "smi.hud.royalforge02.interface.widget.resource-bar/1": {
+      "size_px": [
+        399,
+        72
+      ],
+      "allow_scale": false
+    },
+    "smi.hud.royalforge02.interface.widget.boss-bar/1": {
+      "size_px": [
+        585,
+        81
       ],
       "allow_scale": false
     }

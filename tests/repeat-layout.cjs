@@ -89,7 +89,15 @@ assert.deepEqual(renderer.sizeFor(P+'static'),[72,72]);
   assert.deepEqual(clips.slice(1,6).map(c=>c[2]),[0,306,76.5,229.5,153]);
   const invalid=JSON.parse(JSON.stringify(pack));invalid.assets.find(a=>a.id===hud.id).layers[1].input_bindings.value='unknown';
   assert.ok(Slots.validate(invalid).some(e=>e.includes('incompatible child input binding')));
-  console.log('50 shared meter variants and independent HUD bindings: PASS');
+  for(const name of ['Royal','Runic','Iron','Verdant','Arcane']){
+    clips.length=0;draws.length=0;
+    await render.drawAsset(hud.id,ctx,0,0,...hud.size_px,0,{health:50},null,new Set(),null,name);
+    const chosen=map.get(hud.presets[name].slots.health);
+    const opts=template.presets[chosen.layers[0].preset].slots;
+    assert.ok(draws.some(d=>JSON.stringify(d.slice(0,4))===JSON.stringify(map.get(opts.base).rect_px)),name+' skin missing');
+    assert.equal(clips[1][2],153,name+' health binding changed');
+  }
+  console.log('50 shared meter variants, five resource skins and independent HUD bindings: PASS');
 })().catch(e=>{console.error(e);process.exitCode=1;});
 
 /* Real authored control panel: six independent slot bindings and host-owned
@@ -114,3 +122,14 @@ assert.deepEqual(renderer.sizeFor(P+'static'),[72,72]);
   assert.deepEqual(draws[16],map.get('smi.ui.fantasy01.wave2.indicator.pip.warning').rect_px);
   console.log('Independent hotbar cooldowns, inventory and status: PASS');
 })().catch(e=>{console.error(e);process.exitCode=1;});
+
+/* Nested adaptive layout must measure the selected preset before drawing. */
+(()=>{
+  const Slots=require('../web/slot-core.js');
+  const hearts={...assets.get(P+'hearts'),presets:{Small:{inputs:{max:2,columns:2,value:4}}}};
+  const parent={id:P+'nested',kind:'composition',size_px:[400,400],layers:[{id:'child',asset:hearts.id,preset:'Small'}]};
+  const map=new Map(assets);map.set(hearts.id,hearts);map.set(parent.id,parent);
+  const r=create({getAsset:id=>map.get(id),getImage:async()=>({}),slots:Slots,timeline:{layerAt:l=>l},visualCore:{unitValue:()=>0}});
+  assert.deepEqual(r.sizeFor(hearts.id,new Set(),{},'Small'),[146,72]);
+  console.log('Nested preset geometry: PASS');
+})();

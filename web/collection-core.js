@@ -48,7 +48,7 @@
         statIds.add(profile.id);statProfiles.push(structuredClone(profile));
       }
       for(const [id,def] of Object.entries(pack.interfaces||{})){
-        if(Object.hasOwn(interfaces,id)&&JSON.stringify(interfaces[id])!==JSON.stringify(def))throw Error('Conflicting interface contract '+id);
+        if(Object.hasOwn(interfaces,id)&&!equivalent(interfaces[id],def))throw Error('Conflicting interface contract '+id);
         interfaces[id]=structuredClone(def);
       }
       const groupIds=[];
@@ -109,8 +109,32 @@
     for(const id of roots)walk(id);
     return closure;
   }
+  // Compare authored meaning, independent of ZIP path, object key order, and bag ownership.
+  function canonical(value){
+    if(Array.isArray(value))return value.map(canonical);
+    if(value&&typeof value==='object')return Object.fromEntries(Object.keys(value).sort().filter(k=>value[k]!==undefined).map(k=>[k,canonical(value[k])]));
+    return value;
+  }
+  const equivalent=(a,b)=>JSON.stringify(canonical(a))===JSON.stringify(canonical(b));
+  function authoredAsset(asset){
+    const copy={...asset};
+    for(const key of ['pack','source','sourcePack','sourceGroup','sourceLabel','ownerBag','texture'])delete copy[key];
+    return copy;
+  }
+  function sameAsset(a,b,interfacesA,interfacesB){
+    if(!equivalent(authoredAsset(a),authoredAsset(b)))return false;
+    const refs=[...(a.implements||[]),...Object.values(a.slots||{}).map(s=>s.accepts)];
+    return refs.every(id=>Object.hasOwn(interfacesA||{},id)&&Object.hasOwn(interfacesB||{},id)&&equivalent(interfacesA[id],interfacesB[id]));
+  }
+  async function sameBytes(a,b){
+    if(!a||!b||a.size!==b.size)return false;
+    if(a===b)return true;
+    const [left,right]=await Promise.all([a.arrayBuffer(),b.arrayBuffer()]);
+    const x=new Uint8Array(left),y=new Uint8Array(right);
+    return x.every((v,i)=>v===y[i]);
+  }
   // Selection state belongs to the host. The portable archive contract is shared.
-  async function writeSelection(zip,{assets,rootId,packId,version='1.0.0',getTexture,getInterfaces,previewProfiles=[],statProfiles=[],licenseText=null,maxEntry=24*1024*1024}){
+  async function writeSelection(zip,{assets,rootId,packId,version='1.0.0',getTexture,getInterfaces,previewProfiles=[],statProfiles=[],licenseText=null,sourceNotices=[],maxEntry=24*1024*1024}){
     if(!assets.some(a=>a.id===rootId))throw Error('Missing export root '+rootId);
     const ids=new Set(assets.map(a=>a.id)),textures={},mapping=new Map(),interfaces={};
     const chosen=assets.map(a=>structuredClone(a));
@@ -128,7 +152,7 @@
       for(const ref of [...(a.implements||[]),...Object.values(a.slots||{}).map(s=>s.accepts)]){
         const def=getInterfaces(a)?.[ref];
         if(!def)throw Error('Missing interface '+ref+' for '+a.id);
-        if(Object.hasOwn(interfaces,ref)&&JSON.stringify(interfaces[ref])!==JSON.stringify(def))throw Error('Conflicting interface '+ref);
+        if(Object.hasOwn(interfaces,ref)&&!equivalent(interfaces[ref],def))throw Error('Conflicting interface '+ref);
         interfaces[ref]=def;
       }
       for(const key of ['pack','source','sourcePack','sourceGroup','sourceLabel','ownerBag','review_status'])delete a[key];
@@ -140,9 +164,17 @@
       license:licenses.size===1?[...licenses][0]:'MIXED',interfaces,textures,assets:chosen,
       ...(previews.length?{preview_profiles:previews}:{}),...(stats.length?{stat_profiles:stats}:{})};
     zip.file('manifest.json',JSON.stringify(manifest,null,2)+'\n');
+    zip.file('collection.json',JSON.stringify({schema:'smi-visual-collection/1',collection_id:packId,name:chosen.find(a=>a.id===rootId).name||rootId,version,entry_asset:rootId,packs:[{manifest:'manifest.json'}]},null,2)+'\n');
+    // Preserve original notice bytes, namespaced by source; never silently
+    // turn a mixed or restricted license into an unrestricted grant.
+    let noticeIndex=0;
+    for(const notice of sourceNotices){
+      if(!safePath(notice.path)||!notice.blob||notice.blob.size>maxEntry)throw Error('Invalid source notice');
+      zip.file('LICENSES/source-'+(++noticeIndex)+'/'+notice.path,notice.blob);
+    }
     zip.file('SOURCE-NOTICES.txt','Root asset: '+rootId+'\n\nPer-asset licenses:\n'+chosen.map(a=>a.id+' : '+(a.license||'UNSPECIFIED')).join('\n')+'\nPreserve source rights and notices. Unknown license is not equivalent to CC0.\n');
     if(licenseText&&licenses.has('Apache-2.0')){const notice=await licenseText();if(notice)zip.file('LICENSES/Apache-2.0.txt',notice);}
     return manifest;
   }
-  return Object.freeze({safePath,join,resolveCollection,dependencyClosure,writeSelection,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
+  return Object.freeze({safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
 });

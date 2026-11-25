@@ -33,3 +33,5 @@ The runner saves PNG evidence for every sample and a report JSON with per-assert
 The first interactive energy meter passed JSON validation while hiding its fill and treating 0–100 input values as 0–1. A manifest can be syntactically valid and visually wrong.
 
 **Do not overclaim:** distinct frames do not prove good animation, natural motion, character identity, correct pivot, or seamless motion at native FPS. Creator-specific visual review remains mandatory.
+
+`bash RUN-ALL.sh --ci` is the same structural/Node gate used by Pages; CI fails if Node is unavailable. The visual matrix targets stable input, slot and preset identifiers, applying presets before sample overrides. Private fixtures are supplied through a test-only catalog using the same production Builder loader. After pruning, CI also runs `python3 tests/browser_catalog_smoke.py --published-only` against the actual deployable files.

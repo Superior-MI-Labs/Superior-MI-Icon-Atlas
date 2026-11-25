@@ -79,3 +79,7 @@ Public and Builder selection exports share the same portable archive serializer 
 
 ## Multi-manifest publication
 Source discovery, asset inventory, runtime ZIP assembly and public projection use the same ordered collection reader. A collection can contain nested manifests without a root pack manifest. Texture paths are resolved relative to their owning manifest; only declared textures, manifests, collection index and source license/readme notices are packaged. Publication counts reconcile across all listed packs; traversal, duplicate manifests and duplicate pack IDs are rejected.
+
+The Builder's quick-open list uses only the published catalog and shares its deep-link loader. Internal test/demo ZIPs are not exposed by the production controls. The retired featured-gallery script and one-off build rewrite tool have been removed; the derived featured QA registry is retained for historical fixture inventory tests, not loaded by the public UI.
+
+The published collection control is visible and enabled only after selection, and disabled during import. Browser qualification checks both orders of overlapping ZIP ownership, conflict rejection without mutation, and a retained-asset export/import round trip. The earlier hidden tutorial-button CSS is removed rather than overridden.

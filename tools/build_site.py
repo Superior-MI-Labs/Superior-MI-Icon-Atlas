@@ -11,7 +11,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from atlasctl import load,validate
-from tools.asset_inventory import audit as audit_assets, source_collections, read_collection, runtime_files
+from tools.asset_inventory import audit as audit_assets, source_collections, read_collection, archive_payload
 
 
 def resolve_showcases(index,manifests,dest):
@@ -40,7 +40,7 @@ def build(dest:Path|None=None):
     if dest==ROOT or ROOT in dest.parents and 'sheets' in dest.parts:
         raise ValueError('Refusing to build over source')
     dest.mkdir(parents=True,exist_ok=True)
-    for name in ('index.html','styles.css','public-search.js','app.js','builder.html','builder.css','timeline-core.js','visual-core.js','input-core.js','collection-core.js','bag-store.js','interaction-core.js','stat-core.js','slot-core.js','asset-renderer.js','builder.js','ai-guide.html','featured.js','sky-motion-lab.html'):
+    for name in ('index.html','styles.css','public-search.js','app.js','builder.html','builder.css','timeline-core.js','visual-core.js','input-core.js','collection-core.js','bag-store.js','interaction-core.js','stat-core.js','slot-core.js','asset-renderer.js','builder.js','ai-guide.html','sky-motion-lab.html'):
         shutil.copy2(ROOT/'web'/name,dest/name)
     # Experimental preview sources; not a second Visual Atlas asset registry.
     motion_source=ROOT/'web'/'sky-motion-lab'
@@ -82,17 +82,20 @@ def build(dest:Path|None=None):
     shutil.copy2(ROOT/'web'/'demo'/'potions-collection.zip',dest/'demo'/'potions-collection.zip')
     # Authored examples/ are the source of truth. Deterministic downloadable ZIPs are
     # generated here, never maintained as a second editable copy.
+    publication=json.loads((ROOT/'publications.json').read_text(encoding='utf-8'))
+    records={record['path']:record for record in publication['collections']}
     for folder in source_collections(ROOT):
         archive=dest/'demo'/(folder.name+'.zip')
         index,packs=read_collection(folder)
-        runtime,_=runtime_files(folder,index,packs)
+        files,generated=archive_payload(ROOT,folder,index,packs,records.get(folder.relative_to(ROOT).as_posix()),publication['collections'])
         with ZipFile(archive,'w',ZIP_DEFLATED,compresslevel=7) as z:
-            for f in sorted(runtime):
+            for name,f in sorted(files.items()):
                 if not f.is_file():raise ValueError('Missing runtime pack dependency: '+str(f))
-                entry=ZipInfo(f.relative_to(folder).as_posix(),date_time=(2020,1,1,0,0,0))
+                entry=ZipInfo(name,date_time=(2020,1,1,0,0,0))
                 entry.compress_type=ZIP_DEFLATED
                 entry.external_attr=(0o644<<16)
-                z.writestr(entry,f.read_bytes(),compress_type=ZIP_DEFLATED,compresslevel=7)
+                payload=(json.dumps(generated,indent=2)+'\n').encode() if generated is not None and name=='collection.json' else f.read_bytes()
+                z.writestr(entry,payload,compress_type=ZIP_DEFLATED,compresslevel=7)
 
     def inspect_archive(path):
         with ZipFile(path) as z:
@@ -167,7 +170,6 @@ for(const texture of Object.values(pack.textures)){
 
     # Public discovery is derived from *approved* source manifests, never from
     # tutorial/demo ZIPs, private browser bags, or the archival monoline catalog.
-    publication=json.loads((ROOT/'publications.json').read_text(encoding='utf-8'))
     if publication.get('schema')!='smi-publications/1':raise ValueError('Invalid publication policy')
     inventory=audit_assets(ROOT)
     if inventory['errors']:raise ValueError('Asset inventory: '+'; '.join(inventory['errors'][:5]))

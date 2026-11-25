@@ -28,7 +28,7 @@
       const mapped=Object.fromEntries(Object.entries(layer.input_bindings||{}).map(([to,from])=>[to,inputs[from]]));
       return {...(layer.input_bindings!==undefined||layer.preset!==undefined?{}:inputs),...(layer.input_values||{}),...mapped};
     }
-    function geometryFor(id,seen=new Set(),values=null){
+    function geometryFor(id,seen=new Set(),values=null,presetName=null,slotOverrides=null){
       if(seen.has(id))throw Error('Cyclic asset dimensions: '+id);
       const a=getAsset(id);if(!a)throw Error('Missing asset '+id);
       const next=new Set(seen);next.add(id);
@@ -41,14 +41,15 @@
       if(a.kind==='state_set')return geometryFor(a.states[a.default_state],next);
       if(a.kind!=='composition')throw Error('Unknown kind '+a.kind);
       if(!a.layers.some(layer=>layer.repeat))return frame(...a.size_px);
-      const inputs={...Object.fromEntries(Object.entries(a.inputs||{}).map(([key,input])=>[key,input.default])),...(values||{})};
+      const resolved=slots.resolve(a,presetName,slotOverrides||{});
+      const inputs={...Object.fromEntries(Object.entries(a.inputs||{}).map(([key,input])=>[key,input.default])),...resolved.inputs,...(values||{})};
       // A repeated composition is content-sized. Include every layer, not only
       // the first repeater: frames/overlays and negative offsets must not clip.
       let minX=0,minY=0,maxX=0,maxY=0;
       for(const layer of a.layers){
-        const target=layer.asset||(layer.slot&&a.slots?.[layer.slot]?.default);
+        const target=layer.asset||(layer.slot&&(resolved.slots[layer.slot]||a.slots?.[layer.slot]?.default));
         if(!target)continue;
-        const child=geometryFor(target,next,layer.input_bindings!==undefined?childValues(layer,inputs):layer.input_values||null);
+        const child=geometryFor(target,next,childValues(layer,inputs),layer.preset||null);
         const [lw,lh]=layer.size_px||[child.width,child.height];
         const size=layer.repeat?repeatLayout(layer,inputs,[lw,lh]):{width:lw,height:lh};
         const x=(layer.offset_px?.[0]||0)+(layer.x||0);
@@ -58,8 +59,8 @@
       }
       return frame(Math.max(1,maxX-minX),Math.max(1,maxY-minY),minX,minY);
     }
-    function sizeFor(id,seen=new Set(),values=null){
-      const {width,height}=geometryFor(id,seen,values);
+    function sizeFor(id,seen=new Set(),values=null,presetName=null,slotOverrides=null){
+      const {width,height}=geometryFor(id,seen,values,presetName,slotOverrides);
       return [width,height];
     }
     // Keep legacy full-rectangle behavior unless a region explicitly declares a
@@ -133,7 +134,7 @@
       if(a.kind!=='composition')throw Error('Unknown kind '+a.kind);
       const slotState=slots.resolve(a,presetName,slotOverrides||{});
       const inputs={...slotState.inputs,...values};
-      const geometry=geometryFor(id,new Set(),inputs);
+      const geometry=geometryFor(id,new Set(),inputs,presetName,slotOverrides);
       ctx.save();ctx.translate(x,y);ctx.scale(w/geometry.width,h/geometry.height);
       ctx.translate(-geometry.minX,-geometry.minY);
       try{
@@ -142,7 +143,7 @@
           if(layer.visible_when&&inputs[layer.visible_when.input]!==layer.visible_when.equals)continue;
           const target=layer.slot?slotState.slots[layer.slot]:layer.asset;
           const childInput=childValues(layer,inputs);
-          const [lw,lh]=layer.size_px||sizeFor(target,new Set(),layer.input_bindings!==undefined?childInput:null);
+          const [lw,lh]=layer.size_px||sizeFor(target,new Set(),childInput,layer.preset||null);
           let px=(layer.offset_px?.[0]||0)+(layer.x||0),py=(layer.offset_px?.[1]||0)+(layer.y||0);
           if(layer.position_from_input){const bind=layer.position_from_input;const v=visualCore.unitValue(a,inputs,bind.input),pos=bind.from_px+(bind.to_px-bind.from_px)*v;if(bind.axis==='x')px+=pos;else py+=pos;}
           ctx.save();

@@ -1,0 +1,422 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.hud.royalforge.complete.pack",
+  "version": "1.0.0",
+  "license": "CC0-1.0",
+  "description": "Complete resource, ability, inventory and status HUD assembled from two source-owned Royal Forge collections. Host supplies independent values and gameplay state.",
+  "textures": {},
+  "assets": [
+    {
+      "id": "smi.hud.royalforge.complete",
+      "kind": "composition",
+      "name": "Royal Forge Complete Gameplay HUD",
+      "description": "Complete resource, ability, inventory and status HUD assembled from two source-owned Royal Forge collections. Host supplies independent values and gameplay state.",
+      "size_px": [
+        900,
+        756
+      ],
+      "style": "royal-forge-dark-gold",
+      "tags": [
+        "hud",
+        "complete hud",
+        "royal forge",
+        "fantasy",
+        "rpg",
+        "health",
+        "mana",
+        "stamina",
+        "boss",
+        "hotbar",
+        "cooldown",
+        "inventory",
+        "status",
+        "interactive"
+      ],
+      "subjects": [
+        "ui.hud.bars",
+        "games.ui.controls"
+      ],
+      "inputs": {
+        "health": {
+          "type": "number",
+          "default": 80,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "mana": {
+          "type": "number",
+          "default": 65,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "stamina": {
+          "type": "number",
+          "default": 90,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "shield": {
+          "type": "number",
+          "default": 45,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "experience": {
+          "type": "number",
+          "default": 35,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "boss_health": {
+          "type": "number",
+          "default": 78,
+          "min": 0,
+          "max": 100,
+          "step": 1
+        },
+        "charges": {
+          "type": "number",
+          "default": 4,
+          "min": 0,
+          "max": 6,
+          "step": 1
+        },
+        "ability_1_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_1_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        },
+        "ability_2_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_2_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 50,
+          "step": 1
+        },
+        "ability_3_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "active"
+        },
+        "ability_3_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        },
+        "ability_4_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "locked"
+        },
+        "ability_4_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        },
+        "ability_5_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_5_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 100,
+          "step": 1
+        },
+        "ability_6_mode": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "active",
+            "locked"
+          ],
+          "default": "ready"
+        },
+        "ability_6_cooldown": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "default": 0,
+          "step": 1
+        },
+        "inventory_1": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "empty"
+        },
+        "inventory_2": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "selected"
+        },
+        "inventory_3": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "rare"
+        },
+        "inventory_4": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "epic"
+        },
+        "inventory_5": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "locked"
+        },
+        "inventory_6": {
+          "type": "enum",
+          "values": [
+            "empty",
+            "hover",
+            "selected",
+            "locked",
+            "rare",
+            "epic"
+          ],
+          "default": "hover"
+        },
+        "status_1": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "spent",
+            "warning"
+          ],
+          "default": "ready"
+        },
+        "status_2": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "spent",
+            "warning"
+          ],
+          "default": "warning"
+        },
+        "status_3": {
+          "type": "enum",
+          "values": [
+            "ready",
+            "spent",
+            "warning"
+          ],
+          "default": "spent"
+        }
+      },
+      "layers": [
+        {
+          "id": "resources",
+          "asset": "smi.hud.royalforge02.hud.adventurer",
+          "offset_px": [
+            0,
+            0
+          ],
+          "input_bindings": {
+            "health": "health",
+            "mana": "mana",
+            "stamina": "stamina",
+            "shield": "shield",
+            "experience": "experience",
+            "boss_health": "boss_health",
+            "charges": "charges"
+          }
+        },
+        {
+          "id": "actions",
+          "asset": "smi.ui.fantasy01.wave2.widget.action-inventory-hud",
+          "offset_px": [
+            145,
+            430
+          ],
+          "input_bindings": {
+            "ability_1_mode": "ability_1_mode",
+            "ability_1_cooldown": "ability_1_cooldown",
+            "ability_2_mode": "ability_2_mode",
+            "ability_2_cooldown": "ability_2_cooldown",
+            "ability_3_mode": "ability_3_mode",
+            "ability_3_cooldown": "ability_3_cooldown",
+            "ability_4_mode": "ability_4_mode",
+            "ability_4_cooldown": "ability_4_cooldown",
+            "ability_5_mode": "ability_5_mode",
+            "ability_5_cooldown": "ability_5_cooldown",
+            "ability_6_mode": "ability_6_mode",
+            "ability_6_cooldown": "ability_6_cooldown",
+            "inventory_1": "inventory_1",
+            "inventory_2": "inventory_2",
+            "inventory_3": "inventory_3",
+            "inventory_4": "inventory_4",
+            "inventory_5": "inventory_5",
+            "inventory_6": "inventory_6",
+            "status_1": "status_1",
+            "status_2": "status_2",
+            "status_3": "status_3"
+          }
+        }
+      ],
+      "behavior": {
+        "role": "generic",
+        "outputs": {
+          "health": {
+            "from_input": "health",
+            "unit": "percent"
+          },
+          "mana": {
+            "from_input": "mana",
+            "unit": "percent"
+          },
+          "stamina": {
+            "from_input": "stamina",
+            "unit": "percent"
+          },
+          "shield": {
+            "from_input": "shield",
+            "unit": "percent"
+          },
+          "experience": {
+            "from_input": "experience",
+            "unit": "percent"
+          },
+          "boss_health": {
+            "from_input": "boss_health",
+            "unit": "percent"
+          },
+          "charges": {
+            "from_input": "charges",
+            "unit": "charges"
+          }
+        }
+      },
+      "presets": {
+        "Exploration": {
+          "inputs": {
+            "health": 100,
+            "mana": 90,
+            "stamina": 100,
+            "shield": 100,
+            "experience": 20,
+            "boss_health": 100,
+            "charges": 6,
+            "ability_1_cooldown": 0,
+            "ability_2_cooldown": 0,
+            "ability_3_mode": "ready",
+            "ability_4_mode": "locked",
+            "ability_5_cooldown": 0,
+            "status_1": "ready",
+            "status_2": "ready",
+            "status_3": "ready"
+          }
+        },
+        "Combat": {
+          "inputs": {
+            "health": 65,
+            "mana": 40,
+            "stamina": 55,
+            "shield": 25,
+            "experience": 60,
+            "boss_health": 45,
+            "charges": 3,
+            "ability_1_cooldown": 75,
+            "ability_2_cooldown": 25,
+            "ability_3_mode": "active",
+            "status_2": "warning"
+          }
+        },
+        "Low resources": {
+          "inputs": {
+            "health": 15,
+            "mana": 5,
+            "stamina": 10,
+            "shield": 0,
+            "boss_health": 30,
+            "charges": 0,
+            "ability_1_cooldown": 100,
+            "ability_2_cooldown": 100,
+            "ability_3_mode": "locked",
+            "status_1": "warning",
+            "status_2": "spent",
+            "status_3": "spent"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -4,6 +4,8 @@ set -Eeuo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")"
 export GIT_PAGER=cat PAGER=cat
 PY=python3
+MODE="${1:-local}"
+case "$MODE" in local|--ci) ;; *) echo 'Usage: bash RUN-ALL.sh [--ci]' >&2; exit 2;; esac
 if ! "$PY" -c 'import PIL,jsonschema' >/dev/null 2>&1; then
   VENV="${SMI_ATLAS_VENV:-$HOME/.cache/superior-mi/visual-atlas/v0.7-venv}"
   mkdir -p "$(dirname "$VENV")"
@@ -35,18 +37,9 @@ fi
 "$PY" tools/ai_acceptance.py site/demo/character-animations.zip --acceptance examples/acceptance/character.json --out "${TMPDIR:-/tmp}/smi-visual-atlas-character-acceptance"
 "$PY" tools/ai_acceptance.py web/demo/potions-collection.zip --acceptance examples/acceptance/potion.json --out "${TMPDIR:-/tmp}/smi-visual-atlas-potion-acceptance"
 if command -v node >/dev/null 2>&1; then
-  for f in web/featured.js web/app.js web/builder.js web/timeline-core.js web/visual-core.js web/input-core.js web/collection-core.js web/bag-store.js web/interaction-core.js web/stat-core.js web/slot-core.js web/asset-renderer.js; do node --check "$f"; done
-  node --check web/featured.js
-  node tests/browser-search.cjs
-  node tests/builder-contract.cjs
-  node tests/timeline-core.cjs
-  node tests/input-core.cjs
-  node tests/visual-core.cjs
-  node tests/collections-interaction.cjs
-  node tests/slots-presets.cjs
-  node tests/repeat-layout.cjs
-  node tests/animation-pivot.cjs
-  node tests/preview-interaction.cjs
-  node tests/stat-core.cjs
+  for f in web/*.js; do node --check "$f"; done
+  for test in tests/*.cjs; do node "$test"; done
+elif [ "$MODE" = "--ci" ]; then
+  echo 'ERROR: Node is required for CI qualification' >&2; exit 2
 else echo 'WARNING: Node tests unavailable (Node not installed). GitHub CI will run these tests.'; fi
 printf '\nPASS: All locally available validations. Run: bash RUN-LOCALLY.sh\n'

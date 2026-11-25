@@ -157,3 +157,11 @@ than creating a fake asset, copying artwork, or maintaining another search
 database. Search and the Playable Demos filter find the linked asset; its card
 and inspector expose direct play links. Future showcases use the same optional
 contract and keep the normal published/rights/visual-QA gates.
+
+### Source-owned portable bundles
+The repository publication record may list `includes` of distinct directly authored published collections. Build output expands the local collection index and packages included manifests, textures and notices under `packs/<source>/`. The authored bundle owns only its new composition IDs; included assets remain cataloged once under their original collections. Runtime ZIPs use the unchanged `smi-visual-collection/1` format and resolve offline. Import the complete bundle as one Builder bag, rather than also importing overlapping individual source ZIPs. The public browser keeps each ZIP's renderer and assets in its own context.
+
+### Shared imports and portable selection
+Identical overlapping ZIP assets may coexist in My Bag. The Builder compares authored asset definitions and interface contracts, verifies overlapping texture bytes, and rejects incompatible IDs without replacing existing definitions. Removing a bag preserves assets still owned by another bag. Individual exports include an explicit entry asset, referenced profiles and original source notices when present. Static public detail previews repaint only when inputs change; animated dependencies still update while playing.
+
+Resource HUD variants use existing slot interfaces and presets, not a new theme engine. The Royal Forge Adventurer exposes Royal, Runic, Iron, Verdant and Arcane meter skins; individual resource bars can also be mixed. The complete gameplay HUD includes Exploration, Combat and Low resources preview presets. These are authored visual/input examples, not a game-state controller. A bundle deliberately includes the full reusable source collections; selected-asset ZIP exports provide the smaller dependency-closure alternative. Registry mutations are serialized so imports and removals cannot race.

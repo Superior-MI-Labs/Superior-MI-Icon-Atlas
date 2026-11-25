@@ -59,6 +59,19 @@ class InventoryTests(unittest.TestCase):
             (folder/"collection.json").write_text(json.dumps(index))
             self.assertTrue(any("unsafe source path" in error for error in audit(root)["errors"]))
 
+    def test_bundle_rejects_unpublished_and_recursive_dependencies(self):
+        from tools.asset_inventory import archive_payload
+        folder=ROOT/'examples'/'royal-forge-complete'
+        index,packs=read_collection(folder)
+        records=json.loads((ROOT/'publications.json').read_text())['collections']
+        record=next(r for r in records if r['path']=='examples/royal-forge-complete')
+        files,generated=archive_payload(ROOT,folder,index,packs,record,records)
+        self.assertEqual(len(generated['packs']),3)
+        self.assertIn('packs/royal-forge-controls/manifest.json',files)
+        for includes in (['examples/missing'],[record['path']],['../unsafe'],[record['includes'][0]]*2):
+            with self.subTest(includes=includes),self.assertRaises(ValueError):
+                archive_payload(ROOT,folder,index,packs,dict(record,includes=includes),records)
+
     def test_orphan_and_id_collision_visible(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d)

@@ -291,6 +291,45 @@
             "boss_health": 0,
             "charges": 0
           }
+        },
+        {
+          "id": "royal-skin",
+          "preset": "Royal",
+          "inputs": {
+            "health": 50,
+            "mana": 50,
+            "stamina": 50,
+            "shield": 50,
+            "experience": 50,
+            "boss_health": 50,
+            "charges": 3
+          }
+        },
+        {
+          "id": "runic-skin",
+          "preset": "Runic",
+          "inputs": {
+            "health": 50,
+            "mana": 50,
+            "stamina": 50,
+            "shield": 50,
+            "experience": 50,
+            "boss_health": 50,
+            "charges": 3
+          }
+        },
+        {
+          "id": "iron-skin",
+          "preset": "Iron",
+          "inputs": {
+            "health": 50,
+            "mana": 50,
+            "stamina": 50,
+            "shield": 50,
+            "experience": 50,
+            "boss_health": 50,
+            "charges": 3
+          }
         }
       ],
       "assertions": [
@@ -317,6 +356,18 @@
           "a": "empty",
           "b": "empty-again",
           "max_changed_pixels": 0
+        },
+        {
+          "type": "different",
+          "a": "royal-skin",
+          "b": "runic-skin",
+          "min_changed_pixels": 100
+        },
+        {
+          "type": "different",
+          "a": "runic-skin",
+          "b": "iron-skin",
+          "min_changed_pixels": 100
         }
       ]
     },
@@ -399,6 +450,74 @@
           "type": "same",
           "a": "baseline",
           "b": "restored",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "royal-forge-complete-hud",
+      "pack": "royal-forge-complete.zip",
+      "asset": "smi.hud.royalforge.complete",
+      "preview_name": "Royal Forge Complete Gameplay HUD",
+      "samples": [
+        {
+          "id": "baseline",
+          "inputs": {
+            "health": 80,
+            "ability_1_cooldown": 0,
+            "inventory_1": "empty"
+          }
+        },
+        {
+          "id": "damage",
+          "inputs": {
+            "health": 20
+          }
+        },
+        {
+          "id": "cooldown",
+          "inputs": {
+            "ability_1_cooldown": 100
+          }
+        },
+        {
+          "id": "inventory",
+          "inputs": {
+            "inventory_1": "epic"
+          }
+        },
+        {
+          "id": "reset",
+          "inputs": {
+            "health": 80,
+            "ability_1_cooldown": 0,
+            "inventory_1": "empty"
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "baseline",
+          "b": "damage",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "damage",
+          "b": "cooldown",
+          "min_changed_pixels": 15
+        },
+        {
+          "type": "different",
+          "a": "cooldown",
+          "b": "inventory",
+          "min_changed_pixels": 15
+        },
+        {
+          "type": "same",
+          "a": "baseline",
+          "b": "reset",
           "max_changed_pixels": 0
         }
       ]
