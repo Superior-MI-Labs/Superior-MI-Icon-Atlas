@@ -1,6 +1,6 @@
 # Recipe: static icons and grid sheets
 
-**Start from:** [working single-icon ZIP](../../demo/icons.zip) and [blank 24×8 layouts](../../templates/authoring-grids.zip).
+**Start from:** [working single-icon ZIP](../../demo/icons.zip) and [grid references and packing templates](../TEMPLATES.md).
 
 1. Specify final display style, logical icon size, safe padding, foreground alpha/tintability and icon names/tags.
 2. Design/inspect icons **individually**. Never assume a generated image has mathematically uniform rows or columns. Measure each symbol's actual bounding box.

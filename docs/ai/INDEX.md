@@ -21,7 +21,7 @@
 
 **Independent AI evaluation:** [Benchmark protocol](BENCHMARK.md) (only for evaluating the workflow).
 
-**Shared reference:** [Manifest/API contract](FORMAT-API.md) · [QA release checklist](RELEASE-CHECKLIST.md) · [Request examples](PROMPT-EXAMPLES.md) · [Grid starters](../templates/authoring-grids.zip).
+**Shared reference:** [Manifest/API contract](FORMAT-API.md) · [QA release checklist](RELEASE-CHECKLIST.md) · [Request examples](PROMPT-EXAMPLES.md) · [Grid references and packing templates](TEMPLATES.md).
 
 ## Why the directions are separated
 
