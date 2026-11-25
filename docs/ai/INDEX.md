@@ -9,7 +9,7 @@
 | Buttons, toggles, sliders, progress/health bars | [GUI and interactions](gui/README.md) | [Interactive HUD](../demo/interactive-hud.zip) |
 | Multiple manifests, slot compatibility and presets | [Collections](collections/README.md) | [Potion Lab](../demo/potions-collection.zip) |
 | Glass, cracks, rain and layered effects | [Materials and layers](materials/README.md) | [Glass/weather demo](../demo/starter-pack.zip) |
-| Hex World painterly terrain, foliage, trees, props and effects | [Hex World production handoff](https://github.com/Superior-MI-Labs/Superior-MI-Hex-World/blob/main/docs/ART_PRODUCTION.md) | [Runtime fixture profile](https://github.com/Superior-MI-Labs/Superior-MI-Hex-World/blob/main/examples/meadow-style.json) |
+| World and environment artwork, directional sprites, interactive objects | [World assets](world/README.md) | [Composition and slot examples](collections/README.md) |
 
 **Executable acceptance examples:** [Interactive HUD](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/interactive-hud.json) · [`character.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/character.json) · [`potion.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/potion.json). The checker prints a real PASS/FAIL and never claims human visual inspection.
 

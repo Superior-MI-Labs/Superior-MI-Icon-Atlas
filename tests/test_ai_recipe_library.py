@@ -19,7 +19,7 @@ class AIRecipeLibraryTests(unittest.TestCase):
         self.assertGreaterEqual(start.count('- [ ]'),5)
         for name in ('INDEX.md','FORMAT-API.md','RELEASE-CHECKLIST.md'):
             self.assertTrue((docs/name).is_file(),name)
-        for folder in ('icons','animations','gui','collections','materials'):
+        for folder in ('icons','animations','gui','collections','materials','world'):
             path=docs/folder/'README.md'
             self.assertTrue(path.is_file(),str(path))
             self.assertIn('RELEASE-CHECKLIST.md',path.read_text())
