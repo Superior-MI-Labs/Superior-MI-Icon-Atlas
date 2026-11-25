@@ -30,6 +30,21 @@ class AIRecipeLibraryTests(unittest.TestCase):
         for field in ('creator-specific','every asset region','NOT RUN','READY FOR PREVIEW','minimum, midpoint, maximum','layer order'):
             self.assertIn(field.lower(),checklist.lower())
 
+    def test_general_entrypoints_do_not_require_project_specific_history(self):
+        docs=ROOT/'docs/ai'
+        for path in (ROOT/'AGENTS.md',docs/'START-HERE.md',docs/'INDEX.md',docs/'animations/README.md'):
+            content=path.read_text()
+            self.assertNotIn('production/sky-blue-eyes/',content,path)
+            self.assertNotIn('SKY-PRODUCTION-HISTORY.md',content,path)
+            self.assertNotIn('validate_animation_plan.py',content,path)
+        focused=(docs/'animations/SIDE-SCROLLER-PRODUCTION.md').read_text()
+        general,history=focused.split('## Project-specific case study — Sky',1)
+        self.assertNotIn('production/sky-blue-eyes/',general)
+        self.assertIn('Only for Sky work',history)
+        self.assertIn('validate_animation_plan.py production/sky-blue-eyes/plan.json',history)
+        self.assertIn('only** for Sky-specific work',(docs/'animations/SKY-PRODUCTION-HISTORY.md').read_text())
+        self.assertIn('--visual-spec',(ROOT/'AGENTS.md').read_text())
+
     def test_example_zip_structure_and_visual_pixels(self):
         with tempfile.TemporaryDirectory() as tmp:
             site=Path(tmp)/'site';build(site)

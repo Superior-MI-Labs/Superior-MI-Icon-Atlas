@@ -17,7 +17,7 @@
 
 **GIF inspection and animation import:** [Review before converting GIFs to canonical texture sheets](animations/GIF-TO-ATLAS.md). Inspect first; packaging requires explicit human approval.
 
-**Side-scrolling character production:** [Canonical references, action families, animation transitions and first motion qualification](animations/SIDE-SCROLLER-PRODUCTION.md) (only for applicable requests).
+**Side-scrolling character production:** [Canonical references, action families, animation transitions and first motion qualification](animations/SIDE-SCROLLER-PRODUCTION.md) (only for applicable requests; project-specific history is linked within that guide).
 
 **Independent AI evaluation:** [Benchmark protocol](BENCHMARK.md) (only for evaluating the workflow).
 

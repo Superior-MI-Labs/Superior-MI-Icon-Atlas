@@ -2,7 +2,7 @@
 
 **Historical record:** This document preserves project-specific decisions and failures from the original Sky guide. It is not the current general authoring contract. For current implementation support and gates see [the reusable guide](SIDE-SCROLLER-PRODUCTION.md) and [format API](../FORMAT-API.md). Historical limitations and proposed features are not current runtime claims.
 
-**Scope:** high-quality frame-based player/NPC characters, independently animated equipment and effects, and optional dialogue portraits. This is an extension of the [general animation recipe](README.md), not a replacement for the [creator preflight](../CREATOR-PREFLIGHT.md), [manifest contract](../FORMAT-API.md), or [release checklist](../RELEASE-CHECKLIST.md). Load this guide **only** for relevant side-scrolling character work.
+**Scope:** high-quality frame-based player/NPC characters, independently animated equipment and effects, and optional dialogue portraits. This is an extension of the [general animation recipe](README.md), not a replacement for the [creator preflight](../CREATOR-PREFLIGHT.md), [manifest contract](../FORMAT-API.md), or [release checklist](../RELEASE-CHECKLIST.md). Load this historical record **only** for Sky-specific work; for other characters use the reusable guide instead.
 
 **First candidate:** [Sky Blue Eyes motion-foundation plan](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/plan.json). It is a machine-checked preproduction plan, **not** renderable artwork, an approved model sheet, a runtime asset pack, or a working state-machine controller.
 
