@@ -8,7 +8,7 @@ World assets are general-purpose Atlas assets, not a Hex World-exclusive library
 
 ## Artwork and projection
 
-Apply the shared [source-only generation gate](../IMAGE-ENGINE-WORKFLOW.md#source-only-generation-gate-all-art-families) before each image request. Batch small groups of isolated objects, not illustrated catalogs. Keep manifest, environmental capability, publication and QA language out of visual requests; assemble contact sheets after measuring the accepted source pixels. If a wrong-output-class retry fails, change method or stop that family rather than burn further calls.
+Use the shared [visual-only brief](../IMAGE-ENGINE-WORKFLOW.md) for source generation. Describe the subjects, style, perspective and spacing. Build manifests and contact sheets from accepted pixels afterward.
 
 Use measured transparent sheet regions for discrete objects, and seamless unprojected square regions for repeatable ground/cliff textures. Keep terrain, cast shadows and scenery separate from upright sprites. Preserve logical canvas, trim offset and normalized anchor through all views, states and frames. State the intended projection, elevation and camera-relative view convention in the pack README. Establish a canonical front before generating any directional sheets. Choose billboard/symmetric, four-, six-, eight-direction or custom view coverage based on the actual consumer. Do not imply camera-independent artwork for asymmetric objects. Mirroring is acceptable only if explicitly qualified for the particular art; do not mirror text, hardware, asymmetric lighting or handedness blindly.
 
