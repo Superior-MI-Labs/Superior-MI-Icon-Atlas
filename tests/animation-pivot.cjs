@@ -32,6 +32,23 @@ const renderer=create({getAsset:id=>assets.get(id),getImage:async()=>({}),slots:
   await renderer.drawAssetAtPivot('hero.idle',ctx,300,500,200,240,70);
   assert.deepEqual(calls.pop(),[50,0,60,90,270,280,120,180]);
   assert.deepEqual(renderer.pivotFor('hero.idle',125),[.5,1],'Loop must select first pose again');
+  // Non-integral default frame periods must not accumulate loop-boundary drift.
+  for(const fps of [12,24,30,60]){
+    const seq={id:'fractional-loop',frames:Array.from({length:fps},(_,i)=>({asset:String(i)})),default_fps:fps,playback:'loop'};
+    assert.equal(renderer.frameAt(seq,0).asset,'0');
+    assert.equal(renderer.frameAt(seq,1000/fps).asset,'1');
+    assert.equal(renderer.frameAt(seq,999.999).asset,String(fps-1));
+    assert.equal(renderer.frameAt(seq,1000).asset,'0');
+    assert.equal(renderer.frameAt(seq,10000).asset,'0');
+    assert.equal(renderer.frameAt({...seq,playback:'once'},1000).asset,String(fps-1));
+    assert.equal(renderer.frameAt({...seq,playback:'pingpong'},1000).asset,String(fps-1));
+    assert.equal(renderer.frameAt({...seq,playback:'pingpong'},2000).asset,'0');
+  }
+  const mixed={id:'mixed',default_fps:12,playback:'loop',frames:[{asset:'hold',duration_ms:250},...Array.from({length:9},(_,i)=>({asset:String(i)}))]};
+  assert.equal(renderer.frameAt(mixed,249.999).asset,'hold');
+  assert.equal(renderer.frameAt(mixed,250).asset,'0');
+  assert.equal(renderer.frameAt(mixed,999.999).asset,'8');
+  assert.equal(renderer.frameAt(mixed,1000).asset,'hold');
   assert.throws(()=>renderer.regionRect(assets.get('hero.bad-extent'),0,0,100,100),/outside logical canvas/);
   assert.throws(()=>renderer.regionRect(assets.get('hero.bad-missing'),0,0,100,100),/requires logical_size_px/);
   assert.throws(()=>renderer.regionRect(assets.get('hero.bad-negative'),0,0,100,100),/outside logical canvas/);
