@@ -1,0 +1,24 @@
+{
+  "smi.world.fantasy.recovered.trees-20261125.golden-tree": {
+    "source": "Isometric_tree_sprite_sheet_grid_5e420177.jpg",
+    "sheet": 15,
+    "row": 2,
+    "col": 0,
+    "size": [
+      110,
+      158
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.trees-20261125.painted-broadleaf-tree": {
+    "source": "a_clean_high_resolution_isometric_asset_reference.png",
+    "sheet": "previous-six-view",
+    "row": 0,
+    "col": 0,
+    "size": [
+      219,
+      226
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  }
+}

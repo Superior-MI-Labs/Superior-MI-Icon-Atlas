@@ -1,0 +1,178 @@
+{
+  "smi.world.fantasy.recovered.foliage-20261125.azure-leaf": {
+    "source": "Fantasy_foliage_sprite_sheet_grid_0864ed28.jpg",
+    "sheet": 2,
+    "row": 0,
+    "col": 0,
+    "size": [
+      168,
+      160
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.ruby-round-bush": {
+    "source": "Fantasy_foliage_sprite_sheet_grid_0864ed28.jpg",
+    "sheet": 2,
+    "row": 1,
+    "col": 0,
+    "size": [
+      143,
+      130
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.scarlet-vine-shrub": {
+    "source": "Fantasy_foliage_asset_sprite_sheet_0671dc49.jpg",
+    "sheet": 4,
+    "row": 3,
+    "col": 0,
+    "size": [
+      140,
+      143
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.emerald-fern": {
+    "source": "Fantasy_foliage_sprite_sheet_grid_cad78b1c.jpg",
+    "sheet": 5,
+    "row": 0,
+    "col": 0,
+    "size": [
+      153,
+      154
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.blue-tipped-fern": {
+    "source": "Fantasy_foliage_asset_sprite_sheet_9df9f3b2.jpg",
+    "sheet": 6,
+    "row": 0,
+    "col": 0,
+    "size": [
+      149,
+      153
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.teal-round-bush": {
+    "source": "Fantasy_foliage_asset_sprite_sheet_9df9f3b2.jpg",
+    "sheet": 6,
+    "row": 1,
+    "col": 0,
+    "size": [
+      156,
+      143
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.sunset-shrub": {
+    "source": "Fantasy_foliage_asset_sprite_sheet_9df9f3b2.jpg",
+    "sheet": 6,
+    "row": 3,
+    "col": 0,
+    "size": [
+      174,
+      133
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.gem-bush": {
+    "source": "Fantasy_foliage_sprite_sheet_grid_5d615279.jpg",
+    "sheet": 8,
+    "row": 1,
+    "col": 0,
+    "size": [
+      146,
+      132
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.orange-round-bush": {
+    "source": "Fantasy_foliage_sprite_sheet_grid_5d615279.jpg",
+    "sheet": 8,
+    "row": 3,
+    "col": 0,
+    "size": [
+      154,
+      151
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.natural-fern": {
+    "source": "Isometric_fantasy_foliage_sprite\u2026_f119192b.jpg",
+    "sheet": 9,
+    "row": 0,
+    "col": 0,
+    "size": [
+      144,
+      110
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.natural-round-bush": {
+    "source": "Isometric_fantasy_foliage_sprite\u2026_f119192b.jpg",
+    "sheet": 9,
+    "row": 1,
+    "col": 0,
+    "size": [
+      160,
+      150
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.berry-bush": {
+    "source": "Isometric_fantasy_foliage_sprite\u2026_f119192b.jpg",
+    "sheet": 9,
+    "row": 2,
+    "col": 0,
+    "size": [
+      130,
+      116
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.blueberry-bush": {
+    "source": "Fantasy_foliage_sprite_sheet_grid_20a9acac.jpg",
+    "sheet": 11,
+    "row": 1,
+    "col": 0,
+    "size": [
+      152,
+      134
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.painted-hydrangea": {
+    "source": "a_clean_high_resolution_isometric_asset_reference.png",
+    "sheet": "previous-six-view",
+    "row": 1,
+    "col": 0,
+    "size": [
+      227,
+      201
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.painted-fern-cluster": {
+    "source": "a_clean_high_resolution_isometric_asset_reference.png",
+    "sheet": "previous-six-view",
+    "row": 2,
+    "col": 0,
+    "size": [
+      231,
+      207
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  },
+  "smi.world.fantasy.recovered.foliage-20261125.painted-agaric-cluster": {
+    "source": "a_clean_high_resolution_isometric_asset_reference.png",
+    "sheet": "previous-six-view",
+    "row": 3,
+    "col": 0,
+    "size": [
+      221,
+      197
+    ],
+    "method": "Chroma or neutral-background segmentation; native resolution; manually screened; no inferred six-view coverage."
+  }
+}

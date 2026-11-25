@@ -1,0 +1,499 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.world.fantasy.recovered.grass-20261125",
+  "version": "0.1.0",
+  "description": "Curated recovered grass billboard previews",
+  "license": "CC0-1.0",
+  "textures": {
+    "sheet": {
+      "path": "textures/sheet.png",
+      "width_px": 1024,
+      "height_px": 355,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "a861dee7f77b4438b55579a89cac53b225fc76da701595dfcb70b954a4f078ca"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.green-grass-01",
+      "kind": "region",
+      "name": "Green Grass 01",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        8,
+        8,
+        135,
+        93
+      ],
+      "logical_size_px": [
+        135,
+        93
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "green grass 01"
+      ],
+      "spatial": {
+        "height_ft": 0.7,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.green-grass-02",
+      "kind": "region",
+      "name": "Green Grass 02",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        159,
+        8,
+        129,
+        100
+      ],
+      "logical_size_px": [
+        129,
+        100
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "green grass 02"
+      ],
+      "spatial": {
+        "height_ft": 0.7,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.green-grass-03",
+      "kind": "region",
+      "name": "Green Grass 03",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        304,
+        8,
+        129,
+        99
+      ],
+      "logical_size_px": [
+        129,
+        99
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "green grass 03"
+      ],
+      "spatial": {
+        "height_ft": 0.7,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.golden-dry-grass-01",
+      "kind": "region",
+      "name": "Golden Dry Grass 01",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        449,
+        8,
+        148,
+        167
+      ],
+      "logical_size_px": [
+        148,
+        167
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "golden dry grass 01"
+      ],
+      "spatial": {
+        "height_ft": 1.5,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.golden-dry-grass-02",
+      "kind": "region",
+      "name": "Golden Dry Grass 02",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        613,
+        8,
+        149,
+        145
+      ],
+      "logical_size_px": [
+        149,
+        145
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "golden dry grass 02"
+      ],
+      "spatial": {
+        "height_ft": 1.5,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.golden-dry-grass-03",
+      "kind": "region",
+      "name": "Golden Dry Grass 03",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        778,
+        8,
+        161,
+        157
+      ],
+      "logical_size_px": [
+        161,
+        157
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "golden dry grass 03"
+      ],
+      "spatial": {
+        "height_ft": 1.5,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.violet-fantasy-grass-01",
+      "kind": "region",
+      "name": "Violet Fantasy Grass 01",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        8,
+        191,
+        129,
+        141
+      ],
+      "logical_size_px": [
+        129,
+        141
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "violet fantasy grass 01"
+      ],
+      "spatial": {
+        "height_ft": 1.3,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.violet-fantasy-grass-02",
+      "kind": "region",
+      "name": "Violet Fantasy Grass 02",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        153,
+        191,
+        142,
+        135
+      ],
+      "logical_size_px": [
+        142,
+        135
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "violet fantasy grass 02"
+      ],
+      "spatial": {
+        "height_ft": 1.3,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.violet-fantasy-grass-03",
+      "kind": "region",
+      "name": "Violet Fantasy Grass 03",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        311,
+        191,
+        122,
+        129
+      ],
+      "logical_size_px": [
+        122,
+        129
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "violet fantasy grass 03"
+      ],
+      "spatial": {
+        "height_ft": 1.3,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.teal-grass-01",
+      "kind": "region",
+      "name": "Teal Grass 01",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        449,
+        191,
+        158,
+        155
+      ],
+      "logical_size_px": [
+        158,
+        155
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "teal grass 01"
+      ],
+      "spatial": {
+        "height_ft": 1.1,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.teal-grass-02",
+      "kind": "region",
+      "name": "Teal Grass 02",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        623,
+        191,
+        151,
+        156
+      ],
+      "logical_size_px": [
+        151,
+        156
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "teal grass 02"
+      ],
+      "spatial": {
+        "height_ft": 1.1,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.grass-20261125.teal-grass-03",
+      "kind": "region",
+      "name": "Teal Grass 03",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        790,
+        191,
+        154,
+        150
+      ],
+      "logical_size_px": [
+        154,
+        150
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "grass",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "grass",
+        "teal grass 03"
+      ],
+      "spatial": {
+        "height_ft": 1.1,
+        "wind": {
+          "bend": 0.4,
+          "reference_speed_ft_s": 20
+        }
+      }
+    }
+  ]
+}

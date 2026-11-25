@@ -1,0 +1,54 @@
+{
+  "schema": "smi-visual-scenarios/1",
+  "description": "Recovered trees as single-view sprites, suitable for review at small game scale. Chests and asymmetric trees are static previews, not six-angle production sets.",
+  "cases": [
+    {
+      "id": "fantasy-recovered-trees-20261125-region-0",
+      "pack": "fantasy-recovered-trees-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.trees-20261125.golden-tree",
+      "preview_name": "Golden Tree",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-trees-20261125-region-1",
+      "pack": "fantasy-recovered-trees-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.trees-20261125.painted-broadleaf-tree",
+      "preview_name": "Painted Broadleaf Tree",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    }
+  ]
+}

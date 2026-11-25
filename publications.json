@@ -132,6 +132,62 @@
       "rights": "CC0-1.0 original geometric artwork; attribution welcome, not required",
       "expected_assets": 362,
       "visual_qa": "pending"
+    },
+    {
+      "path": "examples/fantasy-recovered-grass-20261125",
+      "published": "2026-11-25",
+      "approval": "Creator requested curated preview publication; technical and host/artistic qualification pending.",
+      "rights": "User-directed preview release; CC0-1.0 to the extent the contributor controls the rights. Uploaded source authorship and redistribution authority must be confirmed before publication.",
+      "expected_assets": 12,
+      "visual_qa": "pending"
+    },
+    {
+      "path": "examples/fantasy-recovered-foliage-20261125",
+      "published": "2026-11-25",
+      "approval": "Creator requested curated preview publication; technical and host/artistic qualification pending.",
+      "rights": "User-directed preview release; CC0-1.0 to the extent the contributor controls the rights. Uploaded source authorship and redistribution authority must be confirmed before publication.",
+      "expected_assets": 16,
+      "visual_qa": "pending"
+    },
+    {
+      "path": "examples/fantasy-recovered-trees-20261125",
+      "published": "2026-11-25",
+      "approval": "Creator requested curated preview publication; technical and host/artistic qualification pending.",
+      "rights": "User-directed preview release; CC0-1.0 to the extent the contributor controls the rights. Uploaded source authorship and redistribution authority must be confirmed before publication.",
+      "expected_assets": 2,
+      "visual_qa": "pending"
+    },
+    {
+      "path": "examples/fantasy-recovered-chests-20261125",
+      "published": "2026-11-25",
+      "approval": "Creator requested curated preview publication; technical and host/artistic qualification pending.",
+      "rights": "User-directed preview release; CC0-1.0 to the extent the contributor controls the rights. Uploaded source authorship and redistribution authority must be confirmed before publication.",
+      "expected_assets": 4,
+      "visual_qa": "pending"
+    },
+    {
+      "path": "examples/painterly-fantasy-seasonal-fern",
+      "published": "2026-11-25",
+      "approval": "Creator requested curated preview publication; technical and host/artistic qualification pending.",
+      "rights": "User-directed preview release; CC0-1.0 to the extent the contributor controls the rights. Uploaded source authorship and redistribution authority must be confirmed before publication.",
+      "expected_assets": 5,
+      "visual_qa": "pending"
+    },
+    {
+      "path": "examples/painterly-fantasy-understory",
+      "published": "2026-11-25",
+      "approval": "Creator requested curated preview publication; technical and host/artistic qualification pending.",
+      "rights": "User-directed preview release; CC0-1.0 to the extent the contributor controls the rights. Uploaded source authorship and redistribution authority must be confirmed before publication.",
+      "expected_assets": 5,
+      "visual_qa": "pending"
+    },
+    {
+      "path": "examples/painterly-fantasy-woodland",
+      "published": "2026-11-25",
+      "approval": "Creator requested curated preview publication; technical and host/artistic qualification pending.",
+      "rights": "User-directed preview release; CC0-1.0 to the extent the contributor controls the rights. Uploaded source authorship and redistribution authority must be confirmed before publication.",
+      "expected_assets": 9,
+      "visual_qa": "pending"
     }
   ]
 }

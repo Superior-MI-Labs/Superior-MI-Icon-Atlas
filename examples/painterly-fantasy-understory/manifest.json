@@ -1,0 +1,195 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.world.fantasy.woodland-understory",
+  "version": "0.1.0",
+  "description": "Curated single-view foliage preview; no exact isometric angle certified.",
+  "license": "CC0-1.0",
+  "textures": {
+    "understory": {
+      "path": "textures/understory.png",
+      "width_px": 1566,
+      "height_px": 956,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "90ccd29f0e5cc6dbb13110a978311eb27fb76dd5f99333db5fceb5348db1a9d6"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.world.fantasy.woodland-understory.clover",
+      "kind": "region",
+      "name": "White clover",
+      "description": "Independent painterly woodland plant with an estimated ground anchor.",
+      "domain": "world-environment",
+      "style": "painterly fantasy",
+      "texture": "understory",
+      "logical_size_px": [
+        502,
+        424
+      ],
+      "pivot": [
+        0.492032,
+        0.926887
+      ],
+      "tags": [
+        "clover",
+        "groundcover",
+        "white flowers",
+        "foliage",
+        "fantasy",
+        "woodland"
+      ],
+      "subjects": [
+        "vegetation",
+        "foliage"
+      ],
+      "rect_px": [
+        0,
+        0,
+        502,
+        424
+      ]
+    },
+    {
+      "id": "smi.world.fantasy.woodland-understory.broadleaf",
+      "kind": "region",
+      "name": "Broadleaf groundcover",
+      "description": "Independent painterly woodland plant with an estimated ground anchor.",
+      "domain": "world-environment",
+      "style": "painterly fantasy",
+      "texture": "understory",
+      "logical_size_px": [
+        510,
+        425
+      ],
+      "pivot": [
+        0.505882,
+        0.912941
+      ],
+      "tags": [
+        "broadleaf",
+        "groundcover",
+        "green",
+        "foliage",
+        "fantasy",
+        "woodland"
+      ],
+      "subjects": [
+        "vegetation",
+        "foliage"
+      ],
+      "rect_px": [
+        522,
+        0,
+        510,
+        425
+      ]
+    },
+    {
+      "id": "smi.world.fantasy.woodland-understory.bramble",
+      "kind": "region",
+      "name": "Blackberry bramble",
+      "description": "Independent painterly woodland plant with an estimated ground anchor.",
+      "domain": "world-environment",
+      "style": "painterly fantasy",
+      "texture": "understory",
+      "logical_size_px": [
+        522,
+        468
+      ],
+      "pivot": [
+        0.521073,
+        0.903846
+      ],
+      "tags": [
+        "bramble",
+        "berries",
+        "thorny",
+        "shrub",
+        "foliage",
+        "fantasy",
+        "woodland"
+      ],
+      "subjects": [
+        "vegetation",
+        "foliage"
+      ],
+      "rect_px": [
+        1044,
+        0,
+        522,
+        468
+      ]
+    },
+    {
+      "id": "smi.world.fantasy.woodland-understory.anemones",
+      "kind": "region",
+      "name": "White wood anemones",
+      "description": "Independent painterly woodland plant with an estimated ground anchor.",
+      "domain": "world-environment",
+      "style": "painterly fantasy",
+      "texture": "understory",
+      "logical_size_px": [
+        507,
+        434
+      ],
+      "pivot": [
+        0.508876,
+        0.891705
+      ],
+      "tags": [
+        "anemone",
+        "flowers",
+        "white",
+        "foliage",
+        "fantasy",
+        "woodland"
+      ],
+      "subjects": [
+        "vegetation",
+        "foliage"
+      ],
+      "rect_px": [
+        522,
+        478,
+        507,
+        434
+      ]
+    },
+    {
+      "id": "smi.world.fantasy.woodland-understory.succulent",
+      "kind": "region",
+      "name": "Rosy succulent rosette",
+      "description": "Independent painterly woodland plant with an estimated ground anchor.",
+      "domain": "world-environment",
+      "style": "painterly fantasy",
+      "texture": "understory",
+      "logical_size_px": [
+        518,
+        360
+      ],
+      "pivot": [
+        0.492278,
+        0.822222
+      ],
+      "tags": [
+        "succulent",
+        "rosette",
+        "groundcover",
+        "foliage",
+        "fantasy",
+        "woodland"
+      ],
+      "subjects": [
+        "vegetation",
+        "foliage"
+      ],
+      "rect_px": [
+        1044,
+        478,
+        518,
+        360
+      ]
+    }
+  ]
+}

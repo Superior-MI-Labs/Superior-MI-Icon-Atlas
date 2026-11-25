@@ -1,0 +1,184 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.world.fantasy.woodland.seasonal-fern-20261125a",
+  "version": "0.1.0",
+  "description": "Curated single-view foliage preview; no exact isometric angle certified.",
+  "license": "CC0-1.0",
+  "textures": {
+    "seasonal": {
+      "path": "textures/seasonal-fern.png",
+      "width_px": 1536,
+      "height_px": 1024,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "eb5d51dc81fde26b981bbc25de9036e094a5acb0b6a0d22fc88b566e83d10118"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.spring",
+      "kind": "region",
+      "name": "Woodland fern \u2014 Spring",
+      "description": "Painterly woodland fern in its spring appearance. Independent billboard artwork with matched root anchor.",
+      "texture": "seasonal",
+      "rect_px": [
+        0,
+        0,
+        768,
+        512
+      ],
+      "logical_size_px": [
+        768,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.8828125
+      ],
+      "style": "painterly fantasy",
+      "domain": "world-environment",
+      "subjects": [
+        "fern",
+        "foliage"
+      ],
+      "tags": [
+        "fern",
+        "foliage",
+        "woodland",
+        "seasonal",
+        "spring",
+        "fantasy"
+      ]
+    },
+    {
+      "id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.summer",
+      "kind": "region",
+      "name": "Woodland fern \u2014 Summer",
+      "description": "Painterly woodland fern in its summer appearance. Independent billboard artwork with matched root anchor.",
+      "texture": "seasonal",
+      "rect_px": [
+        768,
+        0,
+        768,
+        512
+      ],
+      "logical_size_px": [
+        768,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.8828125
+      ],
+      "style": "painterly fantasy",
+      "domain": "world-environment",
+      "subjects": [
+        "fern",
+        "foliage"
+      ],
+      "tags": [
+        "fern",
+        "foliage",
+        "woodland",
+        "seasonal",
+        "summer",
+        "fantasy"
+      ]
+    },
+    {
+      "id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.autumn",
+      "kind": "region",
+      "name": "Woodland fern \u2014 Autumn",
+      "description": "Painterly woodland fern in its autumn appearance. Independent billboard artwork with matched root anchor.",
+      "texture": "seasonal",
+      "rect_px": [
+        0,
+        512,
+        768,
+        512
+      ],
+      "logical_size_px": [
+        768,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.8828125
+      ],
+      "style": "painterly fantasy",
+      "domain": "world-environment",
+      "subjects": [
+        "fern",
+        "foliage"
+      ],
+      "tags": [
+        "fern",
+        "foliage",
+        "woodland",
+        "seasonal",
+        "autumn",
+        "fantasy"
+      ]
+    },
+    {
+      "id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.winter",
+      "kind": "region",
+      "name": "Woodland fern \u2014 Winter",
+      "description": "Painterly woodland fern in its winter appearance. Independent billboard artwork with matched root anchor.",
+      "texture": "seasonal",
+      "rect_px": [
+        768,
+        512,
+        768,
+        512
+      ],
+      "logical_size_px": [
+        768,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.8828125
+      ],
+      "style": "painterly fantasy",
+      "domain": "world-environment",
+      "subjects": [
+        "fern",
+        "foliage"
+      ],
+      "tags": [
+        "fern",
+        "foliage",
+        "woodland",
+        "seasonal",
+        "winter",
+        "fantasy"
+      ]
+    },
+    {
+      "id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.states",
+      "kind": "state_set",
+      "name": "Woodland fern \u2014 Seasonal appearances",
+      "description": "Four manually selectable appearances; host decides season. No autonomous climate simulation.",
+      "style": "painterly fantasy",
+      "domain": "world-environment",
+      "subjects": [
+        "fern",
+        "foliage"
+      ],
+      "tags": [
+        "fern",
+        "foliage",
+        "seasonal",
+        "woodland"
+      ],
+      "states": {
+        "spring": "smi.world.fantasy.woodland.seasonal-fern-20261125a.spring",
+        "summer": "smi.world.fantasy.woodland.seasonal-fern-20261125a.summer",
+        "autumn": "smi.world.fantasy.woodland.seasonal-fern-20261125a.autumn",
+        "winter": "smi.world.fantasy.woodland.seasonal-fern-20261125a.winter"
+      },
+      "default_state": "summer"
+    }
+  ]
+}

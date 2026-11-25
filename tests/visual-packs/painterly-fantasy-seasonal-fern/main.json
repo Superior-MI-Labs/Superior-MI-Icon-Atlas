@@ -1,0 +1,167 @@
+{
+  "schema": "smi-visual-scenarios/1",
+  "description": "Curated single-view foliage preview; no exact isometric angle certified.",
+  "cases": [
+    {
+      "id": "painterly-fantasy-seasonal-fern-region-0",
+      "pack": "painterly-fantasy-seasonal-fern.zip",
+      "asset": "smi.world.fantasy.woodland.seasonal-fern-20261125a.spring",
+      "preview_name": "Woodland fern \u2014 Spring",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-seasonal-fern-region-1",
+      "pack": "painterly-fantasy-seasonal-fern.zip",
+      "asset": "smi.world.fantasy.woodland.seasonal-fern-20261125a.summer",
+      "preview_name": "Woodland fern \u2014 Summer",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-seasonal-fern-region-2",
+      "pack": "painterly-fantasy-seasonal-fern.zip",
+      "asset": "smi.world.fantasy.woodland.seasonal-fern-20261125a.autumn",
+      "preview_name": "Woodland fern \u2014 Autumn",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-seasonal-fern-region-3",
+      "pack": "painterly-fantasy-seasonal-fern.zip",
+      "asset": "smi.world.fantasy.woodland.seasonal-fern-20261125a.winter",
+      "preview_name": "Woodland fern \u2014 Winter",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-seasonal-fern-state-set",
+      "pack": "painterly-fantasy-seasonal-fern.zip",
+      "asset": "smi.world.fantasy.woodland.seasonal-fern-20261125a.states",
+      "preview_name": "Woodland fern \u2014 Seasonal appearances",
+      "samples": [
+        {
+          "id": "spring",
+          "state": "spring",
+          "time_ms": 0
+        },
+        {
+          "id": "summer",
+          "state": "summer",
+          "time_ms": 0
+        },
+        {
+          "id": "autumn",
+          "state": "autumn",
+          "time_ms": 0
+        },
+        {
+          "id": "winter",
+          "state": "winter",
+          "time_ms": 0
+        },
+        {
+          "id": "summer-repeat",
+          "state": "summer",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "spring",
+          "b": "summer",
+          "min_changed_pixels": 100
+        },
+        {
+          "type": "different",
+          "a": "summer",
+          "b": "autumn",
+          "min_changed_pixels": 100
+        },
+        {
+          "type": "different",
+          "a": "autumn",
+          "b": "winter",
+          "min_changed_pixels": 100
+        },
+        {
+          "type": "different",
+          "a": "winter",
+          "b": "spring",
+          "min_changed_pixels": 100
+        },
+        {
+          "type": "same",
+          "a": "summer",
+          "b": "summer-repeat",
+          "max_changed_pixels": 0
+        }
+      ]
+    }
+  ]
+}

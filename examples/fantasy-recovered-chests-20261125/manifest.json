@@ -1,0 +1,163 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.world.fantasy.recovered.chests-20261125",
+  "version": "0.1.0",
+  "description": "Curated recovered chests billboard previews",
+  "license": "CC0-1.0",
+  "textures": {
+    "sheet": {
+      "path": "textures/sheet.png",
+      "width_px": 1024,
+      "height_px": 204,
+      "alpha": "straight",
+      "color_space": "srgb",
+      "sha256": "4319965f223ad0043d7f679b9240b037c36d8e3fbfc0550d5371c557acaefb78"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.world.fantasy.recovered.chests-20261125.weathered-wood-chest",
+      "kind": "region",
+      "name": "Weathered Wood Chest",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        8,
+        8,
+        192,
+        188
+      ],
+      "logical_size_px": [
+        192,
+        188
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "chests",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "chests",
+        "weathered wood chest"
+      ],
+      "spatial": {
+        "height_ft": 2.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.chests-20261125.brass-bound-chest",
+      "kind": "region",
+      "name": "Brass Bound Chest",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        216,
+        8,
+        180,
+        174
+      ],
+      "logical_size_px": [
+        180,
+        174
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "chests",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "chests",
+        "brass bound chest"
+      ],
+      "spatial": {
+        "height_ft": 2.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.chests-20261125.royal-gold-chest",
+      "kind": "region",
+      "name": "Royal Gold Chest",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        412,
+        8,
+        190,
+        181
+      ],
+      "logical_size_px": [
+        190,
+        181
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "chests",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "chests",
+        "royal gold chest"
+      ],
+      "spatial": {
+        "height_ft": 2.5
+      }
+    },
+    {
+      "id": "smi.world.fantasy.recovered.chests-20261125.azure-runic-chest",
+      "kind": "region",
+      "name": "Azure Runic Chest",
+      "description": "Single-view visual sprite; recovered from a flattened sheet. Suggested anchor and height; no directional guarantee.",
+      "domain": "world-environment",
+      "style": "fantasy game art",
+      "texture": "sheet",
+      "rect_px": [
+        618,
+        8,
+        176,
+        181
+      ],
+      "logical_size_px": [
+        176,
+        181
+      ],
+      "pivot": [
+        0.5,
+        0.92
+      ],
+      "tags": [
+        "chests",
+        "fantasy",
+        "billboard",
+        "recovered"
+      ],
+      "subjects": [
+        "chests",
+        "azure runic chest"
+      ],
+      "spatial": {
+        "height_ft": 2.5
+      }
+    }
+  ]
+}

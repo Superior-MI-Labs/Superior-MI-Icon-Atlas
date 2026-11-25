@@ -1,0 +1,126 @@
+{
+  "schema": "smi-visual-scenarios/1",
+  "description": "Curated single-view foliage preview; no exact isometric angle certified.",
+  "cases": [
+    {
+      "id": "painterly-fantasy-understory-region-0",
+      "pack": "painterly-fantasy-understory.zip",
+      "asset": "smi.world.fantasy.woodland-understory.clover",
+      "preview_name": "White clover",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-understory-region-1",
+      "pack": "painterly-fantasy-understory.zip",
+      "asset": "smi.world.fantasy.woodland-understory.broadleaf",
+      "preview_name": "Broadleaf groundcover",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-understory-region-2",
+      "pack": "painterly-fantasy-understory.zip",
+      "asset": "smi.world.fantasy.woodland-understory.bramble",
+      "preview_name": "Blackberry bramble",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-understory-region-3",
+      "pack": "painterly-fantasy-understory.zip",
+      "asset": "smi.world.fantasy.woodland-understory.anemones",
+      "preview_name": "White wood anemones",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "painterly-fantasy-understory-region-4",
+      "pack": "painterly-fantasy-understory.zip",
+      "asset": "smi.world.fantasy.woodland-understory.succulent",
+      "preview_name": "Rosy succulent rosette",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    }
+  ]
+}

@@ -23,6 +23,16 @@ class VisualScenarioContractTests(unittest.TestCase):
         for name in names:
             self.assertTrue((ROOT/'web/demo'/name).is_file() or (ROOT/'examples'/name.removesuffix('.zip')/'manifest.json').is_file(),name)
 
+    def test_collection_visual_specs(self):
+        ids = {case['id'] for case in self.data['cases']}
+        for path in sorted((ROOT/'tests/visual-packs').glob('*/*.json')):
+            recipe = json.loads(path.read_text())
+            module.verify_spec(recipe)
+            for case in recipe['cases']:
+                self.assertEqual(case['pack'], path.parent.name + '.zip')
+                self.assertNotIn(case['id'], ids)
+                ids.add(case['id'])
+
     def test_exact_archive_override(self):
         with TemporaryDirectory() as tmp:
             archive=Path(tmp)/'candidate.zip';archive.touch()

@@ -16,6 +16,10 @@ For an external candidate, pass `--archive /path/to/candidate.zip` (all cases mu
 
 By default, the runner uses `/usr/bin/chromium` when present, otherwise Playwright's installed Chromium. It injects the built JS and ZIP bytes without a server or network. A nonzero exit means a failed check or a render that couldn't be performed.
 
+## Collection regression suites
+
+Keep the shared `tests/visual-scenarios.json` baseline intact. Put new collection-specific regression specifications in `tests/visual-packs/<collection-slug>/<suite>.json`, using the same existing schema and runner. Each file contains 1–40 cases, with unique IDs and a matching local ZIP basename. CI runs every such file and archives its report. For collections needing more than 40 cases, add further bounded suites in the same collection directory.
+
 ## Author a new case
 
 Copy a case from [`tests/visual-scenarios.json`](../../tests/visual-scenarios.json) and replace the pack name, entry/asset, sample controls, times, and assertions. **Assertions must follow the creator's request**, not a blanket requirement that every frame differ.

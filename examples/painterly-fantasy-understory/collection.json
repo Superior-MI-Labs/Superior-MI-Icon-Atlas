@@ -1,0 +1,14 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.world.fantasy.woodland-understory.collection",
+  "name": "Painterly Fantasy Understory",
+  "version": "0.1.0",
+  "description": "Curated single-view foliage preview; no exact isometric angle certified.",
+  "entry_asset": "smi.world.fantasy.woodland-understory.clover",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Painterly Fantasy Understory"
+    }
+  ]
+}

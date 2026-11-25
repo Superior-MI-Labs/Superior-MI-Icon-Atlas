@@ -1,0 +1,14 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.world.fantasy.recovered.foliage-20261125.collection",
+  "name": "Fantasy Recovered Foliage 20261125",
+  "version": "0.1.0",
+  "description": "Recovered foliage as single-view sprites, suitable for review at small game scale. Chests and asymmetric trees are static previews, not six-angle production sets.",
+  "entry_asset": "smi.world.fantasy.recovered.foliage-20261125.azure-leaf",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Fantasy Recovered Foliage 20261125"
+    }
+  ]
+}

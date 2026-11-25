@@ -1,0 +1,14 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.collection",
+  "name": "Painterly Fantasy Seasonal Fern",
+  "version": "0.1.0",
+  "description": "Curated single-view foliage preview; no exact isometric angle certified.",
+  "entry_asset": "smi.world.fantasy.woodland.seasonal-fern-20261125a.states",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Painterly Fantasy Seasonal Fern"
+    }
+  ]
+}

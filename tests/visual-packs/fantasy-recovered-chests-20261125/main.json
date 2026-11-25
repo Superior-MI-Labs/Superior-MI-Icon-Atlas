@@ -1,0 +1,102 @@
+{
+  "schema": "smi-visual-scenarios/1",
+  "description": "Recovered chests as single-view sprites, suitable for review at small game scale. Chests and asymmetric trees are static previews, not six-angle production sets.",
+  "cases": [
+    {
+      "id": "fantasy-recovered-chests-20261125-region-0",
+      "pack": "fantasy-recovered-chests-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.chests-20261125.weathered-wood-chest",
+      "preview_name": "Weathered Wood Chest",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-chests-20261125-region-1",
+      "pack": "fantasy-recovered-chests-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.chests-20261125.brass-bound-chest",
+      "preview_name": "Brass Bound Chest",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-chests-20261125-region-2",
+      "pack": "fantasy-recovered-chests-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.chests-20261125.royal-gold-chest",
+      "preview_name": "Royal Gold Chest",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "fantasy-recovered-chests-20261125-region-3",
+      "pack": "fantasy-recovered-chests-20261125.zip",
+      "asset": "smi.world.fantasy.recovered.chests-20261125.azure-runic-chest",
+      "preview_name": "Azure Runic Chest",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "later",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "same",
+          "a": "start",
+          "b": "later",
+          "max_changed_pixels": 0
+        }
+      ]
+    }
+  ]
+}
