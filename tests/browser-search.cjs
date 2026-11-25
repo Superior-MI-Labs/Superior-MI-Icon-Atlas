@@ -100,7 +100,10 @@ assert.deepEqual(new Set(facets.status.map(x=>x.value)),new Set(['published','ar
 const filteredFacets=Search.facets(data.assets,{...params,domain:'programming'});
 assert.ok(filteredFacets.subject.every(x=>x.count<=2073));
 const components=published.filter(a=>a.discovery==='component');
-assert.equal(components.length,439);
+assert.equal(components.filter(a=>a.pack!=='minimal-white-tech').length,439);
+assert.equal(components.filter(a=>a.pack==='minimal-white-tech').length,200);
+assert.equal(Search.results(data.assets,{...params,pack:'minimal-white-tech',scope:'all'}).length,362);
+assert.ok(Search.results(data.assets,{...params,query:'smi.hud.whitetech01.hud.command'})[0].id==='smi.hud.whitetech01.hud.command');
 assert.equal(defaults.length,data.discoverable_count);
 assert.ok(defaults.every(a=>a.discovery!=='component'));
 assert.equal(Search.results(data.assets,{...params,scope:'components'}).length,components.length);

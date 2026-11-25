@@ -1,0 +1,14 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.hud.whitetech01.collection",
+  "name": "Minimal White Tech — Sci-Fi HUD",
+  "version": "1.0.0",
+  "description": "Four-wave White Tech sci-fi UI kit, Command HUD default.",
+  "entry_asset": "smi.hud.whitetech01.hud.command",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "White Tech core UI"
+    }
+  ]
+}

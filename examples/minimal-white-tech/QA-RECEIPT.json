@@ -1,0 +1,531 @@
+{
+  "version": "1.0.0",
+  "status": "RELEASE CANDIDATE — official qualification pending",
+  "counts": {
+    "region": 280,
+    "composition": 60,
+    "state_set": 17,
+    "sequence": 5
+  },
+  "new_counts": {
+    "region": 22,
+    "composition": 8,
+    "state_set": 2
+  },
+  "textures": 4,
+  "prior_ids_metadata_and_texture_bytes_unchanged": "PASS: all IDs and texture bytes preserved; only 22 missing subject fields supplied and pack license/version updated",
+  "local_crop_geometry_nonoverlap_nonblank": "PASS",
+  "local_reference_graph_slots_bindings": "PASS",
+  "new_layer_bounds": "PASS",
+  "independent_numeric_state_pixels": "PASS",
+  "numeric_pixel_counts": {
+    "widget.resource-meter/Health": [
+      0,
+      32,
+      192,
+      384,
+      976,
+      1952,
+      2928,
+      3520,
+      3872,
+      3904
+    ],
+    "widget.resource-meter/Energy": [
+      0,
+      32,
+      192,
+      384,
+      976,
+      1952,
+      2928,
+      3520,
+      3872,
+      3904
+    ],
+    "widget.resource-meter/Shield": [
+      0,
+      32,
+      192,
+      384,
+      976,
+      1952,
+      2928,
+      3520,
+      3872,
+      3904
+    ],
+    "widget.resource-meter/Stamina": [
+      0,
+      32,
+      192,
+      384,
+      976,
+      1952,
+      2928,
+      3520,
+      3872,
+      3904
+    ],
+    "widget.resource-meter/Oxygen": [
+      0,
+      32,
+      192,
+      384,
+      976,
+      1952,
+      2928,
+      3520,
+      3872,
+      3904
+    ],
+    "widget.resource-meter/Fuel": [
+      0,
+      32,
+      192,
+      384,
+      976,
+      1952,
+      2928,
+      3520,
+      3872,
+      3904
+    ],
+    "widget.resource-meter/Experience": [
+      0,
+      32,
+      192,
+      384,
+      976,
+      1952,
+      2928,
+      3520,
+      3872,
+      3904
+    ],
+    "widget.resource-meter/Heat": [
+      0,
+      32,
+      192,
+      384,
+      976,
+      1952,
+      2928,
+      3520,
+      3872,
+      3904
+    ],
+    "widget.resource-meter/Ammo": [
+      0,
+      32,
+      192,
+      384,
+      976,
+      1952,
+      2928,
+      3520,
+      3872,
+      3904
+    ],
+    "widget.resource-meter/Hull": [
+      0,
+      32,
+      192,
+      384,
+      976,
+      1952,
+      2928,
+      3520,
+      3872,
+      3904
+    ],
+    "widget.vertical-meter/Fuel": [
+      0,
+      64,
+      256,
+      480,
+      1216,
+      2400,
+      3584,
+      4320,
+      4736,
+      4800
+    ],
+    "widget.vertical-meter/Oxygen": [
+      0,
+      64,
+      256,
+      480,
+      1216,
+      2400,
+      3584,
+      4320,
+      4736,
+      4800
+    ],
+    "widget.vertical-meter/Heat": [
+      0,
+      64,
+      256,
+      480,
+      1216,
+      2400,
+      3584,
+      4320,
+      4736,
+      4800
+    ],
+    "widget.vertical-meter/Battery": [
+      0,
+      64,
+      256,
+      480,
+      1216,
+      2400,
+      3584,
+      4320,
+      4736,
+      4800
+    ],
+    "widget.vertical-meter/Hull": [
+      0,
+      64,
+      256,
+      480,
+      1216,
+      2400,
+      3584,
+      4320,
+      4736,
+      4800
+    ],
+    "widget.instrument-meter/None": [
+      0,
+      14,
+      63,
+      133,
+      329,
+      658,
+      987,
+      1183,
+      1302,
+      1316
+    ]
+  },
+  "new_composition_input_checks": [
+    {
+      "asset": "smi.hud.whitetech01.widget.digital-readout",
+      "input": "digit_1",
+      "samples": 12
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.digital-readout",
+      "input": "digit_2",
+      "samples": 12
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.digital-readout",
+      "input": "digit_3",
+      "samples": 12
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.digital-readout",
+      "input": "digit_4",
+      "samples": 12
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.mission-log",
+      "input": "mission_1",
+      "samples": 4
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.mission-log",
+      "input": "mission_2",
+      "samples": 4
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.mission-log",
+      "input": "mission_3",
+      "samples": 4
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.mission-log",
+      "input": "mission_4",
+      "samples": 4
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.dialogue-choices",
+      "input": "selected",
+      "samples": 3
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.station-resources",
+      "input": "energy",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.station-resources",
+      "input": "oxygen",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.station-resources",
+      "input": "fuel",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.widget.station-resources",
+      "input": "heat",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mech",
+      "input": "hull",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mech",
+      "input": "energy",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mech",
+      "input": "shield",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mech",
+      "input": "heat",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mech",
+      "input": "reading",
+      "samples": 11
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mech",
+      "input": "severity",
+      "samples": 4
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mech",
+      "input": "processing",
+      "samples": 2
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "energy",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "oxygen",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "fuel",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "heat",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "progress_1",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "progress_2",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "progress_3",
+      "samples": 10
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "job_1",
+      "samples": 3
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "job_2",
+      "samples": 3
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "job_3",
+      "samples": 3
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "severity",
+      "samples": 4
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mission-control",
+      "input": "mission_1",
+      "samples": 4
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mission-control",
+      "input": "mission_2",
+      "samples": 4
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mission-control",
+      "input": "mission_3",
+      "samples": 4
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mission-control",
+      "input": "mission_4",
+      "samples": 4
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mission-control",
+      "input": "selected",
+      "samples": 3
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mission-control",
+      "input": "receiving",
+      "samples": 2
+    },
+    {
+      "asset": "smi.hud.whitetech01.hud.mission-control",
+      "input": "severity",
+      "samples": 4
+    }
+  ],
+  "state_family_variant_counts": {
+    "smi.hud.whitetech01.pip.states": 2,
+    "smi.hud.whitetech01.widget.radial-progress": 11,
+    "smi.hud.whitetech01.button.primary.states": 4,
+    "smi.hud.whitetech01.button.secondary.states": 4,
+    "smi.hud.whitetech01.button.danger.states": 4,
+    "smi.hud.whitetech01.button.tab.states": 4,
+    "smi.hud.whitetech01.button.icon.states": 4,
+    "smi.hud.whitetech01.socket.states": 6,
+    "smi.hud.whitetech01.navigation.states": 2,
+    "smi.hud.whitetech01.alert.states": 4,
+    "smi.hud.whitetech01.instrument.dial.needle-states": 11,
+    "smi.hud.whitetech01.instrument.waveform.states": 4,
+    "smi.hud.whitetech01.targeting.reticle.states": 3,
+    "smi.hud.whitetech01.menu.row.states": 3,
+    "smi.hud.whitetech01.research.node.states": 4,
+    "smi.hud.whitetech01.digit.states": 12,
+    "smi.hud.whitetech01.mission.status.states": 4
+  },
+  "animation_checks": {
+    "smi.hud.whitetech01.effect.radar-sweep": {
+      "frames": 16,
+      "fps": 16,
+      "adjacent_changed_pixels": [
+        2772,
+        2766,
+        2746,
+        2757,
+        2774,
+        2773,
+        2737,
+        2785,
+        2771,
+        2763,
+        2742,
+        2757,
+        2773,
+        2770,
+        2737,
+        2785
+      ],
+      "loop_at_period_equals_first": true
+    },
+    "smi.hud.whitetech01.effect.loading-spinner": {
+      "frames": 12,
+      "fps": 12,
+      "adjacent_changed_pixels": [
+        688,
+        677,
+        700,
+        708,
+        685,
+        715,
+        702,
+        691,
+        704,
+        685,
+        680,
+        709
+      ],
+      "loop_at_period_equals_first": true
+    },
+    "smi.hud.whitetech01.effect.location-pulse": {
+      "frames": 12,
+      "fps": 12,
+      "adjacent_changed_pixels": [
+        999,
+        1288,
+        1600,
+        1846,
+        1886,
+        1541,
+        1541,
+        1886,
+        1846,
+        1600,
+        1288,
+        999
+      ],
+      "loop_at_period_equals_first": true
+    },
+    "smi.hud.whitetech01.effect.transmission": {
+      "frames": 12,
+      "fps": 12,
+      "adjacent_changed_pixels": [
+        1997,
+        2007,
+        2027,
+        2036,
+        2032,
+        2031,
+        2013,
+        2041,
+        2041,
+        2036,
+        2045,
+        2008
+      ],
+      "loop_at_period_equals_first": true
+    },
+    "smi.hud.whitetech01.effect.alert-pulse": {
+      "frames": 8,
+      "fps": 8,
+      "adjacent_changed_pixels": [
+        4064,
+        4058,
+        3978,
+        4056,
+        4564,
+        4556,
+        3939,
+        4632
+      ],
+      "loop_at_period_equals_first": true
+    }
+  },
+  "creator_acceptance_spec_independent_check": "PASS 58 assertions",
+  "official_atlas_zip_validator": "NOT RUN: GitHub checkout DNS blocked",
+  "official_ai_acceptance_runner": "NOT RUN: independent check only",
+  "actual_builder_chromium": "NOT RUN: official checkout unavailable",
+  "creator_art_review": "Owner requested public release; full manual region/frame review not independently verified",
+  "manual_native_size_all_frames_and_presets_review": "PENDING",
+  "license": "CC0-1.0 authorized by owner; attribution welcome, not required.",
+  "publication": "Pending CI and Pages deployment"
+}

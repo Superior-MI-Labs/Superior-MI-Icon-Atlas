@@ -1,0 +1,324 @@
+{
+  "schema": "smi-ai-acceptance/1",
+  "intent": "Complete White Tech sci-fi kit: four content waves, original asset preservation, modular instruments, animated overlays, research and fabrication, vehicle schematics, mission/dialogue, station and mech dashboards.",
+  "checks": [
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.command",
+      "kind": "composition"
+    },
+    {
+      "type": "input_range",
+      "asset": "smi.hud.whitetech01.widget.resource-meter",
+      "input": "value",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "type": "layer_order",
+      "asset": "smi.hud.whitetech01.widget.resource-meter",
+      "before": "base",
+      "after": "fill"
+    },
+    {
+      "type": "layer_uses_input",
+      "asset": "smi.hud.whitetech01.widget.resource-meter",
+      "layer": "fill",
+      "binding": "clip",
+      "input": "value"
+    },
+    {
+      "type": "output_maps_from_input",
+      "asset": "smi.hud.whitetech01.widget.resource-meter",
+      "output": "value",
+      "input": "value"
+    },
+    {
+      "type": "event_declared",
+      "asset": "smi.hud.whitetech01.widget.slider",
+      "event": "set_value"
+    },
+    {
+      "type": "event_declared",
+      "asset": "smi.hud.whitetech01.widget.toggle",
+      "event": "activate"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.vertical-meter",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.channel-graph",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.analog-gauge",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.dropdown",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.radial-menu",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.equipment-grid",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.pilot",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.scanner",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.loadout",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.squad",
+      "kind": "composition"
+    },
+    {
+      "type": "input_range",
+      "asset": "smi.hud.whitetech01.widget.vertical-meter",
+      "input": "value",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "type": "layer_uses_input",
+      "asset": "smi.hud.whitetech01.widget.vertical-meter",
+      "layer": "fill",
+      "binding": "clip",
+      "input": "value"
+    },
+    {
+      "type": "output_maps_from_input",
+      "asset": "smi.hud.whitetech01.widget.vertical-meter",
+      "output": "value",
+      "input": "value"
+    },
+    {
+      "type": "event_declared",
+      "asset": "smi.hud.whitetech01.widget.dropdown",
+      "event": "activate"
+    },
+    {
+      "type": "input_range",
+      "asset": "smi.hud.whitetech01.widget.compass-track",
+      "input": "bearing",
+      "min": 0,
+      "max": 360
+    },
+    {
+      "type": "layer_uses_input",
+      "asset": "smi.hud.whitetech01.widget.compass-track",
+      "layer": "pointer",
+      "binding": "position_from_input",
+      "input": "bearing"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.effect.radar-sweep",
+      "kind": "sequence"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.effect.loading-spinner",
+      "kind": "sequence"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.effect.location-pulse",
+      "kind": "sequence"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.effect.transmission",
+      "kind": "sequence"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.effect.alert-pulse",
+      "kind": "sequence"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.animated-radar",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.processing",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.animated-transmission",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.animated-critical-alert",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.item-preview",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.research-node",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.research-tree",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.star-map",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.fabrication-queue",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.explorer",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.research",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.fabrication",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.navigation",
+      "kind": "composition"
+    },
+    {
+      "type": "input_range",
+      "asset": "smi.hud.whitetech01.hud.explorer",
+      "input": "oxygen",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "type": "output_maps_from_input",
+      "asset": "smi.hud.whitetech01.hud.research",
+      "output": "progress",
+      "input": "progress"
+    },
+    {
+      "type": "input_range",
+      "asset": "smi.hud.whitetech01.widget.fabrication-queue",
+      "input": "progress_1",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "type": "output_maps_from_input",
+      "asset": "smi.hud.whitetech01.widget.star-map",
+      "output": "destination",
+      "input": "destination"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.vehicle-schematic",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.digital-readout",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.mission-log",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.dialogue-choices",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.widget.station-resources",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.mech",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.station",
+      "kind": "composition"
+    },
+    {
+      "type": "asset_kind",
+      "asset": "smi.hud.whitetech01.hud.mission-control",
+      "kind": "composition"
+    },
+    {
+      "type": "input_range",
+      "asset": "smi.hud.whitetech01.hud.station",
+      "input": "energy",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "type": "input_range",
+      "asset": "smi.hud.whitetech01.hud.mech",
+      "input": "heat",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "type": "output_maps_from_input",
+      "asset": "smi.hud.whitetech01.widget.mission-log",
+      "output": "mission_1",
+      "input": "mission_1"
+    },
+    {
+      "type": "output_maps_from_input",
+      "asset": "smi.hud.whitetech01.widget.dialogue-choices",
+      "output": "selected",
+      "input": "selected"
+    },
+    {
+      "type": "output_maps_from_input",
+      "asset": "smi.hud.whitetech01.widget.digital-readout",
+      "output": "digit_1",
+      "input": "digit_1"
+    }
+  ]
+}

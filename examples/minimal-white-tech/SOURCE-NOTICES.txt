@@ -1,0 +1,7 @@
+SPDX-License-Identifier: CC0-1.0
+
+Minimal White Tech — original Superior MI Labs geometric artwork and HUD asset definitions. Dedicated to the public domain under CC0 1.0 Universal, to the extent permitted by law. Attribution to Superior MI Labs is welcome but not required.
+
+Legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+No third-party concept art is embedded. The approved concept is a style reference only. This dedication covers this pack, not the software in the rest of the repository.

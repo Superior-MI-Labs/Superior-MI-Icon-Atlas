@@ -521,6 +521,392 @@
           "max_changed_pixels": 0
         }
       ]
+    },
+    {
+      "id": "white-tech-horizontal-meter",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.widget.resource-meter",
+      "preview_name": "White Tech Configurable Resource Meter",
+      "samples": [
+        {
+          "id": "v0",
+          "preset": "Health",
+          "inputs": {
+            "value": 0
+          }
+        },
+        {
+          "id": "v1",
+          "inputs": {
+            "value": 1
+          }
+        },
+        {
+          "id": "v5",
+          "inputs": {
+            "value": 5
+          }
+        },
+        {
+          "id": "v10",
+          "inputs": {
+            "value": 10
+          }
+        },
+        {
+          "id": "v25",
+          "inputs": {
+            "value": 25
+          }
+        },
+        {
+          "id": "v50",
+          "inputs": {
+            "value": 50
+          }
+        },
+        {
+          "id": "v75",
+          "inputs": {
+            "value": 75
+          }
+        },
+        {
+          "id": "v90",
+          "inputs": {
+            "value": 90
+          }
+        },
+        {
+          "id": "v99",
+          "inputs": {
+            "value": 99
+          }
+        },
+        {
+          "id": "v100",
+          "inputs": {
+            "value": 100
+          }
+        },
+        {
+          "id": "reset",
+          "inputs": {
+            "value": 0
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "v0",
+          "b": "v1",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v1",
+          "b": "v5",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v5",
+          "b": "v10",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v10",
+          "b": "v25",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v25",
+          "b": "v50",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v50",
+          "b": "v75",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v75",
+          "b": "v90",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v90",
+          "b": "v99",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v99",
+          "b": "v100",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "v0",
+          "b": "reset",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "white-tech-vertical-meter",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.widget.vertical-meter",
+      "preview_name": "White Tech Vertical Resource Meter",
+      "samples": [
+        {
+          "id": "v0",
+          "preset": "Fuel",
+          "inputs": {
+            "value": 0
+          }
+        },
+        {
+          "id": "v1",
+          "inputs": {
+            "value": 1
+          }
+        },
+        {
+          "id": "v5",
+          "inputs": {
+            "value": 5
+          }
+        },
+        {
+          "id": "v10",
+          "inputs": {
+            "value": 10
+          }
+        },
+        {
+          "id": "v25",
+          "inputs": {
+            "value": 25
+          }
+        },
+        {
+          "id": "v50",
+          "inputs": {
+            "value": 50
+          }
+        },
+        {
+          "id": "v75",
+          "inputs": {
+            "value": 75
+          }
+        },
+        {
+          "id": "v90",
+          "inputs": {
+            "value": 90
+          }
+        },
+        {
+          "id": "v99",
+          "inputs": {
+            "value": 99
+          }
+        },
+        {
+          "id": "v100",
+          "inputs": {
+            "value": 100
+          }
+        },
+        {
+          "id": "reset",
+          "inputs": {
+            "value": 0
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "v0",
+          "b": "v1",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v1",
+          "b": "v5",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v5",
+          "b": "v10",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v10",
+          "b": "v25",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v25",
+          "b": "v50",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v50",
+          "b": "v75",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v75",
+          "b": "v90",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v90",
+          "b": "v99",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v99",
+          "b": "v100",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "v0",
+          "b": "reset",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "white-tech-command",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.hud.command",
+      "preview_name": "White Tech Command HUD",
+      "samples": [
+        {
+          "id": "baseline",
+          "inputs": {
+            "health": 82,
+            "ability_1_cooldown": 0,
+            "slot_1": "ready"
+          }
+        },
+        {
+          "id": "damage",
+          "inputs": {
+            "health": 20
+          }
+        },
+        {
+          "id": "cooldown",
+          "inputs": {
+            "ability_1_cooldown": 100
+          }
+        },
+        {
+          "id": "inventory",
+          "inputs": {
+            "slot_1": "epic"
+          }
+        },
+        {
+          "id": "reset",
+          "inputs": {
+            "health": 82,
+            "ability_1_cooldown": 0,
+            "slot_1": "ready"
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "baseline",
+          "b": "damage",
+          "min_changed_pixels": 30
+        },
+        {
+          "type": "different",
+          "a": "damage",
+          "b": "cooldown",
+          "min_changed_pixels": 10
+        },
+        {
+          "type": "different",
+          "a": "cooldown",
+          "b": "inventory",
+          "min_changed_pixels": 10
+        },
+        {
+          "type": "same",
+          "a": "baseline",
+          "b": "reset",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "white-tech-radar",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.effect.radar-sweep",
+      "preview_name": "White Tech Radar Sweep",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "quarter",
+          "time_ms": 250
+        },
+        {
+          "id": "half",
+          "time_ms": 500
+        },
+        {
+          "id": "loop",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "start",
+          "b": "quarter",
+          "min_changed_pixels": 10
+        },
+        {
+          "type": "different",
+          "a": "quarter",
+          "b": "half",
+          "min_changed_pixels": 10
+        },
+        {
+          "type": "same",
+          "a": "start",
+          "b": "loop",
+          "max_changed_pixels": 0
+        }
+      ]
     }
   ]
 }
