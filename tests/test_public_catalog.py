@@ -105,6 +105,17 @@ class PublicCatalogTests(unittest.TestCase):
         self.assertEqual(visual_capabilities(assets['c'],assets,memo),['animated','layered','typed-inputs','visual-events','world-use'])
         self.assertNotIn('wind-responsive',memo['r'])
 
+    def test_spatial_profile_dependencies_and_capabilities(self):
+        from tools.validate_visual_pack import validate_spatial
+        from tools.build_site import visual_capabilities
+        root={'id':'front','kind':'region','spatial':{'height_ft':3,'views':{'elevation_deg':35.264,'assets':['front','v1','v2','v3']},'wind':{'bend':.4}}}
+        lookup={a['id']:a for a in [root,*[{'id':f'v{i}','kind':'region'} for i in range(1,4)]]}
+        self.assertEqual(validate_spatial(root,lookup),[])
+        self.assertEqual(visual_capabilities(root,lookup,{}),['directional','spatial-profile','wind-responsive'])
+        self.assertTrue(validate_spatial(root,{k:v for k,v in lookup.items() if k!='v3'}))
+        root['spatial']['wind']['states']=[{'min_speed_ft_s':8,'state':'wind'}]
+        self.assertTrue(validate_spatial(root,lookup))
+
     def test_showcase_reference_contract_rejects_unsafe_or_unpublished_pages(self):
         from tools.build_site import resolve_showcases
         with tempfile.TemporaryDirectory() as root:

@@ -39,6 +39,33 @@ def validate_tracks(tracks, duration, label):
             prev = time
     return errors
 
+def validate_spatial(asset, ids):
+    """Validate cross-asset spatial references after schema validation."""
+    s=asset.get('spatial')
+    if not s:return []
+    errors=[]
+    views=[asset]
+    if 'views' in s:
+        refs=s['views']['assets']
+        if refs[0]!=asset['id']:errors.append('front view must reference the root')
+        views=[ids.get(ref) for ref in refs]
+        if any(v is None or (v['id']!=asset['id'] and 'views' in v.get('spatial',{})) for v in views):
+            errors.append('missing or nested spatial view')
+        def signature(v):
+            return (v['kind'],sorted(v.get('states',{})),v.get('default_state'),
+                    v.get('inputs',{}),v.get('slots',{}),v.get('presets',{}),
+                    v.get('default_preset'),v.get('behavior',{}))
+        if all(v is not None for v in views) and any(signature(v)!=signature(asset) for v in views):
+            errors.append('spatial view contracts differ')
+    previous=-1
+    for state in s.get('wind',{}).get('states',[]):
+        speed=state['min_speed_ft_s']
+        if speed<=previous or any(v is None or v['kind']!='state_set' or state['state'] not in v.get('states',{}) for v in views):
+            errors.append('invalid spatial wind state')
+        previous=speed
+    return [asset['id']+': '+e for e in errors]
+
+
 def validate_behavior(asset):
     errors = []
     behavior = asset.get('behavior')
@@ -287,6 +314,7 @@ def check(pack_path: Path):
         errors.extend(validate_stat_profiles(valid_packs, ids))
         errors.extend(validate_preview_profiles(valid_packs, ids))
         errors.extend(check_slots(valid_packs))
+        for asset in ids.values():errors.extend(validate_spatial(asset,ids))
         if index and index.get('entry_asset') and index['entry_asset'] not in ids:errors.append('Unknown collection entry_asset: ' + index['entry_asset'])
         seen, active = set(), set()
         def walk(aid):
@@ -296,6 +324,7 @@ def check(pack_path: Path):
             if asset is None:errors.append('Unknown referenced asset ' + aid);return
             active.add(aid)
             refs = [x['asset'] for x in asset.get('frames',[])] + [x['asset'] for x in asset.get('layers',[]) if 'asset' in x] + list((asset.get('states') or {}).values()) + [choice for slot in asset.get('slots',{}).values() for choice in slot.get('options',[])]
+            refs += [ref for ref in asset.get("spatial",{}).get("views",{}).get("assets",[]) if ref!=aid]
             for ref in refs: walk(ref)
             active.remove(aid); seen.add(aid)
         for aid in ids:walk(aid)

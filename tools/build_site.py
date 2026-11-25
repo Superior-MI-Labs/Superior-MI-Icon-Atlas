@@ -52,10 +52,15 @@ def visual_capabilities(asset, lookup, memo, active=None):
         if 'use' in asset.get('behavior',{}).get('on',{}):caps.add('world-use')
     if asset.get('pivot') is not None:caps.add('authored-pivot')
     if asset.get('implements'):caps.add('slot-component')
+    if asset.get('spatial'):
+        caps.add('spatial-profile')
+        if asset['spatial'].get('views'):caps.add('directional')
+        if asset['spatial'].get('wind'):caps.add('wind-responsive')
     refs=([f['asset'] for f in asset['frames']] if kind=='sequence' else
           list(asset['states'].values()) if kind=='state_set' else
           [l['asset'] for l in asset.get('layers',[]) if 'asset' in l]+
           [v for s in asset.get('slots',{}).values() for v in s['options']] if kind=='composition' else [])
+    refs += [ref for ref in asset.get('spatial',{}).get('views',{}).get('assets',[]) if ref!=ident]
     for ref in refs:
         if ref not in lookup:raise ValueError('Missing published dependency '+ref)
         if 'animated' in visual_capabilities(lookup[ref],lookup,memo,active):caps.add('animated')
@@ -247,6 +252,7 @@ for(const texture of Object.values(pack.textures)){
                 capabilities=visual_capabilities(a,lookup,cap_memo)
                 public_assets.append({
                     'capabilities':capabilities,'interfaces':sorted(a.get('implements',[])),
+                    **({'spatial':a['spatial']} if 'spatial' in a else {}),
                     'slot_interfaces':sorted({v['accepts'] for v in a.get('slots',{}).values()}),
                     'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
                     'kind':a['kind'],'discovery':a.get('discovery','standalone'),'style':a.get('style') or inherited_style,

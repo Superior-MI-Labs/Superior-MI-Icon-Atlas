@@ -5,6 +5,39 @@
  const validName=s=>typeof s==='string'&&s.length>0&&s.length<=160;
  const numeric=v=>typeof v==='number'&&Number.isFinite(v);
  function accepts(def,value){return def?.type==='boolean'?typeof value==='boolean':def?.type==='number'?numeric(value)&&(def.min===undefined||value>=def.min)&&(def.max===undefined||value<=def.max):def?.type==='enum'?typeof value==='string'&&Array.isArray(def.values)&&def.values.includes(value):false;}
+ function spatialErrors(a,getAsset){
+  const s=a.spatial;if(s===undefined)return [];
+  const errors=[],record=v=>v&&typeof v==='object'&&!Array.isArray(v),finite=(v,l,h)=>numeric(v)&&v>=l&&v<=h;
+  const only=(v,keys)=>record(v)&&Object.keys(v).length>0&&Object.keys(v).every(k=>keys.includes(k));
+  if(!only(s,['height_ft','views','wind']))return ['invalid spatial profile'];
+  if(s.height_ft!==undefined&&!finite(s.height_ft,.1,100))errors.push('invalid spatial height');
+  let views=[a];
+  if(s.views!==undefined){
+    const v=s.views;
+    if(!only(v,['elevation_deg','assets'])||!finite(v.elevation_deg,0,90)||!Array.isArray(v.assets)||![4,6,8].includes(v.assets.length)||v.assets[0]!==a.id||!v.assets.every(validName))errors.push('invalid spatial views');
+    else{
+      views=v.assets.map(id=>getAsset(id));
+      if(views.some(x=>!x||x.id!==a.id&&x.spatial?.views))errors.push('missing or nested spatial view');
+      // All views share the same external state/interaction contract.
+      const canonical=v=>Array.isArray(v)?v.map(canonical):record(v)?Object.fromEntries(Object.keys(v).sort().map(k=>[k,canonical(v[k])])):v;
+      const signature=x=>JSON.stringify(canonical({kind:x.kind,states:Object.keys(x.states||{}).sort(),default_state:x.default_state??null,inputs:x.inputs||{},slots:x.slots||{},presets:x.presets||{},default_preset:x.default_preset??null,behavior:x.behavior||{}}));
+      if(views.every(Boolean)&&views.some(x=>signature(x)!==signature(a)))errors.push('spatial view contracts differ');
+    }
+  }
+  if(s.wind!==undefined){
+    const w=s.wind;
+    if(!only(w,['bend','reference_speed_ft_s','states'])||!finite(w.bend??0,0,1)||!finite(w.reference_speed_ft_s??20,.1,150)||!Array.isArray(w.states??[])||(w.states??[]).length>16)errors.push('invalid spatial wind');
+    else{
+      let previous=-1;
+      for(const x of w.states??[]){
+        if(!only(x,['min_speed_ft_s','state'])||!finite(x.min_speed_ft_s,0,300)||x.min_speed_ft_s<=previous||!validName(x.state)||views.some(v=>!v||v.kind!=='state_set'||!own(v.states||{},x.state)))errors.push('invalid spatial wind state');
+        previous=x?.min_speed_ft_s??Infinity;
+      }
+    }
+  }
+  return errors;
+ }
+ function spatialRefs(a){return Array.isArray(a.spatial?.views?.assets)?[...new Set(a.spatial.views.assets.filter(id=>id!==a.id))]:[];}
  function validate(pack){
   const errors=[],ids=new Map((pack.assets||[]).map(a=>[a.id,a])),contracts=pack.interfaces||{};
   if(typeof contracts!=='object'||Array.isArray(contracts)||!contracts)return ['interfaces must be an object'];
@@ -23,6 +56,7 @@
     if(!validName(id)||!id.endsWith('/1')||!contract||!Array.isArray(contract.size_px)||contract.size_px.length!==2||!contract.size_px.every(n=>Number.isInteger(n)&&n>0)||typeof contract.allow_scale!=='boolean')errors.push('invalid versioned interface '+id);
   }
   for(const a of ids.values()){
+    errors.push(...spatialErrors(a,id=>ids.get(id)).map(e=>a.id+": "+e));
     for(const id of a.implements||[]){
       if(!own(contracts,id))errors.push(a.id+': undeclared interface '+id);
       else try {const s=size(a.id),c=contracts[id];if(!c.allow_scale&&(s[0]!==c.size_px[0]||s[1]!==c.size_px[1]))errors.push(a.id+': incompatible size for '+id);}catch(err){errors.push(a.id+': '+err.message);}
@@ -86,6 +120,6 @@
    const inputs={...Object.fromEntries(Object.entries(asset.inputs||{}).map(([k,d])=>[k,d.default])),...(preset.inputs||{})};
    return {preset:name,slots:selection,inputs};
  }
- function refs(asset){return asset.kind==='sequence'?(asset.frames||[]).map(f=>f.asset):asset.kind==='state_set'?Object.values(asset.states||{}):asset.kind==='composition'?[...(asset.layers||[]).filter(l=>l.asset).map(l=>l.asset),...Object.values(asset.slots||{}).flatMap(s=>s.options||[])]:[];}
- return Object.freeze({validate,resolve,refs,accepts});
+ function refs(asset){return [...(asset.kind==='sequence'?(asset.frames||[]).map(f=>f.asset):asset.kind==='state_set'?Object.values(asset.states||{}):asset.kind==='composition'?[...(asset.layers||[]).filter(l=>l.asset).map(l=>l.asset),...Object.values(asset.slots||{}).flatMap(s=>s.options||[])]:[]),...spatialRefs(asset)];}
+ return Object.freeze({validate,resolve,refs,accepts,spatialErrors,spatialRefs});
 });

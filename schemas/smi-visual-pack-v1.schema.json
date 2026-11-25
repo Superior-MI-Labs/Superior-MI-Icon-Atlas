@@ -682,6 +682,9 @@
             "component",
             "hidden"
           ]
+        },
+        "spatial": {
+          "$ref": "#/$defs/spatial"
         }
       },
       "allOf": [
@@ -1334,6 +1337,92 @@
             }
           },
           "additionalProperties": false
+        }
+      }
+    },
+    "spatial": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "height_ft": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 100
+        },
+        "views": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "elevation_deg",
+            "assets"
+          ],
+          "properties": {
+            "elevation_deg": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 90
+            },
+            "assets": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/nonblank"
+              },
+              "oneOf": [
+                {
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                {
+                  "minItems": 6,
+                  "maxItems": 6
+                },
+                {
+                  "minItems": 8,
+                  "maxItems": 8
+                }
+              ]
+            }
+          }
+        },
+        "wind": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "bend": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "reference_speed_ft_s": {
+              "type": "number",
+              "minimum": 0.1,
+              "maximum": 150
+            },
+            "states": {
+              "type": "array",
+              "maxItems": 16,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "min_speed_ft_s",
+                  "state"
+                ],
+                "properties": {
+                  "min_speed_ft_s": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 300
+                  },
+                  "state": {
+                    "$ref": "#/$defs/nonblank"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

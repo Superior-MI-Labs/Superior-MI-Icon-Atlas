@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict'),S=require('../web/slot-core.js'),C=require('../web/collection-core.js');
+const base={kind:'region',texture:'t',rect_px:[0,0,64,64]};
+const root={...base,id:'front',spatial:{height_ft:3,views:{elevation_deg:35.264,assets:['front','v1','v2','v3','v4','v5']},wind:{bend:.4}}};
+const assets=[root,...Array.from({length:5},(_,i)=>({...base,id:'v'+(i+1)}))],lookup=new Map(assets.map(a=>[a.id,a]));
+assert.deepEqual(S.validate({assets}),[]);
+assert.equal(C.dependencyClosure(['front'],id=>lookup.get(id),S.refs).size,6);
+assert.ok(S.validate({assets:assets.slice(0,-1)}).some(e=>e.includes('missing')));
+const bad=structuredClone(assets);bad[0].spatial.wind.states=[{min_speed_ft_s:5,state:'wind'}];assert.ok(S.validate({assets:bad}).some(e=>e.includes('wind state')));
+bad[0].spatial.wind.states=[];bad[1].kind='composition';bad[1].size_px=[64,64];bad[1].layers=[];assert.ok(S.validate({assets:bad}).some(e=>e.includes('contracts differ')));
+console.log('Spatial profile validation and export closure PASS');

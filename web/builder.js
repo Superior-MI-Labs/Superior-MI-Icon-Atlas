@@ -80,23 +80,19 @@
       const a=ids.get(id);
       if (!a) { throw Error('Missing asset reference: '+id+'; import a self-contained pack'); }
       visiting.add(id);
-      let refs=[];
       if(a.kind==='region') {
         const t=pack.textures[a.texture];
         if(!t||!validRect(a.rect_px,t.width_px,t.height_px))throw Error('Invalid texture rectangle: '+id);
         if(a.nine_slice_px){ const s=a.nine_slice_px; if(s.length!==4||s.some(v=>!Number.isInteger(v)||v<0)||s[0]+s[2]>a.rect_px[2]||s[1]+s[3]>a.rect_px[3])throw Error('Invalid nine-slice: '+id); }
       } else if(a.kind==='sequence') {
         if(!a.frames?.length||!(a.default_fps>0))throw Error('Invalid sequence: '+id);
-        refs=a.frames.map(f=>f.asset);
         if(a.frames.some(f=>f.duration_ms!==undefined&&!(f.duration_ms>0)))throw Error('Invalid frame duration: '+id);
       } else if(a.kind==='state_set') {
         if(!a.states?.[a.default_state])throw Error('Invalid default state: '+id);
-        refs=Object.values(a.states);
       } else if(a.kind==='composition') {
         if(!Array.isArray(a.layers)||!a.layers.length||!a.size_px||a.size_px.length!==2)throw Error('Invalid composition: '+id);
         if(a.duration_ms!==undefined&&(!Number.isInteger(a.duration_ms)||a.duration_ms<1||a.duration_ms>600000))throw Error('Invalid animation duration: '+id);
         if(a.playback&&!['once','loop','pingpong'].includes(a.playback))throw Error('Invalid playback mode: '+id);
-        refs=Slots.refs(a);
         for(const [key,input] of Object.entries(a.inputs||{}))if(input.type==='number'){
           const min=input.min, max=input.max;
           if((min===undefined)!==(max===undefined) || (min!==undefined && !(Number.isFinite(min)&&Number.isFinite(max)&&max>min)) || (min!==undefined && (input.default<min||input.default>max))) throw Error('Invalid numeric input range: '+id+'/'+key);
@@ -107,7 +103,7 @@
           if(issues.length)throw Error(issues[0]);
         }
       }
-      refs.forEach(walk);
+      Slots.refs(a).forEach(walk);
       visiting.delete(id); seen.add(id);
     };
     const problems=Interactions.validatePreviewProfiles(pack.preview_profiles,id=>ids.get(id)||library.get(id));
