@@ -14,6 +14,23 @@ Use measured transparent sheet regions for discrete objects, and seamless unproj
 
 Hex World currently uses six 60-degree yaw increments at 35.264-degree orthographic elevation. For its specific six-view contract, view 0 shows the front, view 1–5 follow successive positive camera yaw steps from front. Label views by indices and explicit angles, not ambiguous compass names. The host computes camera yaw relative to object orientation; changing camera does not mutate the object. Other hosts may use different conventions. Declare supported equally spaced views in the spatial profile below; document projection and any unsupported custom-angle pilot in the README. For view-dependent animation, qualify every view and state with matched pivots. If a complete directional set is not ready, declare a billboard fallback or incomplete pilot, not false coverage.
 
+### Six-direction source-sheet order for Hex World
+
+For new six-direction, hex-neighbor-aligned artwork, the proposed shared source-sheet convention is six columns in this order, described by the direction the subject's nose, chest lock/front, or arrow tip points on the screen (not the side of the subject visible to the camera):
+
+| Column | View index for the proposed convention | Screen-facing direction | Relative camera yaw |
+|---|---:|---|---:|
+| 1 | 0 | Front-left (down-left) | 0° |
+| 2 | 1 | Left | 60° |
+| 3 | 2 | Back-left (up-left) | 120° |
+| 4 | 3 | Back-right (up-right) | 180° |
+| 5 | 4 | Right | 240° |
+| 6 | 5 | Front-right (down-right) | 300° |
+
+Keep the orthographic camera elevation fixed at 35.264°. With Hex World's projection at yaw zero, a reference heading along axial neighbor (-1,+1) projects down-left; rotating the camera by positive 60° steps produces the order above. Use the same subject, pose, proportions and anchor in all columns. A 6-column grid establishes layout; a directional arrow row establishes facing. Compare each actual silhouette to its corresponding arrow before assigning IDs. Reorder complete, verified views when necessary; a duplicated or missing direction requires replacement artwork. Do not infer the direction from the nominal cell or mirror asymmetric details.
+
+**Integration boundary:** the existing Hex World documentation defines index 0 as straight-on front. The diagonal-first convention must be agreed with the host integrator before declaring new sheets compatible; do not reinterpret existing assets, saved placements or canonical Atlas view arrays. The existing ordered-view contract remains unchanged. Other hosts may use different heading origins.
+
 ### Elevated-view qualification
 
 For an isometric family, use an approved artwork reference showing the target camera elevation as well as a layout grid where supported. Describe visible upper surfaces and the groundward view in positive visual terms. For example: "Six individual mushroom clusters viewed from above at 35.264 degrees, broad upper cap surfaces and visible root footprints, painterly texture, one complete cluster per reference cell, transparent spacing." Match the subject's geometry rather than simply adding the word isometric.
