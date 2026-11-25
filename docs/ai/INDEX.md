@@ -9,7 +9,7 @@
 | Buttons, toggles, sliders, progress/health bars | [GUI and interactions](gui/README.md) | [Interactive HUD](../demo/interactive-hud.zip) |
 | Multiple manifests, slot compatibility and presets | [Collections](collections/README.md) | [Potion Lab](../demo/potions-collection.zip) |
 | Glass, cracks, rain and layered effects | [Materials and layers](materials/README.md) | [Glass/weather demo](../demo/starter-pack.zip) |
-| Hex World painterly terrain, foliage, trees, props and effects | [Hex World production handoff](https://github.com/Superior-MI-Labs/Superior-MI-Hex-World/blob/main/docs/ART_PRODUCTION.md) | [Runtime fixture profile](https://github.com/Superior-MI-Labs/Superior-MI-Hex-World/blob/main/examples/meadow-style.json) |
+| World and environment artwork, directional sprites, interactive objects | [World assets](world/README.md) | [Composition and slot examples](collections/README.md) |
 
 **Executable acceptance examples:** [Interactive HUD](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/interactive-hud.json) · [`character.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/character.json) · [`potion.json`](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/potion.json). The checker prints a real PASS/FAIL and never claims human visual inspection.
 
@@ -33,4 +33,4 @@ Internal fixture links may lead to source folders on the hosted site. Use a chec
 
 **HD fantasy game item icons and interaction states:** [Pixel-art item production contract](icons/GAME-PIXEL-ART.md). This requires raster source art, true measured transparent crops, a shared effect composition and publication QA, not procedural vector substitutes.
 
-For Hex World, use the linked host role specification for asset assignments and physical scale; follow the existing Atlas packaging, licensing and visual acceptance gates. The fixture is an integration example, not an approved art master. Keep agent packs separate and do not invent new Atlas schema fields.
+For Hex World, use the host role specification linked from the world assets recipe for assignments and physical scale; follow the existing Atlas packaging, licensing and visual acceptance gates. The fixture is an integration example, not an approved art master. Keep agent packs separate and do not invent new Atlas schema fields.
