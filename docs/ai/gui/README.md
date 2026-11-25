@@ -41,9 +41,9 @@ For a machine-verifiable preview, extend [visual scenarios](../../../tests/visua
 
 **Mandatory numeric-control gate:** [Value/geometry fidelity, thumb bounds and low-end visibility](VALUE-GEOMETRY.md). This rule is based on actual failed Fantasy HUD renders; passing the manifest schema alone does not meet it.
 
-## Approved Fantasy HUD reference
+## Historical reference — Fantasy HUD (only for related work)
 
-The [Wave 1 source contract and measured value-fidelity regression](../../asset-production/FANTASY-HUD-WAVE1.md) is the baseline for more RPG controls. The [Wave 2 production inventory and QA requirements](../../asset-production/WAVE2.md) reuse this architecture. Only mark authored artwork published when its actual PNG/manifest files are committed and CI succeeds.
+The [Wave 1 source contract and measured value-fidelity regression](../../asset-production/FANTASY-HUD-WAVE1.md) illustrates measured geometry for related RPG controls; the current creator's approved artwork determines style. The [Wave 2 production inventory and QA requirements](../../asset-production/WAVE2.md) reuse this architecture. Only mark authored artwork published when its actual PNG/manifest files are committed and CI succeeds.
 
 ## Multi-widget HUD composition
 
