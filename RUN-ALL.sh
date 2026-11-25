@@ -36,9 +36,7 @@ fi
 "$PY" tools/qualify_asset_zip.py web/demo/potions-collection.zip --out "${TMPDIR:-/tmp}/smi-visual-atlas-potions-qa"
 "$PY" tools/ai_acceptance.py site/demo/character-animations.zip --acceptance examples/acceptance/character.json --out "${TMPDIR:-/tmp}/smi-visual-atlas-character-acceptance"
 "$PY" tools/ai_acceptance.py web/demo/potions-collection.zip --acceptance examples/acceptance/potion.json --out "${TMPDIR:-/tmp}/smi-visual-atlas-potion-acceptance"
-"$PY" tools/validate_visual_pack.py site/demo/minimal-white-tech.zip
 "$PY" tools/ai_acceptance.py site/demo/minimal-white-tech.zip --acceptance examples/minimal-white-tech/acceptance.json --out "${TMPDIR:-/tmp}/smi-white-tech-acceptance"
-"$PY" tools/qualify_asset_zip.py site/demo/minimal-white-tech.zip --out "${TMPDIR:-/tmp}/smi-white-tech-crop-qa"
 if command -v node >/dev/null 2>&1; then
   for f in web/*.js; do node --check "$f"; done
   for test in tests/*.cjs; do node "$test"; done

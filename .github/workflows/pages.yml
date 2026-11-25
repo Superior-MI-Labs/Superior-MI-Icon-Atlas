@@ -39,6 +39,7 @@ jobs:
           path: |
             /tmp/smi-visual-render-qa/
             /tmp/smi-pixel-visual-qa/
+            /tmp/smi-white-tech-acceptance/
           if-no-files-found: ignore
       - name: Prune unpublished files from Pages artifact
         run: python3 tools/prune_public_site.py site

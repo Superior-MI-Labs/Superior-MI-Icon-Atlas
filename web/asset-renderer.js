@@ -101,14 +101,23 @@
       }
     }
     function frameAt(a,t){
-      const durations=a.frames.map(f=>f.duration_ms||1000/a.default_fps),total=durations.reduce((x,y)=>x+y,0);
+      // Sum integer authored holds and default frame counts separately.
+      // Repeated addition of 1000/12 can make a nominal 1000ms loop longer.
+      let explicit=0,defaults=0;
+      const ends=a.frames.map(f=>{
+        if(f.duration_ms)explicit+=f.duration_ms;else defaults++;
+        return explicit+defaults*1000/a.default_fps;
+      });
+      const total=ends.at(-1);
       if(!(total>0))throw Error('Invalid animation duration '+a.id);
-      let p=Math.max(0,t);
+      let p=Math.max(0,t),reverse=false;
       if(a.playback==='loop')p%=total;
-      else if(a.playback==='pingpong'){const t2=total*2;p%=t2;if(p>=total)p=t2-p-0.0001;}
-      else p=Math.min(p,total-0.0001);
-      for(let i=0;i<durations.length;i++){if(p<durations[i])return a.frames[i];p-=durations[i];}
-      return a.frames.at(-1);
+      else if(a.playback==='pingpong'){
+        const period=total*2;p%=period;
+        if(p>=total){p=period-p;reverse=true;}
+      }else p=Math.min(p,total);
+      const i=ends.findIndex(end=>reverse?p<=end:p<end);
+      return i<0?a.frames.at(-1):a.frames[i];
     }
     async function drawAsset(id,ctx,x,y,w,h,time,values={},stateOverride=null,stack=new Set(),slotOverrides=null,presetName=null){
       if(stack.has(id))throw Error('Circular asset ref '+id);

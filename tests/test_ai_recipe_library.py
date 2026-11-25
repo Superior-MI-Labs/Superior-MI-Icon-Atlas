@@ -3,6 +3,9 @@ import json
 import re
 import tempfile
 import unittest
+import hashlib
+from unittest.mock import patch
+from types import SimpleNamespace
 from pathlib import Path
 from zipfile import ZipFile
 from tools.build_site import build, ROOT
@@ -52,6 +55,29 @@ class AIRecipeLibraryTests(unittest.TestCase):
             self.assertEqual(check_acceptance(site/'demo/potions-collection.zip',potion),[])
             potion['checks'][1]['option']='smi.fluid.not-present'
             self.assertTrue(check_acceptance(site/'demo/potions-collection.zip',potion))
+
+    def test_browser_receipt_requires_fresh_matching_archive_evidence(self):
+        from tools.ai_acceptance import run_visual_gate
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);archive=root/'test.zip';archive.write_bytes(b'exact candidate')
+            spec=root/'spec.json';spec.write_text('{}')
+            out=root/'visual';out.mkdir()
+            report=out/'report.json'
+            digest=hashlib.sha256(archive.read_bytes()).hexdigest()
+            def emit(sha,code=0):
+                def run(*args,**kwargs):
+                    report.write_text(json.dumps({'status':'PASS','cases':[{'status':'PASS','archive_sha256':sha,'samples':['one','two']}]}))
+                    return SimpleNamespace(returncode=code)
+                return run
+            with patch('tools.ai_acceptance.subprocess.run',side_effect=emit(digest)):
+                self.assertEqual(run_visual_gate(archive,spec,out)['status'],'PASS')
+            with patch('tools.ai_acceptance.subprocess.run',side_effect=emit('wrong')):
+                self.assertEqual(run_visual_gate(archive,spec,out)['status'],'FAIL')
+            with patch('tools.ai_acceptance.subprocess.run',side_effect=emit(digest,1)):
+                self.assertEqual(run_visual_gate(archive,spec,out)['status'],'FAIL')
+            with patch('tools.ai_acceptance.subprocess.run',return_value=SimpleNamespace(returncode=1)):
+                self.assertEqual(run_visual_gate(archive,spec,out)['status'],'FAIL')
+                self.assertFalse(report.exists())
 
     def test_generated_featured_index_and_template_paths(self):
         with tempfile.TemporaryDirectory() as tmp:

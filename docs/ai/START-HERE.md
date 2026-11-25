@@ -1,28 +1,30 @@
-# Visual Atlas — short instruction to creating AI (v1)
+# Visual Atlas — AI authoring entrypoint (v1)
 
-**Creator goal:** deliver a self-contained, working Visual Atlas ZIP that opens in [the private builder](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/builder.html). One ZIP may contain multiple manifests, textures, animations, states and compatible presets.
+**Goal:** turn the creator's actual request into original artwork and a self-contained ZIP that opens in the [private Builder](https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/builder.html). Do not invent assets, tool capabilities, approvals or test results.
 
-## Mandatory checklist (do in order)
+## Workflow (in order)
 
-- [ ] **Understand:** For substantial or ambiguous commissions use [Creator preflight](CREATOR-PREFLIGHT.md); it distinguishes confirmed constraints from proposals and explains when approval is genuinely necessary. Do not repeatedly ask for approval after the creator has delegated the decision. Extract what the creator actually wants from this conversation. Internally restate a brief with subject, visual style, target environment, behaviors, exact constraints, package contents and acceptance tests. Honor explicit constraints; do not invent requirements or insist on nonessential questions.
-- [ ] **Select:** Open the [recipe index](INDEX.md) and read **only** the relevant recipe(s), plus [format/API guide](FORMAT-API.md) when needed. Use a working example ZIP rather than guessing field names.
-- [ ] **Create:** If generating source art, follow [Image-engine workflow](IMAGE-ENGINE-WORKFLOW.md); its output is not proof of real grid/alpha/animation data. Produce real original artwork and the actual manifest(s). Do not hand over placeholders. Individual assets must be measured and laid out on exact pixel rectangles; **never assume a generated image has an exact grid**. A grid guide is a packing destination, not proof of alignment.
-- [ ] **Connect:** Include all texture references, sequences and timings, states, layers, optional input/output contracts, compatible slots/presets, names and searchable tags. Supply useful defaults so the builder opens ready to preview.
-- [ ] **Preview as an integrator:** Before release, ask **“How will a developer explore this in their own game or app?”** Every configurable asset must expose its meaningful inputs and state choices in the current Builder, with a visible default, readable value and actual visual feedback. For hearts/pips, try 1, 4 and 20 capacity and both a single row and wrapped rows; for bars, scrub the full range; for controls, test on/off, hover/pressed/disabled; for animations, scrub/play frames. If the existing manifest/host cannot express a requested control, disclose the limitation rather than creating decorative fake UI. **Import the final ZIP** and use that exact artifact for preview and test evidence.
-- [ ] **Validate:** Run [release checklist](RELEASE-CHECKLIST.md), fix failures, inspect every image crop and animation/preset visually. Create and **run** at least one creator-specific declarative acceptance test (`smi-ai-acceptance/1`) with assertions grounded in the request. Never fabricate a run or claim visual inspection without seeing the images.
-- [ ] **Deliver:** One ZIP, a short content summary, and a truthful QA receipt stating PASS / WARN / NOT RUN for each gate. If tools cannot verify a requirement, say so and do not claim a full pass.
+- [ ] **Understand.** Reconstruct the intent, style, constraints, target and acceptance checks. For substantial or ambiguous work use [Creator preflight](CREATOR-PREFLIGHT.md). Ask only material blocking questions; respect delegated decisions.
+- [ ] **Route.** Choose the relevant [recipe](INDEX.md) and [manifest contract](FORMAT-API.md). Use existing capabilities and examples, not a competing renderer or invented keys.
+- [ ] **Create.** Use the [source-art workflow](IMAGE-ENGINE-WORKFLOW.md) when generating images. Qualify a representative slice before scaling. Inspect real pixels; repack measured regions, preserve alpha, alignment and stable IDs.
+- [ ] **Connect.** Package local textures and dependencies; use layers, states, slots, presets and inputs as applicable. Provide meaningful defaults, names, tags and subjects. Keep game logic and unsupported behaviors host-owned.
+- [ ] **Qualify.** Follow the [release checklist](RELEASE-CHECKLIST.md) and applicable recipe. Inspect every region, exercise declared inputs and states, run creator-specific acceptance and applicable [browser scenarios](VISUAL-RENDER-QA.md) on the exact delivered ZIP. Review artistic fidelity separately.
+- [ ] **Deliver.** Return the ZIP, previews, and evidence-backed receipt with PASS / FAIL / WARN / NOT RUN. Do not turn an incomplete or inaccessible gate into a PASS.
 
-**Local commands** from a Visual Atlas checkout:
+## Choose the available execution path
+
+- **Conversation-only:** inspect references and guide; produce only files the available tools can really create. If unable to generate a valid archive, provide a useful brief or handoff instead. Never claim it is a working pack.
+- **File/code tools:** generate and inspect real assets. Obtain the [repository checkout](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/archive/refs/heads/main.zip) when possible; run the command below. If tools or Chromium are unavailable, report NOT RUN and give the exact missing step. A private Builder import is useful for manual preview, not a substitute for automated qualification.
+- **Repository-connected:** preserve source ownership, stage exact PNG/manifest files, use official CI, and publish only with rights and release authorization. Report CI, manual review and deployment separately. Never infer successful deployment from a commit.
+
+## Qualify a candidate
+
+From the repository root, with Python dependencies from `requirements-test.txt`:
 
 ```bash
-bash RUN-ALL.sh
-python3 tools/qualify_asset_zip.py YOUR-PACK.zip --out qa/your-pack
-python3 tools/validate_visual_pack.py YOUR-PACK.zip
-python3 tools/ai_acceptance.py YOUR-PACK.zip --acceptance YOUR-ACCEPTANCE.json --out qa/acceptance
+python3 tools/ai_acceptance.py YOUR-PACK.zip --acceptance YOUR-ACCEPTANCE.json --out qa/your-pack
 ```
 
-**Resources:** [Examples by task](INDEX.md) · [Manifest contract](FORMAT-API.md) · [Final checklist](RELEASE-CHECKLIST.md). Keep the creator's actual request primary. Do not consume context reading irrelevant recipes.
+This already invokes the archive validator and crop scan. For actual browser qualification, install Playwright/Chromium, run `python3 tools/build_site.py`, then add `--visual-spec YOUR-VISUAL-SCENARIOS.json`. The runner tests the exact ZIP even if it is not part of the repository. See [browser QA](VISUAL-RENDER-QA.md). `bash RUN-ALL.sh` is the separate full repository gate.
 
-**Interactive asset release gate:** verify actual visible state changes (e.g. 0/50/100) and not only output text; see the GUI recipe and acceptance example.
-
-Before delivery, also run the [rendered-state QA guide](VISUAL-RENDER-QA.md) if your asset has animation, layers, states or user-controlled appearance. If Chromium cannot render, disclose NOT RUN; structural checks cannot replace it.
+Do not load all recipes into context. Use the [release checklist](RELEASE-CHECKLIST.md) as the shared authority; the schema and implemented runtime define supported features.

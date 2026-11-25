@@ -10,6 +10,7 @@ import hashlib
 import io
 import json
 import sys
+import subprocess
 from pathlib import Path, PurePosixPath
 from zipfile import ZipFile
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -97,11 +98,31 @@ def check_acceptance(archive:Path,spec:dict)->list[str]:
                 if c.get('tag') not in a.get('tags',[]):errors.append(f'Check {num}: tag {c.get("tag")} absent from {aid}')
     return errors
 
+def run_visual_gate(archive, spec, out):
+    """Delegate to the same Chromium runner as CI; never infer PASS from pixels elsewhere."""
+    out.mkdir(parents=True,exist_ok=True)
+    report_path=out/'report.json'
+    report_path.unlink(missing_ok=True)
+    command=[sys.executable,str(Path(__file__).resolve().parents[1]/'tests/browser_visual_matrix.py'),
+             '--archive',str(archive.resolve()),'--spec',str(spec.resolve()),'--out',str(out.resolve())]
+    result=subprocess.run(command,check=False)
+    if not report_path.is_file():
+        return {'status':'FAIL','reason':'Requested browser gate did not produce a report','exit_code':result.returncode}
+    report=json.loads(report_path.read_text(encoding='utf-8'))
+    digest=hashlib.sha256(archive.read_bytes()).hexdigest()
+    cases=report.get('cases',[])
+    passed=(result.returncode==0 and report.get('status')=='PASS' and bool(cases)
+            and all(c.get('status')=='PASS' and c.get('archive_sha256')==digest for c in cases))
+    return {'status':'PASS' if passed else 'FAIL','cases':len(cases),
+            'samples':sum(len(c.get('samples',[])) for c in cases),'report':'visual/report.json'}
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('zip',type=Path)
     parser.add_argument('--acceptance',type=Path,required=True,help='Creator-specific JSON checks: REQUIRED')
     parser.add_argument('--out',type=Path,required=True)
+    parser.add_argument('--visual-spec',type=Path,help='Run real Chromium scenarios on this exact ZIP (build the site first)')
     args=parser.parse_args()
     try:
         spec=json.loads(args.acceptance.read_text(encoding='utf-8'))
@@ -110,16 +131,24 @@ def main():
     except Exception as e:
         print('FAIL: Acceptance runner could not execute:',e);return 1
     passed=report.get('validation')=='PASS' and not errors
-    receipt={'schema':'smi-ai-handoff-receipt/1','archive':args.zip.name,'brief':spec.get('intent',''),
+    visual={'status':'NOT RUN'}
+    if args.visual_spec and passed:
+        try:visual=run_visual_gate(args.zip,args.visual_spec,args.out/'visual')
+        except Exception as exc:visual={'status':'FAIL','reason':str(exc)}
+        passed=passed and visual['status']=='PASS'
+    receipt={'schema':'smi-ai-handoff-receipt/1','archive':args.zip.name,'archive_sha256':hashlib.sha256(args.zip.read_bytes()).hexdigest(),'brief':spec.get('intent',''),
              'manifest_pixel_checks':report.get('validation'),'acceptance_status':'PASS' if not errors else 'FAIL',
              'acceptance_checks':len(spec.get('checks',[])),'acceptance_errors':errors,
+             'browser_qualification':visual,'crop_warnings':len(report.get('warnings',[])),
              'visual_semantic_review':'NOT VERIFIED BY AUTOMATION',
+             'rights_approval':'NOT VERIFIED BY AUTOMATION','publication':'NOT VERIFIED BY AUTOMATION',
              'delivery_status':'READY FOR VISUAL REVIEW' if passed else 'NEEDS FIXES'}
     args.out.mkdir(parents=True,exist_ok=True)
     (args.out/'acceptance-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8')
     print('\nCREATOR-SPECIFIC ACCEPTANCE:',receipt['acceptance_status'],f'({receipt["acceptance_checks"]} declared checks)')
     for error in errors:print('FAIL:',error)
     print('PIXEL / MANIFEST:',receipt['manifest_pixel_checks'])
+    print('BROWSER SCENARIOS:',visual['status'])
     print('VISUAL SEMANTICS:',receipt['visual_semantic_review'])
     print('DELIVERY:',receipt['delivery_status'])
     print('Receipt:',args.out/'acceptance-receipt.json')

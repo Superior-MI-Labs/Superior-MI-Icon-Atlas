@@ -5,7 +5,7 @@ Do not label an asset ready merely because its JSON parses. Structural validatio
 ## 1. Creator brief and coverage
 
 For substantial commissions, use [creator preflight](CREATOR-PREFLIGHT.md) before expensive production; image generation follows [source-art workflow](IMAGE-ENGINE-WORKFLOW.md) when relevant. Do not invent acceptance or approval.
-- [ ] **Canonical visual fidelity GATE FIRST:** When the request includes a user-approved art/style reference, compare each candidate source against that actual reference side-by-side at the intended gameplay/render size **and** at native art resolution. Verify subject identity, anatomy, shapes, costume/ornament geometry, material treatment, effects and silhouette. A different art style, however technically valid, is **FAIL**; do not package it as production-ready or expand to more variants. Save direct visual evidence and explicit user/artist approval. Plan approval is not artwork approval.
+- [ ] **Canonical visual fidelity GATE FIRST:** When the request includes a user-approved art/style reference, compare each candidate source against that actual reference side-by-side at the intended gameplay/render size **and** at native art resolution. Verify subject identity, anatomy, shapes, costume/ornament geometry, material treatment, effects and silhouette. A different art style, however technically valid, is **FAIL**; do not package it as production-ready or expand to more variants. Save direct visual evidence and explicit user/artist approval for artistic sign-off. Plan approval is not artwork approval. A creator-authorized preview publication may remain pending artistic review; rejected or known defective work cannot be labeled approved.
 - [ ] **No proxy for visual sign-off:** unit tests, lossless PNG packing, nonblank pixels, FPS, GIF previews, number of frames, or successful CI must never substitute for an actual approved master or an inspected in-engine/imported animation.
 - [ ] All assets the creator requested are included; unexpected simplifications are disclosed.
 - [ ] Names, tags, style, animation/state names, defaults, licensing and rights claims are accurate.
@@ -43,13 +43,15 @@ For substantial commissions, use [creator preflight](CREATOR-PREFLIGHT.md) befor
 - [ ] Preserve the same previewable behavior and dimensions after export/import of the **exact delivered ZIP**, and save evidence. Block publication when a named interactive asset lacks a working preview control or silently hides a demanded value.
 
 ## 4. Executed QA and packaging
-- [ ] Run `python3 tools/validate_visual_pack.py OUTPUT.zip` and fix any errors.
-- [ ] Run `python3 tools/qualify_asset_zip.py OUTPUT.zip --out QA-DIR` and inspect `contact-*.png` and the receipt.
-- [ ] Write an acceptance JSON with assertions derived from the creator request; execute `python3 tools/ai_acceptance.py OUTPUT.zip --acceptance MY-ACCEPTANCE.json --out QA-DIR` and inspect its output. [Robot](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/character.json) and [potion](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/potion.json) are examples. Never print PASS for unexecuted tests.
-- [ ] Run **rendered-state QA** against the final ZIP using [the visual scenario format](../../tests/visual-scenarios.json) and shared Chromium runner. Cover min/mid/max, distinct states, overlays and loop frames where relevant, and assert actual pixel changes rather than just a valid manifest. See [visual QA guide](VISUAL-RENDER-QA.md).
+- [ ] Write an acceptance JSON with assertions derived from the creator request; execute `python3 tools/ai_acceptance.py OUTPUT.zip --acceptance MY-ACCEPTANCE.json --out QA-DIR`. It runs the official ZIP validator, crop scan and acceptance checks; inspect the contact sheets and receipt and fix failures. [Robot](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/character.json) and [potion](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/examples/acceptance/potion.json) are examples. Never print PASS for unexecuted tests.
+- [ ] Run **rendered-state QA** against the final ZIP (add `--visual-spec YOUR-SCENARIOS.json` to the acceptance command after building the site and installing Chromium) using [the visual scenario format](../../tests/visual-scenarios.json) and shared Chromium runner. Cover min/mid/max, distinct states, overlays and loop frames where relevant, and assert actual pixel changes rather than just a valid manifest. See [visual QA guide](VISUAL-RENDER-QA.md).
 - [ ] Include the browser screenshots and test report. If browser testing cannot run, report **NOT RUN**, never PASS.
 - [ ] Re-import the final ZIP into the builder and check preset/state behavior and **actual visual response**, then export/reimport and compare at least one fixed-time preview.
 - [ ] Hand off the ZIP, a brief contents description and a truthful QA receipt.
+
+## Independent release facts
+
+Report structure/crop checks, creator-specific assertions, tested browser scenarios, artistic review, rights authorization and publication separately. A browser PASS is scoped to the declared cases; it does not establish universal coverage. Inspect every meaningful input and named state, and record uncovered scenarios. Known defects must be fixed before claiming qualification. A technically qualified, explicitly authorized public preview can be published with `visual_qa: pending`; it cannot be described as artist-approved. CI and deployment evidence must refer to the actual commit/archive. Historical receipts describe a particular run and must not be presented as live status.
 
 ## QA receipt to include in the final answer
 
@@ -62,6 +64,8 @@ Pixel / crop scan: PASS | WARN | FAIL | NOT RUN
 Contact sheet review: <reviewed count>/<total regions>
 Animation, states & preset previews: PASS | PARTIAL | NOT RUN
 Creator-specific acceptance test: PASS | FAIL | NOT RUN
+Browser cases/samples: <covered counts, PASS/FAIL/NOT RUN>
+Art review / rights approval / publication: <separate facts>
 Remaining warnings: <facts or none>
 Delivery: READY FOR PREVIEW | NEEDS FIXES
 ```

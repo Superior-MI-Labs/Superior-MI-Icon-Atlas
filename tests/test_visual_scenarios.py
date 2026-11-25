@@ -3,6 +3,7 @@ import importlib.util
 import json
 from pathlib import Path
 import unittest
+from tempfile import TemporaryDirectory
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,11 +17,28 @@ class VisualScenarioContractTests(unittest.TestCase):
 
     def test_scenario_schema_and_coverage(self):
         module.verify_spec(self.data)
-        self.assertEqual(len(self.data['cases']), 12)
+        self.assertEqual(len(self.data['cases']), 22)
         names={case['pack'] for case in self.data['cases']}
         self.assertEqual(names, {'interactive-hud.zip','character-animations.zip','animated-icons.zip','starter-pack.zip','potions-collection.zip','royal-forge-hud-resources.zip','royal-forge-controls.zip','royal-forge-complete.zip','minimal-white-tech.zip'})
         for name in names:
             self.assertTrue((ROOT/'web/demo'/name).is_file() or (ROOT/'examples'/name.removesuffix('.zip')/'manifest.json').is_file(),name)
+
+    def test_exact_archive_override(self):
+        with TemporaryDirectory() as tmp:
+            archive=Path(tmp)/'candidate.zip';archive.touch()
+            single={'cases':[self.data['cases'][0]]}
+            module.verify_archive_override(single,archive)
+            self.assertEqual(module.archive_for_case(single['cases'][0],archive),archive)
+            self.assertEqual(module.archive_for_case(single['cases'][0]),module.SITE/'demo'/single['cases'][0]['pack'])
+            with self.assertRaisesRegex(ValueError,'single pack'):
+                module.verify_archive_override(self.data,archive)
+            with self.assertRaisesRegex(ValueError,'not found'):
+                module.verify_archive_override(single,archive.with_name('absent.zip'))
+
+    def test_duplicate_case_ids_fail(self):
+        self.data['cases'].append(self.data['cases'][0])
+        with self.assertRaisesRegex(ValueError,'Duplicate case ID'):
+            module.verify_spec(self.data)
 
     def test_unknown_assertion_fails(self):
         self.data['cases'][0]['assertions'][0]['type']='magic_visual_quality'
@@ -40,6 +58,28 @@ class VisualScenarioContractTests(unittest.TestCase):
         self.assertEqual(module.pixel_change(empty,altered),1)
         self.assertEqual(module.green_count(empty),0)
         self.assertEqual(module.green_count(altered),1)
+
+    def test_changed_area_requires_proportional_monotonic_visible_fill(self):
+        def filled(n):
+            im=Image.new('RGBA',(100,10),(20,20,20,255))
+            if n:im.paste((200,220,255,255),(0,0,n,10))
+            return im
+        points=[{'sample':str(n),'fraction':n/100} for n in (0,1,5,25,50,99,100)]
+        case={'assertions':[{'type':'changed_area_fraction','samples':points}]}
+        images={p['sample']:filled(int(p['sample'])) for p in points}
+        self.assertEqual(module.check_case(case,images,{})[0]['status'],'PASS')
+        for label,n in [('1',0),('50',75),('99',100)]:
+            bad={**images,label:filled(n)}
+            self.assertEqual(module.check_case(case,bad,{})[0]['status'],'FAIL')
+
+    def test_changed_area_rejects_invalid_fraction_spec(self):
+        case=self.data['cases'][0]
+        labels=[x['id'] for x in case['samples']]
+        case['assertions']=[{'type':'changed_area_fraction','samples':[
+            {'sample':labels[0],'fraction':0},{'sample':labels[1],'fraction':0.75},
+            {'sample':labels[2],'fraction':0.5}]}]
+        with self.assertRaisesRegex(ValueError,'increasing fractions'):
+            module.verify_spec(self.data)
 
     def test_deliberately_wrong_visual_expectation_fails(self):
         a=Image.new('RGBA',(24,24),(0,0,0,0))

@@ -12,8 +12,10 @@ Only manifests and images from explicit local ZIPs are loaded. No network server
 from __future__ import annotations
 import argparse
 import base64
+import hashlib
 from io import BytesIO
 import json
+import math
 from pathlib import Path
 import re
 import sys
@@ -35,7 +37,10 @@ def verify_spec(spec):
     cases = spec.get('cases')
     if not isinstance(cases, list) or not 1 <= len(cases) <= 40:
         raise ValueError('Expected 1..40 visual cases')
+    case_ids=set()
     for case in cases:
+        if case.get('id') in case_ids:raise ValueError('Duplicate case ID')
+        case_ids.add(case.get('id'))
         if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,70}', case.get('id', '')):
             raise ValueError('Case ID must be a safe slug')
         if not re.fullmatch(r'[a-z0-9-]+\.zip', case.get('pack', '')):
@@ -59,12 +64,39 @@ def verify_spec(spec):
         if not isinstance(assertions, list) or not assertions:
             raise ValueError(f'{case["id"]}: at least one assertion required')
         for rule in assertions:
-            if rule.get('type') not in ('different', 'same', 'green_increases', 'output_equals'):
+            if rule.get('type') not in ('different', 'same', 'green_increases', 'output_equals', 'changed_area_fraction'):
                 raise ValueError(f'{case["id"]}: unsupported assertion {rule.get("type")}')
+            if rule['type']=='changed_area_fraction':
+                points=rule.get('samples')
+                if not isinstance(points,list) or len(points)<3 or any(not isinstance(p,dict) for p in points):
+                    raise ValueError('changed_area_fraction requires at least three sample/fraction pairs')
+                fractions=[p.get('fraction') for p in points]
+                if any(type(v) not in (int,float) or not math.isfinite(v) or not 0<=v<=1 for v in fractions) or fractions[0]!=0 or fractions[-1]!=1 or any(a>=b for a,b in zip(fractions,fractions[1:])):
+                    raise ValueError('Expected strictly increasing fractions from 0 to 1')
+                names=[p.get('sample') for p in points]
+                if len(set(names))!=len(names) or any(n not in labels for n in names):
+                    raise ValueError('Fraction samples must reference distinct real samples')
+                error=rule.get('max_fraction_error',0.04)
+                if type(error) not in (int,float) or not 0<=error<=0.1:
+                    raise ValueError('max_fraction_error must be within 0..0.1')
+                continue
             keys = (rule.get('a'), rule.get('b')) if rule['type'] in ('different', 'same') else (
                 rule.get('samples', []) if rule['type'] == 'green_increases' else (rule.get('sample'),))
             if any(k not in labels for k in keys):
                 raise ValueError(f'{case["id"]}: assertion references missing sample')
+
+
+def archive_for_case(case, override=None):
+    """Use exact candidate bytes for single-pack external qualification."""
+    return override if override is not None else SITE/'demo'/case['pack']
+
+
+def verify_archive_override(spec, override):
+    if override is not None:
+        if len({case['pack'] for case in spec['cases']})!=1:
+            raise ValueError('--archive requires a single pack label across all cases')
+        if not override.is_file():
+            raise ValueError('Candidate ZIP not found: '+str(override))
 
 
 def loaded_html():
@@ -136,6 +168,15 @@ def check_case(case, images, outputs):
             else:
                 maximum=rule.get('max_changed_pixels', 0);ok=count<=maximum
                 detail=f'{a}/{b}: {count} changed pixels (need <= {maximum})'
+        elif typ=='changed_area_fraction':
+            points=rule['samples'];base=images[points[0]['sample']]
+            counts=[pixel_change(base,images[p['sample']],rule.get('tolerance',12)) for p in points]
+            total=counts[-1]
+            fractions=[round(n/total,4) for n in counts] if total else []
+            errors=[abs(n/total-p['fraction']) for n,p in zip(counts,points)] if total else []
+            ok=(total>0 and all(a<b for a,b in zip(counts,counts[1:]))
+                and all(e<=rule.get('max_fraction_error',0.04) for e in errors))
+            detail=f'Changed pixels {counts}; observed fractions {fractions}; expected {[p["fraction"] for p in points]}'
         elif typ=='green_increases':
             values=[green_count(images[x]) for x in rule['samples']]
             minimum=rule.get('min_step', 100)
@@ -156,9 +197,10 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--spec',type=Path,default=ROOT/'tests/visual-scenarios.json')
     ap.add_argument('--out',type=Path,default=Path('/tmp/smi-visual-matrix'))
+    ap.add_argument('--archive',type=Path,help='Exact external ZIP; all scenarios must share one pack label')
     ap.add_argument('--chromium',default='',help='Optional explicit Chromium path; otherwise detect system or Playwright browser')
     args=ap.parse_args()
-    spec=json.loads(args.spec.read_text());verify_spec(spec)
+    spec=json.loads(args.spec.read_text());verify_spec(spec);verify_archive_override(spec,args.archive)
     if not (SITE/'builder.js').is_file():raise SystemExit('Build the site first: python tools/build_site.py')
     try:from playwright.sync_api import sync_playwright
     except ImportError:raise SystemExit('Browser QA requires: python -m pip install playwright')
@@ -169,14 +211,15 @@ def main():
         browser=playwright.chromium.launch(headless=True,executable_path=(args.chromium or ('/usr/bin/chromium' if Path('/usr/bin/chromium').exists() else playwright.chromium.executable_path)),args=['--no-sandbox'])
         try:
             for case in spec['cases']:
-                archive=SITE/'demo'/case['pack']
+                archive=archive_for_case(case,args.archive)
                 if not archive.is_file():raise FileNotFoundError(archive)
                 page=browser.new_page(viewport={'width':1500,'height':1024},device_scale_factor=1)
                 errors=[]
                 page.on('pageerror',lambda e:errors.append(str(e)))
                 page.set_content(loaded_html())
                 for css in ('styles.css','builder.css'):page.add_style_tag(content=(SITE/css).read_text())
-                payload={'registry':{'packs':[{'id':case['id'],'name':case['preview_name'],'zip':'demo/'+case['pack']}]},'zip':base64.b64encode(archive.read_bytes()).decode()}
+                archive_bytes=archive.read_bytes()
+                payload={'registry':{'packs':[{'id':case['id'],'name':case['preview_name'],'zip':'demo/'+case['pack']}]},'zip':base64.b64encode(archive_bytes).decode()}
                 page.evaluate('''(data)=>{
                   window.ICON_ATLAS_DATA={version:'visual-QA',sheets:[],icons:[]};
                   window.fetch=async url=>{
@@ -209,7 +252,7 @@ def main():
                 if errors:findings.append({'assertion':'browser_page_errors','status':'FAIL','detail':'; '.join(errors)})
                 status='PASS' if all(f['status']=='PASS' for f in findings) else 'FAIL'
                 if status!='PASS':failures.append(case['id'])
-                report['cases'].append({'id':case['id'],'pack':case['pack'],'status':status,'samples':list(samples),'findings':findings})
+                report['cases'].append({'id':case['id'],'pack':case['pack'],'archive_sha256':hashlib.sha256(archive_bytes).hexdigest(),'asset':case.get('asset'),'status':status,'samples':list(samples),'sample_controls':case['samples'],'findings':findings})
                 print(status,case['id'])
                 for f in findings:print('  ',f['status'],f['detail'])
                 page.close()
