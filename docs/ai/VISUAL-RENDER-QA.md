@@ -12,6 +12,8 @@ python3 tests/browser_visual_matrix.py \
   --spec tests/visual-scenarios.json --out /tmp/visual-render-QA
 ```
 
+For an external candidate, pass `--archive /path/to/candidate.zip` (all cases must use the same safe pack label). This imports the exact bytes, without copying the pack into source or publishing it. Prefer the existing acceptance command with `--visual-spec` for a single combined receipt. Each browser case records the ZIP SHA-256, asset ID and covered samples. Missing browser evidence is not a PASS.
+
 By default, the runner uses `/usr/bin/chromium` when present, otherwise Playwright's installed Chromium. It injects the built JS and ZIP bytes without a server or network. A nonzero exit means a failed check or a render that couldn't be performed.
 
 ## Author a new case
@@ -24,7 +26,7 @@ Copy a case from [`tests/visual-scenarios.json`](../../tests/visual-scenarios.js
 - Potion/GUI presets: Health, Mana, Poison visually differ; animated Mana advances.
 - Unchanged parts: use a `same` assertion to verify inputs that shouldn't affect appearance.
 
-The versioned JSON format accepts `inputs`, `state`, `preset`, and `time_ms`; assertions `different`, `same`, `green_increases` and `output_equals`. The different/same checks compare decoded transparent RGBA pixels, not the checkerboard CSS behind a canvas. Choose pixel thresholds deliberately. The green-specific assertion is **not universal**; use it only for known green test art.
+The versioned JSON format accepts `inputs`, `state`, `preset`, and `time_ms`; assertions `different`, `same`, `green_increases` and `output_equals`. The different/same checks compare decoded transparent RGBA pixels, not the checkerboard CSS behind a canvas. Choose pixel thresholds deliberately. A difference alone does not prove increasing fill or correct position. Specify semantic pixel/geometry checks where relevant, including all ten numeric samples from the GUI value guide; record manual checks or gaps explicitly. Each declared case is scoped evidence, not complete coverage of every asset. The green-specific assertion is **not universal**; use it only for known green test art.
 
 The runner saves PNG evidence for every sample and a report JSON with per-assertion PASS/FAIL. CI uploads that evidence and **blocks GitHub Pages deployment when visual cases fail**. If the local browser is unavailable, disclose NOT RUN in the handoff; the mandatory CI gate still applies to public releases.
 

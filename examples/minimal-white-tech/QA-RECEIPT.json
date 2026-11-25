@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "status": "RELEASE CANDIDATE — official qualification pending",
+  "status": "HISTORICAL RC1 local qualification snapshot (not current release status)",
   "counts": {
     "region": 280,
     "composition": 60,
@@ -527,5 +527,6 @@
   "creator_art_review": "Owner requested public release; full manual region/frame review not independently verified",
   "manual_native_size_all_frames_and_presets_review": "PENDING",
   "license": "CC0-1.0 authorized by owner; attribution welcome, not required.",
-  "publication": "Pending CI and Pages deployment"
+  "publication": "Historical snapshot: pending at time of local qualification; deployment evidence above.",
+  "evidence_scope": "Pre-release local checks; original NOT RUN fields intentionally preserved. Subsequent official CI and deployment succeeded at https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/actions/runs/45557727526. Artistic review remains pending. Consult current CI for later revisions."
 }

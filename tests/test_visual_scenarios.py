@@ -3,6 +3,7 @@ import importlib.util
 import json
 from pathlib import Path
 import unittest
+from tempfile import TemporaryDirectory
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,6 +22,23 @@ class VisualScenarioContractTests(unittest.TestCase):
         self.assertEqual(names, {'interactive-hud.zip','character-animations.zip','animated-icons.zip','starter-pack.zip','potions-collection.zip','royal-forge-hud-resources.zip','royal-forge-controls.zip','royal-forge-complete.zip','minimal-white-tech.zip'})
         for name in names:
             self.assertTrue((ROOT/'web/demo'/name).is_file() or (ROOT/'examples'/name.removesuffix('.zip')/'manifest.json').is_file(),name)
+
+    def test_exact_archive_override(self):
+        with TemporaryDirectory() as tmp:
+            archive=Path(tmp)/'candidate.zip';archive.touch()
+            single={'cases':[self.data['cases'][0]]}
+            module.verify_archive_override(single,archive)
+            self.assertEqual(module.archive_for_case(single['cases'][0],archive),archive)
+            self.assertEqual(module.archive_for_case(single['cases'][0]),module.SITE/'demo'/single['cases'][0]['pack'])
+            with self.assertRaisesRegex(ValueError,'single pack'):
+                module.verify_archive_override(self.data,archive)
+            with self.assertRaisesRegex(ValueError,'not found'):
+                module.verify_archive_override(single,archive.with_name('absent.zip'))
+
+    def test_duplicate_case_ids_fail(self):
+        self.data['cases'].append(self.data['cases'][0])
+        with self.assertRaisesRegex(ValueError,'Duplicate case ID'):
+            module.verify_spec(self.data)
 
     def test_unknown_assertion_fails(self):
         self.data['cases'][0]['assertions'][0]['type']='magic_visual_quality'

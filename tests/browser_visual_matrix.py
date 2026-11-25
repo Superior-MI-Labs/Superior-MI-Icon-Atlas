@@ -12,6 +12,7 @@ Only manifests and images from explicit local ZIPs are loaded. No network server
 from __future__ import annotations
 import argparse
 import base64
+import hashlib
 from io import BytesIO
 import json
 from pathlib import Path
@@ -35,7 +36,10 @@ def verify_spec(spec):
     cases = spec.get('cases')
     if not isinstance(cases, list) or not 1 <= len(cases) <= 40:
         raise ValueError('Expected 1..40 visual cases')
+    case_ids=set()
     for case in cases:
+        if case.get('id') in case_ids:raise ValueError('Duplicate case ID')
+        case_ids.add(case.get('id'))
         if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,70}', case.get('id', '')):
             raise ValueError('Case ID must be a safe slug')
         if not re.fullmatch(r'[a-z0-9-]+\.zip', case.get('pack', '')):
@@ -65,6 +69,19 @@ def verify_spec(spec):
                 rule.get('samples', []) if rule['type'] == 'green_increases' else (rule.get('sample'),))
             if any(k not in labels for k in keys):
                 raise ValueError(f'{case["id"]}: assertion references missing sample')
+
+
+def archive_for_case(case, override=None):
+    """Use exact candidate bytes for single-pack external qualification."""
+    return override if override is not None else SITE/'demo'/case['pack']
+
+
+def verify_archive_override(spec, override):
+    if override is not None:
+        if len({case['pack'] for case in spec['cases']})!=1:
+            raise ValueError('--archive requires a single pack label across all cases')
+        if not override.is_file():
+            raise ValueError('Candidate ZIP not found: '+str(override))
 
 
 def loaded_html():
@@ -156,9 +173,10 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--spec',type=Path,default=ROOT/'tests/visual-scenarios.json')
     ap.add_argument('--out',type=Path,default=Path('/tmp/smi-visual-matrix'))
+    ap.add_argument('--archive',type=Path,help='Exact external ZIP; all scenarios must share one pack label')
     ap.add_argument('--chromium',default='',help='Optional explicit Chromium path; otherwise detect system or Playwright browser')
     args=ap.parse_args()
-    spec=json.loads(args.spec.read_text());verify_spec(spec)
+    spec=json.loads(args.spec.read_text());verify_spec(spec);verify_archive_override(spec,args.archive)
     if not (SITE/'builder.js').is_file():raise SystemExit('Build the site first: python tools/build_site.py')
     try:from playwright.sync_api import sync_playwright
     except ImportError:raise SystemExit('Browser QA requires: python -m pip install playwright')
@@ -169,14 +187,15 @@ def main():
         browser=playwright.chromium.launch(headless=True,executable_path=(args.chromium or ('/usr/bin/chromium' if Path('/usr/bin/chromium').exists() else playwright.chromium.executable_path)),args=['--no-sandbox'])
         try:
             for case in spec['cases']:
-                archive=SITE/'demo'/case['pack']
+                archive=archive_for_case(case,args.archive)
                 if not archive.is_file():raise FileNotFoundError(archive)
                 page=browser.new_page(viewport={'width':1500,'height':1024},device_scale_factor=1)
                 errors=[]
                 page.on('pageerror',lambda e:errors.append(str(e)))
                 page.set_content(loaded_html())
                 for css in ('styles.css','builder.css'):page.add_style_tag(content=(SITE/css).read_text())
-                payload={'registry':{'packs':[{'id':case['id'],'name':case['preview_name'],'zip':'demo/'+case['pack']}]},'zip':base64.b64encode(archive.read_bytes()).decode()}
+                archive_bytes=archive.read_bytes()
+                payload={'registry':{'packs':[{'id':case['id'],'name':case['preview_name'],'zip':'demo/'+case['pack']}]},'zip':base64.b64encode(archive_bytes).decode()}
                 page.evaluate('''(data)=>{
                   window.ICON_ATLAS_DATA={version:'visual-QA',sheets:[],icons:[]};
                   window.fetch=async url=>{
@@ -209,7 +228,7 @@ def main():
                 if errors:findings.append({'assertion':'browser_page_errors','status':'FAIL','detail':'; '.join(errors)})
                 status='PASS' if all(f['status']=='PASS' for f in findings) else 'FAIL'
                 if status!='PASS':failures.append(case['id'])
-                report['cases'].append({'id':case['id'],'pack':case['pack'],'status':status,'samples':list(samples),'findings':findings})
+                report['cases'].append({'id':case['id'],'pack':case['pack'],'archive_sha256':hashlib.sha256(archive_bytes).hexdigest(),'asset':case.get('asset'),'status':status,'samples':list(samples),'findings':findings})
                 print(status,case['id'])
                 for f in findings:print('  ',f['status'],f['detail'])
                 page.close()

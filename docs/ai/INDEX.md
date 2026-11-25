@@ -1,8 +1,8 @@
 # Visual Atlas AI authoring library
 
-**Start with [START-HERE.md](START-HERE.md).** It is the only required entrypoint for an assistant. Read only the one recipe matching the creator's request, then the mandatory [release checklist](RELEASE-CHECKLIST.md).
+**Start with [START-HERE.md](START-HERE.md).** It is the shared entrypoint for an assistant. Read only the recipe(s) matching the creator's request, then the mandatory [release checklist](RELEASE-CHECKLIST.md).
 
-| What you're building | Recipe | Working ZIP |
+| What you're building | Recipe | Contract example |
 |---|---|---|
 | Static icons and tintable glyphs | [Icons](icons/README.md) | [Single icon](../demo/icons.zip) |
 | Multi-frame icons and object/character animations | [Animations](animations/README.md) | [Animated icon](../demo/animated-icons.zip) · [Character states](../demo/character-animations.zip) |
@@ -15,7 +15,11 @@
 
 **Shared authoring:** [Creator preflight](CREATOR-PREFLIGHT.md) · [Image source workflow](IMAGE-ENGINE-WORKFLOW.md) (when relevant).
 
-**GIF inspection and animation import:** [Review before converting GIFs to canonical texture sheets](animations/GIF-TO-ATLAS.md). Inspect first; packaging requires explicit human approval.\n\n**Side-scrolling character production:** [Canonical references, action families, animation transitions and first motion qualification](animations/SIDE-SCROLLER-PRODUCTION.md) (only for applicable requests).
+**GIF inspection and animation import:** [Review before converting GIFs to canonical texture sheets](animations/GIF-TO-ATLAS.md). Inspect first; packaging requires explicit human approval.
+
+**Side-scrolling character production:** [Canonical references, action families, animation transitions and first motion qualification](animations/SIDE-SCROLLER-PRODUCTION.md) (only for applicable requests).
+
+**Independent AI evaluation:** [Benchmark protocol](BENCHMARK.md) (only for evaluating the workflow).
 
 **Shared reference:** [Manifest/API contract](FORMAT-API.md) · [QA release checklist](RELEASE-CHECKLIST.md) · [Request examples](PROMPT-EXAMPLES.md) · [Grid starters](../templates/authoring-grids.zip).
 
@@ -25,7 +29,7 @@ The creator describes *what* to make. The assistant loads the short core instruc
 
 ## About examples
 
-The ZIPs are real, downloadable, manifest-driven test fixtures and can be opened privately in the builder. Their artwork is deliberately simple; **reuse the contracts, not necessarily the visuals**. The builder accepts a ZIP containing many manifests and texture sheets. An AI should include complete assets, dependencies, and truthful licensing metadata.
+Internal fixture links may lead to source folders on the hosted site. Use a checkout to build those ZIPs. For direct importable examples, use [Fantasy RPG HUD](../demo/fantasy-rpg-hud-wave1.zip), [Royal Forge complete HUD](../demo/royal-forge-complete.zip), and [Minimal White Tech](../demo/minimal-white-tech.zip). Reuse the contracts, not the reference aesthetics. Internal fixture artwork is deliberately simple; **reuse the contracts, not necessarily the visuals**. The builder accepts a ZIP containing many manifests and texture sheets. An AI should include complete assets, dependencies, and truthful licensing metadata.
 
 **HD fantasy game item icons and interaction states:** [Pixel-art item production contract](icons/GAME-PIXEL-ART.md). This requires raster source art, true measured transparent crops, a shared effect composition and publication QA, not procedural vector substitutes.
 
