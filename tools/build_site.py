@@ -12,6 +12,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from atlasctl import load,validate
+from tools.sprite_grids import build_sprite_grids
 from tools.asset_inventory import audit as audit_assets, source_collections, read_collection, archive_payload
 
 
@@ -112,6 +113,7 @@ def build(dest:Path|None=None):
     shutil.copy2(ROOT/'tests'/'visual-scenarios.json',dest/'qa'/'visual-scenarios.json')
     (dest/'templates').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'web'/'templates'/'authoring-grids.zip',dest/'templates'/'authoring-grids.zip')
+    build_sprite_grids(dest/'templates')
     (dest/'demo').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'web'/'demo'/'starter-pack.zip',dest/'demo'/'starter-pack.zip')
     shutil.copy2(ROOT/'web'/'demo'/'potions-collection.zip',dest/'demo'/'potions-collection.zip')
