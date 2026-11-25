@@ -656,6 +656,82 @@
           "a": "v0",
           "b": "reset",
           "max_changed_pixels": 0
+        },
+        {
+          "type": "changed_area_fraction",
+          "samples": [
+            {
+              "sample": "v0",
+              "fraction": 0
+            },
+            {
+              "sample": "v1",
+              "fraction": 0.01
+            },
+            {
+              "sample": "v5",
+              "fraction": 0.05
+            },
+            {
+              "sample": "v10",
+              "fraction": 0.1
+            },
+            {
+              "sample": "v25",
+              "fraction": 0.25
+            },
+            {
+              "sample": "v50",
+              "fraction": 0.5
+            },
+            {
+              "sample": "v75",
+              "fraction": 0.75
+            },
+            {
+              "sample": "v90",
+              "fraction": 0.9
+            },
+            {
+              "sample": "v99",
+              "fraction": 0.99
+            },
+            {
+              "sample": "v100",
+              "fraction": 1
+            }
+          ],
+          "max_fraction_error": 0.04
+        },
+        {
+          "type": "output_equals",
+          "sample": "v0",
+          "field": "value",
+          "equals": 0
+        },
+        {
+          "type": "output_equals",
+          "sample": "v1",
+          "field": "value",
+          "equals": 1
+        },
+        {
+          "type": "output_equals",
+          "sample": "v50",
+          "field": "value",
+          "equals": 50
+        },
+        {
+          "type": "output_equals",
+          "sample": "v99",
+          "field": "value",
+          "equals": 99
+        },
+        {
+          "type": "output_equals",
+          "sample": "v100",
+          "field": "value",
+          "equals": 100
         }
       ]
     },
@@ -793,6 +869,82 @@
           "a": "v0",
           "b": "reset",
           "max_changed_pixels": 0
+        },
+        {
+          "type": "changed_area_fraction",
+          "samples": [
+            {
+              "sample": "v0",
+              "fraction": 0
+            },
+            {
+              "sample": "v1",
+              "fraction": 0.01
+            },
+            {
+              "sample": "v5",
+              "fraction": 0.05
+            },
+            {
+              "sample": "v10",
+              "fraction": 0.1
+            },
+            {
+              "sample": "v25",
+              "fraction": 0.25
+            },
+            {
+              "sample": "v50",
+              "fraction": 0.5
+            },
+            {
+              "sample": "v75",
+              "fraction": 0.75
+            },
+            {
+              "sample": "v90",
+              "fraction": 0.9
+            },
+            {
+              "sample": "v99",
+              "fraction": 0.99
+            },
+            {
+              "sample": "v100",
+              "fraction": 1
+            }
+          ],
+          "max_fraction_error": 0.04
+        },
+        {
+          "type": "output_equals",
+          "sample": "v0",
+          "field": "value",
+          "equals": 0
+        },
+        {
+          "type": "output_equals",
+          "sample": "v1",
+          "field": "value",
+          "equals": 1
+        },
+        {
+          "type": "output_equals",
+          "sample": "v50",
+          "field": "value",
+          "equals": 50
+        },
+        {
+          "type": "output_equals",
+          "sample": "v99",
+          "field": "value",
+          "equals": 99
+        },
+        {
+          "type": "output_equals",
+          "sample": "v100",
+          "field": "value",
+          "equals": 100
         }
       ]
     },
@@ -905,6 +1057,927 @@
           "a": "start",
           "b": "loop",
           "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "white-tech-loading-spinner",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.effect.loading-spinner",
+      "preview_name": "White Tech Loading Spinner",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "quarter",
+          "time_ms": 250
+        },
+        {
+          "id": "half",
+          "time_ms": 500
+        },
+        {
+          "id": "loop",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "start",
+          "b": "quarter",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "quarter",
+          "b": "half",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "start",
+          "b": "loop",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "white-tech-location-pulse",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.effect.location-pulse",
+      "preview_name": "White Tech Location Pulse",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "quarter",
+          "time_ms": 250
+        },
+        {
+          "id": "half",
+          "time_ms": 500
+        },
+        {
+          "id": "loop",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "start",
+          "b": "quarter",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "quarter",
+          "b": "half",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "start",
+          "b": "loop",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "white-tech-transmission",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.effect.transmission",
+      "preview_name": "White Tech Animated Signal",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "quarter",
+          "time_ms": 250
+        },
+        {
+          "id": "half",
+          "time_ms": 500
+        },
+        {
+          "id": "loop",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "start",
+          "b": "quarter",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "quarter",
+          "b": "half",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "start",
+          "b": "loop",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "white-tech-alert-pulse",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.effect.alert-pulse",
+      "preview_name": "White Tech Critical Alert Pulse",
+      "samples": [
+        {
+          "id": "start",
+          "time_ms": 0
+        },
+        {
+          "id": "quarter",
+          "time_ms": 250
+        },
+        {
+          "id": "half",
+          "time_ms": 500
+        },
+        {
+          "id": "loop",
+          "time_ms": 1000
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "start",
+          "b": "quarter",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "quarter",
+          "b": "half",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "start",
+          "b": "loop",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "white-tech-radial-states",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.widget.radial-progress",
+      "preview_name": "Widget Radial-Progress",
+      "samples": [
+        {
+          "id": "s0",
+          "state": "0"
+        },
+        {
+          "id": "s10",
+          "state": "10"
+        },
+        {
+          "id": "s20",
+          "state": "20"
+        },
+        {
+          "id": "s30",
+          "state": "30"
+        },
+        {
+          "id": "s40",
+          "state": "40"
+        },
+        {
+          "id": "s50",
+          "state": "50"
+        },
+        {
+          "id": "s60",
+          "state": "60"
+        },
+        {
+          "id": "s70",
+          "state": "70"
+        },
+        {
+          "id": "s80",
+          "state": "80"
+        },
+        {
+          "id": "s90",
+          "state": "90"
+        },
+        {
+          "id": "s100",
+          "state": "100"
+        },
+        {
+          "id": "reset",
+          "state": "0"
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "s0",
+          "b": "s10",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "s10",
+          "b": "s20",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "s20",
+          "b": "s30",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "s30",
+          "b": "s40",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "s40",
+          "b": "s50",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "s50",
+          "b": "s60",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "s60",
+          "b": "s70",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "s70",
+          "b": "s80",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "s80",
+          "b": "s90",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "s90",
+          "b": "s100",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "s0",
+          "b": "reset",
+          "max_changed_pixels": 0
+        }
+      ]
+    },
+    {
+      "id": "white-tech-ability-socket",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.widget.ability-socket",
+      "preview_name": "White Tech Ability Socket",
+      "samples": [
+        {
+          "id": "ready",
+          "preset": "Energy",
+          "inputs": {
+            "mode": "ready",
+            "cooldown": 0
+          }
+        },
+        {
+          "id": "half",
+          "inputs": {
+            "cooldown": 50
+          }
+        },
+        {
+          "id": "full",
+          "inputs": {
+            "cooldown": 100
+          }
+        },
+        {
+          "id": "locked",
+          "inputs": {
+            "mode": "locked",
+            "cooldown": 0
+          }
+        },
+        {
+          "id": "active",
+          "inputs": {
+            "mode": "active"
+          }
+        },
+        {
+          "id": "reset",
+          "inputs": {
+            "mode": "ready",
+            "cooldown": 0
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "ready",
+          "b": "half",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "half",
+          "b": "full",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "ready",
+          "b": "locked",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "locked",
+          "b": "active",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "ready",
+          "b": "reset",
+          "max_changed_pixels": 0
+        },
+        {
+          "type": "output_equals",
+          "sample": "half",
+          "field": "cooldown",
+          "equals": 50
+        },
+        {
+          "type": "output_equals",
+          "sample": "locked",
+          "field": "mode",
+          "equals": "locked"
+        }
+      ]
+    },
+    {
+      "id": "white-tech-slider",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.widget.slider",
+      "preview_name": "White Tech Horizontal Slider",
+      "samples": [
+        {
+          "id": "v0",
+          "inputs": {
+            "value": 0
+          }
+        },
+        {
+          "id": "v1",
+          "inputs": {
+            "value": 1
+          }
+        },
+        {
+          "id": "v5",
+          "inputs": {
+            "value": 5
+          }
+        },
+        {
+          "id": "v10",
+          "inputs": {
+            "value": 10
+          }
+        },
+        {
+          "id": "v25",
+          "inputs": {
+            "value": 25
+          }
+        },
+        {
+          "id": "v50",
+          "inputs": {
+            "value": 50
+          }
+        },
+        {
+          "id": "v75",
+          "inputs": {
+            "value": 75
+          }
+        },
+        {
+          "id": "v90",
+          "inputs": {
+            "value": 90
+          }
+        },
+        {
+          "id": "v99",
+          "inputs": {
+            "value": 99
+          }
+        },
+        {
+          "id": "v100",
+          "inputs": {
+            "value": 100
+          }
+        },
+        {
+          "id": "reset",
+          "inputs": {
+            "value": 0
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "v0",
+          "b": "v1",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v1",
+          "b": "v5",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v5",
+          "b": "v10",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v10",
+          "b": "v25",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v25",
+          "b": "v50",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v50",
+          "b": "v75",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v75",
+          "b": "v90",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v90",
+          "b": "v99",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "v99",
+          "b": "v100",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "v0",
+          "b": "reset",
+          "max_changed_pixels": 0
+        },
+        {
+          "type": "output_equals",
+          "sample": "v0",
+          "field": "value",
+          "equals": 0
+        },
+        {
+          "type": "output_equals",
+          "sample": "v50",
+          "field": "value",
+          "equals": 50
+        },
+        {
+          "type": "output_equals",
+          "sample": "v100",
+          "field": "value",
+          "equals": 100
+        }
+      ]
+    },
+    {
+      "id": "white-tech-research",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.widget.research-tree",
+      "preview_name": "White Tech Six-Node Research Tree",
+      "samples": [
+        {
+          "id": "locked",
+          "inputs": {
+            "node_1": "locked",
+            "node_2": "locked"
+          }
+        },
+        {
+          "id": "available",
+          "inputs": {
+            "node_1": "available"
+          }
+        },
+        {
+          "id": "researching",
+          "inputs": {
+            "node_1": "researching"
+          }
+        },
+        {
+          "id": "complete",
+          "inputs": {
+            "node_1": "complete"
+          }
+        },
+        {
+          "id": "second",
+          "inputs": {
+            "node_2": "available"
+          }
+        },
+        {
+          "id": "reset",
+          "inputs": {
+            "node_1": "locked",
+            "node_2": "locked"
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "locked",
+          "b": "available",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "available",
+          "b": "researching",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "researching",
+          "b": "complete",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "complete",
+          "b": "second",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "locked",
+          "b": "reset",
+          "max_changed_pixels": 0
+        },
+        {
+          "type": "output_equals",
+          "sample": "second",
+          "field": "node_1",
+          "equals": "complete"
+        },
+        {
+          "type": "output_equals",
+          "sample": "second",
+          "field": "node_2",
+          "equals": "available"
+        }
+      ]
+    },
+    {
+      "id": "white-tech-navigation",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.widget.star-map",
+      "preview_name": "White Tech Star Navigation Map",
+      "samples": [
+        {
+          "id": "terrestrial",
+          "inputs": {
+            "destination": "terrestrial",
+            "tracking": true
+          }
+        },
+        {
+          "id": "ice",
+          "inputs": {
+            "destination": "ice",
+            "tracking": true
+          }
+        },
+        {
+          "id": "gas-giant",
+          "inputs": {
+            "destination": "gas-giant",
+            "tracking": true
+          }
+        },
+        {
+          "id": "volcanic",
+          "inputs": {
+            "destination": "volcanic",
+            "tracking": true
+          }
+        },
+        {
+          "id": "station",
+          "inputs": {
+            "destination": "station",
+            "tracking": true
+          }
+        },
+        {
+          "id": "star",
+          "inputs": {
+            "destination": "star",
+            "tracking": true
+          }
+        },
+        {
+          "id": "untracked",
+          "inputs": {
+            "tracking": false
+          }
+        },
+        {
+          "id": "reset",
+          "inputs": {
+            "destination": "terrestrial",
+            "tracking": true
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "terrestrial",
+          "b": "ice",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "ice",
+          "b": "gas-giant",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "gas-giant",
+          "b": "volcanic",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "volcanic",
+          "b": "station",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "station",
+          "b": "star",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "star",
+          "b": "untracked",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "terrestrial",
+          "b": "reset",
+          "max_changed_pixels": 0
+        },
+        {
+          "type": "output_equals",
+          "sample": "untracked",
+          "field": "tracking",
+          "equals": false
+        },
+        {
+          "type": "output_equals",
+          "sample": "reset",
+          "field": "destination",
+          "equals": "terrestrial"
+        }
+      ]
+    },
+    {
+      "id": "white-tech-digits",
+      "pack": "minimal-white-tech.zip",
+      "asset": "smi.hud.whitetech01.widget.digital-readout",
+      "preview_name": "White Tech Four-Digit Readout",
+      "samples": [
+        {
+          "id": "d0",
+          "inputs": {
+            "digit_1": "0"
+          }
+        },
+        {
+          "id": "d1",
+          "inputs": {
+            "digit_1": "1"
+          }
+        },
+        {
+          "id": "d2",
+          "inputs": {
+            "digit_1": "2"
+          }
+        },
+        {
+          "id": "d3",
+          "inputs": {
+            "digit_1": "3"
+          }
+        },
+        {
+          "id": "d4",
+          "inputs": {
+            "digit_1": "4"
+          }
+        },
+        {
+          "id": "d5",
+          "inputs": {
+            "digit_1": "5"
+          }
+        },
+        {
+          "id": "d6",
+          "inputs": {
+            "digit_1": "6"
+          }
+        },
+        {
+          "id": "d7",
+          "inputs": {
+            "digit_1": "7"
+          }
+        },
+        {
+          "id": "d8",
+          "inputs": {
+            "digit_1": "8"
+          }
+        },
+        {
+          "id": "d9",
+          "inputs": {
+            "digit_1": "9"
+          }
+        },
+        {
+          "id": "dminus",
+          "inputs": {
+            "digit_1": "minus"
+          }
+        },
+        {
+          "id": "dblank",
+          "inputs": {
+            "digit_1": "blank"
+          }
+        },
+        {
+          "id": "reset",
+          "inputs": {
+            "digit_1": "0"
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "type": "different",
+          "a": "d0",
+          "b": "d1",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "d1",
+          "b": "d2",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "d2",
+          "b": "d3",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "d3",
+          "b": "d4",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "d4",
+          "b": "d5",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "d5",
+          "b": "d6",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "d6",
+          "b": "d7",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "d7",
+          "b": "d8",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "d8",
+          "b": "d9",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "d9",
+          "b": "dminus",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "different",
+          "a": "dminus",
+          "b": "dblank",
+          "min_changed_pixels": 1
+        },
+        {
+          "type": "same",
+          "a": "d0",
+          "b": "reset",
+          "max_changed_pixels": 0
+        },
+        {
+          "type": "output_equals",
+          "sample": "dminus",
+          "field": "digit_1",
+          "equals": "minus"
         }
       ]
     }

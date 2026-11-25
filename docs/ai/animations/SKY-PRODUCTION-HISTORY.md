@@ -1,0 +1,192 @@
+# Sky character production history — archived case study
+
+**Historical record:** This document preserves project-specific decisions and failures from the original Sky guide. It is not the current general authoring contract. For current implementation support and gates see [the reusable guide](SIDE-SCROLLER-PRODUCTION.md) and [format API](../FORMAT-API.md). Historical limitations and proposed features are not current runtime claims.
+
+**Scope:** high-quality frame-based player/NPC characters, independently animated equipment and effects, and optional dialogue portraits. This is an extension of the [general animation recipe](README.md), not a replacement for the [creator preflight](../CREATOR-PREFLIGHT.md), [manifest contract](../FORMAT-API.md), or [release checklist](../RELEASE-CHECKLIST.md). Load this guide **only** for relevant side-scrolling character work.
+
+**First candidate:** [Sky Blue Eyes motion-foundation plan](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/plan.json). It is a machine-checked preproduction plan, **not** renderable artwork, an approved model sheet, a runtime asset pack, or a working state-machine controller.
+
+## What we learned and must preserve
+
+The Visual Atlas pipeline has already taught us several lessons: image models can make excellent presentation art that is **not** production sprite geometry; texture grid coordinates must come from inspected pixels; a valid JSON manifest can still produce visually broken assembled output; and interactive previews must show actual user-controlled values rather than merely decorative dropdowns. Our later animation lessons add broken articulation from warped single-pose art, identity drift across generated views, false animation from optical-flow ghosts, clipped wings, misaligned pivots, and loop seams that pop. Keep the current production chain: **faithful brief → references → key poses → measured pixels → existing manifests → actual browser preview → acceptance → handoff**.
+
+For each regression record **observation → root cause → correction → executable/visual gate → evidence**, in the relevant existing guide. Do not create another competing global checklist, registry, or animation engine.
+
+## Mandatory stop — Sky art audit (2026-11-02)
+
+**The creator reviewed the real outputs and REJECTED the artwork.** See the [complete art fidelity audit](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/ART-FIDELITY-AUDIT-2026-11-02.md). This verdict overrides earlier candidate-count/technical-PASS language in this guide. Body Batch 04 (9 clips), sword Batch 03 (7 clips), and FX v0.2 (20 clips) are **TEST FIXTURES ONLY**; all 36 candidate clips have **FAILED the professional painterly visual fidelity gate**. Do not reuse their primitive SVG drawings as a style basis and do not extend them with more frame counts.
+
+**Correct order, non-negotiable:** first render/repaint **one actual production-quality swordless Sky master** and **one true ornate complete-sword master** from the original approved user images, verify side-by-side at native gameplay size and close-up, and obtain explicit approval of those *actual drawings*. **Until the two masters pass, further bulk motion generation is blocked.** The original approved design is not being reopened for new concepts; the missing work is *matching* that design. After approval, authorize one short true hand-drawn loop and qualify its motion; only then generate additional clips, manifests and ZIPs.
+
+**Renderer/pack QA ≠ art QA.** These packs passed 4 rerun local validators, and their source pixels reconstruct correctly. That only proves source-to-atlas integrity. Existing GitHub CI did not import the exact new ZIPs or compare against the original concept art. Any claim of finished hand-drawn professional-quality art on their basis is false. Retain manifest/packer/ID contracts; remake nearly all production image content. Archive obsolete reference kits v0.3–v0.5 and historical procedural Sunblade A/B inputs.
+
+## Gate P0 — canonical references before bulk animation
+
+A reference image is not automatically a canonical, animation-ready pose. Assign each supplied image one **specific role**, record its source and rights status, and distinguish its approved design facts from incidental lighting, background, text, camera angle, or other characters. The Sky plan records four historical candidate references plus one **creator-approved wardrobe reference** (SHA-256 fingerprint in the plan): the hooded, veiled desert wanderer. The latest creator instructions supersede earlier anatomy concepts: **no wings, exactly three independent feathered tails, and celestial galaxy-like eyes**. Neither the original pixels nor isolated animation masters are yet committed to the repository. Their pixels are **not committed to the repository** and cannot be assumed available to a later agent without an attachment or licensed source transfer.
+
+Produce a model-sheet package *as real, separately inspectable art*, not one image prompt asking for a giant collage:
+
+1. **Character identity:** preserve the approved hood's solar sigil, covered muzzle/mouth, gold brooch, cream/saffron wraps, layered torn red cloth, spotted feline paws, black-hole-centered blue/teal galactic iris and **three separate feathered tails**. No wings in V1. The user-approved image locks the *design language*, not its inaccurate/occluded anatomy in every angle.
+2. **Canonical poses:** produce a consistent 8-view orthographic turnaround: front 0°, front-right 45°, right 90°, back-right 135°, back 180°, back-left 225°, left 270°, front-left 315°, plus right combat stance. Each must be a **separate, full-size, clean source image** with common scale and ground line—not a collage of tiny poses. The initially playable 2D side-scroller still qualifies right/left motion before the other facings get full animation sets.
+3. **Shape/palette lock:** clean silhouette on light, midtone and dark backdrops; no unreadable clumps from feathers, ornate wraps, or sword glow. Palette reference includes flat color samples with readable material boundaries. Effects are overlays; never substitute dramatic sunset lighting for a base color model.
+4. **Camera and geometry:** orthographic side-scroller; right-facing is the initial animation master. Choose a single logical body canvas and world-space foot baseline. Sample target is 384–512 px tall source body and 240–320 px on-screen, both explicitly **provisional** until measured in a scene.
+5. **Directionality:** mirror-testing may be used diagnostically, but both actual left/right canonical views must be reviewed. Annotate asymmetric hood folds, solar emblems, shoulder clasp, belt rings, wrap binding, weapon strap and cloth tear placements; verify that three tails share plausible roots and overlap naturally in side/front views. Never claim a flip automatically preserves asymmetrical detail.
+6. **Licensing:** record creator/source rights before publishing any derivative. Do not infer that a reference image is authorized for unrestricted distribution.
+
+**Approval rule:** P0 is complete only when the model sheet, palette, camera, body canvas, anchors, default Sunblade silhouette, and source-rights decision are approved and evidence recorded. Approval of a plan does not equal approval of artwork. When uncertainty would make bulk work expensive, produce the smallest reversible study instead.
+
+### P0 failure mode: beautiful reference collage, unusable animation source
+
+**Observed in Sky's first visual exploration:** AI generations made ornate presentation boards with multiple tiny figures, textual labels, sword thumbnails, and schematic action poses. These were useful for discussion but **failed canonical sprite qualification**. Do not crop a tiny pose from such a board, upscale it, and silently call it an animation frame.
+
+**Correction:** use the original identity references for planning, then create **one isolated full-height right-facing, 90-degree side-profile character per art-generation pass**, on a simple uniform neutral ground with visible feet, a known camera and the full silhouette. Explicitly prohibit title text, multi-panel layout, diagrams, extra characters, motion smear, weapons overlapping the body, and dramatic background lighting. Do not draw wings. Request the sword as a separately authored object, not strapped to or baked over the character's silhouette. Generate alternate views and motion key poses in separate passes *after* one view passes identity and scale review.
+
+**Gate:** inspect the single isolated pose at target on-screen height, compare masked eye/ear shape, galactic iris, body markings, garment seams, the three distinct tail roots and tail feather shapes to the approved source and creator updates, and verify one contiguous figure without clipping. Mark `NEEDS FIXES` if the output is a collage, inconsistent view, or scene painting even when aesthetically excellent. An image-generation response is not a qualified PNG sprite sheet, stable model sheet, or loop. See [Sky P0 review](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/P0-REVIEW.md) for concrete regression evidence.
+
+### Sky-specific design-lock contract (2026-11-02)
+
+The user explicitly approved the **original cream-and-saffron hooded, face-covered desert wanderer** reference. That approval is a style/identity lock, **not** permission to approve newly generated images without inspection. The approved reference image has SHA-256 `5f0aa77d1514c1f859a5143732d4a39a3295a2afbb3b0fc0731878c98d95c97f`, documented in the plan. Preserve:
+
+- No wings. A consistent **trio** of feathered tails; from certain directions they may occlude each other, but three distinct roots/anatomical strands must be confirmed in the back and three-quarter views.
+- Hood and scarf hide the mouth and most facial identity. Eye visibility is intentional; the galaxy-like iris has a dark black-hole pupil, swirling blue/teal dust and sparse stars. Distant read: blue eyes with a restrained glow; close-up read: cosmic depth and short optical trails.
+- The shoulder sun clasp, solar hood embroidery, torso crossover wraps, tattered layered hem, belt medallions, leg bandages and exposed spotted feline paws keep their positions and scale across every facing. Reverse-side folds must be derived consistently, never invented.
+- The dormant Sunblade is a **separate weapon asset** and separate track, wrapped in torn fabric with a few phoenix-feather ties and barely visible cohesion magic. Unlockable aspects use optional FX overlays and host puzzle abilities, not seven different core weapon motion definitions.
+- **Unframed head assets**: front, three-quarter and side at readable portrait size, with neutral, listen, masked-talk, blink, focus and low-health possibilities. Each source must be a clean standalone image with no rectangular frame, dialogue box, title, annotations or second character. The hood/veil and three-tail body design are not negotiable.
+- Health visuals use **normal >36%** versus **low <=36%** only; health 0/death remains a separate body state.
+
+**QA anti-pattern:** several generated "canonical character design" infographics showed eight tiny angle studies but did not supply consistent, individually editable source files; dialogue heads were presented in boxes; some color-variant eyes were invented from health state; directions and tails could not be independently verified. Mark **CONCEPT ONLY / P0 NOT PASSED**. For future generation, use a **single-view or single-unframed-head** source task per iteration; only compose a presentation sheet *after* each source view is individually qualified. Source-art prompt engineering or attractive typography must never be mistaken for animation-ready geometry.
+
+### Hero-angle and tail-placement correction
+
+For Sky, the creator approved the **shallow right-facing three-quarter depth** shown in their cropped reference `image(20261102-135059).png`. This is the hero animation reference—not an absolutely flat side projection. Keep a pure 90° right-side construction view **also**, so garment seams, heel/paw alignment and tail-root geometry can be audited. Approval of the look does **not** approve the earlier full-height candidate unchanged.
+
+**Three-tail placement:** All three feathered phoenix tails emerge around the **lower back/pelvis/hip**, with the top two tail roots lowered from the earlier isolated study. Their masses fan backward and downward and overlap naturally in the oblique angle. Never leave long upper tails growing at shoulder height. Distinguish roots, feather bases and feather tips and inspect them in the back/three-quarter views.
+
+**AI image-generation instruction:** ask for *one* clean high-resolution source figure per angle, not a multi-panel reference bible. A decorative collage with good text and thumbnails is an **invalid** canonical model master. Treat the supplied crop as the approved pose/placement reference while the approved original full costume image remains authoritative for colors and garment construction.
+
+**Game control separation:** the independent sword actor, martial and held-sword modes, analog aiming, and keyboard/controller parity belong to a host game contract. See [Sky's source-of-truth gameplay proposal](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/controls-proposal.json) and [ergonomics/animation handoff](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/CONTROL-AND-COMBO-PROPOSAL.md). Do not introduce gamepad input behavior inside `smi-visual-pack/1` or a parallel renderer.
+
+### Sunblade production decision — traditional authored frames (Nov 2, 2026)
+
+**Creator decision:** Stop the fragment-driven A/B experiment. Produce the Shattered Sunblade **normally as hand-authored complete sword drawings**, not as individually controlled shards. The prior [A/B experiment](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/SUNBLADE-AB-EXPERIMENT.md) remains historical measurement only. No ongoing prototype comparison, procedural shard rig, reactive endpoint resolver or additional renderer is requested.
+
+**Preserve the visual concept:** the blade is visibly broken apart, with gaps interwoven by magical energy; artist-drawn successive complete frames show those pieces separating, twisting and settling. The effects may change for dormant, radiant, ember, frost and other aspects. The hilt and silhouette remain consistent. This is visual motion *authored in frames*, not separate runtime fragment physics.
+
+**Pipeline:** approved sword-only identity → individually drawn key poses for hover/cast/recall/grab/held/release → true in-between PNG frames with matched root and grip anchor → verify at native scale, check seams → existing `region` + `sequence` + `state_set` manifests → deterministic losslessly packed atlases → import ZIP and real browser visual QA. Default to 16 authored FPS with variable frame holds, not mechanical interpolation of one still.
+
+**Separate sword actor remains essential:** Sky's body frames have no sword. A separate complete sword animation is moved/oriented by the *host game* (root trajectory), and attaches its hilt to an authored hand socket during a held-melee animation. There is no physical sheath; hovering by Sky's back is not wearing the sword.
+
+**Reference-kit correction:** images implying a sword strapped to Sky are not canonical body-only references. Keep the approved character clothing design separate, generate body-only art, and use separate weapon art and clearly labeled interaction previews. No posters with tiny figures as animation-source frames. Preserve the original approved sword concepts.
+
+**AI production gate:** create a small real drawn idle loop first, verify every frame and its seams, then cast/recall and hand-grab transitions. Fix the offending source frames rather than rebuilding the pack or adding more code. Mark only actual visually approved drawings `QUALIFIED`. Avoid compressing the other agent's published assets; use lossless PNG optimization and alpha trimming for new generated atlases only. The earlier A-vs-B size numbers are **not** criteria for overriding this decision.
+
+### Reference phase exit — real animation production has started
+
+**Creator instruction:** no more broad reference roundtrips. The original character/clothing reference, hip-rooted three feathered tails, masked cosmic eyes, slight three-quarter side camera, and traditionally drawn complete Shattered Sunblade define the locked identity. Technical side/back checks or missing alpha masks are **production source-art tasks**, not reasons to invent new costumes or request a new conceptual model board.
+
+Use the [315-action production inventory](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/ANIMATION-INVENTORY.json) as the single backlog. Select one family and author its actual PNG key poses/frames; do not pre-build every entry. The first handoff `Sky-Production-Kickoff-v1.zip` includes a **small candidate FX pack**: 7 sequences, 84 complete sprite frames, one atlas and a `sky.fx.preview` state selector. Structural local QA passed, but these are **NOT creator-approved game art** and the exact ZIP has not passed the real Visual Atlas Builder browser-import gate; don't publish the set.
+
+**One-step AI handoff rule:** reconstruct the user request → consume existing approved references and inventory → draw isolated, per-clip key poses → inspect/fix only failures → add true in-betweens → pack lossless atlases/manifests → run original Visual Atlas import/render tests → output ZIP with explicit PASS/HOLD receipt. Do not return to endless references, produce a composite fantasy infographic when asked for sprite frames, add a second renderer, or treat an image-optimization change as source-asset creation.
+
+**Role boundary:** source image showing a sword floating by Sky's back is **wardrobe provenance** only and is excluded from the canonical body-only frame reference set. The actual body animation must be swordless; whole-sword drawn clips stay separate. Do not independently implement the old shard rig.
+
+### Batch 02 — production QA improvement from real PNG packing
+
+The [batch 02 source receipt](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/FX-BATCH-02-RECEIPT.md) documents an expanded **20-effect, 240-original-frame** experimental collection, built using the existing `region` + `sequence` + `state_set` contract. It preserves the first seven IDs and adds 13 varied motion/puzzle/combat effects. The exact ZIP and editable frame masters are in the conversation handoff, **not yet in the GitHub repository nor on the public site**.
+
+**Lossless packing wisdom:** when populating non-overlapping RGBA atlas rectangles, **paste** pixels directly rather than `alpha_composite` on transparent black. The latter can silently change hidden RGB bytes even while visual appearance seems equal. Reconstruct **every** final trimmed region to its complete logical canvas and compare bytes against the canonical PNG source. Keep the original full source frames; only compiled atlases are derived. This batch passed **240/240 exact RGBA comparisons** and used ~55% less decoded texture memory than untrimmed equal-size cells, with only two atlas pages. This is a *measured case*, not a guarantee for unrelated packs.
+
+**Quality boundary:** a passing ZIP validator, pixel-perfect crop test, or attractive contact image is **not** proof of actual animation quality. Browser navigation is blocked in the local environment, so the new import ZIP has no official Builder browser PASS; user review is still pending. Do not publish it. Keep authoring real Sky body and Sunblade whole-sword frame art next; do not generate a poster claiming dozens of finished character motions.
+
+### Batch 03 — full-frame sword art, measured but not visually approved
+
+The [Batch 03 Sunblade receipt](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/SUNBLADE-BATCH-03-RECEIPT.md) records a seven-sequence **real PNG-frame** candidate with 84 original source drawings, two trimmed texture pages, a valid `region → sequence → state_set` manifest and **84/84 exact RGBA reconstructions**. The sword actor is separate from Sky's body. **Back hover** and **orbit** loop; cast, recall, grab, held slash and release are one-shots. Do not incorrectly classify every frame as a loop.
+
+**Production lesson:** even when a generative image tool is asked for sprites, it may produce an impressive fake delivery-board illustration with invented counts instead of actual source art. **Reject the board, do not record its claimed assets as completed.** An offline vector drawing system can create isolated complete-frame PNGs for technical tests, but it must be labeled as a **style candidate** if it does not preserve the ornate approved reference. Do not secretly downgrade visual quality or claim a vector prototype is a professional hand-painted production sprite.
+
+**Reproducibility:** retain each individual source PNG, the full-stroke SVG/drawing generation logic, original ZIP, atlas manifest, deterministic packer, local QA evidence and animation previews in the handoff archive. The measured candidate is 5,097,676-byte ZIP with **52.3% decoded atlas memory savings** relative to untrimmed cells. This is not a universal compression rate and does not authorize changing older published images.
+
+**Do not introduce cross-pack dependencies accidentally:** independent FX v0.2 and full-sword ZIPs each import on their own; their composite GIFs are **review-only**. Before actual scene-level integration, implement one host-level composition or a deliberate dependency closure using the current renderer; never claim visual previews prove in-game state synchronization, hitboxes or hand anchors.
+
+**Status boundary:** local ZIP/source/frame tests PASS, but the exact new import ZIP was not imported in a real Visual Atlas browser session, and the artwork is not yet approved versus the source Sunblade concepts. **No public publication** and no claim that Sky's swordless idle, run or three-tail animations have been delivered. The next source-art family is those body clips plus an ornate sword art-quality pass, without reopening reference concepting.
+
+### Batch 04 — swordless body motion and unclipped-canvas gate
+
+The [Batch 04 receipt](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/BODY-BATCH-04-RECEIPT.md) records **9 real body-only source clip candidates**, 92 original frame drawings, two manual state selectors, and **103 addressable v1 assets**. The character remains swordless, wingless, slightly right-oblique, with a hood, covered muzzle, celestial eye and three low hip-rooted tails. Source SVGs and PNG frames are in the conversation handoff, not in GitHub or the published asset catalog.
+
+**New failure gate:** an earlier 384 px wide body canvas clipped tail feather ends and some attack/parry strokes before atlas assembly. If a source frame contains alpha on the outermost pixel of any logical edge, **FAIL SOURCE GEOMETRY**. Do not merely crop or trim it. Re-author all drawings in a consistent generously sized logical canvas (here 640×512 with 130 px offset) and rerun *every* frame's no-clipping check, then trim alpha only for the compiled texture atlas. This batch passed **92/92 unclipped** bounds and **92/92 byte-exact source→atlas→source RGBA comparisons**, with 58.5% measured decoded texture-memory savings compared with untrimmed cells. Loop seams are numeric diagnostics, not a guarantee of good motion.
+
+**Qualitative art gate remains closed:** a motion clip with valid frames can still have a simplified, flat design and tails that read like jagged rods instead of the approved painterly feathered character. **HOLD** this art style pending actual visual improvement; do not multiply this look into hundreds of clips merely to increase completion counts. Fix the specific source poses/art style, preserve clip IDs and the packer. Sky's drawn sword is still a separate actor: composite animation GIFs are review-only and do not prove a gameplay attachment transform.
+
+**Single source of truth:** keep IDs aligned to the existing [315-action inventory](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/ANIMATION-INVENTORY.json); the nine body clips, seven sword clips, and 20 FX clips are **distinct provisional asset families**, not a complete playable game. Preserve normal **health >36%**, low **<=36%**, without creating a third health tier. The visual pack's `state_set` is a manual preview, not an automatic health controller.
+
+## Gate P1 — smallest useful *working* animation slice
+
+Create these actual Visual Atlas assets first: relaxed side idle loop; run loop and an authored run-stop transition; three-tail idle secondary motion; and a separate dormant Sunblade orbit visualization. Build one **self-contained** ZIP using existing `smi-visual-pack/1` kinds and real measured PNG frames. Do not invent a controller property in this strict v1 schema.
+
+The [plan](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/plan.json) defines clip IDs and evidence gates. Validate it with:
+
+```bash
+python3 tools/validate_animation_plan.py production/sky-blue-eyes/plan.json
+python3 -m unittest tests/test_animation_plan.py -v
+```
+
+An approved P1 ZIP must additionally pass the existing ZIP validator, pixel qualification, request-specific acceptance, and Chromium rendered-state tests, including **run → stop → idle**, native-scale visible identity, actual animation, loop seam and adjacent-frame contacts, attach-point continuity, and round-trip import. The checks in the plan are *planned evidence*, not already-executed results.
+
+Do not generate 200 actions, six complete sword variants, or every health/stance combination to qualify the underlying drawing method. If the first idle motion looks like a translated cardboard cutout, do not expand; redraw genuine key poses and fix the source.
+
+## State machine architecture — proposal, not runtime support
+
+Current `region`, `sequence`, `state_set`, and `composition` assets remain the single source of truth for pixels/frames/visual layers. The current `state_set` chooses named assets but is **not** a gameplay-conditional state machine. An optional future `smi-animation-controller/1` sidecar may reference existing asset IDs and declare typed parameters, hierarchical states, condition grammar, transition priorities, markers, deterministic idle scheduler and parallel track ownership. Before implementing it: write a schema, pure evaluator, negative tests, deterministic trace and a thin adapter for existing builder controls. Do not duplicate frame data, write executable scripts inside imported JSON, or turn Atlas into a physics/combat engine.
+
+### Shattered Sunblade visual continuity — hand-drawn only
+
+The sword is depicted in each **complete authored frame** with separated relic pieces, cloth bindings and energy flowing between the gaps. The artist should vary their apparent rotation, spacing, flex and energy flow between frames, while preserving recognizable shapes, consistent hilt proportions and believable motion. Never substitute a single rigid sword with cracks painted on it, but also **do not** split the visual into a runtime-controlled collection of shard objects. That approach was tested and rejected for production.
+
+**Core clips:** `back_hover`, `orbit`, `cast`, `recall`, `grab_transition`, `held_slash`, `release`. Drawing variants should preserve hilt/grip placement, coherent positive/negative space, adjacent-frame contact and loop continuity. The whole-sword actor can move through world space independently of Sky, then anchor the **entire drawn sword** at a hand-grip point for melee. Energy and fracture motion are already part of each frame, not dynamic endpoints.
+
+**Aspect variants:** use the same base sword identity. Author variations of the full sword and optionally ordinary pre-existing FX sequences for ember, frost, gale, radiant etc. where needed; keep runtime asset metadata minimal. Different effects don't imply separate game physics engines or elaborate fragment simulation.
+
+**Visual QA gate:** prove a genuine animated silhouette (not a translated still), consistent hilt position during held attacks, no disappearing shards between drawings, continuous energy weave, a legible dormant effect at normal display size, and a seamless hover loop. Capture frame-by-frame previews, exact ZIP import receipt, and file-size/texture-memory measurements before publishing.
+
+**Track ownership:** body/root and foot contacts; sword movement and world/local-space choice; the three feathered tails/hood/scarf/cloth; transient FX; masked portrait/dialogue. The body has no wings and no flying/gliding V1 track. For example, the orbiting sword tracks the body root, but a cast sword remains world-positioned when Sky dashes. Host gameplay owns actual damage, collision, i-frames, combos, jump buffering, and attack outcomes; Atlas previews corresponding visual cues.
+
+**Health-dependent idle:** Sky V1 uses exactly **two** non-death art tiers: normal when health >36%, low when health <=36%. No fatigued/middle tier, no changed thresholds, no inferred red-eye state. These are clip selectors, not giant pre-baked matrices. If a future host needs temporal debouncing, it must preserve the user's actual 36% boundary rather than silently inventing a hysteresis band. Rare idle one-shots need eligibility, dwell time, seeded weighted choice, cooldown, one-shot completion, and safe return markers. Their algorithm lives in one controller evaluator, not duplicated inside per-character artwork.
+
+**Transition families:** immediate interrupt, completion, contact/attack marker, phase-preserving (walk/run), and authored bridge. Avoid visually ghosted whole-character crossfades; full-body directional/action changes should generally have real transition art. Validate priorities, interruption, unreachable states, rapid health changes, repeatable seeded idles and missing-optional-layer fallback.
+
+## Timing, anchors and sheets
+
+- **Art FPS:** 16 as a default, not a cap. Per-frame positive `duration_ms` may hold certain drawings longer. A game may simulate at 60 Hz and render at display refresh; do not convert a 4-tick attack into a guess based on 16 FPS image count.
+- **Anatomy and motion:** plan key contact poses, foot planting, anticipation, follow-through and real in-betweens. Never synthesize a running gait by globally shifting one static image. Review every frame and every adjacent pair.
+- **Logical root:** feet projected to ground. Track important per-pose anchors (hands, feet, each of the three tail roots, head/ears, orbit anchor), with names and coordinate-space conventions. Preserve origin through trimmed packing and facing flips.
+- **Atlas output:** keep source poses individually accessible, then use deterministic measured packing. Default to 2048² texture pages; consider 4096² only after real size/residency tests. Record exact alpha bounds, logical canvas, trim offset and pivot. **Current Canvas renderer does not yet fully apply trim offsets/pivots**; qualify/fix that before approving tightly trimmed production animation.
+- **Budget:** size the sheets from actual approved alpha bounds after one loop—not from an invented fixed number. Current importer caps ZIP compressed/expanded size at 120 MiB, each member at 24 MiB, and eagerly decodes images. Avoid a monolithic full-game ZIP; do not promise cross-ZIP dependency resolution until tested.
+- **Effects:** dust, spark, parry, afterimage and sword trails are independent assets, not always baked into body art. Dialogue art uses **unframed transparent masked-head/bust assets**. Since the mouth remains covered, speech is conveyed by subtle scarf motion, eye focus, blink, ear tension, hood/head movement and gestures; do not create open-mouth frames, expose the muzzle or bake a decorative text-frame rectangle into each asset. A future UI may surround these assets independently.
+
+## Work milestones and high-fidelity gates
+
+| Milestone | Outputs | Gate |
+|---|---|---|
+| P0 | Canonical reference sheet, palette, pose/anchor/camera lock and rights provenance | Creator signs off the actual visual identity, not a text-only summary |
+| P1 | Right-facing idle, run/stop, three-tail idle and dormant sword orbit in a self-contained ZIP | Real source frames, native-scale preview, frame/contact QA, ZIP roundtrip |
+| P2 | Low-health (<=36%) / rare idle, prejump and jump/land with parameter-driven preview | Hysteresis, no input lag, phase/timing, artwork transitions |
+| P3 | Combo slice, dodge/parry and independent sword cast/recall | Legal interrupt/cancel windows, cues exactly once, sword world-space stability |
+| P4 | Effects, secondary motion and dialogue bust/expressions | Layer ownership, clean silhouettes, portrait timing, QA evidence |
+| P5 | Expand by action family: climb, wall, slide, grab, throw, loot, open chest, NPC variants | Each new family reuses shared contracts and passes a full end-to-end gate |
+| P6 | Validate one real game adapter, memory budget and optional compression | No second runtime truth, measured decode/residency and stable IDs |
+
+The first milestone is **reference and pipeline qualification**, not bulk art generation. Each later batch should contain one coherent family and its tests: real artwork, measured manifest, reference closure, browser visuals, regression outcomes and release notes. Preserve the approved working pack while testing new candidates on a branch.
+
+## Agent handoff and truthful completion
+
+1. Reconstruct the current request using [creator preflight](../CREATOR-PREFLIGHT.md). Inspect only relevant images/files, the current master plan, authoritative schema and animation recipe.
+2. State **confirmed / proposed / pending** reference decisions. For Sky, respect the approved masked-desert-wanderer **identity** but do not pretend it or the generated infographics provide a clean eight-direction turnaround. Review [Sky P0 art gate](https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas/blob/main/production/sky-blue-eyes/P0-REVIEW.md).
+3. Choose existing `smi-visual-pack/1` representations first. If a requirement cannot be expressed, record a capability gap and test two designs before modifying the runtime.
+4. Generate/art-direct only the smallest qualification slice until proportions, facing, style and real motion are approved. Preserve pose images and failure notes.
+5. Run plan validation, source/alpha/frame inspection, ZIP/acceptance QA and browser rendered-state tests. Save both passing and failing evidence. Do not claim visual PASS if only schemas were checked.
+6. Record the exact observation, root cause, adjustment, regression test and evidence in this task guide or an existing relevant recipe. No duplicate checklist or schema.
+7. Never publish reference imagery or asset packs without source rights/approval and verified CI. A passing planning-data test is **NOT** a playable demo.
+
+See the [standard release checklist](../RELEASE-CHECKLIST.md) for the mandatory final ZIP receipt. 
+

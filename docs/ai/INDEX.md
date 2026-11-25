@@ -29,7 +29,7 @@ The creator describes *what* to make. The assistant loads the short core instruc
 
 ## About examples
 
-Internal fixture links may lead to source folders on the hosted site. Use a checkout to build those ZIPs. For direct importable examples, use [Fantasy RPG HUD](../demo/fantasy-rpg-hud-wave1.zip), [Royal Forge complete HUD](../demo/royal-forge-complete.zip), and [Minimal White Tech](../demo/minimal-white-tech.zip). Reuse the contracts, not the reference aesthetics. Internal fixture artwork is deliberately simple; **reuse the contracts, not necessarily the visuals**. The builder accepts a ZIP containing many manifests and texture sheets. An AI should include complete assets, dependencies, and truthful licensing metadata.
+Internal fixture links may lead to source folders on the hosted site. Use a checkout to build those ZIPs. For direct importable examples, use [Fantasy RPG HUD](../demo/fantasy-rpg-hud-wave1.zip), [Royal Forge complete HUD](../demo/royal-forge-complete.zip), and [Minimal White Tech](../demo/minimal-white-tech.zip). Internal fixture artwork is deliberately simple; **reuse the contracts, not necessarily the visuals**. The builder accepts a ZIP containing many manifests and texture sheets. An AI should include complete assets, dependencies, and truthful licensing metadata.
 
 **HD fantasy game item icons and interaction states:** [Pixel-art item production contract](icons/GAME-PIXEL-ART.md). This requires raster source art, true measured transparent crops, a shared effect composition and publication QA, not procedural vector substitutes.
 

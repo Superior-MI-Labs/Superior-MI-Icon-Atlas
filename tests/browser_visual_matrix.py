@@ -15,6 +15,7 @@ import base64
 import hashlib
 from io import BytesIO
 import json
+import math
 from pathlib import Path
 import re
 import sys
@@ -63,8 +64,22 @@ def verify_spec(spec):
         if not isinstance(assertions, list) or not assertions:
             raise ValueError(f'{case["id"]}: at least one assertion required')
         for rule in assertions:
-            if rule.get('type') not in ('different', 'same', 'green_increases', 'output_equals'):
+            if rule.get('type') not in ('different', 'same', 'green_increases', 'output_equals', 'changed_area_fraction'):
                 raise ValueError(f'{case["id"]}: unsupported assertion {rule.get("type")}')
+            if rule['type']=='changed_area_fraction':
+                points=rule.get('samples')
+                if not isinstance(points,list) or len(points)<3 or any(not isinstance(p,dict) for p in points):
+                    raise ValueError('changed_area_fraction requires at least three sample/fraction pairs')
+                fractions=[p.get('fraction') for p in points]
+                if any(type(v) not in (int,float) or not math.isfinite(v) or not 0<=v<=1 for v in fractions) or fractions[0]!=0 or fractions[-1]!=1 or any(a>=b for a,b in zip(fractions,fractions[1:])):
+                    raise ValueError('Expected strictly increasing fractions from 0 to 1')
+                names=[p.get('sample') for p in points]
+                if len(set(names))!=len(names) or any(n not in labels for n in names):
+                    raise ValueError('Fraction samples must reference distinct real samples')
+                error=rule.get('max_fraction_error',0.04)
+                if type(error) not in (int,float) or not 0<=error<=0.1:
+                    raise ValueError('max_fraction_error must be within 0..0.1')
+                continue
             keys = (rule.get('a'), rule.get('b')) if rule['type'] in ('different', 'same') else (
                 rule.get('samples', []) if rule['type'] == 'green_increases' else (rule.get('sample'),))
             if any(k not in labels for k in keys):
@@ -153,6 +168,15 @@ def check_case(case, images, outputs):
             else:
                 maximum=rule.get('max_changed_pixels', 0);ok=count<=maximum
                 detail=f'{a}/{b}: {count} changed pixels (need <= {maximum})'
+        elif typ=='changed_area_fraction':
+            points=rule['samples'];base=images[points[0]['sample']]
+            counts=[pixel_change(base,images[p['sample']],rule.get('tolerance',12)) for p in points]
+            total=counts[-1]
+            fractions=[round(n/total,4) for n in counts] if total else []
+            errors=[abs(n/total-p['fraction']) for n,p in zip(counts,points)] if total else []
+            ok=(total>0 and all(a<b for a,b in zip(counts,counts[1:]))
+                and all(e<=rule.get('max_fraction_error',0.04) for e in errors))
+            detail=f'Changed pixels {counts}; observed fractions {fractions}; expected {[p["fraction"] for p in points]}'
         elif typ=='green_increases':
             values=[green_count(images[x]) for x in rule['samples']]
             minimum=rule.get('min_step', 100)
@@ -228,7 +252,7 @@ def main():
                 if errors:findings.append({'assertion':'browser_page_errors','status':'FAIL','detail':'; '.join(errors)})
                 status='PASS' if all(f['status']=='PASS' for f in findings) else 'FAIL'
                 if status!='PASS':failures.append(case['id'])
-                report['cases'].append({'id':case['id'],'pack':case['pack'],'archive_sha256':hashlib.sha256(archive_bytes).hexdigest(),'asset':case.get('asset'),'status':status,'samples':list(samples),'findings':findings})
+                report['cases'].append({'id':case['id'],'pack':case['pack'],'archive_sha256':hashlib.sha256(archive_bytes).hexdigest(),'asset':case.get('asset'),'status':status,'samples':list(samples),'sample_controls':case['samples'],'findings':findings})
                 print(status,case['id'])
                 for f in findings:print('  ',f['status'],f['detail'])
                 page.close()
