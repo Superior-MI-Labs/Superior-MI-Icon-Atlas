@@ -49,7 +49,8 @@ def check(page,published_only=False):
     page.locator('#perspective').select_option('isometric')
     expect(page.locator('#count')).to_have_text('4 matches')
     # Verify gallery-only browsing on a fresh page, including actual network requests.
-    preview_page=page.context.new_page()
+    preview_context=page.context.browser.new_context(viewport=page.viewport_size)
+    preview_page=preview_context.new_page()
     requests=[]
     preview_page.on('request',lambda req:requests.append(req.url))
     try:
@@ -65,7 +66,7 @@ def check(page,published_only=False):
         preview_page.wait_for_function("document.querySelector('#detail-canvas').width > 0")
         assert any(url.endswith(chest_zip) for url in requests),requests
     finally:
-        preview_page.close()
+        preview_context.close()
     assert 'perspective=isometric' in page.url
     page.reload(wait_until='networkidle')
     expect(page.locator('#count')).to_have_text('4 matches')
