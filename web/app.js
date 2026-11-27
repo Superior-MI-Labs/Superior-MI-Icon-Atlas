@@ -7,8 +7,8 @@
   let entries=[],matches=[],shown=0,current=null,clock=0,playing=true,previous=0;
   let preset=null,chosenState=null,controls={},slotChoices={};
   let activePreview=0,cardObserver,detailRendering=false,lastDetailSignature=null;
-  let synonyms={},styleLabels={};
-  const FACETS=['kind','pack','domain','style','subject','status','review','license','animated','experience','capability','interface'];
+  let synonyms={},styleLabels={},taxonomy={dimensions:{},families:{}},view='discover';
+  const FACETS=['kind','pack','domain','style','subject','status','review','license','animated','experience','capability','interface','category_path','perspective','theme','medium','family'];
   const legacyImageCache=new Map();
   const PAGE=24;
   function contextFor(assets){return {assets,renderer:Renderer.create({getAsset:id=>assets.get(id),getImage:imageFor,slots:Slots,timeline:Timeline,visualCore:VisualCore})};}
@@ -20,10 +20,12 @@
   function filterValues(){return Object.fromEntries(FACETS.map(id=>[id,$(id).value]));}
   function facetLabel(key,value){
     if(key==='pack')return collections.get(value)?.name||value;
+    if(key==='family')return taxonomy.families[value]||human(value);
+    if(taxonomy.dimensions[key]){const values=taxonomy.dimensions[key].values;return key==='category_path'?value.split('.').map((_,i,parts)=>values[parts.slice(0,i+1).join('.')]||human(parts[i])).join(' › '):values[value]||human(value);}
     if(key==='style')return styleLabels[value]?.label||human(value);
     if(key==='animated')return value==='yes'?'Animated':'Static';
     if(key==='status')return value==='archive'?'Legacy archive':'Published';
-    if(key==='review')return value==='reviewed'?'Semantics reviewed':'Needs visual review';
+    if(key==='review')return ({reviewed:'Archive: semantics reviewed',unreviewed:'Archive: review pending','visual-reviewed':'Published: visual QA reviewed','visual-pending':'Published: visual QA pending'})[value]||human(value);
     if(key==='kind')return value==='state_set'?'State variants':human(value);
     if(key==='experience')return value==='playable'?'Playable demos':human(value);
     if(key==='subject')return value.split('.').map(human).join(' › ');
@@ -36,7 +38,8 @@
       const control=$(key),selected=control.value;
       const empty=control.options[0]?.textContent?.replace(/ \\(.*\\)$/,'')||'All';
       control.replaceChildren(new Option(empty,''));
-      for(const {value,count} of counts[key])control.add(new Option(facetLabel(key,value)+' ('+count+')',value));
+      const options=key==='category_path'?[...counts[key]].sort((a,b)=>a.value.localeCompare(b.value)):counts[key];
+      for(const {value,count} of options)control.add(new Option(facetLabel(key,value)+' ('+count+')',value));
       if(selected&&!counts[key].some(item=>item.value===selected))control.add(new Option(facetLabel(key,selected)+' (0)',selected));
       control.value=selected;
     }
@@ -104,14 +107,76 @@
       ctx.fillRect(0,0,canvas.width,canvas.height);ctx.globalCompositeOperation='source-over';
     }
   }
+  function browseURL(nextView,filters={}){
+    const p=new URLSearchParams();if(nextView!=='discover')p.set('view',nextView);
+    for(const [k,v] of Object.entries(filters))if(v)p.set(k,v);
+    return '?'+p.toString();
+  }
+  function setControl(id,value){
+    const el=$(id);if(el.tagName==='SELECT'&&value&&!Array.from(el.options).some(o=>o.value===value))el.add(new Option(facetLabel(id,value),value));
+    el.value=value;
+  }
+  function navigate(nextView,filters={},push=true){
+    view=nextView;
+    $('search').value=filters.query||'';$('scope').value=filters.scope||'';$('sort').value=filters.sort||'recommended';
+    for(const key of FACETS)setControl(key,filters[key]||'');
+    if(push)history.pushState(null,'',browseURL(view,filters));
+    update();
+    if(push)document.querySelector(view==='collections'?'#collection-directory':view==='assets'?'#asset-results':'.browse-hero').scrollIntoView({block:'start'});
+  }
+  function readRoute(){
+    const p=new URLSearchParams(location.search),v=p.get('view');
+    const filters=Object.fromEntries(['query','scope','sort',...FACETS].filter(k=>p.has(k)).map(k=>[k,p.get(k)]));
+    navigate(v==='collections'?'collections':v==='assets'||Object.keys(filters).length?'assets':'discover',filters,false);
+  }
+  function renderView(){
+    $('discovery').hidden=view!=='discover';$('collection-directory').hidden=view!=='collections';
+    document.querySelector('.browse-layout').hidden=view==='collections';
+    document.querySelectorAll('.browse-nav [data-view]').forEach(a=>{if(a.dataset.view===view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  }
+  function directoryLink(label,count,filters){
+    const a=document.createElement('a');a.href=browseURL('assets',filters);a.className='directory-link';
+    const title=document.createElement('strong');title.textContent=label;
+    const meta=document.createElement('span');meta.className='muted';meta.textContent=count.toLocaleString()+' assets';
+    a.append(title,meta);a.onclick=e=>{if(e.button||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();navigate('assets',filters)};
+    return a;
+  }
+  function collectionCard(pack){
+    const node=document.createElement('article');node.className='collection-card';
+    const link=directoryLink(pack.name,pack.listed_count,{pack:pack.id});node.append(link);
+    const meta=document.createElement('p');meta.className='muted';meta.textContent=[pack.published,...(pack.license||[]),pack.visual_qa==='pending'?'Visual review pending':'Visual review completed'].filter(Boolean).join(' · ');node.append(meta);
+    const download=document.createElement('a');download.href=pack.zip;download.download='';download.textContent='Download ZIP';node.append(download);return node;
+  }
+  function renderDirectory(){
+    const counts=VisualAtlasSearch.directory(entries,{});
+    const cats=$('category-directory');cats.replaceChildren();
+    for(const {value,count} of counts.category_path.filter(x=>!x.value.includes('.')))cats.append(directoryLink(facetLabel('category_path',value),count,{category_path:value}));
+    const perspectives=$('perspective-directory');perspectives.replaceChildren();
+    for(const {value,count} of counts.perspective)perspectives.append(directoryLink(facetLabel('perspective',value),count,{perspective:value}));
+    const published=[...collections.values()].filter(p=>p.zip).sort((a,b)=>String(b.published).localeCompare(String(a.published))||a.name.localeCompare(b.name));
+    $('library-totals').textContent=entries.filter(a=>!a.legacy).length.toLocaleString()+' published assets · '+published.length+' collections';
+    const recent=$('recent-collections');recent.replaceChildren(...published.slice(0,6).map(collectionCard));
+    const families=new Map();for(const p of published){const key=p.family||'';if(!families.has(key))families.set(key,[]);families.get(key).push(p)}
+    const directory=$('family-directory');directory.replaceChildren();
+    for(const [key,packs] of families){const section=document.createElement('section'),heading=document.createElement('h4');heading.textContent=taxonomy.families[key]||'Other collections';section.append(heading);const grid=document.createElement('div');grid.className='directory-grid';grid.append(...packs.map(collectionCard));section.append(grid);directory.append(section)}
+  }
+  function renderSubcategories(params){
+    const parent=params.category_path||'',counts=VisualAtlasSearch.facets(entries,{...params,category_path:parent}).category_path;
+    const node=$('category-children');node.replaceChildren();if(!parent)return;
+    const depth=parent.split('.').length+1;
+    for(const {value,count} of counts.filter(x=>x.value.startsWith(parent+'.')&&x.value.split('.').length===depth)){
+      const a=directoryLink(taxonomy.dimensions.category_path.values[value],count,{...filterValues(),query:params.query,scope:params.scope,category_path:value});node.append(a);
+    }
+    if(parent.includes('.')){const up=document.createElement('button');up.type='button';up.textContent='← Parent category';up.onclick=()=>{setControl('category_path',parent.slice(0,parent.lastIndexOf('.')));update()};node.prepend(up)}
+  }
   function update(){
     const query=$('search').value,params={...filterValues(),query,synonyms,scope:$('scope').value,sort:$('sort').value};
-    refreshFacets(params);activeChips();
+    refreshFacets(params);activeChips();renderView();renderSubcategories(params);
     matches=VisualAtlasSearch.results(entries,params);shown=0;$('gallery').replaceChildren();
     $('count').textContent=matches.length.toLocaleString()+' matches';
     const refining=Boolean(query.trim()||params.scope||FACETS.some(key=>params[key]));
-    $('browse-title').textContent=query?'Search results':refining?'Filtered assets':'Explore assets';
-    $('browse-subtitle').textContent=refining?'Results are ranked by matching names, synonyms and manifest metadata.':'Finished compositions and standalone art. Switch Browse to inspect reusable components.';
+    $('browse-title').textContent=query?'Search results':params.category_path?facetLabel('category_path',params.category_path):params.pack?facetLabel('pack',params.pack):refining?'Filtered assets':'Explore assets';
+    $('browse-subtitle').textContent=refining?'Refine by perspective, theme, style, format and capabilities.':'Recommended assets. Browse categories or collections above to discover more.';
     if(!matches.length){$('gallery').textContent='No matching assets. Remove a filter or try another keyword.';$('more').hidden=true;return;}
     more();
   }
@@ -308,12 +373,12 @@
   async function init(){
     const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Public catalog unavailable');const index=await response.json();if(index.schema!=='smi-public-catalog/1')throw Error('Unsupported public catalog');
     entries=index.assets;if(!Array.isArray(entries)||!entries.length)throw Error('No assets in catalog');for(const pack of index.packs)collections.set(pack.id,pack);
-    synonyms=index.synonyms||{};styleLabels=index.styles||{};
+    synonyms=index.synonyms||{};styleLabels=index.styles||{};taxonomy=index.browse||taxonomy;
+    renderDirectory();
     for(const pack of index.packs.filter(p=>p.zip)){
       const group=document.createElement('div'),browse=document.createElement('button'),download=document.createElement('a');
       browse.type='button';browse.textContent=pack.name; browse.onclick=()=>{
-        $('search').value='';$('scope').value='';for(const key of FACETS)$(key).value='';
-        update();$('pack').value=pack.id;update();$('pack-directory').open=false;
+        navigate('assets',{pack:pack.id});$('pack-directory').open=false;
       };
       download.href=pack.zip;download.download='';download.textContent='Download ZIP';group.append(browse,download);$('pack-links').append(group);
     }
@@ -321,7 +386,7 @@
     $('count').title=`${index.discoverable_count??index.approved_count} standalone listings; ${index.approved_count||0} addressable published assets; ${index.legacy_count||0} legacy icons`;
 
     cardObserver=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){cardObserver.unobserve(e.target);const a=entries.find(x=>x.id===e.target.dataset.assetId);if(a)paint(e.target.querySelector('canvas'),a,0,{card:true}).catch(()=>{e.target.querySelector('.art').textContent='Preview unavailable'});}}, {rootMargin:'260px'});
-    update();
+    readRoute();
     const requested=new URLSearchParams(location.search).get('asset')||new URLSearchParams(location.search).get('icon');
     const found=requested&&entries.find(a=>a.id===requested);
     if(found)openDetail(found);
@@ -330,8 +395,10 @@
   previewCanvas.addEventListener('pointerdown',e=>{try{if(directPointer(e,false)){e.preventDefault();detailPointer=e.pointerId;previewCanvas.setPointerCapture(e.pointerId);}}catch(err){notify(err.message)}});
   previewCanvas.addEventListener('pointermove',e=>{if(detailPointer!==e.pointerId)return;try{directPointer(e,true)}catch(err){notify(err.message)}});
   for(const event of ['pointerup','pointercancel','lostpointercapture'])previewCanvas.addEventListener(event,e=>{if(detailPointer===e.pointerId)detailPointer=null;});
-  $('more').onclick=more;for(const id of ['search','sort','scope',...FACETS])$(id).addEventListener('input',update);
-  $('clear-filters').onclick=()=>{$('search').value='';$('scope').value='';for(const id of FACETS)$(id).value='';update()};
+  $('more').onclick=more;for(const id of ['search','sort','scope',...FACETS])$(id).addEventListener('input',()=>{view='assets';update()});
+  document.querySelectorAll('[data-view]').forEach(a=>a.addEventListener('click',e=>{if(e.button||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();navigate(a.dataset.view)}));
+  window.addEventListener('popstate',()=>{if(entries.length)readRoute()});
+  $('clear-filters').onclick=()=>navigate('discover',{},false);
   $('copy-id').onclick=()=>{if(current)navigator.clipboard.writeText(current.id).then(()=>notify('Asset ID copied')).catch(()=>notify('Clipboard unavailable'))};
   $('copy-link').onclick=()=>{if(current){const url=new URL(location.href);url.searchParams.set('asset',current.id);navigator.clipboard.writeText(url.href).then(()=>notify('Asset link copied')).catch(()=>notify('Clipboard unavailable'))}};
   $('close').onclick=()=>$('detail').close();$('detail').addEventListener('close',()=>{

@@ -3,7 +3,7 @@
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;root.VisualAtlasSearch=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
   const clean=value=>String(value??'').normalize('NFKD').toLowerCase().replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
   const tokens=value=>clean(value).split(/\s+/).filter(Boolean);
-  const FILTERS=['kind','pack','domain','style','subject','review','status','license','animated','experience','capability','interface'];
+  const FILTERS=['kind','pack','domain','style','subject','review','status','license','animated','experience','capability','interface','category_path','perspective','theme','medium','family'];
   const synonymCache=new WeakMap();
   function thesaurus(groups={}){
     if(synonymCache.has(groups))return synonymCache.get(groups);
@@ -31,7 +31,7 @@
     const fields=[
       [asset.name,85],[asset.id,75],[asset.aliases,70],[asset.tags,45],[asset.description,25],
       [asset.subjects,35],[asset.concept_id,35],[asset.domain,12],
-      [asset.style,10],[asset.category,9],[asset.variant,7],[asset.capabilities,12],[asset.interfaces,12],[asset.slot_interfaces,12]
+      [asset.style,10],[asset.category_path,22],[asset.perspective,18],[asset.theme,15],[asset.medium,10],[asset.family,16],[asset.category,9],[asset.variant,7],[asset.capabilities,12],[asset.interfaces,12],[asset.slot_interfaces,12]
     ];
     let total=0;
     for(const term of terms){
@@ -52,7 +52,7 @@
   const property=(a,key)=>key==='capability'?a.capabilities||[]:
     key==='interface'?[...new Set([...(a.interfaces||[]),...(a.slot_interfaces||[])])]:
     key==='subject'?a.subjects||[]:
-    key==='review'?a.review_status||'':
+    key==='review'?(a.legacy?a.review_status||'':a.visual_qa?'visual-'+a.visual_qa:''):
     key==='status'?(a.legacy?'archive':'published'):
     key==='animated'?(a.animated?'yes':'no'):
     key==='experience'?(a.showcases?.length?'playable':''):
@@ -102,5 +102,9 @@
     }
     return counts;
   }
-  return Object.freeze({tokens,score,rank,results,facets});
+  // Directory counts use the same visible/matches contract as the gallery.
+  function directory(entries,params={}){
+    return facets(entries.filter(a=>!a.legacy),params);
+  }
+  return Object.freeze({tokens,score,rank,results,facets,directory});
 });

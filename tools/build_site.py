@@ -13,6 +13,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from atlasctl import load,validate
 from tools.sprite_grids import build_sprite_grids
+from tools.browse_taxonomy import load_taxonomy, project_browse
 from tools.asset_inventory import audit as audit_assets, source_collections, read_collection, archive_payload
 
 
@@ -211,7 +212,7 @@ for(const texture of Object.values(pack.textures)){
     inventory=audit_assets(ROOT)
     if inventory['errors']:raise ValueError('Asset inventory: '+'; '.join(inventory['errors'][:5]))
     (dest/'asset-inventory.json').write_text(json.dumps(inventory,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    public_assets=[];public_packs=[];seen_ids=set();seen_paths=set()
+    public_assets=[];public_packs=[];seen_ids=set();seen_paths=set();browse_defaults={}
     for record in publication['collections']:
         folder=Path(record['path']); full=ROOT/folder
         if folder.is_absolute() or '..' in folder.parts or folder in seen_paths or not str(folder).startswith('examples/'):
@@ -227,6 +228,7 @@ for(const texture of Object.values(pack.textures)){
         if not isinstance(expected,int) or isinstance(expected,bool) or expected<1 or expected!=actual:
             raise ValueError(f'{folder}: publication inventory mismatch; expected {expected}, actual {actual}')
         pack_name=folder.name
+        browse_defaults[pack_name]=index.get('classification',{})
         # Use the same generated ZIP as the existing builder importer.
         zip_name=pack_name+'.zip'
         if not (dest/'demo'/zip_name).is_file():raise ValueError('Missing published runtime ZIP: '+zip_name)
@@ -258,6 +260,7 @@ for(const texture of Object.values(pack.textures)){
                     'slot_interfaces':sorted({v['accepts'] for v in a.get('slots',{}).values()}),
                     'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
                     'kind':a['kind'],'discovery':a.get('discovery','standalone'),'style':a.get('style') or inherited_style,
+                    **({'classification':a['classification']} if 'classification' in a else {}),
                     'tags':a.get('tags',[]),'subjects':a.get('subjects',[]),
                     'aliases':[*a.get('aliases',[]),*keywords.get(ident,[])],'concept_id':a.get('concept_id'),
                     'showcases':showcases.get(ident,[]),
@@ -293,9 +296,10 @@ for(const texture of Object.values(pack.textures)){
             'texture':icon['sheet'],'rect_px':[r['x'],r['y'],r['w'],r['h']]
         })
 
+    browse=project_browse(public_assets,public_packs,browse_defaults,load_taxonomy())
     public_assets.sort(key=lambda a:(a['pack'],a['id']))
     (dest/'public-catalog.json').write_text(json.dumps({'schema':'smi-public-catalog/1',
-        'assets':public_assets,'packs':public_packs,
+        'assets':public_assets,'packs':public_packs,'browse':browse,
         'synonyms':m.get('search',{}).get('synonyms',{}),'styles':m.get('styles',{}),
         'approved_count':approved_count,'discoverable_count':sum(not a.get('legacy') and a.get('discovery','standalone')=='standalone' for a in public_assets),'legacy_count':len(m['icons'])},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 

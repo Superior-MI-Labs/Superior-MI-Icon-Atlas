@@ -12,11 +12,19 @@
 <div class="headright"><a href="builder.html">Builder / My Bag</a><a href="sky-motion-lab.html" title="Experimental motion sequences">Motion Lab</a><a href="sky-prototype.html" title="Experimental animation and HUD demo">Sky Prototype</a><a href="ai-guide.html">Create with AI</a><a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas" target="_blank" rel="noopener noreferrer">GitHub</a></div></header>
 <main class="browse-main">
 <section class="browse-hero"><p class="eyebrow">GAME ASSETS & REUSABLE VISUALS</p><h2>Find the asset your project needs.</h2>
-<p>Browse approved game assets and the original icon archive. Finished compositions appear first; historical icons are searchable and clearly marked for review.</p></section>
-<section class="browse-tools" aria-label="Browse filters"><label class="searchbox"><span class="sr-only">Search published assets</span><input id="search" type="search" placeholder="Search sliders, health bars, mana, hearts..." autocomplete="off" autofocus></label>
+<p>Explore visual artwork, from 2D and isometric game assets to interfaces, icons and motion. Search everything or browse by category, perspective or collection.</p></section>
+<nav class="browse-nav" aria-label="Library views"><a href="?" data-view="discover">Discover</a><a href="?view=assets" data-view="assets">Assets</a><a href="?view=collections" data-view="collections">Collections</a></nav>
+<section id="discovery" class="discovery" aria-label="Discover the library">
+<div class="directory-heading"><h3>Browse by category</h3><span id="library-totals" class="muted"></span></div>
+<div id="category-directory" class="directory-grid"></div>
+<div class="directory-heading"><h3>Browse by perspective</h3></div><div id="perspective-directory" class="directory-chips"></div>
+<div class="directory-heading"><h3>Recently released collections</h3><a href="?view=collections" data-view="collections">All collections</a></div><div id="recent-collections" class="directory-grid"></div>
+</section>
+<section id="collection-directory" class="discovery" aria-label="Collection directory" hidden><div class="directory-heading"><h3>Published collections</h3><a href="?view=assets" data-view="assets">Browse all assets</a></div><div id="family-directory"></div></section>
+<section class="browse-tools" aria-label="Browse filters"><label class="searchbox"><span class="sr-only">Search published assets</span><input id="search" type="search" placeholder="Search assets, styles, themes and collections..." autocomplete="off"></label>
 <label><span class="sr-only">Asset type</span><select id="kind"><option value="">All asset types</option></select></label>
 <label><span class="sr-only">Collection</span><select id="pack"><option value="">All collections</option></select></label>
-<label><span class="sr-only">Sort</span><select id="sort"><option value="recommended">Featured and recent</option><option value="newest">Newest</option><option value="name">Name A–Z</option></select></label></section>
+<label><span class="sr-only">Sort</span><select id="sort"><option value="recommended">Recommended</option><option value="newest">Newest</option><option value="name">Name A–Z</option></select></label></section>
 <section class="browse-tools" aria-label="Discovery and collections">
 <label>Browse <select id="scope"><option value="">Ready-to-use &amp; standalone</option><option value="components">Reusable components</option><option value="all">All listed assets</option></select></label>
 <details id="pack-directory"><summary>Browse downloadable asset packs</summary><div id="pack-links" class="detail-showcases"></div></details>
@@ -25,7 +33,13 @@
 <aside class="browse-facets" aria-label="Refine results">
 <div class="facets-head"><h3><span aria-hidden="true">☷</span> Refine results</h3><button type="button" id="clear-filters" class="text-action">Clear all</button></div>
 <div class="facet-fields">
-<label>Category <select id="domain"><option value="">All categories</option></select></label>
+<label>Category <select id="category_path"><option value="">All categories</option></select></label>
+<nav id="category-children" class="directory-chips" aria-label="Subcategories"></nav>
+<label>Perspective <select id="perspective"><option value="">All perspectives</option></select></label>
+<label>Theme <select id="theme"><option value="">All themes</option></select></label>
+<label>Medium <select id="medium"><option value="">All media</option></select></label>
+<label>Collection family <select id="family"><option value="">All families</option></select></label>
+<label>Source domain <select id="domain"><option value="">All domains</option></select></label>
 <label>Visual style <select id="style"><option value="">All styles</option></select></label>
 <label>Subject <select id="subject"><option value="">All subjects</option></select></label>
 <label>Publication <select id="status"><option value="">Published & archive</option></select></label>
@@ -36,8 +50,8 @@
 <label>Capability <select id="capability"><option value="">All capabilities</option></select></label>
 <label>Slot interface <select id="interface"><option value="">All interfaces</option></select></label>
 </div><p class="facet-footnote">Filters reflect metadata in the actual asset manifests. Legacy icons are preserved for review.</p></aside>
-<section class="browse-results" aria-label="Asset results">
-<div class="browse-summary"><div><h3 id="browse-title">Recently published</h3><p id="browse-subtitle" class="muted">Ready-to-use compositions appear first. Legacy icon candidates remain searchable.</p></div><span id="count" role="status" aria-live="polite">Loading assets…</span></div>
+<section class="browse-results" id="asset-results" aria-label="Asset results">
+<div class="browse-summary"><div><h3 id="browse-title">Explore assets</h3><p id="browse-subtitle" class="muted">Ready-to-use compositions appear first. Legacy icon candidates remain searchable.</p></div><span id="count" role="status" aria-live="polite">Loading assets…</span></div>
 <div id="active-filters" class="active-filters" aria-label="Active filters"></div><section id="gallery" class="asset-grid" aria-label="Published visual assets"></section>
 <div class="loadmore"><button type="button" id="more" hidden>Load more</button></div>
 <p id="browse-error" class="browse-error" role="alert" hidden></p></section></div>
