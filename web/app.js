@@ -4,6 +4,7 @@
   const $=id=>document.getElementById(id);
   const {VisualAtlasRenderer:Renderer,VisualAtlasSlots:Slots,VisualAtlasTimeline:Timeline,VisualAtlasVisualCore:VisualCore,VisualAtlasInteraction:Interactions,VisualAtlasInputs:Inputs,VisualAtlasCollections:Collections}=window;
   const legacyAssets=new Map(),collections=new Map(),pending=new Map(),loaded=new Map();
+  const entryById=new Map();
   let entries=[],matches=[],shown=0,current=null,clock=0,playing=true,previous=0;
   let preset=null,chosenState=null,controls={},slotChoices={};
   let activePreview=0,cardObserver,detailRendering=false,lastDetailSignature=null;
@@ -43,6 +44,7 @@
       if(selected&&!counts[key].some(item=>item.value===selected))control.add(new Option(facetLabel(key,selected)+' (0)',selected));
       control.value=selected;
     }
+    return counts;
   }
   function activeChips(){
     const box=$('active-filters');box.replaceChildren();
@@ -148,16 +150,20 @@
     a.append(title,meta);a.onclick=e=>{if(e.button||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();navigate('assets',filters)};
     return a;
   }
+  function addCover(node,entry){
+    if(!entry?.thumbnail)return;
+    const img=document.createElement('img');img.src=entry.thumbnail;img.alt='';img.loading='lazy';img.decoding='async';img.className='directory-cover checker';img.onerror=()=>img.remove();node.prepend(img);
+  }
   function collectionCard(pack){
     const node=document.createElement('article');node.className='collection-card';
-    const link=directoryLink(pack.name,pack.listed_count,{pack:pack.id});node.append(link);
+    const link=directoryLink(pack.name,pack.listed_count,{pack:pack.id});addCover(link,entryById.get(pack.cover_asset));node.append(link);
     const meta=document.createElement('p');meta.className='muted';meta.textContent=[pack.published,...(pack.license||[]),pack.visual_qa==='pending'?'Visual review pending':'Visual review completed'].filter(Boolean).join(' · ');node.append(meta);
     const download=document.createElement('a');download.href=pack.zip;download.download='';download.textContent='Download ZIP';node.append(download);return node;
   }
   function renderDirectory(){
     const counts=VisualAtlasSearch.directory(entries,{});
     const cats=$('category-directory');cats.replaceChildren();
-    for(const {value,count} of counts.category_path.filter(x=>!x.value.includes('.')))cats.append(directoryLink(facetLabel('category_path',value),count,{category_path:value,status:'published'}));
+    for(const {value,count} of counts.category_path.filter(x=>!x.value.includes('.'))){const link=directoryLink(facetLabel('category_path',value),count,{category_path:value,status:'published'});addCover(link,entries.find(a=>!a.legacy&&a.thumbnail&&a.discovery==='standalone'&&a.category_path?.includes(value)));cats.append(link)}
     const perspectives=$('perspective-directory');perspectives.replaceChildren();
     for(const {value,count} of counts.perspective)perspectives.append(directoryLink(facetLabel('perspective',value),count,{perspective:value,status:'published'}));
     const media=$('medium-directory');media.replaceChildren();
@@ -170,8 +176,8 @@
     const directory=$('family-directory');directory.replaceChildren();
     for(const [key,packs] of families){const section=document.createElement('section'),heading=document.createElement('h4');heading.textContent=taxonomy.families[key]||'Other collections';section.append(heading);const grid=document.createElement('div');grid.className='directory-grid';grid.append(...packs.map(collectionCard));section.append(grid);directory.append(section)}
   }
-  function renderSubcategories(params){
-    const parent=params.category_path||'',counts=VisualAtlasSearch.facets(entries,{...params,category_path:parent}).category_path;
+  function renderSubcategories(params,counts){
+    const parent=params.category_path||'';
     const node=$('category-children');node.replaceChildren();if(!parent)return;
     const depth=parent.split('.').length+1;
     for(const {value,count} of counts.filter(x=>x.value.startsWith(parent+'.')&&x.value.split('.').length===depth)){
@@ -181,14 +187,24 @@
   }
   function update(){
     const query=$('search').value,params={...filterValues(),query,synonyms,scope:$('scope').value,sort:$('sort').value};
-    refreshFacets(params);activeChips();renderView();renderSubcategories(params);syncRoute(params);
-    matches=VisualAtlasSearch.results(entries,params);shown=0;$('gallery').replaceChildren();
+    const counts=refreshFacets(params);activeChips();renderView();renderSubcategories(params,counts.category_path);syncRoute(params);
+    matches=VisualAtlasSearch.results(entries,params);shown=0;if(cardObserver)for(const node of $('gallery').querySelectorAll('.asset-tile'))cardObserver.unobserve(node);$('gallery').replaceChildren();
     $('count').textContent=matches.length.toLocaleString()+' matches';
     const refining=Boolean(query.trim()||params.scope||FACETS.some(key=>params[key]));
     $('browse-title').textContent=query?'Search results':params.category_path?facetLabel('category_path',params.category_path):params.pack?facetLabel('pack',params.pack):refining?'Filtered assets':'Explore assets';
     $('browse-subtitle').textContent=refining?'Refine by perspective, theme, style, format and capabilities.':'Recommended assets. Browse categories or collections above to discover more.';
     if(!matches.length){$('gallery').textContent='No matching assets. Remove a filter or try another keyword.';$('more').hidden=true;return;}
     more();
+  }
+  async function paintCard(canvas,entry){
+    if(entry.thumbnail){
+      try{
+        const img=new Image();img.src=entry.thumbnail;await img.decode();
+        canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;
+        canvas.getContext('2d').drawImage(img,0,0);canvas.dataset.preview='thumbnail';return;
+      }catch(_err){/* A missing cached preview must not break asset browsing. */}
+    }
+    await paint(canvas,entry,0,{card:true});canvas.dataset.preview='renderer';
   }
   function card(a){
     const node=document.createElement('button');node.type='button';node.className='asset-tile';node.dataset.assetId=a.id;
@@ -205,7 +221,7 @@
     meta.append(label,source);body.append(kind,name,meta);node.append(art,body);
     node.onclick=()=>openDetail(a);
     if(cardObserver)cardObserver.observe(node);
-    else paint(canvas,a,0,{card:true}).catch(()=>art.textContent='Preview unavailable');
+    else paintCard(canvas,a).catch(()=>art.textContent='Preview unavailable');
     if(!demos.length)return node;
     // Sibling links avoid interactive elements nested inside a button.
     const wrapper=document.createElement('div');wrapper.className='showcase-card';wrapper.append(node);
@@ -382,7 +398,7 @@
   }
   async function init(){
     const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Public catalog unavailable');const index=await response.json();if(index.schema!=='smi-public-catalog/1')throw Error('Unsupported public catalog');
-    entries=index.assets;if(!Array.isArray(entries)||!entries.length)throw Error('No assets in catalog');for(const pack of index.packs)collections.set(pack.id,pack);
+    entries=index.assets;if(!Array.isArray(entries)||!entries.length)throw Error('No assets in catalog');for(const entry of entries)entryById.set(entry.id,entry);for(const pack of index.packs)collections.set(pack.id,pack);
     synonyms=index.synonyms||{};styleLabels=index.styles||{};taxonomy=index.browse||taxonomy;
     renderDirectory();
     for(const pack of index.packs.filter(p=>p.zip)){
@@ -395,7 +411,7 @@
     for(const a of entries.filter(a=>a.legacy))legacyAssets.set(a.id,{...a,texture:'legacy-icons::'+a.texture});
     $('count').title=`${index.discoverable_count??index.approved_count} standalone listings; ${index.approved_count||0} addressable published assets; ${index.legacy_count||0} legacy icons`;
 
-    cardObserver=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){cardObserver.unobserve(e.target);const a=entries.find(x=>x.id===e.target.dataset.assetId);if(a)paint(e.target.querySelector('canvas'),a,0,{card:true}).catch(()=>{e.target.querySelector('.art').textContent='Preview unavailable'});}}, {rootMargin:'260px'});
+    cardObserver=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){cardObserver.unobserve(e.target);const a=entryById.get(e.target.dataset.assetId);if(a)paintCard(e.target.querySelector('canvas'),a).catch(()=>{e.target.querySelector('.art').textContent='Preview unavailable'});}}, {rootMargin:'260px'});
     readRoute();
     const requested=new URLSearchParams(location.search).get('asset')||new URLSearchParams(location.search).get('icon');
     const found=requested&&entries.find(a=>a.id===requested);

@@ -117,3 +117,5 @@
 #category-children{grid-column:1/-1}
 #category-children:empty{display:none}
 @media(max-width:520px){.discovery{padding:12px}.directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.directory-link{padding:9px}.directory-heading{align-items:start}}
+
+.directory-cover{display:block;width:100%;height:100px;object-fit:contain;border-radius:5px;margin-bottom:5px}

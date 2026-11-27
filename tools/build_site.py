@@ -14,6 +14,7 @@ sys.path.insert(0,str(ROOT))
 from atlasctl import load,validate
 from tools.sprite_grids import build_sprite_grids
 from tools.browse_taxonomy import load_taxonomy, project_browse
+from tools.browse_previews import build_region_previews
 from tools.asset_inventory import audit as audit_assets, source_collections, read_collection, archive_payload
 
 
@@ -213,6 +214,7 @@ for(const texture of Object.values(pack.textures)){
     if inventory['errors']:raise ValueError('Asset inventory: '+'; '.join(inventory['errors'][:5]))
     (dest/'asset-inventory.json').write_text(json.dumps(inventory,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     public_assets=[];public_packs=[];seen_ids=set();seen_paths=set();browse_defaults={}
+    if (dest/'previews').exists():shutil.rmtree(dest/'previews')
     for record in publication['collections']:
         folder=Path(record['path']); full=ROOT/folder
         if folder.is_absolute() or '..' in folder.parts or folder in seen_paths or not str(folder).startswith('examples/'):
@@ -243,6 +245,11 @@ for(const texture of Object.values(pack.textures)){
         with ZipFile(dest/'demo'/zip_name) as archive:
             runtime_index=json.loads(archive.read('collection.json'))
             runtime_packs=[json.loads(archive.read(ref['manifest'])) for ref in runtime_index['packs']]
+            authored_ids={a['id'] for pack in manifests for a in pack['assets']}
+            thumbnails=build_region_previews(archive,runtime_index,runtime_packs,authored_ids,dest)
+        cover=next((a['id'] for pack in manifests for a in pack['assets'] if a['id'] in thumbnails and a.get('discovery','standalone')=='standalone'),None)
+        if index['entry_asset'] in thumbnails:cover=index['entry_asset']
+        if cover:pubpack['cover_asset']=cover
         lookup={a['id']:a for pack in runtime_packs for a in pack['assets']};cap_memo={}
         for pack in manifests:
             # Inherit style only when every styled source region agrees.
@@ -259,6 +266,7 @@ for(const texture of Object.values(pack.textures)){
                     **({'spatial':a['spatial']} if 'spatial' in a else {}),
                     'slot_interfaces':sorted({v['accepts'] for v in a.get('slots',{}).values()}),
                     'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
+                    **({'thumbnail':thumbnails[ident]} if ident in thumbnails else {}),
                     'kind':a['kind'],'discovery':a.get('discovery','standalone'),'style':a.get('style') or inherited_style,
                     **({'classification':a['classification']} if 'classification' in a else {}),
                     'tags':a.get('tags',[]),'subjects':a.get('subjects',[]),

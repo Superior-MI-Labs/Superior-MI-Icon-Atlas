@@ -42,6 +42,16 @@ def check(page,published_only=False):
     expect(page.locator('#count')).to_have_text('4 matches')
     page.locator('#perspective').select_option('isometric')
     expect(page.locator('#count')).to_have_text('4 matches')
+    # A fresh category page must not load its collection ZIP just to display art.
+    with page.expect_request(lambda req: '/previews/' in req.url):
+        page.reload(wait_until='networkidle')
+    card=page.locator('#gallery .asset-tile').first
+    card.scroll_into_view_if_needed()
+    expect(card.locator('canvas')).to_have_attribute('data-preview','thumbnail')
+    with page.expect_request(lambda req: req.url.endswith('/demo/fantasy-recovered-chests-20261125.zip')):
+        card.click()
+    expect(page.locator('#detail[open]')).to_be_visible()
+    page.locator('#close').click()
     assert 'perspective=isometric' in page.url
     page.reload(wait_until='networkidle')
     expect(page.locator('#count')).to_have_text('4 matches')

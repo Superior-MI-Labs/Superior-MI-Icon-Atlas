@@ -30,6 +30,14 @@ def prune(site:Path):
     for path in needed:
         if not (site/path).is_file():raise ValueError('Missing legacy icon sheet: '+path)
 
+    previews={a['thumbnail'] for a in catalog['assets'] if a.get('thumbnail')}
+    for path in previews:
+        if not re.fullmatch(r'previews/[a-f0-9]{64}\.png',path) or not (site/path).is_file():
+            raise ValueError('Missing/invalid derived preview: '+path)
+    if (site/'previews').is_dir():
+        for file in (site/'previews').iterdir():
+            if file.is_file() and file.relative_to(site).as_posix() not in previews:file.unlink()
+
     demo=site/'demo'
     for f in demo.glob('*.zip'):
         if f.name not in allowed:f.unlink()
