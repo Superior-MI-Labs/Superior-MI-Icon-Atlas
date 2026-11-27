@@ -135,7 +135,7 @@
  function variantOptions(asset,candidates){
   if(!asset?.concept_id||!asset.variant)return [];
   const matches=[asset,...candidates].filter(a=>a.concept_id===asset.concept_id&&a.variant&&a.kind===asset.kind&&a.discovery!=='hidden');
-  const secondary=new Set(matches.flatMap(spatialRefs));
+  const secondary=new Set([asset,...candidates].flatMap(spatialRefs));
   const unique=[...new Map(matches.filter(a=>!secondary.has(a.id)).map(a=>[a.id,a])).values()];
   return unique.length>1&&unique.some(a=>a.id===asset.id)?unique.sort((a,b)=>String(a.variant).localeCompare(String(b.variant))||a.id.localeCompare(b.id)):[];
  }

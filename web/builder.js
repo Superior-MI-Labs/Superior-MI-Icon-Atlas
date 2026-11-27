@@ -326,14 +326,14 @@
     const a=library.get(ui.selected),controls=$('input-controls');controls.replaceChildren();
     $('preview-name').textContent=ui.isScene?'Composition':a?metaName(a):'Select an asset';
     updateDriveAvailability();
-    $('stage').dataset.interactive=String(!ui.isScene&&Interactions.canPoint(a));
+    $('stage').dataset.interactive=String(!ui.isScene&&$('stage').dataset.viewId===previewId()&&Interactions.canPoint(library.get(previewId())));
     $('preview-details').textContent=a?'ID: '+a.id+' · '+a.kind+' · License: '+(a.license||'unspecified'): 'Select any asset in the list';
     if(!a||ui.isScene){$('stat-panel').hidden=true;return;}
     const bag=bags.get(a.ownerBag),siblings=bag?bag.assetIds.map(id=>library.get(id)).filter(Boolean):[...library.values()].filter(x=>x.source===a.source);
     const views=Slots.viewOptions(a);
     if(views.length){
-      const label=document.createElement('label');label.textContent='Viewing angle';
-      const select=document.createElement('select');select.dataset.viewIndex='';
+      const label=document.createElement('div');label.className='view-field';const title=document.createElement('span');title.textContent='Viewing angle';label.append(title);
+      const select=document.createElement('select');select.dataset.viewIndex='';select.setAttribute('aria-label','Viewing angle');
       for(const v of views)select.add(new Option((v.index===0?'Front · ':v.yaw===180?'Back · ':'')+v.yaw+'°',String(v.index)));
       select.value=String(ui.viewIndex);
       select.onchange=()=>{ui.viewIndex=Number(select.value);$('stage').dataset.interactive='false'};
@@ -567,7 +567,7 @@
   }
   function applyPreviewPointer(e,drag){
     const a=library.get(previewId());
-    if(ui.isScene||!Interactions.canPoint(a)||$('stage').dataset.viewId!==a.id)return false;
+    if(ui.isScene||!a||!Interactions.canPoint(a)||$('stage').dataset.viewId!==a.id)return false;
     const action=Interactions.pointerTarget(a,pointerPoint(e,a),id=>sizeFor(id),drag);
     if(!action)return false;
     const previous={...ui.controls};

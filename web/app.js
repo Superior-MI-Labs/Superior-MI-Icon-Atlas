@@ -315,8 +315,8 @@
   function controlsFor(a){const area=$('controls');area.replaceChildren();
     const views=Slots.viewOptions(a);
     if(views.length){
-      const label=document.createElement('label');label.textContent='Viewing angle';
-      const select=document.createElement('select');select.dataset.viewIndex='';
+      const label=document.createElement('div');label.className='view-field';const title=document.createElement('span');title.textContent='Viewing angle';label.append(title);
+      const select=document.createElement('select');select.dataset.viewIndex='';select.setAttribute('aria-label','Viewing angle');
       for(const v of views)select.add(new Option((v.index===0?'Front · ':v.yaw===180?'Back · ':'')+v.yaw+'°',String(v.index)));
       select.value=String(viewIndex);
       select.onchange=()=>{viewIndex=Number(select.value);activePreview++;lastDetailSignature=null;$('download-png').disabled=true;$('detail-canvas').dataset.interactive='false'};
@@ -392,7 +392,7 @@
   }
   function directPointer(e,drag){
     if(!current)return false;
-    const a=previewFor(current),renderer=context(current.pack)?.renderer;if(!renderer||!Interactions.canPoint(a)||$('detail-canvas').dataset.viewId!==a.id)return false;
+    const a=previewFor(current),renderer=context(current.pack)?.renderer;if(!renderer||!a||!Interactions.canPoint(a)||$('detail-canvas').dataset.viewId!==a.id)return false;
     const canvas=$('detail-canvas'),rect=canvas.getBoundingClientRect();if(!rect.width||!rect.height)return false;
     const geometry=renderer.geometryFor(a.id,new Set(),Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs),preset,slotChoices);
     const point={x:(e.clientX-rect.left)/rect.width*geometry.width+geometry.minX,y:(e.clientY-rect.top)/rect.height*geometry.height+geometry.minY};
