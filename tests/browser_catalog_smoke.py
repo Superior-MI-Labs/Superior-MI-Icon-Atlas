@@ -42,16 +42,24 @@ def check(page,published_only=False):
     expect(page.locator('#count')).to_have_text('4 matches')
     page.locator('#perspective').select_option('isometric')
     expect(page.locator('#count')).to_have_text('4 matches')
-    # A fresh category page must not load its collection ZIP just to display art.
-    with page.expect_request(lambda req: '/previews/' in req.url):
-        page.reload(wait_until='networkidle')
-    card=page.locator('#gallery .asset-tile').first
-    card.scroll_into_view_if_needed()
-    expect(card.locator('canvas')).to_have_attribute('data-preview','thumbnail')
-    with page.expect_request(lambda req: req.url.endswith('/demo/fantasy-recovered-chests-20261125.zip')):
+    # Verify gallery-only browsing on a fresh page, including actual network requests.
+    preview_page=page.context.new_page()
+    requests=[]
+    preview_page.on('request',lambda req:requests.append(req.url))
+    try:
+        preview_page.goto(page.url,wait_until='networkidle')
+        card=preview_page.locator('#gallery .asset-tile').first
+        card.scroll_into_view_if_needed()
+        expect(card.locator('canvas')).to_have_attribute('data-preview','thumbnail')
+        assert any('/previews/' in url for url in requests),requests
+        chest_zip='/demo/fantasy-recovered-chests-20261125.zip'
+        assert not any(url.endswith(chest_zip) for url in requests),requests
         card.click()
-    expect(page.locator('#detail[open]')).to_be_visible()
-    page.locator('#close').click()
+        expect(preview_page.locator('#detail[open]')).to_be_visible()
+        preview_page.wait_for_function("document.querySelector('#detail-canvas').width > 0")
+        assert any(url.endswith(chest_zip) for url in requests),requests
+    finally:
+        preview_page.close()
     assert 'perspective=isometric' in page.url
     page.reload(wait_until='networkidle')
     expect(page.locator('#count')).to_have_text('4 matches')
