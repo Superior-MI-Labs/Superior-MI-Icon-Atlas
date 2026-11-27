@@ -25,10 +25,10 @@
   const scene = { layers: [], selectedLayer:-1 };
   const timeline = { duration:2000, playback:'loop', exportFps:12 };
   const LIMIT_FRAMES=240;
-  const ui = {selected:null, clock:0, playing:true, last:0, speed:1, controls:{}, slots:{}, preset:null, isScene:false};
+  const ui = {selected:null, clock:0, playing:true, last:0, speed:1, controls:{}, slots:{}, preset:null, isScene:false, viewIndex:0};
   let listLimit=110,listKey='',driveActive=false,gamepadHeld={},driveDriver=null;
   let activeStatId=null,statRuntime=null;
-  const selectAsset=id=>{ui.selected=id;ui.isScene=false;ui.controls={};ui.slots={};ui.preset=library.get(id)?.default_preset||null;driveActive=false;gamepadHeld={};driveDriver=null;activeStatId=null;statRuntime=null;};
+  const selectAsset=id=>{ui.selected=id;ui.isScene=false;ui.viewIndex=0;ui.controls={};ui.slots={};ui.preset=library.get(id)?.default_preset||null;driveActive=false;gamepadHeld={};driveDriver=null;activeStatId=null;statRuntime=null;};
   const MAX_BYTES = 120 * 1024 * 1024, MAX_ENTRY = 24 * 1024 * 1024;
   const AI_URL = 'https://superior-mi-labs.github.io/Superior-MI-Icon-Atlas/ai/START-HERE.md';
   const safePath = s => typeof s === 'string' && !!s && !s.startsWith('/') && !s.includes('\\') && !s.split('/').includes('..') && !s.includes(':') && !s.includes('\0');
@@ -39,6 +39,7 @@
   const blobOf = (data,type) => new Blob([data],{type});
   const mime = path => /\.png$/i.test(path)?'image/png':/\.webp$/i.test(path)?'image/webp':/\.gif$/i.test(path)?'image/gif':'image/jpeg';
   const metaName = a => a.name || a.id;
+  const previewId=()=>Slots.viewId(library.get(ui.selected),ui.viewIndex);
   const binarySize = f => f.size ?? f.length ?? f.byteLength ?? 0;
   const keyframeProp = () => $('keyframe-property').value;
 
@@ -325,9 +326,35 @@
     const a=library.get(ui.selected),controls=$('input-controls');controls.replaceChildren();
     $('preview-name').textContent=ui.isScene?'Composition':a?metaName(a):'Select an asset';
     updateDriveAvailability();
-    $('stage').dataset.interactive=String(!ui.isScene&&Interactions.canPoint(a));
+    $('stage').dataset.interactive=String(!ui.isScene&&$('stage').dataset.viewId===previewId()&&Interactions.canPoint(library.get(previewId())));
     $('preview-details').textContent=a?'ID: '+a.id+' · '+a.kind+' · License: '+(a.license||'unspecified'): 'Select any asset in the list';
     if(!a||ui.isScene){$('stat-panel').hidden=true;return;}
+    const bag=bags.get(a.ownerBag),siblings=bag?bag.assetIds.map(id=>library.get(id)).filter(Boolean):[...library.values()].filter(x=>x.source===a.source);
+    const views=Slots.viewOptions(a);
+    if(views.length){
+      const label=document.createElement('div');label.className='view-field';const title=document.createElement('span');title.textContent='Viewing angle';label.append(title);
+      const select=document.createElement('select');select.dataset.viewIndex='';select.setAttribute('aria-label','Viewing angle');
+      for(const v of views)select.add(new Option((v.index===0?'Front · ':v.yaw===180?'Back · ':'')+v.yaw+'°',String(v.index)));
+      select.value=String(ui.viewIndex);
+      select.onchange=()=>{ui.viewIndex=Number(select.value);$('stage').dataset.interactive='false'};
+      const row=document.createElement('div');row.className='view-stepper';
+      for(const [title,delta] of [['Previous view',-1],['Next view',1]]){
+        const button=document.createElement('button');button.type='button';button.textContent=delta<0?'↶':'↷';button.setAttribute('aria-label',title);
+        button.onclick=()=>{select.value=String((ui.viewIndex+delta+views.length)%views.length);select.onchange()};row.append(button);
+        if(delta<0)row.append(select);
+      }
+      const note=document.createElement('span');note.className='muted';note.textContent=views.length+' authored views · '+views[0].elevation+'° elevation';
+      label.append(row,note);controls.append(label);
+    }else if(a.spatial){
+      const note=document.createElement('span');note.className='muted';note.textContent='Single-view artwork · no authored rotation angles';controls.append(note);
+    }
+    const variants=Slots.variantOptions(a,siblings);
+    if(variants.length){
+      const label=document.createElement('label');label.textContent='Asset variant';
+      const select=document.createElement('select');select.dataset.assetVariant='';
+      for(const v of variants)select.add(new Option(v.name||v.variant,v.id));select.value=a.id;
+      select.onchange=()=>{selectAsset(select.value);refreshList();renderControlPanel()};label.append(select);controls.append(label);
+    }
     const statProfile=ensureStatRuntime();
     if(statProfile)bindStatsToPreview(statProfile);
     const presetInputs=Slots.resolve(a,ui.preset).inputs;
@@ -539,8 +566,8 @@
     };
   }
   function applyPreviewPointer(e,drag){
-    const a=library.get(ui.selected);
-    if(ui.isScene||!Interactions.canPoint(a))return false;
+    const a=library.get(previewId());
+    if(ui.isScene||!a||!Interactions.canPoint(a)||$('stage').dataset.viewId!==a.id)return false;
     const action=Interactions.pointerTarget(a,pointerPoint(e,a),id=>sizeFor(id),drag);
     if(!action)return false;
     const previous={...ui.controls};
@@ -651,10 +678,15 @@
         const lw=(l.w||ww)*(l.scale_x??1),lh=(l.h||hh)*(l.scale_y??1);
         if(l.rotation_deg){const cx=px+lw/2,cy=py+lh/2;ctx.translate(cx,cy);ctx.rotate(l.rotation_deg*Math.PI/180);ctx.translate(-cx,-cy);}
         await drawAsset(l.asset,ctx,px,py,lw,lh,time,l.values||{},l.state||null);ctx.restore();}}
-      else if(ui.selected){const [aw,ah]=sizeFor(ui.selected,new Set(),ui.controls,ui.preset,ui.slots),factor=Math.min(cw/aw,ch/ah,3);await drawAsset(ui.selected,ctx,Math.max(0,(cw-aw*factor)/2),Math.max(0,(ch-ah*factor)/2),aw*factor,ah*factor,time,ui.controls,ui.controls._state||null,new Set(),ui.slots,ui.preset);}
+      else if(ui.selected){const id=previewId(),[aw,ah]=sizeFor(id,new Set(),ui.controls,ui.preset,ui.slots),factor=Math.min(cw/aw,ch/ah,3);await drawAsset(id,ctx,Math.max(0,(cw-aw*factor)/2),Math.max(0,(ch-ah*factor)/2),aw*factor,ah*factor,time,ui.controls,ui.controls._state||null,new Set(),ui.slots,ui.preset);}
     }catch(e){setStatus(e.message,true);}finally{ctx.restore();}
   }
-  async function renderFrame(){await renderAt($('stage'),ui.clock,false);}
+  async function renderFrame(){
+    const stage=$('stage'),id=ui.isScene?null:previewId();
+    await renderAt(stage,ui.clock,false);
+    if(id&&id===previewId()&&!ui.isScene){stage.dataset.viewId=id;stage.dataset.interactive=String(Interactions.canPoint(library.get(id)));}
+    else{delete stage.dataset.viewId;stage.dataset.interactive='false';}
+  }
   let rendering=false;
   async function tick(now){
     if(ui.last&&ui.playing)ui.clock+=(now-ui.last)*ui.speed;

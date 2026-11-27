@@ -83,6 +83,8 @@ def check(page,published_only=False):
         expect(preview_page.locator('#detail[open]')).to_be_visible()
         expect(preview_page.locator('#detail-classification')).to_contain_text('Isometric')
         expect(preview_page.locator('#detail-classification')).to_contain_text('Chests')
+        expect(preview_page.locator('#controls')).to_contain_text('Single-view artwork')
+        expect(preview_page.locator('#controls select[data-view-index]')).to_have_count(0)
         expect(preview_page.locator('#download-png')).to_be_enabled(timeout=20000)
         assert any(url.endswith(chest_zip) for url in requests),requests
     finally:
@@ -224,7 +226,7 @@ def check(page,published_only=False):
     page.goto(url+"?asset=smi.ui.fantasy01.widget.slider.gem",wait_until="networkidle")
     page.locator("#detail[open]").wait_for(timeout=20000)
     canvas=page.locator("#detail-canvas")
-    assert canvas.get_attribute("data-interactive")=="true", "Published slider should support direct preview drag"
+    expect(canvas).to_have_attribute("data-interactive","true",timeout=20000)
     box=canvas.bounding_box()
     assert box and box["width"]>0 and box["height"]>0
     y=box["y"]+box["height"]/2
@@ -437,6 +439,66 @@ def check(page,published_only=False):
     return page.locator("#count").inner_text()
 
 
+def check_directional_preview(browser,url):
+    """Synthetic test-only art: six views, two states and two explicit variants."""
+    from io import BytesIO
+    from PIL import Image
+    root="smi.test.directional.root"
+    other="smi.test.directional.variant"
+    ids=[root]+[root+".view"+str(i) for i in range(1,6)]
+    assets=[]
+    image=Image.new("RGBA",(12*16,16))
+    for i,ident in enumerate(ids):
+        states={}
+        for j,state in enumerate(("closed","open")):
+            part=ident+"."+state
+            x=(i*2+j)*16
+            image.paste((30+i*25,40+j*130,180,255),(x,0,x+16,16))
+            assets.append({"id":part,"name":part,"kind":"region","texture":"sheet","rect_px":[x,0,16,16],"discovery":"component"})
+            states[state]=part
+        item={"id":ident,"name":ident,"kind":"state_set","states":states,"default_state":"closed"}
+        if i==0:
+            item.update({"spatial":{"views":{"elevation_deg":35.264,"assets":ids}},"concept_id":"smi.test.directional","variant":"original"})
+        else:
+            item["discovery"]="component"
+        assets.append(item)
+    assets.append({"id":other,"name":"Alternate appearance","kind":"state_set","states":assets[2]["states"],"default_state":"closed","concept_id":"smi.test.directional","variant":"alternate"})
+    png=BytesIO();image.save(png,format="PNG")
+    manifest={"schema":"smi-visual-pack/1","pack_id":"smi.test.directional","version":"1.0.0","license":"CC0-1.0","textures":{"sheet":{"path":"sheet.png","width_px":192,"height_px":16}},"assets":assets}
+    fixture=BytesIO()
+    with ZipFile(fixture,"w") as z:
+        z.writestr("manifest.json",json.dumps(manifest));z.writestr("sheet.png",png.getvalue())
+    context=browser.new_context(viewport={"width":1440,"height":1000})
+    try:
+        page=context.new_page()
+        page.goto(url+"builder.html",wait_until="networkidle")
+        page.locator("#upload").set_input_files({"name":"directional-fixture.zip","mimeType":"application/zip","buffer":fixture.getvalue()})
+        page.locator('#asset-list [data-asset-id="'+root+'"]').click(timeout=20000)
+        angle=page.locator("#input-controls select[data-view-index]")
+        variant=page.locator("#input-controls select[data-asset-variant]")
+        state=page.locator("#input-controls select").filter(has=page.locator('option[value="open"]'))
+        expect(angle).to_have_value("0");expect(angle.locator("option")).to_have_count(6)
+        state.select_option("open");page.locator("#play").click()
+        stage=page.locator("#stage")
+        expect(stage).to_have_attribute("data-view-id",root,timeout=20000)
+        angle.select_option("3")
+        expect(stage).to_have_attribute("data-view-id",ids[3],timeout=20000)
+        expect(state).to_have_value("open");expect(variant).to_have_value(root)
+        expect(page.locator("#play")).to_have_text("Play")
+        with page.expect_download() as download:
+            page.locator("#export").click()
+        with ZipFile(download.value.path()) as z:
+            exported=json.loads(z.read("manifest.json"))
+            assert set(ids).issubset({a["id"] for a in exported["assets"]})
+            assert json.loads(z.read("collection.json"))["entry_asset"]==root
+        variant.select_option(other)
+        expect(page.locator("#preview-name")).to_have_text("Alternate appearance")
+        expect(angle).to_have_count(0)
+        expect(variant).to_have_value(other)
+    finally:
+        context.close()
+
+
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--published-only',action='store_true');args=parser.parse_args()
     assert (SITE / "public-catalog.json").exists(), "Build site before browser smoke"
@@ -451,6 +513,8 @@ def main():
                 page = browser.new_page(viewport={"width": 1440, "height": 1000}, base_url=url)
                 page.goto(url, wait_until="networkidle")
                 print("Desktop:", check(page,args.published_only))
+                check_directional_preview(browser,url)
+                print("Directional preview and root export: PASS")
                 mobile = browser.new_page(viewport={"width": 390, "height": 844}, base_url=url)
                 mobile.goto(url, wait_until="networkidle")
                 expect(mobile.locator("#count")).to_have_text(published_matches(), timeout=20000)
