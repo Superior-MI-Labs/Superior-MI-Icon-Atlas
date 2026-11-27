@@ -125,4 +125,17 @@ assert.ok(!Search.results(data.assets,{...params,query:'health'}).some(a=>a.disc
 assert.ok(Search.results(data.assets,{...params,pack:rim.pack,scope:'components'}).some(a=>a.id===rim.id));
 assert.ok(Search.results(data.assets,{...params,query:'action inventory hud'}).some(a=>a.id==='smi.ui.fantasy01.wave2.widget.action-inventory-hud'));
 assert.ok(!defaults.some(a=>/\.widget\.(hearts|pips)\.[^.]+\.(hp\d+|\d+of\d+)$/.test(a.id)));
+// The combined query must preserve the separate public API for each browse scope.
+for(const filters of [{},{query:'healthbar'},{query:'fire',status:'archive'},
+  {category_path:'world',perspective:'isometric',sort:'name'},
+  {pack:'minimal-white-tech',scope:'components',sort:'newest'},
+  {query:rim.id},{category_path:'world',theme:'sci-fi'},{scope:'all',status:'published'}]){
+  const options={...params,...filters},combined=Search.browse(data.assets,options);
+  assert.deepEqual(combined.results,Search.results(data.assets,options));
+  assert.deepEqual(combined.facets,Search.facets(data.assets,options));
+  for(const key of Object.keys(combined.facets)){
+    const byValue=new Map(combined.facets[key].map(x=>[x.value,x.count]));
+    if(options[key]&&combined.results.length)assert.equal(byValue.get(options[key]),combined.results.length);
+  }
+}
 console.log('Manifest-derived unified catalog, archive search and facets: PASS');

@@ -17,7 +17,7 @@
   const context=pack=>pack==='legacy-icons'?legacyContext:loaded.get(pack);
   const assetFor=entry=>context(entry.pack)?.assets.get(entry.id);
   const notify=message=>{const box=$('notice');box.textContent=message;box.hidden=false;clearTimeout(notify.timer);notify.timer=setTimeout(()=>box.hidden=true,3200);};
-  const human=value=>String(value).replace(/[._-]+/g,' ').replace(/\\b\\w/g,m=>m.toUpperCase());
+  const human=value=>String(value).replace(/[._-]+/g,' ').replace(/\b\w/g,m=>m.toUpperCase());
   function filterValues(){return Object.fromEntries(FACETS.map(id=>[id,$(id).value]));}
   function facetLabel(key,value){
     if(key==='pack')return collections.get(value)?.name||value;
@@ -33,11 +33,10 @@
     if(key==='interface')return value;
     return human(value);
   }
-  function refreshFacets(params){
-    const counts=VisualAtlasSearch.facets(entries,params);
+  function refreshFacets(counts){
     for(const key of FACETS){
       const control=$(key),selected=control.value;
-      const empty=control.options[0]?.textContent?.replace(/ \\(.*\\)$/,'')||'All';
+      const empty=control.options[0]?.textContent?.replace(/ \(.*\)$/,'')||'All';
       control.replaceChildren(new Option(empty,''));
       const options=key==='category_path'?[...counts[key]].sort((a,b)=>a.value.localeCompare(b.value)):counts[key];
       for(const {value,count} of options)control.add(new Option(facetLabel(key,value)+' ('+count+')',value));
@@ -184,7 +183,7 @@
     for(const {value,count} of counts.medium)media.append(directoryLink(facetLabel('medium',value),count,{medium:value,status:'published'}));
     const archive=$('archive-directory');archive.replaceChildren(directoryLink('Legacy icon archive — rights review required',entries.filter(a=>a.legacy).length,{status:'archive'}));
     const published=[...collections.values()].filter(p=>p.zip).sort((a,b)=>String(b.published).localeCompare(String(a.published))||a.name.localeCompare(b.name));
-    $('library-totals').textContent=entries.filter(a=>!a.legacy).length.toLocaleString()+' published assets · '+published.length+' collections';
+    $('library-totals').textContent=(counts.status.find(x=>x.value==='published')?.count||0).toLocaleString()+' standalone assets · '+published.length+' collections';
     const recent=$('recent-collections');recent.replaceChildren(...published.slice(0,6).map(collectionCard));
     const families=new Map();for(const p of published){const key=p.family||'';if(!families.has(key))families.set(key,[]);families.get(key).push(p)}
     const directory=$('family-directory');directory.replaceChildren();
@@ -195,15 +194,16 @@
     const node=$('category-children');node.replaceChildren();if(!parent)return;
     const depth=parent.split('.').length+1;
     for(const {value,count} of counts.filter(x=>x.value.startsWith(parent+'.')&&x.value.split('.').length===depth)){
-      const a=directoryLink(taxonomy.dimensions.category_path.values[value],count,{...filterValues(),query:params.query,scope:params.scope,category_path:value});node.append(a);
+      const a=directoryLink(taxonomy.dimensions.category_path.values[value],count,{...filterValues(),query:params.query,scope:params.scope,sort:params.sort,category_path:value});node.append(a);
     }
     if(parent.includes('.')){const up=document.createElement('button');up.type='button';up.textContent='← Parent category';up.onclick=()=>{setControl('category_path',parent.slice(0,parent.lastIndexOf('.')));update()};node.prepend(up)}
   }
   function update(){
     const query=$('search').value,params={...filterValues(),query,synonyms,scope:$('scope').value,sort:$('sort').value};
-    const counts=refreshFacets(params);activeChips();renderView();renderSubcategories(params,counts.category_path);syncRoute(params);
+    const {results,facets}=VisualAtlasSearch.browse(entries,params);
+    refreshFacets(facets);activeChips();renderView();renderSubcategories(params,facets.category_path);syncRoute(params);
     document.querySelectorAll('#sidebar-categories [data-category]').forEach(el=>{if(params.category_path===el.dataset.category||params.category_path.startsWith(el.dataset.category+'.'))el.setAttribute('aria-current','true');else el.removeAttribute('aria-current')});
-    matches=VisualAtlasSearch.results(entries,params);shown=0;if(cardObserver)for(const node of $('gallery').querySelectorAll('.asset-tile'))cardObserver.unobserve(node);$('gallery').replaceChildren();
+    matches=results;shown=0;if(cardObserver)for(const node of $('gallery').querySelectorAll('.asset-tile'))cardObserver.unobserve(node);$('gallery').replaceChildren();
     $('count').textContent=matches.length.toLocaleString()+' matches';
     const refining=Boolean(query.trim()||params.scope||FACETS.some(key=>params[key]));
     $('browse-title').textContent=query?'Search results':params.category_path?facetLabel('category_path',params.category_path):params.pack?facetLabel('pack',params.pack):refining?'Filtered assets':'Explore assets';
@@ -329,7 +329,12 @@
     }
     panel.hidden=!list.children.length;
   }
-  async function openDetail(a){current=a;clock=0;playing=true;preset=null;chosenState=null;controls={};slotChoices={};
+  async function openDetail(a){
+    const token=++activePreview;current=null;clock=0;playing=true;preset=null;chosenState=null;controls={};slotChoices={};
+    lastDetailSignature=null;$('play').textContent='Pause';$('time-value').textContent='0.0s';
+    const canvas=$('detail-canvas');canvas.getContext('2d').clearRect(0,0,canvas.width,canvas.height);canvas.dataset.interactive='false';
+    $('controls').replaceChildren();$('detail-related').replaceChildren();$('detail-components').hidden=true;
+    for(const id of ['download-png','download-asset','copy-id','copy-link'])$(id).disabled=true;
     $('detail-title').textContent=a.name;$('detail-type').textContent=a.kind.replace('_',' ').toUpperCase();$('detail-id').textContent=a.id;
     $('detail-pack').textContent=collections.get(a.pack)?.name||a.pack;
     $('detail-meta').textContent=[a.category,a.style,a.license].filter(Boolean).join(' · ');
@@ -352,16 +357,17 @@
     demos.hidden=!demos.children.length;
     $('tint-options').hidden=!a.legacy;$('tint-enabled').checked=false;
     try{
-      await ready(a.pack);if(current?.id!==a.id)return;
-      controlsFor(assetFor(a));relatedAssets(a);$('detail-canvas').dataset.interactive=String(Interactions.canPoint(assetFor(a)));if(!$('detail').open)$('detail').showModal();activePreview++;
+      await ready(a.pack);if(token!==activePreview)return;
+      current=a;controlsFor(assetFor(a));relatedAssets(a);$('detail-canvas').dataset.interactive=String(Interactions.canPoint(assetFor(a)));if(!$('detail').open)$('detail').showModal();
+      for(const id of ['download-asset','copy-id','copy-link'])$(id).disabled=false;
       const url=new URL(location.href);url.searchParams.set('asset',a.id);
       history.replaceState(null,'',url);
-    }catch(e){notify('Preview failed: '+e.message);}
+    }catch(e){if(token===activePreview){current=null;if($('detail').open)$('detail').close();notify('Preview failed: '+e.message);}}
   }
   async function downloadAsset(){if(!current)return;
     if(current.legacy){
       // One icon, one real cropped texture; no unrelated sheet cells in the ZIP.
-      const asset=assetFor(current),src=await imageFor(asset.texture);
+      const entry=current,asset=assetFor(entry),src=await imageFor(asset.texture);
       const [x,y,w,h]=asset.rect_px,c=document.createElement('canvas');c.width=w;c.height=h;
       c.getContext('2d').drawImage(src,x,y,w,h,0,0,w,h);
       const png=await new Promise((resolve,reject)=>c.toBlob(b=>b?resolve(b):reject(Error('PNG encoding failed')),'image/png'));
@@ -369,7 +375,7 @@
       const clean={...asset,texture:'icon'};for(const field of ['pack','legacy','rights_reviewed','review_status','category','published','previewable','animated','aliases','category_path','perspective','theme','medium','family'])delete clean[field];
       zip.file('manifest.json',JSON.stringify({schema:'smi-visual-pack/1',pack_id:'smi.legacy.icon.selection',version:'1.0.0',license:asset.license,description:'Historical icon export: verify rights before commercial redistribution',textures:{icon:{path:'textures/icon.png',width_px:w,height_px:h}},assets:[{...clean,rect_px:[0,0,w,h]}]},null,2)+'\n');
       zip.file('SOURCE-NOTICES.txt','Historical icon candidate. Rights review is pending. Original ID: '+asset.id+'\n');
-      save(await zip.generateAsync({type:'blob',compression:'DEFLATE'}),current.id+'.zip');return;
+      save(await zip.generateAsync({type:'blob',compression:'DEFLATE'}),entry.id+'.zip');return;
     }
     const {id:rootId,pack}=current;
     const data=await ready(pack),assets=data.assets;
@@ -403,7 +409,7 @@
           paint(canvas,a,clock,{controls:{...controls},state:chosenState,preset,slots:{...slotChoices}}).then(()=>{
             if(token!==activePreview||current?.id!==a.id)return;
             const target=$('detail-canvas');target.width=canvas.width;target.height=canvas.height;
-            target.getContext('2d').drawImage(canvas,0,0);lastDetailSignature=signature;
+            target.getContext('2d').drawImage(canvas,0,0);lastDetailSignature=signature;$('download-png').disabled=false;
           }).catch(e=>{if(token===activePreview){lastDetailSignature=signature;notify(e.message);}}).finally(()=>{detailRendering=false});
         }
       }
@@ -451,7 +457,7 @@
   });
   $('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Pause':'Play'};
   $('step').onclick=()=>{clock+=1000/12;playing=false;$('play').textContent='Play'};
-  $('download-png').onclick=()=>{if(!current)return;const canvas=$('detail-canvas');canvas.toBlob(b=>b?save(b,current.id+'.png'):notify('PNG unavailable'),'image/png')};
+  $('download-png').onclick=()=>{if(!current)return;const id=current.id,canvas=$('detail-canvas');canvas.toBlob(b=>b?save(b,id+'.png'):notify('PNG unavailable'),'image/png')};
   $('download-asset').onclick=()=>downloadAsset().catch(e=>notify('ZIP unavailable: '+e.message));
   requestAnimationFrame(tick);init().catch(e=>{$('browse-error').textContent=e.message;$('browse-error').hidden=false;$('count').textContent='Catalog unavailable';});
 })();

@@ -41,7 +41,9 @@ def check(page,published_only=False):
     # Discovery is navigable without typing a query; counts come from the same catalog.
     page.locator('#category-directory a').filter(has_text='World & Environment').click()
     expect(page.locator('#count')).to_have_text('53 matches')
+    page.locator('#sort').select_option('name')
     page.locator('#category-children a').filter(has_text='Props').click()
+    expect(page.locator('#sort')).to_have_value('name')
     expect(page.locator('#count')).to_have_text('4 matches')
     page.locator('#category-children a').filter(has_text='Containers').click()
     page.locator('#category-children a').filter(has_text='Chests').click()
@@ -103,7 +105,14 @@ def check(page,published_only=False):
     page.locator("#gallery .asset-tile").first.click()
     page.locator("#detail[open]").wait_for(timeout=20000)
     assert page.locator("#detail-tags span").count() >= 1, "No manifest keywords in inspector"
+    expect(page.locator('#download-png')).to_be_enabled(timeout=20000)
+    page.locator('#step').click()
+    expect(page.locator('#play')).to_have_text('Play')
     page.locator("#close").click()
+    page.locator('#gallery .asset-tile').first.click()
+    expect(page.locator('#play')).to_have_text('Pause')
+    expect(page.locator('#download-png')).to_be_enabled(timeout=20000)
+    page.locator('#close').click()
 
     # A playable demo remains the canonical published Sky asset, but gets
     # a separate direct-play link in its normal search card and detail view.

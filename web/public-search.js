@@ -58,18 +58,12 @@
     key==='experience'?(a.showcases?.length?'playable':''):
     key==='license'?a.license||'':
     a[key]||'';
-  function matches(a,params,ignore=''){
-    for(const key of FILTERS){
-      if(key===ignore||!params[key])continue;
-      const actual=property(a,key),wanted=params[key];
-      if(Array.isArray(actual)?!actual.includes(wanted):actual!==wanted)return false;
-    }
-    return !params.query||score(a,params.query,params.synonyms)>0;
-  }
-  function rank(a,query,synonyms={}){
-    const relevance=score(a,query,synonyms);
+  function rankWithScore(a,query,relevance){
     if(query.trim())return relevance+(a.kind==='composition'?14:0)+(a.legacy?0:12)+(a.showcases?.length?140:0);
     return relevance+(a.legacy?0:250)+(a.kind==='composition'?120:a.kind==='sequence'?60:a.kind==='state_set'?35:0)+(a.showcases?.length?70:0);
+  }
+  function rank(a,query,synonyms={}){
+    return rankWithScore(a,query,score(a,query,synonyms));
   }
   // Presentation only: direct stable IDs remain accessible.
   function visible(a,p){
@@ -80,31 +74,48 @@
     if(p.scope==='all')return true;
     return role==='standalone';
   }
-  function results(entries,params={}){
-    const p={query:'',sort:'recommended',...params},hasDiscovery=Boolean(p.query.trim()||FILTERS.some(k=>p[k]));
-    const ranked=entries.filter(a=>visible(a,p)&&matches(a,p)&&(!a.legacy||hasDiscovery)).map(a=>({a,score:rank(a,p.query,p.synonyms)}));
+  // Compute query relevance once and count self-excluding facets in the
+  // same pass. Archive options stay discoverable even on the default landing.
+  function evaluate(entries,params={},wantResults=true,wantFacets=true){
+    const p={query:'',sort:'recommended',...params};
+    const selected=FILTERS.filter(key=>p[key]);
+    const hasDiscovery=Boolean(p.query.trim()||selected.length);
+    const histograms=wantFacets?Object.fromEntries(FILTERS.map(key=>[key,new Map()])):null;
+    const ranked=[];
+    for(const a of entries){
+      if(!visible(a,p))continue;
+      let mismatch=null,excluded=false;
+      for(const key of selected){
+        const actual=property(a,key),wanted=p[key];
+        if(Array.isArray(actual)?actual.includes(wanted):actual===wanted)continue;
+        if(mismatch!==null||!wantFacets){excluded=true;break;}
+        mismatch=key;
+      }
+      if(excluded)continue;
+      const relevance=score(a,p.query,p.synonyms);
+      if(!relevance)continue;
+      if(wantResults&&mismatch===null&&(!a.legacy||hasDiscovery)){
+        ranked.push({a,score:rankWithScore(a,p.query,relevance)});
+      }
+      if(wantFacets){
+        for(const key of mismatch===null?FILTERS:[mismatch]){
+          const actual=property(a,key),values=Array.isArray(actual)?actual:[actual],histogram=histograms[key];
+          for(const value of values)if(value)histogram.set(value,(histogram.get(value)||0)+1);
+        }
+      }
+    }
     ranked.sort((x,y)=>p.sort==='name'?String(x.a.name||x.a.id).localeCompare(String(y.a.name||y.a.id))||x.a.id.localeCompare(y.a.id):
       p.sort==='newest'?String(y.a.published).localeCompare(String(x.a.published))||y.score-x.score||x.a.id.localeCompare(y.a.id):
       y.score-x.score||String(y.a.published).localeCompare(String(x.a.published))||x.a.id.localeCompare(y.a.id));
-    return ranked.map(x=>x.a);
+    const facets=wantFacets?Object.fromEntries(FILTERS.map(key=>[key,[...histograms[key]].map(([value,count])=>({value,count})).sort((a,b)=>b.count-a.count||a.value.localeCompare(b.value))])):null;
+    return {results:ranked.map(x=>x.a),facets};
   }
-  function facets(entries,params={}){
-    const counts={};
-    const queryMatches=entries.filter(a=>visible(a,params)&&(!params.query||score(a,params.query,params.synonyms)>0));
-    for(const key of FILTERS){
-      const histogram=new Map();
-      for(const a of queryMatches){
-        if(!matches(a,{...params,query:''},key))continue;
-        const values=Array.isArray(property(a,key))?property(a,key):[property(a,key)];
-        for(const value of values){if(value)histogram.set(value,(histogram.get(value)||0)+1);}
-      }
-      counts[key]=[...histogram].map(([value,count])=>({value,count})).sort((a,b)=>b.count-a.count||a.value.localeCompare(b.value));
-    }
-    return counts;
-  }
+  const results=(entries,params={})=>evaluate(entries,params,true,false).results;
+  const facets=(entries,params={})=>evaluate(entries,params,false,true).facets;
+  const browse=(entries,params={})=>evaluate(entries,params);
   // Directory counts use the same visible/matches contract as the gallery.
   function directory(entries,params={}){
     return facets(entries.filter(a=>!a.legacy),params);
   }
-  return Object.freeze({tokens,score,rank,results,facets,directory});
+  return Object.freeze({tokens,score,rank,results,facets,directory,browse});
 });
