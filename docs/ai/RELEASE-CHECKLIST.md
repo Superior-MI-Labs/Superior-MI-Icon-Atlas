@@ -14,7 +14,7 @@ For substantial commissions, use [creator preflight](CREATOR-PREFLIGHT.md) befor
 ## 2. Textures and exact geometry
 - [ ] Source art was inspected; each object is complete and properly positioned. A generated grid's implied layout was **not** blindly trusted.
 - [ ] Texture dimensions, region rectangles, transparency and per-cell spacing were measured against actual pixels; none cuts into a neighbor.
-- [ ] A contact sheet was created and **every asset region** was visually reviewed, not just the first image.
+- [ ] A contact sheet was created and **every asset region** was visually reviewed, not just the first image. For transparent sprites inspect actual crops on contrasting backgrounds, verify alpha=0 in exterior gaps and appropriate opacity inside the subject; investigate guide/background contamination and unintended translucency. For world sprites apply the [elevated-view qualification](world/README.md#elevated-view-qualification) where required. A failed visual or transparency gate blocks production approval.
 - [ ] Full-bleed artwork was identified as intentional; edge-contact warnings were investigated, not automatically ignored.
 
 ## 3. Manifest and behavior
