@@ -11,6 +11,6 @@
 
 For complex character work, route from the [animation recipe](docs/ai/animations/README.md) to the applicable focused production guide. Use only the current project's references and acceptance requirements; historical case studies and their project-specific commands are not general prerequisites. Planning PASS is **not** image/animation QA or authorization to publish. Source images from conversation attachments must not be silently treated as approved/relicensed artwork.
 
-Project QA: `bash RUN-ALL.sh`. The public builder runs locally and imports ZIPs privately. Do not modify the existing 2,073 icons or overwrite GitHub `main` without matching the expected branch revision.
+Collection iteration: `bash RUN-ALL.sh --collection SLUG` runs the registered suites and exact ZIP checks without a full site build. External ZIP acceptance uses the authored Builder directly. Batch related changes, run `bash RUN-ALL.sh` before pushing, and keep full CI mandatory for publication; scoped QA never authorizes deployment. The public builder runs locally and imports ZIPs privately. Do not modify the existing 2,073 icons or overwrite GitHub `main` without matching the expected branch revision.
 
 **Pixel-art RPG icon tasks:** Read [the dedicated raster icon standard](docs/ai/icons/GAME-PIXEL-ART.md) in addition to the general icon/GUI recipes. Preserve painted pixel-art source; do not turn item creation into vector glyph generation. Do not publish a concept-board extraction without explicit art review and full visual/ZIP QA.

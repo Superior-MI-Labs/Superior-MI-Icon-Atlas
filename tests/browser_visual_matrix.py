@@ -99,8 +99,13 @@ def verify_archive_override(spec, override):
             raise ValueError('Candidate ZIP not found: '+str(override))
 
 
-def loaded_html():
-    return re.sub(r'<script\b[^>]*\bsrc="[^"]+"[^>]*></script>', '', (SITE / 'builder.html').read_text())
+def builder_root_for(archive):
+    # Explicit ZIPs use the canonical authored Builder, never a stale site build.
+    return ROOT/'web' if archive is not None else SITE
+
+
+def loaded_html(builder_root=SITE):
+    return re.sub(r'<script\b[^>]*\bsrc="[^"]+"[^>]*></script>', '', (builder_root / 'builder.html').read_text())
 
 
 def draw_sample(page, sample, out_file):
@@ -201,10 +206,14 @@ def main():
     ap.add_argument('--chromium',default='',help='Optional explicit Chromium path; otherwise detect system or Playwright browser')
     args=ap.parse_args()
     spec=json.loads(args.spec.read_text());verify_spec(spec);verify_archive_override(spec,args.archive)
-    if not (SITE/'builder.js').is_file():raise SystemExit('Build the site first: python tools/build_site.py')
+    builder_root=builder_root_for(args.archive)
+    if not (builder_root/'builder.js').is_file():raise SystemExit('Builder unavailable; build the site for repository regression mode')
+    for name in ('builder.html','styles.css','builder.css',*SCRIPTS):
+        if not (builder_root/name).is_file():raise SystemExit('Missing Builder source: '+str(builder_root/name))
     try:from playwright.sync_api import sync_playwright
     except ImportError:raise SystemExit('Browser QA requires: python -m pip install playwright')
     args.out.mkdir(parents=True,exist_ok=True)
+    (args.out/'report.json').unlink(missing_ok=True)
     report={'schema':'smi-visual-render-qa/1','cases':[],'visual_semantic_review':'NOT AUTOMATICALLY VERIFIED'}
     failures=[]
     with sync_playwright() as playwright:
@@ -216,8 +225,8 @@ def main():
                 page=browser.new_page(viewport={'width':1500,'height':1024},device_scale_factor=1)
                 errors=[]
                 page.on('pageerror',lambda e:errors.append(str(e)))
-                page.set_content(loaded_html())
-                for css in ('styles.css','builder.css'):page.add_style_tag(content=(SITE/css).read_text())
+                page.set_content(loaded_html(builder_root))
+                for css in ('styles.css','builder.css'):page.add_style_tag(content=(builder_root/css).read_text())
                 archive_bytes=archive.read_bytes()
                 payload={'registry':{'packs':[{'id':case['id'],'name':case['preview_name'],'zip':'demo/'+case['pack']}]},'zip':base64.b64encode(archive_bytes).decode()}
                 page.evaluate('''(data)=>{
@@ -234,7 +243,7 @@ def main():
                   };
                 }''',{**payload,'filename':case['pack']})
                 for path in SCRIPTS:
-                    src=(SITE/path).read_text()
+                    src=(builder_root/path).read_text()
                     if path=='builder.js':src=src.replace("new URLSearchParams(location.search).get('example')",json.dumps(case['pack']))
                     page.add_script_tag(content=src)
                 page.locator('#builder-status').get_by_text('Opened '+case['pack'],exact=False).wait_for(timeout=15000)

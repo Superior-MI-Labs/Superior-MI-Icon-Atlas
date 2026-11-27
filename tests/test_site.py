@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 from PIL import Image
-from tools.build_site import build, ROOT
+from tools.build_site import build, build_one_collection, ROOT
 from atlasctl import validate,load,search_icons
 
 class AtlasContractTests(unittest.TestCase):
@@ -69,5 +69,19 @@ class AtlasContractTests(unittest.TestCase):
             self.assertIn('nature.flame',text)
             self.assertIn('white-geometric-monoline',text)
             self.assertIn('picture',text)
+            # Single-collection mode must create the exact same bytes as Pages,
+            # including bundled dependencies, without invoking the full build.
+            for slug in ('painterly-fantasy-woodland','royal-forge-complete'):
+                target=dest/(slug+'.zip')
+                build_one_collection(slug,target)
+                self.assertEqual(target.read_bytes(),(dest/'demo'/target.name).read_bytes())
+
+    def test_scoped_collection_rejects_unsafe_or_unknown_slug(self):
+        with tempfile.TemporaryDirectory() as temp:
+            target=Path(temp)/'candidate.zip'
+            for slug in ('../examples','/tmp','unknown-collection-987654'):
+                with self.subTest(slug=slug),self.assertRaises(ValueError):
+                    build_one_collection(slug,target)
+                self.assertFalse(target.exists())
 
 if __name__=='__main__':unittest.main()
