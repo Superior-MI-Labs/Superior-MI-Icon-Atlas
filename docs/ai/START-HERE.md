@@ -25,6 +25,6 @@ From the repository root, with Python dependencies from `requirements-test.txt`:
 python3 tools/ai_acceptance.py YOUR-PACK.zip --acceptance YOUR-ACCEPTANCE.json --out qa/your-pack
 ```
 
-This already invokes the archive validator and crop scan. For actual browser qualification, install Playwright/Chromium, run `python3 tools/build_site.py`, then add `--visual-spec YOUR-VISUAL-SCENARIOS.json`. The runner tests the exact ZIP even if it is not part of the repository. See [browser QA](VISUAL-RENDER-QA.md). `bash RUN-ALL.sh` is the separate full repository gate.
+This already invokes the archive validator and crop scan. For actual browser qualification, install Playwright/Chromium and add `--visual-spec YOUR-VISUAL-SCENARIOS.json`. Exact ZIP QA uses authored Builder files; no full site build needed. See [browser QA](VISUAL-RENDER-QA.md). `bash RUN-ALL.sh` is the separate full repository gate.
 
 Do not load all recipes into context. Use the [release checklist](RELEASE-CHECKLIST.md) as the shared authority; the schema and implemented runtime define supported features.
