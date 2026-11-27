@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import contextlib
 import json
+import re
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -31,7 +32,78 @@ def check(page,published_only=False):
     page.on("pageerror", lambda err: errors.append(str(err)))
     page.reload(wait_until="networkidle")
     expect(page.locator("#count")).to_have_text(published_matches(), timeout=20000)
+    expect(page.locator("#app-sidebar")).to_be_visible()
+    expect(page.locator(".app-topbar #search")).to_be_visible()
+    page.keyboard.press("Control+k")
+    expect(page.locator("#search")).to_be_focused()
+    assert page.locator("#hero-art img").count() >= 1
+    assert page.locator("#sidebar-categories a").count() >= 4
+    assert page.locator("#theme-directory a").count() >= 1
+    family = page.locator('#collection-family-directory a').filter(has_text='Painterly Fantasy World')
+    expect(family).to_have_count(1)
+    previews = family.locator('.collection-covers img').evaluate_all("images => images.map(img => img.getAttribute('src'))")
+    assert 1 <= len(previews) <= 3 and len(set(previews)) == len(previews), previews
+    assert all(src.startswith('previews/') for src in previews), previews
+    expect(page.locator('#hero-totals')).to_have_text(page.locator('#library-totals').inner_text())
+    family.click()
+    expect(page.locator('#family')).to_have_value('painterly-fantasy')
+    catalog = json.loads((SITE/'public-catalog.json').read_text())
+    family_count = sum(a.get('family') == 'painterly-fantasy' and not a.get('legacy') and a.get('discovery', 'standalone') == 'standalone' for a in catalog['assets'])
+    assert family_count >= 53
+    expect(page.locator('#count')).to_have_text(f'{family_count:,} matches')
+    page.locator('#clear-filters').click()
+    expect(page.locator('#shown-count')).to_have_text('24 of '+published_matches().split()[0]+' shown')
 
+    # Discovery is navigable without typing a query; counts come from the same catalog.
+    page.locator('#category-directory a').filter(has_text='World & Environment').click()
+    expect(page.locator('#count')).to_have_text('53 matches')
+    page.locator('#sort').select_option('name')
+    page.locator('#category-children a').filter(has_text='Props').click()
+    expect(page.locator('#sort')).to_have_value('name')
+    expect(page.locator('#count')).to_have_text('4 matches')
+    page.locator('#category-children a').filter(has_text='Containers').click()
+    page.locator('#category-children a').filter(has_text='Chests').click()
+    expect(page.locator('#count')).to_have_text('4 matches')
+    page.locator('#perspective').select_option('isometric')
+    expect(page.locator('#count')).to_have_text('4 matches')
+    # Verify gallery-only browsing on a fresh page, including actual network requests.
+    preview_context=page.context.browser.new_context(viewport=page.viewport_size)
+    preview_page=preview_context.new_page()
+    requests=[]
+    preview_page.on('request',lambda req:requests.append(req.url))
+    try:
+        preview_page.goto(page.url,wait_until='networkidle')
+        card=preview_page.locator('#gallery .asset-tile').first
+        card.scroll_into_view_if_needed()
+        expect(card.locator('canvas')).to_have_attribute('data-preview','thumbnail')
+        assert any('/previews/' in url for url in requests),requests
+        chest_zip='/demo/fantasy-recovered-chests-20261125.zip'
+        assert not any(url.endswith(chest_zip) for url in requests),requests
+        card.click()
+        expect(preview_page.locator('#detail[open]')).to_be_visible()
+        expect(preview_page.locator('#detail-classification')).to_contain_text('Isometric')
+        expect(preview_page.locator('#detail-classification')).to_contain_text('Chests')
+        expect(preview_page.locator('#download-png')).to_be_enabled(timeout=20000)
+        assert any(url.endswith(chest_zip) for url in requests),requests
+    finally:
+        preview_context.close()
+    assert 'perspective=isometric' in page.url
+    page.reload(wait_until='networkidle')
+    expect(page.locator('#count')).to_have_text('4 matches')
+    expect(page.locator('#category_path')).to_have_value('world.props.containers.chests')
+    page.locator('.browse-nav [data-view="collections"]').click()
+    expect(page.locator('#collection-directory')).to_be_visible()
+    grass = page.locator('#family-directory .collection-card').filter(has_text='Fantasy Recovered Grass')
+    assert 1 <= grass.locator('.collection-covers img').count() <= 3
+    expect(grass.get_by_role('link',name='Open in Builder')).to_have_attribute('href',re.compile(r'^builder[.]html[?]example=.*&asset='))
+    grass.locator('a.directory-link').first.click()
+    expect(page.locator('#count')).to_have_text('12 matches')
+    page.locator('#clear-filters').click()
+    expect(page.locator('#discovery')).to_be_visible()
+    assert 'category_path=' not in page.url
+    page.locator('#archive-directory a').click()
+    expect(page.locator('#count')).to_have_text('2,073 matches')
+    page.locator('#clear-filters').click()
     page.locator("#pack").select_option("legacy-icons")
     expect(page.locator("#count")).to_have_text("2,073 matches")
     page.locator("#domain").select_option("programming")
@@ -55,7 +127,14 @@ def check(page,published_only=False):
     page.locator("#gallery .asset-tile").first.click()
     page.locator("#detail[open]").wait_for(timeout=20000)
     assert page.locator("#detail-tags span").count() >= 1, "No manifest keywords in inspector"
+    expect(page.locator('#download-png')).to_be_enabled(timeout=20000)
+    page.locator('#step').click()
+    expect(page.locator('#play')).to_have_text('Play')
     page.locator("#close").click()
+    page.locator('#gallery .asset-tile').first.click()
+    expect(page.locator('#play')).to_have_text('Pause')
+    expect(page.locator('#download-png')).to_be_enabled(timeout=20000)
+    page.locator('#close').click()
 
     # A playable demo remains the canonical published Sky asset, but gets
     # a separate direct-play link in its normal search card and detail view.
@@ -158,6 +237,8 @@ def check(page,published_only=False):
     page.locator("#close").click()
 
     page.goto(url+"builder.html?example=royal-forge-controls.zip&asset=smi.ui.fantasy01.wave2.widget.scroll-horizontal",wait_until="networkidle")
+    expect(page.locator(".atlas-tool-nav a[aria-current=page]")).to_have_text("Builder / My Bag")
+    expect(page.locator("body")).to_have_class(re.compile(r"atlas-theme"))
     stage=page.locator("#stage")
     expect(stage).to_have_attribute("data-interactive","true",timeout=20000)
     stage.scroll_into_view_if_needed()
@@ -374,7 +455,45 @@ def main():
                 mobile.goto(url, wait_until="networkidle")
                 expect(mobile.locator("#count")).to_have_text(published_matches(), timeout=20000)
                 assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Horizontal overflow on mobile"
-                print("Responsive viewport: PASS")
+                assert mobile.locator("#app-sidebar").evaluate("(e)=>e.inert")
+                expect(mobile.locator("#facet-panel")).to_be_hidden()
+                mobile.locator("#nav-toggle").click()
+                expect(mobile.locator("#nav-toggle")).to_have_attribute("aria-expanded","true")
+                assert not mobile.locator("#app-sidebar").evaluate("(e)=>e.inert")
+                expect(mobile.locator(".app-brand")).to_be_focused()
+                mobile.keyboard.press("Escape")
+                expect(mobile.locator("#nav-toggle")).to_be_focused()
+                assert mobile.locator("#app-sidebar").evaluate("(e)=>e.inert")
+                mobile.locator("#nav-toggle").click()
+                mobile.locator("#sidebar-categories a[data-category=world]").click()
+                expect(mobile.locator("#count")).to_have_text("53 matches")
+                expect(mobile.locator("#nav-toggle")).to_have_attribute("aria-expanded","false")
+                assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Asset view overflows on mobile"
+                mobile.locator("#filter-toggle").click()
+                expect(mobile.locator("#facet-panel")).to_be_visible()
+                mobile.locator("#perspective").select_option("isometric")
+                expect(mobile.locator("#perspective")).to_have_value("isometric")
+                mobile.locator("#filter-toggle").click()
+                expect(mobile.locator("#facet-panel")).to_be_hidden()
+                assert "perspective=isometric" in mobile.url
+                mobile.set_viewport_size({"width": 1440, "height": 1000})
+                expect(mobile.locator("#facet-panel")).to_be_visible()
+                assert not mobile.locator("#app-sidebar").evaluate("(e)=>e.inert")
+                mobile.set_viewport_size({"width": 390, "height": 844})
+                expect(mobile.locator("#facet-panel")).to_be_hidden()
+                print("Responsive viewport and keyboard navigation: PASS")
+                mobile.goto(url+"builder.html",wait_until="networkidle")
+                expect(mobile.locator(".atlas-tool-nav a[aria-current=page]")).to_have_text("Builder / My Bag")
+                assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Builder overflows on mobile"
+                mobile.locator(".atlas-tool-nav a[href='ai-guide.html']").click()
+                expect(mobile.locator(".atlas-tool-nav a[aria-current=page]")).to_have_text("Create with AI")
+                expect(mobile.locator("#prompt")).to_be_visible()
+                assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Guide overflows on mobile"
+                mobile.locator(".atlas-tool-nav a[href='sky-motion-lab.html']").click()
+                expect(mobile.locator(".atlas-tool-nav a[aria-current=page]")).to_have_text("Motion Lab")
+                expect(mobile.locator("#motion-stage")).to_be_visible()
+                mobile.locator(".atlas-tool-nav a[href='index.html']").click()
+                expect(mobile.locator("#count")).to_have_text(published_matches(), timeout=20000)
             finally:
                 browser.close()
     finally:

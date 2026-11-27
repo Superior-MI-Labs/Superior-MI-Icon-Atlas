@@ -168,3 +168,5 @@ Resource HUD variants use existing slot interfaces and presets, not a new theme 
 
 ### Optional spatial asset profile
 Asset-level `spatial` declares suggested `height_ft`, optional equally spaced `views` (`elevation_deg`, `assets`: 4/6/8 IDs starting with the root ID), and optional `wind` (`bend`, `reference_speed_ft_s`, increasing `states` thresholds). It is descriptive, not simulation. The versioned schema and shared slot/dependency validator check references and matching state/interaction contracts. Selected exports retain alternative views. See [world asset recipe](world/README.md). Hosts that do not implement the profile can still render the normal root asset.
+
+Optional collection/asset `classification` is discovery-only metadata. See [browse taxonomy](BROWSE-TAXONOMY.md); it does not change runtime rendering or compatibility.

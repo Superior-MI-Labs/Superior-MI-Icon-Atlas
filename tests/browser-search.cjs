@@ -42,6 +42,17 @@ for(const [query,token] of [['slider','Slider'],['sliders','Slider'],['healthbar
   assert.ok(matches.length>0,query+' must return results');
   assert.ok(matches.some(a=>a.name.includes(token)),query+' must include the requested asset');
 }
+// New discovery dimensions preserve the old domain/pack contract.
+const world=Search.results(data.assets,{...params,category_path:'world'});
+assert.equal(world.length,53,'All seven world packs must be browseable without search');
+assert.equal(Search.results(data.assets,{...params,category_path:'world.props.containers.chests',perspective:'isometric',medium:'raster-2d'}).length,4);
+assert.equal(Search.results(data.assets,{...params,family:'painterly-fantasy'}).length,53);
+assert.ok(Search.results(data.assets,{...params,category_path:'gui',theme:'sci-fi',perspective:'screen-space'}).some(a=>a.pack==='minimal-white-tech'));
+assert.ok(Search.results(data.assets,{...params,category_path:'characters',perspective:'side-view'}).some(a=>a.pack==='sky-prototype'));
+assert.ok(Search.results(data.assets,{...params,review:'visual-pending'}).every(a=>!a.legacy&&a.visual_qa==='pending'));
+assert.equal(Search.directory(data.assets,{}).category_path.find(x=>x.value==='world').count,53);
+for(const key of ['category_path','perspective','medium'])for(const {value,count} of Search.directory(data.assets,{})[key])assert.equal(Search.results(data.assets,{[key]:value,status:'published'}).length,count,'Directory count mismatch: '+key+' '+value);
+assert.ok(data.packs.every(p=>Number.isInteger(p.asset_count)&&Number.isInteger(p.listed_count)));
 const defaults=Search.results(data.assets,params);
 assert.equal(defaults[0].kind,'composition','Finished compositions lead the default gallery');
 assert.ok(defaults.every(a=>!a.legacy),'Archive icons must not flood default landing view');
@@ -114,4 +125,17 @@ assert.ok(!Search.results(data.assets,{...params,query:'health'}).some(a=>a.disc
 assert.ok(Search.results(data.assets,{...params,pack:rim.pack,scope:'components'}).some(a=>a.id===rim.id));
 assert.ok(Search.results(data.assets,{...params,query:'action inventory hud'}).some(a=>a.id==='smi.ui.fantasy01.wave2.widget.action-inventory-hud'));
 assert.ok(!defaults.some(a=>/\.widget\.(hearts|pips)\.[^.]+\.(hp\d+|\d+of\d+)$/.test(a.id)));
+// The combined query must preserve the separate public API for each browse scope.
+for(const filters of [{},{query:'healthbar'},{query:'fire',status:'archive'},
+  {category_path:'world',perspective:'isometric',sort:'name'},
+  {pack:'minimal-white-tech',scope:'components',sort:'newest'},
+  {query:rim.id},{category_path:'world',theme:'sci-fi'},{scope:'all',status:'published'}]){
+  const options={...params,...filters},combined=Search.browse(data.assets,options);
+  assert.deepEqual(combined.results,Search.results(data.assets,options));
+  assert.deepEqual(combined.facets,Search.facets(data.assets,options));
+  for(const key of Object.keys(combined.facets)){
+    const byValue=new Map(combined.facets[key].map(x=>[x.value,x.count]));
+    if(options[key]&&combined.results.length)assert.equal(byValue.get(options[key]),combined.results.length);
+  }
+}
 console.log('Manifest-derived unified catalog, archive search and facets: PASS');

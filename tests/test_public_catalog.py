@@ -52,6 +52,17 @@ class PublicCatalogTests(unittest.TestCase):
                 if folder.name=='pixel-fantasy-icons':
                     with ZipFile(archive) as z:
                         self.assertFalse(any(n.startswith('source-') or n.startswith('qa/') or n=='authoring.json' for n in z.namelist()))
+            from PIL import Image
+            thumbs=[a for a in public['assets'] if a.get('thumbnail')]
+            self.assertTrue(thumbs)
+            self.assertTrue(all(not a.get('legacy') and a['kind']=='region' for a in thumbs))
+            self.assertEqual({a['id'] for a in thumbs if a['pack']=='fantasy-recovered-chests-20261125'},
+                             {a['id'] for a in public['assets'] if a['pack']=='fantasy-recovered-chests-20261125'})
+            for path in {a['thumbnail'] for a in thumbs}:
+                self.assertEqual(Path(path).stem,hashlib.sha256((site/path).read_bytes()).hexdigest())
+                with Image.open(site/path) as image:
+                    self.assertEqual(image.mode,'RGBA')
+                    self.assertLessEqual(image.width,200);self.assertLessEqual(image.height,124)
             self.assertEqual(approved,{a['id'] for a in public['assets'] if not a.get('legacy')})
             self.assertEqual(len(public['assets']),2073+expected_count)
             self.assertEqual(public['synonyms'],json.loads((ROOT/'manifest.json').read_text())['search']['synonyms'])

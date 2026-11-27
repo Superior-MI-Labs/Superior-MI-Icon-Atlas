@@ -1,0 +1,553 @@
+{
+  "schema": "smi-browse-taxonomy/1",
+  "dimensions": {
+    "category_path": {
+      "label": "Category",
+      "values": {
+        "world": "World & Environment",
+        "world.terrain": "Terrain",
+        "world.terrain.ground": "Ground textures",
+        "world.terrain.cliffs": "Cliffs & rock faces",
+        "world.terrain.transitions": "Surface transitions",
+        "world.terrain.paths": "Roads & paths",
+        "world.vegetation": "Vegetation",
+        "world.vegetation.grass": "Grass",
+        "world.vegetation.ferns": "Ferns",
+        "world.vegetation.flowers": "Flowers",
+        "world.vegetation.bushes": "Bushes",
+        "world.vegetation.trees": "Trees",
+        "world.vegetation.vines": "Vines",
+        "world.vegetation.wetlands": "Wetland plants",
+        "world.props": "Props",
+        "world.props.containers": "Containers",
+        "world.props.containers.chests": "Chests",
+        "world.props.containers.crates": "Crates",
+        "world.props.containers.barrels": "Barrels",
+        "world.props.furniture": "Furniture",
+        "world.props.rocks": "Rocks & minerals",
+        "world.structures": "Structures",
+        "world.structures.buildings": "Buildings",
+        "world.structures.walls": "Walls",
+        "world.structures.doors": "Doors & windows",
+        "world.effects": "Environmental effects",
+        "world.effects.water": "Water",
+        "world.effects.fire": "Fire",
+        "gui": "GUI & HUD",
+        "gui.controls": "Controls",
+        "gui.meters": "Meters & resources",
+        "gui.interfaces": "Interfaces",
+        "gui.inventory": "Inventory UI",
+        "characters": "Characters & Creatures",
+        "characters.actors": "Characters",
+        "characters.creatures": "Creatures",
+        "items": "Items & Equipment",
+        "items.weapons": "Weapons",
+        "items.armor": "Armor",
+        "items.consumables": "Consumables",
+        "items.materials": "Materials",
+        "items.tools": "Tools",
+        "items.quest": "Quest items",
+        "effects": "Effects & Animation",
+        "effects.loading": "Loading animations",
+        "effects.magic": "Magic effects",
+        "icons": "Icons & Symbols",
+        "textures": "Textures & Materials",
+        "other": "Uncategorized"
+      }
+    },
+    "perspective": {
+      "label": "Perspective",
+      "values": {
+        "isometric": "Isometric",
+        "top-down": "Top-down",
+        "side-view": "Side-view / side-scrolling",
+        "front-view": "Front-facing",
+        "screen-space": "Screen-space",
+        "perspective-neutral": "Perspective-neutral",
+        "billboard": "Billboard / single-view",
+        "perspective-3d": "3D perspective",
+        "unknown": "Not specified"
+      }
+    },
+    "theme": {
+      "label": "Theme",
+      "values": {
+        "fantasy": "Fantasy",
+        "sci-fi": "Sci-fi",
+        "modern": "Modern",
+        "historical": "Historical",
+        "horror": "Horror",
+        "nature": "Nature",
+        "abstract": "Abstract",
+        "unknown": "Not specified"
+      }
+    },
+    "medium": {
+      "label": "Medium",
+      "values": {
+        "raster-2d": "2D raster",
+        "vector-2d": "2D vector",
+        "model-3d": "3D model",
+        "voxel": "Voxel",
+        "unknown": "Not specified"
+      }
+    }
+  },
+  "families": {
+    "painterly-fantasy": "Painterly Fantasy World",
+    "royal-forge": "Royal Forge",
+    "white-tech": "Minimal White Tech",
+    "storyforge": "StoryForge",
+    "wolfcat": "Wolfcat RPG Items",
+    "pixel-fantasy": "Pixel Fantasy",
+    "sky": "Sky Prototype",
+    "kissyn": "Kissyn"
+  },
+  "rules": [
+    {
+      "packs": [
+        "fantasy-recovered-grass-"
+      ],
+      "set": {
+        "category_path": [
+          "world.vegetation.grass"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "fantasy-recovered-trees-"
+      ],
+      "set": {
+        "category_path": [
+          "world.vegetation.trees"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "fantasy-recovered-chests-"
+      ],
+      "set": {
+        "category_path": [
+          "world.props.containers.chests"
+        ],
+        "perspective": [
+          "isometric",
+          "billboard"
+        ]
+      }
+    },
+    {
+      "domain": [
+        "world-environment"
+      ],
+      "subjects": [
+        "fern",
+        "emerald fern",
+        "blue tipped fern",
+        "natural fern",
+        "painted fern cluster"
+      ],
+      "set": {
+        "category_path": [
+          "world.vegetation.ferns"
+        ]
+      }
+    },
+    {
+      "domain": [
+        "world-environment"
+      ],
+      "subjects": [
+        "wildflowers",
+        "flowers",
+        "painted hydrangea",
+        "flowering vine"
+      ],
+      "set": {
+        "category_path": [
+          "world.vegetation.flowers"
+        ]
+      }
+    },
+    {
+      "domain": [
+        "world-environment"
+      ],
+      "subjects": [
+        "cattails",
+        "reeds",
+        "wetland vegetation"
+      ],
+      "set": {
+        "category_path": [
+          "world.vegetation.wetlands"
+        ]
+      }
+    },
+    {
+      "domain": [
+        "world-environment"
+      ],
+      "subjects": [
+        "ivy",
+        "vine",
+        "scarlet vine shrub"
+      ],
+      "set": {
+        "category_path": [
+          "world.vegetation.vines"
+        ]
+      }
+    },
+    {
+      "domain": [
+        "world-environment"
+      ],
+      "subjects": [
+        "berry bush",
+        "shrub",
+        "ruby round bush",
+        "teal round bush",
+        "sunset shrub",
+        "gem bush",
+        "orange round bush",
+        "natural round bush",
+        "blueberry bush"
+      ],
+      "set": {
+        "category_path": [
+          "world.vegetation.bushes"
+        ]
+      }
+    },
+    {
+      "domain": [
+        "world-environment"
+      ],
+      "subjects": [
+        "foliage",
+        "vegetation",
+        "grass"
+      ],
+      "set": {
+        "category_path": [
+          "world.vegetation"
+        ]
+      }
+    },
+    {
+      "domain": [
+        "world-environment"
+      ],
+      "set": {
+        "category_path": [
+          "world"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "fantasy-recovered-",
+        "painterly-fantasy-"
+      ],
+      "set": {
+        "theme": [
+          "fantasy"
+        ],
+        "perspective": [
+          "billboard"
+        ],
+        "family": "painterly-fantasy"
+      }
+    },
+    {
+      "packs": [
+        "fantasy-rpg-hud-wave1",
+        "royal-forge-",
+        "minimal-white-tech"
+      ],
+      "subjects": [
+        "games.ui.meters",
+        "games.ui.hud.resources",
+        "ui.hud.resources"
+      ],
+      "set": {
+        "category_path": [
+          "gui.meters"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "fantasy-rpg-hud-wave1",
+        "royal-forge-",
+        "minimal-white-tech"
+      ],
+      "subjects": [
+        "games.ui.inventory"
+      ],
+      "set": {
+        "category_path": [
+          "gui.inventory"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "fantasy-rpg-hud-wave1",
+        "royal-forge-",
+        "minimal-white-tech"
+      ],
+      "subjects": [
+        "games.ui.controls",
+        "ui.hud.controls"
+      ],
+      "set": {
+        "category_path": [
+          "gui.controls"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "fantasy-rpg-hud-wave1",
+        "royal-forge-"
+      ],
+      "set": {
+        "category_path": [
+          "gui"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "perspective": [
+          "screen-space"
+        ],
+        "family": "royal-forge"
+      }
+    },
+    {
+      "packs": [
+        "minimal-white-tech"
+      ],
+      "set": {
+        "category_path": [
+          "gui"
+        ],
+        "theme": [
+          "sci-fi"
+        ],
+        "perspective": [
+          "screen-space"
+        ],
+        "family": "white-tech"
+      }
+    },
+    {
+      "packs": [
+        "pixel-fantasy-icons"
+      ],
+      "subjects": [
+        "game.items.weapons"
+      ],
+      "set": {
+        "category_path": [
+          "items.weapons"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "pixel-fantasy-icons"
+      ],
+      "subjects": [
+        "game.items.equipment"
+      ],
+      "set": {
+        "category_path": [
+          "items.armor"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "pixel-fantasy-icons"
+      ],
+      "subjects": [
+        "game.items.consumables",
+        "game.items.food"
+      ],
+      "set": {
+        "category_path": [
+          "items.consumables"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "pixel-fantasy-icons"
+      ],
+      "subjects": [
+        "game.items.materials"
+      ],
+      "set": {
+        "category_path": [
+          "items.materials"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "pixel-fantasy-icons"
+      ],
+      "subjects": [
+        "game.items.tools"
+      ],
+      "set": {
+        "category_path": [
+          "items.tools"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "pixel-fantasy-icons"
+      ],
+      "subjects": [
+        "game.items.quest"
+      ],
+      "set": {
+        "category_path": [
+          "items.quest"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "pixel-fantasy-icons"
+      ],
+      "subjects": [
+        "games.ui.inventory"
+      ],
+      "set": {
+        "category_path": [
+          "gui.inventory"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "pixel-fantasy-icons"
+      ],
+      "set": {
+        "category_path": [
+          "items"
+        ],
+        "perspective": [
+          "screen-space"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "family": "pixel-fantasy"
+      }
+    },
+    {
+      "packs": [
+        "wolfcat-items-"
+      ],
+      "set": {
+        "category_path": [
+          "items"
+        ],
+        "perspective": [
+          "screen-space"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "family": "wolfcat"
+      }
+    },
+    {
+      "packs": [
+        "storyforge-consumables"
+      ],
+      "set": {
+        "category_path": [
+          "items.consumables"
+        ],
+        "perspective": [
+          "screen-space"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "family": "storyforge"
+      }
+    },
+    {
+      "packs": [
+        "storyforge-atlases-"
+      ],
+      "set": {
+        "category_path": [
+          "icons"
+        ],
+        "perspective": [
+          "screen-space"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "family": "storyforge"
+      }
+    },
+    {
+      "packs": [
+        "sky-prototype"
+      ],
+      "set": {
+        "category_path": [
+          "characters.actors"
+        ],
+        "perspective": [
+          "side-view"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "family": "sky"
+      }
+    },
+    {
+      "packs": [
+        "kissyn-loading"
+      ],
+      "set": {
+        "category_path": [
+          "effects.loading"
+        ],
+        "perspective": [
+          "screen-space"
+        ],
+        "family": "kissyn"
+      }
+    },
+    {
+      "packs": [
+        "legacy-icons"
+      ],
+      "set": {
+        "category_path": [
+          "icons"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ]
+      }
+    }
+  ]
+}

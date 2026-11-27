@@ -1,5 +1,5 @@
 .motion-shell{max-width:1440px;margin:0 auto;padding:28px clamp(16px,3vw,46px) 72px}
-.motion-intro{max-width:930px;margin-bottom:24px}.motion-intro h2{font-size:clamp(25px,3.5vw,38px);letter-spacing:-.04em;margin:0 0 10px}.motion-intro p:not(.eyebrow){color:var(--muted);margin:0}
+.motion-intro{max-width:930px;margin-bottom:24px}.motion-intro h1{font-size:clamp(25px,3.5vw,38px);letter-spacing:-.04em;margin:0 0 10px}.motion-intro p:not(.eyebrow){color:var(--muted);margin:0}
 .motion-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:20px;align-items:start}
 .motion-view,.motion-queue-panel,.motion-list-section{border:1px solid var(--border);background:var(--surface);border-radius:14px;padding:18px}
 .motion-view h3,.motion-panel-head h3{margin:0 0 12px;font-size:18px}.motion-panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.motion-tag{color:var(--muted);font-size:12px}
