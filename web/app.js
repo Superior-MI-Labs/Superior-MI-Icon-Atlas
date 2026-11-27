@@ -124,7 +124,7 @@
     for(const key of FACETS)setControl(key,filters[key]||'');
     if(push)history.pushState(null,'',browseURL(view,filters));
     update();
-    if(push)document.querySelector(view==='collections'?'#collection-directory':view==='assets'?'.browse-layout':'.browse-hero').scrollIntoView({block:'start'});
+    if(push){closeNavigation();window.scrollTo({top:0,behavior:'instant'});}
   }
   function readRoute(){
     const p=new URLSearchParams(location.search),v=p.get('view');
@@ -138,8 +138,11 @@
     for(const key of ['query','scope','sort',...FACETS])if(params[key]&&!(key==='sort'&&params[key]==='recommended'))url.searchParams.set(key,params[key]);
     history.replaceState(null,'',url);
   }
+  function closeNavigation(){document.body.classList.remove('nav-open');$('nav-toggle').setAttribute('aria-expanded','false')}
   function renderView(){
-    $('discovery').hidden=view!=='discover';$('collection-directory').hidden=view!=='collections';
+    $('discover-hero').hidden=view!=='discover';$('discovery').hidden=view!=='discover';$('collection-directory').hidden=view!=='collections';
+    $('browse-toolbar').hidden=view==='collections';$('browse-scope-toolbar').hidden=view==='collections';
+    $('workspace-title').textContent=({discover:'Discover',assets:'Asset library',collections:'Collections'})[view];
     document.querySelector('.browse-layout').hidden=view==='collections';
     document.querySelectorAll('.browse-nav [data-view]').forEach(a=>{if(a.dataset.view===view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
   }
@@ -162,8 +165,19 @@
   }
   function renderDirectory(){
     const counts=VisualAtlasSearch.directory(entries,{});
-    const cats=$('category-directory');cats.replaceChildren();
-    for(const {value,count} of counts.category_path.filter(x=>!x.value.includes('.'))){const link=directoryLink(facetLabel('category_path',value),count,{category_path:value,status:'published'});addCover(link,entries.find(a=>!a.legacy&&a.thumbnail&&a.discovery==='standalone'&&a.category_path?.includes(value)));cats.append(link)}
+    const cats=$('category-directory'),side=$('sidebar-categories'),hero=$('hero-art');cats.replaceChildren();side.replaceChildren();hero.replaceChildren();
+    const top=counts.category_path.filter(x=>!x.value.includes('.'));
+    const coverFor=value=>entries.find(a=>!a.legacy&&a.thumbnail&&a.discovery==='standalone'&&a.category_path?.includes(value))||entries.find(a=>!a.legacy&&a.thumbnail&&a.category_path?.includes(value));
+    for(const {value,count} of top){
+      const filters={category_path:value,status:'published'},label=facetLabel('category_path',value),cover=coverFor(value);
+      const link=directoryLink(label,count,filters);addCover(link,cover);cats.append(link);
+      const nav=directoryLink(label,count,filters);nav.dataset.category=value;side.append(nav);
+    }
+    // The hero is a collage of real, published previews, not invented scene artwork.
+    for(const value of ['world','gui','items','characters','effects','icons']){
+      const entry=coverFor(value);if(!entry?.thumbnail)continue;
+      const img=document.createElement('img');img.src=entry.thumbnail;img.alt='';img.decoding='async';hero.append(img);
+    }
     const perspectives=$('perspective-directory');perspectives.replaceChildren();
     for(const {value,count} of counts.perspective)perspectives.append(directoryLink(facetLabel('perspective',value),count,{perspective:value,status:'published'}));
     const media=$('medium-directory');media.replaceChildren();
@@ -188,6 +202,7 @@
   function update(){
     const query=$('search').value,params={...filterValues(),query,synonyms,scope:$('scope').value,sort:$('sort').value};
     const counts=refreshFacets(params);activeChips();renderView();renderSubcategories(params,counts.category_path);syncRoute(params);
+    document.querySelectorAll('#sidebar-categories [data-category]').forEach(el=>{if(params.category_path===el.dataset.category||params.category_path.startsWith(el.dataset.category+'.'))el.setAttribute('aria-current','true');else el.removeAttribute('aria-current')});
     matches=VisualAtlasSearch.results(entries,params);shown=0;if(cardObserver)for(const node of $('gallery').querySelectorAll('.asset-tile'))cardObserver.unobserve(node);$('gallery').replaceChildren();
     $('count').textContent=matches.length.toLocaleString()+' matches';
     const refining=Boolean(query.trim()||params.scope||FACETS.some(key=>params[key]));
@@ -421,8 +436,11 @@
   previewCanvas.addEventListener('pointerdown',e=>{try{if(directPointer(e,false)){e.preventDefault();detailPointer=e.pointerId;previewCanvas.setPointerCapture(e.pointerId);}}catch(err){notify(err.message)}});
   previewCanvas.addEventListener('pointermove',e=>{if(detailPointer!==e.pointerId)return;try{directPointer(e,true)}catch(err){notify(err.message)}});
   for(const event of ['pointerup','pointercancel','lostpointercapture'])previewCanvas.addEventListener(event,e=>{if(detailPointer===e.pointerId)detailPointer=null;});
+  $('nav-toggle').onclick=()=>{$('nav-toggle').setAttribute('aria-expanded',String(document.body.classList.toggle('nav-open')))};
+  $('sidebar-archive').onclick=e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();navigate('assets',{status:'archive'})};
+  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('search').focus()}if(e.key==='Escape'&&!$('detail').open)closeNavigation()});
   $('more').onclick=more;for(const id of ['search','sort','scope',...FACETS])$(id).addEventListener('input',()=>{view='assets';update()});
-  document.querySelectorAll('[data-view]').forEach(a=>a.addEventListener('click',e=>{if(e.button||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();navigate(a.dataset.view)}));
+  document.querySelectorAll('[data-view]').forEach(a=>a.addEventListener('click',e=>{if(e.button||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();if(entries.length)navigate(a.dataset.view);else location.href=a.href}));
   window.addEventListener('popstate',()=>{if(entries.length)readRoute()});
   $('clear-filters').onclick=()=>navigate('discover',{},false);
   $('copy-id').onclick=()=>{if(current)navigator.clipboard.writeText(current.id).then(()=>notify('Asset ID copied')).catch(()=>notify('Clipboard unavailable'))};

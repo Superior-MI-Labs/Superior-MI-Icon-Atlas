@@ -7,13 +7,21 @@
 <script src="visual-core.js" defer></script><script src="input-core.js" defer></script><script src="slot-core.js" defer></script><script src="collection-core.js" defer></script><script src="zip-core.js" defer></script>
 <script src="interaction-core.js" defer></script><script src="asset-renderer.js" defer></script>
 <script src="public-search.js" defer></script><script src="app.js" defer></script></head>
-<body>
-<header class="topbar"><div class="brand"><span class="mark" aria-hidden="true">◈</span><div><p class="eyebrow">SUPERIOR MI LABS</p><h1>Visual Atlas</h1></div></div>
-<div class="headright"><a href="builder.html">Builder / My Bag</a><a href="sky-motion-lab.html" title="Experimental motion sequences">Motion Lab</a><a href="sky-prototype.html" title="Experimental animation and HUD demo">Sky Prototype</a><a href="ai-guide.html">Create with AI</a><a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas" target="_blank" rel="noopener noreferrer">GitHub</a></div></header>
+<body class="atlas-app">
+<aside class="app-sidebar" id="app-sidebar" aria-label="Application navigation">
+<a class="app-brand" href="?" data-view="discover"><svg viewBox="0 0 48 48" width="38" height="38" aria-hidden="true"><path fill="#56bfff" d="m24 2 21 12-21 12L3 14z"/><path fill="#2876d9" d="m3 20 21 12 21-12v8L24 40 3 28z"/><path fill="#1b467c" d="m3 34 21 12 21-12v-4L24 42 3 30z"/></svg><span><small>SUPERIOR MI LABS</small><strong>Visual Atlas</strong></span></a>
+<nav class="browse-nav" aria-label="Library views">
+<a href="?" data-view="discover"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 3l9 7v11h-6v-7H9v7H3z"/></svg>Discover</a>
+<a href="?view=assets" data-view="assets"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Assets</a>
+<a href="?view=collections" data-view="collections"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/></svg>Collections</a></nav>
+<div class="side-section"><h2>Browse categories</h2><nav id="sidebar-categories" aria-label="Asset categories"></nav></div>
+<div class="side-section"><h2>Creator tools</h2><nav class="tool-nav"><a href="builder.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6 4 4M5 19l-2-2L16 4l4 4L7 21zM4 4l4 4m8 8 4 4"/></svg>Builder / My Bag</a><a href="ai-guide.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5z"/></svg>Create with AI</a><a href="sky-motion-lab.html">Motion Lab</a><a href="sky-prototype.html">Sky Prototype <small>Experimental</small></a></nav></div>
+<div class="side-section side-bottom"><nav class="tool-nav"><a id="sidebar-archive" href="?view=assets&amp;status=archive"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v11h14V9M9 13h6"/></svg>Legacy archive</a><a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas">Source repository</a></nav><p>Open visual resources.<br>Licenses shown per asset.</p></div>
+</aside>
+<div class="app-workspace">
+<header class="app-topbar"><button id="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar" aria-expanded="false"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><span id="workspace-title">Discover</span><label class="searchbox"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><span class="sr-only">Search published assets</span><input id="search" type="search" placeholder="Search assets, collections, styles..." autocomplete="off"><kbd>Ctrl K</kbd></label><a class="top-builder" href="builder.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6 4 4M5 19l-2-2L16 4l4 4L7 21zM4 4l4 4m8 8 4 4"/></svg><span>Builder</span></a></header>
 <main class="browse-main">
-<section class="browse-hero"><p class="eyebrow">GAME ASSETS & REUSABLE VISUALS</p><h2>Find the asset your project needs.</h2>
-<p>Explore visual artwork, from 2D and isometric game assets to interfaces, icons and motion. Search everything or browse by category, perspective or collection.</p></section>
-<nav class="browse-nav" aria-label="Library views"><a href="?" data-view="discover">Discover</a><a href="?view=assets" data-view="assets">Assets</a><a href="?view=collections" data-view="collections">Collections</a></nav>
+<section class="browse-hero" id="discover-hero"><div class="hero-copy"><p class="eyebrow">OPEN VISUAL RESOURCES</p><h2>Build your world.<br><span>Find your next asset.</span></h2><p>Explore 2D art, isometric worlds, interfaces, icons and animation. Discover collections, inspect live previews and build with reusable visual assets.</p><div class="hero-actions"><a class="hero-primary" href="?view=assets" data-view="assets">Explore assets</a><a href="?view=collections" data-view="collections">Browse collections</a></div></div><div id="hero-art" aria-hidden="true"></div></section>
 <section id="discovery" class="discovery" aria-label="Discover the library">
 <div class="directory-heading"><h3>Browse by category</h3><span id="library-totals" class="muted"></span></div>
 <div id="category-directory" class="directory-grid"></div>
@@ -22,11 +30,11 @@
 <div class="directory-heading"><h3>Recently released collections</h3><a href="?view=collections" data-view="collections">All collections</a></div><div id="recent-collections" class="directory-grid"></div><div class="directory-heading"><h3>Archive</h3></div><div id="archive-directory" class="directory-chips"></div>
 </section>
 <section id="collection-directory" class="discovery" aria-label="Collection directory" hidden><div class="directory-heading"><h3>Published collections</h3><a href="?view=assets" data-view="assets">Browse all assets</a></div><div id="family-directory"></div></section>
-<section class="browse-tools" aria-label="Browse filters"><label class="searchbox"><span class="sr-only">Search published assets</span><input id="search" type="search" placeholder="Search assets, styles, themes and collections..." autocomplete="off"></label>
+<section class="browse-tools" id="browse-toolbar" aria-label="Browse filters">
 <label><span class="sr-only">Asset type</span><select id="kind"><option value="">All asset types</option></select></label>
 <label><span class="sr-only">Collection</span><select id="pack"><option value="">All collections</option></select></label>
 <label><span class="sr-only">Sort</span><select id="sort"><option value="recommended">Recommended</option><option value="newest">Newest</option><option value="name">Name A–Z</option></select></label></section>
-<section class="browse-tools" aria-label="Discovery and collections">
+<section class="browse-tools" id="browse-scope-toolbar" aria-label="Discovery and collections">
 <label>Browse <select id="scope"><option value="">Ready-to-use &amp; standalone</option><option value="components">Reusable components</option><option value="all">All listed assets</option></select></label>
 <details id="pack-directory"><summary>Browse downloadable asset packs</summary><div id="pack-links" class="detail-showcases"></div></details>
 </section>
@@ -58,6 +66,7 @@
 <p id="browse-error" class="browse-error" role="alert" hidden></p></section></div>
 </main>
 <footer>Legacy icons are archive candidates and require rights review. Published assets carry their own licenses. <a href="builder.html">Import a ZIP privately</a> · <a href="ai-guide.html">AI authoring guide</a> · <a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas">Source repository</a></footer>
+</div>
 <dialog id="detail" class="asset-detail" aria-labelledby="detail-title"><div class="detail-head"><div><p class="eyebrow" id="detail-type">VISUAL ASSET</p><h2 id="detail-title">Asset preview</h2><p class="muted" id="detail-pack"></p></div><button type="button" id="close" aria-label="Close preview">✕</button></div>
 <div class="asset-detail-body"><div><div class="detail-stage checker"><canvas id="detail-canvas" width="460" height="260" aria-label="Live manifest-driven asset preview"></canvas></div>
 <div class="preview-actions"><button type="button" id="play">Pause</button><button type="button" id="step">Step</button><span id="time-value" class="muted"></span></div><div id="controls" class="asset-controls"></div></div>

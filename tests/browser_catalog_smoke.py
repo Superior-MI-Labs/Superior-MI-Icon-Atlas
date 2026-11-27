@@ -31,6 +31,12 @@ def check(page,published_only=False):
     page.on("pageerror", lambda err: errors.append(str(err)))
     page.reload(wait_until="networkidle")
     expect(page.locator("#count")).to_have_text(published_matches(), timeout=20000)
+    expect(page.locator("#app-sidebar")).to_be_visible()
+    expect(page.locator(".app-topbar #search")).to_be_visible()
+    page.keyboard.press("Control+k")
+    expect(page.locator("#search")).to_be_focused()
+    assert page.locator("#hero-art img").count() >= 1
+    assert page.locator("#sidebar-categories a").count() >= 4
 
     # Discovery is navigable without typing a query; counts come from the same catalog.
     page.locator('#category-directory a').filter(has_text='World & Environment').click()
@@ -416,6 +422,12 @@ def main():
                 mobile.goto(url, wait_until="networkidle")
                 expect(mobile.locator("#count")).to_have_text(published_matches(), timeout=20000)
                 assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Horizontal overflow on mobile"
+                mobile.locator("#nav-toggle").click()
+                expect(mobile.locator("#nav-toggle")).to_have_attribute("aria-expanded","true")
+                mobile.locator("#sidebar-categories a[data-category=world]").click()
+                expect(mobile.locator("#count")).to_have_text("53 matches")
+                expect(mobile.locator("#nav-toggle")).to_have_attribute("aria-expanded","false")
+                assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Asset view overflows on mobile"
                 print("Responsive viewport: PASS")
             finally:
                 browser.close()
