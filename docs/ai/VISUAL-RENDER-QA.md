@@ -12,13 +12,23 @@ python3 tests/browser_visual_matrix.py \
   --spec tests/visual-scenarios.json --out /tmp/visual-render-QA
 ```
 
-For an external candidate, pass `--archive /path/to/candidate.zip` (all cases must use the same safe pack label). This imports the exact bytes, without copying the pack into source or publishing it. Prefer the existing acceptance command with `--visual-spec` for a single combined receipt. Each browser case records the ZIP SHA-256, asset ID and covered samples. Missing browser evidence is not a PASS.
+For an external candidate, pass `--archive /path/to/candidate.zip` (all cases must use the same safe pack label). Exact ZIP mode reads the canonical authored Builder in `web/` and does not require a site build. This imports the exact bytes, without copying the pack into source or publishing it. Prefer the existing acceptance command with `--visual-spec` for a single combined receipt. Each browser case records the ZIP SHA-256, asset ID and covered samples. Missing browser evidence is not a PASS.
 
 By default, the runner uses `/usr/bin/chromium` when present, otherwise Playwright's installed Chromium. It injects the built JS and ZIP bytes without a server or network. A nonzero exit means a failed check or a render that couldn't be performed.
 
 ## Collection regression suites
 
 Keep the shared `tests/visual-scenarios.json` baseline intact. Put new collection-specific regression specifications in `tests/visual-packs/<collection-slug>/<suite>.json`, using the same existing schema and runner. Each file contains 1–40 cases, with unique IDs and a matching local ZIP basename. CI runs every such file and archives its report. For collections needing more than 40 cases, add further bounded suites in the same collection directory.
+
+## Qualify one collection without the full repository build
+
+```bash
+bash RUN-ALL.sh --collection painterly-fantasy-woodland
+```
+
+Install Playwright/Chromium in the same Python environment as Pillow and jsonschema. The command packages only the requested collection using the same deterministic ZIP writer as Pages, scans its pixels and manifest, and runs every registered bounded suite in that collection directory. It fails for an unknown collection or missing suite. Evidence is written to a new temporary directory (or pass an empty output directory as the third argument). For a new external ZIP without registered suites, use `tools/ai_acceptance.py` with explicit creator assertions and `--visual-spec` instead.
+
+On GitHub Actions, manually dispatch **Publish Visual Atlas** with the optional `collection` input to run only this lane. This never builds or deploys Pages and does not cancel full regression. A blank input, pull request or main push continues to run the full qualification workflow, including every registered collection suite, core and pixel-art scenarios, catalog checks and the deployable artifact check. The scoped result is not a substitute for creator-specific acceptance, artistic review, rights clearance, or full repository regression.
 
 ## Author a new case
 

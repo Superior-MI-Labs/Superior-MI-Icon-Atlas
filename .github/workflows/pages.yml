@@ -5,15 +5,42 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      collection:
+        description: 'Optional authored collection slug for scoped QA only (no deployment)'
+        type: string
+        required: false
+        default: ''
 permissions:
   contents: read
 concurrency:
   # PR qualification must not cancel an in-progress main-site deployment.
   # New commits to the same PR still supersede older runs to conserve minutes.
-  group: github-pages-${{ github.ref }}
+  group: github-pages-${{ github.ref }}-${{ github.event_name == 'workflow_dispatch' && inputs.collection != '' && format('collection-{0}', inputs.collection) || 'full' }}
   cancel-in-progress: true
 jobs:
+  qualify-collection:
+    if: github.event_name == 'workflow_dispatch' && inputs.collection != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install collection QA dependencies
+        run: |
+          python3 -m pip install -r requirements-test.txt playwright
+          python3 -m playwright install --with-deps chromium
+      - name: Qualify only the requested collection
+        env:
+          COLLECTION: ${{ inputs.collection }}
+        run: bash RUN-ALL.sh --collection "$COLLECTION" /tmp/smi-atlas-collection
+      - name: Upload scoped collection evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: collection-qa
+          path: /tmp/smi-atlas-collection/
+          if-no-files-found: ignore
   build:
+    if: github.event_name != 'workflow_dispatch' || inputs.collection == ''
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,13 +53,9 @@ jobs:
       - name: Install browser visual QA dependencies
         run: python3 -m pip install playwright && python3 -m playwright install --with-deps chromium
       - name: Check animated states, GUI fills, layered effects and preset visuals
-        run: |
-          python3 tests/browser_visual_matrix.py --spec tests/visual-scenarios.json --out /tmp/smi-visual-render-qa
-          for spec in tests/visual-packs/*/*.json; do
-            [ -f "$spec" ] || continue
-            slug=$(basename "$(dirname "$spec")")
-            python3 tests/browser_visual_matrix.py --spec "$spec" --out "/tmp/smi-visual-render-qa/packs/$slug/$(basename "$spec" .json)"
-          done
+        run: python3 tests/browser_visual_matrix.py --spec tests/visual-scenarios.json --out /tmp/smi-visual-render-qa
+      - name: Qualify registered collection regression suites
+        run: bash RUN-ALL.sh --collection-regressions /tmp/smi-visual-render-qa/packs
       - name: Render all 48 published pixel icons and item interactions in the actual Builder
         run: python3 tests/browser_visual_matrix.py --spec tests/pixel-release-scenarios.json --out /tmp/smi-pixel-visual-qa
       - name: Smoke-test the public browser and responsive filters
@@ -58,7 +81,7 @@ jobs:
         with:
           path: site/
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && (github.event_name != 'workflow_dispatch' || inputs.collection == '')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

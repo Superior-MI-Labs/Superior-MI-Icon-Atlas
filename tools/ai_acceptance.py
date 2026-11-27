@@ -122,7 +122,7 @@ def main():
     parser.add_argument('zip',type=Path)
     parser.add_argument('--acceptance',type=Path,required=True,help='Creator-specific JSON checks: REQUIRED')
     parser.add_argument('--out',type=Path,required=True)
-    parser.add_argument('--visual-spec',type=Path,help='Run real Chromium scenarios on this exact ZIP (build the site first)')
+    parser.add_argument('--visual-spec',type=Path,help='Run real Chromium scenarios on this exact ZIP using the authored Builder')
     args=parser.parse_args()
     try:
         spec=json.loads(args.acceptance.read_text(encoding='utf-8'))

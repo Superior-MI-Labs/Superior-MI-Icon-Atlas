@@ -33,6 +33,65 @@ class VisualScenarioContractTests(unittest.TestCase):
                 self.assertNotIn(case['id'], ids)
                 ids.add(case['id'])
 
+    def test_external_archive_uses_authored_builder(self):
+        self.assertEqual(module.builder_root_for(None),module.SITE)
+        self.assertEqual(module.builder_root_for(Path('candidate.zip')),ROOT/'web')
+        self.assertIn('id="stage"',module.loaded_html(ROOT/'web'))
+        for path in module.SCRIPTS:
+            self.assertTrue((ROOT/'web'/path).is_file(),path)
+
+    def test_scoped_runner_selects_only_requested_suites_and_fails_closed(self):
+        import os
+        import shutil
+        import subprocess
+        with TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            shutil.copyfile(ROOT/'RUN-ALL.sh',root/'RUN-ALL.sh')
+            for slug in ('first','second'):
+                (root/'examples'/slug).mkdir(parents=True)
+                folder=root/'tests/visual-packs'/slug
+                folder.mkdir(parents=True)
+                (folder/'one.json').touch()
+            (root/'tests/visual-packs/first/two.json').touch()
+            (root/'bin').mkdir()
+            stub=root/'bin/python3'
+            stub.write_text('#!/bin/sh\n[ "$1" = -c ] && exit 0\n'
+                            'printf "%s\\n" "$*" >> "$TRACE"\n'
+                            'case "$*" in *"$FAIL_MATCH"*) [ -z "$FAIL_MATCH" ] || exit 7;; esac\n')
+            stub.chmod(0o755)
+            trace=root/'trace'
+            def invoke(*args,fail=''):
+                trace.write_text('')
+                env=dict(os.environ,PATH=str(root/'bin')+os.pathsep+os.environ['PATH'],
+                         TRACE=str(trace),FAIL_MATCH=fail)
+                result=subprocess.run(['bash',str(root/'RUN-ALL.sh'),*args],
+                    cwd=root,env=env,capture_output=True,text=True)
+                return result,trace.read_text().splitlines()
+            result,calls=invoke('--collection','first',str(root/'scoped'))
+            self.assertEqual(result.returncode,0,result.stderr)
+            self.assertEqual(len(calls),4,calls)
+            self.assertIn('tools/build_site.py --collection first',calls[0])
+            self.assertIn('tools/qualify_asset_zip.py',calls[1])
+            self.assertTrue(all('--archive' in c and 'visual-packs/first/' in c for c in calls[2:]))
+            self.assertNotIn('second','\n'.join(calls))
+            result,calls=invoke('--collection-regressions',str(root/'regression'))
+            self.assertEqual(result.returncode,0,result.stderr)
+            self.assertEqual(len(calls),3,calls)
+            self.assertTrue(all('browser_visual_matrix.py' in c and '--archive' not in c for c in calls))
+            result,calls=invoke('--collection','first',str(root/'failed'),fail='qualify_asset_zip.py')
+            self.assertEqual(result.returncode,7)
+            self.assertEqual(len(calls),2)
+            self.assertNotIn('COLLECTION SCENARIOS PASS',result.stdout)
+            for args in (('--collection','../escape'),('--collection','missing'),('--collection',)):
+                result,calls=invoke(*args)
+                self.assertNotEqual(result.returncode,0)
+                self.assertEqual(calls,[])
+            for spec in (root/'tests/visual-packs').glob('*/*.json'):
+                spec.unlink()
+            result,calls=invoke('--collection-regressions',str(root/'empty'))
+            self.assertNotEqual(result.returncode,0)
+            self.assertEqual(calls,[])
+
     def test_exact_archive_override(self):
         with TemporaryDirectory() as tmp:
             archive=Path(tmp)/'candidate.zip';archive.touch()
