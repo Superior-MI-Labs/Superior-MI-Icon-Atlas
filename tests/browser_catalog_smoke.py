@@ -40,6 +40,9 @@ def check(page,published_only=False):
     assert page.locator("#sidebar-categories a").count() >= 4
     assert page.locator("#theme-directory a").count() >= 1
     family = page.locator('#collection-family-directory a').filter(has_text='Painterly Fantasy World')
+    expect(family).to_have_count(1)
+    assert 1 <= family.locator('.collection-covers img').count() <= 3
+    expect(page.locator('#hero-totals')).to_have_text(page.locator('#library-totals').inner_text())
     family.click()
     expect(page.locator('#count')).to_have_text('53 matches')
     page.locator('#clear-filters').click()
@@ -58,7 +61,8 @@ def check(page,published_only=False):
     page.locator('#perspective').select_option('isometric')
     expect(page.locator('#count')).to_have_text('4 matches')
     # Verify gallery-only browsing on a fresh page, including actual network requests.
-    preview_page=page.context.new_page()
+    preview_context=page.context.browser.new_context(viewport=page.viewport_size)
+    preview_page=preview_context.new_page()
     requests=[]
     preview_page.on('request',lambda req:requests.append(req.url))
     try:
@@ -76,7 +80,7 @@ def check(page,published_only=False):
         preview_page.wait_for_function("document.querySelector('#detail-canvas').width > 0")
         assert any(url.endswith(chest_zip) for url in requests),requests
     finally:
-        preview_page.close()
+        preview_context.close()
     assert 'perspective=isometric' in page.url
     page.reload(wait_until='networkidle')
     expect(page.locator('#count')).to_have_text('4 matches')

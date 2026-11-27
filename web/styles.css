@@ -180,3 +180,12 @@
 .atlas-theme .guide-shell p{color:#d4dfec}
 .atlas-theme .guide-shell .guide-actions{display:flex;flex-wrap:wrap;gap:8px}
 @media(max-width:760px){.atlas-theme .atlas-tool-header{gap:8px}.atlas-tool-nav{flex:1 1 100%;order:3}.atlas-tool-nav a{font-size:12px;padding:6px 8px}.atlas-tool-context{font-size:10px}.atlas-tool-header .app-brand strong{font-size:18px}}
+
+/* Artwork-led discovery, using published thumbnail bytes and catalog totals. */
+.atlas-app .browse-hero .hero-totals{margin:12px 0 0;font-size:12px;font-weight:600}
+.atlas-app #collection-family-directory{grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr))}
+.atlas-app .family-card .collection-covers{height:120px;background:radial-gradient(ellipse at center,#274563,#101a28 75%)}
+.atlas-app .family-card strong{font-size:15px;line-height:1.3}
+.atlas-app #recent-collections{grid-template-columns:repeat(auto-fit,minmax(min(100%,205px),1fr))}
+.atlas-app #category-directory .directory-cover{background:radial-gradient(ellipse at center,#253b55,#101a28 75%)}
+@media(max-width:620px){.atlas-app #collection-family-directory,.atlas-app #recent-collections{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-app .family-card .collection-covers{height:76px}}

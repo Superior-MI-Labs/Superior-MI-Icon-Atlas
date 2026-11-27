@@ -176,17 +176,19 @@
   function builderURL(pack,id){
     return 'builder.html?example='+encodeURIComponent(pack.zip.split('/').at(-1))+'&asset='+encodeURIComponent(id);
   }
+  function previewStrip(entries){
+    const strip=document.createElement('div');strip.className='collection-covers';strip.setAttribute('aria-hidden','true');
+    const sources=[...new Map(entries.filter(a=>a?.thumbnail).map(a=>[a.thumbnail,a])).values()].slice(0,3);
+    for(const entry of sources)strip.append(coverImage(entry));
+    if(!sources.length){const empty=document.createElement('span');empty.textContent='Open to explore';strip.append(empty);}
+    return strip;
+  }
   function collectionCard(pack,summary){
     const node=document.createElement('article');node.className='collection-card';node.dataset.pack=pack.id;
     const {standalone,components,previews}=summary||{standalone:0,components:0,previews:[]};
     const scope=standalone?'':'components',count=standalone||components;
     const link=directoryLink(pack.name,count,{pack:pack.id,scope},standalone?'standalone assets':'components');
-    const strip=document.createElement('div');strip.className='collection-covers';strip.setAttribute('aria-hidden','true');
-    const cover=entryById.get(pack.cover_asset);
-    const sources=[...new Map([cover,...previews].filter(a=>a?.thumbnail).map(a=>[a.thumbnail,a])).values()].slice(0,3);
-    for(const entry of sources)strip.append(coverImage(entry));
-    if(!sources.length){const empty=document.createElement('span');empty.textContent='Open to explore';strip.append(empty);}
-    link.prepend(strip);node.append(link);
+    link.prepend(previewStrip([entryById.get(pack.cover_asset),...previews]));node.append(link);
     const meta=document.createElement('p');meta.className='collection-meta muted';
     meta.textContent=[pack.published,...(pack.license||[]),pack.visual_qa==='pending'?'Visual review pending':pack.visual_qa==='reviewed'?'Visual QA reviewed':'Visual review unspecified'].filter(Boolean).join(' · ');node.append(meta);
     if(standalone&&components){
@@ -214,7 +216,7 @@
     }
     const perspectives=$('perspective-directory');perspectives.replaceChildren();
     for(const {value,count} of counts.perspective)perspectives.append(directoryLink(facetLabel('perspective',value),count,{perspective:value,status:'published'}));
-    for(const [key,id] of [['medium','medium-directory'],['theme','theme-directory'],['family','collection-family-directory']]){
+    for(const [key,id] of [['medium','medium-directory'],['theme','theme-directory']]){
       const target=$(id);target.replaceChildren();
       for(const {value,count} of counts[key])target.append(directoryLink(facetLabel(key,value),count,{[key]:value,status:'published'}));
     }
@@ -222,17 +224,31 @@
     const published=[...collections.values()].filter(p=>p.zip).sort((a,b)=>String(b.published).localeCompare(String(a.published))||a.name.localeCompare(b.name));
     $('library-totals').textContent=(counts.status.find(x=>x.value==='published')?.count||0).toLocaleString()+' standalone assets · '+published.length+' collections';
     // Summarize actual public entries once, rather than scanning the catalog per card.
-    const summaries=new Map();
+    const summaries=new Map(),familyPreviews=new Map();
     for(const a of entries){
       if(a.legacy||a.discovery==='hidden')continue;
       if(!summaries.has(a.pack))summaries.set(a.pack,{standalone:0,components:0,previews:[]});
       const summary=summaries.get(a.pack),component=a.discovery==='component';
       summary[component?'components':'standalone']++;
-      if(!component&&a.thumbnail&&summary.previews.length<3&&!summary.previews.some(x=>x.thumbnail===a.thumbnail))summary.previews.push(a);
+      if(!component&&a.thumbnail){
+        if(summary.previews.length<3&&!summary.previews.some(x=>x.thumbnail===a.thumbnail))summary.previews.push(a);
+        if(a.family){
+          if(!familyPreviews.has(a.family))familyPreviews.set(a.family,[]);
+          const candidates=familyPreviews.get(a.family);
+          if(candidates.length<3&&!candidates.some(x=>x.pack===a.pack||x.thumbnail===a.thumbnail))candidates.push(a);
+        }
+      }
     }
     const makeCard=p=>collectionCard(p,summaries.get(p.id));
     const recent=$('recent-collections');recent.replaceChildren(...published.slice(0,6).map(makeCard));
     const families=new Map();for(const p of published){const key=p.family||'';if(!families.has(key))families.set(key,[]);families.get(key).push(p)}
+    const familyDirectory=$('collection-family-directory');familyDirectory.replaceChildren();
+    for(const {value,count} of counts.family){
+      const link=directoryLink(facetLabel('family',value),count,{family:value,status:'published'},'standalone assets');
+      link.classList.add('family-card');link.prepend(previewStrip(familyPreviews.get(value)||[]));
+      familyDirectory.append(link);
+    }
+    $('hero-totals').textContent=$('library-totals').textContent;
     const directory=$('family-directory');directory.replaceChildren();
     for(const [key,packs] of families){const section=document.createElement('section'),heading=document.createElement('h4');heading.textContent=taxonomy.families[key]||'Other collections';section.append(heading);const grid=document.createElement('div');grid.className='directory-grid';grid.append(...packs.map(makeCard));section.append(grid);directory.append(section)}
   }
