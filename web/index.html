@@ -8,6 +8,7 @@
 <script src="interaction-core.js" defer></script><script src="asset-renderer.js" defer></script>
 <script src="public-search.js" defer></script><script src="app.js" defer></script></head>
 <body class="atlas-app">
+<a class="skip-link" href="#asset-main">Skip to content</a>
 <aside class="app-sidebar" id="app-sidebar" aria-label="Application navigation">
 <a class="app-brand" href="?" data-view="discover"><svg viewBox="0 0 48 48" width="38" height="38" aria-hidden="true"><path fill="#56bfff" d="m24 2 21 12-21 12L3 14z"/><path fill="#2876d9" d="m3 20 21 12 21-12v8L24 40 3 28z"/><path fill="#1b467c" d="m3 34 21 12 21-12v-4L24 42 3 30z"/></svg><span><small>SUPERIOR MI LABS</small><strong>Visual Atlas</strong></span></a>
 <nav class="browse-nav" aria-label="Library views">
@@ -19,8 +20,8 @@
 <div class="side-section side-bottom"><nav class="tool-nav"><a id="sidebar-archive" href="?view=assets&amp;status=archive"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v11h14V9M9 13h6"/></svg>Legacy archive</a><a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas">Source repository</a></nav><p>Open visual resources.<br>Licenses shown per asset.</p></div>
 </aside>
 <div class="app-workspace">
-<header class="app-topbar"><button id="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar" aria-expanded="false"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><span id="workspace-title">Discover</span><label class="searchbox"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><span class="sr-only">Search published assets</span><input id="search" type="search" placeholder="Search assets, collections, styles..." autocomplete="off"><kbd>Ctrl K</kbd></label><a class="top-builder" href="builder.html"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6 4 4M5 19l-2-2L16 4l4 4L7 21zM4 4l4 4m8 8 4 4"/></svg><span>Builder</span></a></header>
-<main class="browse-main">
+<header class="app-topbar"><button id="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar" aria-expanded="false"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><h1 id="workspace-title">Discover</h1><label class="searchbox"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><span class="sr-only">Search published assets</span><input id="search" type="search" placeholder="Search assets, collections, styles..." autocomplete="off"><kbd>Ctrl K</kbd></label><a class="top-builder" href="builder.html" aria-label="Open Builder"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6 4 4M5 19l-2-2L16 4l4 4L7 21zM4 4l4 4m8 8 4 4"/></svg><span>Builder</span></a></header>
+<main class="browse-main" id="asset-main" tabindex="-1">
 <section class="browse-hero" id="discover-hero"><div class="hero-copy"><p class="eyebrow">OPEN VISUAL RESOURCES</p><h2>Build your world.<br><span>Find your next asset.</span></h2><p>Explore 2D art, isometric worlds, interfaces, icons and animation. Discover collections, inspect live previews and build with reusable visual assets.</p><div class="hero-actions"><a class="hero-primary" href="?view=assets" data-view="assets">Explore assets</a><a href="?view=collections" data-view="collections">Browse collections</a></div></div><div id="hero-art" aria-hidden="true"></div></section>
 <section id="discovery" class="discovery" aria-label="Discover the library">
 <div class="directory-heading"><h3>Browse by category</h3><span id="library-totals" class="muted"></span></div>
@@ -40,8 +41,8 @@
 </section>
 <div class="browse-layout">
 <aside class="browse-facets" aria-label="Refine results">
-<div class="facets-head"><h3><span aria-hidden="true">☷</span> Refine results</h3><button type="button" id="clear-filters" class="text-action">Clear all</button></div>
-<div class="facet-fields">
+<div class="facets-head"><h3><span aria-hidden="true">☷</span> Refine results</h3><button type="button" id="filter-toggle" aria-controls="facet-panel" aria-expanded="true">Filters</button><button type="button" id="clear-filters" class="text-action">Clear all</button></div>
+<div id="facet-panel"><div class="facet-fields">
 <label>Category <select id="category_path"><option value="">All categories</option></select></label>
 <nav id="category-children" class="directory-chips" aria-label="Subcategories"></nav>
 <label>Perspective <select id="perspective"><option value="">All perspectives</option></select></label>
@@ -58,7 +59,7 @@
 <label>Experiences <select id="experience"><option value="">All experiences</option></select></label>
 <label>Capability <select id="capability"><option value="">All capabilities</option></select></label>
 <label>Slot interface <select id="interface"><option value="">All interfaces</option></select></label>
-</div><p class="facet-footnote">Filters reflect metadata in the actual asset manifests. Legacy icons are preserved for review.</p></aside>
+</div><p class="facet-footnote">Filters reflect metadata in the actual asset manifests. Legacy icons are preserved for review.</p></div></aside>
 <section class="browse-results" id="asset-results" aria-label="Asset results">
 <div class="browse-summary"><div><h3 id="browse-title">Explore assets</h3><p id="browse-subtitle" class="muted">Ready-to-use compositions appear first. Legacy icon candidates remain searchable.</p></div><span id="count" role="status" aria-live="polite">Loading assets…</span></div>
 <div id="active-filters" class="active-filters" aria-label="Active filters"></div><section id="gallery" class="asset-grid" aria-label="Published visual assets"></section>
@@ -77,7 +78,7 @@
 <div class="detail-utilities"><button type="button" id="copy-id">Copy ID</button><button type="button" id="copy-link">Copy link</button></div>
 <label class="tint-control" id="tint-options" hidden><input id="tint-enabled" type="checkbox"> Recolor icon <input id="tint-color" type="color" value="#4b9cff" aria-label="Tint color"></label>
 <h3>Download</h3>
-<button id="download-png" type="button" class="primary">PNG (current frame)</button><button id="download-asset" type="button">This asset ZIP</button><a id="download-pack" href="#" download>Full collection ZIP</a>
+<button id="download-png" type="button" class="primary" disabled>PNG (current frame)</button><button id="download-asset" type="button">This asset ZIP</button><a id="download-pack" href="#" download>Full collection ZIP</a>
 <a id="open-builder" href="builder.html">Open in full builder</a><p class="muted">An asset ZIP includes its manifest dependencies, required texture sheets and source license notices.</p></div></div>
 </dialog>
 <div class="notice" id="notice" hidden aria-live="polite"></div></body></html>
