@@ -160,22 +160,42 @@
     document.querySelector('.browse-layout').hidden=view==='collections';
     document.querySelectorAll('.browse-nav [data-view]').forEach(a=>{if(a.dataset.view===view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
   }
-  function directoryLink(label,count,filters){
+  function directoryLink(label,count,filters,unit='assets'){
     const a=document.createElement('a');a.href=browseURL('assets',filters);a.className='directory-link';
     const title=document.createElement('strong');title.textContent=label;
-    const meta=document.createElement('span');meta.className='muted';meta.textContent=count.toLocaleString()+' assets';
+    const meta=document.createElement('span');meta.className='muted';meta.textContent=count.toLocaleString()+' '+unit;
     a.append(title,meta);a.onclick=e=>{if(e.button||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();navigate('assets',filters)};
     return a;
   }
-  function addCover(node,entry){
-    if(!entry?.thumbnail)return;
-    const img=document.createElement('img');img.src=entry.thumbnail;img.alt='';img.loading='lazy';img.decoding='async';img.className='directory-cover checker';img.onerror=()=>img.remove();node.prepend(img);
+  function coverImage(entry){
+    const img=document.createElement('img');img.src=entry.thumbnail;img.alt='';img.loading='lazy';img.decoding='async';img.className='directory-cover';img.onerror=()=>img.remove();return img;
   }
-  function collectionCard(pack){
-    const node=document.createElement('article');node.className='collection-card';
-    const link=directoryLink(pack.name,pack.listed_count,{pack:pack.id});addCover(link,entryById.get(pack.cover_asset));node.append(link);
-    const meta=document.createElement('p');meta.className='muted';meta.textContent=[pack.published,...(pack.license||[]),pack.visual_qa==='pending'?'Visual review pending':'Visual review completed'].filter(Boolean).join(' · ');node.append(meta);
-    const download=document.createElement('a');download.href=pack.zip;download.download='';download.textContent='Download ZIP';node.append(download);return node;
+  function addCover(node,entry){
+    if(entry?.thumbnail)node.prepend(coverImage(entry));
+  }
+  function builderURL(pack,id){
+    return 'builder.html?example='+encodeURIComponent(pack.zip.split('/').at(-1))+'&asset='+encodeURIComponent(id);
+  }
+  function collectionCard(pack,summary){
+    const node=document.createElement('article');node.className='collection-card';node.dataset.pack=pack.id;
+    const {standalone,components,previews}=summary||{standalone:0,components:0,previews:[]};
+    const scope=standalone?'':'components',count=standalone||components;
+    const link=directoryLink(pack.name,count,{pack:pack.id,scope},standalone?'standalone assets':'components');
+    const strip=document.createElement('div');strip.className='collection-covers';strip.setAttribute('aria-hidden','true');
+    const cover=entryById.get(pack.cover_asset);
+    const sources=[...new Map([cover,...previews].filter(a=>a?.thumbnail).map(a=>[a.thumbnail,a])).values()].slice(0,3);
+    for(const entry of sources)strip.append(coverImage(entry));
+    if(!sources.length){const empty=document.createElement('span');empty.textContent='Open to explore';strip.append(empty);}
+    link.prepend(strip);node.append(link);
+    const meta=document.createElement('p');meta.className='collection-meta muted';
+    meta.textContent=[pack.published,...(pack.license||[]),pack.visual_qa==='pending'?'Visual review pending':pack.visual_qa==='reviewed'?'Visual QA reviewed':'Visual review unspecified'].filter(Boolean).join(' · ');node.append(meta);
+    if(standalone&&components){
+      const componentLink=directoryLink('Reusable components',components,{pack:pack.id,scope:'components'},'components');
+      componentLink.classList.add('collection-components');node.append(componentLink);
+    }
+    const actions=document.createElement('div');actions.className='collection-actions';
+    const open=document.createElement('a');open.href=builderURL(pack,pack.entry);open.textContent='Open in Builder';
+    const download=document.createElement('a');download.href=pack.zip;download.download='';download.textContent='Download ZIP';actions.append(open,download);node.append(actions);return node;
   }
   function renderDirectory(){
     const counts=VisualAtlasSearch.directory(entries,{});
@@ -194,15 +214,27 @@
     }
     const perspectives=$('perspective-directory');perspectives.replaceChildren();
     for(const {value,count} of counts.perspective)perspectives.append(directoryLink(facetLabel('perspective',value),count,{perspective:value,status:'published'}));
-    const media=$('medium-directory');media.replaceChildren();
-    for(const {value,count} of counts.medium)media.append(directoryLink(facetLabel('medium',value),count,{medium:value,status:'published'}));
+    for(const [key,id] of [['medium','medium-directory'],['theme','theme-directory'],['family','collection-family-directory']]){
+      const target=$(id);target.replaceChildren();
+      for(const {value,count} of counts[key])target.append(directoryLink(facetLabel(key,value),count,{[key]:value,status:'published'}));
+    }
     const archive=$('archive-directory');archive.replaceChildren(directoryLink('Legacy icon archive — rights review required',entries.filter(a=>a.legacy).length,{status:'archive'}));
     const published=[...collections.values()].filter(p=>p.zip).sort((a,b)=>String(b.published).localeCompare(String(a.published))||a.name.localeCompare(b.name));
     $('library-totals').textContent=(counts.status.find(x=>x.value==='published')?.count||0).toLocaleString()+' standalone assets · '+published.length+' collections';
-    const recent=$('recent-collections');recent.replaceChildren(...published.slice(0,6).map(collectionCard));
+    // Summarize actual public entries once, rather than scanning the catalog per card.
+    const summaries=new Map();
+    for(const a of entries){
+      if(a.legacy||a.discovery==='hidden')continue;
+      if(!summaries.has(a.pack))summaries.set(a.pack,{standalone:0,components:0,previews:[]});
+      const summary=summaries.get(a.pack),component=a.discovery==='component';
+      summary[component?'components':'standalone']++;
+      if(!component&&a.thumbnail&&summary.previews.length<3&&!summary.previews.some(x=>x.thumbnail===a.thumbnail))summary.previews.push(a);
+    }
+    const makeCard=p=>collectionCard(p,summaries.get(p.id));
+    const recent=$('recent-collections');recent.replaceChildren(...published.slice(0,6).map(makeCard));
     const families=new Map();for(const p of published){const key=p.family||'';if(!families.has(key))families.set(key,[]);families.get(key).push(p)}
     const directory=$('family-directory');directory.replaceChildren();
-    for(const [key,packs] of families){const section=document.createElement('section'),heading=document.createElement('h4');heading.textContent=taxonomy.families[key]||'Other collections';section.append(heading);const grid=document.createElement('div');grid.className='directory-grid';grid.append(...packs.map(collectionCard));section.append(grid);directory.append(section)}
+    for(const [key,packs] of families){const section=document.createElement('section'),heading=document.createElement('h4');heading.textContent=taxonomy.families[key]||'Other collections';section.append(heading);const grid=document.createElement('div');grid.className='directory-grid';grid.append(...packs.map(makeCard));section.append(grid);directory.append(section)}
   }
   function renderSubcategories(params,counts){
     const parent=params.category_path||'';
@@ -223,7 +255,7 @@
     const refining=Boolean(query.trim()||params.scope||FACETS.some(key=>params[key]));
     $('browse-title').textContent=query?'Search results':params.category_path?facetLabel('category_path',params.category_path):params.pack?facetLabel('pack',params.pack):refining?'Filtered assets':'Explore assets';
     $('browse-subtitle').textContent=refining?'Refine by perspective, theme, style, format and capabilities.':'Recommended assets. Browse categories or collections above to discover more.';
-    if(!matches.length){$('gallery').textContent='No matching assets. Remove a filter or try another keyword.';$('more').hidden=true;return;}
+    if(!matches.length){$('gallery').textContent='No matching assets. Remove a filter or try another keyword.';$('shown-count').textContent='';$('more').hidden=true;return;}
     more();
   }
   async function paintCard(canvas,entry){
@@ -243,10 +275,10 @@
     const canvas=document.createElement('canvas');canvas.width=190;canvas.height=108;canvas.setAttribute('aria-hidden','true');art.append(canvas);
     const body=document.createElement('div');body.className='tile-details';
     const kind=document.createElement('span');kind.className='chip';
-    kind.textContent=demos.length?'Interactive demo':a.legacy?'Legacy · Review':a.discovery==='component'?'Component':a.kind==='composition'?'Ready-to-use':a.kind==='state_set'?'State variants':a.kind;
-    const name=document.createElement('strong');name.textContent=a.name;
+    kind.textContent=demos.length?'Interactive demo':a.legacy?'Legacy · Review':a.discovery==='component'?'Component':a.kind==='composition'?'Ready-to-use':a.kind==='region'?'Sprite / image':facetLabel('kind',a.kind);
+    const name=document.createElement('strong');name.textContent=a.name;name.title=a.name;
     const meta=document.createElement('div');meta.className='tile-meta';
-    const label=document.createElement('span');label.textContent=demos.length?'Playable preview':a.style||'Visual asset';
+    const label=document.createElement('span');label.textContent=demos.length?'Playable preview':a.style?facetLabel('style',a.style):'Visual asset';
     const source=document.createElement('span');source.textContent=collections.get(a.pack)?.name||a.pack;
     meta.append(label,source);body.append(kind,name,meta);node.append(art,body);
     node.onclick=()=>openDetail(a);
@@ -262,7 +294,7 @@
     }
     wrapper.append(actions);return wrapper;
   }
-  function more(){const frag=document.createDocumentFragment();for(const a of matches.slice(shown,shown+PAGE))frag.append(card(a));shown=Math.min(matches.length,shown+PAGE);$('gallery').append(frag);$('more').hidden=shown>=matches.length;}
+  function more(){const frag=document.createDocumentFragment();for(const a of matches.slice(shown,shown+PAGE))frag.append(card(a));shown=Math.min(matches.length,shown+PAGE);$('gallery').append(frag);$('shown-count').textContent=shown.toLocaleString()+' of '+matches.length.toLocaleString()+' shown';$('more').hidden=shown>=matches.length;}
   function controlsFor(a){const area=$('controls');area.replaceChildren();
     if(a.kind==='state_set'){
       const lab=document.createElement('label');lab.textContent='Appearance';
@@ -352,14 +384,22 @@
     for(const id of ['download-png','download-asset','copy-id','copy-link'])$(id).disabled=true;
     $('detail-title').textContent=a.name;$('detail-type').textContent=a.kind.replace('_',' ').toUpperCase();$('detail-id').textContent=a.id;
     $('detail-pack').textContent=collections.get(a.pack)?.name||a.pack;
-    $('detail-meta').textContent=[a.category,a.style,a.license].filter(Boolean).join(' · ');
     $('download-pack').hidden=Boolean(a.legacy);
     $('open-builder').hidden=Boolean(a.legacy);
     if(!a.legacy){$('download-pack').href=collections.get(a.pack).zip;
-      $('open-builder').href='builder.html?example='+encodeURIComponent(collections.get(a.pack).zip.split('/').at(-1))+'&asset='+encodeURIComponent(a.id);}
+      $('open-builder').href=builderURL(collections.get(a.pack),a.id);}
     $('detail-meta').textContent=[a.category,facetLabel('style',a.style||''),a.license,
       a.review_status&&facetLabel('review',a.review_status),
       a.legacy?'Archive candidate · rights review pending':'',a.visual_qa==='pending'?'Visual QA pending':a.visual_qa==='reviewed'?'Visual QA reviewed':''].filter(Boolean).join(' · ');
+    const classification=$('detail-classification');classification.replaceChildren();
+    for(const key of ['category_path','perspective','theme','medium','family']){
+      let values=Array.isArray(a[key])?a[key]:a[key]?[a[key]]:[];
+      if(key==='category_path')values=values.filter(v=>!values.some(other=>other.startsWith(v+'.')));
+      if(!values.length)continue;
+      const dt=document.createElement('dt'),dd=document.createElement('dd');
+      dt.textContent=key==='family'?'Collection family':taxonomy.dimensions[key]?.label||human(key);
+      dd.textContent=values.map(v=>facetLabel(key,v)).join(' · ');classification.append(dt,dd);
+    }
     const tags=$('detail-tags');tags.replaceChildren();
     for(const tag of [...new Set([...(a.subjects||[]),...(a.tags||[])])].slice(0,18)){
       const label=document.createElement('span');label.textContent=tag;tags.append(label);

@@ -28,6 +28,8 @@
 <div id="category-directory" class="directory-grid"></div>
 <div class="directory-heading"><h3>Browse by perspective</h3></div><div id="perspective-directory" class="directory-chips"></div>
 <div class="directory-heading"><h3>Browse by medium</h3></div><div id="medium-directory" class="directory-chips"></div>
+<div class="directory-heading"><h3>Browse by theme</h3></div><div id="theme-directory" class="directory-chips"></div>
+<div class="directory-heading"><h3>Browse by collection family</h3></div><div id="collection-family-directory" class="directory-chips"></div>
 <div class="directory-heading"><h3>Recently released collections</h3><a href="?view=collections" data-view="collections">All collections</a></div><div id="recent-collections" class="directory-grid"></div><div class="directory-heading"><h3>Archive</h3></div><div id="archive-directory" class="directory-chips"></div>
 </section>
 <section id="collection-directory" class="discovery" aria-label="Collection directory" hidden><div class="directory-heading"><h3>Published collections</h3><a href="?view=assets" data-view="assets">Browse all assets</a></div><div id="family-directory"></div></section>
@@ -63,7 +65,7 @@
 <section class="browse-results" id="asset-results" aria-label="Asset results">
 <div class="browse-summary"><div><h3 id="browse-title">Explore assets</h3><p id="browse-subtitle" class="muted">Ready-to-use compositions appear first. Legacy icon candidates remain searchable.</p></div><span id="count" role="status" aria-live="polite">Loading assets…</span></div>
 <div id="active-filters" class="active-filters" aria-label="Active filters"></div><section id="gallery" class="asset-grid" aria-label="Published visual assets"></section>
-<div class="loadmore"><button type="button" id="more" hidden>Load more</button></div>
+<div class="loadmore"><span id="shown-count" class="muted"></span><button type="button" id="more" hidden>Load more</button></div>
 <p id="browse-error" class="browse-error" role="alert" hidden></p></section></div>
 </main>
 <footer>Legacy icons are archive candidates and require rights review. Published assets carry their own licenses. <a href="builder.html">Import a ZIP privately</a> · <a href="ai-guide.html">AI authoring guide</a> · <a href="https://github.com/Superior-MI-Labs/Superior-MI-Icon-Atlas">Source repository</a></footer>
@@ -72,6 +74,7 @@
 <div class="asset-detail-body"><div><div class="detail-stage checker"><canvas id="detail-canvas" width="460" height="260" aria-label="Live manifest-driven asset preview"></canvas></div>
 <div class="preview-actions"><button type="button" id="play">Pause</button><button type="button" id="step">Step</button><span id="time-value" class="muted"></span></div><div id="controls" class="asset-controls"></div></div>
 <div class="asset-information"><span class="fieldlabel">Asset ID</span><code id="detail-id"></code><div id="detail-meta" class="asset-meta"></div>
+<dl id="detail-classification" aria-label="Asset classification"></dl>
 <div id="detail-tags" class="detail-tags" aria-label="Searchable keywords"></div>
 <div id="detail-showcases" class="detail-showcases" aria-label="Interactive demonstrations" hidden></div>
 <details id="detail-components" hidden><summary>Inspect dependencies and related assets</summary><div id="detail-related" class="detail-showcases"></div></details>

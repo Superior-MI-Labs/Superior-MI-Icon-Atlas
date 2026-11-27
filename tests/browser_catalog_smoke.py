@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import contextlib
 import json
+import re
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -37,6 +38,12 @@ def check(page,published_only=False):
     expect(page.locator("#search")).to_be_focused()
     assert page.locator("#hero-art img").count() >= 1
     assert page.locator("#sidebar-categories a").count() >= 4
+    assert page.locator("#theme-directory a").count() >= 1
+    family = page.locator('#collection-family-directory a').filter(has_text='Painterly Fantasy World')
+    family.click()
+    expect(page.locator('#count')).to_have_text('53 matches')
+    page.locator('#clear-filters').click()
+    expect(page.locator('#shown-count')).to_have_text('24 of '+published_matches().split()[0]+' shown')
 
     # Discovery is navigable without typing a query; counts come from the same catalog.
     page.locator('#category-directory a').filter(has_text='World & Environment').click()
@@ -64,6 +71,8 @@ def check(page,published_only=False):
         assert not any(url.endswith(chest_zip) for url in requests),requests
         card.click()
         expect(preview_page.locator('#detail[open]')).to_be_visible()
+        expect(preview_page.locator('#detail-classification')).to_contain_text('Isometric')
+        expect(preview_page.locator('#detail-classification')).to_contain_text('Chests')
         preview_page.wait_for_function("document.querySelector('#detail-canvas').width > 0")
         assert any(url.endswith(chest_zip) for url in requests),requests
     finally:
@@ -74,7 +83,10 @@ def check(page,published_only=False):
     expect(page.locator('#category_path')).to_have_value('world.props.containers.chests')
     page.locator('.browse-nav [data-view="collections"]').click()
     expect(page.locator('#collection-directory')).to_be_visible()
-    page.locator('#family-directory a.directory-link').filter(has_text='Fantasy Recovered Grass').click()
+    grass = page.locator('#family-directory .collection-card').filter(has_text='Fantasy Recovered Grass')
+    assert 1 <= grass.locator('.collection-covers img').count() <= 3
+    expect(grass.get_by_role('link',name='Open in Builder')).to_have_attribute('href',re.compile(r'^builder[.]html[?]example=.*&asset='))
+    grass.locator('a.directory-link').first.click()
     expect(page.locator('#count')).to_have_text('12 matches')
     page.locator('#clear-filters').click()
     expect(page.locator('#discovery')).to_be_visible()
