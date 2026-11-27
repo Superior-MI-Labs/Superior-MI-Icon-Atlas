@@ -189,3 +189,8 @@
 .atlas-app #recent-collections{grid-template-columns:repeat(auto-fit,minmax(min(100%,205px),1fr))}
 .atlas-app #category-directory .directory-cover{background:radial-gradient(ellipse at center,#253b55,#101a28 75%)}
 @media(max-width:620px){.atlas-app #collection-family-directory,.atlas-app #recent-collections{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-app .family-card .collection-covers{height:76px}}
+
+/* Native authored-angle controls shared by inspector and Builder. */
+.view-stepper{display:flex;align-items:center;gap:6px;max-width:100%}
+.view-stepper button{padding:5px 10px;flex:none}
+.view-stepper select{flex:1;min-width:0;width:auto}

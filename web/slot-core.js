@@ -121,5 +121,23 @@
    return {preset:name,slots:selection,inputs};
  }
  function refs(asset){return [...(asset.kind==='sequence'?(asset.frames||[]).map(f=>f.asset):asset.kind==='state_set'?Object.values(asset.states||{}):asset.kind==='composition'?[...(asset.layers||[]).filter(l=>l.asset).map(l=>l.asset),...Object.values(asset.slots||{}).flatMap(s=>s.options||[])]:[]),...spatialRefs(asset)];}
- return Object.freeze({validate,resolve,refs,accepts,spatialErrors,spatialRefs});
+ // Select authored roots, not a geometric rotation of the sprite.
+ function viewOptions(asset){
+  const views=asset?.spatial?.views;
+  if(!views||![4,6,8].includes(views.assets?.length)||views.assets[0]!==asset.id)return [];
+  return views.assets.map((id,index)=>({id,index,yaw:index*360/views.assets.length,elevation:views.elevation_deg}));
+ }
+ function viewId(asset,index=0){
+  const options=viewOptions(asset),n=options.length;
+  return n?options[((Number.isInteger(index)?index:0)%n+n)%n].id:asset?.id;
+ }
+ // The caller supplies candidates from the same collection.
+ function variantOptions(asset,candidates){
+  if(!asset?.concept_id||!asset.variant)return [];
+  const matches=[asset,...candidates].filter(a=>a.concept_id===asset.concept_id&&a.variant&&a.kind===asset.kind&&a.discovery!=='hidden');
+  const secondary=new Set(matches.flatMap(spatialRefs));
+  const unique=[...new Map(matches.filter(a=>!secondary.has(a.id)).map(a=>[a.id,a])).values()];
+  return unique.length>1&&unique.some(a=>a.id===asset.id)?unique.sort((a,b)=>String(a.variant).localeCompare(String(b.variant))||a.id.localeCompare(b.id)):[];
+ }
+ return Object.freeze({validate,resolve,refs,accepts,spatialErrors,spatialRefs,viewOptions,viewId,variantOptions});
 });

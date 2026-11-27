@@ -6,7 +6,7 @@
   const legacyAssets=new Map(),collections=new Map(),pending=new Map(),loaded=new Map();
   const entryById=new Map();
   let entries=[],matches=[],shown=0,current=null,clock=0,playing=true,previous=0;
-  let preset=null,chosenState=null,controls={},slotChoices={};
+  let preset=null,chosenState=null,controls={},slotChoices={},viewIndex=0;
   let activePreview=0,cardObserver,detailRendering=false,lastDetailSignature=null;
   let synonyms={},styleLabels={},taxonomy={dimensions:{},families:{}},view='discover';
   const FACETS=['kind','pack','domain','style','subject','status','review','license','animated','experience','capability','interface','category_path','perspective','theme','medium','family'];
@@ -16,6 +16,7 @@
   const legacyContext=contextFor(legacyAssets);
   const context=pack=>pack==='legacy-icons'?legacyContext:loaded.get(pack);
   const assetFor=entry=>context(entry.pack)?.assets.get(entry.id);
+  const previewFor=entry=>context(entry.pack)?.assets.get(Slots.viewId(assetFor(entry),viewIndex));
   const notify=message=>{const box=$('notice');box.textContent=message;box.hidden=false;clearTimeout(notify.timer);notify.timer=setTimeout(()=>box.hidden=true,3200);};
   const human=value=>String(value).replace(/[._-]+/g,' ').replace(/\b\w/g,m=>m.toUpperCase());
   function filterValues(){return Object.fromEntries(FACETS.map(id=>[id,$(id).value]));}
@@ -312,6 +313,31 @@
   }
   function more(){const frag=document.createDocumentFragment();for(const a of matches.slice(shown,shown+PAGE))frag.append(card(a));shown=Math.min(matches.length,shown+PAGE);$('gallery').append(frag);$('shown-count').textContent=shown.toLocaleString()+' of '+matches.length.toLocaleString()+' shown';$('more').hidden=shown>=matches.length;}
   function controlsFor(a){const area=$('controls');area.replaceChildren();
+    const views=Slots.viewOptions(a);
+    if(views.length){
+      const label=document.createElement('label');label.textContent='Viewing angle';
+      const select=document.createElement('select');select.dataset.viewIndex='';
+      for(const v of views)select.add(new Option((v.index===0?'Front · ':v.yaw===180?'Back · ':'')+v.yaw+'°',String(v.index)));
+      select.value=String(viewIndex);
+      select.onchange=()=>{viewIndex=Number(select.value);activePreview++;lastDetailSignature=null;$('download-png').disabled=true;$('detail-canvas').dataset.interactive='false'};
+      const row=document.createElement('div');row.className='view-stepper';
+      for(const [title,delta] of [['Previous view',-1],['Next view',1]]){
+        const button=document.createElement('button');button.type='button';button.textContent=delta<0?'↶':'↷';button.setAttribute('aria-label',title);
+        button.onclick=()=>{select.value=String((viewIndex+delta+views.length)%views.length);select.onchange()};row.append(button);
+        if(delta<0)row.append(select);
+      }
+      const note=document.createElement('span');note.className='muted';note.textContent=views.length+' authored views · '+views[0].elevation+'° elevation';
+      label.append(row,note);area.append(label);
+    }else if(a.spatial||current?.perspective?.includes('isometric')){
+      const note=document.createElement('span');note.className='muted';note.textContent='Single-view artwork · no authored rotation angles';area.append(note);
+    }
+    const variants=Slots.variantOptions(a,[...context(a.pack).assets.values()].filter(x=>entryById.has(x.id)));
+    if(variants.length){
+      const label=document.createElement('label');label.textContent='Asset variant';
+      const select=document.createElement('select');select.dataset.assetVariant='';
+      for(const v of variants)select.add(new Option(v.name||v.variant,v.id));select.value=a.id;
+      select.onchange=()=>{const entry=entryById.get(select.value);if(entry)openDetail(entry)};label.append(select);area.append(label);
+    }
     if(a.kind==='state_set'){
       const lab=document.createElement('label');lab.textContent='Appearance';
       const sel=document.createElement('select'),keys=Object.keys(a.states||{});
@@ -366,7 +392,7 @@
   }
   function directPointer(e,drag){
     if(!current)return false;
-    const a=assetFor(current),renderer=context(current.pack)?.renderer;if(!renderer||!Interactions.canPoint(a))return false;
+    const a=previewFor(current),renderer=context(current.pack)?.renderer;if(!renderer||!Interactions.canPoint(a)||$('detail-canvas').dataset.viewId!==a.id)return false;
     const canvas=$('detail-canvas'),rect=canvas.getBoundingClientRect();if(!rect.width||!rect.height)return false;
     const geometry=renderer.geometryFor(a.id,new Set(),Inputs.reconcile(a,controls,Slots.resolve(a,preset).inputs),preset,slotChoices);
     const point={x:(e.clientX-rect.left)/rect.width*geometry.width+geometry.minX,y:(e.clientY-rect.top)/rect.height*geometry.height+geometry.minY};
@@ -393,9 +419,9 @@
     panel.hidden=!list.children.length;
   }
   async function openDetail(a){
-    const token=++activePreview;current=null;clock=0;playing=true;preset=null;chosenState=null;controls={};slotChoices={};
+    const token=++activePreview;current=null;clock=0;playing=true;preset=null;chosenState=null;controls={};slotChoices={};viewIndex=0;
     lastDetailSignature=null;$('play').textContent='Pause';$('time-value').textContent='0.0s';
-    const canvas=$('detail-canvas');canvas.getContext('2d').clearRect(0,0,canvas.width,canvas.height);canvas.dataset.interactive='false';
+    const canvas=$('detail-canvas');canvas.getContext('2d').clearRect(0,0,canvas.width,canvas.height);canvas.dataset.interactive='false';delete canvas.dataset.viewId;
     $('controls').replaceChildren();$('detail-related').replaceChildren();$('detail-components').hidden=true;
     for(const id of ['download-png','download-asset','copy-id','copy-link'])$(id).disabled=true;
     $('detail-title').textContent=a.name;$('detail-type').textContent=a.kind.replace('_',' ').toUpperCase();$('detail-id').textContent=a.id;
@@ -429,7 +455,7 @@
     $('tint-options').hidden=!a.legacy;$('tint-enabled').checked=false;
     try{
       await ready(a.pack);if(token!==activePreview)return;
-      current=a;controlsFor(assetFor(a));relatedAssets(a);$('detail-canvas').dataset.interactive=String(Interactions.canPoint(assetFor(a)));if(!$('detail').open)$('detail').showModal();
+      current=a;controlsFor(assetFor(a));relatedAssets(a);if(!$('detail').open)$('detail').showModal();
       for(const id of ['download-asset','copy-id','copy-link'])$(id).disabled=false;
       const url=new URL(location.href);url.searchParams.set('asset',a.id);
       history.replaceState(null,'',url);
@@ -472,15 +498,15 @@
           const ids=Collections.dependencyClosure([a.id],id=>data.assets.get(id),Slots.refs);
           data.motion.set(a.id,[...ids].some(id=>{const x=data.assets.get(id);return x.kind==='sequence'||Boolean(x.duration_ms);}));
         }
-        const animated=data.motion.get(a.id),signature=JSON.stringify([activePreview,a.id,controls,chosenState,preset,slotChoices,$('tint-enabled').checked,$('tint-color').value,animated?clock:0]);
+        const selectedView=previewFor(a),animated=data.motion.get(a.id),signature=JSON.stringify([activePreview,a.id,selectedView.id,controls,chosenState,preset,slotChoices,$('tint-enabled').checked,$('tint-color').value,animated?clock:0]);
         if(signature!==lastDetailSignature){
           const token=activePreview;detailRendering=true;
           // Render offscreen so a slow previous selection cannot overwrite the new one.
           const canvas=document.createElement('canvas');
-          paint(canvas,a,clock,{controls:{...controls},state:chosenState,preset,slots:{...slotChoices}}).then(()=>{
+          paint(canvas,{...a,id:selectedView.id},clock,{controls:{...controls},state:chosenState,preset,slots:{...slotChoices}}).then(()=>{
             if(token!==activePreview||current?.id!==a.id)return;
             const target=$('detail-canvas');target.width=canvas.width;target.height=canvas.height;
-            target.getContext('2d').drawImage(canvas,0,0);lastDetailSignature=signature;$('download-png').disabled=false;
+            target.getContext('2d').drawImage(canvas,0,0);target.dataset.viewId=selectedView.id;target.dataset.interactive=String(Interactions.canPoint(selectedView));lastDetailSignature=signature;$('download-png').disabled=false;
           }).catch(e=>{if(token===activePreview){lastDetailSignature=signature;notify(e.message);}}).finally(()=>{detailRendering=false});
         }
       }
@@ -539,7 +565,7 @@
   });
   $('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Pause':'Play'};
   $('step').onclick=()=>{clock+=1000/12;playing=false;$('play').textContent='Play'};
-  $('download-png').onclick=()=>{if(!current)return;const id=current.id,canvas=$('detail-canvas');canvas.toBlob(b=>b?save(b,id+'.png'):notify('PNG unavailable'),'image/png')};
+  $('download-png').onclick=()=>{if(!current)return;const id=current.id,canvas=$('detail-canvas'),views=Slots.viewOptions(assetFor(current)),suffix=views.length?'-yaw-'+views[viewIndex].yaw:'';canvas.toBlob(b=>b?save(b,id+suffix+'.png'):notify('PNG unavailable'),'image/png')};
   $('download-asset').onclick=()=>downloadAsset().catch(e=>notify('ZIP unavailable: '+e.message));
   requestAnimationFrame(tick);init().catch(e=>{$('browse-error').textContent=e.message;$('browse-error').hidden=false;$('count').textContent='Catalog unavailable';});
 })();

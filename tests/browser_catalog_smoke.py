@@ -83,6 +83,8 @@ def check(page,published_only=False):
         expect(preview_page.locator('#detail[open]')).to_be_visible()
         expect(preview_page.locator('#detail-classification')).to_contain_text('Isometric')
         expect(preview_page.locator('#detail-classification')).to_contain_text('Chests')
+        expect(preview_page.locator('#controls')).to_contain_text('Single-view artwork')
+        expect(preview_page.locator('#controls select[data-view-index]')).to_have_count(0)
         expect(preview_page.locator('#download-png')).to_be_enabled(timeout=20000)
         assert any(url.endswith(chest_zip) for url in requests),requests
     finally:
