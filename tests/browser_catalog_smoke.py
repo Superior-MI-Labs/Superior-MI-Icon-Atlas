@@ -227,6 +227,8 @@ def check(page,published_only=False):
     page.locator("#close").click()
 
     page.goto(url+"builder.html?example=royal-forge-controls.zip&asset=smi.ui.fantasy01.wave2.widget.scroll-horizontal",wait_until="networkidle")
+    expect(page.locator(".atlas-tool-nav a[aria-current=page]")).to_have_text("Builder / My Bag")
+    expect(page.locator("body")).to_have_class(re.compile(r"atlas-theme"))
     stage=page.locator("#stage")
     expect(stage).to_have_attribute("data-interactive","true",timeout=20000)
     stage.scroll_into_view_if_needed()
@@ -470,6 +472,18 @@ def main():
                 mobile.set_viewport_size({"width": 390, "height": 844})
                 expect(mobile.locator("#facet-panel")).to_be_hidden()
                 print("Responsive viewport and keyboard navigation: PASS")
+                mobile.goto(url+"builder.html",wait_until="networkidle")
+                expect(mobile.locator(".atlas-tool-nav a[aria-current=page]")).to_have_text("Builder / My Bag")
+                assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Builder overflows on mobile"
+                mobile.locator(".atlas-tool-nav a[href='ai-guide.html']").click()
+                expect(mobile.locator(".atlas-tool-nav a[aria-current=page]")).to_have_text("Create with AI")
+                expect(mobile.locator("#prompt")).to_be_visible()
+                assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Guide overflows on mobile"
+                mobile.locator(".atlas-tool-nav a[href='sky-motion-lab.html']").click()
+                expect(mobile.locator(".atlas-tool-nav a[aria-current=page]")).to_have_text("Motion Lab")
+                expect(mobile.locator("#motion-stage")).to_be_visible()
+                mobile.locator(".atlas-tool-nav a[href='index.html']").click()
+                expect(mobile.locator("#count")).to_have_text(published_matches(), timeout=20000)
             finally:
                 browser.close()
     finally:
