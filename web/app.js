@@ -122,12 +122,19 @@
     for(const key of FACETS)setControl(key,filters[key]||'');
     if(push)history.pushState(null,'',browseURL(view,filters));
     update();
-    if(push)document.querySelector(view==='collections'?'#collection-directory':view==='assets'?'#asset-results':'.browse-hero').scrollIntoView({block:'start'});
+    if(push)document.querySelector(view==='collections'?'#collection-directory':view==='assets'?'.browse-layout':'.browse-hero').scrollIntoView({block:'start'});
   }
   function readRoute(){
     const p=new URLSearchParams(location.search),v=p.get('view');
     const filters=Object.fromEntries(['query','scope','sort',...FACETS].filter(k=>p.has(k)).map(k=>[k,p.get(k)]));
     navigate(v==='collections'?'collections':v==='assets'||Object.keys(filters).length?'assets':'discover',filters,false);
+  }
+  function syncRoute(params){
+    const url=new URL(location.href);
+    for(const key of ['view','query','scope','sort',...FACETS])url.searchParams.delete(key);
+    if(view!=='discover')url.searchParams.set('view',view);
+    for(const key of ['query','scope','sort',...FACETS])if(params[key]&&!(key==='sort'&&params[key]==='recommended'))url.searchParams.set(key,params[key]);
+    history.replaceState(null,'',url);
   }
   function renderView(){
     $('discovery').hidden=view!=='discover';$('collection-directory').hidden=view!=='collections';
@@ -150,9 +157,12 @@
   function renderDirectory(){
     const counts=VisualAtlasSearch.directory(entries,{});
     const cats=$('category-directory');cats.replaceChildren();
-    for(const {value,count} of counts.category_path.filter(x=>!x.value.includes('.')))cats.append(directoryLink(facetLabel('category_path',value),count,{category_path:value}));
+    for(const {value,count} of counts.category_path.filter(x=>!x.value.includes('.')))cats.append(directoryLink(facetLabel('category_path',value),count,{category_path:value,status:'published'}));
     const perspectives=$('perspective-directory');perspectives.replaceChildren();
-    for(const {value,count} of counts.perspective)perspectives.append(directoryLink(facetLabel('perspective',value),count,{perspective:value}));
+    for(const {value,count} of counts.perspective)perspectives.append(directoryLink(facetLabel('perspective',value),count,{perspective:value,status:'published'}));
+    const media=$('medium-directory');media.replaceChildren();
+    for(const {value,count} of counts.medium)media.append(directoryLink(facetLabel('medium',value),count,{medium:value,status:'published'}));
+    const archive=$('archive-directory');archive.replaceChildren(directoryLink('Legacy icon archive — rights review required',entries.filter(a=>a.legacy).length,{status:'archive'}));
     const published=[...collections.values()].filter(p=>p.zip).sort((a,b)=>String(b.published).localeCompare(String(a.published))||a.name.localeCompare(b.name));
     $('library-totals').textContent=entries.filter(a=>!a.legacy).length.toLocaleString()+' published assets · '+published.length+' collections';
     const recent=$('recent-collections');recent.replaceChildren(...published.slice(0,6).map(collectionCard));
@@ -171,7 +181,7 @@
   }
   function update(){
     const query=$('search').value,params={...filterValues(),query,synonyms,scope:$('scope').value,sort:$('sort').value};
-    refreshFacets(params);activeChips();renderView();renderSubcategories(params);
+    refreshFacets(params);activeChips();renderView();renderSubcategories(params);syncRoute(params);
     matches=VisualAtlasSearch.results(entries,params);shown=0;$('gallery').replaceChildren();
     $('count').textContent=matches.length.toLocaleString()+' matches';
     const refining=Boolean(query.trim()||params.scope||FACETS.some(key=>params[key]));
@@ -325,7 +335,7 @@
       c.getContext('2d').drawImage(src,x,y,w,h,0,0,w,h);
       const png=await new Promise((resolve,reject)=>c.toBlob(b=>b?resolve(b):reject(Error('PNG encoding failed')),'image/png'));
       const zip=new JSZip();zip.file('textures/icon.png',png);
-      const clean={...asset,texture:'icon'};for(const field of ['pack','legacy','rights_reviewed','review_status','category','published','previewable','animated','aliases'])delete clean[field];
+      const clean={...asset,texture:'icon'};for(const field of ['pack','legacy','rights_reviewed','review_status','category','published','previewable','animated','aliases','category_path','perspective','theme','medium','family'])delete clean[field];
       zip.file('manifest.json',JSON.stringify({schema:'smi-visual-pack/1',pack_id:'smi.legacy.icon.selection',version:'1.0.0',license:asset.license,description:'Historical icon export: verify rights before commercial redistribution',textures:{icon:{path:'textures/icon.png',width_px:w,height_px:h}},assets:[{...clean,rect_px:[0,0,w,h]}]},null,2)+'\n');
       zip.file('SOURCE-NOTICES.txt','Historical icon candidate. Rights review is pending. Original ID: '+asset.id+'\n');
       save(await zip.generateAsync({type:'blob',compression:'DEFLATE'}),current.id+'.zip');return;

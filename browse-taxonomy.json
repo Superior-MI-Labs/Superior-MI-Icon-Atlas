@@ -265,6 +265,54 @@
     {
       "packs": [
         "fantasy-rpg-hud-wave1",
+        "royal-forge-",
+        "minimal-white-tech"
+      ],
+      "subjects": [
+        "games.ui.meters",
+        "games.ui.hud.resources",
+        "ui.hud.resources"
+      ],
+      "set": {
+        "category_path": [
+          "gui.meters"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "fantasy-rpg-hud-wave1",
+        "royal-forge-",
+        "minimal-white-tech"
+      ],
+      "subjects": [
+        "games.ui.inventory"
+      ],
+      "set": {
+        "category_path": [
+          "gui.inventory"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "fantasy-rpg-hud-wave1",
+        "royal-forge-",
+        "minimal-white-tech"
+      ],
+      "subjects": [
+        "games.ui.controls",
+        "ui.hud.controls"
+      ],
+      "set": {
+        "category_path": [
+          "gui.controls"
+        ]
+      }
+    },
+    {
+      "packs": [
+        "fantasy-rpg-hud-wave1",
         "royal-forge-"
       ],
       "set": {

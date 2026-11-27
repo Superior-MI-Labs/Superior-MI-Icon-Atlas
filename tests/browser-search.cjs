@@ -51,6 +51,7 @@ assert.ok(Search.results(data.assets,{...params,category_path:'gui',theme:'sci-f
 assert.ok(Search.results(data.assets,{...params,category_path:'characters',perspective:'side-view'}).some(a=>a.pack==='sky-prototype'));
 assert.ok(Search.results(data.assets,{...params,review:'visual-pending'}).every(a=>!a.legacy&&a.visual_qa==='pending'));
 assert.equal(Search.directory(data.assets,{}).category_path.find(x=>x.value==='world').count,53);
+for(const key of ['category_path','perspective','medium'])for(const {value,count} of Search.directory(data.assets,{})[key])assert.equal(Search.results(data.assets,{[key]:value,status:'published'}).length,count,'Directory count mismatch: '+key+' '+value);
 assert.ok(data.packs.every(p=>Number.isInteger(p.asset_count)&&Number.isInteger(p.listed_count)));
 const defaults=Search.results(data.assets,params);
 assert.equal(defaults[0].kind,'composition','Finished compositions lead the default gallery');
