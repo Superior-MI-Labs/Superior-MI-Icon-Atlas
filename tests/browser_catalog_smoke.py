@@ -41,10 +41,16 @@ def check(page,published_only=False):
     assert page.locator("#theme-directory a").count() >= 1
     family = page.locator('#collection-family-directory a').filter(has_text='Painterly Fantasy World')
     expect(family).to_have_count(1)
-    assert 1 <= family.locator('.collection-covers img').count() <= 3
+    previews = family.locator('.collection-covers img').evaluate_all("images => images.map(img => img.getAttribute('src'))")
+    assert 1 <= len(previews) <= 3 and len(set(previews)) == len(previews), previews
+    assert all(src.startswith('previews/') for src in previews), previews
     expect(page.locator('#hero-totals')).to_have_text(page.locator('#library-totals').inner_text())
     family.click()
-    expect(page.locator('#count')).to_have_text('53 matches')
+    expect(page.locator('#family')).to_have_value('painterly-fantasy')
+    catalog = json.loads((SITE/'public-catalog.json').read_text())
+    family_count = sum(a.get('family') == 'painterly-fantasy' and not a.get('legacy') and a.get('discovery', 'standalone') == 'standalone' for a in catalog['assets'])
+    assert family_count >= 53
+    expect(page.locator('#count')).to_have_text(f'{family_count:,} matches')
     page.locator('#clear-filters').click()
     expect(page.locator('#shown-count')).to_have_text('24 of '+published_matches().split()[0]+' shown')
 
@@ -77,7 +83,7 @@ def check(page,published_only=False):
         expect(preview_page.locator('#detail[open]')).to_be_visible()
         expect(preview_page.locator('#detail-classification')).to_contain_text('Isometric')
         expect(preview_page.locator('#detail-classification')).to_contain_text('Chests')
-        preview_page.wait_for_function("document.querySelector('#detail-canvas').width > 0")
+        expect(preview_page.locator('#download-png')).to_be_enabled(timeout=20000)
         assert any(url.endswith(chest_zip) for url in requests),requests
     finally:
         preview_context.close()
