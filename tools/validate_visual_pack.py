@@ -311,6 +311,16 @@ def check(pack_path: Path):
             value_max=asset.get('inputs',{}).get(r['value_input'],{}).get('max',0)
             if value_max<count_max*(len(r['levels'])-1):
                 errors.append(f'{asset["id"]}: repeat value must cover full capacity')
+        # Legacy concept_id is a discovery hint; declared definitions are unique
+        # and must be associated with artwork in the same archive.
+        concept_ids = set()
+        linked_concepts = {a.get('concept_id') for a in ids.values()}
+        for pack in valid_packs:
+            for concept in pack.get('concepts', []):
+                cid = concept['id']
+                if cid in concept_ids: errors.append('Duplicate concept ' + cid)
+                if cid not in linked_concepts: errors.append('Unreferenced concept ' + cid)
+                concept_ids.add(cid)
         errors.extend(validate_stat_profiles(valid_packs, ids))
         errors.extend(validate_preview_profiles(valid_packs, ids))
         errors.extend(check_slots(valid_packs))

@@ -9,6 +9,57 @@
   function safePath(path){return typeof path==='string'&&path.length>0&&path.length<512&&!path.startsWith('/')&&!path.includes('\\')&&!path.includes(':')&&!path.includes('\0')&&!path.split('/').some(s=>!s||s==='.'||s==='..');}
   function parent(path){const i=path.lastIndexOf('/');return i<0?'':path.slice(0,i);}
   function join(base,path){if(!safePath(path))throw Error('Unsafe texture path: '+path);const out=base?base+'/'+path:path;if(!safePath(out))throw Error('Unsafe resolved path: '+out);return out;}
+  // Concept data is descriptive, separate from visual rendering and stat simulation.
+  const conceptId=v=>typeof v==='string'&&/^[a-z][a-z0-9_.-]{0,127}$/.test(v);
+  const ruleId=v=>typeof v==='string'&&/^[a-z][a-z0-9_.-]{0,119}\/[1-9][0-9]{0,5}$/.test(v);
+  const unitId=v=>typeof v==='string'&&/^[a-z][a-z0-9_.-]{0,63}$/.test(v);
+  const record=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
+  const only=(v,keys)=>record(v)&&Object.keys(v).every(k=>keys.includes(k));
+  const bounded=(v,min,max)=>Number.isFinite(v)&&v>=min&&v<=max;
+  const shortString=(v,max)=>typeof v==='string'&&v.length>0&&v.length<=max;
+  function validValue(v){
+    if(v?.kind==='quantity')return only(v,['kind','value','unit'])&&bounded(v.value,-1e9,1e9)&&unitId(v.unit);
+    if(v?.kind==='dice')return only(v,['kind','count','sides','modifier','unit'])&&Number.isInteger(v.count)&&bounded(v.count,1,100)&&Number.isInteger(v.sides)&&bounded(v.sides,2,1000)&&Number.isInteger(v.modifier)&&bounded(v.modifier,-1000000,1000000)&&unitId(v.unit);
+    if(v?.kind==='boolean')return only(v,['kind','value'])&&typeof v.value==='boolean';
+    return false;
+  }
+  function validMap(v,allowEmpty=false){
+    return record(v)&&Object.keys(v).length<129&&(allowEmpty||Object.keys(v).length>0)&&Object.entries(v).every(([k,x])=>conceptId(k)&&validValue(x));
+  }
+  function validateConcepts(items,assets=null){
+    if(items===undefined)return;
+    if(!Array.isArray(items)||items.length>3000)throw Error('Invalid concept collection');
+    const ids=new Set(),linked=assets===null?null:new Set(assets.map(a=>a.concept_id));
+    for(const item of items){
+      if(!only(item,['schema','id','name','description','license','physical','defaults'])||item.schema!=='smi-concept/1'||!conceptId(item.id)||!shortString(item.name,160)||!shortString(item.license,128)||ids.has(item.id))throw Error('Invalid or duplicate concept '+item?.id);
+      if(item.description!==undefined&&(typeof item.description!=='string'||item.description.length>4000))throw Error('Invalid concept description '+item.id);
+      if(item.physical!==undefined&&(!only(item.physical,['width_m','depth_m','height_m','mass_kg','capacity_l'])||!Object.keys(item.physical).length||Object.values(item.physical).some(v=>!bounded(v,0,1e9)||v===0)))throw Error('Invalid physical properties '+item.id);
+      if(item.defaults!==undefined&&(!record(item.defaults)||!Object.keys(item.defaults).length||Object.keys(item.defaults).length>32||Object.entries(item.defaults).some(([k,v])=>!ruleId(k)||!validMap(v))))throw Error('Invalid ruleset defaults '+item.id);
+      if(linked&&!linked.has(item.id))throw Error('Unreferenced concept '+item.id);
+      ids.add(item.id);
+    }
+  }
+  // Resolve explicitly chosen profiles; conflicting definitions must not silently
+  // stack. Overrides are separate from immutable authored defaults.
+  function resolveDefaults(concept,rulesets=[],overrides={}){
+    validateConcepts([concept]);
+    if(!Array.isArray(rulesets)||rulesets.length>32||new Set(rulesets).size!==rulesets.length||!validMap(overrides,true))throw Error('Invalid ruleset selection or overrides');
+    const result=new Map();
+    for(const id of rulesets){
+      if(!ruleId(id)||!Object.hasOwn(concept.defaults||{},id))throw Error('Unknown ruleset '+id);
+      for(const [key,value] of Object.entries(concept.defaults[id])){
+        if(result.has(key)&&!equivalent(result.get(key),value))throw Error('Conflicting ruleset default '+key);
+        result.set(key,value);
+      }
+    }
+    for(const [key,value] of Object.entries(overrides)){
+      if(!result.has(key))throw Error('Unknown override '+key);
+      const previous=result.get(key);
+      if(previous.unit!==value.unit||(previous.kind==='boolean')!==(value.kind==='boolean'))throw Error('Incompatible override '+key);
+      result.set(key,value);
+    }
+    return structuredClone(Object.fromEntries(result));
+  }
   function resolveCollection(index,definitions,fallbackName='Imported collection'){
     // definitions: [{path,pack}] where every path is archive-relative and distinct.
     if(!Array.isArray(definitions)||!definitions.length||definitions.length>MAX_PACKS)throw Error('Collection must contain 1–'+MAX_PACKS+' pack manifests');
@@ -32,13 +83,18 @@
     }else{
       groups=[...manifests.keys()].sort().map(path=>({path,label:manifests.get(path).pack_id,category:''}));
     }
-    const assets=[],textures={},interfaces={},previewProfiles=[],profileIds=new Set(),statProfiles=[],statIds=new Set(),assetIds=new Set(),packIds=new Set(),texturePaths=new Set(),groupInfo=[];
+    const assets=[],textures={},interfaces={},previewProfiles=[],profileIds=new Set(),statProfiles=[],statIds=new Set(),concepts=[],conceptIds=new Set(),assetIds=new Set(),packIds=new Set(),texturePaths=new Set(),groupInfo=[];
     const licenseSet=new Set();
     for(let n=0;n<groups.length;n++){
       const group=groups[n],pack=manifests.get(group.path),prefix='p'+n+'_';
       if(packIds.has(pack.pack_id))throw Error('Duplicate pack_id within ZIP: '+pack.pack_id);
       packIds.add(pack.pack_id);
       licenseSet.add(pack.license||'UNSPECIFIED');
+      validateConcepts(pack.concepts);
+      for(const item of pack.concepts||[]){
+        if(conceptIds.has(item.id))throw Error('Duplicate concept '+item.id);
+        conceptIds.add(item.id);concepts.push(structuredClone(item));licenseSet.add(item.license);
+      }
       for(const profile of pack.preview_profiles||[]){
         if(profileIds.has(profile.id))throw Error('Duplicate preview profile '+profile.id);
         profileIds.add(profile.id);previewProfiles.push(structuredClone(profile));
@@ -77,6 +133,9 @@
       groupInfo.push({...group,pack_id:pack.pack_id,ids:groupIds});
     }
     if(assets.length>MAX_ASSETS||Object.keys(textures).length>MAX_TEXTURES)throw Error('Collection exceeds asset or texture limit');
+    // Legacy concept_id links may remain unresolved; authored definitions may not be orphaned.
+    const linked=new Set(assets.map(a=>a.concept_id));
+    for(const item of concepts)if(!linked.has(item.id))throw Error('Unreferenced concept '+item.id);
     const exists=id=>assetIds.has(id);
     for(const profile of previewProfiles)if(!exists(profile.asset))throw Error('Unknown preview profile asset '+profile.asset);
     for(const profile of statProfiles)if(!exists(profile.asset))throw Error('Unknown stat profile asset '+profile.asset);
@@ -89,7 +148,7 @@
     const name=(index&&typeof index.name==='string'&&index.name.trim()&&index.name)||fallbackName;
     const collectionId=index?.collection_id||'smi.local.'+String(fallbackName).replace(/[^a-zA-Z0-9.-]/g,'-');
     return {
-      pack:{schema:'smi-visual-pack/1',pack_id:collectionId,version:index?.version||'1.0.0',description:'Resolved collection: '+name,license:licenseSet.size===1?[...licenseSet][0]:'MIXED',interfaces,preview_profiles:previewProfiles,stat_profiles:statProfiles,textures,assets},
+      pack:{schema:'smi-visual-pack/1',pack_id:collectionId,version:index?.version||'1.0.0',description:'Resolved collection: '+name,license:licenseSet.size===1?[...licenseSet][0]:'MIXED',interfaces,preview_profiles:previewProfiles,stat_profiles:statProfiles,...(concepts.length?{concepts}:{}),textures,assets},
       bag:{id:collectionId,name,version:index?.version||'1.0.0',description:index?.description||'',entry,groups:groupInfo,assetIds:[...assetIds],textureCount:texturePaths.size}
     };
   }
@@ -134,7 +193,7 @@
     return x.every((v,i)=>v===y[i]);
   }
   // Selection state belongs to the host. The portable archive contract is shared.
-  async function writeSelection(zip,{assets,rootId,packId,version='1.0.0',getTexture,getInterfaces,previewProfiles=[],statProfiles=[],licenseText=null,sourceNotices=[],maxEntry=24*1024*1024}){
+  async function writeSelection(zip,{assets,rootId,packId,version='1.0.0',getTexture,getInterfaces,previewProfiles=[],statProfiles=[],concepts=[],licenseText=null,sourceNotices=[],maxEntry=24*1024*1024}){
     if(!assets.some(a=>a.id===rootId))throw Error('Missing export root '+rootId);
     const ids=new Set(assets.map(a=>a.id)),textures={},mapping=new Map(),interfaces={};
     const chosen=assets.map(a=>structuredClone(a));
@@ -159,10 +218,13 @@
     }
     const profiles=items=>items.filter(p=>ids.has(p.asset)).map(p=>{const copy=structuredClone(p);delete copy.ownerBag;return copy;});
     const previews=profiles(previewProfiles),stats=profiles(statProfiles);
-    const licenses=new Set(chosen.map(a=>a.license||'UNSPECIFIED'));
+    const conceptLinks=new Set(chosen.map(a=>a.concept_id));
+    const definitions=concepts.filter(item=>conceptLinks.has(item.id)).map(item=>{const copy=structuredClone(item);delete copy.ownerBag;return copy;});
+    validateConcepts(definitions,chosen);
+    const licenses=new Set([...chosen.map(a=>a.license||'UNSPECIFIED'),...definitions.map(item=>item.license)]);
     const manifest={schema:'smi-visual-pack/1',pack_id:packId,version,description:'Portable asset: '+rootId,
       license:licenses.size===1?[...licenses][0]:'MIXED',interfaces,textures,assets:chosen,
-      ...(previews.length?{preview_profiles:previews}:{}),...(stats.length?{stat_profiles:stats}:{})};
+      ...(previews.length?{preview_profiles:previews}:{}),...(stats.length?{stat_profiles:stats}:{}),...(definitions.length?{concepts:definitions}:{})};
     zip.file('manifest.json',JSON.stringify(manifest,null,2)+'\n');
     zip.file('collection.json',JSON.stringify({schema:'smi-visual-collection/1',collection_id:packId,name:chosen.find(a=>a.id===rootId).name||rootId,version,entry_asset:rootId,packs:[{manifest:'manifest.json'}]},null,2)+'\n');
     // Preserve original notice bytes, namespaced by source; never silently
@@ -172,9 +234,9 @@
       if(!safePath(notice.path)||!notice.blob||notice.blob.size>maxEntry)throw Error('Invalid source notice');
       zip.file('LICENSES/source-'+(++noticeIndex)+'/'+notice.path,notice.blob);
     }
-    zip.file('SOURCE-NOTICES.txt','Root asset: '+rootId+'\n\nPer-asset licenses:\n'+chosen.map(a=>a.id+' : '+(a.license||'UNSPECIFIED')).join('\n')+'\nPreserve source rights and notices. Unknown license is not equivalent to CC0.\n');
+    zip.file('SOURCE-NOTICES.txt','Root asset: '+rootId+'\n\nPer-asset licenses:\n'+chosen.map(a=>a.id+' : '+(a.license||'UNSPECIFIED')).join('\n')+'\n\nConcept licenses:\n'+definitions.map(item=>item.id+' : '+item.license).join('\n')+'\nPreserve source rights and notices. Unknown license is not equivalent to CC0.\n');
     if(licenseText&&licenses.has('Apache-2.0')){const notice=await licenseText();if(notice)zip.file('LICENSES/Apache-2.0.txt',notice);}
     return manifest;
   }
-  return Object.freeze({safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
+  return Object.freeze({safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,resolveDefaults,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
 });

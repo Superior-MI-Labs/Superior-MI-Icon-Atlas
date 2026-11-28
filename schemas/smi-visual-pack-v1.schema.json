@@ -77,6 +77,13 @@
       "items": {
         "$ref": "#/$defs/stat_profile"
       }
+    },
+    "concepts": {
+      "type": "array",
+      "maxItems": 3000,
+      "items": {
+        "$ref": "#/$defs/concept"
+      }
     }
   },
   "$defs": {
@@ -1476,6 +1483,169 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    },
+    "concept_value": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "value",
+            "unit"
+          ],
+          "properties": {
+            "kind": {
+              "const": "quantity"
+            },
+            "value": {
+              "type": "number",
+              "minimum": -1000000000,
+              "maximum": 1000000000
+            },
+            "unit": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{0,63}$"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "count",
+            "sides",
+            "modifier",
+            "unit"
+          ],
+          "properties": {
+            "kind": {
+              "const": "dice"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            },
+            "sides": {
+              "type": "integer",
+              "minimum": 2,
+              "maximum": 1000
+            },
+            "modifier": {
+              "type": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            },
+            "unit": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{0,63}$"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "value"
+          ],
+          "properties": {
+            "kind": {
+              "const": "boolean"
+            },
+            "value": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    },
+    "concept": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "id",
+        "name",
+        "license"
+      ],
+      "properties": {
+        "schema": {
+          "const": "smi-concept/1"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 4000
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "physical": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [],
+          "properties": {
+            "width_m": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 1000000000
+            },
+            "depth_m": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 1000000000
+            },
+            "height_m": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 1000000000
+            },
+            "mass_kg": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 1000000000
+            },
+            "capacity_l": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 1000000000
+            }
+          },
+          "minProperties": 1
+        },
+        "defaults": {
+          "type": "object",
+          "minProperties": 1,
+          "maxProperties": 32,
+          "propertyNames": {
+            "pattern": "^[a-z][a-z0-9_.-]{0,119}/[1-9][0-9]{0,5}$"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "minProperties": 1,
+            "maxProperties": 128,
+            "propertyNames": {
+              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+            },
+            "additionalProperties": {
+              "$ref": "#/$defs/concept_value"
             }
           }
         }
