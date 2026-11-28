@@ -1,0 +1,28 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.material.gflow.desert",
+  "name": "G Flow Materials — Desert surfaces",
+  "version": "1.0.0",
+  "entry_asset": "smi.material.gflow.f4cd5e89",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Desert surfaces"
+    }
+  ],
+  "classification": {
+    "category_path": [
+      "textures"
+    ],
+    "perspective": [
+      "perspective-neutral"
+    ],
+    "theme": [
+      "fantasy"
+    ],
+    "medium": [
+      "raster-2d"
+    ],
+    "family": "gflow-materials"
+  }
+}

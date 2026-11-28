@@ -1,0 +1,1345 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.grass",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-ae56e843": {
+      "path": "textures/wild-jungle-grass-ae56e843.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "bc9b724c387be8bad0ed433e9c27100c2d14c4554814f0284b6ab15ee0d084e3",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-fc1381de": {
+      "path": "textures/fantasy-meadow-grass-fc1381de.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "e801693481e7cbe8b26678b0e9498c332e63e2b5c6ea5058493749bf7646ea7e",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-6e0fd141": {
+      "path": "textures/cherry-blossom-petals-on-grass-6e0fd141.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "b7621c79db9afb19152323db80952f60bec5bfd4c97622a2da17410208347d7c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-68b862ea": {
+      "path": "textures/desert-steppe-grass-68b862ea.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "715f76d8c3c20b3c726f3d73fed76b74324a1cd9d5df07e8250e9823d14c93f4",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-2d81693a": {
+      "path": "textures/teal-crystal-grass-2d81693a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "a4c2178e9c5cd34ba88a084c9220dc51cce6fd081d14cf99256f14fdb5cefacb",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-5e2193d8": {
+      "path": "textures/purple-elf-grass-5e2193d8.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "97398c5c9f7d45dfa1fd328bf8f24c19ed7dd301f787a86d0199de75f2668d06",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-6bc1cf1a": {
+      "path": "textures/golden-autumn-grass-with-leaves-6bc1cf1a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "7a2459450f776a54f0bc4540930bf20f38ec45ac4cdf7c819ac394ba09308255",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-d2669cae": {
+      "path": "textures/dark-corrupted-grass-d2669cae.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "57d726281340d9e9be29a962bf2f390540545f99b1c79f08ec461417a10472db",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-d60d6e36": {
+      "path": "textures/frosty-winter-grass-d60d6e36.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "2384ad33fa3e8293ea34076be68355ac44250ae8b51f6f9d82d4c3a8d074530c",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.ae56e843",
+      "kind": "region",
+      "name": "Wild jungle grass",
+      "description": "Wild jungle grass: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ae56e843",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "forest",
+        "tropical",
+        "organic",
+        "wild",
+        "jungle"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "forest",
+        "tropical",
+        "organic",
+        "wild",
+        "jungle",
+        "green",
+        "black",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage",
+        "woodland"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1a2d19",
+            "weight_bp": 1505
+          },
+          {
+            "hex": "#4e702c",
+            "weight_bp": 1446
+          },
+          {
+            "hex": "#2b5428",
+            "weight_bp": 1292
+          },
+          {
+            "hex": "#2f401f",
+            "weight_bp": 1257
+          },
+          {
+            "hex": "#1b3c1e",
+            "weight_bp": 1182
+          },
+          {
+            "hex": "#445a24",
+            "weight_bp": 1163
+          },
+          {
+            "hex": "#101d11",
+            "weight_bp": 1080
+          },
+          {
+            "hex": "#6c9338",
+            "weight_bp": 1075
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05113,
+          "y_mae": 0.1063,
+          "x_ratio": 1.4047,
+          "y_ratio": 3.0931,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Wild_jungle_grass_texture_ae56e843.jpg",
+          "sha256": "460b3b39ab41a5f1b8739900aaf54dfafa5139688765007624cdddb870b6dc9d",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "tropical"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.fc1381de",
+      "kind": "region",
+      "name": "Fantasy meadow grass",
+      "description": "Fantasy meadow grass: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-fc1381de",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "organic",
+        "fantasy",
+        "meadow"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "organic",
+        "fantasy",
+        "meadow",
+        "green",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#0b7637",
+            "weight_bp": 1729
+          },
+          {
+            "hex": "#066433",
+            "weight_bp": 1678
+          },
+          {
+            "hex": "#228739",
+            "weight_bp": 1302
+          },
+          {
+            "hex": "#024b2a",
+            "weight_bp": 1226
+          },
+          {
+            "hex": "#379f45",
+            "weight_bp": 1160
+          },
+          {
+            "hex": "#257836",
+            "weight_bp": 1084
+          },
+          {
+            "hex": "#0d512c",
+            "weight_bp": 948
+          },
+          {
+            "hex": "#186634",
+            "weight_bp": 873
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04205,
+          "y_mae": 0.05934,
+          "x_ratio": 1.3819,
+          "y_ratio": 2.2858,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Fantasy_meadow_grass_texture_fc1381de.jpg",
+          "sha256": "96562584db6a0b6312135f92d0caf3df3c96be93c36097497614fd10d24e1708",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.6e0fd141",
+      "kind": "region",
+      "name": "Cherry blossom petals on grass",
+      "description": "Cherry blossom petals on grass: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-6e0fd141",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "spring",
+        "organic",
+        "cherry",
+        "blossom",
+        "petals"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "spring",
+        "organic",
+        "cherry",
+        "blossom",
+        "petals",
+        "green",
+        "gray",
+        "teal",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2d735d",
+            "weight_bp": 1843
+          },
+          {
+            "hex": "#1f5848",
+            "weight_bp": 1691
+          },
+          {
+            "hex": "#509372",
+            "weight_bp": 1622
+          },
+          {
+            "hex": "#aca09f",
+            "weight_bp": 1264
+          },
+          {
+            "hex": "#093a35",
+            "weight_bp": 1243
+          },
+          {
+            "hex": "#115045",
+            "weight_bp": 1163
+          },
+          {
+            "hex": "#6e7972",
+            "weight_bp": 725
+          },
+          {
+            "hex": "#52595c",
+            "weight_bp": 449
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "gray",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04666,
+          "y_mae": 0.11842,
+          "x_ratio": 1.4219,
+          "y_ratio": 4.137,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Cherry_blossom_petals_on_grass_6e0fd141.jpg",
+          "sha256": "45b79632b368e82bd34abaaeb4f3425d385334319ffea409984e79c4784c4def",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "spring"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.68b862ea",
+      "kind": "region",
+      "name": "Desert steppe grass",
+      "description": "Desert steppe grass: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-68b862ea",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "desert",
+        "dry",
+        "organic",
+        "steppe"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "desert",
+        "dry",
+        "organic",
+        "steppe",
+        "orange",
+        "brown",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#d09b57",
+            "weight_bp": 1460
+          },
+          {
+            "hex": "#9c6a38",
+            "weight_bp": 1373
+          },
+          {
+            "hex": "#b67c45",
+            "weight_bp": 1323
+          },
+          {
+            "hex": "#c88f50",
+            "weight_bp": 1311
+          },
+          {
+            "hex": "#a67640",
+            "weight_bp": 1221
+          },
+          {
+            "hex": "#b9884b",
+            "weight_bp": 1190
+          },
+          {
+            "hex": "#dfac64",
+            "weight_bp": 1123
+          },
+          {
+            "hex": "#83552b",
+            "weight_bp": 999
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "orange",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06738,
+          "y_mae": 0.07562,
+          "x_ratio": 1.5338,
+          "y_ratio": 1.8973,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Desert_steppe_grass_texture_68b862ea.jpg",
+          "sha256": "e6fd989c687140146d50730e04ea83bfff15056b7c21e67c9f34320283984f82",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "desert"
+          ],
+          "conditions": [
+            "dry"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.2d81693a",
+      "kind": "region",
+      "name": "Teal crystal grass",
+      "description": "Teal crystal grass: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-2d81693a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "crystal",
+        "organic",
+        "teal"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "crystal",
+        "organic",
+        "teal",
+        "blue",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#238b8a",
+            "weight_bp": 1627
+          },
+          {
+            "hex": "#12364b",
+            "weight_bp": 1518
+          },
+          {
+            "hex": "#126b72",
+            "weight_bp": 1293
+          },
+          {
+            "hex": "#0c4d5b",
+            "weight_bp": 1245
+          },
+          {
+            "hex": "#206f74",
+            "weight_bp": 1161
+          },
+          {
+            "hex": "#1b505e",
+            "weight_bp": 1110
+          },
+          {
+            "hex": "#111e3a",
+            "weight_bp": 1063
+          },
+          {
+            "hex": "#38bab1",
+            "weight_bp": 983
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05059,
+          "y_mae": 0.1266,
+          "x_ratio": 1.0598,
+          "y_ratio": 3.6504,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Teal_crystal_grass_texture_2d81693a.jpg",
+          "sha256": "fd4944bb73fbb8234383cbd8f29478098f86e6688a8a5dc246990a11d7f38a58",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.5e2193d8",
+      "kind": "region",
+      "name": "Purple elf grass",
+      "description": "Purple elf grass: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-5e2193d8",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "magic",
+        "organic",
+        "purple",
+        "elf"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "magic",
+        "organic",
+        "purple",
+        "elf",
+        "blue",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#362863",
+            "weight_bp": 1594
+          },
+          {
+            "hex": "#2f194f",
+            "weight_bp": 1438
+          },
+          {
+            "hex": "#56377f",
+            "weight_bp": 1355
+          },
+          {
+            "hex": "#241848",
+            "weight_bp": 1175
+          },
+          {
+            "hex": "#1d0c36",
+            "weight_bp": 1166
+          },
+          {
+            "hex": "#6a5396",
+            "weight_bp": 1166
+          },
+          {
+            "hex": "#532a72",
+            "weight_bp": 1112
+          },
+          {
+            "hex": "#3e1d5a",
+            "weight_bp": 994
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05938,
+          "y_mae": 0.07675,
+          "x_ratio": 1.7127,
+          "y_ratio": 2.6416,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Purple_elf_grass_texture_5e2193d8.jpg",
+          "sha256": "e371be7ddabf2ff971e8b95777b8ea9aef4799b8d6f48fd44f39aef28c18a4f8",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.6bc1cf1a",
+      "kind": "region",
+      "name": "Golden autumn grass with leaves",
+      "description": "Golden autumn grass with leaves: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-6bc1cf1a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "autumn",
+        "organic",
+        "golden",
+        "leaves"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "autumn",
+        "organic",
+        "golden",
+        "leaves",
+        "brown",
+        "orange",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#563110",
+            "weight_bp": 1625
+          },
+          {
+            "hex": "#694719",
+            "weight_bp": 1440
+          },
+          {
+            "hex": "#975f20",
+            "weight_bp": 1422
+          },
+          {
+            "hex": "#422b0e",
+            "weight_bp": 1281
+          },
+          {
+            "hex": "#8d4d18",
+            "weight_bp": 1219
+          },
+          {
+            "hex": "#b88334",
+            "weight_bp": 1111
+          },
+          {
+            "hex": "#331908",
+            "weight_bp": 1038
+          },
+          {
+            "hex": "#703713",
+            "weight_bp": 864
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "orange"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05783,
+          "y_mae": 0.1019,
+          "x_ratio": 1.446,
+          "y_ratio": 2.8613,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Golden_autumn_grass_with_leaves_6bc1cf1a.jpg",
+          "sha256": "51357ed5e2a845eeaca34b7300ad35c6b49e7a3a749aa122a33d4b2e84c61daf",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "autumn"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.d2669cae",
+      "kind": "region",
+      "name": "Dark corrupted grass",
+      "description": "Dark corrupted grass: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-d2669cae",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "magic",
+        "organic",
+        "dark",
+        "corrupted"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "magic",
+        "organic",
+        "dark",
+        "corrupted",
+        "blue",
+        "black",
+        "purple",
+        "red",
+        "brown",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1e1d2c",
+            "weight_bp": 2128
+          },
+          {
+            "hex": "#18131e",
+            "weight_bp": 1404
+          },
+          {
+            "hex": "#10101d",
+            "weight_bp": 1213
+          },
+          {
+            "hex": "#0a0811",
+            "weight_bp": 1143
+          },
+          {
+            "hex": "#30141c",
+            "weight_bp": 1080
+          },
+          {
+            "hex": "#693841",
+            "weight_bp": 1063
+          },
+          {
+            "hex": "#4a1d25",
+            "weight_bp": 1003
+          },
+          {
+            "hex": "#482632",
+            "weight_bp": 966
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "purple",
+          "red",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03403,
+          "y_mae": 0.06362,
+          "x_ratio": 1.1105,
+          "y_ratio": 2.55,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Dark_corrupted_grass_texture_d2669cae.jpg",
+          "sha256": "08208e665ce2ac594e54385dbb73127124d6ba2b9592335ef8a6d286d0303808",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.d60d6e36",
+      "kind": "region",
+      "name": "Frosty winter grass",
+      "description": "Frosty winter grass: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-d60d6e36",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "ice",
+        "cold",
+        "organic",
+        "frosty",
+        "winter"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "ice",
+        "cold",
+        "organic",
+        "frosty",
+        "winter",
+        "teal",
+        "brown",
+        "blue",
+        "white",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage",
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#96c7cc",
+            "weight_bp": 1354
+          },
+          {
+            "hex": "#648b94",
+            "weight_bp": 1350
+          },
+          {
+            "hex": "#7e593d",
+            "weight_bp": 1333
+          },
+          {
+            "hex": "#493228",
+            "weight_bp": 1288
+          },
+          {
+            "hex": "#1e232c",
+            "weight_bp": 1254
+          },
+          {
+            "hex": "#d2e2d9",
+            "weight_bp": 1203
+          },
+          {
+            "hex": "#485358",
+            "weight_bp": 1193
+          },
+          {
+            "hex": "#a59073",
+            "weight_bp": 1025
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "brown",
+          "blue",
+          "white"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06784,
+          "y_mae": 0.16525,
+          "x_ratio": 1.3023,
+          "y_ratio": 3.4813,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frosty_winter_grass_texture_d60d6e36.jpg",
+          "sha256": "8e1687a84dd7123b4e58c91371eb1e2a767942a0478cc1680e68ec204dfbd025",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    }
+  ]
+}

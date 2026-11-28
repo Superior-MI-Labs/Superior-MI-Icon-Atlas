@@ -74,19 +74,39 @@ jobs:
         run: python3 tools/prune_public_site.py site
       - name: Verify actual deployable artifact
         run: python3 tests/browser_catalog_smoke.py --published-only
+      - uses: actions/upload-artifact@v4
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          name: qualified-site
+          path: site/
+          include-hidden-files: true
+          compression-level: 0
+          retention-days: 1
+  retain:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && (github.event_name != 'workflow_dispatch' || inputs.collection == '')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: qualified-site
+          path: site/
+      - name: Append qualified archives to durable history
+        run: bash tools/publish_retained.sh site
       - uses: actions/configure-pages@v5
-        if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v4
-        if: github.event_name != 'pull_request'
         with:
           path: site/
   deploy:
-    if: github.event_name != 'pull_request' && (github.event_name != 'workflow_dispatch' || inputs.collection == '')
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && (github.event_name != 'workflow_dispatch' || inputs.collection == '')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: retain
     permissions:
       pages: write
       id-token: write

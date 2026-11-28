@@ -1,0 +1,28 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.material.gflow.grass",
+  "name": "G Flow Materials — Grasses",
+  "version": "1.0.0",
+  "entry_asset": "smi.material.gflow.ae56e843",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Grasses"
+    }
+  ],
+  "classification": {
+    "category_path": [
+      "textures"
+    ],
+    "perspective": [
+      "perspective-neutral"
+    ],
+    "theme": [
+      "fantasy"
+    ],
+    "medium": [
+      "raster-2d"
+    ],
+    "family": "gflow-materials"
+  }
+}

@@ -311,6 +311,14 @@
   }
   function more(){const frag=document.createDocumentFragment();for(const a of matches.slice(shown,shown+PAGE))frag.append(card(a));shown=Math.min(matches.length,shown+PAGE);$('gallery').append(frag);$('shown-count').textContent=shown.toLocaleString()+' of '+matches.length.toLocaleString()+' shown';$('more').hidden=shown>=matches.length;}
   function controlsFor(a){const area=$('controls');area.replaceChildren();
+    if(a.material){
+      const m=a.material,p=a.visual_profile;
+      const info=document.createElement('p');info.textContent='Surface profile: '+m.role.replaceAll('_',' ')+' · base color only · repeat '+m.repeat_intent.join(' / ')+' · seam '+(m.seam_screen?.screening||'not screened')+(m.suggested_coverage_m?' · suggested '+m.suggested_coverage_m.join(' × ')+' m (not calibrated)':'');area.append(info);
+      if(p?.palette?.length){const colors=document.createElement('div');colors.setAttribute('aria-label','Measured color palette');colors.style.cssText='display:flex;flex-wrap:wrap;gap:4px';for(const c of p.palette){const chip=document.createElement('span');chip.title=c.hex+' · '+(c.weight_bp/100).toFixed(2)+'%';chip.setAttribute('aria-label',chip.title);chip.style.cssText='width:25px;height:25px;border:1px solid currentColor;border-radius:4px;background:'+c.hex;colors.append(chip);}area.append(colors);}
+      const label=document.createElement('p');label.textContent='2 × 2 repeat preview (appearance only; inspect seams)';area.append(label);
+      const repeated=document.createElement('canvas');repeated.dataset.materialRepeat='true';repeated.width=512;repeated.height=512;repeated.style.cssText='width:100%;max-width:320px;aspect-ratio:1;display:block';repeated.setAttribute('aria-label','Repeated material preview');area.append(repeated);
+    }
+
     if(a.kind==='state_set'){
       const lab=document.createElement('label');lab.textContent='Appearance';
       const sel=document.createElement('select'),keys=Object.keys(a.states||{});
@@ -388,6 +396,10 @@
         const link=document.createElement('button');link.type='button';link.textContent=entry.name;
         link.title=id;link.onclick=()=>openDetail(entry);list.append(link);
       }
+    }
+    if(a.material){
+      const picks=Collections.rankRelated(a,entries,{limit:8,categoryPrefixes:['textures','world.terrain','world.vegetation','world.props']});
+      if(picks.length){const title=document.createElement('strong');title.textContent='Suggested matches (not verified compatibility)';list.append(title);for(const result of picks){const entry=entryMap.get(result.id);if(!entry)continue;const button=document.createElement('button');button.type='button';button.textContent=entry.name;button.title='Shared: '+result.shared.join(', ')+(result.color===null?' · color not measured':' · palette similarity '+Math.round(result.color*100)+'%');button.onclick=()=>openDetail(entry);list.append(button);}}
     }
     // Concept associations are discovery links, not required render dependencies.
     const concept=conceptIndex.get(a.concept_id);
@@ -510,6 +522,7 @@
             if(token!==activePreview||current?.id!==a.id)return;
             const target=$('detail-canvas');target.width=canvas.width;target.height=canvas.height;
             target.getContext('2d').drawImage(canvas,0,0);lastDetailSignature=signature;$('download-png').disabled=false;
+            const repeat=$('controls').querySelector('canvas[data-material-repeat]');if(repeat){const ctx=repeat.getContext('2d'),w=repeat.width/2,h=repeat.height/2;ctx.clearRect(0,0,repeat.width,repeat.height);for(let y=0;y<2;y++)for(let x=0;x<2;x++)ctx.drawImage(canvas,x*w,y*h,w,h);}
           }).catch(e=>{if(token===activePreview){lastDetailSignature=signature;notify(e.message);}}).finally(()=>{detailRendering=false});
         }
       }

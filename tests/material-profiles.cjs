@@ -1,0 +1,26 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const C=require('../web/collection-core.js');
+(async()=>{
+ const dir=path.join(__dirname,'../examples/gflow-materials-grass');
+ const pack=JSON.parse(fs.readFileSync(path.join(dir,'manifest.json'))), index=JSON.parse(fs.readFileSync(path.join(dir,'collection.json')));
+ const resolved=C.resolveCollection(index,[{path:'manifest.json',pack}]);
+ const source=pack.assets.find(a=>a.name==='Fantasy meadow grass');assert.ok(source);
+ const a=resolved.pack.assets.find(a=>a.id===source.id),t=resolved.pack.textures[a.texture];
+ assert.deepEqual(a.material,source.material);assert.deepEqual(a.visual_profile,source.visual_profile); C.validateMaterialProfiles(a,t);
+ const bad=structuredClone(pack);bad.assets[0].visual_profile.palette[0].weight_bp++;
+ assert.throws(()=>C.resolveCollection(index,[{path:'manifest.json',pack:bad}]),/material\/visual profile/);
+ const invalid=structuredClone(pack);invalid.assets[0].rect_px[2]--;assert.throws(()=>C.resolveCollection(index,[{path:'manifest.json',pack:invalid}]),/material\/visual profile/);
+ const malformed=structuredClone(pack);malformed.assets[0].material.channels.normal='missing';assert.throws(()=>C.resolveCollection(index,[{path:'manifest.json',pack:malformed}]),/material\/visual profile/);
+ const fern={id:'test.fern',name:'Fern',kind:'region',subjects:['grass','vegetation','meadow'],style:a.style,category_path:['world.vegetation'],visual_profile:source.visual_profile};
+ const emerald={id:'test.gem',name:'Emerald',kind:'region',subjects:['gemstone'],style:a.style,category_path:['items'],visual_profile:source.visual_profile};
+ assert.deepEqual(C.rankRelated(a,[emerald,fern],{categoryPrefixes:['world.vegetation']}).map(x=>x.id),['test.fern']);
+ assert.equal(C.rankRelated(a,[fern],{requiredRole:'surface'}).length,0);
+ const missing={...fern,id:'test.no-palette',visual_profile:undefined};assert.equal(C.rankRelated(a,[missing])[0].color,null);
+ const files=new Map(),zip={file:(n,v)=>files.set(n,v)};
+ const out=await C.writeSelection(zip,{assets:[a],rootId:a.id,packId:'smi.test.material',getTexture:async()=>({...t,blob:new Blob([fs.readFileSync(path.join(dir,t.path))])}),getInterfaces:()=>({})});
+ assert.deepEqual(out.assets[0].material,source.material);assert.deepEqual(out.assets[0].visual_profile,source.visual_profile);
+ assert.equal(Object.values(out.textures)[0].color_space,'srgb');assert.equal(Object.keys(out.textures).length,1);
+ const re=C.resolveCollection(JSON.parse(files.get('collection.json')),[{path:'manifest.json',pack:JSON.parse(files.get('manifest.json'))}]);assert.deepEqual(re.pack.assets[0].material,source.material);
+ console.log('PASS material profile validation, discovery and selected export roundtrip');
+})().catch(e=>{console.error(e);process.exitCode=1;});

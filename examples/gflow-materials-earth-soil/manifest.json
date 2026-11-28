@@ -1,0 +1,3674 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.earth-soil",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-3f90d982": {
+      "path": "textures/scorched-earth-ground-3f90d982.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "82a82f0bd0cc39541fcbfd30b6230ae22744d7cab09ddec891b23711f82c1bba",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-c35ec658": {
+      "path": "textures/meteor-dust-ground-with-gold-c35ec658.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "bca9bba9bfd1b9d6509a8028e6a87ca4151d61b0a8d54abcff757cbe2c7f6696",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-b537e1e8": {
+      "path": "textures/worm-burrowed-soil-b537e1e8.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d7fca60e19d099e90a89d913d945750a6287483e755488293df547bb37468c77",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-c4fe5e5e": {
+      "path": "textures/desert-canyon-gravel-c4fe5e5e.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "982770cddc8d54173f55f9e7168ae55d0ba0e61cd24034fba3da712420697798",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-544cf278": {
+      "path": "textures/turquoise-crystal-soil-544cf278.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4cbfbdb1355760e442dcce1288600c39358938f7d7f6ddcef91405c22f15ac65",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-2a4bdc3d": {
+      "path": "textures/titan-fossil-bone-dirt-floor-2a4bdc3d.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "8a05d7f303ca9f6f2521cee8b579c825581d8f007b7225f66bfb8dd7df415791",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-f8b9e2ba": {
+      "path": "textures/cracked-dry-clay-earth-f8b9e2ba.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "3152fa5075dd74de5dd86b697ab4d8d25c58af62c13ba87a22e68506ea2cd989",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-fe923e9a": {
+      "path": "textures/glowing-roots-in-garden-soil-fe923e9a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "23f6c3b92b913ec692d8c825e2f73da77ccbcd981aecbb3adaa24b4b8636f33b",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-19b8a63c": {
+      "path": "textures/volcanic-ash-with-ember-veins-19b8a63c.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "5d7818859748e1d0d4786bd39e440433baa4c1f6865abd8a07365904e27c651f",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ad193de8": {
+      "path": "textures/green-mud-ad193de8.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f05716c983f573cc237f8378802ad40187739101a7c9a607fc5182415c968eac",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-df87e64d": {
+      "path": "textures/farmland-loam-soil-df87e64d.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f41c3345f364cf0cae56846447b86f82551d85cab75ef45e39d1e551b8806c7d",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-95c841f0": {
+      "path": "textures/mossy-forest-dirt-95c841f0.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "3d8b8dcac6571e335eb591ab9b7d1997c71aeeb59829ceb811fdf6e177380149",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-da0cb548": {
+      "path": "textures/blood-red-clay-soil-da0cb548.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "e54d3543222f2639340cac054dd7e2d652853879ced939bf5ca406f9ffd0f452",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-2c898328": {
+      "path": "textures/shadow-realm-void-soil-2c898328.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "13c89a1ba5fe1b67738d8734bc6b2ed42dc2534ece13ff728a1f6064cdca3c88",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-9799fe2b": {
+      "path": "textures/petrified-dragon-wood-ash-soil-9799fe2b.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "a74366fb6e2024bb36fc1e32ee2b5605198ec859fa7118a9a81e2fc6a98f7353",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-fd92f1a6": {
+      "path": "textures/red-terracotta-clay-soil-fd92f1a6.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "49e1255f15b53fb6768157c9f1085c12a3056fe365f3cc0019888fe164e1b242",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-cc27b13e": {
+      "path": "textures/wet-muddy-puddle-ground-cc27b13e.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "147e4c5d2fa1d79c3fc5fea25ca5e90a12de743f4fb9e3a3c5f769b169e200ff",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-45dfd631": {
+      "path": "textures/autumn-orchard-earth-45dfd631.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "7166c945735c0ba3000bb4555da5c19eaff4a3dea61e2cdf4788a6b80c363745",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-8730291e": {
+      "path": "textures/bioluminescent-purple-subterranean-soil-8730291e.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "7c0f42d89235121b8cd9d087cb32c1b76a4801d0c774a4cc7003bc008fcd1951",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-549cdc10": {
+      "path": "textures/black-sand-top-view-549cdc10.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "b5d11dba071ecc82e6688a14eead5150951670b6858677864f009694a7257065",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ebc86df5": {
+      "path": "textures/frozen-dirt-ground-ebc86df5.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "b607d68e778cecb514503d1ce4767370566e83e6db55e6d1f40b6b16879eb330",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-f49055c1": {
+      "path": "textures/golden-stardust-soil-f49055c1.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "13213f0bc9511be9eccbd9679f2e80ba25f9d1b1359ed5e556a26e1f56d99ea4",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-c9858d44": {
+      "path": "textures/fairy-garden-soil-c9858d44.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "b47788953adef4c0a24e38a4be279dfac8c35c4aa24f6f86ea393a116f0cfab6",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-0036267f": {
+      "path": "textures/glowing-mushroom-spore-soil-0036267f.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f951d02c0cbd2c0235a48c858743f675678b919fde64324fad82421d3bb1403a",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ad1130ff": {
+      "path": "textures/toxic-acid-swamp-forest-soil-ad1130ff.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "7c600ae721f3f950d9a02a99f81ae5967a5d2794444d8ccf473c812412d00bd6",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.3f90d982",
+      "kind": "region",
+      "name": "Scorched earth ground",
+      "description": "Scorched earth ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-3f90d982",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "lava",
+        "dry",
+        "organic",
+        "scorched",
+        "earth"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "lava",
+        "dry",
+        "organic",
+        "scorched",
+        "earth",
+        "blue",
+        "gray",
+        "black",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#494656",
+            "weight_bp": 1596
+          },
+          {
+            "hex": "#282429",
+            "weight_bp": 1574
+          },
+          {
+            "hex": "#17161c",
+            "weight_bp": 1488
+          },
+          {
+            "hex": "#3e363b",
+            "weight_bp": 1329
+          },
+          {
+            "hex": "#1d1f29",
+            "weight_bp": 1082
+          },
+          {
+            "hex": "#2d2f41",
+            "weight_bp": 1078
+          },
+          {
+            "hex": "#0c0b0f",
+            "weight_bp": 964
+          },
+          {
+            "hex": "#6d7b9b",
+            "weight_bp": 889
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "gray",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0484,
+          "y_mae": 0.07538,
+          "x_ratio": 1.2866,
+          "y_ratio": 2.0504,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Scorched_earth_ground_texture_3f90d982.jpg",
+          "sha256": "c3df11a3db4aa8a9ebda83a38fb82a650ecb2fc3fd72265f9622de536143c600",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "dry"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.c35ec658",
+      "kind": "region",
+      "name": "Meteor dust ground with gold",
+      "description": "Meteor dust ground with gold: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-c35ec658",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "meteor",
+        "dust",
+        "gold"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "meteor",
+        "dust",
+        "gold",
+        "blue",
+        "black",
+        "gray",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#313349",
+            "weight_bp": 1705
+          },
+          {
+            "hex": "#15192d",
+            "weight_bp": 1395
+          },
+          {
+            "hex": "#1c213a",
+            "weight_bp": 1313
+          },
+          {
+            "hex": "#1b1f30",
+            "weight_bp": 1258
+          },
+          {
+            "hex": "#282b40",
+            "weight_bp": 1242
+          },
+          {
+            "hex": "#222740",
+            "weight_bp": 1172
+          },
+          {
+            "hex": "#0d1224",
+            "weight_bp": 1024
+          },
+          {
+            "hex": "#54505a",
+            "weight_bp": 891
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06206,
+          "y_mae": 0.06517,
+          "x_ratio": 1.2918,
+          "y_ratio": 1.3513,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Meteor_dust_ground_with_gold_c35ec658.jpg",
+          "sha256": "0c448048ac68caa8eb7dd35917705eaf8a524e2ee708ebce35bd3a044b457172",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.b537e1e8",
+      "kind": "region",
+      "name": "Worm burrowed soil",
+      "description": "Worm burrowed soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-b537e1e8",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "organic",
+        "worm",
+        "burrowed"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "organic",
+        "worm",
+        "burrowed",
+        "brown",
+        "black",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#483425",
+            "weight_bp": 1540
+          },
+          {
+            "hex": "#231810",
+            "weight_bp": 1311
+          },
+          {
+            "hex": "#1a110b",
+            "weight_bp": 1309
+          },
+          {
+            "hex": "#3a261a",
+            "weight_bp": 1309
+          },
+          {
+            "hex": "#2b2017",
+            "weight_bp": 1250
+          },
+          {
+            "hex": "#100b07",
+            "weight_bp": 1237
+          },
+          {
+            "hex": "#060402",
+            "weight_bp": 1059
+          },
+          {
+            "hex": "#66563f",
+            "weight_bp": 985
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.029,
+          "y_mae": 0.05513,
+          "x_ratio": 0.9123,
+          "y_ratio": 1.8272,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Worm_burrowed_soil_texture_b537e1e8.jpg",
+          "sha256": "da67b94c93c3a7bb4c5573068fd100a09b1705898ce3b90dcefb2969bc5660dd",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.c4fe5e5e",
+      "kind": "region",
+      "name": "Desert canyon gravel",
+      "description": "Desert canyon gravel: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-c4fe5e5e",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "desert",
+        "dry",
+        "canyon"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "desert",
+        "dry",
+        "canyon",
+        "brown",
+        "orange",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#a16643",
+            "weight_bp": 1541
+          },
+          {
+            "hex": "#7f472d",
+            "weight_bp": 1309
+          },
+          {
+            "hex": "#59301f",
+            "weight_bp": 1297
+          },
+          {
+            "hex": "#975b3a",
+            "weight_bp": 1279
+          },
+          {
+            "hex": "#6c3e29",
+            "weight_bp": 1261
+          },
+          {
+            "hex": "#885337",
+            "weight_bp": 1203
+          },
+          {
+            "hex": "#391d14",
+            "weight_bp": 1059
+          },
+          {
+            "hex": "#b87e53",
+            "weight_bp": 1051
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "orange"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03988,
+          "y_mae": 0.07635,
+          "x_ratio": 1.4106,
+          "y_ratio": 2.7244,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Desert_canyon_gravel_texture_c4fe5e5e.jpg",
+          "sha256": "7fd6878ee707e1d18d0c7681a30b1f3cabdeed61779911a8258f7a66d32b47e3",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "desert"
+          ],
+          "conditions": [
+            "dry"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.544cf278",
+      "kind": "region",
+      "name": "Turquoise crystal soil",
+      "description": "Turquoise crystal soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-544cf278",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "crystal",
+        "organic",
+        "turquoise"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "crystal",
+        "organic",
+        "turquoise",
+        "teal",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2d9599",
+            "weight_bp": 1684
+          },
+          {
+            "hex": "#12525f",
+            "weight_bp": 1626
+          },
+          {
+            "hex": "#197d87",
+            "weight_bp": 1275
+          },
+          {
+            "hex": "#21676f",
+            "weight_bp": 1233
+          },
+          {
+            "hex": "#116474",
+            "weight_bp": 1168
+          },
+          {
+            "hex": "#2c8084",
+            "weight_bp": 1072
+          },
+          {
+            "hex": "#0c3940",
+            "weight_bp": 1017
+          },
+          {
+            "hex": "#48b9be",
+            "weight_bp": 925
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05214,
+          "y_mae": 0.08373,
+          "x_ratio": 1.3803,
+          "y_ratio": 2.2482,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Turquoise_crystal_soil_texture_544cf278.jpg",
+          "sha256": "32983f7be87f21a164c4c92b4e81d952a90490beca8b0f4fbd7e05b1c095c225",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.2a4bdc3d",
+      "kind": "region",
+      "name": "Titan fossil bone dirt floor",
+      "description": "Titan fossil bone dirt floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-2a4bdc3d",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "bone",
+        "construction",
+        "organic",
+        "titan",
+        "fossil",
+        "dirt"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "bone",
+        "construction",
+        "organic",
+        "titan",
+        "fossil",
+        "dirt",
+        "olive",
+        "black",
+        "brown",
+        "yellow",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#686146",
+            "weight_bp": 1351
+          },
+          {
+            "hex": "#272117",
+            "weight_bp": 1348
+          },
+          {
+            "hex": "#312c1e",
+            "weight_bp": 1346
+          },
+          {
+            "hex": "#554a37",
+            "weight_bp": 1313
+          },
+          {
+            "hex": "#3d3426",
+            "weight_bp": 1246
+          },
+          {
+            "hex": "#44402b",
+            "weight_bp": 1244
+          },
+          {
+            "hex": "#979077",
+            "weight_bp": 1086
+          },
+          {
+            "hex": "#18140e",
+            "weight_bp": 1066
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "black",
+          "brown",
+          "yellow"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07827,
+          "y_mae": 0.11676,
+          "x_ratio": 1.4532,
+          "y_ratio": 2.3631,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Titan_fossil_bone_dirt_floor_2a4bdc3d.jpg",
+          "sha256": "ee1abdb62ee39da77c1c8b9f89d17c8ef2d3e921cfba1b49efc229af85ef4fc6",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.f8b9e2ba",
+      "kind": "region",
+      "name": "Cracked dry clay earth",
+      "description": "Cracked dry clay earth: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-f8b9e2ba",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "dry",
+        "weathered",
+        "organic",
+        "cracked",
+        "clay",
+        "earth"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "dry",
+        "weathered",
+        "organic",
+        "cracked",
+        "clay",
+        "earth",
+        "brown",
+        "red",
+        "orange",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#b26135",
+            "weight_bp": 1481
+          },
+          {
+            "hex": "#6f321f",
+            "weight_bp": 1288
+          },
+          {
+            "hex": "#914b2e",
+            "weight_bp": 1273
+          },
+          {
+            "hex": "#a4542f",
+            "weight_bp": 1265
+          },
+          {
+            "hex": "#814027",
+            "weight_bp": 1262
+          },
+          {
+            "hex": "#2c110d",
+            "weight_bp": 1196
+          },
+          {
+            "hex": "#502418",
+            "weight_bp": 1172
+          },
+          {
+            "hex": "#cb7a43",
+            "weight_bp": 1063
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "red",
+          "orange"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02278,
+          "y_mae": 0.05161,
+          "x_ratio": 0.9633,
+          "y_ratio": 2.2123,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Cracked_dry_clay_earth_texture_f8b9e2ba.jpg",
+          "sha256": "23ecf4d6b7d7a0ab7e0781784487289672c37d3f06b31163fcc766dbc504388f",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "dry",
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.fe923e9a",
+      "kind": "region",
+      "name": "Glowing roots in garden soil",
+      "description": "Glowing roots in garden soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-fe923e9a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "vegetation",
+        "magic",
+        "forest",
+        "glowing",
+        "organic",
+        "roots",
+        "garden"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "vegetation",
+        "magic",
+        "forest",
+        "glowing",
+        "organic",
+        "roots",
+        "garden",
+        "black",
+        "teal",
+        "gray",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "foliage",
+        "fantasy",
+        "woodland"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#181a17",
+            "weight_bp": 1671
+          },
+          {
+            "hex": "#5c7572",
+            "weight_bp": 1342
+          },
+          {
+            "hex": "#292a26",
+            "weight_bp": 1266
+          },
+          {
+            "hex": "#25423d",
+            "weight_bp": 1217
+          },
+          {
+            "hex": "#434b48",
+            "weight_bp": 1202
+          },
+          {
+            "hex": "#182826",
+            "weight_bp": 1149
+          },
+          {
+            "hex": "#a6c0be",
+            "weight_bp": 1126
+          },
+          {
+            "hex": "#0e0e0c",
+            "weight_bp": 1027
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "teal",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04918,
+          "y_mae": 0.0808,
+          "x_ratio": 1.0085,
+          "y_ratio": 1.8002,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Glowing_roots_in_garden_soil_fe923e9a.jpg",
+          "sha256": "b9be1934a4571e4718716846cc74bc6bd1ef38187b1e0fabf7519ad51c552df5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest"
+          ],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.19b8a63c",
+      "kind": "region",
+      "name": "Volcanic ash with ember veins",
+      "description": "Volcanic ash with ember veins: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-19b8a63c",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "lava",
+        "dry",
+        "glowing",
+        "volcanic",
+        "ash",
+        "ember",
+        "veins"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "lava",
+        "dry",
+        "glowing",
+        "volcanic",
+        "ash",
+        "ember",
+        "veins",
+        "black",
+        "brown",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#282324",
+            "weight_bp": 2051
+          },
+          {
+            "hex": "#171618",
+            "weight_bp": 1308
+          },
+          {
+            "hex": "#231817",
+            "weight_bp": 1268
+          },
+          {
+            "hex": "#513028",
+            "weight_bp": 1266
+          },
+          {
+            "hex": "#0e0c0d",
+            "weight_bp": 1124
+          },
+          {
+            "hex": "#875030",
+            "weight_bp": 1020
+          },
+          {
+            "hex": "#401912",
+            "weight_bp": 989
+          },
+          {
+            "hex": "#53241b",
+            "weight_bp": 974
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03441,
+          "y_mae": 0.0593,
+          "x_ratio": 1.2354,
+          "y_ratio": 2.1381,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Volcanic_ash_with_ember_veins_19b8a63c.jpg",
+          "sha256": "6e7182545a18dd453b5817afe598fbe653f00a17505fa1d063c95ef40d00fc74",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "dry",
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ad193de8",
+      "kind": "region",
+      "name": "Green mud",
+      "description": "Green mud: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ad193de8",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "wet",
+        "green",
+        "mud"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "wet",
+        "green",
+        "mud",
+        "olive",
+        "black",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2e3211",
+            "weight_bp": 1404
+          },
+          {
+            "hex": "#6d9c2e",
+            "weight_bp": 1336
+          },
+          {
+            "hex": "#4c591f",
+            "weight_bp": 1320
+          },
+          {
+            "hex": "#444618",
+            "weight_bp": 1288
+          },
+          {
+            "hex": "#363f15",
+            "weight_bp": 1242
+          },
+          {
+            "hex": "#5c7427",
+            "weight_bp": 1224
+          },
+          {
+            "hex": "#92d13a",
+            "weight_bp": 1127
+          },
+          {
+            "hex": "#1e220a",
+            "weight_bp": 1059
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "green",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0477,
+          "y_mae": 0.06958,
+          "x_ratio": 1.6453,
+          "y_ratio": 2.3349,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Green_mud_texture_ad193de8.jpg",
+          "sha256": "a3d39e6f0ee3bcad74a6e18724b54351e13ce200db0f8a39fda17a0a5617cb54",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.df87e64d",
+      "kind": "region",
+      "name": "Farmland loam soil",
+      "description": "Farmland loam soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-df87e64d",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "organic",
+        "farmland",
+        "loam"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "organic",
+        "farmland",
+        "loam",
+        "brown",
+        "black",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3f2d1e",
+            "weight_bp": 1606
+          },
+          {
+            "hex": "#382618",
+            "weight_bp": 1430
+          },
+          {
+            "hex": "#2c1e13",
+            "weight_bp": 1425
+          },
+          {
+            "hex": "#1e150e",
+            "weight_bp": 1292
+          },
+          {
+            "hex": "#231a13",
+            "weight_bp": 1187
+          },
+          {
+            "hex": "#2e231a",
+            "weight_bp": 1079
+          },
+          {
+            "hex": "#543b28",
+            "weight_bp": 1073
+          },
+          {
+            "hex": "#150e08",
+            "weight_bp": 908
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0293,
+          "y_mae": 0.05268,
+          "x_ratio": 1.6627,
+          "y_ratio": 2.9752,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Farmland_loam_soil_texture_df87e64d.jpg",
+          "sha256": "277f73efafa77f557c36f3e476e5246060031696e3dd030c4599a24d88237c83",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.95c841f0",
+      "kind": "region",
+      "name": "Mossy forest dirt",
+      "description": "Mossy forest dirt: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-95c841f0",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "forest",
+        "mossy",
+        "dirt"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "forest",
+        "mossy",
+        "dirt",
+        "green",
+        "olive",
+        "brown",
+        "black",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "woodland"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#313e10",
+            "weight_bp": 1598
+          },
+          {
+            "hex": "#2c2815",
+            "weight_bp": 1373
+          },
+          {
+            "hex": "#4d531d",
+            "weight_bp": 1300
+          },
+          {
+            "hex": "#3b2e1d",
+            "weight_bp": 1199
+          },
+          {
+            "hex": "#18170b",
+            "weight_bp": 1176
+          },
+          {
+            "hex": "#20280c",
+            "weight_bp": 1141
+          },
+          {
+            "hex": "#677123",
+            "weight_bp": 1133
+          },
+          {
+            "hex": "#4a4023",
+            "weight_bp": 1080
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "olive",
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0549,
+          "y_mae": 0.08438,
+          "x_ratio": 1.7051,
+          "y_ratio": 2.7414,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Mossy_forest_dirt_texture_95c841f0.jpg",
+          "sha256": "730f1d55f7bd9b9add6cd1dded6b776891b86e12c920485773e6d33dbfd2c0ee",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.da0cb548",
+      "kind": "region",
+      "name": "Blood-red clay soil",
+      "description": "Blood-red clay soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-da0cb548",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "organic",
+        "blood",
+        "red",
+        "clay"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "organic",
+        "blood",
+        "red",
+        "clay",
+        "brown",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#541f18",
+            "weight_bp": 1842
+          },
+          {
+            "hex": "#70281f",
+            "weight_bp": 1539
+          },
+          {
+            "hex": "#3f120f",
+            "weight_bp": 1424
+          },
+          {
+            "hex": "#4d1512",
+            "weight_bp": 1306
+          },
+          {
+            "hex": "#6e211c",
+            "weight_bp": 1157
+          },
+          {
+            "hex": "#8e3a32",
+            "weight_bp": 1035
+          },
+          {
+            "hex": "#290c0a",
+            "weight_bp": 1032
+          },
+          {
+            "hex": "#6c1417",
+            "weight_bp": 665
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "red"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0387,
+          "y_mae": 0.04931,
+          "x_ratio": 1.5612,
+          "y_ratio": 2.0809,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Blood-red_clay_soil_texture_da0cb548.jpg",
+          "sha256": "e9656f0e233605abdc13d8fec7ceb28a2ef4ac919323d78c25d2e05b3c54b0f9",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.2c898328",
+      "kind": "region",
+      "name": "Shadow realm void soil",
+      "description": "Shadow realm void soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-2c898328",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "magic",
+        "organic",
+        "shadow",
+        "realm",
+        "void"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "magic",
+        "organic",
+        "shadow",
+        "realm",
+        "void",
+        "purple",
+        "black",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#292339",
+            "weight_bp": 1715
+          },
+          {
+            "hex": "#1e172d",
+            "weight_bp": 1553
+          },
+          {
+            "hex": "#3d2f4f",
+            "weight_bp": 1454
+          },
+          {
+            "hex": "#392546",
+            "weight_bp": 1326
+          },
+          {
+            "hex": "#151122",
+            "weight_bp": 1283
+          },
+          {
+            "hex": "#554378",
+            "weight_bp": 1082
+          },
+          {
+            "hex": "#0c0816",
+            "weight_bp": 997
+          },
+          {
+            "hex": "#2f1939",
+            "weight_bp": 590
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "purple",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06326,
+          "y_mae": 0.06675,
+          "x_ratio": 2.075,
+          "y_ratio": 2.2511,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Shadow_realm_void_soil_texture_2c898328.jpg",
+          "sha256": "7a56b9e00240dbaf79180581c37263d3e36bc898a47199a6672697c6acc77934",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.9799fe2b",
+      "kind": "region",
+      "name": "Petrified dragon-wood ash soil",
+      "description": "Petrified dragon-wood ash soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-9799fe2b",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "wood",
+        "magic",
+        "dry",
+        "organic",
+        "petrified",
+        "dragon",
+        "ash"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "wood",
+        "magic",
+        "dry",
+        "organic",
+        "petrified",
+        "dragon",
+        "ash",
+        "brown",
+        "black",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#4c3e35",
+            "weight_bp": 1516
+          },
+          {
+            "hex": "#342f2b",
+            "weight_bp": 1442
+          },
+          {
+            "hex": "#1e1b19",
+            "weight_bp": 1353
+          },
+          {
+            "hex": "#27211e",
+            "weight_bp": 1347
+          },
+          {
+            "hex": "#312620",
+            "weight_bp": 1163
+          },
+          {
+            "hex": "#43332a",
+            "weight_bp": 1119
+          },
+          {
+            "hex": "#12100e",
+            "weight_bp": 1052
+          },
+          {
+            "hex": "#65554b",
+            "weight_bp": 1008
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07593,
+          "y_mae": 0.08414,
+          "x_ratio": 1.777,
+          "y_ratio": 1.9985,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Petrified_dragon-wood_ash_soil_t…_9799fe2b.jpg",
+          "sha256": "dfbca662f2712f388b7ec61d9ad87febb831939053006c6bd6e4afa866264ade",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "dry"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.fd92f1a6",
+      "kind": "region",
+      "name": "Red terracotta clay soil",
+      "description": "Red terracotta clay soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-fd92f1a6",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "ceramic",
+        "organic",
+        "red",
+        "terracotta",
+        "clay"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "ceramic",
+        "organic",
+        "red",
+        "terracotta",
+        "clay",
+        "brown",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#91401d",
+            "weight_bp": 1625
+          },
+          {
+            "hex": "#80371a",
+            "weight_bp": 1588
+          },
+          {
+            "hex": "#924925",
+            "weight_bp": 1439
+          },
+          {
+            "hex": "#752f16",
+            "weight_bp": 1340
+          },
+          {
+            "hex": "#5b2c18",
+            "weight_bp": 1269
+          },
+          {
+            "hex": "#3f1a0e",
+            "weight_bp": 1046
+          },
+          {
+            "hex": "#9d603a",
+            "weight_bp": 899
+          },
+          {
+            "hex": "#7d3d21",
+            "weight_bp": 794
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03217,
+          "y_mae": 0.07419,
+          "x_ratio": 1.3205,
+          "y_ratio": 3.1866,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Red_terracotta_clay_soil_texture_fd92f1a6.jpg",
+          "sha256": "89c32d2bfe5b9f8181e8c29f2c25e78522645e89e529c95d64bfb79b6c299736",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.cc27b13e",
+      "kind": "region",
+      "name": "Wet muddy puddle ground",
+      "description": "Wet muddy puddle ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-cc27b13e",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wet",
+        "muddy",
+        "puddle"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wet",
+        "muddy",
+        "puddle",
+        "brown",
+        "black",
+        "gray",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#504237",
+            "weight_bp": 1507
+          },
+          {
+            "hex": "#2c1f17",
+            "weight_bp": 1437
+          },
+          {
+            "hex": "#39241a",
+            "weight_bp": 1380
+          },
+          {
+            "hex": "#4a3426",
+            "weight_bp": 1343
+          },
+          {
+            "hex": "#1a0f0b",
+            "weight_bp": 1238
+          },
+          {
+            "hex": "#34312c",
+            "weight_bp": 1226
+          },
+          {
+            "hex": "#696058",
+            "weight_bp": 1052
+          },
+          {
+            "hex": "#221e1b",
+            "weight_bp": 817
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04737,
+          "y_mae": 0.06485,
+          "x_ratio": 1.6731,
+          "y_ratio": 2.1981,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Wet_muddy_puddle_ground_texture_cc27b13e.jpg",
+          "sha256": "3f515ca2369f2dc374aad7faca1b75edcd4937c6f3fa8f89b48f8226f7919929",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.45dfd631",
+      "kind": "region",
+      "name": "Autumn orchard earth",
+      "description": "Autumn orchard earth: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-45dfd631",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "autumn",
+        "organic",
+        "orchard",
+        "earth"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "autumn",
+        "organic",
+        "orchard",
+        "earth",
+        "brown",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3f2516",
+            "weight_bp": 1409
+          },
+          {
+            "hex": "#814e2b",
+            "weight_bp": 1345
+          },
+          {
+            "hex": "#362013",
+            "weight_bp": 1332
+          },
+          {
+            "hex": "#50341e",
+            "weight_bp": 1280
+          },
+          {
+            "hex": "#4b2918",
+            "weight_bp": 1233
+          },
+          {
+            "hex": "#6c3b22",
+            "weight_bp": 1218
+          },
+          {
+            "hex": "#ad703a",
+            "weight_bp": 1189
+          },
+          {
+            "hex": "#29150c",
+            "weight_bp": 994
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04667,
+          "y_mae": 0.091,
+          "x_ratio": 1.2346,
+          "y_ratio": 2.4787,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Autumn_orchard_earth_texture_45dfd631.jpg",
+          "sha256": "f57b96cece55842977121061128a15962b95f65ea790784ea8bff7db70b527c7",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "autumn"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.8730291e",
+      "kind": "region",
+      "name": "Bioluminescent purple subterranean soil",
+      "description": "Bioluminescent purple subterranean soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-8730291e",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "magic",
+        "glowing",
+        "organic",
+        "bioluminescent",
+        "purple",
+        "subterranean"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "magic",
+        "glowing",
+        "organic",
+        "bioluminescent",
+        "purple",
+        "subterranean",
+        "black",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1e1021",
+            "weight_bp": 1628
+          },
+          {
+            "hex": "#2e1b2f",
+            "weight_bp": 1608
+          },
+          {
+            "hex": "#160c19",
+            "weight_bp": 1248
+          },
+          {
+            "hex": "#4a2950",
+            "weight_bp": 1238
+          },
+          {
+            "hex": "#3e1f41",
+            "weight_bp": 1210
+          },
+          {
+            "hex": "#6f417f",
+            "weight_bp": 1200
+          },
+          {
+            "hex": "#0b0510",
+            "weight_bp": 1046
+          },
+          {
+            "hex": "#2a142f",
+            "weight_bp": 822
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05605,
+          "y_mae": 0.07147,
+          "x_ratio": 1.8136,
+          "y_ratio": 2.4486,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bioluminescent_purple_subterrane…_8730291e.jpg",
+          "sha256": "40d7d7c112844bfb1568612b7ac114ad698ce5b8c03a84235c0344ae607fb152",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.549cdc10",
+      "kind": "region",
+      "name": "Black sand top view",
+      "description": "Black sand top view: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-549cdc10",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "black"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "black",
+        "gray",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2e3034",
+            "weight_bp": 1665
+          },
+          {
+            "hex": "#272627",
+            "weight_bp": 1397
+          },
+          {
+            "hex": "#181719",
+            "weight_bp": 1395
+          },
+          {
+            "hex": "#1f1e1f",
+            "weight_bp": 1319
+          },
+          {
+            "hex": "#212326",
+            "weight_bp": 1299
+          },
+          {
+            "hex": "#1b1b1e",
+            "weight_bp": 1099
+          },
+          {
+            "hex": "#484c54",
+            "weight_bp": 928
+          },
+          {
+            "hex": "#101012",
+            "weight_bp": 898
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03643,
+          "y_mae": 0.05347,
+          "x_ratio": 1.1082,
+          "y_ratio": 1.5908,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Black_sand_texture_top_view_549cdc10.jpg",
+          "sha256": "b943d000dd1410181d3877a9333d52a76d30255c0c70a4d80577232049b3df47",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ebc86df5",
+      "kind": "region",
+      "name": "Frozen dirt ground",
+      "description": "Frozen dirt ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ebc86df5",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "ice",
+        "cold",
+        "frozen",
+        "dirt"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "ice",
+        "cold",
+        "frozen",
+        "dirt",
+        "blue",
+        "gray",
+        "black",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#7396a6",
+            "weight_bp": 1511
+          },
+          {
+            "hex": "#272c2f",
+            "weight_bp": 1503
+          },
+          {
+            "hex": "#474b4c",
+            "weight_bp": 1294
+          },
+          {
+            "hex": "#4c6776",
+            "weight_bp": 1277
+          },
+          {
+            "hex": "#98c5d4",
+            "weight_bp": 1120
+          },
+          {
+            "hex": "#32404a",
+            "weight_bp": 1103
+          },
+          {
+            "hex": "#14171b",
+            "weight_bp": 1103
+          },
+          {
+            "hex": "#64757d",
+            "weight_bp": 1089
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "gray",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07379,
+          "y_mae": 0.11671,
+          "x_ratio": 1.3483,
+          "y_ratio": 2.1618,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frozen_dirt_ground_texture_ebc86df5.jpg",
+          "sha256": "54381b3fa99e88b9aa7aab5b9f94cce0b210ee9a15c2200e330d0005930e438b",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.f49055c1",
+      "kind": "region",
+      "name": "Golden stardust soil",
+      "description": "Golden stardust soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-f49055c1",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "magic",
+        "glowing",
+        "organic",
+        "golden",
+        "stardust"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "magic",
+        "glowing",
+        "organic",
+        "golden",
+        "stardust",
+        "brown",
+        "black",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#5c3d21",
+            "weight_bp": 1599
+          },
+          {
+            "hex": "#4d311b",
+            "weight_bp": 1336
+          },
+          {
+            "hex": "#25150b",
+            "weight_bp": 1317
+          },
+          {
+            "hex": "#2f1d10",
+            "weight_bp": 1296
+          },
+          {
+            "hex": "#412a18",
+            "weight_bp": 1260
+          },
+          {
+            "hex": "#392313",
+            "weight_bp": 1249
+          },
+          {
+            "hex": "#150b06",
+            "weight_bp": 1051
+          },
+          {
+            "hex": "#846034",
+            "weight_bp": 892
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0541,
+          "y_mae": 0.06038,
+          "x_ratio": 1.099,
+          "y_ratio": 1.2385,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Golden_stardust_soil_texture_f49055c1.jpg",
+          "sha256": "061cf7861fd20b270dbf5906f339f30f34be752a03f2fc78748785767bd983e2",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.c9858d44",
+      "kind": "region",
+      "name": "Fairy garden soil",
+      "description": "Fairy garden soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-c9858d44",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "magic",
+        "organic",
+        "fairy",
+        "garden"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "magic",
+        "organic",
+        "fairy",
+        "garden",
+        "black",
+        "green",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1f231f",
+            "weight_bp": 1503
+          },
+          {
+            "hex": "#488755",
+            "weight_bp": 1375
+          },
+          {
+            "hex": "#353a2c",
+            "weight_bp": 1312
+          },
+          {
+            "hex": "#1e5d46",
+            "weight_bp": 1291
+          },
+          {
+            "hex": "#48623c",
+            "weight_bp": 1235
+          },
+          {
+            "hex": "#143a2f",
+            "weight_bp": 1166
+          },
+          {
+            "hex": "#151212",
+            "weight_bp": 1088
+          },
+          {
+            "hex": "#67b878",
+            "weight_bp": 1030
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05441,
+          "y_mae": 0.09102,
+          "x_ratio": 1.3484,
+          "y_ratio": 2.3556,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Fairy_garden_soil_texture_c9858d44.jpg",
+          "sha256": "1a8207870d8d52139d966a571a15c8e2a03ab3724557aa92bda106459a4bfbe2",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.0036267f",
+      "kind": "region",
+      "name": "Glowing mushroom spore soil",
+      "description": "Glowing mushroom spore soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-0036267f",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "fungi",
+        "magic",
+        "glowing",
+        "organic",
+        "mushroom",
+        "spore"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "fungi",
+        "magic",
+        "glowing",
+        "organic",
+        "mushroom",
+        "spore",
+        "blue",
+        "black",
+        "purple",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3c4154",
+            "weight_bp": 1572
+          },
+          {
+            "hex": "#1b111b",
+            "weight_bp": 1498
+          },
+          {
+            "hex": "#2a1e27",
+            "weight_bp": 1442
+          },
+          {
+            "hex": "#262b3b",
+            "weight_bp": 1315
+          },
+          {
+            "hex": "#1e1b27",
+            "weight_bp": 1132
+          },
+          {
+            "hex": "#3b2e38",
+            "weight_bp": 1111
+          },
+          {
+            "hex": "#0f0a13",
+            "weight_bp": 1027
+          },
+          {
+            "hex": "#44768e",
+            "weight_bp": 903
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0608,
+          "y_mae": 0.09963,
+          "x_ratio": 1.4563,
+          "y_ratio": 2.4448,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Glowing_mushroom_spore_soil_texture_0036267f.jpg",
+          "sha256": "1046a7207e19f5a458dc5baf0ca4a6b44f0063f63cf28a13ae4b27d20d6fbfff",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ad1130ff",
+      "kind": "region",
+      "name": "Toxic acid swamp forest soil",
+      "description": "Toxic acid swamp forest soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ad1130ff",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "water",
+        "liquid",
+        "forest",
+        "wetland",
+        "wet",
+        "organic",
+        "toxic",
+        "acid",
+        "swamp"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "water",
+        "liquid",
+        "forest",
+        "wetland",
+        "wet",
+        "organic",
+        "toxic",
+        "acid",
+        "swamp",
+        "green",
+        "brown",
+        "black",
+        "earth soil",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "woodland",
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#48592f",
+            "weight_bp": 1493
+          },
+          {
+            "hex": "#352824",
+            "weight_bp": 1413
+          },
+          {
+            "hex": "#211915",
+            "weight_bp": 1348
+          },
+          {
+            "hex": "#2d3b20",
+            "weight_bp": 1281
+          },
+          {
+            "hex": "#242517",
+            "weight_bp": 1221
+          },
+          {
+            "hex": "#473d2e",
+            "weight_bp": 1167
+          },
+          {
+            "hex": "#160e0e",
+            "weight_bp": 1119
+          },
+          {
+            "hex": "#639d42",
+            "weight_bp": 958
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04418,
+          "y_mae": 0.05857,
+          "x_ratio": 1.2313,
+          "y_ratio": 1.6228,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Toxic_acid_swamp_forest_soil_ad1130ff.jpg",
+          "sha256": "cd84cb92ef00b9283671e49313f0eba7ebf4431ff947cd7293537c735ec8e2c3",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "wetland"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    }
+  ]
+}

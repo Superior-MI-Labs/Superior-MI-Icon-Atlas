@@ -1,0 +1,1690 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.winter",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-41e4e4a7": {
+      "path": "textures/frost-covered-cobblestone-pathway-41e4e4a7.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d94f5f1639304846e4d5b2aad1e23408731503b72773c51dd05be8ad3c4cec98",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-78a62b5e": {
+      "path": "textures/snowy-pine-forest-floor-78a62b5e.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "09dc446020f407bce1c2855e73ff45e28a57f22263c673e5e8b5faedf7b6a5d7",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a0e53c13": {
+      "path": "textures/cracked-blue-glacier-ice-sheet-a0e53c13.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "acdbd358fc9866442ce405127405fd637e3ce4932eec0999fae1a48a229a228f",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a81a0f5d": {
+      "path": "textures/frozen-tundra-earth-a81a0f5d.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "0de316a9538a33cb24095b572254cf19665e1ab1a5b1dd3e1c54de923b4d7460",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-0b6c1b60": {
+      "path": "textures/magical-glowing-frost-runes-0b6c1b60.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "094fc2d3d680a9a7404e31d966fa3475d253d024a0f37bd95225e73ceeb13f9b",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-0b396f9a": {
+      "path": "textures/melting-snow-with-mud-0b396f9a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "47f92ac95eaf374b03d13fdc17f664efa12a8cf9c5a6856dc8c67146b32a3ef5",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-6390caf5": {
+      "path": "textures/crystalline-frost-glass-6390caf5.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "17fa243d9a81de1f01ba1ee6f71ae35e1e3a8d5123821e77129c29780aa66937",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-4aa6a789": {
+      "path": "textures/powdery-snow-ground-4aa6a789.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "35096924eed82562f266039b12579eff22365b26341f93f89ff102f6e68c75c9",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-55183a3f": {
+      "path": "textures/frostfire-ice-glowing-55183a3f.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "a105e55651ba1296109c9648290cb8a3750e68602ac610578a25fb36dccd5ef8",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-7baa16bc": {
+      "path": "textures/cracked-dry-desert-mud-7baa16bc.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "cfc15800277f8664a2347c84b0a8b9b1d2c45f936bb72d1bc152cb2947c57c2c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-f590e073": {
+      "path": "textures/frozen-dark-lake-ice-f590e073.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f83b63e06936b8891004e1295166b9351e3c08c187015ce82897d621da9ca418",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.41e4e4a7",
+      "kind": "region",
+      "name": "Frost-covered cobblestone pathway",
+      "description": "Frost-covered cobblestone pathway: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-41e4e4a7",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "ice",
+        "construction",
+        "path",
+        "cold",
+        "frost",
+        "covered",
+        "cobblestone",
+        "pathway"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "ice",
+        "construction",
+        "path",
+        "cold",
+        "frost",
+        "covered",
+        "cobblestone",
+        "pathway",
+        "blue",
+        "gray",
+        "black",
+        "winter",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "frozen",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#8697aa",
+            "weight_bp": 1432
+          },
+          {
+            "hex": "#737f92",
+            "weight_bp": 1327
+          },
+          {
+            "hex": "#41424e",
+            "weight_bp": 1288
+          },
+          {
+            "hex": "#2d2e39",
+            "weight_bp": 1283
+          },
+          {
+            "hex": "#525564",
+            "weight_bp": 1268
+          },
+          {
+            "hex": "#636a7b",
+            "weight_bp": 1174
+          },
+          {
+            "hex": "#16151c",
+            "weight_bp": 1150
+          },
+          {
+            "hex": "#a8becc",
+            "weight_bp": 1078
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "gray",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05053,
+          "y_mae": 0.13012,
+          "x_ratio": 0.9738,
+          "y_ratio": 2.534,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frost-covered_cobblestone_pathway_41e4e4a7.jpg",
+          "sha256": "0ea8b6f152da28bec6af570f3757290fe1a6b356ca58853172990e27964ce732",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction",
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.78a62b5e",
+      "kind": "region",
+      "name": "Snowy pine forest floor",
+      "description": "Snowy pine forest floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-78a62b5e",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "ice",
+        "snow",
+        "forest",
+        "construction",
+        "cold",
+        "snowy",
+        "pine"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "ice",
+        "snow",
+        "forest",
+        "construction",
+        "cold",
+        "snowy",
+        "pine",
+        "brown",
+        "blue",
+        "black",
+        "gray",
+        "winter",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#583d2c",
+            "weight_bp": 1454
+          },
+          {
+            "hex": "#98b6cd",
+            "weight_bp": 1329
+          },
+          {
+            "hex": "#3e2a1e",
+            "weight_bp": 1327
+          },
+          {
+            "hex": "#c6e2f0",
+            "weight_bp": 1262
+          },
+          {
+            "hex": "#3d3930",
+            "weight_bp": 1210
+          },
+          {
+            "hex": "#26221c",
+            "weight_bp": 1168
+          },
+          {
+            "hex": "#5c574f",
+            "weight_bp": 1133
+          },
+          {
+            "hex": "#748691",
+            "weight_bp": 1117
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "blue",
+          "black",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06689,
+          "y_mae": 0.11705,
+          "x_ratio": 1.1514,
+          "y_ratio": 1.9879,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Snowy_pine_forest_floor_texture_78a62b5e.jpg",
+          "sha256": "5a3cea9c812168365c86c4e65dcded8f59ea933f3f44cda5a58d26bb979581ec",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction",
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a0e53c13",
+      "kind": "region",
+      "name": "Cracked blue glacier ice sheet",
+      "description": "Cracked blue glacier ice sheet: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a0e53c13",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "ice",
+        "cold",
+        "dry",
+        "weathered",
+        "cracked",
+        "blue",
+        "glacier",
+        "sheet"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "ice",
+        "cold",
+        "dry",
+        "weathered",
+        "cracked",
+        "blue",
+        "glacier",
+        "sheet",
+        "teal",
+        "winter",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2d6e9d",
+            "weight_bp": 1537
+          },
+          {
+            "hex": "#6ebdd6",
+            "weight_bp": 1364
+          },
+          {
+            "hex": "#3182aa",
+            "weight_bp": 1256
+          },
+          {
+            "hex": "#459fbf",
+            "weight_bp": 1236
+          },
+          {
+            "hex": "#65a5c7",
+            "weight_bp": 1233
+          },
+          {
+            "hex": "#4788b1",
+            "weight_bp": 1219
+          },
+          {
+            "hex": "#a0d3e5",
+            "weight_bp": 1200
+          },
+          {
+            "hex": "#1a4e82",
+            "weight_bp": 955
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0516,
+          "y_mae": 0.06824,
+          "x_ratio": 1.3526,
+          "y_ratio": 1.9236,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Cracked_blue_glacier_ice_sheet_a0e53c13.jpg",
+          "sha256": "81556aa78c8b1e35f034bdac94aecd9968c86278b4100e3899e68daee66a82ab",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "dry",
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a81a0f5d",
+      "kind": "region",
+      "name": "Frozen tundra earth",
+      "description": "Frozen tundra earth: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a81a0f5d",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "ice",
+        "cold",
+        "organic",
+        "frozen",
+        "tundra",
+        "earth"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "ice",
+        "cold",
+        "organic",
+        "frozen",
+        "tundra",
+        "earth",
+        "black",
+        "gray",
+        "blue",
+        "winter",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#222323",
+            "weight_bp": 1567
+          },
+          {
+            "hex": "#373c3e",
+            "weight_bp": 1463
+          },
+          {
+            "hex": "#515e67",
+            "weight_bp": 1422
+          },
+          {
+            "hex": "#41484d",
+            "weight_bp": 1264
+          },
+          {
+            "hex": "#272d31",
+            "weight_bp": 1158
+          },
+          {
+            "hex": "#32312f",
+            "weight_bp": 1108
+          },
+          {
+            "hex": "#778c9a",
+            "weight_bp": 1027
+          },
+          {
+            "hex": "#171716",
+            "weight_bp": 991
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "gray",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06808,
+          "y_mae": 0.08707,
+          "x_ratio": 1.735,
+          "y_ratio": 2.2074,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frozen_tundra_earth_texture_a81a0f5d.jpg",
+          "sha256": "96ed702a2bb7457969daea6527d5c174423e41c56d65d456534d027aaafe7d85",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.0b6c1b60",
+      "kind": "region",
+      "name": "Magical glowing frost runes",
+      "description": "Magical glowing frost runes: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-0b6c1b60",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "ice",
+        "magic",
+        "cold",
+        "glowing",
+        "patterned",
+        "magical",
+        "frost",
+        "runes"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "ice",
+        "magic",
+        "cold",
+        "glowing",
+        "patterned",
+        "magical",
+        "frost",
+        "runes",
+        "blue",
+        "black",
+        "winter",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3d6681",
+            "weight_bp": 1408
+          },
+          {
+            "hex": "#1b3549",
+            "weight_bp": 1311
+          },
+          {
+            "hex": "#2d4f67",
+            "weight_bp": 1297
+          },
+          {
+            "hex": "#0f2232",
+            "weight_bp": 1289
+          },
+          {
+            "hex": "#152b3d",
+            "weight_bp": 1272
+          },
+          {
+            "hex": "#234057",
+            "weight_bp": 1257
+          },
+          {
+            "hex": "#081725",
+            "weight_bp": 1124
+          },
+          {
+            "hex": "#66a3bb",
+            "weight_bp": 1042
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06456,
+          "y_mae": 0.09134,
+          "x_ratio": 1.4707,
+          "y_ratio": 2.1557,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Magical_glowing_frost_runes_texture_0b6c1b60.jpg",
+          "sha256": "a839e2f9b9bd9f35afc6d119cb457463f60651db972b5f39f2a900689313ccfc",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.0b396f9a",
+      "kind": "region",
+      "name": "Melting snow with mud",
+      "description": "Melting snow with mud: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-0b396f9a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "ice",
+        "snow",
+        "cold",
+        "wet",
+        "melting",
+        "mud"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "ice",
+        "snow",
+        "cold",
+        "wet",
+        "melting",
+        "mud",
+        "gray",
+        "white",
+        "blue",
+        "winter",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#515052",
+            "weight_bp": 1320
+          },
+          {
+            "hex": "#bec8df",
+            "weight_bp": 1294
+          },
+          {
+            "hex": "#a7b3cb",
+            "weight_bp": 1265
+          },
+          {
+            "hex": "#919db6",
+            "weight_bp": 1262
+          },
+          {
+            "hex": "#7c8599",
+            "weight_bp": 1259
+          },
+          {
+            "hex": "#dae2f1",
+            "weight_bp": 1244
+          },
+          {
+            "hex": "#656973",
+            "weight_bp": 1195
+          },
+          {
+            "hex": "#3e3935",
+            "weight_bp": 1161
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "white",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05507,
+          "y_mae": 0.07545,
+          "x_ratio": 1.2884,
+          "y_ratio": 1.7533,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Melting_snow_texture_with_mud_0b396f9a.jpg",
+          "sha256": "1c4ae81d51bfb7b9f4f6e68395be745d1d55993350482e770137d40dd1985964",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.6390caf5",
+      "kind": "region",
+      "name": "Crystalline frost glass",
+      "description": "Crystalline frost glass: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-6390caf5",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "crystal",
+        "glass",
+        "ice",
+        "cold",
+        "crystalline",
+        "frost"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "crystal",
+        "glass",
+        "ice",
+        "cold",
+        "crystalline",
+        "frost",
+        "blue",
+        "teal",
+        "winter",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#89a7ca",
+            "weight_bp": 1454
+          },
+          {
+            "hex": "#4788aa",
+            "weight_bp": 1320
+          },
+          {
+            "hex": "#62a4c0",
+            "weight_bp": 1286
+          },
+          {
+            "hex": "#3e729c",
+            "weight_bp": 1248
+          },
+          {
+            "hex": "#aacde1",
+            "weight_bp": 1246
+          },
+          {
+            "hex": "#295b87",
+            "weight_bp": 1194
+          },
+          {
+            "hex": "#6d8db7",
+            "weight_bp": 1186
+          },
+          {
+            "hex": "#7ec1d5",
+            "weight_bp": 1066
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07312,
+          "y_mae": 0.1106,
+          "x_ratio": 1.4128,
+          "y_ratio": 2.2375,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Crystalline_frost_glass_texture_…_6390caf5.jpg",
+          "sha256": "14bb3172ead22241b6c44d04965d9d1c4701fdc78ecdf4327e5ac6bfe6b314f0",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.4aa6a789",
+      "kind": "region",
+      "name": "Powdery snow ground",
+      "description": "Powdery snow ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-4aa6a789",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "ice",
+        "snow",
+        "cold",
+        "powdery"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "ice",
+        "snow",
+        "cold",
+        "powdery",
+        "blue",
+        "white",
+        "winter",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#a6b3cf",
+            "weight_bp": 1396
+          },
+          {
+            "hex": "#ebe5e4",
+            "weight_bp": 1370
+          },
+          {
+            "hex": "#b6bfd7",
+            "weight_bp": 1291
+          },
+          {
+            "hex": "#cfd2e0",
+            "weight_bp": 1271
+          },
+          {
+            "hex": "#ddd9e2",
+            "weight_bp": 1271
+          },
+          {
+            "hex": "#f8f2e9",
+            "weight_bp": 1257
+          },
+          {
+            "hex": "#c6c8dc",
+            "weight_bp": 1224
+          },
+          {
+            "hex": "#7893b5",
+            "weight_bp": 920
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "white"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02222,
+          "y_mae": 0.02395,
+          "x_ratio": 1.9863,
+          "y_ratio": 2.062,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Powdery_snow_ground_texture_4aa6a789.jpg",
+          "sha256": "32e7cfe98d99329bbef115a9df669c910a72ad14571593b6d1de9e3d246b86e5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.55183a3f",
+      "kind": "region",
+      "name": "Frostfire ice glowing",
+      "description": "Frostfire ice glowing: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-55183a3f",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "ice",
+        "lava",
+        "magic",
+        "cold",
+        "glowing",
+        "frostfire"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "ice",
+        "lava",
+        "magic",
+        "cold",
+        "glowing",
+        "frostfire",
+        "blue",
+        "winter",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#497499",
+            "weight_bp": 1446
+          },
+          {
+            "hex": "#303864",
+            "weight_bp": 1428
+          },
+          {
+            "hex": "#2f4d75",
+            "weight_bp": 1310
+          },
+          {
+            "hex": "#8aa1cc",
+            "weight_bp": 1240
+          },
+          {
+            "hex": "#bcd0e9",
+            "weight_bp": 1220
+          },
+          {
+            "hex": "#7a7fb7",
+            "weight_bp": 1163
+          },
+          {
+            "hex": "#212148",
+            "weight_bp": 1123
+          },
+          {
+            "hex": "#52568b",
+            "weight_bp": 1070
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06316,
+          "y_mae": 0.06642,
+          "x_ratio": 1.7687,
+          "y_ratio": 2.1103,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frostfire_ice_glowing_texture_55183a3f.jpg",
+          "sha256": "ea97dd68eaa51de974c42f8e9df1dc785f5a5c694a80424a90ac2204d139308d",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.7baa16bc",
+      "kind": "region",
+      "name": "Cracked dry desert mud",
+      "description": "Cracked dry desert mud: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-7baa16bc",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "desert",
+        "wet",
+        "dry",
+        "weathered",
+        "cracked",
+        "mud"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "desert",
+        "wet",
+        "dry",
+        "weathered",
+        "cracked",
+        "mud",
+        "orange",
+        "brown",
+        "winter",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#bb8561",
+            "weight_bp": 1557
+          },
+          {
+            "hex": "#b27150",
+            "weight_bp": 1293
+          },
+          {
+            "hex": "#915743",
+            "weight_bp": 1283
+          },
+          {
+            "hex": "#734a3c",
+            "weight_bp": 1254
+          },
+          {
+            "hex": "#5a332d",
+            "weight_bp": 1235
+          },
+          {
+            "hex": "#301a1e",
+            "weight_bp": 1183
+          },
+          {
+            "hex": "#9a6a52",
+            "weight_bp": 1163
+          },
+          {
+            "hex": "#d4a983",
+            "weight_bp": 1032
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "orange",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05868,
+          "y_mae": 0.10869,
+          "x_ratio": 1.3231,
+          "y_ratio": 2.4438,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Cracked_dry_desert_mud_texture_7baa16bc.jpg",
+          "sha256": "30f658fc443ce2e202c826a3895a4e5fcdfe92e06190098acfb295df4771d797",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "desert"
+          ],
+          "conditions": [
+            "wet",
+            "dry",
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.f590e073",
+      "kind": "region",
+      "name": "Frozen dark lake ice",
+      "description": "Frozen dark lake ice: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-f590e073",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "ice",
+        "cold",
+        "frozen",
+        "dark",
+        "lake"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "ice",
+        "cold",
+        "frozen",
+        "dark",
+        "lake",
+        "blue",
+        "black",
+        "teal",
+        "winter",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#102739",
+            "weight_bp": 1411
+          },
+          {
+            "hex": "#457286",
+            "weight_bp": 1318
+          },
+          {
+            "hex": "#5f8fa1",
+            "weight_bp": 1317
+          },
+          {
+            "hex": "#335b6f",
+            "weight_bp": 1298
+          },
+          {
+            "hex": "#27455a",
+            "weight_bp": 1237
+          },
+          {
+            "hex": "#173a4c",
+            "weight_bp": 1160
+          },
+          {
+            "hex": "#081527",
+            "weight_bp": 1146
+          },
+          {
+            "hex": "#96c1ce",
+            "weight_bp": 1113
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06387,
+          "y_mae": 0.09319,
+          "x_ratio": 1.6355,
+          "y_ratio": 2.4068,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frozen_dark_lake_ice_texture_f590e073.jpg",
+          "sha256": "a20bd5e8938308273188742554b663a5391ab3e9cdd1c9a5a688c614f6171bfa",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    }
+  ]
+}
