@@ -174,3 +174,7 @@ Optional collection/asset `classification` is discovery-only metadata. See [brow
 ### Optional concept definitions (first content milestone)
 
 Pack-level `concepts` are linked by the existing asset `concept_id`. They contain optional SI physical properties and typed, versioned ruleset defaults. Older unresolved concept IDs remain valid discovery hints. See [universal content architecture](UNIVERSAL-CONTENT.md) for the implemented subset and the remaining roadmap. No gameplay execution, ruleset registry, cross-archive graph or geometry support is implied by this metadata.
+
+### Typed ruleset registry and contributor resolution
+
+The optional `proportion` concept value specifies `fraction`, named `basis`, `rounding`, `unit` and optional `cap`. See [ruleset registry and source selection](RULESET-RESOLUTION.md). `resolveContributors` is an explicit, pure host-facing planner; it does not execute gameplay or silently combine overlapping values. The core registry is published at `rulesets/smi-core-v1.json`.

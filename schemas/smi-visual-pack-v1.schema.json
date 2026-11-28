@@ -1563,6 +1563,48 @@
               "type": "boolean"
             }
           }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "fraction",
+            "basis",
+            "rounding",
+            "unit"
+          ],
+          "properties": {
+            "kind": {
+              "const": "proportion"
+            },
+            "fraction": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "basis": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+            },
+            "rounding": {
+              "enum": [
+                "none",
+                "floor",
+                "ceil",
+                "nearest"
+              ]
+            },
+            "unit": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{0,63}$"
+            },
+            "cap": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1000000000
+            }
+          }
         }
       ]
     },

@@ -20,6 +20,7 @@
   function validValue(v){
     if(v?.kind==='quantity')return only(v,['kind','value','unit'])&&bounded(v.value,-1e9,1e9)&&unitId(v.unit);
     if(v?.kind==='dice')return only(v,['kind','count','sides','modifier','unit'])&&Number.isInteger(v.count)&&bounded(v.count,1,100)&&Number.isInteger(v.sides)&&bounded(v.sides,2,1000)&&Number.isInteger(v.modifier)&&bounded(v.modifier,-1000000,1000000)&&unitId(v.unit);
+    if(v?.kind==='proportion')return only(v,['kind','fraction','basis','rounding','unit','cap'])&&bounded(v.fraction,0,10)&&conceptId(v.basis)&&['none','floor','ceil','nearest'].includes(v.rounding)&&unitId(v.unit)&&(v.cap===undefined||bounded(v.cap,0,1e9));
     if(v?.kind==='boolean')return only(v,['kind','value'])&&typeof v.value==='boolean';
     return false;
   }
@@ -59,6 +60,79 @@
       result.set(key,value);
     }
     return structuredClone(Object.fromEntries(result));
+  }
+  // Versioned property vocabulary and source planning; never evaluate damage,
+  // roll randomness, tick clocks or mutate instances in the content resolver.
+  const kinds=['quantity','dice','proportion','boolean'];
+  const boundedRecord=(v,max)=>record(v)&&Object.keys(v).length<=max;
+  const own=(v,k)=>Object.hasOwn(v,k);
+  const distinctKinds=v=>Array.isArray(v)&&v.length>0&&v.length<=kinds.length&&new Set(v).size===v.length&&v.every(k=>kinds.includes(k));
+  function validateRuleRegistry(registry){
+    if(!only(registry,['schema','id','properties','modules','bases'])||registry.schema!=='smi-ruleset-registry/1'||!ruleId(registry.id)||!boundedRecord(registry.properties,512)||!boundedRecord(registry.modules,128)||!boundedRecord(registry.bases,128))throw Error('Invalid ruleset registry');
+    for(const [key,p] of Object.entries(registry.properties)){
+      if(!conceptId(key)||!only(p,['unit','kinds','operation','min','max','integer'])||!distinctKinds(p.kinds)||!['base','add','multiply','policy'].includes(p.operation)||
+        (p.kinds.includes('boolean')?(p.kinds.length!==1||p.unit!==undefined||p.operation!=='policy'||p.min!==undefined||p.max!==undefined||p.integer!==undefined):(!unitId(p.unit)||p.operation==='policy'))||
+        (p.operation==='multiply'&&(p.unit!=='ratio'||p.kinds.some(k=>k!=='quantity')||!(p.min>=0)))||
+        (p.min!==undefined&&!bounded(p.min,-1e9,1e9))||(p.max!==undefined&&!bounded(p.max,-1e9,1e9))||(p.min!==undefined&&p.max!==undefined&&p.min>p.max)||(p.integer!==undefined&&typeof p.integer!=='boolean'))throw Error('Invalid property contract '+key);
+    }
+    for(const [key,unit] of Object.entries(registry.bases))if(!conceptId(key)||!unitId(unit))throw Error('Invalid proportion basis '+key);
+    for(const [id,module] of Object.entries(registry.modules)){
+      if(!ruleId(id)||!boundedRecord(module,128)||!Object.keys(module).length)throw Error('Invalid module '+id);
+      for(const [key,allowed] of Object.entries(module))if(!own(registry.properties,key)||!distinctKinds(allowed)||allowed.some(k=>!registry.properties[key].kinds.includes(k)))throw Error('Invalid module property '+id+'/'+key);
+    }
+  }
+  function checkRegisteredValue(registry,key,value,allowed){
+    if(!own(registry.properties,key)||!validValue(value))throw Error('Unknown or invalid property '+key);
+    const p=registry.properties[key];
+    if(!(allowed||p.kinds).includes(value.kind)||value.unit!==p.unit)throw Error('Incompatible type/unit '+key);
+    if(value.kind==='proportion'&&(!own(registry.bases,value.basis)||registry.bases[value.basis]!==value.unit))throw Error('Incompatible proportion basis '+key);
+    const range=(v)=>v>=(p.min??-1e9)&&v<=(p.max??1e9);
+    if(value.kind==='quantity'&&(!range(value.value)||(p.integer&&!Number.isInteger(value.value))))throw Error('Property out of range '+key);
+    if(value.kind==='dice'&&(!range(value.count+value.modifier)||!range(value.count*value.sides+value.modifier)))throw Error('Dice outcomes out of range '+key);
+    if(value.kind==='proportion'&&((p.integer&&value.rounding==='none')||(value.cap!==undefined&&(!range(value.cap)||(p.integer&&!Number.isInteger(value.cap))))))throw Error('Invalid proportion cap/rounding '+key);
+  }
+  // One candidate per source/module/property. Explicit selection or override
+  // resolves collisions; even equal values keep distinct source provenance.
+  // Modifier properties are returned as data, not automatically applied.
+  function resolveContributors(registry,contributors,rulesets=[],selections={},overrides={}){
+    validateRuleRegistry(registry);
+    if(!Array.isArray(contributors)||contributors.length>128||!Array.isArray(rulesets)||rulesets.length>32||new Set(rulesets).size!==rulesets.length||!boundedRecord(selections,128)||!validMap(overrides,true))throw Error('Invalid contributor resolution request');
+    for(const id of rulesets)if(!ruleId(id)||!own(registry.modules,id))throw Error('Unknown ruleset '+id);
+    const sources=new Set(),usedModules=new Set(),candidates=new Map();
+    for(const source of contributors){
+      if(!only(source,['id','role','concept','archive_sha256'])||!conceptId(source.id)||!conceptId(source.role)||sources.has(source.id)||(source.archive_sha256!==undefined&&(typeof source.archive_sha256!=='string'||!/^[a-f0-9]{64}$/.test(source.archive_sha256))))throw Error('Invalid or duplicate contributor '+source?.id);
+      sources.add(source.id);validateConcepts([source.concept]);
+      for(const id of rulesets){
+        const profile=source.concept.defaults?.[id];if(!profile)continue;
+        usedModules.add(id);
+        for(const [key,value] of Object.entries(profile)){
+          const module=registry.modules[id];
+          if(!own(module,key))throw Error('Unsupported module property '+id+'/'+key);
+          checkRegisteredValue(registry,key,value,module[key]);
+          if(!candidates.has(key))candidates.set(key,[]);
+          candidates.get(key).push({source:source.id,role:source.role,concept:source.concept.id,module:id,...(source.archive_sha256?{archive_sha256:source.archive_sha256}:{}),value});
+        }
+      }
+    }
+    if(candidates.size>128)throw Error('Too many resolved properties');
+    for(const [key,selection] of Object.entries(selections)){
+      if(!candidates.has(key)||!only(selection,['source','module'])||!conceptId(selection.source)||!ruleId(selection.module)||!candidates.get(key).some(x=>x.source===selection.source&&x.module===selection.module)||own(overrides,key))throw Error('Invalid or conflicting source selection '+key);
+    }
+    for(const [key,value] of Object.entries(overrides)){
+      if(!candidates.has(key))throw Error('Unknown override '+key);
+      checkRegisteredValue(registry,key,value);
+    }
+    const conflicts=[],resolved=[];
+    for(const key of [...candidates.keys()].sort()){
+      const options=candidates.get(key).sort((a,b)=>a.source<b.source?-1:a.source>b.source?1:a.module<b.module?-1:a.module>b.module?1:0);
+      const selection=own(selections,key)?selections[key]:undefined;
+      const chosen=selection?options.find(x=>x.source===selection.source&&x.module===selection.module):options.length===1?options[0]:null;
+      if(own(overrides,key))resolved.push({key,operation:registry.properties[key].operation,value:overrides[key],origin:{role:'application_override'}});
+      else if(chosen){const {value,...origin}=chosen;resolved.push({key,operation:registry.properties[key].operation,value,origin});}
+      else conflicts.push(key);
+    }
+    // No partially resolved plan is returned on ambiguity.
+    return structuredClone({ok:conflicts.length===0,conflicts,values:conflicts.length?null:Object.fromEntries(resolved.map(({key,...v})=>[key,v])),candidates:Object.fromEntries([...candidates.entries()].sort(([a],[b])=>a<b?-1:a>b?1:0)),unusedModules:rulesets.filter(id=>!usedModules.has(id)).sort()});
   }
   function resolveCollection(index,definitions,fallbackName='Imported collection'){
     // definitions: [{path,pack}] where every path is archive-relative and distinct.
@@ -238,5 +312,5 @@
     if(licenseText&&licenses.has('Apache-2.0')){const notice=await licenseText();if(notice)zip.file('LICENSES/Apache-2.0.txt',notice);}
     return manifest;
   }
-  return Object.freeze({safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,resolveDefaults,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
+  return Object.freeze({safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,resolveDefaults,validateRuleRegistry,resolveContributors,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
 });

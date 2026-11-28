@@ -122,6 +122,8 @@ def build(dest:Path|None=None):
     (dest/'vendor').mkdir(exist_ok=True)
     shutil.copy2(vendor/'jszip.min.js',dest/'vendor'/'jszip.min.js')
     shutil.copy2(vendor/'JSZip-LICENSE.md',dest/'vendor'/'JSZip-LICENSE.md')
+    (dest/'rulesets').mkdir(exist_ok=True)
+    shutil.copy2(ROOT/'rulesets'/'smi-core-v1.json',dest/'rulesets'/'smi-core-v1.json')
     (dest/'schemas').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'schemas'/'smi-visual-pack-v1.schema.json',dest/'schemas'/'smi-visual-pack-v1.schema.json')
     shutil.copy2(ROOT/'schemas'/'smi-visual-collection-v1.schema.json',dest/'schemas'/'smi-visual-collection-v1.schema.json')
