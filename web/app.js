@@ -454,7 +454,7 @@
     const main=data.manifests[0],zip=new JSZip();
     await Collections.writeSelection(zip,{
       assets:[...closure].map(id=>assets.get(id)),rootId,packId:main.pack_id+'.selection',version:main.version,
-      getInterfaces:()=>main.interfaces,previewProfiles:main.preview_profiles,statProfiles:main.stat_profiles,
+      getInterfaces:()=>main.interfaces,previewProfiles:main.preview_profiles,statProfiles:main.stat_profiles,concepts:main.concepts,
       getTexture:async key=>{const t=data.textureMap.get(key.split('::')[1]);if(!t)throw Error('Missing texture '+key);return {...t.info,blob:await t.file.async('blob')};},
       sourceNotices:await Promise.all(Object.values(data.zip.files).filter(e=>!e.dir&&e._data?.uncompressedSize<=24*1024*1024&&(/(?:^|\/)(?:LICENSE[^/]*|NOTICE[^/]*|SOURCE-NOTICES[^/]*)$/i.test(e.name)||/(?:^|\/)LICENSES\//i.test(e.name))).map(async e=>({path:e.name,blob:await e.async('blob')}))),
       licenseText:async()=>{const response=await fetch('LICENSE');return response.ok?response.text():null;}

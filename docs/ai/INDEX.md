@@ -34,3 +34,5 @@ Internal fixture links may lead to source folders on the hosted site. Use a chec
 **HD fantasy game item icons and interaction states:** [Pixel-art item production contract](icons/GAME-PIXEL-ART.md). This requires raster source art, true measured transparent crops, a shared effect composition and publication QA, not procedural vector substitutes.
 
 For Hex World, use the host role specification linked from the world assets recipe for assignments and physical scale; follow the existing Atlas packaging, licensing and visual acceptance gates. The fixture is an integration example, not an approved art master. Keep agent packs separate and do not invent new Atlas schema fields.
+
+**Universal game content and rulesets:** [Architecture and first concept contract](UNIVERSAL-CONTENT.md). Use this for editable physical and ruleset defaults; do not invent functionality fields that are not implemented.

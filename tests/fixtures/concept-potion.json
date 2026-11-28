@@ -1,0 +1,57 @@
+{
+  "schema": "smi-concept/1",
+  "id": "smi.item.potion.health.basic",
+  "name": "Minor health potion",
+  "description": "A small restorative draught. Original demonstration defaults, not an official system profile.",
+  "license": "CC0-1.0",
+  "physical": {
+    "height_m": 0.11,
+    "width_m": 0.06,
+    "depth_m": 0.06,
+    "mass_kg": 0.25,
+    "capacity_l": 0.15
+  },
+  "defaults": {
+    "smi.rules.d20/1": {
+      "health.restore": {
+        "kind": "dice",
+        "count": 2,
+        "sides": 4,
+        "modifier": 2,
+        "unit": "hp"
+      }
+    },
+    "smi.rules.flat/1": {
+      "health.restore": {
+        "kind": "quantity",
+        "value": 5,
+        "unit": "hp"
+      }
+    },
+    "smi.rules.action-economy/1": {
+      "action.bonus.cost": {
+        "kind": "quantity",
+        "value": 1,
+        "unit": "count"
+      }
+    },
+    "smi.rules.realtime/1": {
+      "use.duration": {
+        "kind": "quantity",
+        "value": 0.5,
+        "unit": "s"
+      },
+      "use.cooldown": {
+        "kind": "quantity",
+        "value": 5,
+        "unit": "s"
+      }
+    },
+    "smi.rules.inventory/1": {
+      "consume.return_container": {
+        "kind": "boolean",
+        "value": true
+      }
+    }
+  }
+}

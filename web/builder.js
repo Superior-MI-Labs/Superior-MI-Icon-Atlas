@@ -18,6 +18,7 @@
   const imports = new Set();
   const interfaces = new Map(); // bag/source identifier -> own versioned interface definitions
   const previewProfiles = new Map(); // profile ID -> authored, genre-neutral input adapter
+  const concepts = new Map(); // concept ID -> immutable authored definition and bag ownership
   const statProfiles = new Map(); // profile ID -> authored numeric state/actions/visual binding
   const bags = new Map(); // each imported ZIP owns one contained, navigable asset collection
   let bagScope = null, bagGroup = "";
@@ -110,7 +111,8 @@
     if(problems.length)throw Error('Invalid preview profile: '+problems[0]);
     const statProblems=Stats.validate(pack.stat_profiles,id=>ids.get(id)||library.get(id));
     if(statProblems.length)throw Error('Invalid stat profile: '+statProblems[0]);
-    for(const [profiles,known] of [[pack.preview_profiles||[],previewProfiles],[pack.stat_profiles||[],statProfiles]]){
+    Collections.validateConcepts(pack.concepts,pack.assets);
+    for(const [profiles,known] of [[pack.preview_profiles||[],previewProfiles],[pack.stat_profiles||[],statProfiles],[pack.concepts||[],concepts]]){
       for(const p of profiles)if(known.has(p.id)){
         const {ownerBag:previousOwner,...old}=known.get(p.id);
         if(!ownerBag||!previousOwner||!Collections.equivalent(old,p))throw Error('Conflicting profile ID '+p.id);
@@ -159,6 +161,7 @@
     interfaces.set(ownerBag||pack.pack_id,structuredClone(pack.interfaces||{}));
     for(const profile of pack.preview_profiles||[])if(!previewProfiles.has(profile.id))previewProfiles.set(profile.id,{...structuredClone(profile),ownerBag});
     for(const profile of pack.stat_profiles||[])if(!statProfiles.has(profile.id))statProfiles.set(profile.id,{...structuredClone(profile),ownerBag});
+    for(const item of pack.concepts||[])if(!concepts.has(item.id))concepts.set(item.id,{...structuredClone(item),ownerBag});
     for(const [key,def,blob,img] of pending){textures.set(prefix+key,{blob,path:def.path,image:img,source:pack.pack_id,ownerBag,license:pack.license||'UNSPECIFIED'});}
     for(const a of pack.assets){if(library.has(a.id))continue;library.set(a.id,{...a,texture:a.texture?prefix+a.texture:undefined,source:pack.pack_id,ownerBag,license:a.license||pack.license||'UNSPECIFIED'});}
     imports.add(pack.pack_id); selectAsset(pack.assets.filter(a=>a.kind==='composition').at(-1)?.id||pack.assets.at(-1)?.id||ui.selected); refreshList(); renderControlPanel(); setStatus('Imported '+pack.assets.length+' assets from '+pack.pack_id+' (kept in this browser session).');
@@ -212,7 +215,7 @@
     if(removed.has(ui.selected))selectAsset(null);
     interfaces.delete(id);
     if(!remaining.some(b=>b.collectionId===bag.collectionId))imports.delete(bag.collectionId);
-    for(const [profiles,field] of [[previewProfiles,'previewIds'],[statProfiles,'statIds']]){
+    for(const [profiles,field] of [[previewProfiles,'previewIds'],[statProfiles,'statIds'],[concepts,'conceptIds']]){
       for(const [key,p] of profiles)if(p.ownerBag===id){
         const next=remaining.find(b=>b[field]?.includes(key));
         if(next)p.ownerBag=next.id;else profiles.delete(key);
@@ -248,7 +251,7 @@
       return entry.async('uint8array');
     },'',bagId);
     const bag={...resolved.bag,id:bagId,collectionId:sourcePack.pack_id,filename:file.name||'visual-assets.zip',file,notices,
-      previewIds:(sourcePack.preview_profiles||[]).map(p=>p.id),statIds:(sourcePack.stat_profiles||[]).map(p=>p.id)};
+      previewIds:(sourcePack.preview_profiles||[]).map(p=>p.id),statIds:(sourcePack.stat_profiles||[]).map(p=>p.id),conceptIds:(sourcePack.concepts||[]).map(p=>p.id)};
     bags.set(bagId,bag);openBag(bagId);
     if(!options.restoring&&isPersistEnabled()){
       try{await BagStore.put({id:bagId,name:bag.filename,file});}
@@ -696,8 +699,8 @@
     const out=await Collections.writeSelection(zip,{
       assets,rootId,packId:'smi.user.'+slug($('composition-name').value),
       getInterfaces:a=>interfaces.get(a.ownerBag||a.source)||{},
-      previewProfiles:[...previewProfiles.values()],statProfiles:[...statProfiles.values()],maxEntry:MAX_ENTRY,
-      sourceNotices:[...new Set(assets.map(a=>a.ownerBag).filter(Boolean))].flatMap(id=>bags.get(id)?.notices||[]),
+      previewProfiles:[...previewProfiles.values()],statProfiles:[...statProfiles.values()],concepts:[...concepts.values()],maxEntry:MAX_ENTRY,
+      sourceNotices:[...new Set(assets.flatMap(a=>[a.ownerBag,concepts.get(a.concept_id)?.ownerBag]).filter(Boolean))].flatMap(id=>bags.get(id)?.notices||[]),
       getTexture:async key=>{
         const t=textures.get(key);if(!t)throw Error('Missing texture '+key);
         let blob=t.blob;if(!blob){const response=await fetch(t.src);if(!response.ok)throw Error('Cannot fetch texture '+key);blob=await response.blob();}
@@ -785,7 +788,7 @@
       try{await restored;await openPublished(requested);}catch(e){setStatus(e.message,true);}
       finally{picker.disabled=false;button.disabled=!picker.value;}
     });
-    $('clear-imports').addEventListener('click',()=>mutateRegistry(async()=>{for(const id of [...bags.keys()])await releaseBag(id);for(const [id,a] of library)if(a.source!=='Official Icon Atlas')library.delete(id);for(const [key,t] of textures)if(!key.startsWith('official:')){if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);}imports.clear();interfaces.clear();previewProfiles.clear();statProfiles.clear();driveDriver=null;activeStatId=null;statRuntime=null;try{await BagStore.clear();}catch{}$('import-info').textContent='Built-in Icon Atlas loaded automatically';bagScope=null;bagGroup='';scene.layers=[];scene.selectedLayer=-1;selectAsset(null);layerInputs();refreshTimeline();renderControlPanel();refreshList();renderBag();setStatus('All private bag imports cleared. Public icons remain.');}));
+    $('clear-imports').addEventListener('click',()=>mutateRegistry(async()=>{for(const id of [...bags.keys()])await releaseBag(id);for(const [id,a] of library)if(a.source!=='Official Icon Atlas')library.delete(id);for(const [key,t] of textures)if(!key.startsWith('official:')){if(t.image?.src?.startsWith('blob:'))URL.revokeObjectURL(t.image.src);textures.delete(key);}imports.clear();interfaces.clear();previewProfiles.clear();statProfiles.clear();concepts.clear();driveDriver=null;activeStatId=null;statRuntime=null;try{await BagStore.clear();}catch{}$('import-info').textContent='Built-in Icon Atlas loaded automatically';bagScope=null;bagGroup='';scene.layers=[];scene.selectedLayer=-1;selectAsset(null);layerInputs();refreshTimeline();renderControlPanel();refreshList();renderBag();setStatus('All private bag imports cleared. Public icons remain.');}));
     $('bag-show-all').addEventListener('click',()=>{bagScope=null;bagGroup='';renderBag();refreshList();});
     $('bag-group').addEventListener('change',()=>{bagGroup=$('bag-group').value;refreshList();});
     $('save-bag').addEventListener('change',()=>{try{localStorage.setItem(bagPersistenceKey,$('save-bag').checked?'yes':'no');}catch{} if($('save-bag').checked)setStatus('Future ZIP imports will be saved on this device. Existing session ZIPs remain session-only.');else setStatus('Future ZIP imports will stay in this browser session only. Existing stored ZIPs can be removed from My Bag.');});
