@@ -179,7 +179,7 @@ def check(page,published_only=False):
     expect(page.locator("#detail-title")).to_have_text("Royal Forge Complete Gameplay HUD")
     page.locator("#detail[open]").wait_for(timeout=20000)
     expect(page.locator("#controls [data-input-key]")).to_have_count(28)
-    page.locator("#detail-components summary").click()
+    page.locator("#detail-components > summary").click()
     page.locator('#detail-related button[title="smi.hud.royalforge02.hud.adventurer"]').click()
     expect(page.locator("#controls [data-input-key]")).to_have_count(7)
     page.locator("#close").click()
