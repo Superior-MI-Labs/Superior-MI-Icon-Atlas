@@ -70,6 +70,7 @@
     for (const a of pack.assets) {
       if (!a.id||ids.has(a.id)||(library.has(a.id)&&(!ownerBag||!library.get(a.id).ownerBag))) throw Error('Duplicate or existing asset ID: '+a.id);
       if (!['region','sequence','composition','state_set'].includes(a.kind)) throw Error('Invalid asset kind: '+a.id);
+      Collections.validateMaterialProfiles(a,pack.textures[a.texture]);
       const behaviorProblems=Interactions.check(a);
       if(behaviorProblems.length)throw Error(a.id+': '+behaviorProblems[0]);
       ids.set(a.id,a);

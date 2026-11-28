@@ -27,6 +27,11 @@ def published_matches():
     return f"{json.loads((SITE/'public-catalog.json').read_text())['discoverable_count']:,} matches"
 
 
+def world_matches():
+    assets=json.loads((SITE/'public-catalog.json').read_text())['assets']
+    return f"{sum(not a.get('legacy') and a.get('discovery','standalone')=='standalone' and 'world' in a.get('category_path',[]) for a in assets):,} matches"
+
+
 def check(page,published_only=False):
     errors = []
     page.on("pageerror", lambda err: errors.append(str(err)))
@@ -56,7 +61,7 @@ def check(page,published_only=False):
 
     # Discovery is navigable without typing a query; counts come from the same catalog.
     page.locator('#category-directory a').filter(has_text='World & Environment').click()
-    expect(page.locator('#count')).to_have_text('53 matches')
+    expect(page.locator('#count')).to_have_text(world_matches())
     page.locator('#sort').select_option('name')
     page.locator('#category-children a').filter(has_text='Props').click()
     expect(page.locator('#sort')).to_have_value('name')
@@ -432,6 +437,27 @@ def check(page,published_only=False):
     expect(page.locator("#inventory-screen")).to_be_visible()
     page.locator("#close-inventory").click()
     expect(page.locator("#inventory-screen")).to_be_hidden()
+    # A real material uses the existing detail renderer, a separate repeat canvas,
+    # metadata-based recommendations and the shared selected-asset ZIP export.
+    catalog=json.loads((SITE/'public-catalog.json').read_text())
+    materials=[a for a in catalog['assets'] if a['id'].startswith('smi.material.gflow.')]
+    assert len(materials)==302
+    material=next(a for a in materials if a['name']=='Fantasy meadow grass')
+    page.goto(url+'?asset='+material['id'],wait_until='domcontentloaded')
+    expect(page.locator('#detail[open]')).to_be_visible(timeout=30000)
+    expect(page.locator('#download-png')).to_be_enabled(timeout=30000)
+    repeat=page.locator('canvas[data-material-repeat]')
+    expect(repeat).to_be_visible()
+    assert repeat.evaluate('(e)=>{const p=e.getContext("2d").getImageData(0,0,512,512).data;return p[3]===255&&p[3+4*256]===255&&p[0]===p[4*256]&&p[1]===p[4*256+1]&&p[2]===p[4*256+2]}')
+    expect(page.locator('#detail-related')).to_contain_text('Suggested matches')
+    with page.expect_download() as saved:
+        page.locator('#download-asset').click()
+    with TemporaryDirectory() as temp:
+        exported=Path(temp)/'material.zip';saved.value.save_as(str(exported))
+        with ZipFile(exported) as archive:
+            pack=json.loads(archive.read('manifest.json'));assert len(pack['assets'])==1
+            assert pack['assets'][0]['id']==material['id'];assert pack['assets'][0]['material']==material['material'];assert pack['assets'][0]['visual_profile']==material['visual_profile']
+
     page.goto(url,wait_until="networkidle")
     assert not errors, "Browser JavaScript errors: " + repr(errors)
     return page.locator("#count").inner_text()
@@ -466,7 +492,7 @@ def main():
                 assert mobile.locator("#app-sidebar").evaluate("(e)=>e.inert")
                 mobile.locator("#nav-toggle").click()
                 mobile.locator("#sidebar-categories a[data-category=world]").click()
-                expect(mobile.locator("#count")).to_have_text("53 matches")
+                expect(mobile.locator("#count")).to_have_text(world_matches())
                 expect(mobile.locator("#nav-toggle")).to_have_attribute("aria-expanded","false")
                 assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth + 2"), "Asset view overflows on mobile"
                 mobile.locator("#filter-toggle").click()

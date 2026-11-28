@@ -1,0 +1,1568 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.wetlands",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-1825a1de": {
+      "path": "textures/reed-covered-muddy-riverbank-soil-1825a1de.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "61e3d20fa387058360665ec27f55c1053d33dcf6e5b9e4e6423bd2fe91300a27",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-56efb4fa": {
+      "path": "textures/muddy-swamp-marsh-56efb4fa.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "03824254854e1e6db829cb9d09fec54572bf38aa427a02054b794c9faeaaab57",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-dd653ce9": {
+      "path": "textures/swamp-mud-with-skeletal-twigs-dd653ce9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "2596d962cdda62e6d2114af204cff84a1baf930ed4748916754bfe824e8c83bf",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a058f4cf": {
+      "path": "textures/misty-fen-turf-a058f4cf.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d259ccad44828da1200ef3b1cb69e440470f829052be78b5d8ffdc0f71ebd885",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-2f31eda9": {
+      "path": "textures/bioluminescent-bog-ground-2f31eda9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "66729cca13710126a9413df78a7d3e470c664c82ec5863d725193ace4a006c02",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-999d1e7e": {
+      "path": "textures/lotus-pond-surface-999d1e7e.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "99a7343203908040e56c14d5dc24fed8b7c1af28b32326e4ba3a5d7f7674f93d",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a129f72a": {
+      "path": "textures/mossy-wetland-peat-turf-a129f72a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "fbadba64fb454948ca1d700416319847016daacef57071aa8717214fc7edb798",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-462c8426": {
+      "path": "textures/mangrove-roots-over-swamp-silt-462c8426.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4f56c6d079231c73667a0e731da845fc453d30a9b921573c29f82578c0df8abe",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-bcd98245": {
+      "path": "textures/green-mire-sludge-bcd98245.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "74c5df42bd7dc02a4daa080ca348cd544e811b0c0a56e425db1e22d70fbeed3e",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-68329f19": {
+      "path": "textures/salt-marsh-silt-68329f19.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "6ee16b083f2cc8ed238b6b60025ae9fbf2d81cc5368448462b50e77190fb7e57",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.1825a1de",
+      "kind": "region",
+      "name": "Reed covered muddy riverbank soil",
+      "description": "Reed covered muddy riverbank soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-1825a1de",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "vegetation",
+        "wetland",
+        "wet",
+        "organic",
+        "reed",
+        "covered",
+        "muddy",
+        "riverbank"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "vegetation",
+        "wetland",
+        "wet",
+        "organic",
+        "reed",
+        "covered",
+        "muddy",
+        "riverbank",
+        "brown",
+        "olive",
+        "black",
+        "wetlands",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "foliage",
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#4e3d25",
+            "weight_bp": 1487
+          },
+          {
+            "hex": "#696638",
+            "weight_bp": 1406
+          },
+          {
+            "hex": "#2e2916",
+            "weight_bp": 1284
+          },
+          {
+            "hex": "#33381a",
+            "weight_bp": 1266
+          },
+          {
+            "hex": "#655234",
+            "weight_bp": 1252
+          },
+          {
+            "hex": "#494f25",
+            "weight_bp": 1157
+          },
+          {
+            "hex": "#1d180d",
+            "weight_bp": 1095
+          },
+          {
+            "hex": "#82854b",
+            "weight_bp": 1053
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "olive",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.08229,
+          "y_mae": 0.12692,
+          "x_ratio": 1.534,
+          "y_ratio": 2.4376,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Reed_covered_muddy_riverbank_soil_1825a1de.jpg",
+          "sha256": "6eb5bdc633fce38791ef24ee79561f9164c4ccc425b7a4a45ccf1a69a83713cd",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "wetland"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.56efb4fa",
+      "kind": "region",
+      "name": "Muddy swamp marsh",
+      "description": "Muddy swamp marsh: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-56efb4fa",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "wetland",
+        "wet",
+        "muddy",
+        "swamp",
+        "marsh"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "wetland",
+        "wet",
+        "muddy",
+        "swamp",
+        "marsh",
+        "brown",
+        "olive",
+        "yellow",
+        "black",
+        "wetlands",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#342612",
+            "weight_bp": 1382
+          },
+          {
+            "hex": "#584825",
+            "weight_bp": 1355
+          },
+          {
+            "hex": "#434325",
+            "weight_bp": 1312
+          },
+          {
+            "hex": "#665f30",
+            "weight_bp": 1290
+          },
+          {
+            "hex": "#46351a",
+            "weight_bp": 1285
+          },
+          {
+            "hex": "#888e3e",
+            "weight_bp": 1198
+          },
+          {
+            "hex": "#33341c",
+            "weight_bp": 1137
+          },
+          {
+            "hex": "#24180a",
+            "weight_bp": 1041
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "olive",
+          "yellow",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05597,
+          "y_mae": 0.08663,
+          "x_ratio": 1.1561,
+          "y_ratio": 1.7899,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Muddy_swamp_marsh_texture_56efb4fa.jpg",
+          "sha256": "b52cad771b29a31feae0850b24ddf9c9d1ec433a76d06b47d94a804d3fac2c06",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "wetland"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.dd653ce9",
+      "kind": "region",
+      "name": "Swamp mud with skeletal twigs",
+      "description": "Swamp mud with skeletal twigs: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-dd653ce9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "bone",
+        "water",
+        "wetland",
+        "wet",
+        "swamp",
+        "mud",
+        "skeletal",
+        "twigs"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "bone",
+        "water",
+        "wetland",
+        "wet",
+        "swamp",
+        "mud",
+        "skeletal",
+        "twigs",
+        "green",
+        "black",
+        "olive",
+        "wetlands",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#414433",
+            "weight_bp": 1629
+          },
+          {
+            "hex": "#24231a",
+            "weight_bp": 1427
+          },
+          {
+            "hex": "#151512",
+            "weight_bp": 1365
+          },
+          {
+            "hex": "#353424",
+            "weight_bp": 1246
+          },
+          {
+            "hex": "#1b1d19",
+            "weight_bp": 1222
+          },
+          {
+            "hex": "#292d24",
+            "weight_bp": 1190
+          },
+          {
+            "hex": "#0b0b0b",
+            "weight_bp": 1003
+          },
+          {
+            "hex": "#666f5a",
+            "weight_bp": 918
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04002,
+          "y_mae": 0.0641,
+          "x_ratio": 1.1789,
+          "y_ratio": 1.9527,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Swamp_mud_with_skeletal_twigs_dd653ce9.jpg",
+          "sha256": "5c4f5f37e434aad53d3ebb997f7e4a8086789f6f971a3ca0a36c4f9f988198ef",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "wetland"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a058f4cf",
+      "kind": "region",
+      "name": "Misty fen turf",
+      "description": "Misty fen turf: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a058f4cf",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "wetland",
+        "organic",
+        "misty",
+        "fen",
+        "turf"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "wetland",
+        "organic",
+        "misty",
+        "fen",
+        "turf",
+        "green",
+        "olive",
+        "black",
+        "wetlands",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage",
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#464f33",
+            "weight_bp": 1517
+          },
+          {
+            "hex": "#35321e",
+            "weight_bp": 1436
+          },
+          {
+            "hex": "#242416",
+            "weight_bp": 1365
+          },
+          {
+            "hex": "#40412b",
+            "weight_bp": 1306
+          },
+          {
+            "hex": "#576242",
+            "weight_bp": 1168
+          },
+          {
+            "hex": "#343f27",
+            "weight_bp": 1135
+          },
+          {
+            "hex": "#1b190e",
+            "weight_bp": 1066
+          },
+          {
+            "hex": "#262f1d",
+            "weight_bp": 1007
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "olive",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03284,
+          "y_mae": 0.04852,
+          "x_ratio": 1.3879,
+          "y_ratio": 2.0322,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Misty_fen_turf_texture_a058f4cf.jpg",
+          "sha256": "6c85c2769de554fe1f10df447f1ee38e6cc19a3562c60fe6e741e928ff860d4b",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "wetland"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.2f31eda9",
+      "kind": "region",
+      "name": "Bioluminescent bog ground",
+      "description": "Bioluminescent bog ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-2f31eda9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "magic",
+        "wetland",
+        "wet",
+        "glowing",
+        "bioluminescent",
+        "bog"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "magic",
+        "wetland",
+        "wet",
+        "glowing",
+        "bioluminescent",
+        "bog",
+        "gray",
+        "black",
+        "purple",
+        "wetlands",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#26272c",
+            "weight_bp": 1891
+          },
+          {
+            "hex": "#1e1a23",
+            "weight_bp": 1527
+          },
+          {
+            "hex": "#16161a",
+            "weight_bp": 1333
+          },
+          {
+            "hex": "#5f4a80",
+            "weight_bp": 1292
+          },
+          {
+            "hex": "#0f0d13",
+            "weight_bp": 1099
+          },
+          {
+            "hex": "#413557",
+            "weight_bp": 1023
+          },
+          {
+            "hex": "#3c2a51",
+            "weight_bp": 920
+          },
+          {
+            "hex": "#2a1e38",
+            "weight_bp": 915
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "black",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03307,
+          "y_mae": 0.1058,
+          "x_ratio": 0.9922,
+          "y_ratio": 3.1135,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bioluminescent_bog_ground_texture_2f31eda9.jpg",
+          "sha256": "40f243b8dc5d792aa8a632f628536bc829c876feb6db1335f20d90bc4ebe0ca7",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "wetland"
+          ],
+          "conditions": [
+            "wet",
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.999d1e7e",
+      "kind": "region",
+      "name": "Lotus pond surface",
+      "description": "Lotus pond surface: painterly fantasy liquid appearance texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-999d1e7e",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "water",
+        "liquid",
+        "wet",
+        "lotus",
+        "pond"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "water",
+        "liquid",
+        "wet",
+        "lotus",
+        "pond",
+        "teal",
+        "blue",
+        "wetlands",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.effects.water"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#126065",
+            "weight_bp": 2578
+          },
+          {
+            "hex": "#114054",
+            "weight_bp": 1486
+          },
+          {
+            "hex": "#06203f",
+            "weight_bp": 1372
+          },
+          {
+            "hex": "#094150",
+            "weight_bp": 1207
+          },
+          {
+            "hex": "#3b787b",
+            "weight_bp": 1180
+          },
+          {
+            "hex": "#549e8f",
+            "weight_bp": 1131
+          },
+          {
+            "hex": "#4c6278",
+            "weight_bp": 615
+          },
+          {
+            "hex": "#404375",
+            "weight_bp": 431
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "liquid_appearance",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03921,
+          "y_mae": 0.09543,
+          "x_ratio": 1.6488,
+          "y_ratio": 4.0605,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Lotus_pond_surface_texture_999d1e7e.jpg",
+          "sha256": "6349e02a7a20035beaa554c26a596a16676caacd39d5e4859b3319dbc2f8e4b3",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a129f72a",
+      "kind": "region",
+      "name": "Mossy wetland peat turf",
+      "description": "Mossy wetland peat turf: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a129f72a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "soil",
+        "vegetation",
+        "water",
+        "wetland",
+        "organic",
+        "mossy",
+        "peat",
+        "turf"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "soil",
+        "vegetation",
+        "water",
+        "wetland",
+        "organic",
+        "mossy",
+        "peat",
+        "turf",
+        "green",
+        "black",
+        "olive",
+        "wetlands",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "dirt",
+        "earth",
+        "foliage",
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#46522c",
+            "weight_bp": 1519
+          },
+          {
+            "hex": "#212316",
+            "weight_bp": 1457
+          },
+          {
+            "hex": "#32311f",
+            "weight_bp": 1414
+          },
+          {
+            "hex": "#3f4226",
+            "weight_bp": 1291
+          },
+          {
+            "hex": "#2c3e24",
+            "weight_bp": 1149
+          },
+          {
+            "hex": "#17160d",
+            "weight_bp": 1107
+          },
+          {
+            "hex": "#212e1b",
+            "weight_bp": 1060
+          },
+          {
+            "hex": "#5f703d",
+            "weight_bp": 1003
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05822,
+          "y_mae": 0.0606,
+          "x_ratio": 1.5609,
+          "y_ratio": 1.5847,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Mossy_wetland_peat_turf_texture_a129f72a.jpg",
+          "sha256": "20377b86a61004da9521dd0eb076d1110035147a1f042dedf9cc8348885175c4",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "wetland"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.462c8426",
+      "kind": "region",
+      "name": "Mangrove roots over swamp silt",
+      "description": "Mangrove roots over swamp silt: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-462c8426",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "vegetation",
+        "water",
+        "forest",
+        "wetland",
+        "wet",
+        "tropical",
+        "organic",
+        "mangrove",
+        "roots",
+        "over",
+        "swamp",
+        "silt"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "vegetation",
+        "water",
+        "forest",
+        "wetland",
+        "wet",
+        "tropical",
+        "organic",
+        "mangrove",
+        "roots",
+        "over",
+        "swamp",
+        "silt",
+        "olive",
+        "black",
+        "green",
+        "wetlands",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "foliage",
+        "woodland",
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#484b2d",
+            "weight_bp": 1462
+          },
+          {
+            "hex": "#171a12",
+            "weight_bp": 1345
+          },
+          {
+            "hex": "#0f100b",
+            "weight_bp": 1310
+          },
+          {
+            "hex": "#222015",
+            "weight_bp": 1265
+          },
+          {
+            "hex": "#282d1e",
+            "weight_bp": 1232
+          },
+          {
+            "hex": "#3b3621",
+            "weight_bp": 1199
+          },
+          {
+            "hex": "#050504",
+            "weight_bp": 1105
+          },
+          {
+            "hex": "#667242",
+            "weight_bp": 1082
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "black",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0581,
+          "y_mae": 0.09101,
+          "x_ratio": 1.5411,
+          "y_ratio": 2.4558,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Mangrove_roots_over_swamp_silt_462c8426.jpg",
+          "sha256": "8ff8402191feb88f059e5a11087815b1f428fdcb6f5bd4f58629ddb516562ba7",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "wetland",
+            "tropical"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.bcd98245",
+      "kind": "region",
+      "name": "Green mire sludge",
+      "description": "Green mire sludge: painterly fantasy liquid appearance texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-bcd98245",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "liquid",
+        "wetland",
+        "wet",
+        "green",
+        "mire",
+        "sludge"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "liquid",
+        "wetland",
+        "wet",
+        "green",
+        "mire",
+        "sludge",
+        "wetlands",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.effects"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#283d16",
+            "weight_bp": 1508
+          },
+          {
+            "hex": "#6fa63b",
+            "weight_bp": 1367
+          },
+          {
+            "hex": "#425518",
+            "weight_bp": 1354
+          },
+          {
+            "hex": "#457026",
+            "weight_bp": 1227
+          },
+          {
+            "hex": "#5f8128",
+            "weight_bp": 1190
+          },
+          {
+            "hex": "#1d2f12",
+            "weight_bp": 1131
+          },
+          {
+            "hex": "#99d85e",
+            "weight_bp": 1131
+          },
+          {
+            "hex": "#2d4e1d",
+            "weight_bp": 1092
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "liquid_appearance",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03915,
+          "y_mae": 0.08314,
+          "x_ratio": 1.5032,
+          "y_ratio": 3.1118,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Green_mire_sludge_texture_bcd98245.jpg",
+          "sha256": "0cd78457ac9225374a5adc48a9641449e7367bd8762aa5afa2b5d8d831e52bba",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "wetland"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.68329f19",
+      "kind": "region",
+      "name": "Salt marsh silt",
+      "description": "Salt marsh silt: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-68329f19",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "water",
+        "wetland",
+        "wet",
+        "salt",
+        "marsh",
+        "silt"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "water",
+        "wetland",
+        "wet",
+        "salt",
+        "marsh",
+        "silt",
+        "olive",
+        "brown",
+        "black",
+        "wetlands",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#58513b",
+            "weight_bp": 1445
+          },
+          {
+            "hex": "#414334",
+            "weight_bp": 1383
+          },
+          {
+            "hex": "#2b2b1f",
+            "weight_bp": 1367
+          },
+          {
+            "hex": "#363124",
+            "weight_bp": 1324
+          },
+          {
+            "hex": "#55452b",
+            "weight_bp": 1247
+          },
+          {
+            "hex": "#463623",
+            "weight_bp": 1108
+          },
+          {
+            "hex": "#1e1a12",
+            "weight_bp": 1072
+          },
+          {
+            "hex": "#716b54",
+            "weight_bp": 1054
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05779,
+          "y_mae": 0.07773,
+          "x_ratio": 1.4235,
+          "y_ratio": 1.9966,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Salt_marsh_silt_texture_68329f19.jpg",
+          "sha256": "8ebdfa80af38bf569807fa11e08c626ed3fe4947849123000df82fbd1b8ad7b2",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "wetland"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    }
+  ]
+}
