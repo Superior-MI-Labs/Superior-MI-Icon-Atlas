@@ -61,8 +61,7 @@
     if(pending.has(id))return pending.get(id);
     const loader=(async()=>{
       const pack=collections.get(id);if(!pack)throw Error('Unknown collection '+id);
-      const response=await fetch(pack.zip);if(!response.ok)throw Error('Could not retrieve '+pack.name);
-      const blob=await response.blob();
+      const blob=await VisualAtlasZip.fetchVerifiedArchive(VisualAtlasZip.packLocator(pack),{base:location.href});
       const {zip,resolved}=await VisualAtlasZip.read(blob,{JSZip,Collections,name:pack.name});
       const merged=resolved.pack;
       if(Slots.validate(merged).length)throw Error('Invalid compatibility definitions in '+pack.name);

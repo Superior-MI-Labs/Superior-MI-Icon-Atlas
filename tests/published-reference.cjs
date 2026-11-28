@@ -1,0 +1,28 @@
+'use strict';
+const assert=require('node:assert/strict'),Z=require('../web/zip-core.js'),{createHash}=require('node:crypto');
+const digest='a'.repeat(64),other='b'.repeat(64),archive='archives/sha256/'+digest+'.zip';
+const pack={id:'p',zip:'demo/p.zip',archive_sha256:digest,immutable_zip:archive};
+const index={schema:'smi-public-catalog/1',packs:[pack],assets:[{id:'a',pack:'p'}],concepts:[{id:'c',pack:'p'}]};
+assert.deepEqual(Z.packLocator(pack),{path:archive,archive_sha256:digest});
+assert.equal(Z.referenceLocator(index,{kind:'concept',id:'c'}).path,archive);
+assert.equal(Z.referenceLocator(index,{kind:'asset',id:'a'}).archive_sha256,digest);
+assert.equal(Z.referenceLocator(index,{kind:'asset',id:'absent'}),null);
+assert.equal(Z.referenceLocator(index,{kind:'asset',id:'old',archive_sha256:other}).path,'archives/sha256/'+other+'.zip');
+const legacy={...index,packs:[{id:'p',zip:'demo/p.zip',archive_sha256:digest}]};
+assert.equal(Z.referenceLocator(legacy,{kind:'asset',id:'a'}).path,'demo/p.zip');
+assert.equal(Z.referenceLocator(legacy,{kind:'asset',id:'old',archive_sha256:other}),null);
+assert.throws(()=>Z.packLocator({...pack,immutable_zip:'https://bad.example/a.zip'}),/locator mismatch/);
+assert.throws(()=>Z.referenceLocator({...index,concepts:[...index.concepts,...index.concepts]},{kind:'concept',id:'c'}),/Ambiguous/);
+(async()=>{
+ const data=Buffer.from('fixture bytes'),hash=createHash('sha256').update(data).digest('hex'),locator={path:'archives/sha256/'+hash+'.zip',archive_sha256:hash};
+ let requests=0;
+ const fetcher=async(url,opts)=>{requests++;assert.equal(url,'https://example.test/atlas/'+locator.path);assert.equal(opts.redirect,'error');return new Response(data);};
+ const hashFn=async blob=>createHash('sha256').update(Buffer.from(await blob.arrayBuffer())).digest('hex');
+ const blob=await Z.fetchVerifiedArchive(locator,{base:'https://example.test/atlas/public-catalog.json',fetcher,hash:hashFn});
+ assert.equal(blob.size,data.length);assert.equal(requests,1);
+ await assert.rejects(()=>Z.fetchVerifiedArchive(locator,{base:'https://example.test/atlas/',fetcher,hash:async()=>other}),/SHA-256 mismatch/);
+ await assert.rejects(()=>Z.fetchVerifiedArchive({...locator,path:'../evil.zip'},{base:'https://example.test/atlas/',fetcher,hash:hashFn}),/Unsafe/);
+ assert.equal(requests,2);
+ await assert.rejects(()=>Z.fetchVerifiedArchive(locator,{base:'https://example.test/atlas/',fetcher:async()=>new Response(null,{status:404}),hash:hashFn}),/unavailable/);
+ console.log('Pinned reference resolution and verified archive fetch PASS');
+})().catch(e=>{console.error(e);process.exitCode=1;});

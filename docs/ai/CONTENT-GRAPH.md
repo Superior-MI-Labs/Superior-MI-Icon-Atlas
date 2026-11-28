@@ -15,3 +15,7 @@ The derived public catalog includes concept summaries (owner pack, identity, cap
 Future steps: actual multi-pack pinned graph resolution, state event/animation marker protocol, host-authorized transactions, inventory/recipe/material and spatial assembly payloads. No gameplay or 3D support claimed.
 
 Public search and private Builder search include declared concept names, functions and ruleset IDs while keeping visual capability facets separate. Public detail displays linked concept metadata and unpinned current-catalog associations. Pinned references are not silently redirected to a different current version. Existing public detail/related-assets controls are reused; no new navigation or state store.
+
+### Exact runtime references
+
+The shared ZIP core now resolves one concept/asset reference to a current catalog owner or an explicitly pinned digest route, then fetches a bounded same-origin response, verifies SHA-256 and checks requested ID membership after normal ZIP validation. Public browser and Builder use the same verified fetch helper; existing filename deep links remain unchanged. Old catalogs without immutable locators use the existing alias plus digest, never silently substitute on mismatch. A historical locator is only a request until actual verification; no guarantee of retained bytes. No persistent cache or automatic semantic-neighbor loading; host session cache remains responsible for deduplication. Actual Hex World adoption requires its own qualified vendor/adapter update.

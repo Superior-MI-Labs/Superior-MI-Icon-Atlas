@@ -857,9 +857,10 @@
   // One allowlisted entrypoint for manual selection and public deep links.
   let publicPacks=[];
   async function openPublished(requested,desired=null){
-    if(!/^[a-z0-9-]+\.zip$/.test(requested)||!publicPacks.some(p=>p.zip==='demo/'+requested))throw Error('Unknown or unpublished collection');
-    const response=await fetch('demo/'+requested);if(!response.ok)throw Error('Example archive unavailable');
-    const file=new File([await response.blob()],requested,{type:'application/zip'});
+    const pack=/^[a-z0-9-]+\.zip$/.test(requested)&&publicPacks.find(p=>p.zip==='demo/'+requested);
+    if(!pack)throw Error('Unknown or unpublished collection');
+    const blob=await VisualAtlasZip.fetchVerifiedArchive(VisualAtlasZip.packLocator(pack),{base:location.href});
+    const file=new File([blob],requested,{type:'application/zip'});
     const bag=await importZip(file);
     if(desired){
       if(!bag.assetIds.includes(desired))throw Error('Asset not found in approved collection');
