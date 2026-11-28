@@ -16,6 +16,7 @@ from atlasctl import load,validate
 from tools.sprite_grids import build_sprite_grids
 from tools.browse_taxonomy import load_taxonomy, project_browse
 from tools.browse_previews import build_region_previews
+from tools.retain_archives import stage_current
 from tools.asset_inventory import audit as audit_assets, source_collections, read_collection, archive_payload
 
 
@@ -329,6 +330,7 @@ for(const texture of Object.values(pack.textures)){
 
     browse=project_browse(public_assets,public_packs,browse_defaults,load_taxonomy())
     public_assets.sort(key=lambda a:(a['pack'],a['id']))
+    stage_current(dest, {'schema':'smi-public-catalog/1','packs':public_packs})
     (dest/'public-catalog.json').write_text(json.dumps({'schema':'smi-public-catalog/1',
         'assets':public_assets,'packs':public_packs,'browse':browse,
         'synonyms':m.get('search',{}).get('synonyms',{}),'styles':m.get('styles',{}),
