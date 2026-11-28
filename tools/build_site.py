@@ -38,6 +38,17 @@ def resolve_showcases(index,manifests,dest):
     return links,keywords
 
 
+def visual_references(asset):
+    """Direct authored render references; same closure semantics as visual capabilities."""
+    kind=asset['kind'];ident=asset['id']
+    refs=([f['asset'] for f in asset['frames']] if kind=='sequence' else
+          list(asset['states'].values()) if kind=='state_set' else
+          [l['asset'] for l in asset.get('layers',[]) if 'asset' in l]+
+          [v for s in asset.get('slots',{}).values() for v in s['options']] if kind=='composition' else [])
+    refs += [ref for ref in asset.get('spatial',{}).get('views',{}).get('assets',[]) if ref!=ident]
+    return sorted(set(refs))
+
+
 def visual_capabilities(asset, lookup, memo, active=None):
     """Derived affordances, not a certification of host or art compatibility."""
     ident=asset['id']
@@ -62,11 +73,7 @@ def visual_capabilities(asset, lookup, memo, active=None):
         caps.add('spatial-profile')
         if asset['spatial'].get('views'):caps.add('directional')
         if asset['spatial'].get('wind'):caps.add('wind-responsive')
-    refs=([f['asset'] for f in asset['frames']] if kind=='sequence' else
-          list(asset['states'].values()) if kind=='state_set' else
-          [l['asset'] for l in asset.get('layers',[]) if 'asset' in l]+
-          [v for s in asset.get('slots',{}).values() for v in s['options']] if kind=='composition' else [])
-    refs += [ref for ref in asset.get('spatial',{}).get('views',{}).get('assets',[]) if ref!=ident]
+    refs=visual_references(asset)
     for ref in refs:
         if ref not in lookup:raise ValueError('Missing published dependency '+ref)
         if 'animated' in visual_capabilities(lookup[ref],lookup,memo,active):caps.add('animated')
@@ -311,6 +318,7 @@ for(const texture of Object.values(pack.textures)){
                 capabilities=visual_capabilities(a,lookup,cap_memo)
                 public_assets.append({
                     'capabilities':capabilities,'interfaces':sorted(a.get('implements',[])),
+                    'render_refs':visual_references(a),
                     **({'spatial':a['spatial']} if 'spatial' in a else {}),
                     **({'representation':a['representation']} if 'representation' in a else {}),
                     **({'material':a['material']} if 'material' in a else {}),

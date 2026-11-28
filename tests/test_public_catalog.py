@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 from zipfile import ZipFile
-from tools.build_site import ROOT,concept_discovery
+from tools.build_site import ROOT,concept_discovery,visual_references
 from tests.site_fixture import shared_site, copied_site
 from tools.asset_inventory import read_collection
 from tools.prune_public_site import prune
@@ -51,6 +51,7 @@ class PublicCatalogTests(unittest.TestCase):
                         self.assertEqual(entries[asset['id']]['concept_id'],asset['concept_id'])
                     if asset.get('representation'):
                         self.assertEqual(entries[asset['id']]['representation'],asset['representation'])
+            by_asset={a['id']:a for a in public['assets']}
             approved=set()
             for entry in publication['collections']:
                 folder=ROOT/entry['path']
@@ -58,6 +59,8 @@ class PublicCatalogTests(unittest.TestCase):
                 source=[a for _,pack in packs for a in pack['assets']]
                 self.assertEqual(len(source),entry['expected_assets'])
                 approved.update(a['id'] for a in source)
+                for a in source:
+                    self.assertEqual(by_asset[a['id']]['render_refs'],visual_references(a))
                 archive=site/'demo'/(folder.name+'.zip')
                 self.assertEqual(check(archive),[],str(archive))
                 self.assertTrue(archive.is_file())
