@@ -6,15 +6,15 @@ from pathlib import Path
 from zipfile import ZipFile
 from PIL import Image
 from tools.validate_visual_pack import check
-from tools.build_site import build, ROOT
+from tools.build_site import ROOT
+from tests.site_fixture import shared_site
 
 class BuilderContractTests(unittest.TestCase):
     def test_offline_site_contains_builder_and_demo(self):
-        with tempfile.TemporaryDirectory() as temp:
-            build(Path(temp))
+        with shared_site() as site:
             for rel in ('builder.html','builder.css','builder.js','timeline-core.js','visual-core.js','collection-core.js','bag-store.js','interaction-core.js','schemas/smi-visual-collection-v1.schema.json','ai-guide.html','vendor/jszip.min.js','vendor/JSZip-LICENSE.md','demo/starter-pack.zip'):
-                self.assertTrue((Path(temp)/rel).is_file(),rel)
-            html=(Path(temp)/'builder.html').read_text()
+                self.assertTrue((site/rel).is_file(),rel)
+            html=(site/'builder.html').read_text()
             self.assertIn('Import ZIP',html)
             self.assertIn('vendor/jszip.min.js',html)
             self.assertIn('timeline-core.js',html)
@@ -22,7 +22,7 @@ class BuilderContractTests(unittest.TestCase):
             self.assertIn('id="public-example"',html)
             self.assertIn('id="open-collection"',html)
             self.assertNotIn('load-demo',html)
-            self.assertNotIn('load-potions',(Path(temp)/'builder.css').read_text())
+            self.assertNotIn('load-potions',(site/'builder.css').read_text())
             self.assertIn('id="export-frames"',html)
             self.assertNotIn('https://cdn.',html)
     def test_schema_validation_and_dependency_graph(self):

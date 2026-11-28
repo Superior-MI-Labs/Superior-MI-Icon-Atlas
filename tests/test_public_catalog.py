@@ -5,15 +5,15 @@ import tempfile
 import unittest
 from pathlib import Path
 from zipfile import ZipFile
-from tools.build_site import build,ROOT
+from tools.build_site import ROOT
+from tests.site_fixture import shared_site, copied_site
 from tools.asset_inventory import read_collection
 from tools.prune_public_site import prune
 from tools.validate_visual_pack import check
 
 class PublicCatalogTests(unittest.TestCase):
     def test_public_approval_and_manifest_derived_records(self):
-        with tempfile.TemporaryDirectory() as temp:
-            site=Path(temp);build(site)
+        with shared_site() as site:
             public=json.loads((site/'public-catalog.json').read_text())
             self.assertEqual(public['schema'],'smi-public-catalog/1')
             self.assertEqual(len(public['packs']),1+len(json.loads((ROOT/'publications.json').read_text())['collections']))
@@ -193,8 +193,7 @@ class PublicCatalogTests(unittest.TestCase):
         self.assertGreaterEqual(region_count,1536)
 
     def test_deployed_site_excludes_old_public_files_and_starter_zips(self):
-        with tempfile.TemporaryDirectory() as temp:
-            site=Path(temp);build(site)
+        with copied_site() as site:
             self.assertEqual(prune(site),len(json.loads((ROOT/'publications.json').read_text())['collections']))
             self.assertTrue((site/'demo/fantasy-rpg-hud-wave1.zip').is_file())
             self.assertTrue((site/'demo/royal-forge-controls.zip').is_file())
