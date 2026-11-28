@@ -77,7 +77,8 @@ def check(page,published_only=False):
         card.scroll_into_view_if_needed()
         expect(card.locator('canvas')).to_have_attribute('data-preview','thumbnail')
         assert any('/previews/' in url for url in requests),requests
-        chest_zip='/demo/fantasy-recovered-chests-20261125.zip'
+        chest_pack=next(p for p in catalog['packs'] if p['zip']=='demo/fantasy-recovered-chests-20261125.zip')
+        chest_zip='/'+chest_pack.get('immutable_zip',chest_pack['zip'])
         assert not any(url.endswith(chest_zip) for url in requests),requests
         card.click()
         expect(preview_page.locator('#detail[open]')).to_be_visible()

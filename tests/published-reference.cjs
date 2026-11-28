@@ -24,5 +24,14 @@ assert.throws(()=>Z.referenceLocator({...index,concepts:[...index.concepts,...in
  await assert.rejects(()=>Z.fetchVerifiedArchive({...locator,path:'../evil.zip'},{base:'https://example.test/atlas/',fetcher,hash:hashFn}),/Unsafe/);
  assert.equal(requests,2);
  await assert.rejects(()=>Z.fetchVerifiedArchive(locator,{base:'https://example.test/atlas/',fetcher:async()=>new Response(null,{status:404}),hash:hashFn}),/unavailable/);
+ const JSZip=require('../web/vendor/jszip.min.js'),Collections=require('../web/collection-core.js');
+ const zip=new JSZip(),concept={schema:'smi-concept/1',id:'test.sword',name:'Sword',license:'CC0-1.0'};
+ zip.file('manifest.json',JSON.stringify({schema:'smi-visual-pack/1',pack_id:'test',version:'1',textures:{t:{path:'a.png',width_px:1,height_px:1}},assets:[{id:'test.icon',kind:'region',texture:'t',rect_px:[0,0,1,1],concept_id:concept.id}],concepts:[concept]}));
+ zip.file('a.png',Buffer.from([0]));
+ const bytes=await zip.generateAsync({type:'nodebuffer'}),sha=createHash('sha256').update(bytes).digest('hex');
+ const archiveLocator={path:'archives/sha256/'+sha+'.zip',archive_sha256:sha,reference:{kind:'concept',id:concept.id}};
+ const opts={base:'https://example.test/atlas/',fetcher:async()=>new Response(bytes),hash:hashFn,Collections,JSZip:{loadAsync:async(file,options)=>JSZip.loadAsync(await file.arrayBuffer(),options)}};
+ assert.deepEqual((await Z.readPublishedReference(archiveLocator,opts)).value,concept);
+ await assert.rejects(()=>Z.readPublishedReference({...archiveLocator,reference:{kind:'asset',id:'missing'}},opts),/Requested content missing/);
  console.log('Pinned reference resolution and verified archive fetch PASS');
 })().catch(e=>{console.error(e);process.exitCode=1;});
