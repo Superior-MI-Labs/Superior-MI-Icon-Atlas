@@ -46,6 +46,7 @@ def visual_capabilities(asset, lookup, memo, active=None):
     if ident in active:raise ValueError('Cyclic published asset '+ident)
     active.add(ident)
     kind=asset['kind'];caps=set()
+    if asset.get('material'):caps.add('surface-material')
     if kind=='sequence' or asset.get('duration_ms'):caps.add('animated')
     if kind=='state_set':caps.add('states')
     if kind=='composition':
@@ -288,6 +289,8 @@ for(const texture of Object.values(pack.textures)){
                 public_assets.append({
                     'capabilities':capabilities,'interfaces':sorted(a.get('implements',[])),
                     **({'spatial':a['spatial']} if 'spatial' in a else {}),
+                    **({'material':a['material']} if 'material' in a else {}),
+                    **({'visual_profile':a['visual_profile']} if 'visual_profile' in a else {}),
                     'slot_interfaces':sorted({v['accepts'] for v in a.get('slots',{}).values()}),
                     'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
                     **({'thumbnail':thumbnails[ident]} if ident in thumbnails else {}),

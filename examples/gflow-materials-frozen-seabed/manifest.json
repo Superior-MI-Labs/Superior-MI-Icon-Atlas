@@ -1,0 +1,3799 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.frozen-seabed",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-73762ff6": {
+      "path": "textures/underwater-frozen-red-kelp-73762ff6.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "57bc4354f95d50959782c6cd0d6595cf8a823349001b2a3e22f381d9b45e8405",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-fb75870b": {
+      "path": "textures/frozen-ocean-trench-mud-fb75870b.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "733224e732b1821ed3c9ebf4e2b7f17bf16876c3fe6fa1037b32182289648b72",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-f53a22f9": {
+      "path": "textures/frostfire-ember-bedrock-f53a22f9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "21849c8ec33076e69745638aa0e7cc7d85867cbfb6d81a9f7fd8f2c1c597ecd7",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-3c1d32aa": {
+      "path": "textures/sand-top-down-view-3c1d32aa.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "e167260b5024c794dd240cb9dc418727de2b029b5296554530b06fc8550b5592",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-88484ccc": {
+      "path": "textures/icy-deep-sea-trench-mud-88484ccc.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4933ded86da71a48ac9dd18b9791501ce1109d4bad700cc8b7543d08bed38022",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-e24867b1": {
+      "path": "textures/frozen-lily-pad-pond-bed-e24867b1.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "89ef060ca4afcfa50356183ba16530a1ce1dddf34b20e8bacd2dd30094325b71",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-9e6158d4": {
+      "path": "textures/glacial-blue-quartz-crystal-bed-9e6158d4.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "af7c2811588fd5d568e1b0ff0ce26d84eb02e3e9cc08e344255dd00616318fb7",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-d5b99aee": {
+      "path": "textures/volcanic-sand-underwater-d5b99aee.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "a7a3741c33ea4b923b74747083554bd2bfce4cf1b7d001765dd7d4991198ae95",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-3a9bc980": {
+      "path": "textures/frozen-petrified-sea-wood-3a9bc980.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "8788876d371a1c25f50999db46d46e7f12cf55fda7ee2c222420d664a8fb7c1c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-3afc3dd4": {
+      "path": "textures/underwater-frost-moss-3afc3dd4.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "c3e3489de8291da40433285d9578b1767cbc1fdb0d5942c76de25bfe1b92c196",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ab7a77d1": {
+      "path": "textures/ice-encased-coral-reef-ab7a77d1.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "45b8986f3aeb8c981ff9b37e093cb6f6d537f7086fb4c6cff252105f7de07813",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-af3888b3": {
+      "path": "textures/cracked-glacier-ice-af3888b3.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d5ed021b91e41dfa6cdd6567e073bb27705ee0989e546d24b847aabd223ff822",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-f338535e": {
+      "path": "textures/submerged-frosty-pine-cone-f338535e.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f1b81a5cc22f772b99c31dbf3abddedc467f9c74c2a29557a6de2cebe6059865",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-c4ed2cc0": {
+      "path": "textures/underwater-frozen-kelp-forest-floor-c4ed2cc0.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "c930e757347b0ccf86c0181657f8fb2be4cbadc86581d4af31e86d1fc457fa75",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-19c68f54": {
+      "path": "textures/bioluminescent-ice-crystal-sand-bed-19c68f54.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "395a2dcd79d0693af6a3b5a7a3222299704a6fa804a83ed62e1cce4ecac23272",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-5699e0eb": {
+      "path": "textures/frozen-pine-needle-seabed-5699e0eb.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "8dc283d4dcaf7858ecd180dbcc147bd3911bc8c65efae8d2630b8cda90c1dc2d",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-66315971": {
+      "path": "textures/underwater-glowing-ice-66315971.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "879d7c87efab987094e161e18bfcccd5e1a999820d5199df6f297ee8f77b6660",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ad4a6f39": {
+      "path": "textures/frost-covered-shipwreck-wood-planks-ad4a6f39.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "2a7187bb1836e01205416f04d3fb352e73a067d030f062fa19bd68e7292ab048",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ef235838": {
+      "path": "textures/submerged-arctic-seabed-ice-ef235838.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "ab78da8d0004e58e84ff2ff05ee33a32044866e2f24cd4061f791c7bc9d4c63a",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-f6bcb85d": {
+      "path": "textures/underwater-with-icy-shells-f6bcb85d.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d4a3c4488e5dc513034cdf87ea0a871c9e9418404648baa3f9e49eae586686dd",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-6d834665": {
+      "path": "textures/frozen-tundra-lakebed-mud-6d834665.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "1146979dc163e3d4debbae0b7ed510c77dabc8a078f4ffa1fd8a10742937e9e9",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-f83420d1": {
+      "path": "textures/frozen-bone-fragments-in-silt-f83420d1.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "064c9501b0ed5c53338623aa629d3dfa71cb93da58a5a14424e3b88e0b166b18",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-c4d7be69": {
+      "path": "textures/icy-winter-mangrove-roots-c4d7be69.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "95ebe9e688c2021ca776bc0aeb4d8f65dd974780a07d4060bfdf1ed7605083cb",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-6597c5c9": {
+      "path": "textures/frost-etched-ancient-stone-6597c5c9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "5d9a1da61d437e210e98e13cdcc8695662172185d546ef2ab19071710c391f47",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.73762ff6",
+      "kind": "region",
+      "name": "Underwater frozen red kelp",
+      "description": "Underwater frozen red kelp: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-73762ff6",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "wet",
+        "underwater",
+        "frozen",
+        "red",
+        "kelp"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "wet",
+        "underwater",
+        "frozen",
+        "red",
+        "kelp",
+        "blue",
+        "purple",
+        "teal",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "frozen",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#7e2539",
+            "weight_bp": 1618
+          },
+          {
+            "hex": "#697483",
+            "weight_bp": 1363
+          },
+          {
+            "hex": "#585163",
+            "weight_bp": 1337
+          },
+          {
+            "hex": "#531021",
+            "weight_bp": 1270
+          },
+          {
+            "hex": "#9b4e60",
+            "weight_bp": 1252
+          },
+          {
+            "hex": "#a52c3f",
+            "weight_bp": 1127
+          },
+          {
+            "hex": "#77a3af",
+            "weight_bp": 1078
+          },
+          {
+            "hex": "#5a2b3e",
+            "weight_bp": 955
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "red",
+          "blue",
+          "purple",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.08602,
+          "y_mae": 0.11953,
+          "x_ratio": 1.6228,
+          "y_ratio": 2.377,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Underwater_frozen_red_kelp_texture_73762ff6.jpg",
+          "sha256": "4a52a065d5d7ff3d01a1c6d5893e1824a5e826ba580b5d6ee0fe49daf9d68a5a",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.fb75870b",
+      "kind": "region",
+      "name": "Frozen ocean trench mud",
+      "description": "Frozen ocean trench mud: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-fb75870b",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "wet",
+        "frozen",
+        "ocean",
+        "trench",
+        "mud"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "wet",
+        "frozen",
+        "ocean",
+        "trench",
+        "mud",
+        "blue",
+        "black",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "frozen",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#0c182f",
+            "weight_bp": 1582
+          },
+          {
+            "hex": "#233352",
+            "weight_bp": 1351
+          },
+          {
+            "hex": "#464a7c",
+            "weight_bp": 1334
+          },
+          {
+            "hex": "#3a386c",
+            "weight_bp": 1307
+          },
+          {
+            "hex": "#696da2",
+            "weight_bp": 1177
+          },
+          {
+            "hex": "#1a1c41",
+            "weight_bp": 1142
+          },
+          {
+            "hex": "#1f274a",
+            "weight_bp": 1080
+          },
+          {
+            "hex": "#060c22",
+            "weight_bp": 1027
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07573,
+          "y_mae": 0.09242,
+          "x_ratio": 1.6698,
+          "y_ratio": 2.2062,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frozen_ocean_trench_mud_texture_fb75870b.jpg",
+          "sha256": "51235756a10f036f8299e4c4ce2f0fc63279d27639c157ea9bbd3c36be326920",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.f53a22f9",
+      "kind": "region",
+      "name": "Frostfire ember bedrock",
+      "description": "Frostfire ember bedrock: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-f53a22f9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "ice",
+        "lava",
+        "magic",
+        "glowing",
+        "frostfire",
+        "ember",
+        "bedrock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "ice",
+        "lava",
+        "magic",
+        "glowing",
+        "frostfire",
+        "ember",
+        "bedrock",
+        "teal",
+        "blue",
+        "brown",
+        "gray",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "frozen",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#144756",
+            "weight_bp": 1817
+          },
+          {
+            "hex": "#083245",
+            "weight_bp": 1555
+          },
+          {
+            "hex": "#061f31",
+            "weight_bp": 1347
+          },
+          {
+            "hex": "#416769",
+            "weight_bp": 1204
+          },
+          {
+            "hex": "#152b36",
+            "weight_bp": 1041
+          },
+          {
+            "hex": "#55a1a3",
+            "weight_bp": 1023
+          },
+          {
+            "hex": "#432a29",
+            "weight_bp": 1019
+          },
+          {
+            "hex": "#484a47",
+            "weight_bp": 994
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue",
+          "brown",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03843,
+          "y_mae": 0.06526,
+          "x_ratio": 1.3813,
+          "y_ratio": 2.44,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frostfire_ember_bedrock_texture_…_f53a22f9.jpg",
+          "sha256": "94f9eb6bba125a0baf086e883f59fd23e0337a415160acc883351243cf4f51a3",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.3c1d32aa",
+      "kind": "region",
+      "name": "Sand top-down view",
+      "description": "Sand top-down view: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-3c1d32aa",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "blue",
+        "teal",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#326182",
+            "weight_bp": 1460
+          },
+          {
+            "hex": "#67a7af",
+            "weight_bp": 1414
+          },
+          {
+            "hex": "#467992",
+            "weight_bp": 1369
+          },
+          {
+            "hex": "#5b93a2",
+            "weight_bp": 1244
+          },
+          {
+            "hex": "#488b9d",
+            "weight_bp": 1197
+          },
+          {
+            "hex": "#7fc6c7",
+            "weight_bp": 1147
+          },
+          {
+            "hex": "#37728b",
+            "weight_bp": 1124
+          },
+          {
+            "hex": "#254e72",
+            "weight_bp": 1045
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05565,
+          "y_mae": 0.06605,
+          "x_ratio": 1.4408,
+          "y_ratio": 1.6845,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Sand_texture_top-down_view_3c1d32aa.jpg",
+          "sha256": "54ff23c3039d5712cbc1c0d1e4bfbd5ad8d4e11e57c1b7ced7e3088f8ef89e58",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.88484ccc",
+      "kind": "region",
+      "name": "Icy deep-sea trench mud",
+      "description": "Icy deep-sea trench mud: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-88484ccc",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "wet",
+        "icy",
+        "deep",
+        "sea",
+        "trench",
+        "mud"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "wet",
+        "icy",
+        "deep",
+        "sea",
+        "trench",
+        "mud",
+        "blue",
+        "black",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "frozen",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#0d1b2f",
+            "weight_bp": 1707
+          },
+          {
+            "hex": "#2d6083",
+            "weight_bp": 1567
+          },
+          {
+            "hex": "#192a41",
+            "weight_bp": 1400
+          },
+          {
+            "hex": "#173d5d",
+            "weight_bp": 1199
+          },
+          {
+            "hex": "#274562",
+            "weight_bp": 1113
+          },
+          {
+            "hex": "#4b95b7",
+            "weight_bp": 1058
+          },
+          {
+            "hex": "#0e2641",
+            "weight_bp": 989
+          },
+          {
+            "hex": "#071021",
+            "weight_bp": 967
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04721,
+          "y_mae": 0.08346,
+          "x_ratio": 1.2838,
+          "y_ratio": 2.2903,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Icy_deep-sea_trench_mud_texture_88484ccc.jpg",
+          "sha256": "f900ed043d47ce8344d59c3b13fc4b10335c2ba4b473dc7d32f7456bc73fc0ce",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.e24867b1",
+      "kind": "region",
+      "name": "Frozen lily pad pond bed",
+      "description": "Frozen lily pad pond bed: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-e24867b1",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "ice",
+        "liquid",
+        "cold",
+        "wet",
+        "frozen",
+        "lily",
+        "pad",
+        "pond",
+        "bed"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "ice",
+        "liquid",
+        "cold",
+        "wet",
+        "frozen",
+        "lily",
+        "pad",
+        "pond",
+        "bed",
+        "blue",
+        "teal",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#417c90",
+            "weight_bp": 1606
+          },
+          {
+            "hex": "#132b38",
+            "weight_bp": 1544
+          },
+          {
+            "hex": "#22566e",
+            "weight_bp": 1426
+          },
+          {
+            "hex": "#163a4d",
+            "weight_bp": 1304
+          },
+          {
+            "hex": "#263f44",
+            "weight_bp": 1140
+          },
+          {
+            "hex": "#091c2a",
+            "weight_bp": 1130
+          },
+          {
+            "hex": "#60a8bb",
+            "weight_bp": 1062
+          },
+          {
+            "hex": "#385e68",
+            "weight_bp": 788
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.061,
+          "y_mae": 0.13427,
+          "x_ratio": 1.4415,
+          "y_ratio": 3.2926,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frozen_lily_pad_pond_bed_e24867b1.jpg",
+          "sha256": "f806285a15da19df2f0e55a8f99ee0c143c6e345ebcfb8540e6fe06277be314f",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.9e6158d4",
+      "kind": "region",
+      "name": "Glacial blue quartz crystal bed",
+      "description": "Glacial blue quartz crystal bed: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-9e6158d4",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "crystal",
+        "ice",
+        "cold",
+        "glacial",
+        "blue",
+        "quartz",
+        "bed"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "crystal",
+        "ice",
+        "cold",
+        "glacial",
+        "blue",
+        "quartz",
+        "bed",
+        "teal",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#123a51",
+            "weight_bp": 1569
+          },
+          {
+            "hex": "#4cb9cd",
+            "weight_bp": 1403
+          },
+          {
+            "hex": "#2b80a0",
+            "weight_bp": 1316
+          },
+          {
+            "hex": "#2b5d74",
+            "weight_bp": 1223
+          },
+          {
+            "hex": "#4c889c",
+            "weight_bp": 1152
+          },
+          {
+            "hex": "#082234",
+            "weight_bp": 1149
+          },
+          {
+            "hex": "#92d8e0",
+            "weight_bp": 1128
+          },
+          {
+            "hex": "#165475",
+            "weight_bp": 1060
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05947,
+          "y_mae": 0.13931,
+          "x_ratio": 1.4062,
+          "y_ratio": 3.8533,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Glacial_blue_quartz_crystal_bed_9e6158d4.jpg",
+          "sha256": "caad765236864453d36a23d38e4afee783b8718081c29e4a82b48508d97021eb",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.d5b99aee",
+      "kind": "region",
+      "name": "Volcanic sand underwater",
+      "description": "Volcanic sand underwater: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-d5b99aee",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "water",
+        "lava",
+        "aquatic",
+        "wet",
+        "volcanic",
+        "underwater"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "water",
+        "lava",
+        "aquatic",
+        "wet",
+        "volcanic",
+        "underwater",
+        "black",
+        "blue",
+        "teal",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#141c28",
+            "weight_bp": 1551
+          },
+          {
+            "hex": "#1d2836",
+            "weight_bp": 1475
+          },
+          {
+            "hex": "#283c4c",
+            "weight_bp": 1291
+          },
+          {
+            "hex": "#385f72",
+            "weight_bp": 1274
+          },
+          {
+            "hex": "#1d3547",
+            "weight_bp": 1197
+          },
+          {
+            "hex": "#162534",
+            "weight_bp": 1149
+          },
+          {
+            "hex": "#70bacb",
+            "weight_bp": 1093
+          },
+          {
+            "hex": "#0d121c",
+            "weight_bp": 970
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03761,
+          "y_mae": 0.08148,
+          "x_ratio": 1.2044,
+          "y_ratio": 2.6711,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Volcanic_sand_underwater_texture_d5b99aee.jpg",
+          "sha256": "a003295944e9c0b2a9eee1da8c398aeb55e1a7ca7b41f9434cc3a74922c48e9e",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.3a9bc980",
+      "kind": "region",
+      "name": "Frozen petrified sea wood",
+      "description": "Frozen petrified sea wood: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-3a9bc980",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "organic",
+        "frozen",
+        "petrified",
+        "sea"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "organic",
+        "frozen",
+        "petrified",
+        "sea",
+        "teal",
+        "blue",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#62949f",
+            "weight_bp": 1597
+          },
+          {
+            "hex": "#1e323d",
+            "weight_bp": 1505
+          },
+          {
+            "hex": "#3e6c7c",
+            "weight_bp": 1291
+          },
+          {
+            "hex": "#3b4f56",
+            "weight_bp": 1276
+          },
+          {
+            "hex": "#254655",
+            "weight_bp": 1143
+          },
+          {
+            "hex": "#0f1e2a",
+            "weight_bp": 1124
+          },
+          {
+            "hex": "#80bfc9",
+            "weight_bp": 1076
+          },
+          {
+            "hex": "#5a757a",
+            "weight_bp": 988
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05272,
+          "y_mae": 0.10538,
+          "x_ratio": 0.9736,
+          "y_ratio": 2.0033,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frozen_petrified_sea_wood_texture_3a9bc980.jpg",
+          "sha256": "0452cb3a90b36a79b84079fd2d0b29a3cfca9a093e66bb78853cea082437041a",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.3afc3dd4",
+      "kind": "region",
+      "name": "Underwater frost moss",
+      "description": "Underwater frost moss: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-3afc3dd4",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "wet",
+        "organic",
+        "underwater",
+        "frost",
+        "moss"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "wet",
+        "organic",
+        "underwater",
+        "frost",
+        "moss",
+        "teal",
+        "blue",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "frozen",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1a3f49",
+            "weight_bp": 1556
+          },
+          {
+            "hex": "#5ab3b8",
+            "weight_bp": 1395
+          },
+          {
+            "hex": "#31848d",
+            "weight_bp": 1287
+          },
+          {
+            "hex": "#3a6066",
+            "weight_bp": 1181
+          },
+          {
+            "hex": "#568b90",
+            "weight_bp": 1171
+          },
+          {
+            "hex": "#1a5a66",
+            "weight_bp": 1153
+          },
+          {
+            "hex": "#92d4d6",
+            "weight_bp": 1153
+          },
+          {
+            "hex": "#0e2732",
+            "weight_bp": 1104
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05433,
+          "y_mae": 0.10366,
+          "x_ratio": 1.478,
+          "y_ratio": 2.9111,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Underwater_frost_moss_texture_3afc3dd4.jpg",
+          "sha256": "b8cf1c8c442d54d9e144c42782e9e19edfaaf3b45c909c818c3163dfb63c8c2d",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ab7a77d1",
+      "kind": "region",
+      "name": "Ice-encased coral reef",
+      "description": "Ice-encased coral reef: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ab7a77d1",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "ice",
+        "coral",
+        "aquatic",
+        "cold",
+        "tropical",
+        "organic",
+        "encased",
+        "reef"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "ice",
+        "coral",
+        "aquatic",
+        "cold",
+        "tropical",
+        "organic",
+        "encased",
+        "reef",
+        "blue",
+        "teal",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#4c7fa1",
+            "weight_bp": 1481
+          },
+          {
+            "hex": "#224468",
+            "weight_bp": 1352
+          },
+          {
+            "hex": "#2b7a95",
+            "weight_bp": 1295
+          },
+          {
+            "hex": "#205a78",
+            "weight_bp": 1258
+          },
+          {
+            "hex": "#395f87",
+            "weight_bp": 1193
+          },
+          {
+            "hex": "#163050",
+            "weight_bp": 1141
+          },
+          {
+            "hex": "#76b5cb",
+            "weight_bp": 1141
+          },
+          {
+            "hex": "#3ea8bc",
+            "weight_bp": 1139
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07157,
+          "y_mae": 0.10987,
+          "x_ratio": 1.5478,
+          "y_ratio": 2.4653,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Ice-encased_coral_reef_texture_ab7a77d1.jpg",
+          "sha256": "5ece34db77b6118483df140fe87d6b564e1661a65e72f98045a16b38af6f8fa8",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "cold",
+            "tropical"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.af3888b3",
+      "kind": "region",
+      "name": "Cracked glacier ice",
+      "description": "Cracked glacier ice: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-af3888b3",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "ice",
+        "cold",
+        "dry",
+        "weathered",
+        "cracked",
+        "glacier"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "ice",
+        "cold",
+        "dry",
+        "weathered",
+        "cracked",
+        "glacier",
+        "green",
+        "teal",
+        "black",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1e2926",
+            "weight_bp": 1708
+          },
+          {
+            "hex": "#25555d",
+            "weight_bp": 1453
+          },
+          {
+            "hex": "#3e8d9d",
+            "weight_bp": 1370
+          },
+          {
+            "hex": "#2c6d7a",
+            "weight_bp": 1269
+          },
+          {
+            "hex": "#193940",
+            "weight_bp": 1258
+          },
+          {
+            "hex": "#6ec0ce",
+            "weight_bp": 1119
+          },
+          {
+            "hex": "#171e1c",
+            "weight_bp": 1016
+          },
+          {
+            "hex": "#2b3b37",
+            "weight_bp": 807
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "teal",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04118,
+          "y_mae": 0.07726,
+          "x_ratio": 1.5323,
+          "y_ratio": 2.9407,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Cracked_glacier_ice_texture_af3888b3.jpg",
+          "sha256": "e333c58ffa2a76406995bceee0cff208fa9921fbce26d0924e0de30c01a99c3d",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "dry",
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.f338535e",
+      "kind": "region",
+      "name": "Submerged frosty pine cone",
+      "description": "Submerged frosty pine cone: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-f338535e",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "water",
+        "ice",
+        "forest",
+        "aquatic",
+        "cold",
+        "wet",
+        "submerged",
+        "frosty",
+        "pine",
+        "cone"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "water",
+        "ice",
+        "forest",
+        "aquatic",
+        "cold",
+        "wet",
+        "submerged",
+        "frosty",
+        "pine",
+        "cone",
+        "teal",
+        "green",
+        "blue",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "woodland",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#517877",
+            "weight_bp": 1473
+          },
+          {
+            "hex": "#1c3239",
+            "weight_bp": 1445
+          },
+          {
+            "hex": "#2d5b62",
+            "weight_bp": 1392
+          },
+          {
+            "hex": "#1d424b",
+            "weight_bp": 1293
+          },
+          {
+            "hex": "#354646",
+            "weight_bp": 1255
+          },
+          {
+            "hex": "#4e5f59",
+            "weight_bp": 1069
+          },
+          {
+            "hex": "#102129",
+            "weight_bp": 1042
+          },
+          {
+            "hex": "#6ea0a2",
+            "weight_bp": 1031
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "green",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06126,
+          "y_mae": 0.09145,
+          "x_ratio": 1.13,
+          "y_ratio": 1.6997,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Submerged_frosty_pine_cone_texture_f338535e.jpg",
+          "sha256": "a86f30832351e0b01e47cc43e914504650b920d690ba5f6ee3fe6029a02ebec5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.c4ed2cc0",
+      "kind": "region",
+      "name": "Underwater frozen kelp forest floor",
+      "description": "Underwater frozen kelp forest floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-c4ed2cc0",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "water",
+        "ice",
+        "forest",
+        "aquatic",
+        "construction",
+        "cold",
+        "wet",
+        "underwater",
+        "frozen",
+        "kelp"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "water",
+        "ice",
+        "forest",
+        "aquatic",
+        "construction",
+        "cold",
+        "wet",
+        "underwater",
+        "frozen",
+        "kelp",
+        "teal",
+        "blue",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "frozen",
+        "woodland",
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#5397a7",
+            "weight_bp": 1446
+          },
+          {
+            "hex": "#0f3343",
+            "weight_bp": 1400
+          },
+          {
+            "hex": "#2c6e7d",
+            "weight_bp": 1296
+          },
+          {
+            "hex": "#275362",
+            "weight_bp": 1248
+          },
+          {
+            "hex": "#447a8a",
+            "weight_bp": 1215
+          },
+          {
+            "hex": "#154959",
+            "weight_bp": 1160
+          },
+          {
+            "hex": "#051e2e",
+            "weight_bp": 1148
+          },
+          {
+            "hex": "#77c2cf",
+            "weight_bp": 1087
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05773,
+          "y_mae": 0.14737,
+          "x_ratio": 1.0687,
+          "y_ratio": 3.0809,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Underwater_frozen_kelp_forest_floor_c4ed2cc0.jpg",
+          "sha256": "07647db1fa47101f1433ab980556472462dc2417834d28b0612bae360d532869",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "aquatic",
+            "construction",
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.19c68f54",
+      "kind": "region",
+      "name": "Bioluminescent ice-crystal sand bed",
+      "description": "Bioluminescent ice-crystal sand bed: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-19c68f54",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "crystal",
+        "ice",
+        "magic",
+        "cold",
+        "glowing",
+        "bioluminescent",
+        "bed"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "crystal",
+        "ice",
+        "magic",
+        "cold",
+        "glowing",
+        "bioluminescent",
+        "bed",
+        "blue",
+        "teal",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#0e1938",
+            "weight_bp": 1447
+          },
+          {
+            "hex": "#1d3558",
+            "weight_bp": 1336
+          },
+          {
+            "hex": "#274c70",
+            "weight_bp": 1287
+          },
+          {
+            "hex": "#70cce1",
+            "weight_bp": 1231
+          },
+          {
+            "hex": "#1b264a",
+            "weight_bp": 1211
+          },
+          {
+            "hex": "#0e2240",
+            "weight_bp": 1204
+          },
+          {
+            "hex": "#4180a3",
+            "weight_bp": 1165
+          },
+          {
+            "hex": "#09112d",
+            "weight_bp": 1119
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04215,
+          "y_mae": 0.05019,
+          "x_ratio": 1.4091,
+          "y_ratio": 1.6649,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bioluminescent_ice-crystal_sand_bed_19c68f54.jpg",
+          "sha256": "4581f83fe56a3a44dacb0e89a80b85f8fba5326d8ad46c86db875316b9ab992c",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.5699e0eb",
+      "kind": "region",
+      "name": "Frozen pine needle seabed",
+      "description": "Frozen pine needle seabed: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-5699e0eb",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "water",
+        "ice",
+        "forest",
+        "aquatic",
+        "cold",
+        "frozen",
+        "pine",
+        "needle",
+        "seabed"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "water",
+        "ice",
+        "forest",
+        "aquatic",
+        "cold",
+        "frozen",
+        "pine",
+        "needle",
+        "seabed",
+        "teal",
+        "blue",
+        "gray",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "woodland",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#496a73",
+            "weight_bp": 1582
+          },
+          {
+            "hex": "#2a3139",
+            "weight_bp": 1426
+          },
+          {
+            "hex": "#3b3f40",
+            "weight_bp": 1361
+          },
+          {
+            "hex": "#34505a",
+            "weight_bp": 1272
+          },
+          {
+            "hex": "#2a3d48",
+            "weight_bp": 1254
+          },
+          {
+            "hex": "#485253",
+            "weight_bp": 1053
+          },
+          {
+            "hex": "#20232d",
+            "weight_bp": 1036
+          },
+          {
+            "hex": "#639aa5",
+            "weight_bp": 1016
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05925,
+          "y_mae": 0.09813,
+          "x_ratio": 1.4341,
+          "y_ratio": 2.4256,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frozen_pine_needle_seabed_texture_5699e0eb.jpg",
+          "sha256": "f04ad2093e9cc0aadddfc2f24f28e0a5f3b5bbd4fbf56ac7d128dbdc0ec35a26",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.66315971",
+      "kind": "region",
+      "name": "Underwater glowing ice",
+      "description": "Underwater glowing ice: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-66315971",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "ice",
+        "magic",
+        "aquatic",
+        "cold",
+        "wet",
+        "glowing",
+        "underwater"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "ice",
+        "magic",
+        "aquatic",
+        "cold",
+        "wet",
+        "glowing",
+        "underwater",
+        "blue",
+        "teal",
+        "brown",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "fantasy",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#0d6c9e",
+            "weight_bp": 2124
+          },
+          {
+            "hex": "#02213d",
+            "weight_bp": 1862
+          },
+          {
+            "hex": "#16a7d0",
+            "weight_bp": 1503
+          },
+          {
+            "hex": "#053e67",
+            "weight_bp": 1053
+          },
+          {
+            "hex": "#4c3e3b",
+            "weight_bp": 1030
+          },
+          {
+            "hex": "#133a52",
+            "weight_bp": 1005
+          },
+          {
+            "hex": "#45becb",
+            "weight_bp": 808
+          },
+          {
+            "hex": "#4d707d",
+            "weight_bp": 615
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05579,
+          "y_mae": 0.07478,
+          "x_ratio": 1.7717,
+          "y_ratio": 2.3651,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Underwater_glowing_ice_texture_w…_66315971.jpg",
+          "sha256": "97be327600cd4b44972ac3b5510c5a7d8e120f21e9f2cc24a7480e82037e0883",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet",
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ad4a6f39",
+      "kind": "region",
+      "name": "Frost-covered shipwreck wood planks",
+      "description": "Frost-covered shipwreck wood planks: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ad4a6f39",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "ice",
+        "aquatic",
+        "cold",
+        "patterned",
+        "organic",
+        "frost",
+        "covered",
+        "shipwreck",
+        "planks"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "ice",
+        "aquatic",
+        "cold",
+        "patterned",
+        "organic",
+        "frost",
+        "covered",
+        "shipwreck",
+        "planks",
+        "teal",
+        "blue",
+        "black",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#355862",
+            "weight_bp": 1617
+          },
+          {
+            "hex": "#12252e",
+            "weight_bp": 1558
+          },
+          {
+            "hex": "#1d3f4b",
+            "weight_bp": 1393
+          },
+          {
+            "hex": "#132f3a",
+            "weight_bp": 1246
+          },
+          {
+            "hex": "#203136",
+            "weight_bp": 1142
+          },
+          {
+            "hex": "#2e4449",
+            "weight_bp": 1041
+          },
+          {
+            "hex": "#0b1a23",
+            "weight_bp": 1027
+          },
+          {
+            "hex": "#588895",
+            "weight_bp": 976
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02626,
+          "y_mae": 0.07629,
+          "x_ratio": 0.6546,
+          "y_ratio": 2.8406,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frost-covered_shipwreck_wood_pla…_ad4a6f39.jpg",
+          "sha256": "6d53b40c020bdbf5f8109ec38fe231b8961f8b7ef77f9b4ec23510108293b826",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ef235838",
+      "kind": "region",
+      "name": "Submerged arctic seabed ice",
+      "description": "Submerged arctic seabed ice: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ef235838",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "wet",
+        "submerged",
+        "arctic",
+        "seabed"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "wet",
+        "submerged",
+        "arctic",
+        "seabed",
+        "blue",
+        "teal",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#173a4b",
+            "weight_bp": 1532
+          },
+          {
+            "hex": "#60aab9",
+            "weight_bp": 1365
+          },
+          {
+            "hex": "#367487",
+            "weight_bp": 1295
+          },
+          {
+            "hex": "#325765",
+            "weight_bp": 1264
+          },
+          {
+            "hex": "#53818e",
+            "weight_bp": 1207
+          },
+          {
+            "hex": "#1e4d61",
+            "weight_bp": 1185
+          },
+          {
+            "hex": "#9bd3da",
+            "weight_bp": 1103
+          },
+          {
+            "hex": "#0d2634",
+            "weight_bp": 1049
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03758,
+          "y_mae": 0.08432,
+          "x_ratio": 1.0279,
+          "y_ratio": 2.3374,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Submerged_arctic_seabed_ice_texture_ef235838.jpg",
+          "sha256": "d69bdcbebd11139c5d088e5822a53df318bc5a1aea208701a0eaa5c40f6d649f",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.f6bcb85d",
+      "kind": "region",
+      "name": "Underwater with icy shells",
+      "description": "Underwater with icy shells: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-f6bcb85d",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "ice",
+        "coral",
+        "aquatic",
+        "cold",
+        "wet",
+        "underwater",
+        "icy",
+        "shells"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "ice",
+        "coral",
+        "aquatic",
+        "cold",
+        "wet",
+        "underwater",
+        "icy",
+        "shells",
+        "blue",
+        "teal",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1c3d4f",
+            "weight_bp": 1346
+          },
+          {
+            "hex": "#244b5b",
+            "weight_bp": 1335
+          },
+          {
+            "hex": "#49899b",
+            "weight_bp": 1327
+          },
+          {
+            "hex": "#61a7b5",
+            "weight_bp": 1280
+          },
+          {
+            "hex": "#2d5c6c",
+            "weight_bp": 1238
+          },
+          {
+            "hex": "#397083",
+            "weight_bp": 1194
+          },
+          {
+            "hex": "#8cd0d8",
+            "weight_bp": 1176
+          },
+          {
+            "hex": "#142a3e",
+            "weight_bp": 1104
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03948,
+          "y_mae": 0.06286,
+          "x_ratio": 1.1623,
+          "y_ratio": 1.8224,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Underwater_texture_with_icy_shells_f6bcb85d.jpg",
+          "sha256": "4de544cc2bb9cd95f9272882b300eb2b759946fd76a013fb9b802affbe84e607",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.6d834665",
+      "kind": "region",
+      "name": "Frozen tundra lakebed mud",
+      "description": "Frozen tundra lakebed mud: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-6d834665",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "ice",
+        "cold",
+        "wet",
+        "frozen",
+        "tundra",
+        "lakebed",
+        "mud"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "ice",
+        "cold",
+        "wet",
+        "frozen",
+        "tundra",
+        "lakebed",
+        "mud",
+        "gray",
+        "teal",
+        "brown",
+        "blue",
+        "black",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2a2c29",
+            "weight_bp": 1567
+          },
+          {
+            "hex": "#638187",
+            "weight_bp": 1542
+          },
+          {
+            "hex": "#3f5a62",
+            "weight_bp": 1395
+          },
+          {
+            "hex": "#474132",
+            "weight_bp": 1343
+          },
+          {
+            "hex": "#84adb5",
+            "weight_bp": 1156
+          },
+          {
+            "hex": "#2f3c41",
+            "weight_bp": 1107
+          },
+          {
+            "hex": "#1b1d1e",
+            "weight_bp": 1085
+          },
+          {
+            "hex": "#5c6157",
+            "weight_bp": 805
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "teal",
+          "brown",
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.08492,
+          "y_mae": 0.11405,
+          "x_ratio": 1.6268,
+          "y_ratio": 2.2583,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frozen_tundra_lakebed_mud_texture_6d834665.jpg",
+          "sha256": "d51866c6f3af4fcb3edd28d41a179f5a8bac1050b980bb9b20552e51afb2f610",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.f83420d1",
+      "kind": "region",
+      "name": "Frozen bone fragments in silt",
+      "description": "Frozen bone fragments in silt: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-f83420d1",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "bone",
+        "water",
+        "ice",
+        "cold",
+        "wet",
+        "organic",
+        "frozen",
+        "fragments",
+        "silt"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "bone",
+        "water",
+        "ice",
+        "cold",
+        "wet",
+        "organic",
+        "frozen",
+        "fragments",
+        "silt",
+        "teal",
+        "blue",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#5b7a83",
+            "weight_bp": 1555
+          },
+          {
+            "hex": "#213239",
+            "weight_bp": 1522
+          },
+          {
+            "hex": "#364648",
+            "weight_bp": 1292
+          },
+          {
+            "hex": "#3b5864",
+            "weight_bp": 1246
+          },
+          {
+            "hex": "#4c6163",
+            "weight_bp": 1139
+          },
+          {
+            "hex": "#28404a",
+            "weight_bp": 1121
+          },
+          {
+            "hex": "#88a7ac",
+            "weight_bp": 1072
+          },
+          {
+            "hex": "#13222a",
+            "weight_bp": 1053
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05313,
+          "y_mae": 0.0824,
+          "x_ratio": 1.1924,
+          "y_ratio": 1.9861,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frozen_bone_fragments_in_silt_f83420d1.jpg",
+          "sha256": "10191b113a91394771bf7936dfd99a7e4aef28bece88ecc5148d54bf45716938",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.c4d7be69",
+      "kind": "region",
+      "name": "Icy winter mangrove roots",
+      "description": "Icy winter mangrove roots: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-c4d7be69",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "ice",
+        "forest",
+        "wetland",
+        "cold",
+        "tropical",
+        "organic",
+        "icy",
+        "winter",
+        "mangrove",
+        "roots"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "ice",
+        "forest",
+        "wetland",
+        "cold",
+        "tropical",
+        "organic",
+        "icy",
+        "winter",
+        "mangrove",
+        "roots",
+        "teal",
+        "black",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "frozen",
+        "woodland",
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#72959b",
+            "weight_bp": 1509
+          },
+          {
+            "hex": "#233234",
+            "weight_bp": 1422
+          },
+          {
+            "hex": "#4c6b71",
+            "weight_bp": 1298
+          },
+          {
+            "hex": "#435352",
+            "weight_bp": 1296
+          },
+          {
+            "hex": "#607a7d",
+            "weight_bp": 1171
+          },
+          {
+            "hex": "#30454a",
+            "weight_bp": 1157
+          },
+          {
+            "hex": "#131d1f",
+            "weight_bp": 1095
+          },
+          {
+            "hex": "#9dbfc6",
+            "weight_bp": 1052
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0714,
+          "y_mae": 0.11741,
+          "x_ratio": 1.2877,
+          "y_ratio": 2.2238,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Icy_winter_mangrove_roots_texture_c4d7be69.jpg",
+          "sha256": "bbef7589457156b7d32c2c96fa2611da89c921b3254244d88e03cab5cac921da",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "wetland",
+            "cold",
+            "tropical"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.6597c5c9",
+      "kind": "region",
+      "name": "Frost-etched ancient stone",
+      "description": "Frost-etched ancient stone: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-6597c5c9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "ice",
+        "cold",
+        "weathered",
+        "frost",
+        "etched",
+        "ancient"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "ice",
+        "cold",
+        "weathered",
+        "frost",
+        "etched",
+        "ancient",
+        "blue",
+        "frozen seabed",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#658598",
+            "weight_bp": 1447
+          },
+          {
+            "hex": "#4a6476",
+            "weight_bp": 1316
+          },
+          {
+            "hex": "#405768",
+            "weight_bp": 1299
+          },
+          {
+            "hex": "#557285",
+            "weight_bp": 1278
+          },
+          {
+            "hex": "#2b3c49",
+            "weight_bp": 1272
+          },
+          {
+            "hex": "#374b5a",
+            "weight_bp": 1266
+          },
+          {
+            "hex": "#16222b",
+            "weight_bp": 1107
+          },
+          {
+            "hex": "#88acbf",
+            "weight_bp": 1015
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04066,
+          "y_mae": 0.09403,
+          "x_ratio": 0.9189,
+          "y_ratio": 2.225,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frost-etched_ancient_stone_texture_6597c5c9.jpg",
+          "sha256": "a7d7362758508ef44e2b52b6a64ab50b4692487c1e41ead9d095f721fa3da24f",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold",
+            "weathered"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3521 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.forest-floor",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-d78a9e52": {
+      "path": "textures/spring-woodland-floor-with-bluebells-d78a9e52.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "9c30473d74db3c0645415aabb90536f025811ac51fdf0d50ff517a71e88575cc",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-c41c32d8": {
+      "path": "textures/petrified-dragon-bark-ground-c41c32d8.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "669de5cc666f4be01088bf6bea1f2a9df2e7c9a5c5b0b8e066eb58f331791f9c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-b922ce68": {
+      "path": "textures/orange-autumn-leaf-ground-b922ce68.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "0b0b47599b8531058580c38896ca26583cd3362af31da883229f5231b61cc35c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-993462c7": {
+      "path": "textures/woodland-turf-with-clover-993462c7.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "67f60a04df9ba67dec170aed2c9ddc9550b4d5ebd9367bfba4fb40327e2e8b0a",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-5112a5ba": {
+      "path": "textures/fungal-spore-ground-5112a5ba.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "0b4ad1999ccec35d257f1cb3a59b509255953f7f908227edbd08b92a7d503734",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-6f60d93a": {
+      "path": "textures/bamboo-forest-floor-6f60d93a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "033b2dc4085640b82e796d6d33bf9487a998c64577efa302ff88ca3f0ca64e08",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-e1c80058": {
+      "path": "textures/snowy-evergreen-forest-floor-tex-e1c80058.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "b924e348de8290aaf93709a255a766dac0939b285c5a0592e60c8945ec2c800e",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-409f083a": {
+      "path": "textures/stone-forest-floor-with-roots-409f083a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "9d93f13ebccc20e6e2f98de2535f230724a0553ce27f650eaaa2b51747159a6e",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ea3d29d2": {
+      "path": "textures/rainforest-fern-and-moss-ea3d29d2.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "74d8fa48f818607b75e69f5cfab8efa1c52910f18ca4cb007466cf6c9428e27c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-d261d3c4": {
+      "path": "textures/ancient-elderwood-bark-mulch-d261d3c4.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "1c7cb20255d0c1c3654732fa386508625006a9cfe2b5f3a471f43b289223dc97",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-4df0a421": {
+      "path": "textures/bioluminescent-mushroom-forest-floor-4df0a421.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "05509262fae358e1f6bbdd52a799e98f404a757ff51df9bb56b8eb398944dc92",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-6d8781aa": {
+      "path": "textures/starlight-moss-forest-floor-6d8781aa.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "e07d069927a456dbcef1c9a660e52687f474df65a28ff25d9a69dd5d5e3e59d2",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-12e2a824": {
+      "path": "textures/wild-berry-bramble-forest-floor-12e2a824.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4c30df6c22ce136d67b903d8021c9af6c2446a10ec56285ceb20c524a147b497",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-b9a03ce5": {
+      "path": "textures/red-fly-agaric-mushroom-patch-b9a03ce5.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "48011fc1f40d3f22ca0f53a52a8c15cb2bab66496b48233344fd3abc8666b871",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-b44d1558": {
+      "path": "textures/autumn-forest-leaf-litter-b44d1558.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f6c18bb6eae68da57b9afe67f39eab65eb0ccae615b4929c28c3581e7cfc2f52",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-56b7e491": {
+      "path": "textures/cherry-blossom-forest-floor-56b7e491.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "8b72c49cf2ef04f507cdef7d348787a1748631506356c11101af95effb20ed6c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-89f1b02a": {
+      "path": "textures/abyssal-void-wood-forest-floor-89f1b02a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "300db9b351f8cf7bb2a5922eabdda99d41b278e44d94574803a07e05ab974060",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-8ef1181e": {
+      "path": "textures/corrupted-blood-vine-forest-floor-8ef1181e.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f9b3f3c795f4a5b9867cef00a505a75270131f804bd7458ad842a3f4e95c4ead",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-35c2bdf9": {
+      "path": "textures/mossy-tree-roots-35c2bdf9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "494ce5b693c9fcb3a645451d52d4eb7bee6a7b4b871c020daa773afd91866f2e",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-97130a1d": {
+      "path": "textures/golden-stardust-forest-leaf-floor-97130a1d.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "92f2d46790319efe551e1f293aee543cfe49a297a6a3f8c5ebb8d30303845a79",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-53e430c6": {
+      "path": "textures/purple-fern-undergrowth-53e430c6.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "2239e65e1c487b1779db6fff3bc54efca2819397efb44a4087449e57390b0bf2",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-c86222de": {
+      "path": "textures/palm-leaves-and-orchid-petals-c86222de.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "cde470aca1382d7c02ae01d9222e82613755121cfcfc8440c4fe58bd6f05247b",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-063fb937": {
+      "path": "textures/swampy-forest-floor-063fb937.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d44c011cb71ebe1b0c9e8cebfa100965c4e2893641064a93d0b4e1ee19db6496",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.d78a9e52",
+      "kind": "region",
+      "name": "Spring woodland floor with bluebells",
+      "description": "Spring woodland floor with bluebells: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-d78a9e52",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "forest",
+        "construction",
+        "spring",
+        "woodland",
+        "bluebells"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "forest",
+        "construction",
+        "spring",
+        "woodland",
+        "bluebells",
+        "green",
+        "black",
+        "brown",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#314629",
+            "weight_bp": 1656
+          },
+          {
+            "hex": "#252219",
+            "weight_bp": 1375
+          },
+          {
+            "hex": "#525f48",
+            "weight_bp": 1270
+          },
+          {
+            "hex": "#3c3329",
+            "weight_bp": 1268
+          },
+          {
+            "hex": "#23301e",
+            "weight_bp": 1229
+          },
+          {
+            "hex": "#1b140f",
+            "weight_bp": 1157
+          },
+          {
+            "hex": "#6e8463",
+            "weight_bp": 1087
+          },
+          {
+            "hex": "#4f4a41",
+            "weight_bp": 958
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05777,
+          "y_mae": 0.10608,
+          "x_ratio": 1.5549,
+          "y_ratio": 2.8513,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Spring_woodland_floor_with_blueb…_d78a9e52.jpg",
+          "sha256": "49d8924eda0f0c3c44612724bbb82c2c1ae39a34e19b81a0c561148bdd1e251b",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction"
+          ],
+          "conditions": [
+            "spring"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.c41c32d8",
+      "kind": "region",
+      "name": "Petrified dragon bark ground",
+      "description": "Petrified dragon bark ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-c41c32d8",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "magic",
+        "forest",
+        "organic",
+        "petrified",
+        "dragon",
+        "bark"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "magic",
+        "forest",
+        "organic",
+        "petrified",
+        "dragon",
+        "bark",
+        "brown",
+        "black",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "woodland"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#584c3f",
+            "weight_bp": 1409
+          },
+          {
+            "hex": "#2b2520",
+            "weight_bp": 1315
+          },
+          {
+            "hex": "#151412",
+            "weight_bp": 1302
+          },
+          {
+            "hex": "#211c18",
+            "weight_bp": 1290
+          },
+          {
+            "hex": "#473a2f",
+            "weight_bp": 1280
+          },
+          {
+            "hex": "#35312b",
+            "weight_bp": 1217
+          },
+          {
+            "hex": "#7c6d58",
+            "weight_bp": 1106
+          },
+          {
+            "hex": "#090908",
+            "weight_bp": 1081
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06889,
+          "y_mae": 0.11143,
+          "x_ratio": 1.2475,
+          "y_ratio": 2.0739,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Petrified_dragon_bark_ground_tex…_c41c32d8.jpg",
+          "sha256": "9d5ddea25f8ed8618d90dd015464566b5c7bd93e92a893d4ff53663ddd0c9948",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.b922ce68",
+      "kind": "region",
+      "name": "Orange autumn leaf ground",
+      "description": "Orange autumn leaf ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-b922ce68",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "autumn",
+        "organic",
+        "orange",
+        "leaf"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "autumn",
+        "organic",
+        "orange",
+        "leaf",
+        "brown",
+        "red",
+        "black",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#4d1e13",
+            "weight_bp": 1487
+          },
+          {
+            "hex": "#4f372e",
+            "weight_bp": 1405
+          },
+          {
+            "hex": "#712312",
+            "weight_bp": 1369
+          },
+          {
+            "hex": "#ce732a",
+            "weight_bp": 1332
+          },
+          {
+            "hex": "#2f201c",
+            "weight_bp": 1188
+          },
+          {
+            "hex": "#943918",
+            "weight_bp": 1175
+          },
+          {
+            "hex": "#250f0b",
+            "weight_bp": 1139
+          },
+          {
+            "hex": "#994d28",
+            "weight_bp": 905
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "red",
+          "orange",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05582,
+          "y_mae": 0.08995,
+          "x_ratio": 1.4611,
+          "y_ratio": 2.4449,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Orange_autumn_leaf_ground_texture_b922ce68.jpg",
+          "sha256": "beeb4f7ffd129a278e3a9e343f7d09b8d8e79da136f08ee9a15a313279d37faa",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "autumn"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.993462c7",
+      "kind": "region",
+      "name": "Woodland turf with clover",
+      "description": "Woodland turf with clover: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-993462c7",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "forest",
+        "organic",
+        "woodland",
+        "turf",
+        "clover"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "forest",
+        "organic",
+        "woodland",
+        "turf",
+        "clover",
+        "green",
+        "olive",
+        "black",
+        "yellow",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage",
+        "woodland"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3a4a16",
+            "weight_bp": 1696
+          },
+          {
+            "hex": "#2e2f10",
+            "weight_bp": 1495
+          },
+          {
+            "hex": "#65641d",
+            "weight_bp": 1365
+          },
+          {
+            "hex": "#181809",
+            "weight_bp": 1252
+          },
+          {
+            "hex": "#5b4f1a",
+            "weight_bp": 1171
+          },
+          {
+            "hex": "#212e0f",
+            "weight_bp": 1127
+          },
+          {
+            "hex": "#948925",
+            "weight_bp": 1111
+          },
+          {
+            "hex": "#463315",
+            "weight_bp": 783
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "olive",
+          "black",
+          "yellow"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04991,
+          "y_mae": 0.08725,
+          "x_ratio": 1.2183,
+          "y_ratio": 2.2317,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Woodland_turf_with_clover_993462c7.jpg",
+          "sha256": "c62db3c90d093c186dedc2f2071b8344589d07992130e3f671d69ddb488f9670",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.5112a5ba",
+      "kind": "region",
+      "name": "Fungal spore ground",
+      "description": "Fungal spore ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-5112a5ba",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "fungi",
+        "organic",
+        "fungal",
+        "spore"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "fungi",
+        "organic",
+        "fungal",
+        "spore",
+        "blue",
+        "purple",
+        "black",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1d1a2c",
+            "weight_bp": 1442
+          },
+          {
+            "hex": "#4b4a68",
+            "weight_bp": 1433
+          },
+          {
+            "hex": "#27314b",
+            "weight_bp": 1405
+          },
+          {
+            "hex": "#2e1f38",
+            "weight_bp": 1219
+          },
+          {
+            "hex": "#0b0813",
+            "weight_bp": 1216
+          },
+          {
+            "hex": "#131425",
+            "weight_bp": 1172
+          },
+          {
+            "hex": "#6b778e",
+            "weight_bp": 1094
+          },
+          {
+            "hex": "#453351",
+            "weight_bp": 1019
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "purple",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07498,
+          "y_mae": 0.0775,
+          "x_ratio": 1.492,
+          "y_ratio": 1.5463,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Fungal_spore_ground_texture_5112a5ba.jpg",
+          "sha256": "6448cbcabde684fcf418f7e16f3550a718e02368e70fc9e66267cc10f6bba525",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.6f60d93a",
+      "kind": "region",
+      "name": "Bamboo forest floor",
+      "description": "Bamboo forest floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-6f60d93a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "forest",
+        "construction",
+        "bamboo"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "forest",
+        "construction",
+        "bamboo",
+        "brown",
+        "black",
+        "green",
+        "yellow",
+        "olive",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3b3017",
+            "weight_bp": 1488
+          },
+          {
+            "hex": "#7f581d",
+            "weight_bp": 1375
+          },
+          {
+            "hex": "#1c150d",
+            "weight_bp": 1223
+          },
+          {
+            "hex": "#563b18",
+            "weight_bp": 1216
+          },
+          {
+            "hex": "#242c19",
+            "weight_bp": 1213
+          },
+          {
+            "hex": "#b89831",
+            "weight_bp": 1192
+          },
+          {
+            "hex": "#897028",
+            "weight_bp": 1185
+          },
+          {
+            "hex": "#4d5126",
+            "weight_bp": 1108
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black",
+          "green",
+          "yellow",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04741,
+          "y_mae": 0.14223,
+          "x_ratio": 1.1673,
+          "y_ratio": 3.4728,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bamboo_forest_floor_texture_6f60d93a.jpg",
+          "sha256": "e73c009da311701774f235fb843ec183cdf62fe398427697f71c24fffa6d8c3f",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.e1c80058",
+      "kind": "region",
+      "name": "Snowy evergreen forest floor tex…",
+      "description": "Snowy evergreen forest floor tex…: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-e1c80058",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "ice",
+        "snow",
+        "forest",
+        "construction",
+        "cold",
+        "snowy",
+        "evergreen",
+        "tex"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "ice",
+        "snow",
+        "forest",
+        "construction",
+        "cold",
+        "snowy",
+        "evergreen",
+        "tex",
+        "gray",
+        "blue",
+        "white",
+        "black",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#313332",
+            "weight_bp": 1366
+          },
+          {
+            "hex": "#acbce6",
+            "weight_bp": 1353
+          },
+          {
+            "hex": "#c5d4f6",
+            "weight_bp": 1326
+          },
+          {
+            "hex": "#d9effb",
+            "weight_bp": 1293
+          },
+          {
+            "hex": "#3c4344",
+            "weight_bp": 1279
+          },
+          {
+            "hex": "#222123",
+            "weight_bp": 1182
+          },
+          {
+            "hex": "#596472",
+            "weight_bp": 1136
+          },
+          {
+            "hex": "#8997ba",
+            "weight_bp": 1065
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "blue",
+          "white",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05801,
+          "y_mae": 0.10016,
+          "x_ratio": 1.2641,
+          "y_ratio": 2.2638,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Snowy_evergreen_forest_floor_tex…_e1c80058.jpg",
+          "sha256": "95a7c082ae56029af3cc8b4b182b069cb2af81106efb4304d897aa25756cb46b",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction",
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.409f083a",
+      "kind": "region",
+      "name": "Stone forest floor with roots",
+      "description": "Stone forest floor with roots: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-409f083a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "vegetation",
+        "forest",
+        "construction",
+        "organic",
+        "roots"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "vegetation",
+        "forest",
+        "construction",
+        "organic",
+        "roots",
+        "olive",
+        "brown",
+        "black",
+        "green",
+        "yellow",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "foliage",
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#615c2d",
+            "weight_bp": 1465
+          },
+          {
+            "hex": "#382b15",
+            "weight_bp": 1384
+          },
+          {
+            "hex": "#211c0e",
+            "weight_bp": 1354
+          },
+          {
+            "hex": "#53421e",
+            "weight_bp": 1306
+          },
+          {
+            "hex": "#252814",
+            "weight_bp": 1234
+          },
+          {
+            "hex": "#151108",
+            "weight_bp": 1111
+          },
+          {
+            "hex": "#373c1f",
+            "weight_bp": 1100
+          },
+          {
+            "hex": "#8d8b51",
+            "weight_bp": 1046
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "brown",
+          "black",
+          "green",
+          "yellow"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05452,
+          "y_mae": 0.09677,
+          "x_ratio": 1.3674,
+          "y_ratio": 2.5541,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Stone_forest_floor_with_roots_409f083a.jpg",
+          "sha256": "64df6faf42343622f922e9dc8a5a2e6880a8a497118429359b30c108aa7f3cfe",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ea3d29d2",
+      "kind": "region",
+      "name": "Rainforest fern and moss",
+      "description": "Rainforest fern and moss: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ea3d29d2",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "forest",
+        "tropical",
+        "organic",
+        "rainforest",
+        "fern",
+        "moss"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "forest",
+        "tropical",
+        "organic",
+        "rainforest",
+        "fern",
+        "moss",
+        "green",
+        "black",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "woodland"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#203225",
+            "weight_bp": 1460
+          },
+          {
+            "hex": "#466a55",
+            "weight_bp": 1454
+          },
+          {
+            "hex": "#344537",
+            "weight_bp": 1273
+          },
+          {
+            "hex": "#315542",
+            "weight_bp": 1263
+          },
+          {
+            "hex": "#234130",
+            "weight_bp": 1178
+          },
+          {
+            "hex": "#425a4a",
+            "weight_bp": 1171
+          },
+          {
+            "hex": "#578464",
+            "weight_bp": 1160
+          },
+          {
+            "hex": "#162118",
+            "weight_bp": 1041
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04107,
+          "y_mae": 0.09102,
+          "x_ratio": 1.3895,
+          "y_ratio": 3.1657,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Rainforest_fern_and_moss_texture_ea3d29d2.jpg",
+          "sha256": "e11bfb097de3b4f778f4ebf911fcc62d473a0f95891d1ce7fc8ae1f9a582ddff",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "tropical"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.d261d3c4",
+      "kind": "region",
+      "name": "Ancient elderwood bark mulch",
+      "description": "Ancient elderwood bark mulch: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-d261d3c4",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "forest",
+        "weathered",
+        "organic",
+        "ancient",
+        "elderwood",
+        "bark",
+        "mulch"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "forest",
+        "weathered",
+        "organic",
+        "ancient",
+        "elderwood",
+        "bark",
+        "mulch",
+        "olive",
+        "black",
+        "brown",
+        "green",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "woodland"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#454832",
+            "weight_bp": 1474
+          },
+          {
+            "hex": "#1d2118",
+            "weight_bp": 1367
+          },
+          {
+            "hex": "#181711",
+            "weight_bp": 1355
+          },
+          {
+            "hex": "#2a261c",
+            "weight_bp": 1261
+          },
+          {
+            "hex": "#2a3224",
+            "weight_bp": 1235
+          },
+          {
+            "hex": "#3e3827",
+            "weight_bp": 1227
+          },
+          {
+            "hex": "#0c0c09",
+            "weight_bp": 1081
+          },
+          {
+            "hex": "#556a45",
+            "weight_bp": 1000
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "black",
+          "brown",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0465,
+          "y_mae": 0.08526,
+          "x_ratio": 1.1528,
+          "y_ratio": 2.2706,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Ancient_elderwood_bark_mulch_tex…_d261d3c4.jpg",
+          "sha256": "3433baab77533c552583443c18aeab1b26616a1e24ad240ab1c84a57f63cdb0a",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest"
+          ],
+          "conditions": [
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.4df0a421",
+      "kind": "region",
+      "name": "Bioluminescent mushroom forest floor",
+      "description": "Bioluminescent mushroom forest floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-4df0a421",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "fungi",
+        "magic",
+        "forest",
+        "construction",
+        "glowing",
+        "organic",
+        "bioluminescent",
+        "mushroom"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "fungi",
+        "magic",
+        "forest",
+        "construction",
+        "glowing",
+        "organic",
+        "bioluminescent",
+        "mushroom",
+        "blue",
+        "black",
+        "teal",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#0c212e",
+            "weight_bp": 1396
+          },
+          {
+            "hex": "#1e5b73",
+            "weight_bp": 1357
+          },
+          {
+            "hex": "#1e222b",
+            "weight_bp": 1283
+          },
+          {
+            "hex": "#070d19",
+            "weight_bp": 1268
+          },
+          {
+            "hex": "#113749",
+            "weight_bp": 1258
+          },
+          {
+            "hex": "#14121f",
+            "weight_bp": 1248
+          },
+          {
+            "hex": "#1fa3c7",
+            "weight_bp": 1138
+          },
+          {
+            "hex": "#263940",
+            "weight_bp": 1052
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03895,
+          "y_mae": 0.06329,
+          "x_ratio": 1.159,
+          "y_ratio": 1.8782,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bioluminescent_mushroom_forest_f…_4df0a421.jpg",
+          "sha256": "ae1e69a269c42ee8af6144fd69a6862d3c403fbc2ea25437d26ca52ae440e1e5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction"
+          ],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.6d8781aa",
+      "kind": "region",
+      "name": "Starlight moss forest floor",
+      "description": "Starlight moss forest floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-6d8781aa",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "magic",
+        "forest",
+        "construction",
+        "glowing",
+        "organic",
+        "starlight",
+        "moss"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "magic",
+        "forest",
+        "construction",
+        "glowing",
+        "organic",
+        "starlight",
+        "moss",
+        "blue",
+        "black",
+        "teal",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "fantasy",
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#214a58",
+            "weight_bp": 1623
+          },
+          {
+            "hex": "#0e3448",
+            "weight_bp": 1593
+          },
+          {
+            "hex": "#040e24",
+            "weight_bp": 1472
+          },
+          {
+            "hex": "#071f36",
+            "weight_bp": 1277
+          },
+          {
+            "hex": "#1e1f29",
+            "weight_bp": 1206
+          },
+          {
+            "hex": "#396f73",
+            "weight_bp": 974
+          },
+          {
+            "hex": "#243644",
+            "weight_bp": 942
+          },
+          {
+            "hex": "#0e1d30",
+            "weight_bp": 913
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05364,
+          "y_mae": 0.06955,
+          "x_ratio": 1.3754,
+          "y_ratio": 1.8802,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Starlight_moss_forest_floor_texture_6d8781aa.jpg",
+          "sha256": "f982c2ad77a79048a7ccea2e305add5249e5e0296988e9507f01ccd006e5a117",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction"
+          ],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.12e2a824",
+      "kind": "region",
+      "name": "Wild berry bramble forest floor",
+      "description": "Wild berry bramble forest floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-12e2a824",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "forest",
+        "construction",
+        "wild",
+        "berry",
+        "bramble"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "forest",
+        "construction",
+        "wild",
+        "berry",
+        "bramble",
+        "black",
+        "green",
+        "olive",
+        "brown",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#222416",
+            "weight_bp": 1516
+          },
+          {
+            "hex": "#405e34",
+            "weight_bp": 1433
+          },
+          {
+            "hex": "#244327",
+            "weight_bp": 1407
+          },
+          {
+            "hex": "#0e0f09",
+            "weight_bp": 1268
+          },
+          {
+            "hex": "#434528",
+            "weight_bp": 1262
+          },
+          {
+            "hex": "#588143",
+            "weight_bp": 1115
+          },
+          {
+            "hex": "#142415",
+            "weight_bp": 1018
+          },
+          {
+            "hex": "#392820",
+            "weight_bp": 981
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "green",
+          "olive",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07082,
+          "y_mae": 0.10189,
+          "x_ratio": 1.5869,
+          "y_ratio": 2.3938,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Wild_berry_bramble_forest_floor_12e2a824.jpg",
+          "sha256": "aee89fd88788a3bb53a43bf97de3d9ecb2cb1395be2cc696e1381c47792d016c",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.b9a03ce5",
+      "kind": "region",
+      "name": "Red fly agaric mushroom patch",
+      "description": "Red fly agaric mushroom patch: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-b9a03ce5",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "fungi",
+        "organic",
+        "red",
+        "fly",
+        "agaric",
+        "mushroom",
+        "patch"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "fungi",
+        "organic",
+        "red",
+        "fly",
+        "agaric",
+        "mushroom",
+        "patch",
+        "green",
+        "olive",
+        "black",
+        "brown",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2b4829",
+            "weight_bp": 2015
+          },
+          {
+            "hex": "#2d2c1b",
+            "weight_bp": 1659
+          },
+          {
+            "hex": "#121813",
+            "weight_bp": 1224
+          },
+          {
+            "hex": "#7b492e",
+            "weight_bp": 1163
+          },
+          {
+            "hex": "#182e1e",
+            "weight_bp": 1161
+          },
+          {
+            "hex": "#848b49",
+            "weight_bp": 1040
+          },
+          {
+            "hex": "#686337",
+            "weight_bp": 1010
+          },
+          {
+            "hex": "#683024",
+            "weight_bp": 728
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "olive",
+          "black",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.052,
+          "y_mae": 0.07489,
+          "x_ratio": 1.2318,
+          "y_ratio": 1.7948,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Red_fly_agaric_mushroom_patch_b9a03ce5.jpg",
+          "sha256": "8c37fe8c9ba109c911826e97437304561cb75963f29e320ef62b4c6e7036f2b5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.b44d1558",
+      "kind": "region",
+      "name": "Autumn forest leaf litter",
+      "description": "Autumn forest leaf litter: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-b44d1558",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "forest",
+        "autumn",
+        "organic",
+        "leaf",
+        "litter"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "forest",
+        "autumn",
+        "organic",
+        "leaf",
+        "litter",
+        "brown",
+        "black",
+        "red",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "woodland"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#523b25",
+            "weight_bp": 1625
+          },
+          {
+            "hex": "#452619",
+            "weight_bp": 1486
+          },
+          {
+            "hex": "#2e2215",
+            "weight_bp": 1309
+          },
+          {
+            "hex": "#87532d",
+            "weight_bp": 1216
+          },
+          {
+            "hex": "#843f23",
+            "weight_bp": 1200
+          },
+          {
+            "hex": "#b07937",
+            "weight_bp": 1193
+          },
+          {
+            "hex": "#20110b",
+            "weight_bp": 1092
+          },
+          {
+            "hex": "#6d281c",
+            "weight_bp": 879
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black",
+          "red"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05261,
+          "y_mae": 0.12292,
+          "x_ratio": 1.114,
+          "y_ratio": 2.6535,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Autumn_forest_leaf_litter_texture_b44d1558.jpg",
+          "sha256": "8a68c404e08026a59b31a31afccbc067ee6e1ae21a86498904b40814006f2e0c",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest"
+          ],
+          "conditions": [
+            "autumn"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.56b7e491",
+      "kind": "region",
+      "name": "Cherry blossom forest floor",
+      "description": "Cherry blossom forest floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-56b7e491",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "forest",
+        "construction",
+        "spring",
+        "cherry",
+        "blossom"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "forest",
+        "construction",
+        "spring",
+        "cherry",
+        "blossom",
+        "brown",
+        "green",
+        "red",
+        "purple",
+        "black",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#342a26",
+            "weight_bp": 1737
+          },
+          {
+            "hex": "#324333",
+            "weight_bp": 1619
+          },
+          {
+            "hex": "#a57d87",
+            "weight_bp": 1323
+          },
+          {
+            "hex": "#512f39",
+            "weight_bp": 1201
+          },
+          {
+            "hex": "#1a1a19",
+            "weight_bp": 1187
+          },
+          {
+            "hex": "#1c2d27",
+            "weight_bp": 1039
+          },
+          {
+            "hex": "#6b5957",
+            "weight_bp": 947
+          },
+          {
+            "hex": "#6b454f",
+            "weight_bp": 947
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "green",
+          "red",
+          "purple",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07085,
+          "y_mae": 0.11989,
+          "x_ratio": 1.8379,
+          "y_ratio": 3.0788,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Cherry_blossom_forest_floor_texture_56b7e491.jpg",
+          "sha256": "0bae232a3e5b3c1ca4f41ea0ef4e28ee4a43a6a85afb1dacc53b9b1d741e48fb",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction"
+          ],
+          "conditions": [
+            "spring"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.89f1b02a",
+      "kind": "region",
+      "name": "Abyssal void-wood forest floor",
+      "description": "Abyssal void-wood forest floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-89f1b02a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "magic",
+        "forest",
+        "construction",
+        "organic",
+        "abyssal",
+        "void"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "magic",
+        "forest",
+        "construction",
+        "organic",
+        "abyssal",
+        "void",
+        "blue",
+        "black",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#23264d",
+            "weight_bp": 1558
+          },
+          {
+            "hex": "#0b0e21",
+            "weight_bp": 1401
+          },
+          {
+            "hex": "#171a36",
+            "weight_bp": 1356
+          },
+          {
+            "hex": "#1a223f",
+            "weight_bp": 1242
+          },
+          {
+            "hex": "#11102a",
+            "weight_bp": 1215
+          },
+          {
+            "hex": "#141530",
+            "weight_bp": 1145
+          },
+          {
+            "hex": "#3a2d6a",
+            "weight_bp": 1066
+          },
+          {
+            "hex": "#060717",
+            "weight_bp": 1017
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03385,
+          "y_mae": 0.06518,
+          "x_ratio": 1.2741,
+          "y_ratio": 2.5891,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Abyssal_void-wood_forest_floor_89f1b02a.jpg",
+          "sha256": "bf066afd1dbfda39b71530e2ff9795952a102336e017d99dc097ea630cfd8817",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.8ef1181e",
+      "kind": "region",
+      "name": "Corrupted blood-vine forest floor",
+      "description": "Corrupted blood-vine forest floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-8ef1181e",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "magic",
+        "forest",
+        "construction",
+        "corrupted",
+        "blood",
+        "vine"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "magic",
+        "forest",
+        "construction",
+        "corrupted",
+        "blood",
+        "vine",
+        "black",
+        "purple",
+        "brown",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#22131d",
+            "weight_bp": 1795
+          },
+          {
+            "hex": "#1e0a12",
+            "weight_bp": 1336
+          },
+          {
+            "hex": "#130a11",
+            "weight_bp": 1237
+          },
+          {
+            "hex": "#0c0409",
+            "weight_bp": 1208
+          },
+          {
+            "hex": "#401c28",
+            "weight_bp": 1160
+          },
+          {
+            "hex": "#5a2d3c",
+            "weight_bp": 1111
+          },
+          {
+            "hex": "#41141f",
+            "weight_bp": 1085
+          },
+          {
+            "hex": "#320b14",
+            "weight_bp": 1068
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "purple",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02359,
+          "y_mae": 0.04725,
+          "x_ratio": 0.8776,
+          "y_ratio": 1.8568,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Corrupted_blood-vine_forest_floo…_8ef1181e.jpg",
+          "sha256": "564f0367efa4ef6a73b8182a08d2a1a7384830ce154effa7de67a52d9ab1211c",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.35c2bdf9",
+      "kind": "region",
+      "name": "Mossy tree roots",
+      "description": "Mossy tree roots: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-35c2bdf9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "forest",
+        "organic",
+        "mossy",
+        "tree",
+        "roots"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "forest",
+        "organic",
+        "mossy",
+        "tree",
+        "roots",
+        "black",
+        "olive",
+        "green",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "woodland"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#222711",
+            "weight_bp": 1379
+          },
+          {
+            "hex": "#54562c",
+            "weight_bp": 1379
+          },
+          {
+            "hex": "#484126",
+            "weight_bp": 1288
+          },
+          {
+            "hex": "#1d1d0f",
+            "weight_bp": 1283
+          },
+          {
+            "hex": "#312c1a",
+            "weight_bp": 1259
+          },
+          {
+            "hex": "#343a18",
+            "weight_bp": 1177
+          },
+          {
+            "hex": "#111208",
+            "weight_bp": 1150
+          },
+          {
+            "hex": "#7a7b45",
+            "weight_bp": 1085
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "olive",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03638,
+          "y_mae": 0.08172,
+          "x_ratio": 1.0751,
+          "y_ratio": 2.6215,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Mossy_tree_roots_texture_35c2bdf9.jpg",
+          "sha256": "e366c02766ef685e7820d9f15a23267a33f77fabb3b59a74881e14b4d5ef107e",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.97130a1d",
+      "kind": "region",
+      "name": "Golden stardust forest leaf floor",
+      "description": "Golden stardust forest leaf floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-97130a1d",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "magic",
+        "forest",
+        "construction",
+        "glowing",
+        "organic",
+        "golden",
+        "stardust",
+        "leaf"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "magic",
+        "forest",
+        "construction",
+        "glowing",
+        "organic",
+        "golden",
+        "stardust",
+        "leaf",
+        "purple",
+        "brown",
+        "blue",
+        "orange",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "fantasy",
+        "woodland",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#413446",
+            "weight_bp": 1441
+          },
+          {
+            "hex": "#8f6d56",
+            "weight_bp": 1412
+          },
+          {
+            "hex": "#211f3c",
+            "weight_bp": 1341
+          },
+          {
+            "hex": "#4c4655",
+            "weight_bp": 1194
+          },
+          {
+            "hex": "#765245",
+            "weight_bp": 1191
+          },
+          {
+            "hex": "#31263c",
+            "weight_bp": 1174
+          },
+          {
+            "hex": "#140f2b",
+            "weight_bp": 1148
+          },
+          {
+            "hex": "#bf9c6b",
+            "weight_bp": 1099
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "purple",
+          "brown",
+          "blue",
+          "orange"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05202,
+          "y_mae": 0.12214,
+          "x_ratio": 1.0184,
+          "y_ratio": 2.536,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Golden_stardust_forest_leaf_floor_97130a1d.jpg",
+          "sha256": "e936a6e02b653952c9d31ecd904b220bb70751cc3b3061b704d8a2fec6ae4e98",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "construction"
+          ],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.53e430c6",
+      "kind": "region",
+      "name": "Purple fern undergrowth",
+      "description": "Purple fern undergrowth: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-53e430c6",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "forest",
+        "organic",
+        "purple",
+        "fern",
+        "undergrowth"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "forest",
+        "organic",
+        "purple",
+        "fern",
+        "undergrowth",
+        "black",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "woodland"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#120f1c",
+            "weight_bp": 1583
+          },
+          {
+            "hex": "#251933",
+            "weight_bp": 1336
+          },
+          {
+            "hex": "#191625",
+            "weight_bp": 1312
+          },
+          {
+            "hex": "#0d0c15",
+            "weight_bp": 1310
+          },
+          {
+            "hex": "#2b203a",
+            "weight_bp": 1304
+          },
+          {
+            "hex": "#3c2f51",
+            "weight_bp": 1218
+          },
+          {
+            "hex": "#08070f",
+            "weight_bp": 992
+          },
+          {
+            "hex": "#191125",
+            "weight_bp": 945
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02912,
+          "y_mae": 0.07026,
+          "x_ratio": 1.1714,
+          "y_ratio": 2.922,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Purple_fern_undergrowth_texture_53e430c6.jpg",
+          "sha256": "77cc9333ba72c53f7468e9ac6db19e2f03bbfa6d3c5a98e42f6321c150621bee",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.c86222de",
+      "kind": "region",
+      "name": "Palm leaves and orchid petals",
+      "description": "Palm leaves and orchid petals: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-c86222de",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "tropical",
+        "organic",
+        "palm",
+        "leaves",
+        "orchid",
+        "petals"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "tropical",
+        "organic",
+        "palm",
+        "leaves",
+        "orchid",
+        "petals",
+        "olive",
+        "brown",
+        "black",
+        "red",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#554c2e",
+            "weight_bp": 2022
+          },
+          {
+            "hex": "#423120",
+            "weight_bp": 1657
+          },
+          {
+            "hex": "#84694d",
+            "weight_bp": 1302
+          },
+          {
+            "hex": "#302817",
+            "weight_bp": 1263
+          },
+          {
+            "hex": "#b0966f",
+            "weight_bp": 1173
+          },
+          {
+            "hex": "#1f140d",
+            "weight_bp": 1134
+          },
+          {
+            "hex": "#7d5248",
+            "weight_bp": 1093
+          },
+          {
+            "hex": "#6a343c",
+            "weight_bp": 356
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "brown",
+          "black",
+          "red"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06684,
+          "y_mae": 0.1373,
+          "x_ratio": 1.321,
+          "y_ratio": 2.9453,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Palm_leaves_and_orchid_petals_c86222de.jpg",
+          "sha256": "ea6c99de566e1c15915fc2ecb34f447808ce58150d631f8d073e31e70b84b0b4",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "tropical"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.063fb937",
+      "kind": "region",
+      "name": "Swampy forest floor",
+      "description": "Swampy forest floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-063fb937",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "forest",
+        "wetland",
+        "construction",
+        "swampy"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "forest",
+        "wetland",
+        "construction",
+        "swampy",
+        "olive",
+        "black",
+        "brown",
+        "forest floor",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "woodland",
+        "marsh",
+        "swamp",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#545230",
+            "weight_bp": 1442
+          },
+          {
+            "hex": "#242115",
+            "weight_bp": 1350
+          },
+          {
+            "hex": "#343620",
+            "weight_bp": 1295
+          },
+          {
+            "hex": "#473d27",
+            "weight_bp": 1275
+          },
+          {
+            "hex": "#1a1a10",
+            "weight_bp": 1274
+          },
+          {
+            "hex": "#30271a",
+            "weight_bp": 1226
+          },
+          {
+            "hex": "#767743",
+            "weight_bp": 1073
+          },
+          {
+            "hex": "#0f0d08",
+            "weight_bp": 1065
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "black",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06014,
+          "y_mae": 0.09341,
+          "x_ratio": 1.1768,
+          "y_ratio": 1.7662,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Swampy_forest_floor_texture_063fb937.jpg",
+          "sha256": "0ac49fea244602569a64643d5522f20419d16418fa62f4a12e0a94c6e85fc037",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest",
+            "wetland",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    }
+  ]
+}

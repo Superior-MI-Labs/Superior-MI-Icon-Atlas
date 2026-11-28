@@ -1,0 +1,1441 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.desert",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-f4cd5e89": {
+      "path": "textures/desert-gravel-and-sand-f4cd5e89.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "151d5d29ce18e8a99914556e51e33bdcd9801e901cd2805813a408570a472c8a",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-0bb855ab": {
+      "path": "textures/golden-sand-dunes-0bb855ab.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "6662ed0f74b91cea38c4e25fa98c7b0354f758cc16da3547392d37224436a3bc",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-4db1fe12": {
+      "path": "textures/purple-sand-tileable-4db1fe12.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "419a98c7c78c902e7b49d00334b006c2141eb54f0005d0d4cc0786fa51da7603",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a48d1efd": {
+      "path": "textures/wet-sand-with-palm-sprouts-a48d1efd.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "12c816329ec2567a94368e7eb5f0c53494137af5636ffe83b5a5a541c48cae3f",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-64e1f1cb": {
+      "path": "textures/bioluminescent-glowing-blue-night-grass-64e1f1cb.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "7872f73aac7ca1774a94fbf913bce5dead93062cf5a08b8f3a5711d99feb27fe",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-f9681c4a": {
+      "path": "textures/white-desert-sand-f9681c4a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "0f47a26ac220f8c3046b5600486073273104703326695daf1314effbc80f4dbb",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-0fbc9fcc": {
+      "path": "textures/red-canyon-sandstone-dust-0fbc9fcc.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "08bdfb8160ad2f10d4dc541b05515f92c63a335ccde89e7a133711233427e349",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-9186a3b5": {
+      "path": "textures/ancient-ruin-desert-sand-9186a3b5.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "df918ba5a30acef50a98ef6dbd47f36bc9aa902b36fd42ac2c7227db46cadfee",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-8b644312": {
+      "path": "textures/blue-crystal-star-sand-8b644312.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "fae0a81fc67548d956f98cf91c6a2620ee1ed7b4ae2349e621ce755d07255426",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-329f6957": {
+      "path": "textures/volcanic-black-sand-with-embers-329f6957.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "aaef769342a8c294d5dbd9577f02d32c272ce6d0a26c76fd88346d11e9c2565e",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.f4cd5e89",
+      "kind": "region",
+      "name": "Desert gravel and sand",
+      "description": "Desert gravel and sand: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-f4cd5e89",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "gravel",
+        "desert",
+        "dry"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "gravel",
+        "desert",
+        "dry",
+        "orange",
+        "brown",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#d6965a",
+            "weight_bp": 1537
+          },
+          {
+            "hex": "#7a3d22",
+            "weight_bp": 1337
+          },
+          {
+            "hex": "#a96135",
+            "weight_bp": 1274
+          },
+          {
+            "hex": "#8b5433",
+            "weight_bp": 1255
+          },
+          {
+            "hex": "#b37a4d",
+            "weight_bp": 1187
+          },
+          {
+            "hex": "#cc8147",
+            "weight_bp": 1148
+          },
+          {
+            "hex": "#e8ae6d",
+            "weight_bp": 1141
+          },
+          {
+            "hex": "#572b1a",
+            "weight_bp": 1121
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "orange",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05935,
+          "y_mae": 0.10338,
+          "x_ratio": 1.5852,
+          "y_ratio": 2.7213,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Desert_gravel_and_sand_texture_f4cd5e89.jpg",
+          "sha256": "6e291f5551c0ba372f5c8a04b864570bfb641dbd9589841b5d49c2ce8404a840",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "desert"
+          ],
+          "conditions": [
+            "dry"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.0bb855ab",
+      "kind": "region",
+      "name": "Golden sand dunes",
+      "description": "Golden sand dunes: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-0bb855ab",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "desert",
+        "dry",
+        "golden",
+        "dunes"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "desert",
+        "dry",
+        "golden",
+        "dunes",
+        "orange",
+        "brown",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#e6b05b",
+            "weight_bp": 1362
+          },
+          {
+            "hex": "#daa252",
+            "weight_bp": 1311
+          },
+          {
+            "hex": "#d09549",
+            "weight_bp": 1290
+          },
+          {
+            "hex": "#b77b38",
+            "weight_bp": 1284
+          },
+          {
+            "hex": "#c58941",
+            "weight_bp": 1274
+          },
+          {
+            "hex": "#a76a2e",
+            "weight_bp": 1235
+          },
+          {
+            "hex": "#f4c76c",
+            "weight_bp": 1165
+          },
+          {
+            "hex": "#8d5323",
+            "weight_bp": 1079
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "orange",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0297,
+          "y_mae": 0.05213,
+          "x_ratio": 1.6148,
+          "y_ratio": 2.0496,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Golden_sand_dunes_texture_0bb855ab.jpg",
+          "sha256": "9972451e6e246194ba2483c1d775977bc9ad3b83364f9f4cac9b225a077af8e2",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "desert"
+          ],
+          "conditions": [
+            "dry"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.4db1fe12",
+      "kind": "region",
+      "name": "Purple sand tileable",
+      "description": "Purple sand tileable: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-4db1fe12",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "purple"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "purple",
+        "desert",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3b2c59",
+            "weight_bp": 1606
+          },
+          {
+            "hex": "#2d2148",
+            "weight_bp": 1364
+          },
+          {
+            "hex": "#352752",
+            "weight_bp": 1350
+          },
+          {
+            "hex": "#281e41",
+            "weight_bp": 1257
+          },
+          {
+            "hex": "#31254c",
+            "weight_bp": 1245
+          },
+          {
+            "hex": "#49376b",
+            "weight_bp": 1208
+          },
+          {
+            "hex": "#241b3c",
+            "weight_bp": 1108
+          },
+          {
+            "hex": "#1e1534",
+            "weight_bp": 862
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04166,
+          "y_mae": 0.04038,
+          "x_ratio": 1.3729,
+          "y_ratio": 1.301,
+          "screening": "low-discontinuity"
+        },
+        "source": {
+          "filename": "Purple_sand_tileable_texture_4db1fe12.jpg",
+          "sha256": "0157cecc262415ef40f5477a0e1aeb08397e256e2972ec25485fe37880a6ef65",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a48d1efd",
+      "kind": "region",
+      "name": "Wet sand with palm sprouts",
+      "description": "Wet sand with palm sprouts: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a48d1efd",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "vegetation",
+        "wet",
+        "tropical",
+        "palm",
+        "sprouts"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "vegetation",
+        "wet",
+        "tropical",
+        "palm",
+        "sprouts",
+        "brown",
+        "yellow",
+        "desert",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#92642a",
+            "weight_bp": 1417
+          },
+          {
+            "hex": "#785324",
+            "weight_bp": 1359
+          },
+          {
+            "hex": "#ad7b37",
+            "weight_bp": 1335
+          },
+          {
+            "hex": "#947231",
+            "weight_bp": 1266
+          },
+          {
+            "hex": "#b58c3f",
+            "weight_bp": 1230
+          },
+          {
+            "hex": "#805f2c",
+            "weight_bp": 1204
+          },
+          {
+            "hex": "#c9a94d",
+            "weight_bp": 1182
+          },
+          {
+            "hex": "#614119",
+            "weight_bp": 1007
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "yellow"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0447,
+          "y_mae": 0.07745,
+          "x_ratio": 1.7417,
+          "y_ratio": 2.9427,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Wet_sand_with_palm_sprouts_a48d1efd.jpg",
+          "sha256": "c96ca62c007ae3332e4bb73af78b54da3ced5a05089c66c6890d0eabc372cdc5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "tropical"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.64e1f1cb",
+      "kind": "region",
+      "name": "Bioluminescent glowing blue night grass",
+      "description": "Bioluminescent glowing blue night grass: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-64e1f1cb",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "magic",
+        "glowing",
+        "organic",
+        "bioluminescent",
+        "blue",
+        "night"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "magic",
+        "glowing",
+        "organic",
+        "bioluminescent",
+        "blue",
+        "night",
+        "teal",
+        "desert",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1a75a1",
+            "weight_bp": 1548
+          },
+          {
+            "hex": "#0a2244",
+            "weight_bp": 1470
+          },
+          {
+            "hex": "#0d507c",
+            "weight_bp": 1224
+          },
+          {
+            "hex": "#153562",
+            "weight_bp": 1216
+          },
+          {
+            "hex": "#08335a",
+            "weight_bp": 1208
+          },
+          {
+            "hex": "#26a7c9",
+            "weight_bp": 1160
+          },
+          {
+            "hex": "#06122b",
+            "weight_bp": 1127
+          },
+          {
+            "hex": "#1c5380",
+            "weight_bp": 1047
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04693,
+          "y_mae": 0.09932,
+          "x_ratio": 1.1048,
+          "y_ratio": 3.2004,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bioluminescent_glowing_blue_nigh…_64e1f1cb.jpg",
+          "sha256": "e36e5b6d2309d7151067585c1ca942a4579eb09644c995c08cc5a9c8cacb4d6f",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.f9681c4a",
+      "kind": "region",
+      "name": "White desert sand",
+      "description": "White desert sand: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-f9681c4a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "desert",
+        "dry",
+        "white"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "desert",
+        "dry",
+        "white",
+        "orange",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#eaddc9",
+            "weight_bp": 1411
+          },
+          {
+            "hex": "#fdf5e1",
+            "weight_bp": 1331
+          },
+          {
+            "hex": "#f9edd6",
+            "weight_bp": 1313
+          },
+          {
+            "hex": "#ddccb6",
+            "weight_bp": 1256
+          },
+          {
+            "hex": "#eee2cf",
+            "weight_bp": 1254
+          },
+          {
+            "hex": "#f5e6d0",
+            "weight_bp": 1237
+          },
+          {
+            "hex": "#e4d6c2",
+            "weight_bp": 1204
+          },
+          {
+            "hex": "#d3bca4",
+            "weight_bp": 994
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "white",
+          "orange"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0118,
+          "y_mae": 0.03046,
+          "x_ratio": 1.5881,
+          "y_ratio": 3.7381,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "White_desert_sand_texture_f9681c4a.jpg",
+          "sha256": "34c47b6d1f6268e3375b68bc75da9c71f44e638bb9017af36f9956d607896f04",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "desert"
+          ],
+          "conditions": [
+            "dry"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.0fbc9fcc",
+      "kind": "region",
+      "name": "Red canyon sandstone dust",
+      "description": "Red canyon sandstone dust: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-0fbc9fcc",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "sand",
+        "desert",
+        "red",
+        "canyon",
+        "sandstone",
+        "dust"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "sand",
+        "desert",
+        "red",
+        "canyon",
+        "sandstone",
+        "dust",
+        "orange",
+        "brown",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#a0472b",
+            "weight_bp": 1442
+          },
+          {
+            "hex": "#be5c36",
+            "weight_bp": 1431
+          },
+          {
+            "hex": "#c3653b",
+            "weight_bp": 1420
+          },
+          {
+            "hex": "#b15130",
+            "weight_bp": 1392
+          },
+          {
+            "hex": "#ac4a2c",
+            "weight_bp": 1299
+          },
+          {
+            "hex": "#cd7244",
+            "weight_bp": 1138
+          },
+          {
+            "hex": "#b45834",
+            "weight_bp": 1060
+          },
+          {
+            "hex": "#853621",
+            "weight_bp": 818
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "red",
+          "orange",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02953,
+          "y_mae": 0.04258,
+          "x_ratio": 1.6335,
+          "y_ratio": 2.2638,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Red_canyon_sandstone_dust_texture_0fbc9fcc.jpg",
+          "sha256": "d2dd95fa8f95db7b4ce862bfef3e2a956c3547405c072d038c979aa2887ecce0",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "desert"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.9186a3b5",
+      "kind": "region",
+      "name": "Ancient ruin desert sand",
+      "description": "Ancient ruin desert sand: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-9186a3b5",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "desert",
+        "dry",
+        "weathered",
+        "ancient",
+        "ruin"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "desert",
+        "dry",
+        "weathered",
+        "ancient",
+        "ruin",
+        "orange",
+        "brown",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#e1b372",
+            "weight_bp": 1401
+          },
+          {
+            "hex": "#c48e55",
+            "weight_bp": 1343
+          },
+          {
+            "hex": "#a37043",
+            "weight_bp": 1292
+          },
+          {
+            "hex": "#d7a362",
+            "weight_bp": 1271
+          },
+          {
+            "hex": "#cb9c66",
+            "weight_bp": 1215
+          },
+          {
+            "hex": "#f2ca85",
+            "weight_bp": 1214
+          },
+          {
+            "hex": "#b48454",
+            "weight_bp": 1202
+          },
+          {
+            "hex": "#7c4d2b",
+            "weight_bp": 1062
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "orange",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03382,
+          "y_mae": 0.06457,
+          "x_ratio": 1.2209,
+          "y_ratio": 2.3679,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Ancient_ruin_desert_sand_texture_9186a3b5.jpg",
+          "sha256": "48215880192e0f6a20f9b4f6d4d016798c1be7698d065fab485e43e135dccecb",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "desert"
+          ],
+          "conditions": [
+            "dry",
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.8b644312",
+      "kind": "region",
+      "name": "Blue crystal star sand",
+      "description": "Blue crystal star sand: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-8b644312",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "crystal",
+        "blue",
+        "star"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "crystal",
+        "blue",
+        "star",
+        "desert",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1f2357",
+            "weight_bp": 1403
+          },
+          {
+            "hex": "#2a5393",
+            "weight_bp": 1390
+          },
+          {
+            "hex": "#151a45",
+            "weight_bp": 1376
+          },
+          {
+            "hex": "#16214e",
+            "weight_bp": 1333
+          },
+          {
+            "hex": "#29356f",
+            "weight_bp": 1300
+          },
+          {
+            "hex": "#1b3164",
+            "weight_bp": 1130
+          },
+          {
+            "hex": "#3e9fd2",
+            "weight_bp": 1105
+          },
+          {
+            "hex": "#12143c",
+            "weight_bp": 963
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05063,
+          "y_mae": 0.07706,
+          "x_ratio": 1.4466,
+          "y_ratio": 2.2571,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Blue_crystal_star_sand_texture_8b644312.jpg",
+          "sha256": "dd472b7decba569d998cb4dce1ed8d3f694f6e149a285c03cf9f16509ac8680c",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.329f6957",
+      "kind": "region",
+      "name": "Volcanic black sand with embers",
+      "description": "Volcanic black sand with embers: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-329f6957",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "lava",
+        "glowing",
+        "volcanic",
+        "black",
+        "embers"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "lava",
+        "glowing",
+        "volcanic",
+        "black",
+        "embers",
+        "brown",
+        "desert",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2e2420",
+            "weight_bp": 1556
+          },
+          {
+            "hex": "#231f1c",
+            "weight_bp": 1530
+          },
+          {
+            "hex": "#3a261f",
+            "weight_bp": 1297
+          },
+          {
+            "hex": "#1d1a18",
+            "weight_bp": 1254
+          },
+          {
+            "hex": "#262422",
+            "weight_bp": 1209
+          },
+          {
+            "hex": "#38312d",
+            "weight_bp": 1159
+          },
+          {
+            "hex": "#51392d",
+            "weight_bp": 1087
+          },
+          {
+            "hex": "#131110",
+            "weight_bp": 908
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03936,
+          "y_mae": 0.04919,
+          "x_ratio": 1.3957,
+          "y_ratio": 1.7092,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Volcanic_black_sand_with_embers_329f6957.jpg",
+          "sha256": "ff1fe9fc5b57d64c9729c08c5a748a604ca15ff038a5dff2cba8d89992bd6d5d",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    }
+  ]
+}

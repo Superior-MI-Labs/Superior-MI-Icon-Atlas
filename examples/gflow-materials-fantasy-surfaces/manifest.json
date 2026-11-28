@@ -1,0 +1,3485 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.fantasy-surfaces",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-ec6efb3e": {
+      "path": "textures/glowing-runic-stone-floor-ec6efb3e.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "2e8fc1f1246241afd4082e47fba03706c21190ab3549d3933e630ecf93ef9cfd",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-b0aae5a5": {
+      "path": "textures/prismatic-rainbow-crystal-cave-floor-b0aae5a5.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "6f3d0ac041f833efb6f682afbab01f35ad91fa3444437dc0a1b6ab17049b3b60",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-032c1941": {
+      "path": "textures/solar-plasma-stone-surface-032c1941.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4b57732ce8e47e002b1fa69dfd5ad1ef3474336fecccdd342012a9488941dbe1",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-db97e852": {
+      "path": "textures/golden-clouds-celestial-db97e852.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "39a54725b3c2d8aa30ae6b962425d89eb968c2cc0008a65602f91345e96b72ec",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-09944507": {
+      "path": "textures/glowing-orange-magma-crust-09944507.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "cdc556912bd8ef38c68b355bab68bd0f8064905dff9337f7c24de15894dca712",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-74ee9ae4": {
+      "path": "textures/glowing-alien-spore-carpet-74ee9ae4.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "681f13a8982a2ef8a25bd383cd89c36c21750cae9c83e4f6cd78f69d0f3c0db0",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-025c70cf": {
+      "path": "textures/corrupted-crystal-ground-025c70cf.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "9f6993e11f1a255266af8e0b3fd1209ee12ec3299ced98f2707694825a1ff69b",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-907876e9": {
+      "path": "textures/storm-cloud-discharging-blue-lightning-907876e9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "5cb93158316796ec1b142acb23de86124aca2fc53c7b2a310dfec0f7936473bd",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-688c8c51": {
+      "path": "textures/toxic-green-acid-pool-bubbling-688c8c51.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4f6ff1c8029bdaa4c13b128ff4b8dfd92ecb9e585014f89a8a5082de2146ed36",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-9050a5ac": {
+      "path": "textures/frosty-ice-ground-9050a5ac.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "83ad213437e73cf8e2968f8bde75ed2b02c3f9a6b8bd3718e11c4bc1ca3c726a",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a103f191": {
+      "path": "textures/meteor-crater-rock-a103f191.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "461e0624c01aa1a70a155f1a5b21307b007811204ec6ac70ddf21642aa6e633c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-52a73a1b": {
+      "path": "textures/alien-hive-floor-52a73a1b.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "94c1c6719c7b52001a06590bec0737931d1ba5d979eae5f58286050df9754b06",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-94b984ea": {
+      "path": "textures/ghost-flame-ashes-94b984ea.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "cd3be1a5356eda81c01e52159c3e628a215d90e693e989d9421285a7db2f1937",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-4e0144a2": {
+      "path": "textures/cosmic-starlight-void-dust-4e0144a2.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "819fcb3417ee970e0008dfffddbb1ee145dd519548ac5ae001baa3993700e311",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-05545e0a": {
+      "path": "textures/liquid-mercury-pool-ripple-05545e0a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "8fcd1f1e6da26ae399b5349e4a2b231ff5a3b12d7bd386e11257d3af4918b1ae",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-cd5b3538": {
+      "path": "textures/crystalline-quartz-cave-ground-cd5b3538.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4e74b5f2b3c3d5b4dc2edd63ea18fe59760e93687b144d6e9266bdd92fb20ad4",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a7207236": {
+      "path": "textures/bone-fragments-embedded-in-soil-a7207236.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "35d47b7cc1964b5a22ac90febf92bc6ffb43b4a2c3ea365e13ff56c5ab391a1e",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-c47606f1": {
+      "path": "textures/petrified-dragon-wood-c47606f1.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "b69fb1474fb526375bb712761442067a9b13c83768817e74ad3647a89f873a3b",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-46d51629": {
+      "path": "textures/glass-sand-with-golden-swirls-46d51629.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "713ba4b4cf738dc1a1c3a810af8026e563f35446c132922d9903c3b316299175",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-7268aab0": {
+      "path": "textures/arcane-alchemy-liquid-floor-7268aab0.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "9ef09be171266053784ffb8a288ccd4c737942394a9ebad5ecc09f45b17d6f95",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-2108ad7d": {
+      "path": "textures/of-purple-tendrils-2108ad7d.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "a1d6fc56113af37aa2a66ffc32e8a4256673ff88cea8e5068844c132672d585d",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-3b5eb398": {
+      "path": "textures/bloodstone-rock-floor-3b5eb398.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "e7b6b76c61cd11cd5f2521fcaa591dba55ff793c8bd6426261a48e7a0cb8d573",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-3fb535cd": {
+      "path": "textures/deep-sea-coral-reef-3fb535cd.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "717f2e737da9b66f5cd77a21908d5886e6955a412adf3d5f995dce166fc47a1a",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-34db3929": {
+      "path": "textures/dragon-scale-ground-34db3929.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "b40828b7a44c82c89570b4d69834d2d8306cc7144a42ad1adee029bd6534a53b",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.ec6efb3e",
+      "kind": "region",
+      "name": "Glowing runic stone floor",
+      "description": "Glowing runic stone floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ec6efb3e",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "magic",
+        "construction",
+        "glowing",
+        "patterned",
+        "runic"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "magic",
+        "construction",
+        "glowing",
+        "patterned",
+        "runic",
+        "blue",
+        "teal",
+        "black",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "fantasy",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1d2a36",
+            "weight_bp": 1710
+          },
+          {
+            "hex": "#303f4e",
+            "weight_bp": 1501
+          },
+          {
+            "hex": "#3785b3",
+            "weight_bp": 1474
+          },
+          {
+            "hex": "#3c5d77",
+            "weight_bp": 1228
+          },
+          {
+            "hex": "#49c8e5",
+            "weight_bp": 1128
+          },
+          {
+            "hex": "#101820",
+            "weight_bp": 1052
+          },
+          {
+            "hex": "#285b88",
+            "weight_bp": 1017
+          },
+          {
+            "hex": "#213b53",
+            "weight_bp": 890
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03418,
+          "y_mae": 0.07511,
+          "x_ratio": 0.9853,
+          "y_ratio": 2.339,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Glowing_runic_stone_floor_texture_ec6efb3e.jpg",
+          "sha256": "951895fc7f3b77e1c9b72caecfb4a1b60548708840f71eccb040fa535175dc24",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.b0aae5a5",
+      "kind": "region",
+      "name": "Prismatic rainbow crystal cave floor",
+      "description": "Prismatic rainbow crystal cave floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-b0aae5a5",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "crystal",
+        "construction",
+        "prismatic",
+        "rainbow",
+        "cave"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "crystal",
+        "construction",
+        "prismatic",
+        "rainbow",
+        "cave",
+        "blue",
+        "brown",
+        "red",
+        "black",
+        "green",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3c555f",
+            "weight_bp": 1595
+          },
+          {
+            "hex": "#4b2c33",
+            "weight_bp": 1559
+          },
+          {
+            "hex": "#945752",
+            "weight_bp": 1489
+          },
+          {
+            "hex": "#281b24",
+            "weight_bp": 1352
+          },
+          {
+            "hex": "#2b323b",
+            "weight_bp": 1086
+          },
+          {
+            "hex": "#91b288",
+            "weight_bp": 1075
+          },
+          {
+            "hex": "#79343d",
+            "weight_bp": 1066
+          },
+          {
+            "hex": "#7a7c6d",
+            "weight_bp": 778
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "brown",
+          "red",
+          "black",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05989,
+          "y_mae": 0.09466,
+          "x_ratio": 1.4705,
+          "y_ratio": 2.3767,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Prismatic_rainbow_crystal_cave_f…_b0aae5a5.jpg",
+          "sha256": "773b8e96c77553b22dc54e0a640d85e890cb210fec7c6099c68afd8f54b60b30",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.032c1941",
+      "kind": "region",
+      "name": "Solar plasma stone surface",
+      "description": "Solar plasma stone surface: painterly fantasy effect appearance texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-032c1941",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "lava",
+        "magic",
+        "glowing",
+        "solar",
+        "plasma"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "lava",
+        "magic",
+        "glowing",
+        "solar",
+        "plasma",
+        "purple",
+        "orange",
+        "red",
+        "brown",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.effects"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#32262a",
+            "weight_bp": 1591
+          },
+          {
+            "hex": "#ef7824",
+            "weight_bp": 1575
+          },
+          {
+            "hex": "#832517",
+            "weight_bp": 1314
+          },
+          {
+            "hex": "#51201d",
+            "weight_bp": 1265
+          },
+          {
+            "hex": "#c9461d",
+            "weight_bp": 1165
+          },
+          {
+            "hex": "#f9c95b",
+            "weight_bp": 1069
+          },
+          {
+            "hex": "#291315",
+            "weight_bp": 1055
+          },
+          {
+            "hex": "#5a3a38",
+            "weight_bp": 966
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "purple",
+          "orange",
+          "red",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "effect_appearance",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03561,
+          "y_mae": 0.06045,
+          "x_ratio": 1.4538,
+          "y_ratio": 2.6376,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Solar_plasma_stone_surface_texture_032c1941.jpg",
+          "sha256": "1240dcc47510a2e9ac544318a2f4effa462b90fed7b45b8b7716cc31797e319f",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.db97e852",
+      "kind": "region",
+      "name": "Golden clouds celestial",
+      "description": "Golden clouds celestial: painterly fantasy effect appearance texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-db97e852",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "cloud",
+        "magic",
+        "golden",
+        "clouds",
+        "celestial"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "cloud",
+        "magic",
+        "golden",
+        "clouds",
+        "celestial",
+        "orange",
+        "brown",
+        "purple",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.effects"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#c59549",
+            "weight_bp": 1339
+          },
+          {
+            "hex": "#a87639",
+            "weight_bp": 1302
+          },
+          {
+            "hex": "#704b2f",
+            "weight_bp": 1298
+          },
+          {
+            "hex": "#3d3035",
+            "weight_bp": 1287
+          },
+          {
+            "hex": "#513f3a",
+            "weight_bp": 1271
+          },
+          {
+            "hex": "#896239",
+            "weight_bp": 1209
+          },
+          {
+            "hex": "#252030",
+            "weight_bp": 1149
+          },
+          {
+            "hex": "#eac46d",
+            "weight_bp": 1145
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "orange",
+          "brown",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "effect_appearance",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0274,
+          "y_mae": 0.07312,
+          "x_ratio": 1.5102,
+          "y_ratio": 3.6851,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Golden_clouds_celestial_texture_db97e852.jpg",
+          "sha256": "d594e0a7c1bb966a31fb77b113498d451b26b1f1cf6bb7d27cf2fde2e1c45fba",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.09944507",
+      "kind": "region",
+      "name": "Glowing orange magma crust",
+      "description": "Glowing orange magma crust: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-09944507",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "lava",
+        "magic",
+        "glowing",
+        "orange",
+        "magma",
+        "crust"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "lava",
+        "magic",
+        "glowing",
+        "orange",
+        "magma",
+        "crust",
+        "blue",
+        "black",
+        "red",
+        "purple",
+        "brown",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2a2d36",
+            "weight_bp": 2326
+          },
+          {
+            "hex": "#1f2027",
+            "weight_bp": 1742
+          },
+          {
+            "hex": "#c87638",
+            "weight_bp": 1317
+          },
+          {
+            "hex": "#7d402f",
+            "weight_bp": 1048
+          },
+          {
+            "hex": "#181419",
+            "weight_bp": 1040
+          },
+          {
+            "hex": "#291f23",
+            "weight_bp": 950
+          },
+          {
+            "hex": "#531e16",
+            "weight_bp": 854
+          },
+          {
+            "hex": "#642e23",
+            "weight_bp": 723
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "orange",
+          "red",
+          "purple",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02596,
+          "y_mae": 0.06939,
+          "x_ratio": 1.0546,
+          "y_ratio": 2.8287,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Glowing_orange_magma_crust_texture_09944507.jpg",
+          "sha256": "1ddbc36801148ad52d85a666864278cc08042a231a267e817239404b5d25f0c5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.74ee9ae4",
+      "kind": "region",
+      "name": "Glowing alien spore carpet",
+      "description": "Glowing alien spore carpet: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-74ee9ae4",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "fungi",
+        "magic",
+        "glowing",
+        "alien",
+        "spore",
+        "carpet"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "fungi",
+        "magic",
+        "glowing",
+        "alien",
+        "spore",
+        "carpet",
+        "blue",
+        "black",
+        "gray",
+        "teal",
+        "purple",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#203e4e",
+            "weight_bp": 1445
+          },
+          {
+            "hex": "#17141c",
+            "weight_bp": 1357
+          },
+          {
+            "hex": "#2c2629",
+            "weight_bp": 1348
+          },
+          {
+            "hex": "#142331",
+            "weight_bp": 1328
+          },
+          {
+            "hex": "#506582",
+            "weight_bp": 1245
+          },
+          {
+            "hex": "#090e18",
+            "weight_bp": 1191
+          },
+          {
+            "hex": "#61a3b0",
+            "weight_bp": 1186
+          },
+          {
+            "hex": "#4b4250",
+            "weight_bp": 900
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "gray",
+          "teal",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06411,
+          "y_mae": 0.12512,
+          "x_ratio": 1.465,
+          "y_ratio": 2.8841,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Glowing_alien_spore_carpet_texture_74ee9ae4.jpg",
+          "sha256": "9a0954248a775aafebcd326620ffccac450725d3c253c46b3d65a2671c6b6f38",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.025c70cf",
+      "kind": "region",
+      "name": "Corrupted crystal ground",
+      "description": "Corrupted crystal ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-025c70cf",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "crystal",
+        "magic",
+        "corrupted"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "crystal",
+        "magic",
+        "corrupted",
+        "blue",
+        "black",
+        "purple",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1d1f3f",
+            "weight_bp": 1897
+          },
+          {
+            "hex": "#17112f",
+            "weight_bp": 1608
+          },
+          {
+            "hex": "#0e0e23",
+            "weight_bp": 1260
+          },
+          {
+            "hex": "#663f8d",
+            "weight_bp": 1166
+          },
+          {
+            "hex": "#3c2a61",
+            "weight_bp": 1145
+          },
+          {
+            "hex": "#070516",
+            "weight_bp": 1051
+          },
+          {
+            "hex": "#3b205a",
+            "weight_bp": 1006
+          },
+          {
+            "hex": "#2d1342",
+            "weight_bp": 867
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03646,
+          "y_mae": 0.06713,
+          "x_ratio": 1.3082,
+          "y_ratio": 2.8087,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Corrupted_crystal_ground_texture_025c70cf.jpg",
+          "sha256": "25fa129bad9973204bf0159943274df9acb1b22262f88326a572aaf59940c933",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.907876e9",
+      "kind": "region",
+      "name": "Storm cloud discharging blue lightning",
+      "description": "Storm cloud discharging blue lightning: painterly fantasy effect appearance texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-907876e9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "cloud",
+        "glowing",
+        "storm",
+        "discharging",
+        "blue",
+        "lightning"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "cloud",
+        "glowing",
+        "storm",
+        "discharging",
+        "blue",
+        "lightning",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.effects"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3b538d",
+            "weight_bp": 1524
+          },
+          {
+            "hex": "#161d3c",
+            "weight_bp": 1439
+          },
+          {
+            "hex": "#232a4f",
+            "weight_bp": 1380
+          },
+          {
+            "hex": "#323d6b",
+            "weight_bp": 1250
+          },
+          {
+            "hex": "#1a2549",
+            "weight_bp": 1149
+          },
+          {
+            "hex": "#233764",
+            "weight_bp": 1134
+          },
+          {
+            "hex": "#0f1430",
+            "weight_bp": 1122
+          },
+          {
+            "hex": "#5c8cc4",
+            "weight_bp": 1002
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "effect_appearance",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02198,
+          "y_mae": 0.04148,
+          "x_ratio": 1.0125,
+          "y_ratio": 1.9253,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Storm_cloud_discharging_blue_lig…_907876e9.jpg",
+          "sha256": "48448296f1f1828195722a95f6c4657d39df7a56f1a95f002a987f7fa27217b7",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.688c8c51",
+      "kind": "region",
+      "name": "Toxic green acid pool bubbling",
+      "description": "Toxic green acid pool bubbling: painterly fantasy liquid appearance texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-688c8c51",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "liquid",
+        "wet",
+        "toxic",
+        "green",
+        "acid",
+        "pool",
+        "bubbling"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "liquid",
+        "wet",
+        "toxic",
+        "green",
+        "acid",
+        "pool",
+        "bubbling",
+        "black",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.effects"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#80ae43",
+            "weight_bp": 1355
+          },
+          {
+            "hex": "#28461e",
+            "weight_bp": 1300
+          },
+          {
+            "hex": "#47762d",
+            "weight_bp": 1300
+          },
+          {
+            "hex": "#385a24",
+            "weight_bp": 1279
+          },
+          {
+            "hex": "#1b3318",
+            "weight_bp": 1220
+          },
+          {
+            "hex": "#0e1f11",
+            "weight_bp": 1215
+          },
+          {
+            "hex": "#688936",
+            "weight_bp": 1202
+          },
+          {
+            "hex": "#b2db63",
+            "weight_bp": 1129
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "liquid_appearance",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03749,
+          "y_mae": 0.11094,
+          "x_ratio": 1.182,
+          "y_ratio": 3.4534,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Toxic_green_acid_pool_bubbling_688c8c51.jpg",
+          "sha256": "04ce22dd0ddb047e8cf8ea8e5aeeef5b3f3fd92b3579e26c50dcb1bfa7d62feb",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.9050a5ac",
+      "kind": "region",
+      "name": "Frosty ice ground",
+      "description": "Frosty ice ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-9050a5ac",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "ice",
+        "cold",
+        "frosty"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "ice",
+        "cold",
+        "frosty",
+        "blue",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1d254b",
+            "weight_bp": 1693
+          },
+          {
+            "hex": "#444082",
+            "weight_bp": 1346
+          },
+          {
+            "hex": "#2b3761",
+            "weight_bp": 1332
+          },
+          {
+            "hex": "#171e40",
+            "weight_bp": 1322
+          },
+          {
+            "hex": "#555897",
+            "weight_bp": 1254
+          },
+          {
+            "hex": "#898ac7",
+            "weight_bp": 1161
+          },
+          {
+            "hex": "#0e1333",
+            "weight_bp": 969
+          },
+          {
+            "hex": "#2a295e",
+            "weight_bp": 923
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05466,
+          "y_mae": 0.0734,
+          "x_ratio": 2.0783,
+          "y_ratio": 2.7106,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frosty_ice_ground_texture_9050a5ac.jpg",
+          "sha256": "5a41eb288dde6792dc6aa2256b77c28dc582e0b872843e8e55019bbba5c1fb41",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a103f191",
+      "kind": "region",
+      "name": "Meteor crater rock",
+      "description": "Meteor crater rock: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a103f191",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "meteor",
+        "crater",
+        "rock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "meteor",
+        "crater",
+        "rock",
+        "blue",
+        "black",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#363e51",
+            "weight_bp": 1527
+          },
+          {
+            "hex": "#1e2031",
+            "weight_bp": 1352
+          },
+          {
+            "hex": "#2c2f41",
+            "weight_bp": 1331
+          },
+          {
+            "hex": "#0f1221",
+            "weight_bp": 1282
+          },
+          {
+            "hex": "#151b2a",
+            "weight_bp": 1250
+          },
+          {
+            "hex": "#20293c",
+            "weight_bp": 1181
+          },
+          {
+            "hex": "#060815",
+            "weight_bp": 1094
+          },
+          {
+            "hex": "#586874",
+            "weight_bp": 983
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0496,
+          "y_mae": 0.07366,
+          "x_ratio": 1.2426,
+          "y_ratio": 1.8877,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Meteor_crater_rock_texture_a103f191.jpg",
+          "sha256": "926363f6a74bc34afb2745a62e1f4ecab766004221b46ba822cddafba185961f",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.52a73a1b",
+      "kind": "region",
+      "name": "Alien hive floor",
+      "description": "Alien hive floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-52a73a1b",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "magic",
+        "construction",
+        "alien",
+        "hive"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "magic",
+        "construction",
+        "alien",
+        "hive",
+        "purple",
+        "black",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#311927",
+            "weight_bp": 1550
+          },
+          {
+            "hex": "#402c3e",
+            "weight_bp": 1461
+          },
+          {
+            "hex": "#71425b",
+            "weight_bp": 1366
+          },
+          {
+            "hex": "#221521",
+            "weight_bp": 1310
+          },
+          {
+            "hex": "#160911",
+            "weight_bp": 1133
+          },
+          {
+            "hex": "#672f47",
+            "weight_bp": 1102
+          },
+          {
+            "hex": "#461c2d",
+            "weight_bp": 1044
+          },
+          {
+            "hex": "#91667b",
+            "weight_bp": 1034
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "purple",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04613,
+          "y_mae": 0.08311,
+          "x_ratio": 1.1776,
+          "y_ratio": 2.2586,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Alien_hive_floor_texture_52a73a1b.jpg",
+          "sha256": "3fee8274291a071531239af445a4c7a32a474f6c4364f5732434c01018c5f70e",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.94b984ea",
+      "kind": "region",
+      "name": "Ghost-flame ashes",
+      "description": "Ghost-flame ashes: painterly fantasy effect appearance texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-94b984ea",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "magic",
+        "ghost",
+        "flame",
+        "ashes"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "magic",
+        "ghost",
+        "flame",
+        "ashes",
+        "blue",
+        "black",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.effects"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#31334a",
+            "weight_bp": 1602
+          },
+          {
+            "hex": "#465c7e",
+            "weight_bp": 1509
+          },
+          {
+            "hex": "#21243b",
+            "weight_bp": 1363
+          },
+          {
+            "hex": "#282e47",
+            "weight_bp": 1221
+          },
+          {
+            "hex": "#414460",
+            "weight_bp": 1179
+          },
+          {
+            "hex": "#32415d",
+            "weight_bp": 1131
+          },
+          {
+            "hex": "#6291b4",
+            "weight_bp": 1060
+          },
+          {
+            "hex": "#131528",
+            "weight_bp": 935
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "effect_appearance",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05124,
+          "y_mae": 0.0749,
+          "x_ratio": 1.4154,
+          "y_ratio": 2.1241,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Ghost-flame_ashes_texture_94b984ea.jpg",
+          "sha256": "9b8124e84ae722809ae6d4684be7a54a5e76cb357f5eb1a095dee878e619ea46",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.4e0144a2",
+      "kind": "region",
+      "name": "Cosmic starlight void dust",
+      "description": "Cosmic starlight void dust: painterly fantasy effect appearance texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-4e0144a2",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "magic",
+        "glowing",
+        "cosmic",
+        "starlight",
+        "void",
+        "dust"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "magic",
+        "glowing",
+        "cosmic",
+        "starlight",
+        "void",
+        "dust",
+        "blue",
+        "purple",
+        "black",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.effects"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#202242",
+            "weight_bp": 1512
+          },
+          {
+            "hex": "#1a1332",
+            "weight_bp": 1430
+          },
+          {
+            "hex": "#3d335a",
+            "weight_bp": 1296
+          },
+          {
+            "hex": "#11122b",
+            "weight_bp": 1236
+          },
+          {
+            "hex": "#0c091f",
+            "weight_bp": 1213
+          },
+          {
+            "hex": "#42234f",
+            "weight_bp": 1177
+          },
+          {
+            "hex": "#455974",
+            "weight_bp": 1070
+          },
+          {
+            "hex": "#2c163c",
+            "weight_bp": 1066
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "purple",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "effect_appearance",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0406,
+          "y_mae": 0.03972,
+          "x_ratio": 1.5204,
+          "y_ratio": 1.4925,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Cosmic_starlight_void_dust_texture_4e0144a2.jpg",
+          "sha256": "fb83f47d94b1d15676f6cb8601ef4fbf9f00501800d9dc3e667ddbc48d943dd5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.05545e0a",
+      "kind": "region",
+      "name": "Liquid mercury pool ripple",
+      "description": "Liquid mercury pool ripple: painterly fantasy liquid appearance texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-05545e0a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "metal",
+        "water",
+        "liquid",
+        "wet",
+        "mercury",
+        "pool",
+        "ripple"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "metal",
+        "water",
+        "liquid",
+        "wet",
+        "mercury",
+        "pool",
+        "ripple",
+        "blue",
+        "gray",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.effects"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#828d9d",
+            "weight_bp": 1415
+          },
+          {
+            "hex": "#556176",
+            "weight_bp": 1304
+          },
+          {
+            "hex": "#283047",
+            "weight_bp": 1297
+          },
+          {
+            "hex": "#354057",
+            "weight_bp": 1280
+          },
+          {
+            "hex": "#6b7285",
+            "weight_bp": 1279
+          },
+          {
+            "hex": "#474d63",
+            "weight_bp": 1238
+          },
+          {
+            "hex": "#b1bfca",
+            "weight_bp": 1108
+          },
+          {
+            "hex": "#191f36",
+            "weight_bp": 1079
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "liquid_appearance",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03855,
+          "y_mae": 0.09955,
+          "x_ratio": 0.8792,
+          "y_ratio": 2.1072,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Liquid_mercury_pool_ripple_texture_05545e0a.jpg",
+          "sha256": "ef5ab1ed611812b167f77f52bda9fc1833467c05a7c8c0142e485b955d7fa100",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.cd5b3538",
+      "kind": "region",
+      "name": "Crystalline quartz cave ground",
+      "description": "Crystalline quartz cave ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-cd5b3538",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "crystal",
+        "crystalline",
+        "quartz",
+        "cave"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "crystal",
+        "crystalline",
+        "quartz",
+        "cave",
+        "blue",
+        "black",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3c3d59",
+            "weight_bp": 1359
+          },
+          {
+            "hex": "#6e678f",
+            "weight_bp": 1352
+          },
+          {
+            "hex": "#32314a",
+            "weight_bp": 1327
+          },
+          {
+            "hex": "#1e1f36",
+            "weight_bp": 1323
+          },
+          {
+            "hex": "#514b6b",
+            "weight_bp": 1248
+          },
+          {
+            "hex": "#272941",
+            "weight_bp": 1199
+          },
+          {
+            "hex": "#a29dc5",
+            "weight_bp": 1104
+          },
+          {
+            "hex": "#111227",
+            "weight_bp": 1088
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03874,
+          "y_mae": 0.07038,
+          "x_ratio": 0.8581,
+          "y_ratio": 1.68,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Crystalline_quartz_cave_ground_t…_cd5b3538.jpg",
+          "sha256": "f27e545f964d355309f98d3778912a4133d3ef8245aa8ec4ba0ca542f3414242",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a7207236",
+      "kind": "region",
+      "name": "Bone fragments embedded in soil",
+      "description": "Bone fragments embedded in soil: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a7207236",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "bone",
+        "organic",
+        "fragments",
+        "embedded"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "bone",
+        "organic",
+        "fragments",
+        "embedded",
+        "black",
+        "olive",
+        "brown",
+        "yellow",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#211e18",
+            "weight_bp": 1339
+          },
+          {
+            "hex": "#726845",
+            "weight_bp": 1334
+          },
+          {
+            "hex": "#181512",
+            "weight_bp": 1319
+          },
+          {
+            "hex": "#2c271e",
+            "weight_bp": 1296
+          },
+          {
+            "hex": "#534930",
+            "weight_bp": 1278
+          },
+          {
+            "hex": "#3b3826",
+            "weight_bp": 1274
+          },
+          {
+            "hex": "#afa784",
+            "weight_bp": 1088
+          },
+          {
+            "hex": "#0d0b0a",
+            "weight_bp": 1072
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "olive",
+          "brown",
+          "yellow"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06032,
+          "y_mae": 0.12228,
+          "x_ratio": 1.3538,
+          "y_ratio": 3.0281,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bone_fragments_embedded_in_soil_a7207236.jpg",
+          "sha256": "eae43c4d41a452ebcb133b764679c291e5491a2e10bd59a207710c3b60c89273",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.c47606f1",
+      "kind": "region",
+      "name": "Petrified dragon wood",
+      "description": "Petrified dragon wood: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-c47606f1",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "magic",
+        "organic",
+        "petrified",
+        "dragon"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "magic",
+        "organic",
+        "petrified",
+        "dragon",
+        "gray",
+        "black",
+        "brown",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#332f2e",
+            "weight_bp": 1948
+          },
+          {
+            "hex": "#271f1e",
+            "weight_bp": 1523
+          },
+          {
+            "hex": "#5a443c",
+            "weight_bp": 1460
+          },
+          {
+            "hex": "#1c1a19",
+            "weight_bp": 1291
+          },
+          {
+            "hex": "#7b6253",
+            "weight_bp": 1122
+          },
+          {
+            "hex": "#110d0c",
+            "weight_bp": 1092
+          },
+          {
+            "hex": "#56342b",
+            "weight_bp": 811
+          },
+          {
+            "hex": "#441f17",
+            "weight_bp": 753
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "black",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05182,
+          "y_mae": 0.07418,
+          "x_ratio": 1.449,
+          "y_ratio": 2.4698,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Petrified_dragon_wood_texture_c47606f1.jpg",
+          "sha256": "99fed2f8c5152d56ac37c8f8d191c3e70a8c47e7151af68c56b7513ba0f7ea24",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.46d51629",
+      "kind": "region",
+      "name": "Glass sand with golden swirls",
+      "description": "Glass sand with golden swirls: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-46d51629",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "glass",
+        "golden",
+        "swirls"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "glass",
+        "golden",
+        "swirls",
+        "blue",
+        "purple",
+        "red",
+        "gray",
+        "yellow",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#44536d",
+            "weight_bp": 1454
+          },
+          {
+            "hex": "#4e3b4e",
+            "weight_bp": 1390
+          },
+          {
+            "hex": "#2f2446",
+            "weight_bp": 1276
+          },
+          {
+            "hex": "#313657",
+            "weight_bp": 1229
+          },
+          {
+            "hex": "#735858",
+            "weight_bp": 1186
+          },
+          {
+            "hex": "#7a7772",
+            "weight_bp": 1183
+          },
+          {
+            "hex": "#1a1a3f",
+            "weight_bp": 1162
+          },
+          {
+            "hex": "#aba688",
+            "weight_bp": 1120
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "purple",
+          "red",
+          "gray",
+          "yellow"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.09365,
+          "y_mae": 0.10807,
+          "x_ratio": 1.5303,
+          "y_ratio": 1.7653,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Glass_sand_texture_with_golden_46d51629.jpg",
+          "sha256": "aaaebda0035b11d62d9e32bd0ccd79211eb8b7c9148b1f063b3054391609ea66",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.7268aab0",
+      "kind": "region",
+      "name": "Arcane alchemy liquid floor",
+      "description": "Arcane alchemy liquid floor: painterly fantasy liquid appearance texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-7268aab0",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "liquid",
+        "magic",
+        "construction",
+        "arcane",
+        "alchemy"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "liquid",
+        "magic",
+        "construction",
+        "arcane",
+        "alchemy",
+        "blue",
+        "purple",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.effects"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#414b71",
+            "weight_bp": 1537
+          },
+          {
+            "hex": "#241b48",
+            "weight_bp": 1430
+          },
+          {
+            "hex": "#27315c",
+            "weight_bp": 1285
+          },
+          {
+            "hex": "#190f35",
+            "weight_bp": 1248
+          },
+          {
+            "hex": "#1c1a41",
+            "weight_bp": 1203
+          },
+          {
+            "hex": "#2f1f54",
+            "weight_bp": 1172
+          },
+          {
+            "hex": "#3f3265",
+            "weight_bp": 1093
+          },
+          {
+            "hex": "#6a7d89",
+            "weight_bp": 1032
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "liquid_appearance",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03412,
+          "y_mae": 0.06231,
+          "x_ratio": 1.3043,
+          "y_ratio": 2.39,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Arcane_alchemy_liquid_floor_texture_7268aab0.jpg",
+          "sha256": "9b2d58fe8db558c3b28984732a7e3f3c61dcb2dc35719b1dfd3ccfbad35af90b",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.2108ad7d",
+      "kind": "region",
+      "name": "Of purple tendrils",
+      "description": "Of purple tendrils: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-2108ad7d",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "purple",
+        "tendrils"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "purple",
+        "tendrils",
+        "black",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#291b42",
+            "weight_bp": 1730
+          },
+          {
+            "hex": "#1f1137",
+            "weight_bp": 1586
+          },
+          {
+            "hex": "#422764",
+            "weight_bp": 1282
+          },
+          {
+            "hex": "#160d2a",
+            "weight_bp": 1270
+          },
+          {
+            "hex": "#3a1e5d",
+            "weight_bp": 1117
+          },
+          {
+            "hex": "#0d051e",
+            "weight_bp": 1040
+          },
+          {
+            "hex": "#6b3d92",
+            "weight_bp": 1033
+          },
+          {
+            "hex": "#2d134b",
+            "weight_bp": 942
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "purple",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04312,
+          "y_mae": 0.07293,
+          "x_ratio": 1.3657,
+          "y_ratio": 2.4648,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Texture_of_purple_tendrils_2108ad7d.jpg",
+          "sha256": "5e9c7e57c8d7146d5c43abc0f1df2b0c8a336c4fac4d9d9cc52c9ac60673f6bd",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.3b5eb398",
+      "kind": "region",
+      "name": "Bloodstone rock floor",
+      "description": "Bloodstone rock floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-3b5eb398",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "crystal",
+        "construction",
+        "bloodstone",
+        "rock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "crystal",
+        "construction",
+        "bloodstone",
+        "rock",
+        "brown",
+        "black",
+        "red",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#35282a",
+            "weight_bp": 1605
+          },
+          {
+            "hex": "#351213",
+            "weight_bp": 1594
+          },
+          {
+            "hex": "#1f181a",
+            "weight_bp": 1519
+          },
+          {
+            "hex": "#252123",
+            "weight_bp": 1291
+          },
+          {
+            "hex": "#110a0c",
+            "weight_bp": 1173
+          },
+          {
+            "hex": "#210b0d",
+            "weight_bp": 1044
+          },
+          {
+            "hex": "#630d10",
+            "weight_bp": 997
+          },
+          {
+            "hex": "#572f32",
+            "weight_bp": 777
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black",
+          "red"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02762,
+          "y_mae": 0.05356,
+          "x_ratio": 1.2713,
+          "y_ratio": 2.6213,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bloodstone_rock_floor_texture_3b5eb398.jpg",
+          "sha256": "1ae89ba99d1b42d11b94bbe7fedfc87547bd4d9f214a0e1067ba6abea7b9c71d",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.3fb535cd",
+      "kind": "region",
+      "name": "Deep-sea coral reef",
+      "description": "Deep-sea coral reef: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-3fb535cd",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "coral",
+        "aquatic",
+        "tropical",
+        "organic",
+        "deep",
+        "sea",
+        "reef"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "coral",
+        "aquatic",
+        "tropical",
+        "organic",
+        "deep",
+        "sea",
+        "reef",
+        "blue",
+        "black",
+        "teal",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#0e2b4c",
+            "weight_bp": 1600
+          },
+          {
+            "hex": "#1e4670",
+            "weight_bp": 1505
+          },
+          {
+            "hex": "#0a1737",
+            "weight_bp": 1503
+          },
+          {
+            "hex": "#121a40",
+            "weight_bp": 1209
+          },
+          {
+            "hex": "#06132e",
+            "weight_bp": 1209
+          },
+          {
+            "hex": "#03071e",
+            "weight_bp": 1096
+          },
+          {
+            "hex": "#1f819d",
+            "weight_bp": 1011
+          },
+          {
+            "hex": "#242e61",
+            "weight_bp": 867
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04196,
+          "y_mae": 0.10177,
+          "x_ratio": 1.2087,
+          "y_ratio": 3.2045,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Deep-sea_coral_reef_texture_3fb535cd.jpg",
+          "sha256": "4c831a54f3ef45d9a68b3eebc146f7b11a07f559dc50d574a165b0b6a0b736ce",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "tropical"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.34db3929",
+      "kind": "region",
+      "name": "Dragon scale ground",
+      "description": "Dragon scale ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-34db3929",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "magic",
+        "dragon",
+        "scale"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "magic",
+        "dragon",
+        "scale",
+        "gray",
+        "teal",
+        "black",
+        "fantasy surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#505b55",
+            "weight_bp": 1592
+          },
+          {
+            "hex": "#304247",
+            "weight_bp": 1368
+          },
+          {
+            "hex": "#191c19",
+            "weight_bp": 1295
+          },
+          {
+            "hex": "#232b29",
+            "weight_bp": 1288
+          },
+          {
+            "hex": "#0c0f0e",
+            "weight_bp": 1219
+          },
+          {
+            "hex": "#323235",
+            "weight_bp": 1174
+          },
+          {
+            "hex": "#474547",
+            "weight_bp": 1111
+          },
+          {
+            "hex": "#718470",
+            "weight_bp": 953
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "teal",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06634,
+          "y_mae": 0.04319,
+          "x_ratio": 1.9959,
+          "y_ratio": 1.3499,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Dragon_scale_ground_texture_34db3929.jpg",
+          "sha256": "497d7ec0b60c5b81b5ae32410d35e528eb19d9a469e3b5a869e7b4e17dd2be81",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    }
+  ]
+}
