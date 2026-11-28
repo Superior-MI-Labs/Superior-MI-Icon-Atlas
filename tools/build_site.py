@@ -298,7 +298,8 @@ for(const texture of Object.values(pack.textures)){
                     'rulesets':sorted(concept.get('defaults',{})),
                     'state_axes':sorted(concept.get('state_axes',{})),
                     'actions':sorted(concept.get('actions',{})),
-                    'relationships':concept.get('relationships',[])}
+                    'relationships':concept.get('relationships',[]),
+                    **({k:concept[k] for k in ('physical','discovery_offers') if k in concept})}
             # Inherit style only when every styled source region agrees.
             region_styles={a['style'] for a in pack['assets'] if a['kind']=='region' and a.get('style')}
             inherited_style=next(iter(region_styles)) if len(region_styles)==1 else ''

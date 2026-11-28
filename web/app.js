@@ -383,6 +383,111 @@
     if(result.events.length)notify(result.events.map(item=>item.name).join(', '));
     return true;
   }
+  // BEGIN capability discovery inspector
+  // Browse the current published catalog only. This is a read-only presentation
+  // of the collection core's evidence, never another matching or loading engine.
+  let capabilityDiscovery=null,capabilityDiscoveryError=null;
+  async function prepareCapabilityDiscovery(index,bytes){
+    capabilityDiscovery=null;capabilityDiscoveryError=null;
+    if(!(index.concepts||[]).some(c=>Object.keys(c.discovery_offers||{}).length))return;
+    try{
+      if(!globalThis.crypto?.subtle)throw Error('Catalog fingerprint unavailable in this context');
+      const digest=[...new Uint8Array(await globalThis.crypto.subtle.digest('SHA-256',bytes))].map(x=>x.toString(16).padStart(2,'0')).join('');
+      const resolver=Collections.createDiscoveryIndex(index,{catalog_sha256:digest});
+      const representatives=new Map();
+      // Use existing public entries and an exact same-owner, visible representation.
+      // Stable ordering, no fabricated representation and no archive fetch.
+      for(const entry of index.assets){
+        const owner=conceptIndex.get(entry.concept_id);
+        if(!owner||owner.pack!==entry.pack||entry.legacy||entry.discovery==='hidden')continue;
+        const previous=representatives.get(owner.id);
+        if(!previous||entry.id<previous.id)representatives.set(owner.id,entry);
+      }
+      capabilityDiscovery={resolver,representatives};
+    }catch(error){
+      // Old browsers, malformed optional metadata or an unavailable crypto API
+      // must not prevent ordinary browsing, downloads or rendering.
+      capabilityDiscoveryError='Capability discovery unavailable: '+error.message;
+    }
+  }
+  function discoveryRef(kind,id,packId){
+    const pack=collections.get(packId);
+    return pack&&!pack.archived&&pack.zip&&/^[a-f0-9]{64}$/.test(pack.archive_sha256||'')?{kind,id,archive_sha256:pack.archive_sha256}:null;
+  }
+  function discoveryElement(tag,text){const node=document.createElement(tag);if(text!==undefined)node.textContent=text;return node;}
+  function discoveryTarget(ref){
+    // Navigation is allowed only if the visible entry belongs to the exact
+    // archive selected by the resolver. A pinned result is never redirected.
+    const concept=ref.kind==='concept'?conceptIndex.get(ref.id):null;
+    const entry=ref.kind==='asset'?entryById.get(ref.id):capabilityDiscovery?.representatives.get(ref.id);
+    const owner=concept?.pack??entry?.pack;
+    const current=discoveryRef(ref.kind,ref.id,owner);
+    const valid=current&&current.archive_sha256===ref.archive_sha256;
+    return {name:valid?(concept?.name||entry?.name||ref.id):ref.id,entry:valid&&entry&&!entry.legacy&&entry.discovery!=='hidden'&&entry.pack===owner?entry:null};
+  }
+  function discoveryEvidenceText(row){
+    const r=row.requirement,found=row.evidence;
+    const value=v=>v?.kind==='quantity'?`${v.value} ${v.unit}`:v&&typeof v==='object'&&Object.hasOwn(v,'value')?String(v.value):String(v);
+    let expected=r.op==='quantity.range'?` ${r.min}–${r.max} ${r.unit}`:r.op==='fact.equals'?` = ${value(r.expected)}`:'';
+    return `${r.scope} · ${r.op} · ${r.key}${expected}: ${row.status}${found?' (declared '+value(found.value)+', '+found.source.path+')':' (missing evidence)'}`;
+  }
+  function appendDiscoveryMatch(parent,match,direction){
+    const ref=direction==='subject'?match.offer:match.subject,{name,entry}=discoveryTarget(ref);
+    const row=discoveryElement('div');row.dataset.discoveryStatus=match.status;
+    const label=direction==='subject'?`${human(match.role)} · ${name} · ${human(ref.offer_id)}`:`${name}`;
+    const link=discoveryElement(entry?'button':'span',label);
+    if(entry){link.type='button';link.onclick=()=>openDetail(entry);}
+    row.append(link);
+    const evidence=discoveryElement('details');
+    evidence.append(discoveryElement('summary','Requirements and evidence'));
+    for(const scope of ['concept','representation','context'])evidence.append(discoveryElement('p',`${human(scope)}: ${match.scopes[scope]}`));
+    const facts=discoveryElement('ul');for(const item of match.evidence)facts.append(discoveryElement('li',discoveryEvidenceText(item)));evidence.append(facts);
+    evidence.append(discoveryElement('small','Derived from declared metadata; not verification of artistic, rendering or host support.'));
+    row.append(evidence);parent.append(row);
+  }
+  function appendDiscoveryResult(parent,result,direction){
+    const labels={compatible:'Declared requirements matched',unknown:'Incomplete evidence',incompatible:'Requirements contradicted'};
+    for(const status of ['compatible','unknown','incompatible']){
+      const group=result.groups[status];if(!group.total)continue;
+      const details=discoveryElement('details');details.dataset.discoveryGroup=status;details.open=status==='compatible';
+      details.append(discoveryElement('summary',`${labels[status]} (${group.total})`));
+      for(const match of group.matches)appendDiscoveryMatch(details,match,direction);
+      if(group.total>group.matches.length)details.append(discoveryElement('p',`Showing ${group.matches.length} of ${group.total}; bounded preview.`));
+      parent.append(details);
+    }
+  }
+  function appendCapabilityDiscovery(a,list){
+    if(a.legacy||a.discovery==='hidden')return;
+    if(capabilityDiscoveryError){list.append(discoveryElement('small',capabilityDiscoveryError));return;}
+    if(!capabilityDiscovery)return;
+    const ref=discoveryRef('asset',a.id,a.pack);if(!ref)return;
+    const {resolver}=capabilityDiscovery;
+    // No host context is guessed by the public browser.
+    let result;try{result=resolver.query({direction:'subject',ref,limit:8});}catch(error){list.append(discoveryElement('small','Capability discovery unavailable: '+error.message));return;}
+    const panel=discoveryElement('section');panel.dataset.discoverySection='true';
+    panel.append(discoveryElement('strong','Capability relationships'));
+    panel.append(discoveryElement('p','Current catalog metadata. Options are not activated, attached or host-qualified. Context-dependent requirements remain unknown.'));
+    appendDiscoveryResult(panel,result,'subject');
+    const concept=conceptIndex.get(a.concept_id);
+    if(concept?.pack===a.pack){
+      const owner=discoveryRef('concept',concept.id,concept.pack);
+      if(owner)for(const [offer_id,offer] of Object.entries(concept.discovery_offers||{}).sort(([a],[b])=>a<b?-1:a>b?1:0)){
+        const details=discoveryElement('details');details.dataset.discoveryOffer=offer_id;
+        details.append(discoveryElement('summary',`Find targets · ${human(offer.role)} · ${human(offer_id)}`));
+        let evaluated=false;
+        details.addEventListener('toggle',()=>{
+          if(!details.open||evaluated)return;evaluated=true;
+          try{const reverse=resolver.query({direction:'offer',ref:{...owner,offer_id},target_kind:'asset',limit:8});
+            if(Object.values(reverse.groups).every(g=>!g.total))details.append(discoveryElement('p','No other eligible catalog entries to evaluate.'));
+            else appendDiscoveryResult(details,reverse,'offer');
+          }catch(error){details.append(discoveryElement('p','Unable to evaluate this offer: '+error.message));}
+        });
+        panel.append(details);
+      }
+    }
+    if(Object.values(result.groups).some(g=>g.total)||panel.children.length>2)list.append(panel);
+  }
+  // END capability discovery inspector
   function relatedAssets(a){
     const panel=$('detail-components'),list=$('detail-related');list.replaceChildren();panel.open=false;
     const assets=context(a.pack).assets,root=assets.get(a.id);
@@ -423,6 +528,7 @@
         }
       }
     }
+    appendCapabilityDiscovery(a,list);
     panel.hidden=!list.children.length;
   }
   async function openDetail(a){
@@ -531,8 +637,9 @@
     requestAnimationFrame(tick);
   }
   async function init(){
-    const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Public catalog unavailable');const index=await response.json();if(index.schema!=='smi-public-catalog/1')throw Error('Unsupported public catalog');
+    const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Public catalog unavailable');const bytes=await response.arrayBuffer();const index=JSON.parse(new TextDecoder().decode(bytes));if(index.schema!=='smi-public-catalog/1')throw Error('Unsupported public catalog');
     entries=index.assets;if(!Array.isArray(entries)||!entries.length)throw Error('No assets in catalog');for(const entry of entries)entryById.set(entry.id,entry);for(const pack of index.packs)collections.set(pack.id,pack);for(const concept of index.concepts||[])conceptIndex.set(concept.id,concept);
+    await prepareCapabilityDiscovery(index,bytes);
     synonyms=index.synonyms||{};styleLabels=index.styles||{};taxonomy=index.browse||taxonomy;
     renderDirectory();
     for(const pack of index.packs.filter(p=>p.zip)){

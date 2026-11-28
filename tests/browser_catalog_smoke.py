@@ -464,6 +464,83 @@ def check(page,published_only=False):
     return page.locator("#count").inner_text()
 
 
+def check_capability_discovery(browser, url):
+    """Actual app and archive previews; only the catalog facts are synthetic.
+
+    Keep the production catalog and authored archives untouched. Intercept a
+    single page's catalog response to test newly introduced offers, missing
+    representation evidence and navigation against real published ZIPs.
+    """
+    catalog = json.loads((SITE / "public-catalog.json").read_text())
+    materials = [a for a in catalog["assets"] if a["id"].startswith("smi.material.gflow.")]
+    target = next(a for a in materials if a["name"] == "Fantasy meadow grass")
+    unknown = next(a for a in materials if a["pack"] == target["pack"] and a["id"] != target["id"])
+    offer = next(a for a in materials if a["pack"] != target["pack"])
+    # Isolate the fixture from any future real offers; do not modify the source file.
+    for concept in catalog.get("concepts", []):
+        concept.pop("discovery_offers", None)
+    target_concept = "test.browser.capability.surface"
+    offer_concept = "test.browser.capability.overlay"
+    assert not {target_concept, offer_concept} & {c["id"] for c in catalog.get("concepts", [])}
+    target["concept_id"] = unknown["concept_id"] = target_concept
+    offer["concept_id"] = offer_concept
+    # These are test-only declarations, not claims about the source artwork.
+    target["interfaces"] = ["test.browser.surface/1"]
+    unknown["interfaces"] = []
+    catalog.setdefault("concepts", []).extend([
+        {"id": target_concept, "name": "Fixture surface", "pack": target["pack"],
+         "capabilities": ["test.browser.surface"]},
+        {"id": offer_concept, "name": "Fixture overlay", "pack": offer["pack"],
+         "discovery_offers": {"apply": {"role": "overlay", "requirements": [
+             {"scope": "concept", "op": "capability.has", "key": "test.browser.surface"},
+             {"scope": "representation", "op": "interface.has", "key": "test.browser.surface/1"}
+         ]}}}
+    ])
+    owner = next(p for p in catalog["packs"] if p["id"] == offer["pack"])
+    offer_archive = "/" + owner["immutable_zip"]
+    context = browser.new_context(viewport={"width": 1440, "height": 1000})
+    page = context.new_page()
+    errors, requests = [], []
+    page.on("pageerror", lambda error: errors.append(str(error)))
+    page.on("request", lambda request: requests.append(request.url))
+    page.route("**/public-catalog.json", lambda route: route.fulfill(json=catalog))
+    try:
+        page.goto(url + "?asset=" + target["id"], wait_until="domcontentloaded")
+        expect(page.locator("#download-png")).to_be_enabled(timeout=30000)
+        page.locator("#detail-components > summary").click()
+        panel = page.locator("[data-discovery-section]")
+        matched = panel.locator('[data-discovery-group="compatible"]')
+        expect(matched).to_be_visible(timeout=20000)
+        expect(matched.locator("summary").first).to_have_text("Declared requirements matched (1)")
+        expect(matched.get_by_role("button", name=re.compile("Fixture overlay", re.I))).to_be_visible()
+        matched.get_by_text("Requirements and evidence", exact=True).click()
+        expect(matched).to_contain_text("representation · interface.has · test.browser.surface/1: compatible")
+        assert not any(u.endswith(offer_archive) for u in requests), requests
+        matched.get_by_role("button", name=re.compile("Fixture overlay", re.I)).click()
+        expect(page.locator("#detail-id")).to_have_text(offer["id"], timeout=20000)
+        expect(page.locator("#download-png")).to_be_enabled(timeout=30000)
+        assert any(u.endswith(offer_archive) for u in requests), requests
+        page.locator("#detail-components > summary").click()
+        reverse = page.locator('[data-discovery-offer="apply"]')
+        expect(reverse).to_be_visible()
+        expect(reverse.locator("[data-discovery-group]")).to_have_count(0)
+        reverse.locator("summary").first.click()
+        reverse_match = reverse.locator('[data-discovery-group="compatible"]')
+        expect(reverse_match.get_by_role("button", name=target["name"], exact=True)).to_be_visible(timeout=20000)
+        expect(reverse.locator('[data-discovery-group="unknown"]')).to_have_count(1)
+        reverse_match.get_by_role("button", name=target["name"], exact=True).click()
+        expect(page.locator("#detail-id")).to_have_text(target["id"], timeout=20000)
+        page.goto(url + "?asset=" + unknown["id"], wait_until="domcontentloaded")
+        expect(page.locator("#download-png")).to_be_enabled(timeout=30000)
+        page.locator("#detail-components > summary").click()
+        expect(page.locator('[data-discovery-group="compatible"]')).to_have_count(0)
+        expect(page.locator('[data-discovery-group="unknown"] > summary')).to_have_text("Incomplete evidence (1)")
+        assert not errors, errors
+    finally:
+        context.close()
+    print("Capability discovery Inspector with test-only catalog offers: PASS")
+
+
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--published-only',action='store_true');args=parser.parse_args()
     assert (SITE / "public-catalog.json").exists(), "Build site before browser smoke"
@@ -478,6 +555,7 @@ def main():
                 page = browser.new_page(viewport={"width": 1440, "height": 1000}, base_url=url)
                 page.goto(url, wait_until="networkidle")
                 print("Desktop:", check(page,args.published_only))
+                check_capability_discovery(browser, url)
                 mobile = browser.new_page(viewport={"width": 390, "height": 844}, base_url=url)
                 mobile.goto(url, wait_until="networkidle")
                 expect(mobile.locator("#count")).to_have_text(published_matches(), timeout=20000)

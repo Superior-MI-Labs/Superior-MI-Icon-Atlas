@@ -141,6 +141,7 @@
     }
     if(item.state_axes!==undefined&&(!record(item.state_axes)||Object.keys(item.state_axes).length<1||Object.keys(item.state_axes).length>16||Object.entries(item.state_axes).some(([key,a])=>!conceptId(key)||!validAxis(a))))throw Error('Invalid concept state axes '+item.id);
     validateActions(item);
+    validateDiscoveryOffers(item.discovery_offers);
   }
   function validateRepresentations(concepts,assets){
     const byId=new Map((concepts||[]).map(c=>[c.id,c]));
@@ -215,7 +216,7 @@
     if(!Array.isArray(items)||items.length>3000)throw Error('Invalid concept collection');
     const ids=new Set(),linked=assets===null?null:new Set(assets.map(a=>a.concept_id));
     for(const item of items){
-      if(!only(item,['schema','id','name','description','license','physical','defaults','capabilities','relationships','state_axes','actions'])||item.schema!=='smi-concept/1'||!conceptId(item.id)||!shortString(item.name,160)||!shortString(item.license,128)||ids.has(item.id))throw Error('Invalid or duplicate concept '+item?.id);
+      if(!only(item,['schema','id','name','description','license','physical','defaults','capabilities','relationships','state_axes','actions','discovery_offers'])||item.schema!=='smi-concept/1'||!conceptId(item.id)||!shortString(item.name,160)||!shortString(item.license,128)||ids.has(item.id))throw Error('Invalid or duplicate concept '+item?.id);
       if(item.description!==undefined&&(typeof item.description!=='string'||item.description.length>4000))throw Error('Invalid concept description '+item.id);
       if(item.physical!==undefined&&(!only(item.physical,['width_m','depth_m','height_m','mass_kg','capacity_l'])||!Object.keys(item.physical).length||Object.values(item.physical).some(v=>!bounded(v,0,1e9)||v===0)))throw Error('Invalid physical properties '+item.id);
       if(item.defaults!==undefined&&(!record(item.defaults)||!Object.keys(item.defaults).length||Object.keys(item.defaults).length>32||Object.entries(item.defaults).some(([k,v])=>!ruleId(k)||!validMap(v))))throw Error('Invalid ruleset defaults '+item.id);
@@ -357,6 +358,200 @@
       const color=p.length&&q.length?Math.max(0,1-(cost(p,q)+cost(q,p))/.7):null,style=source.style&&a.style?Number(source.style===a.style):null;
       return {id:a.id,score:(semantic*weights.semantic+(color??0)*weights.color+(style??0)*weights.style)/sum,semantic,color,style,shared};
     }).filter(r=>r.shared.length>0||weights.semantic===0&&r.color!==null).sort((a,b)=>b.score-a.score||(a.id<b.id?-1:a.id>b.id?1:0)).slice(0,limit);
+  }
+  /* Optional capability offers. Insert into the existing collection core.
+   * Pure metadata matching; never retrieve archives, mutate state or activate offers. */
+  const discoveryScopes = ['concept', 'representation', 'context'];
+  const discoveryPhysicalUnits = Object.freeze({width_m:'m',depth_m:'m',height_m:'m',mass_kg:'kg',capacity_l:'l'});
+  const discoveryNumber = x => bounded(x,-1e9,1e9);
+  // The existing slot contract accepts bounded names ending in /1, not rule IDs.
+  const discoveryInterfaceId = x => shortString(x,160)&&x.endsWith('/1');
+  function discoveryValue(x) {
+    // Reuse the canonical typed quantity/boolean validator. Enum is a known
+    // discovery/context value, not a new gameplay magnitude kind.
+    return (x?.kind==='boolean'||x?.kind==='quantity') ? validValue(x) : x?.kind==='enum' && only(x,['kind','value']) && conceptId(x.value);
+  }
+  function compileDiscoveryRequirements(requirements) {
+    if (!Array.isArray(requirements) || requirements.length < 1 || requirements.length > 32) throw Error('Invalid discovery requirements');
+    return requirements.map(r => {
+      if (!record(r) || !discoveryScopes.includes(r.scope)) throw Error('Invalid discovery requirement scope');
+      let group, predicate;
+      if (r.op === 'capability.has') {
+        if (!only(r,['scope','op','key']) || !conceptId(r.key)) throw Error('Invalid capability requirement');
+        group='capabilities'; predicate=v=>v===true;
+      } else if (r.op === 'interface.has') {
+        if (!only(r,['scope','op','key']) || r.scope!=='representation' || !discoveryInterfaceId(r.key)) throw Error('Invalid interface requirement');
+        group='interfaces'; predicate=v=>v===true;
+      } else if (r.op === 'fact.equals') {
+        if (!only(r,['scope','op','key','expected']) || !conceptId(r.key) || !discoveryValue(r.expected)) throw Error('Invalid equality requirement');
+        group='properties'; predicate=v=>v.kind===r.expected.kind && v.value===r.expected.value && (v.kind!=='quantity'||v.unit===r.expected.unit);
+      } else if (r.op === 'quantity.range') {
+        if (!only(r,['scope','op','key','unit','min','max']) || !conceptId(r.key) || !unitId(r.unit) || !discoveryNumber(r.min)||!discoveryNumber(r.max)||r.min>r.max) throw Error('Invalid quantity range');
+        group='properties'; predicate=v=>v.kind==='quantity'&&v.unit===r.unit&&v.value>=r.min&&v.value<=r.max;
+      } else throw Error('Unsupported discovery requirement');
+      return {requirement:structuredClone(r),group,predicate};
+    });
+  }
+  function validateDiscoveryOffers(offers) {
+    if (offers===undefined) return;
+    if (!record(offers) || Object.keys(offers).length<1 || Object.keys(offers).length>32) throw Error('Invalid discovery offers');
+    for (const [id,offer] of Object.entries(offers)) {
+      if (!conceptId(id)||!only(offer,['role','requirements'])||!conceptId(offer.role)) throw Error('Invalid discovery offer '+id);
+      compileDiscoveryRequirements(offer.requirements);
+    }
+  }
+  function discoveryFact(value,source) {return {value,source};}
+  function discoveryBlank() {return {capabilities:new Map(),interfaces:new Map(),properties:new Map()};}
+  function discoveryConceptFacts(concept,ref) {
+    const facts=discoveryBlank();
+    if (!concept) return facts;
+    if (concept.capabilities!==undefined && (!Array.isArray(concept.capabilities)||concept.capabilities.length>64||new Set(concept.capabilities).size!==concept.capabilities.length||!concept.capabilities.every(conceptId))) throw Error('Invalid catalog concept capabilities');
+    for(const key of concept.capabilities||[]) facts.capabilities.set(key,discoveryFact(true,{ref,path:'capabilities'}));
+    if(concept.physical!==undefined && (!record(concept.physical)||!Object.keys(concept.physical).length)) throw Error('Invalid physical projection');
+    for(const [key,value] of Object.entries(concept.physical||{})) {
+      if(!Object.hasOwn(discoveryPhysicalUnits,key)||!discoveryNumber(value)||value<=0) throw Error('Invalid physical projection '+key);
+      facts.properties.set('physical.'+key,discoveryFact({kind:'quantity',value,unit:discoveryPhysicalUnits[key]},{ref,path:'physical.'+key}));
+    }
+    return facts;
+  }
+  function discoveryAssetFacts(asset,ref) {
+    const facts=discoveryBlank();
+    if(asset.interfaces!==undefined&&(!Array.isArray(asset.interfaces)||asset.interfaces.length>256||new Set(asset.interfaces).size!==asset.interfaces.length||!asset.interfaces.every(discoveryInterfaceId))) throw Error('Invalid catalog interfaces');
+    for(const key of asset.interfaces||[]) facts.interfaces.set(key,discoveryFact(true,{ref,path:'interfaces'}));
+    return facts;
+  }
+  function discoveryContextFacts(context) {
+    const facts=discoveryBlank();
+    if(context===undefined)return facts;
+    if(!only(context,['capabilities','properties']))throw Error('Invalid query context');
+    for(const group of ['capabilities','properties']) {
+      if(!Object.hasOwn(context,group))continue;
+      const values=context[group];
+      if(!record(values)||Object.keys(values).length>128)throw Error('Invalid context group');
+      for(const [key,value] of Object.entries(values)) {
+        if(!conceptId(key)||(group==='capabilities'?typeof value!=='boolean':!discoveryValue(value)))throw Error('Invalid context fact');
+        facts[group].set(key,discoveryFact(structuredClone(value),{kind:'query-context',path:group+'.'+key}));
+      }
+    }
+    return facts;
+  }
+  function evaluateCompiledDiscovery(facts,compiled) {
+    const evidence=compiled.map(({requirement:r,group,predicate})=>{
+      const entry=facts[r.scope][group].get(r.key);
+      return {requirement:r,status:!entry?'unknown':predicate(entry.value)?'compatible':'incompatible',evidence:entry||null};
+    });
+    const summary=rows=>!rows.length?'not-required':rows.some(x=>x.status==='incompatible')?'incompatible':rows.some(x=>x.status==='unknown')?'unknown':'compatible';
+    return {status:summary(evidence),scopes:Object.fromEntries(discoveryScopes.map(s=>[s,summary(evidence.filter(e=>e.requirement.scope===s))])),evidence};
+  }
+  /* Catalog data is assumed to have passed existing publication validation.
+   * Locators are claims, not verified bytes. Caller must use the exact provider
+   * for retrieval; catalog_sha256 identifies the caller's catalog snapshot. */
+  function createDiscoveryIndex(catalog,{catalog_sha256}={}) {
+    const identity=(kind,id,archive_sha256)=>({kind,id,archive_sha256});
+    const exactRef=r=>validRef(r)&&digestId(r.archive_sha256);
+    const key=r=>JSON.stringify([r.kind,r.id,r.archive_sha256]);
+    const cmp=(a,b)=>a<b?-1:a>b?1:0;
+    if(!record(catalog)||catalog.schema!=='smi-public-catalog/1'||!digestId(catalog_sha256)||!Array.isArray(catalog.packs)||!Array.isArray(catalog.assets)||catalog.assets.length>50000||catalog.packs.length>4096||!Array.isArray(catalog.concepts??[])||(catalog.concepts??[]).length>20000) throw Error('Invalid discovery catalog');
+    const packs=new Map(),concepts=new Map(),subjects=new Map(),offers=new Map(),byRole=new Map(),byKind={concept:[],asset:[]},unavailable=new Set();
+    for(const p of catalog.packs) {
+      if(!record(p)||typeof p.id!=='string'||!p.id||packs.has(p.id))throw Error('Duplicate or invalid pack');
+      if(p.zip!=null&&!p.archived&&(!digestId(p.archive_sha256)||p.immutable_zip!==undefined&&p.immutable_zip!=='archives/sha256/'+p.archive_sha256+'.zip'))throw Error('Invalid pack locator');
+      packs.set(p.id,p);
+    }
+    const packRef=(kind,id,owner)=>{
+      const p=packs.get(owner);if(!p||p.archived||!p.zip||!digestId(p.archive_sha256))return null;
+      return identity(kind,id,p.archive_sha256);
+    };
+    function insertSubject(s) {const k=key(s.ref);if(subjects.has(k))throw Error('Duplicate subject');subjects.set(k,s);byKind[s.ref.kind].push(s);}
+    for(const original of catalog.concepts||[]) {
+      const c=structuredClone(original);
+      if(!record(c)||!conceptId(c.id)||concepts.has(c.id))throw Error('Duplicate or invalid concept');
+      const ref=packRef('concept',c.id,c.pack);if(!ref)throw Error('Unresolved concept owner');
+      validateDiscoveryOffers(c.discovery_offers);
+      const facts=discoveryConceptFacts(c,ref),subject={ref,concept:facts,representation:discoveryBlank(),entry:c};
+      concepts.set(c.id,{owner:c.pack,subject});insertSubject(subject);
+      for(const [id,offer] of Object.entries(c.discovery_offers||{})) {
+        if(offers.size>=20000)throw Error('Too many discovery offers');
+        const o={ref:{...ref,offer_id:id},role:offer.role,compiled:compileDiscoveryRequirements(offer.requirements)};
+        const k=JSON.stringify([key(ref),id]);offers.set(k,o);if(!byRole.has(o.role))byRole.set(o.role,[]);byRole.get(o.role).push(o);
+      }
+    }
+    const seenAssets=new Set();
+    for(const original of catalog.assets) {
+      const a=structuredClone(original);
+      if(!record(a)||typeof a.id!=='string'||!a.id||a.id.length>256||seenAssets.has(a.id))throw Error('Duplicate or invalid asset');seenAssets.add(a.id);
+      if(a.legacy||a.discovery==='hidden'){unavailable.add(a.id);continue;}
+      const ref=packRef('asset',a.id,a.pack);
+      if(!ref){unavailable.add(a.id);continue;}
+      const c=concepts.get(a.concept_id);
+      // An unresolved or cross-pack concept_id is a hint, not proof of identity.
+      const facts=c&&c.owner===a.pack?c.subject.concept:discoveryBlank();
+      insertSubject({ref,concept:facts,representation:discoveryAssetFacts(a,ref),entry:a});
+    }
+    for(const group of Object.values(byKind))group.sort((a,b)=>cmp(key(a.ref),key(b.ref)));
+    for(const group of byRole.values())group.sort((a,b)=>cmp(JSON.stringify(a.ref),JSON.stringify(b.ref)));
+    const allOffers=[...offers.values()].sort((a,b)=>cmp(JSON.stringify(a.ref),JSON.stringify(b.ref)));
+    function offerLookup(ref) {
+      if(!only(ref,['kind','id','archive_sha256','offer_id'])||ref.kind!=='concept'||!conceptId(ref.offer_id))throw Error('Invalid offer reference');
+      const {offer_id,...owner}=ref;if(!exactRef(owner))throw Error('Invalid offer owner');return offers.get(JSON.stringify([key(owner),offer_id]));
+    }
+    function queryInternal(request,ranking=null) {
+      if(!only(request,['direction','ref','role','target_kind','context','limit'])||!['subject','offer'].includes(request.direction)||!Number.isInteger(request.limit)||request.limit<1||request.limit>100||request.role!==undefined&&!conceptId(request.role))throw Error('Invalid discovery query');
+      const forward=request.direction==='subject';
+      if(forward&&!exactRef(request.ref))throw Error('Invalid subject reference');
+      if(!forward&&!['concept','asset'].includes(request.target_kind))throw Error('Reverse query requires target kind');
+      if(forward&&request.target_kind!==undefined)throw Error('Target kind only applies to reverse queries');
+      const anchor=forward?subjects.get(key(request.ref)):offerLookup(request.ref);
+      if(!anchor)throw Error('Unknown exact discovery identity');
+      const context=discoveryContextFacts(request.context),others=forward?(request.role?byRole.get(request.role)||[]:allOffers):byKind[request.target_kind];
+      const groups=Object.fromEntries(['compatible','unknown','incompatible'].map(s=>[s,{total:0,matches:[]} ]));
+      const eligible=ranking?[]:null;
+      const match=(subject,offer,result)=>({origin:'derived',relation:'compatible_with',role:offer.role,subject:subject.ref,offer:offer.ref,...result});
+      for(const item of others) {
+        const subject=forward?anchor:item,offer=forward?item:anchor;
+        if(!forward&&request.role&&offer.role!==request.role)continue;
+        if(subject.ref.archive_sha256===offer.ref.archive_sha256&&(subject.ref.kind==='concept'&&subject.ref.id===offer.ref.id||subject.entry.concept_id===offer.ref.id&&subject.entry.pack===concepts.get(offer.ref.id)?.owner))continue;
+        const result=evaluateCompiledDiscovery({concept:subject.concept,representation:subject.representation,context},offer.compiled);
+        const group=groups[result.status];group.total++;
+        if(eligible&&result.status==='compatible')eligible.push(subject);
+        if(group.matches.length<request.limit)group.matches.push(match(subject,offer,result));
+      }
+      if(ranking) {
+        const weights=ranking.weights;
+        const candidates=eligible.map(s=>s.entry);
+        // Ranking is an optional preference over every already-eligible candidate,
+        // not a hard filter and not a materialized all-pairs graph.
+        const scores=rankRelated(ranking.source.entry,candidates,{weights,limit:request.limit});
+        const eligibleById=new Map(eligible.map(s=>[s.ref.id,s]));
+        const chosen=new Set();const rows=[];
+        const add=(subject,preference)=>{
+          chosen.add(subject.ref.id);
+          rows.push({...match(subject,anchor,evaluateCompiledDiscovery({concept:subject.concept,representation:subject.representation,context},anchor.compiled)),preference});
+        };
+        for(const score of scores) {
+          const subject=eligibleById.get(score.id);
+          if(!subject)throw Error('Preference score for ineligible candidate');
+          const dimensions=[...(score.shared.length?['semantic']:[]),...(score.color!==null?['color']:[]),...(score.style!==null?['style']:[])];
+          const coverage=dimensions.reduce((n,k)=>n+weights[k],0)/(weights.semantic+weights.color+weights.style);
+          add(subject,{...score,dimensions_with_evidence:dimensions,evidence_weight_fraction:coverage});
+        }
+        for(const subject of eligible) {if(rows.length>=request.limit)break;if(!chosen.has(subject.ref.id))add(subject,null);}
+        groups.compatible.matches=rows;
+      }
+      return structuredClone({catalog_sha256,contract:'smi-capability-discovery/1',...(ranking?{ranking_scope:'all-compatible-candidates'}:{}),groups});
+    }
+    function query(request) { return queryInternal(request); }
+    /* Reuse the current ranker; missing similarity signals do not disqualify an
+     * eligible candidate. The original score is retained with explicit evidence. */
+    function rankEligible(request,source,options={}) {
+      if(request?.direction!=='offer'||request.target_kind!=='asset'||!exactRef(source)||source.kind!=='asset'||!only(options,['weights']))throw Error('Invalid eligible ranking request');
+      const weights=options.weights??{semantic:0.65,color:0.25,style:0.10};
+      const names=['semantic','color','style'];
+      if(!only(weights,names)||!names.every(k=>Number.isFinite(weights[k])&&weights[k]>=0)||!Number.isFinite(names.reduce((n,k)=>n+weights[k],0))||names.reduce((n,k)=>n+weights[k],0)<=0)throw Error('Invalid preference weights');
+      const src=subjects.get(key(source));if(!src)throw Error('Unknown exact ranking source');
+      return queryInternal(request,{source:src,weights:structuredClone(weights)});
+    }
+    return Object.freeze({query,rankEligible,summary:()=>({subjects:subjects.size,offers:offers.size,excluded_assets:unavailable.size,catalog_sha256})});
   }
   function resolveCollection(index,definitions,fallbackName='Imported collection'){
     // definitions: [{path,pack}] where every path is archive-relative and distinct.
@@ -540,5 +735,5 @@
     if(licenseText&&licenses.has('Apache-2.0')){const notice=await licenseText();if(notice)zip.file('LICENSES/Apache-2.0.txt',notice);}
     return manifest;
   }
-  return Object.freeze({validateMaterialProfiles,rankRelated,safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,validateRepresentations,conceptGraph,projectStates,selectRepresentation,planConceptAction,resolveDefaults,validateRuleRegistry,resolveContributors,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
+  return Object.freeze({validateDiscoveryOffers,createDiscoveryIndex,validateMaterialProfiles,rankRelated,safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,validateRepresentations,conceptGraph,projectStates,selectRepresentation,planConceptAction,resolveDefaults,validateRuleRegistry,resolveContributors,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
 });

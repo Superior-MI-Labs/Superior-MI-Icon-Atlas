@@ -18,6 +18,16 @@ MAX_ARCHIVE_BYTES = 120 * 1024 * 1024
 MAX_TEXTURE_BYTES = 24 * 1024 * 1024
 MAX_TEXTURE_PIXELS = 8192 * 8192
 
+def discovery_offer_errors(concept):
+    """Cross-field constraints after the canonical JSON Schema gate."""
+    errors = []
+    for offer_id, offer in concept.get('discovery_offers', {}).items():
+        for requirement in offer['requirements']:
+            if requirement['op'] == 'quantity.range' and requirement['min'] > requirement['max']:
+                errors.append('Invalid discovery quantity range: ' + concept['id'] + '/' + offer_id)
+    return errors
+
+
 def safe_path(name):
     return isinstance(name, str) and 0 < len(name) < 512 and not name.startswith('/') and not any(x in name for x in ('\\', ':', '\x00')) and all(p not in ('', '.', '..') for p in name.split('/'))
 
@@ -337,6 +347,7 @@ def check(pack_path: Path):
                 if cid in concept_defs: errors.append('Duplicate concept ' + cid)
                 if cid not in linked_concepts: errors.append('Unreferenced concept ' + cid)
                 concept_defs[cid] = concept
+                errors.extend(discovery_offer_errors(concept))
                 for axis, definition in concept.get('state_axes', {}).items():
                     if definition['kind'] == 'enum':
                         if 'default' in definition and definition['default'] not in definition['values']:
