@@ -8,7 +8,8 @@ import unittest
 from pathlib import Path
 from zipfile import ZipFile, ZIP_DEFLATED
 from PIL import Image
-from tools.build_site import ROOT,build
+from tools.build_site import ROOT
+from tests.site_fixture import shared_site
 from tools.qualify_asset_zip import scan
 
 class AssetQualityTests(unittest.TestCase):
@@ -55,8 +56,7 @@ class AssetQualityTests(unittest.TestCase):
             self.assertEqual(strict['validation'],'FAIL')
 
     def test_website_includes_ai_handoff_and_downloadable_grids(self):
-        with tempfile.TemporaryDirectory() as td:
-            site=Path(td);build(site)
+        with shared_site() as site:
             for path in ['ai/START-HERE.md','ai/QA-CHECKLIST.md','ai/PROMPT-EXAMPLES.md',
                          'ai/TEMPLATES.md','templates/authoring-grids.zip','ai-guide.html']:
                 self.assertTrue((site/path).is_file(),path)

@@ -3,7 +3,8 @@ import hashlib, json, tempfile, unittest
 from pathlib import Path
 from PIL import Image
 from jsonschema import Draft202012Validator
-from tools.build_site import ROOT, build_one_collection
+from tools.build_site import ROOT
+from tests.site_fixture import shared_site, fixture
 from tools.validate_visual_pack import check, validate_material_profiles
 
 class MaterialProfileTests(unittest.TestCase):
@@ -26,13 +27,12 @@ class MaterialProfileTests(unittest.TestCase):
         self.assertEqual(count,302)
         records=json.loads((ROOT/'publications.json').read_text())['collections']; self.assertEqual(sum(r['expected_assets'] for r in records if r['path'].startswith('examples/gflow-materials-')),302)
     def test_existing_archive_validator(self):
-        with tempfile.TemporaryDirectory() as td:
+        with shared_site() as site:
             for folder in sorted((ROOT/'examples').glob('gflow-materials-*')):
-                f=Path(td)/(folder.name+'.zip'); build_one_collection(folder.name,f)
-                self.assertLess(f.stat().st_size,95*1024*1024);self.assertEqual(check(f),[],folder.name);f.unlink()
-    def test_catalog_projection_if_built(self):
-        path=ROOT/'site/public-catalog.json'
-        if not path.exists():self.skipTest('Build site first to qualify catalog projection')
+                f=site/'demo'/(folder.name+'.zip')
+                self.assertLess(f.stat().st_size,95*1024*1024);self.assertEqual(check(f),[],folder.name)
+    def test_catalog_projection(self):
+        path=fixture.prepare()/'public-catalog.json'
         c=json.loads(path.read_text()); selected=[a for a in c['assets'] if a['id'].startswith('smi.material.gflow.')]
         self.assertEqual(len(selected),302)
         packs={p['id']:p for p in c['packs']}

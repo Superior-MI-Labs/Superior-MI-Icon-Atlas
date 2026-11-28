@@ -446,7 +446,22 @@
   /* Catalog data is assumed to have passed existing publication validation.
    * Locators are claims, not verified bytes. Caller must use the exact provider
    * for retrieval; catalog_sha256 identifies the caller's catalog snapshot. */
-  function createDiscoveryIndex(catalog,{catalog_sha256}={}) {
+  function createDiscoveryIndex(catalog,options={}) {
+    return buildDiscoveryIndex(catalog,options,false);
+  }
+  // An isolated validated archive projection is not a public catalog or a
+  // downloadable locator. Its identity is the digest of the actual ZIP bytes.
+  function createArchiveDiscoveryIndex(pack,archive_sha256) {
+    if(!digestId(archive_sha256)||!record(pack)||!shortString(pack.pack_id,256)||!Array.isArray(pack.assets))throw Error('Invalid archive discovery input');
+    validateConcepts(pack.concepts,pack.assets);
+    validateRepresentations(pack.concepts||[],pack.assets);
+    const owner=pack.pack_id;
+    const projection={schema:'smi-public-catalog/1',packs:[{id:owner,archive_sha256}],
+      concepts:(pack.concepts||[]).map(c=>({...c,pack:owner})),
+      assets:pack.assets.map(a=>({...a,pack:owner,interfaces:a.implements||[]}))};
+    return buildDiscoveryIndex(projection,{catalog_sha256:archive_sha256},true);
+  }
+  function buildDiscoveryIndex(catalog,{catalog_sha256}={},localArchive=false) {
     const identity=(kind,id,archive_sha256)=>({kind,id,archive_sha256});
     const exactRef=r=>validRef(r)&&digestId(r.archive_sha256);
     const key=r=>JSON.stringify([r.kind,r.id,r.archive_sha256]);
@@ -459,7 +474,7 @@
       packs.set(p.id,p);
     }
     const packRef=(kind,id,owner)=>{
-      const p=packs.get(owner);if(!p||p.archived||!p.zip||!digestId(p.archive_sha256))return null;
+      const p=packs.get(owner);if(!p||p.archived||(!localArchive&&!p.zip)||!digestId(p.archive_sha256))return null;
       return identity(kind,id,p.archive_sha256);
     };
     function insertSubject(s) {const k=key(s.ref);if(subjects.has(k))throw Error('Duplicate subject');subjects.set(k,s);byKind[s.ref.kind].push(s);}
@@ -538,7 +553,7 @@
         for(const subject of eligible) {if(rows.length>=request.limit)break;if(!chosen.has(subject.ref.id))add(subject,null);}
         groups.compatible.matches=rows;
       }
-      return structuredClone({catalog_sha256,contract:'smi-capability-discovery/1',...(ranking?{ranking_scope:'all-compatible-candidates'}:{}),groups});
+      return structuredClone({...(localArchive?{archive_sha256:catalog_sha256,scope:'local-archive'}:{catalog_sha256}),contract:'smi-capability-discovery/1',...(ranking?{ranking_scope:'all-compatible-candidates'}:{}),groups});
     }
     function query(request) { return queryInternal(request); }
     /* Reuse the current ranker; missing similarity signals do not disqualify an
@@ -551,7 +566,7 @@
       const src=subjects.get(key(source));if(!src)throw Error('Unknown exact ranking source');
       return queryInternal(request,{source:src,weights:structuredClone(weights)});
     }
-    return Object.freeze({query,rankEligible,summary:()=>({subjects:subjects.size,offers:offers.size,excluded_assets:unavailable.size,catalog_sha256})});
+    return Object.freeze({query,rankEligible,summary:()=>({subjects:subjects.size,offers:offers.size,excluded_assets:unavailable.size,...(localArchive?{archive_sha256:catalog_sha256,scope:'local-archive'}:{catalog_sha256})})});
   }
   function resolveCollection(index,definitions,fallbackName='Imported collection'){
     // definitions: [{path,pack}] where every path is archive-relative and distinct.
@@ -735,5 +750,5 @@
     if(licenseText&&licenses.has('Apache-2.0')){const notice=await licenseText();if(notice)zip.file('LICENSES/Apache-2.0.txt',notice);}
     return manifest;
   }
-  return Object.freeze({validateDiscoveryOffers,createDiscoveryIndex,validateMaterialProfiles,rankRelated,safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,validateRepresentations,conceptGraph,projectStates,selectRepresentation,planConceptAction,resolveDefaults,validateRuleRegistry,resolveContributors,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
+  return Object.freeze({validateDiscoveryOffers,createDiscoveryIndex,createArchiveDiscoveryIndex,validateMaterialProfiles,rankRelated,safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,validateRepresentations,conceptGraph,projectStates,selectRepresentation,planConceptAction,resolveDefaults,validateRuleRegistry,resolveContributors,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
 });

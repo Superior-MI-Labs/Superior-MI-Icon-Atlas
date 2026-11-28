@@ -237,11 +237,75 @@
     return job;
   }
   function importZip(file,options={}){return mutateRegistry(()=>readZip(file,options));}
+  // Discovery is a read-only preview of an exact local archive or current
+  // public catalog. Never infer public identity from an imported ID or filename.
+  let publicDiscovery=null,publicDiscoveryEntries=new Map();
+  async function archiveDiscovery(file,pack){
+    try{
+      if(!globalThis.crypto?.subtle)return null;
+      const digest=[...new Uint8Array(await crypto.subtle.digest('SHA-256',await file.arrayBuffer()))].map(x=>x.toString(16).padStart(2,'0')).join('');
+      return {digest,index:Collections.createArchiveDiscoveryIndex(pack,digest),concepts:new Map((pack.concepts||[]).map(c=>[c.id,c]))};
+    }catch(error){return {error:error.message};}
+  }
+  async function preparePublicDiscovery(data,bytes){
+    try{
+      if(!globalThis.crypto?.subtle||!(data.concepts||[]).some(c=>c.discovery_offers))return;
+      const digest=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(x=>x.toString(16).padStart(2,'0')).join('');
+      const index=Collections.createDiscoveryIndex(data,{catalog_sha256:digest});
+      const packs=new Map(data.packs.map(p=>[p.id,p]));
+      publicDiscoveryEntries=new Map(data.assets.filter(a=>!a.legacy&&a.discovery!=='hidden'&&packs.get(a.pack)?.zip).map(a=>[a.id,{entry:a,digest:packs.get(a.pack).archive_sha256}]));
+      publicDiscovery=index;
+    }catch(error){publicDiscovery=null;publicDiscoveryEntries.clear();}
+  }
+  function renderDiscovery(a){
+    const panel=$('builder-discovery'),body=$('builder-discovery-results');panel.hidden=true;body.replaceChildren();
+    if(!a||ui.isScene||!a.ownerBag)return;
+    const scoped=bags.get(bagScope);
+    const bag=scoped?.assetIds.includes(a.id)?scoped:bags.get(a.ownerBag);
+    if(!bag)return;
+    const d=bag.discovery;if(!d?.index){if(d?.error){panel.hidden=false;body.textContent='Discovery unavailable: '+d.error;}return;}
+    const current=publicDiscoveryEntries.get(a.id);
+    const isPublic=Boolean(publicDiscovery&&current?.digest===d.digest);
+    const index=isPublic?publicDiscovery:d.index;
+    const ref={kind:'asset',id:a.id,archive_sha256:d.digest};
+    const owner=d.concepts.get(a.concept_id);
+    const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
+    const groups=(parent,result,direction)=>{
+      for(const [status,label] of [['compatible','Declared requirements matched'],['unknown','Incomplete evidence'],['incompatible','Requirements contradicted']]){
+        const group=result.groups[status];if(!group.total)continue;
+        const section=el('details');section.open=status==='compatible';section.append(el('summary',label+' ('+group.total+')'));
+        for(const m of group.matches){
+          const other=direction==='subject'?m.offer:m.subject;
+          const item=el('details');item.append(el('summary',m.role+' · '+other.id+(other.offer_id?' · '+other.offer_id:'')));
+          item.append(el('p','Exact archive: '+other.archive_sha256));
+          for(const row of m.evidence)item.append(el('p',row.requirement.scope+' · '+row.requirement.key+' · '+row.status+(row.evidence?' · '+row.evidence.source.path:'')));
+          section.append(item);
+        }
+        if(group.total>group.matches.length)section.append(el('p','Showing '+group.matches.length+' of '+group.total));
+        parent.append(section);
+      }
+    };
+    try{
+      const result=index.query({direction:'subject',ref,limit:8});
+      if(!Object.values(result.groups).some(g=>g.total)&&!Object.keys(owner?.discovery_offers||{}).length)return;
+      panel.hidden=false;body.append(el('p',isPublic?'Current public catalog — selected ZIP bytes match the catalog owner.':'This exact imported ZIP only — no public identity inferred.'));
+      body.append(el('p','Metadata matches only. No attachment, action or host behavior is activated.'));
+      groups(body,result,'subject');
+      for(const [offer_id,offer] of Object.entries(owner?.discovery_offers||{})){
+        const section=el('details');section.append(el('summary','Find targets · '+offer.role+' · '+offer_id));
+        let done=false;section.addEventListener('toggle',()=>{if(!section.open||done)return;done=true;try{
+          const r=index.query({direction:'offer',ref:{kind:'concept',id:owner.id,archive_sha256:d.digest,offer_id},target_kind:'asset',limit:8});
+          groups(section,r,'offer');if(!Object.values(r.groups).some(g=>g.total))section.append(el('p','No other target entries.'));
+        }catch(e){section.append(el('p',e.message));}});body.append(section);
+      }
+    }catch(error){panel.hidden=false;body.textContent='Discovery unavailable: '+error.message;}
+  }
   async function readZip(file,options={}){
     const {zip,entries,resolved}=await VisualAtlasZip.read(file,{JSZip,Collections,name:file.name||'Imported assets'});
     const bagId=options.id||'bag-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,8);
     if(bags.has(bagId))throw Error('This ZIP is already in My Bag');
     const sourcePack=resolved.pack;
+    const discovery=await archiveDiscovery(file,sourcePack);
     const notices=[];
     for(const entry of entries.filter(e=>/(?:^|\/)(?:LICENSE[^/]*|NOTICE[^/]*|SOURCE-NOTICES[^/]*)$/i.test(e.name)||/(?:^|\/)LICENSES\//i.test(e.name))){
       if(entry._data.uncompressedSize<=MAX_ENTRY)notices.push({path:entry.name,blob:await entry.async('blob')});
@@ -252,7 +316,7 @@
       if(entry._data?.uncompressedSize>MAX_ENTRY)throw Error('Oversized texture '+path);
       return entry.async('uint8array');
     },'',bagId);
-    const bag={...resolved.bag,id:bagId,collectionId:sourcePack.pack_id,filename:file.name||'visual-assets.zip',file,notices,
+    const bag={...resolved.bag,id:bagId,collectionId:sourcePack.pack_id,filename:file.name||'visual-assets.zip',file,notices,discovery,
       previewIds:(sourcePack.preview_profiles||[]).map(p=>p.id),statIds:(sourcePack.stat_profiles||[]).map(p=>p.id),conceptIds:(sourcePack.concepts||[]).map(p=>p.id)};
     bags.set(bagId,bag);openBag(bagId);
     if(!options.restoring&&isPersistEnabled()){
@@ -333,6 +397,7 @@
     updateDriveAvailability();
     $('stage').dataset.interactive=String(!ui.isScene&&Interactions.canPoint(a));
     $('preview-details').textContent=a?'ID: '+a.id+' · '+a.kind+' · License: '+(a.license||'unspecified'): 'Select any asset in the list';
+    renderDiscovery(a);
     if(!a||ui.isScene){$('stat-panel').hidden=true;return;}
     const statProfile=ensureStatRuntime();
     if(statProfile)bindStatsToPreview(statProfile);
@@ -875,7 +940,8 @@
     const select=$('public-example');
     try{
       const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Published asset catalog unavailable');
-      const data=await response.json();
+      const bytes=await response.arrayBuffer();const data=JSON.parse(new TextDecoder().decode(bytes));
+      await preparePublicDiscovery(data,bytes);renderDiscovery(library.get(ui.selected));
       publicPacks=(data.packs||[]).filter(p=>/^demo\/[a-z0-9-]+\.zip$/.test(p.zip||''));
       for(const pack of publicPacks)select.add(new Option(pack.name||pack.id,pack.zip.split('/').at(-1)));
       if(requested){await restored;await openPublished(requested,new URLSearchParams(location.search).get('asset'));}

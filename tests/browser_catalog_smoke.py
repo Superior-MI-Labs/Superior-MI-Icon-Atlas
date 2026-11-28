@@ -541,6 +541,54 @@ def check_capability_discovery(browser, url):
     print("Capability discovery Inspector with test-only catalog offers: PASS")
 
 
+def check_authored_discovery(browser, url):
+    """Actual authored HUD offers and Builder archive identity isolation."""
+    asset_id = "smi.hud.royalforge02.bar.fill.mana"
+    context = browser.new_context(viewport={"width": 1440, "height": 1000})
+    page = context.new_page()
+    errors = []
+    page.on("pageerror", lambda error: errors.append(str(error)))
+    try:
+        page.goto(url + "?asset=" + asset_id, wait_until="domcontentloaded")
+        expect(page.locator("#download-png")).to_be_enabled(timeout=30000)
+        page.locator("#detail-components > summary").click()
+        matched = page.locator('[data-discovery-section] [data-discovery-group="compatible"]')
+        expect(matched).to_be_visible(timeout=20000)
+        expect(matched.get_by_role("button", name=re.compile("Royal Forge Configurable Resource Meter", re.I))).to_be_visible()
+        page.goto(url + "builder.html?example=royal-forge-hud-resources.zip&asset=" + asset_id,
+                  wait_until="domcontentloaded")
+        expect(page.locator("#preview-name")).to_have_text("Bar Fill Mana", timeout=30000)
+        panel = page.locator("#builder-discovery")
+        expect(panel).to_be_visible(timeout=30000)
+        panel.locator("summary").first.click()
+        expect(panel).to_contain_text("Current public catalog")
+        expect(panel).to_contain_text("Declared requirements matched")
+        # A repacked private ZIP with unchanged IDs must not inherit the public
+        # identity. Its bytes differ even though all art and definitions agree.
+        with TemporaryDirectory() as temp:
+            private = Path(temp) / "private-resource.zip"
+            with ZipFile(SITE / "demo" / "royal-forge-hud-resources.zip") as original, ZipFile(private, "w") as archive:
+                for entry in original.infolist():
+                    archive.writestr(entry, original.read(entry.filename))
+                archive.comment = b"private test archive"
+            page.goto(url + "builder.html", wait_until="domcontentloaded")
+            page.locator("#upload").set_input_files(str(private))
+            expect(page.locator("#bag-count")).to_have_text("1 ZIP", timeout=30000)
+            page.locator("#asset-search").fill(asset_id)
+            page.locator('#asset-list [data-asset-id="' + asset_id + '"]').click()
+            expect(page.locator("#preview-name")).to_have_text("Bar Fill Mana")
+            panel = page.locator("#builder-discovery")
+            expect(panel).to_be_visible()
+            panel.locator("summary").first.click()
+            expect(panel).to_contain_text("This exact imported ZIP only")
+            expect(panel).to_contain_text("Declared requirements matched")
+            expect(panel).not_to_contain_text("Current public catalog")
+        assert not errors, errors
+    finally:
+        context.close()
+    print("Authored HUD discovery and private Builder provenance: PASS")
+
+
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--published-only',action='store_true');args=parser.parse_args()
     assert (SITE / "public-catalog.json").exists(), "Build site before browser smoke"
@@ -556,6 +604,7 @@ def main():
                 page.goto(url, wait_until="networkidle")
                 print("Desktop:", check(page,args.published_only))
                 check_capability_discovery(browser, url)
+                check_authored_discovery(browser, url)
                 mobile = browser.new_page(viewport={"width": 390, "height": 844}, base_url=url)
                 mobile.goto(url, wait_until="networkidle")
                 expect(mobile.locator("#count")).to_have_text(published_matches(), timeout=20000)

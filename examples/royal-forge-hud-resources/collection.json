@@ -2,7 +2,7 @@
   "schema": "smi-visual-collection/1",
   "collection_id": "smi.royalforge02.resources",
   "name": "Royal Forge — HUD Resource Systems Vol. 1",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Fantasy RPG resource meters, life indicators and a complete interactive resource HUD",
   "packs": [
     {

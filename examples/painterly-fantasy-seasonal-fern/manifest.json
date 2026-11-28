@@ -1,7 +1,7 @@
 {
   "schema": "smi-visual-pack/1",
   "pack_id": "smi.world.fantasy.woodland.seasonal-fern-20261125a",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Curated single-view foliage preview; no exact isometric angle certified.",
   "license": "CC0-1.0",
   "textures": {
@@ -18,7 +18,7 @@
     {
       "id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.spring",
       "kind": "region",
-      "name": "Woodland fern \u2014 Spring",
+      "name": "Woodland fern — Spring",
       "description": "Painterly woodland fern in its spring appearance. Independent billboard artwork with matched root anchor.",
       "texture": "seasonal",
       "rect_px": [
@@ -48,12 +48,19 @@
         "seasonal",
         "spring",
         "fantasy"
-      ]
+      ],
+      "concept_id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.concept",
+      "representation": {
+        "role": "world",
+        "when": {
+          "season": "spring"
+        }
+      }
     },
     {
       "id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.summer",
       "kind": "region",
-      "name": "Woodland fern \u2014 Summer",
+      "name": "Woodland fern — Summer",
       "description": "Painterly woodland fern in its summer appearance. Independent billboard artwork with matched root anchor.",
       "texture": "seasonal",
       "rect_px": [
@@ -83,12 +90,19 @@
         "seasonal",
         "summer",
         "fantasy"
-      ]
+      ],
+      "concept_id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.concept",
+      "representation": {
+        "role": "world",
+        "when": {
+          "season": "summer"
+        }
+      }
     },
     {
       "id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.autumn",
       "kind": "region",
-      "name": "Woodland fern \u2014 Autumn",
+      "name": "Woodland fern — Autumn",
       "description": "Painterly woodland fern in its autumn appearance. Independent billboard artwork with matched root anchor.",
       "texture": "seasonal",
       "rect_px": [
@@ -118,12 +132,19 @@
         "seasonal",
         "autumn",
         "fantasy"
-      ]
+      ],
+      "concept_id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.concept",
+      "representation": {
+        "role": "world",
+        "when": {
+          "season": "autumn"
+        }
+      }
     },
     {
       "id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.winter",
       "kind": "region",
-      "name": "Woodland fern \u2014 Winter",
+      "name": "Woodland fern — Winter",
       "description": "Painterly woodland fern in its winter appearance. Independent billboard artwork with matched root anchor.",
       "texture": "seasonal",
       "rect_px": [
@@ -153,12 +174,19 @@
         "seasonal",
         "winter",
         "fantasy"
-      ]
+      ],
+      "concept_id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.concept",
+      "representation": {
+        "role": "world",
+        "when": {
+          "season": "winter"
+        }
+      }
     },
     {
       "id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.states",
       "kind": "state_set",
-      "name": "Woodland fern \u2014 Seasonal appearances",
+      "name": "Woodland fern — Seasonal appearances",
       "description": "Four manually selectable appearances; host decides season. No autonomous climate simulation.",
       "style": "painterly fantasy",
       "domain": "world-environment",
@@ -178,7 +206,36 @@
         "autumn": "smi.world.fantasy.woodland.seasonal-fern-20261125a.autumn",
         "winter": "smi.world.fantasy.woodland.seasonal-fern-20261125a.winter"
       },
-      "default_state": "summer"
+      "default_state": "summer",
+      "concept_id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.concept",
+      "representation": {
+        "role": "state-selector"
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "schema": "smi-concept/1",
+      "id": "smi.world.fantasy.woodland.seasonal-fern-20261125a.concept",
+      "name": "Woodland fern",
+      "license": "CC0-1.0",
+      "description": "Four authored seasonal billboard appearances. Host selects season; no physical scale, climate simulation or exact isometric angle is asserted.",
+      "capabilities": [
+        "vegetation",
+        "seasonal-appearance"
+      ],
+      "state_axes": {
+        "season": {
+          "kind": "enum",
+          "values": [
+            "spring",
+            "summer",
+            "autumn",
+            "winter"
+          ],
+          "default": "summer"
+        }
+      }
     }
   ]
 }
