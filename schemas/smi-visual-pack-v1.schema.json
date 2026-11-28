@@ -1873,6 +1873,532 @@
               }
             ]
           }
+        },
+        "actions": {
+          "type": "object",
+          "minProperties": 1,
+          "maxProperties": 64,
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "description": {
+                "type": "string",
+                "maxLength": 1000
+              },
+              "kind": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+              },
+              "requirements": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "op": {
+                          "const": "inventory.has"
+                        },
+                        "owner": {
+                          "enum": [
+                            "actor",
+                            "subject",
+                            "target"
+                          ]
+                        },
+                        "item": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                            },
+                            "archive_sha256": {
+                              "type": "string",
+                              "pattern": "^[a-f0-9]{64}$"
+                            }
+                          },
+                          "required": [
+                            "id"
+                          ]
+                        },
+                        "quantity": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 1000000
+                        }
+                      },
+                      "required": [
+                        "op",
+                        "owner",
+                        "item",
+                        "quantity"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "op": {
+                          "const": "state.is"
+                        },
+                        "owner": {
+                          "enum": [
+                            "actor",
+                            "subject",
+                            "target"
+                          ]
+                        },
+                        "axis": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                        },
+                        "value": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                        }
+                      },
+                      "required": [
+                        "op",
+                        "owner",
+                        "axis",
+                        "value"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "op": {
+                          "const": "capability.has"
+                        },
+                        "owner": {
+                          "enum": [
+                            "actor",
+                            "subject",
+                            "target"
+                          ]
+                        },
+                        "capability": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                        }
+                      },
+                      "required": [
+                        "op",
+                        "owner",
+                        "capability"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "op": {
+                          "const": "stat.at_least"
+                        },
+                        "owner": {
+                          "enum": [
+                            "actor",
+                            "subject",
+                            "target"
+                          ]
+                        },
+                        "stat": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                        },
+                        "magnitude": {
+                          "oneOf": [
+                            {
+                              "$ref": "#/$defs/concept_value"
+                            },
+                            {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "property": {
+                                  "type": "string",
+                                  "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                                }
+                              },
+                              "required": [
+                                "property"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "op",
+                        "owner",
+                        "stat",
+                        "magnitude"
+                      ]
+                    }
+                  ]
+                },
+                "maxItems": 64,
+                "minItems": 0
+              },
+              "operations": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "op": {
+                          "const": "inventory.consume"
+                        },
+                        "owner": {
+                          "enum": [
+                            "actor",
+                            "subject",
+                            "target"
+                          ]
+                        },
+                        "item": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                            },
+                            "archive_sha256": {
+                              "type": "string",
+                              "pattern": "^[a-f0-9]{64}$"
+                            }
+                          },
+                          "required": [
+                            "id"
+                          ]
+                        },
+                        "quantity": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 1000000
+                        },
+                        "when": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "property": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                            },
+                            "equals": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "property",
+                            "equals"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "op",
+                        "owner",
+                        "item",
+                        "quantity"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "op": {
+                          "const": "inventory.produce"
+                        },
+                        "owner": {
+                          "enum": [
+                            "actor",
+                            "subject",
+                            "target"
+                          ]
+                        },
+                        "item": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                            },
+                            "archive_sha256": {
+                              "type": "string",
+                              "pattern": "^[a-f0-9]{64}$"
+                            }
+                          },
+                          "required": [
+                            "id"
+                          ]
+                        },
+                        "quantity": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 1000000
+                        },
+                        "when": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "property": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                            },
+                            "equals": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "property",
+                            "equals"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "op",
+                        "owner",
+                        "item",
+                        "quantity"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "op": {
+                          "const": "stat.consume"
+                        },
+                        "owner": {
+                          "enum": [
+                            "actor",
+                            "subject",
+                            "target"
+                          ]
+                        },
+                        "stat": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                        },
+                        "magnitude": {
+                          "oneOf": [
+                            {
+                              "$ref": "#/$defs/concept_value"
+                            },
+                            {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "property": {
+                                  "type": "string",
+                                  "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                                }
+                              },
+                              "required": [
+                                "property"
+                              ]
+                            }
+                          ]
+                        },
+                        "when": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "property": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                            },
+                            "equals": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "property",
+                            "equals"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "op",
+                        "owner",
+                        "stat",
+                        "magnitude"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "op": {
+                          "const": "stat.change"
+                        },
+                        "owner": {
+                          "enum": [
+                            "actor",
+                            "subject",
+                            "target"
+                          ]
+                        },
+                        "stat": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                        },
+                        "direction": {
+                          "enum": [
+                            "increase",
+                            "decrease"
+                          ]
+                        },
+                        "magnitude": {
+                          "oneOf": [
+                            {
+                              "$ref": "#/$defs/concept_value"
+                            },
+                            {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "property": {
+                                  "type": "string",
+                                  "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                                }
+                              },
+                              "required": [
+                                "property"
+                              ]
+                            }
+                          ]
+                        },
+                        "when": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "property": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                            },
+                            "equals": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "property",
+                            "equals"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "op",
+                        "owner",
+                        "stat",
+                        "direction",
+                        "magnitude"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "op": {
+                          "const": "state.set"
+                        },
+                        "owner": {
+                          "enum": [
+                            "actor",
+                            "subject",
+                            "target"
+                          ]
+                        },
+                        "axis": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                        },
+                        "value": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                        },
+                        "when": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "property": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                            },
+                            "equals": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "property",
+                            "equals"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "op",
+                        "owner",
+                        "axis",
+                        "value"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "op": {
+                          "const": "event.emit"
+                        },
+                        "event": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                        },
+                        "when": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "property": {
+                              "type": "string",
+                              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                            },
+                            "equals": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "property",
+                            "equals"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "op",
+                        "event"
+                      ]
+                    }
+                  ]
+                },
+                "maxItems": 64,
+                "minItems": 1
+              }
+            },
+            "required": [
+              "kind",
+              "operations"
+            ]
+          }
         }
       }
     }

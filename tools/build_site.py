@@ -295,6 +295,7 @@ for(const texture of Object.values(pack.textures)){
                     'capabilities':concept.get('capabilities',[]),
                     'rulesets':sorted(concept.get('defaults',{})),
                     'state_axes':sorted(concept.get('state_axes',{})),
+                    'actions':sorted(concept.get('actions',{})),
                     'relationships':concept.get('relationships',[])}
             # Inherit style only when every styled source region agrees.
             region_styles={a['style'] for a in pack['assets'] if a['kind']=='region' and a.get('style')}

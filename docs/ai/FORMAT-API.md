@@ -182,3 +182,7 @@ The optional `proportion` concept value specifies `fraction`, named `basis`, `ro
 ### Optional concept graph and state projection
 
 See [content graph and state projection](CONTENT-GRAPH.md) for optional `capabilities`, `relationships`, `state_axes` and per-asset `representation` metadata. Semantic edges never extend render dependency closure automatically.
+
+### Optional concept action definitions
+
+See [declarative concept actions](CONCEPT-ACTIONS.md). The pure action planner resolves data, not gameplay state or permissions.

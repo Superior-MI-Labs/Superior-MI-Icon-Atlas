@@ -40,3 +40,7 @@ First contract and import/export tests; then provider retention and registry; th
 ## Patch C/D candidate: semantic graph and state projection
 
 See [content graph](CONTENT-GRAPH.md). Typed semantic links and reverse discovery, concept summaries, independent enum/ratio state axes and role-based visual selection reuse the existing collection core. This is not yet a cross-archive loader, gameplay transaction engine, or spatial assembly format. Source definitions stay canonical, and missing art does not invalidate gameplay state.
+
+## Patch E/F contract slice
+
+See [declarative concept actions and production](CONCEPT-ACTIONS.md). Bounded semantic requirements/operations, contributor-resolved magnitude references and optional policy guards support recipe, item transformation and equipment interaction declarations. Pure planning never authorizes or commits a host transaction; equipment/material registry and actual host execution remain pending.

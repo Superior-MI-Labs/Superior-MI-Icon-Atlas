@@ -333,6 +333,21 @@ def check(pack_path: Path):
                         if (definition['current'] == definition['maximum'] or maxima[-1] != 1 or
                                 any(a >= b for a, b in zip(maxima, maxima[1:])) or len(states) != len(set(states))):
                             errors.append('Invalid ratio state bands ' + cid + '/' + axis)
+                for action_id, action in concept.get('actions', {}).items():
+                    for op in [*action.get('requirements', []), *action['operations']]:
+                        value = op.get('magnitude')
+                        if value is not None and 'property' not in value:
+                            kind = value['kind']
+                            fixed = kind == 'quantity' and value['value'] >= 0
+                            effect = fixed or kind == 'dice' and value['count'] + value['modifier'] >= 0 or kind == 'proportion'
+                            if (op['op'] == 'stat.at_least' and not fixed or
+                                    op['op'] == 'stat.consume' and (not fixed or value['value'] <= 0) or
+                                    op['op'] == 'stat.change' and not effect):
+                                errors.append('Invalid action magnitude ' + cid + '/' + action_id)
+                        if op['op'] == 'state.set' and op['owner'] == 'subject':
+                            axis = concept.get('state_axes', {}).get(op['axis'])
+                            if not axis or axis['kind'] != 'enum' or op['value'] not in axis['values']:
+                                errors.append('Invalid subject state action ' + cid + '/' + action_id)
                 for relation in concept.get('relationships', []):
                     target = relation['target']
                     if target['kind'] == 'concept' and not re.fullmatch(r'[a-z][a-z0-9_.-]{0,127}', target['id']):
