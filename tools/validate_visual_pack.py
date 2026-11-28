@@ -20,6 +20,20 @@ MAX_TEXTURE_PIXELS = 8192 * 8192
 def safe_path(name):
     return isinstance(name, str) and 0 < len(name) < 512 and not name.startswith('/') and not any(x in name for x in ('\\', ':', '\x00')) and all(p not in ('', '.', '..') for p in name.split('/'))
 
+def validate_material_profiles(asset, texture):
+    """Schema validates shapes; these are cross-field invariants shared with JS."""
+    errors=[]; ident=asset.get('id','?')
+    profile=asset.get('visual_profile')
+    if profile is not None:
+        palette=profile['palette']
+        if sum(c['weight_bp'] for c in palette)!=10000 or len({c['hex'] for c in palette})!=len(palette):
+            errors.append('Invalid palette weights or duplicate colors: '+ident)
+    if 'material' in asset:
+        if asset.get('kind')!='region' or not texture or asset.get('rect_px')!=[0,0,texture.get('width_px'),texture.get('height_px')] or asset.get('trim_offset_px') or asset.get('nine_slice_px') or ('logical_size_px' in asset and asset['logical_size_px']!=asset['rect_px'][2:]) or texture.get('color_space','srgb')!='srgb':
+            errors.append('Material base color must be a complete, untrimmed sRGB region: '+ident)
+    return errors
+
+
 def validate_tracks(tracks, duration, label):
     errors, seen = [], set()
     allowed = {'x', 'y', 'opacity', 'scale_x', 'scale_y', 'rotation_deg'}
@@ -249,6 +263,7 @@ def check(pack_path: Path):
                         if img.width * img.height > MAX_TEXTURE_PIXELS:errors.append(f'Excessive image pixels {full}')
                 except Exception as exc: errors.append(f'Invalid image {full}: {exc}')
             for asset in pack['assets']:
+                errors.extend(validate_material_profiles(asset, pack['textures'].get(asset.get('texture'))))
                 errors.extend(validate_behavior(asset))
                 if asset['kind'] == 'region':
                     t = pack['textures'].get(asset['texture'])

@@ -1,0 +1,3579 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.architecture",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-09d063a7": {
+      "path": "textures/rotten-ship-deck-wood-09d063a7.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "32cacc738da040b9e2eba66da2f9a34091aeacc8fb0ed7fdbe8a0b5a617942f6",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-00d80682": {
+      "path": "textures/dark-oak-wood-floor-planks-00d80682.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "17a2c121026a4ff6ced5fe1ae4cab978a14281a3d7949a7a84ef7c9e26c2cd6f",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-69622c17": {
+      "path": "textures/charred-black-wood-floor-planks-69622c17.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "05c3bd1fd9e6010e4676a4bc246bf15cf6bad066baa26e74bef5d5de4dea70c9",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-17b2e9d7": {
+      "path": "textures/white-marble-floor-with-gold-17b2e9d7.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "41bf075e6598d2790672da4049db2b766ede7dd5ca39e6f5928200eb8af0501c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-9de159f7": {
+      "path": "textures/blue-ceramic-floor-tile-9de159f7.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f2863c1595fed662ac225cdb6a5c38f2c3670c4b108b3692efa6ca330e834a09",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-7d8c2d88": {
+      "path": "textures/dark-ironplate-floor-grating-7d8c2d88.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "6633462436d8dd6601d6b9d8243e2fbfb86b9c6f7b751e61e56b700e5f29cf2b",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-e79122de": {
+      "path": "textures/bioluminescent-moonstone-floor-e79122de.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f02c0d94a7fc31f961b6e5c4afda1a03653cc5af08739de9ed53c5a72e850654",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-10ed2208": {
+      "path": "textures/ornate-gold-trimmed-stone-tiles-10ed2208.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "1d77816fbc9a8725b932ce59997ba24337e903b210ab914d6d870f5ca0d2934d",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a45c3d34": {
+      "path": "textures/mossy-dungeon-stone-floor-a45c3d34.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "e0a032a2577bf68ea63683a9232486a1d8c3f191b6abd87c28a2685cc68043f4",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-33d046fb": {
+      "path": "textures/sandstone-bricks-with-hieroglyphs-33d046fb.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "dd86ba3cd578da4dd9a776381a97df6ea088a536139d9dbc86f1d1afb5783fa0",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-b6a410df": {
+      "path": "textures/ashlar-stone-blocks-b6a410df.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "674952668aaf7b961a4dc3fd822dee81cae8a52c653f799e078d598863e0f9a1",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-28077e31": {
+      "path": "textures/golden-lacquered-wood-parquet-28077e31.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "b163a5eafbed8103e0ccaf49dcb3033358275e784373faa7da161dcf5ea22ca9",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-4304cdb9": {
+      "path": "textures/rustic-herringbone-wood-floor-4304cdb9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "ccd827dbdff4772eac8c55ab93a5a9a7fa03f651510f8667fe77b3d7139cfc4c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ef50693f": {
+      "path": "textures/red-clay-brick-wall-ef50693f.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "333d561389bed1d453cf9f4ebe1216ac9143d527f0e0504320bfa1a6e6931a3d",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-8ffc05de": {
+      "path": "textures/cobblestone-street-pavement-8ffc05de.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "2fc6be7a871b33c16ad4360181415b1846fb4c863de238197d38a2224e69a0c8",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-3d86753a": {
+      "path": "textures/slate-flagstone-patio-3d86753a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "9054b116ad8dc937ddb9da568d21f5a1322504133baa78539b4b44872a324736",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-04520cc9": {
+      "path": "textures/volcanic-obsidian-brick-04520cc9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "34ffda5af94bcf2aa5588a4258499adf4adb04247d654d9f3a7fd947732c2ca6",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-0bf5bbd3": {
+      "path": "textures/rough-timber-log-flooring-0bf5bbd3.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "b090c3ba8ef2ceae99d30dfa61ae14fab0a76051c7bec02230ceaa9469e3e76f",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-5dcd5720": {
+      "path": "textures/overgrown-garden-pathway-stone-5dcd5720.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "00aa71c481b69cc2e0b9cf9bed5a25878fe9729640590ebf41133d05457db64b",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-0ce8f0a9": {
+      "path": "textures/weathered-granite-pavers-0ce8f0a9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f4a133f72c73045645cd312f9038130604caf532db81a6570af6ff584c1d8795",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-72fbaab2": {
+      "path": "textures/crystal-amethyst-stone-tiles-72fbaab2.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "7b2c7519a69a167ff6a4511a0fd887cae8ae3abbef94ac435c60696d275fc757",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-e0748c7d": {
+      "path": "textures/stained-glass-mosaic-floor-tiles-e0748c7d.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d41abf05bc4777b2c6e141a8b988f51cd118244b53096abc30169b2184f5f0dd",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-e1f51b4a": {
+      "path": "textures/petrified-wood-floor-tiles-e1f51b4a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "0b2f2b49e825a7f123a6c5c1b1d6d73fec7d2dba5165e83b8c26f855ee90dd31",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-e5d1a3d7": {
+      "path": "textures/carved-stone-floor-slabs-e5d1a3d7.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "8409d7b2a7192d4d09336675a99ba23916e7182b89c14ca3e154c66b781350a9",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.09d063a7",
+      "kind": "region",
+      "name": "Rotten ship deck wood",
+      "description": "Rotten ship deck wood: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-09d063a7",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "weathered",
+        "organic",
+        "rotten",
+        "ship",
+        "deck"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "weathered",
+        "organic",
+        "rotten",
+        "ship",
+        "deck",
+        "olive",
+        "black",
+        "brown",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#514c39",
+            "weight_bp": 1577
+          },
+          {
+            "hex": "#1d1c10",
+            "weight_bp": 1325
+          },
+          {
+            "hex": "#463f2d",
+            "weight_bp": 1305
+          },
+          {
+            "hex": "#393827",
+            "weight_bp": 1275
+          },
+          {
+            "hex": "#332d1e",
+            "weight_bp": 1224
+          },
+          {
+            "hex": "#262717",
+            "weight_bp": 1202
+          },
+          {
+            "hex": "#0e0e08",
+            "weight_bp": 1094
+          },
+          {
+            "hex": "#706b58",
+            "weight_bp": 998
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "black",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03797,
+          "y_mae": 0.10009,
+          "x_ratio": 1.1463,
+          "y_ratio": 2.1306,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Rotten_ship_deck_wood_texture_09d063a7.jpg",
+          "sha256": "94000faff57be2bc9e6e8d2ed104811f3c1e53d80e2702b6ee84e21015d93dc2",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.00d80682",
+      "kind": "region",
+      "name": "Dark oak wood floor planks",
+      "description": "Dark oak wood floor planks: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-00d80682",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "construction",
+        "patterned",
+        "organic",
+        "dark",
+        "oak",
+        "planks"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "construction",
+        "patterned",
+        "organic",
+        "dark",
+        "oak",
+        "planks",
+        "brown",
+        "black",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#4e3c2c",
+            "weight_bp": 1517
+          },
+          {
+            "hex": "#3a332b",
+            "weight_bp": 1390
+          },
+          {
+            "hex": "#2e2924",
+            "weight_bp": 1364
+          },
+          {
+            "hex": "#28211a",
+            "weight_bp": 1280
+          },
+          {
+            "hex": "#392c22",
+            "weight_bp": 1164
+          },
+          {
+            "hex": "#463526",
+            "weight_bp": 1129
+          },
+          {
+            "hex": "#644c35",
+            "weight_bp": 1120
+          },
+          {
+            "hex": "#19140f",
+            "weight_bp": 1036
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.01441,
+          "y_mae": 0.04237,
+          "x_ratio": 1.3469,
+          "y_ratio": 1.4828,
+          "screening": "low-discontinuity"
+        },
+        "source": {
+          "filename": "Dark_oak_wood_floor_planks_00d80682.jpg",
+          "sha256": "2f2d61f229ef8606c7e219352c4e96dcdfc6fe81bade7c3ea6b2e700244f3940",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.69622c17",
+      "kind": "region",
+      "name": "Charred black wood floor planks",
+      "description": "Charred black wood floor planks: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-69622c17",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "lava",
+        "construction",
+        "patterned",
+        "organic",
+        "charred",
+        "black",
+        "planks"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "lava",
+        "construction",
+        "patterned",
+        "organic",
+        "charred",
+        "black",
+        "planks",
+        "gray",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#312f2e",
+            "weight_bp": 1624
+          },
+          {
+            "hex": "#2a2827",
+            "weight_bp": 1366
+          },
+          {
+            "hex": "#1c1c1b",
+            "weight_bp": 1349
+          },
+          {
+            "hex": "#22201f",
+            "weight_bp": 1280
+          },
+          {
+            "hex": "#161615",
+            "weight_bp": 1150
+          },
+          {
+            "hex": "#252424",
+            "weight_bp": 1132
+          },
+          {
+            "hex": "#403e3c",
+            "weight_bp": 1065
+          },
+          {
+            "hex": "#0a0909",
+            "weight_bp": 1034
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02847,
+          "y_mae": 0.04627,
+          "x_ratio": 0.9588,
+          "y_ratio": 2.6684,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Charred_black_wood_floor_planks_69622c17.jpg",
+          "sha256": "9a3bba9141ee4b902f06917f4ec5d351841de0419cbd66c4cf65eb5cc363ee5b",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.17b2e9d7",
+      "kind": "region",
+      "name": "White marble floor with gold",
+      "description": "White marble floor with gold: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-17b2e9d7",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "white",
+        "marble",
+        "gold"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "white",
+        "marble",
+        "gold",
+        "orange",
+        "brown",
+        "yellow",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#e1dcd1",
+            "weight_bp": 1626
+          },
+          {
+            "hex": "#ebe5d5",
+            "weight_bp": 1561
+          },
+          {
+            "hex": "#c2a064",
+            "weight_bp": 1350
+          },
+          {
+            "hex": "#cdae72",
+            "weight_bp": 1280
+          },
+          {
+            "hex": "#f3efe3",
+            "weight_bp": 1169
+          },
+          {
+            "hex": "#d8c088",
+            "weight_bp": 1105
+          },
+          {
+            "hex": "#b48d50",
+            "weight_bp": 1071
+          },
+          {
+            "hex": "#dfd4b8",
+            "weight_bp": 838
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "white",
+          "orange",
+          "brown",
+          "yellow"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05632,
+          "y_mae": 0.03566,
+          "x_ratio": 1.0562,
+          "y_ratio": 0.6772,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "White_marble_floor_with_gold_17b2e9d7.jpg",
+          "sha256": "8353057de06f78b56d5fed412d8070c30dd6732343453354eb64b37f186a5cc5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.9de159f7",
+      "kind": "region",
+      "name": "Blue ceramic floor tile",
+      "description": "Blue ceramic floor tile: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-9de159f7",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "ceramic",
+        "tiles",
+        "construction",
+        "blue",
+        "tile"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "ceramic",
+        "tiles",
+        "construction",
+        "blue",
+        "tile",
+        "brown",
+        "gray",
+        "teal",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#7d7465",
+            "weight_bp": 1717
+          },
+          {
+            "hex": "#355381",
+            "weight_bp": 1601
+          },
+          {
+            "hex": "#4e7182",
+            "weight_bp": 1293
+          },
+          {
+            "hex": "#a1947a",
+            "weight_bp": 1217
+          },
+          {
+            "hex": "#5a5a5e",
+            "weight_bp": 1196
+          },
+          {
+            "hex": "#2a2b36",
+            "weight_bp": 1186
+          },
+          {
+            "hex": "#304065",
+            "weight_bp": 959
+          },
+          {
+            "hex": "#5c8990",
+            "weight_bp": 831
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "blue",
+          "gray",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03739,
+          "y_mae": 0.04114,
+          "x_ratio": 0.6518,
+          "y_ratio": 0.7215,
+          "screening": "low-discontinuity"
+        },
+        "source": {
+          "filename": "Blue_ceramic_floor_tile_texture_9de159f7.jpg",
+          "sha256": "abc15809399bf0a3d177535915c1991a79d1edae58c312be1ed7e78411cb40f5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.7d8c2d88",
+      "kind": "region",
+      "name": "Dark ironplate floor grating",
+      "description": "Dark ironplate floor grating: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-7d8c2d88",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "metal",
+        "construction",
+        "patterned",
+        "dark",
+        "ironplate",
+        "grating"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "metal",
+        "construction",
+        "patterned",
+        "dark",
+        "ironplate",
+        "grating",
+        "gray",
+        "brown",
+        "black",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#444340",
+            "weight_bp": 1762
+          },
+          {
+            "hex": "#313333",
+            "weight_bp": 1407
+          },
+          {
+            "hex": "#2c2823",
+            "weight_bp": 1364
+          },
+          {
+            "hex": "#141311",
+            "weight_bp": 1246
+          },
+          {
+            "hex": "#040404",
+            "weight_bp": 1216
+          },
+          {
+            "hex": "#201f1d",
+            "weight_bp": 1107
+          },
+          {
+            "hex": "#3e3731",
+            "weight_bp": 993
+          },
+          {
+            "hex": "#5c6060",
+            "weight_bp": 905
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02237,
+          "y_mae": 0.02945,
+          "x_ratio": 0.7687,
+          "y_ratio": 1.0475,
+          "screening": "low-discontinuity"
+        },
+        "source": {
+          "filename": "Dark_ironplate_floor_grating_tex…_7d8c2d88.jpg",
+          "sha256": "c0c7d9e06d1f870e989ea1395091a21f18c5c1f4a3c231d344b0a466f02bdb79",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.e79122de",
+      "kind": "region",
+      "name": "Bioluminescent moonstone floor",
+      "description": "Bioluminescent moonstone floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-e79122de",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "crystal",
+        "magic",
+        "construction",
+        "glowing",
+        "bioluminescent",
+        "moonstone"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "crystal",
+        "magic",
+        "construction",
+        "glowing",
+        "bioluminescent",
+        "moonstone",
+        "blue",
+        "teal",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#304960",
+            "weight_bp": 1544
+          },
+          {
+            "hex": "#7291a6",
+            "weight_bp": 1390
+          },
+          {
+            "hex": "#5bb9d5",
+            "weight_bp": 1367
+          },
+          {
+            "hex": "#586d80",
+            "weight_bp": 1297
+          },
+          {
+            "hex": "#498daf",
+            "weight_bp": 1230
+          },
+          {
+            "hex": "#18273b",
+            "weight_bp": 1074
+          },
+          {
+            "hex": "#8ec2d3",
+            "weight_bp": 1065
+          },
+          {
+            "hex": "#356687",
+            "weight_bp": 1033
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03844,
+          "y_mae": 0.10308,
+          "x_ratio": 0.9529,
+          "y_ratio": 2.6303,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bioluminescent_moonstone_floor_t…_e79122de.jpg",
+          "sha256": "cbb67ae2c393e4e7ac26503996fc2bb97c75f44cc6569a08832078bdb0044be8",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.10ed2208",
+      "kind": "region",
+      "name": "Ornate gold-trimmed stone tiles",
+      "description": "Ornate gold-trimmed stone tiles: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-10ed2208",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "tiles",
+        "construction",
+        "patterned",
+        "ornate",
+        "gold",
+        "trimmed"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "tiles",
+        "construction",
+        "patterned",
+        "ornate",
+        "gold",
+        "trimmed",
+        "brown",
+        "orange",
+        "blue",
+        "gray",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#a47e48",
+            "weight_bp": 1328
+          },
+          {
+            "hex": "#d2bf9b",
+            "weight_bp": 1303
+          },
+          {
+            "hex": "#3a4856",
+            "weight_bp": 1288
+          },
+          {
+            "hex": "#6f5332",
+            "weight_bp": 1247
+          },
+          {
+            "hex": "#896c45",
+            "weight_bp": 1225
+          },
+          {
+            "hex": "#223145",
+            "weight_bp": 1223
+          },
+          {
+            "hex": "#38342f",
+            "weight_bp": 1204
+          },
+          {
+            "hex": "#bca072",
+            "weight_bp": 1182
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "orange",
+          "blue",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06789,
+          "y_mae": 0.25117,
+          "x_ratio": 1.4367,
+          "y_ratio": 5.3698,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Ornate_gold-trimmed_stone_tiles_10ed2208.jpg",
+          "sha256": "ca5f4e8a8efebb3229fbde58bffb359f6f6f2bda56fc4e5d213a4bc45e5b1431",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a45c3d34",
+      "kind": "region",
+      "name": "Mossy dungeon stone floor",
+      "description": "Mossy dungeon stone floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a45c3d34",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "mossy",
+        "dungeon"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "mossy",
+        "dungeon",
+        "olive",
+        "green",
+        "brown",
+        "black",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#46452e",
+            "weight_bp": 1626
+          },
+          {
+            "hex": "#35382b",
+            "weight_bp": 1478
+          },
+          {
+            "hex": "#352f23",
+            "weight_bp": 1265
+          },
+          {
+            "hex": "#242116",
+            "weight_bp": 1261
+          },
+          {
+            "hex": "#413a29",
+            "weight_bp": 1220
+          },
+          {
+            "hex": "#2b2c21",
+            "weight_bp": 1122
+          },
+          {
+            "hex": "#14120c",
+            "weight_bp": 1038
+          },
+          {
+            "hex": "#615f33",
+            "weight_bp": 990
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "green",
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03897,
+          "y_mae": 0.04759,
+          "x_ratio": 1.486,
+          "y_ratio": 1.8069,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Mossy_dungeon_stone_floor_texture_a45c3d34.jpg",
+          "sha256": "5b1935c2c1eb2e9fff5c3449ce0e372da8ca11596e5b25928447eb3660ce3240",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.33d046fb",
+      "kind": "region",
+      "name": "Sandstone bricks with hieroglyphs",
+      "description": "Sandstone bricks with hieroglyphs: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-33d046fb",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "brick",
+        "construction",
+        "patterned",
+        "sandstone",
+        "bricks",
+        "hieroglyphs"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "brick",
+        "construction",
+        "patterned",
+        "sandstone",
+        "bricks",
+        "hieroglyphs",
+        "orange",
+        "brown",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#d59c5a",
+            "weight_bp": 1587
+          },
+          {
+            "hex": "#a06b40",
+            "weight_bp": 1307
+          },
+          {
+            "hex": "#b97342",
+            "weight_bp": 1280
+          },
+          {
+            "hex": "#bc854f",
+            "weight_bp": 1250
+          },
+          {
+            "hex": "#cf8b4d",
+            "weight_bp": 1241
+          },
+          {
+            "hex": "#512c1b",
+            "weight_bp": 1196
+          },
+          {
+            "hex": "#864f2f",
+            "weight_bp": 1093
+          },
+          {
+            "hex": "#e4b36d",
+            "weight_bp": 1046
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "orange",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04265,
+          "y_mae": 0.07029,
+          "x_ratio": 0.9047,
+          "y_ratio": 1.3798,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Sandstone_bricks_with_hieroglyph…_33d046fb.jpg",
+          "sha256": "de210c96e8ea87965ff278a7e13f66b9724ac50d92f952e949bdc51e5fc388ae",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.b6a410df",
+      "kind": "region",
+      "name": "Ashlar stone blocks",
+      "description": "Ashlar stone blocks: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-b6a410df",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "ashlar",
+        "blocks"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "ashlar",
+        "blocks",
+        "brown",
+        "gray",
+        "olive",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#91846d",
+            "weight_bp": 1552
+          },
+          {
+            "hex": "#787467",
+            "weight_bp": 1349
+          },
+          {
+            "hex": "#534f42",
+            "weight_bp": 1270
+          },
+          {
+            "hex": "#606057",
+            "weight_bp": 1251
+          },
+          {
+            "hex": "#706857",
+            "weight_bp": 1188
+          },
+          {
+            "hex": "#887960",
+            "weight_bp": 1163
+          },
+          {
+            "hex": "#3c392c",
+            "weight_bp": 1118
+          },
+          {
+            "hex": "#a1937a",
+            "weight_bp": 1109
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "gray",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05288,
+          "y_mae": 0.08849,
+          "x_ratio": 1.909,
+          "y_ratio": 2.1467,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Ashlar_stone_blocks_texture_b6a410df.jpg",
+          "sha256": "f2460e006d160be753f41600b79fd5660b907ebfbf0641ef2320f91dc92b79ef",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.28077e31",
+      "kind": "region",
+      "name": "Golden lacquered wood parquet",
+      "description": "Golden lacquered wood parquet: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-28077e31",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "tiles",
+        "construction",
+        "patterned",
+        "organic",
+        "golden",
+        "lacquered",
+        "parquet"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "tiles",
+        "construction",
+        "patterned",
+        "organic",
+        "golden",
+        "lacquered",
+        "parquet",
+        "brown",
+        "orange",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#b2742e",
+            "weight_bp": 1552
+          },
+          {
+            "hex": "#8e521e",
+            "weight_bp": 1323
+          },
+          {
+            "hex": "#754019",
+            "weight_bp": 1310
+          },
+          {
+            "hex": "#a66526",
+            "weight_bp": 1273
+          },
+          {
+            "hex": "#7f4b1f",
+            "weight_bp": 1236
+          },
+          {
+            "hex": "#965e27",
+            "weight_bp": 1193
+          },
+          {
+            "hex": "#5d3214",
+            "weight_bp": 1058
+          },
+          {
+            "hex": "#cb923f",
+            "weight_bp": 1055
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "orange"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05058,
+          "y_mae": 0.10371,
+          "x_ratio": 0.8399,
+          "y_ratio": 1.9115,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Golden_lacquered_wood_parquet_te…_28077e31.jpg",
+          "sha256": "3ee1d83f15878bcdb66642e94a4c3797bf4a9e719503aafc11f255b15db59058",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.4304cdb9",
+      "kind": "region",
+      "name": "Rustic herringbone wood floor",
+      "description": "Rustic herringbone wood floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-4304cdb9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "construction",
+        "patterned",
+        "organic",
+        "rustic",
+        "herringbone"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "construction",
+        "patterned",
+        "organic",
+        "rustic",
+        "herringbone",
+        "brown",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#8f6034",
+            "weight_bp": 1563
+          },
+          {
+            "hex": "#664427",
+            "weight_bp": 1356
+          },
+          {
+            "hex": "#5a391f",
+            "weight_bp": 1265
+          },
+          {
+            "hex": "#785330",
+            "weight_bp": 1222
+          },
+          {
+            "hex": "#774824",
+            "weight_bp": 1213
+          },
+          {
+            "hex": "#89552a",
+            "weight_bp": 1188
+          },
+          {
+            "hex": "#a17140",
+            "weight_bp": 1146
+          },
+          {
+            "hex": "#362111",
+            "weight_bp": 1047
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0447,
+          "y_mae": 0.0744,
+          "x_ratio": 1.3452,
+          "y_ratio": 2.2539,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Rustic_herringbone_wood_floor_te…_4304cdb9.jpg",
+          "sha256": "bdca3c2c3a79cab3f96d7c07c1320a32ebdf0e0061cd7f057117eccb754af9a2",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ef50693f",
+      "kind": "region",
+      "name": "Red clay brick wall",
+      "description": "Red clay brick wall: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ef50693f",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "brick",
+        "construction",
+        "red",
+        "clay",
+        "wall"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "brick",
+        "construction",
+        "red",
+        "clay",
+        "wall",
+        "brown",
+        "black",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.structures.walls"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#8d3f24",
+            "weight_bp": 1586
+          },
+          {
+            "hex": "#522a1b",
+            "weight_bp": 1398
+          },
+          {
+            "hex": "#342518",
+            "weight_bp": 1238
+          },
+          {
+            "hex": "#70321e",
+            "weight_bp": 1222
+          },
+          {
+            "hex": "#8d4c2e",
+            "weight_bp": 1208
+          },
+          {
+            "hex": "#a1633c",
+            "weight_bp": 1171
+          },
+          {
+            "hex": "#25130c",
+            "weight_bp": 1133
+          },
+          {
+            "hex": "#693d28",
+            "weight_bp": 1044
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "red",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03789,
+          "y_mae": 0.14435,
+          "x_ratio": 1.4196,
+          "y_ratio": 4.1167,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Red_clay_brick_wall_texture_ef50693f.jpg",
+          "sha256": "836850fc76d671829329f5dd53be306a1fa30896f2430ffbd3518e667e86818a",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.8ffc05de",
+      "kind": "region",
+      "name": "Cobblestone street pavement",
+      "description": "Cobblestone street pavement: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-8ffc05de",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "path",
+        "cobblestone",
+        "street",
+        "pavement"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "path",
+        "cobblestone",
+        "street",
+        "pavement",
+        "brown",
+        "olive",
+        "black",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#85795d",
+            "weight_bp": 1463
+          },
+          {
+            "hex": "#2d291b",
+            "weight_bp": 1360
+          },
+          {
+            "hex": "#5b5842",
+            "weight_bp": 1268
+          },
+          {
+            "hex": "#4f452f",
+            "weight_bp": 1238
+          },
+          {
+            "hex": "#736448",
+            "weight_bp": 1227
+          },
+          {
+            "hex": "#3a3927",
+            "weight_bp": 1201
+          },
+          {
+            "hex": "#1a170e",
+            "weight_bp": 1146
+          },
+          {
+            "hex": "#a6997e",
+            "weight_bp": 1097
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "olive",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0528,
+          "y_mae": 0.07904,
+          "x_ratio": 1.4622,
+          "y_ratio": 2.1882,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Cobblestone_street_pavement_texture_8ffc05de.jpg",
+          "sha256": "e5d058f082e524e87c953b79856e7a1cee9633c5b7a920ae4bc5b0248c4a9704",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.3d86753a",
+      "kind": "region",
+      "name": "Slate flagstone patio",
+      "description": "Slate flagstone patio: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-3d86753a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "slate",
+        "flagstone",
+        "patio"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "slate",
+        "flagstone",
+        "patio",
+        "gray",
+        "black",
+        "green",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#454b41",
+            "weight_bp": 1610
+          },
+          {
+            "hex": "#353534",
+            "weight_bp": 1371
+          },
+          {
+            "hex": "#29312b",
+            "weight_bp": 1316
+          },
+          {
+            "hex": "#42413d",
+            "weight_bp": 1307
+          },
+          {
+            "hex": "#131610",
+            "weight_bp": 1217
+          },
+          {
+            "hex": "#232722",
+            "weight_bp": 1104
+          },
+          {
+            "hex": "#333e36",
+            "weight_bp": 1053
+          },
+          {
+            "hex": "#576446",
+            "weight_bp": 1022
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "black",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02395,
+          "y_mae": 0.04511,
+          "x_ratio": 0.9929,
+          "y_ratio": 1.84,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Slate_flagstone_patio_texture_wi…_3d86753a.jpg",
+          "sha256": "5af8e68328bdb80b94367b94bc7f719ba5d66733f885449504ed0fc0f4f3769a",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.04520cc9",
+      "kind": "region",
+      "name": "Volcanic obsidian brick",
+      "description": "Volcanic obsidian brick: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-04520cc9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "brick",
+        "lava",
+        "construction",
+        "volcanic",
+        "obsidian"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "brick",
+        "lava",
+        "construction",
+        "volcanic",
+        "obsidian",
+        "black",
+        "purple",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#201c24",
+            "weight_bp": 1904
+          },
+          {
+            "hex": "#30252c",
+            "weight_bp": 1738
+          },
+          {
+            "hex": "#1b151c",
+            "weight_bp": 1441
+          },
+          {
+            "hex": "#151118",
+            "weight_bp": 1337
+          },
+          {
+            "hex": "#2c1e24",
+            "weight_bp": 1106
+          },
+          {
+            "hex": "#43363e",
+            "weight_bp": 1019
+          },
+          {
+            "hex": "#0c090d",
+            "weight_bp": 926
+          },
+          {
+            "hex": "#24151a",
+            "weight_bp": 529
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.01861,
+          "y_mae": 0.06064,
+          "x_ratio": 1.1731,
+          "y_ratio": 3.7259,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Volcanic_obsidian_brick_texture_04520cc9.jpg",
+          "sha256": "7d1de06a28ba687959cdbcb07681b5291e2285c5013f02900465a95d75f2406a",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.0bf5bbd3",
+      "kind": "region",
+      "name": "Rough timber log flooring",
+      "description": "Rough timber log flooring: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-0bf5bbd3",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "construction",
+        "rough",
+        "timber",
+        "log"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "construction",
+        "rough",
+        "timber",
+        "log",
+        "brown",
+        "black",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#81633e",
+            "weight_bp": 1516
+          },
+          {
+            "hex": "#583e24",
+            "weight_bp": 1419
+          },
+          {
+            "hex": "#74532f",
+            "weight_bp": 1233
+          },
+          {
+            "hex": "#453420",
+            "weight_bp": 1229
+          },
+          {
+            "hex": "#2f2415",
+            "weight_bp": 1205
+          },
+          {
+            "hex": "#624c32",
+            "weight_bp": 1194
+          },
+          {
+            "hex": "#18120a",
+            "weight_bp": 1179
+          },
+          {
+            "hex": "#9c7e52",
+            "weight_bp": 1025
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04589,
+          "y_mae": 0.23134,
+          "x_ratio": 2.0615,
+          "y_ratio": 4.3718,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Rough_timber_log_flooring_texture_0bf5bbd3.jpg",
+          "sha256": "c3de61f34a5d9a53e3ee2d0b95e83c5353f3ed79e5e831f843abb10bbd12bb14",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.5dcd5720",
+      "kind": "region",
+      "name": "Overgrown garden pathway stone",
+      "description": "Overgrown garden pathway stone: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-5dcd5720",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "path",
+        "overgrown",
+        "garden",
+        "pathway"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "path",
+        "overgrown",
+        "garden",
+        "pathway",
+        "olive",
+        "green",
+        "yellow",
+        "black",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#7f764d",
+            "weight_bp": 1456
+          },
+          {
+            "hex": "#373f1a",
+            "weight_bp": 1362
+          },
+          {
+            "hex": "#3f541e",
+            "weight_bp": 1356
+          },
+          {
+            "hex": "#898752",
+            "weight_bp": 1300
+          },
+          {
+            "hex": "#a8a169",
+            "weight_bp": 1190
+          },
+          {
+            "hex": "#607038",
+            "weight_bp": 1135
+          },
+          {
+            "hex": "#25250f",
+            "weight_bp": 1117
+          },
+          {
+            "hex": "#5e5b35",
+            "weight_bp": 1084
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "green",
+          "yellow",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03723,
+          "y_mae": 0.08985,
+          "x_ratio": 1.0138,
+          "y_ratio": 2.4821,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Overgrown_garden_pathway_stone_p…_5dcd5720.jpg",
+          "sha256": "2a1a1e1ab465a4b8c5f0a1ef54c3283f65949f4278d503a20ef0ff0a8eb5896d",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.0ce8f0a9",
+      "kind": "region",
+      "name": "Weathered granite pavers",
+      "description": "Weathered granite pavers: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-0ce8f0a9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "path",
+        "weathered",
+        "granite",
+        "pavers"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "path",
+        "weathered",
+        "granite",
+        "pavers",
+        "gray",
+        "black",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#5b5b52",
+            "weight_bp": 1675
+          },
+          {
+            "hex": "#2d2e27",
+            "weight_bp": 1358
+          },
+          {
+            "hex": "#42423b",
+            "weight_bp": 1287
+          },
+          {
+            "hex": "#484b48",
+            "weight_bp": 1286
+          },
+          {
+            "hex": "#383b36",
+            "weight_bp": 1209
+          },
+          {
+            "hex": "#525048",
+            "weight_bp": 1141
+          },
+          {
+            "hex": "#1a1a16",
+            "weight_bp": 1105
+          },
+          {
+            "hex": "#727266",
+            "weight_bp": 939
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04901,
+          "y_mae": 0.088,
+          "x_ratio": 1.3262,
+          "y_ratio": 2.474,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Weathered_granite_pavers_top-dow…_0ce8f0a9.jpg",
+          "sha256": "ca3f0901946a4716c15f8abb82fea7e9f700a11c2231c1dcea112b0347040558",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": [
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.72fbaab2",
+      "kind": "region",
+      "name": "Crystal amethyst stone tiles",
+      "description": "Crystal amethyst stone tiles: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-72fbaab2",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "crystal",
+        "tiles",
+        "construction",
+        "patterned",
+        "amethyst"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "crystal",
+        "tiles",
+        "construction",
+        "patterned",
+        "amethyst",
+        "blue",
+        "purple",
+        "black",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#38394f",
+            "weight_bp": 2013
+          },
+          {
+            "hex": "#302a40",
+            "weight_bp": 1597
+          },
+          {
+            "hex": "#564869",
+            "weight_bp": 1412
+          },
+          {
+            "hex": "#262637",
+            "weight_bp": 1204
+          },
+          {
+            "hex": "#826792",
+            "weight_bp": 1121
+          },
+          {
+            "hex": "#1b1523",
+            "weight_bp": 1072
+          },
+          {
+            "hex": "#523c60",
+            "weight_bp": 1023
+          },
+          {
+            "hex": "#482859",
+            "weight_bp": 558
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "purple",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05855,
+          "y_mae": 0.10112,
+          "x_ratio": 1.5207,
+          "y_ratio": 2.7581,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Crystal_amethyst_stone_tiles_tex…_72fbaab2.jpg",
+          "sha256": "7220bcb950af0891e45f29a5615092e80e8511537fa9f9ac281c70cdbcfcc828",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.e0748c7d",
+      "kind": "region",
+      "name": "Stained glass mosaic floor tiles",
+      "description": "Stained glass mosaic floor tiles: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-e0748c7d",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "glass",
+        "tiles",
+        "construction",
+        "patterned",
+        "stained",
+        "mosaic"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "glass",
+        "tiles",
+        "construction",
+        "patterned",
+        "stained",
+        "mosaic",
+        "gray",
+        "brown",
+        "blue",
+        "green",
+        "purple",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#372f32",
+            "weight_bp": 2595
+          },
+          {
+            "hex": "#493d3b",
+            "weight_bp": 1568
+          },
+          {
+            "hex": "#363b3f",
+            "weight_bp": 1373
+          },
+          {
+            "hex": "#474742",
+            "weight_bp": 1227
+          },
+          {
+            "hex": "#252333",
+            "weight_bp": 985
+          },
+          {
+            "hex": "#5e6451",
+            "weight_bp": 942
+          },
+          {
+            "hex": "#522a3a",
+            "weight_bp": 834
+          },
+          {
+            "hex": "#2c2f36",
+            "weight_bp": 476
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "brown",
+          "blue",
+          "green",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.01963,
+          "y_mae": 0.04891,
+          "x_ratio": 0.2427,
+          "y_ratio": 0.6055,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Stained_glass_mosaic_floor_tiles_e0748c7d.jpg",
+          "sha256": "73bf3672c6e56d4d99ef6d3c23b6f71bdd81cbd586f43f1ee3778db8adfb92d7",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.e1f51b4a",
+      "kind": "region",
+      "name": "Petrified wood floor tiles",
+      "description": "Petrified wood floor tiles: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-e1f51b4a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "tiles",
+        "construction",
+        "patterned",
+        "organic",
+        "petrified"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "tiles",
+        "construction",
+        "patterned",
+        "organic",
+        "petrified",
+        "brown",
+        "black",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#45251a",
+            "weight_bp": 1457
+          },
+          {
+            "hex": "#513c2e",
+            "weight_bp": 1394
+          },
+          {
+            "hex": "#7c5237",
+            "weight_bp": 1370
+          },
+          {
+            "hex": "#773f25",
+            "weight_bp": 1257
+          },
+          {
+            "hex": "#31241b",
+            "weight_bp": 1200
+          },
+          {
+            "hex": "#24140e",
+            "weight_bp": 1130
+          },
+          {
+            "hex": "#5e2a1a",
+            "weight_bp": 1115
+          },
+          {
+            "hex": "#9f7650",
+            "weight_bp": 1077
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05692,
+          "y_mae": 0.11671,
+          "x_ratio": 1.324,
+          "y_ratio": 2.8039,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Petrified_wood_floor_tiles_texture_e1f51b4a.jpg",
+          "sha256": "ea8ec30b5846fba38582e406cc1fc17212799d5999bc0f20106c445cf6d09a87",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.e5d1a3d7",
+      "kind": "region",
+      "name": "Carved stone floor slabs",
+      "description": "Carved stone floor slabs: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-e5d1a3d7",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "patterned",
+        "carved",
+        "slabs"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "patterned",
+        "carved",
+        "slabs",
+        "gray",
+        "olive",
+        "black",
+        "architecture",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#4d4b42",
+            "weight_bp": 1729
+          },
+          {
+            "hex": "#2c2b27",
+            "weight_bp": 1373
+          },
+          {
+            "hex": "#3e403b",
+            "weight_bp": 1357
+          },
+          {
+            "hex": "#3b3932",
+            "weight_bp": 1245
+          },
+          {
+            "hex": "#333431",
+            "weight_bp": 1232
+          },
+          {
+            "hex": "#46433a",
+            "weight_bp": 1097
+          },
+          {
+            "hex": "#171715",
+            "weight_bp": 1019
+          },
+          {
+            "hex": "#625f51",
+            "weight_bp": 948
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "olive",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03398,
+          "y_mae": 0.06189,
+          "x_ratio": 1.0529,
+          "y_ratio": 2.0319,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Carved_stone_floor_slabs_e5d1a3d7.jpg",
+          "sha256": "4eb8a322c456719fade83fa935f757fd71c5dc59d1dc3b0a8fbc97dcb1228876",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    }
+  ]
+}

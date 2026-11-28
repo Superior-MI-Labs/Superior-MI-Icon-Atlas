@@ -134,6 +134,46 @@
     // No partially resolved plan is returned on ambiguity.
     return structuredClone({ok:conflicts.length===0,conflicts,values:conflicts.length?null:Object.fromEntries(resolved.map(({key,...v})=>[key,v])),candidates:Object.fromEntries([...candidates.entries()].sort(([a],[b])=>a<b?-1:a>b?1:0)),unusedModules:rulesets.filter(id=>!usedModules.has(id)).sort()});
   }
+  // Optional visual and surface profiles. Region remains the renderable payload;
+  // material channels never create an implicit dependency or an executable rule.
+  function validateMaterialProfiles(asset,texture){
+    const fail=()=>{throw Error('Invalid material/visual profile: '+asset.id);};
+    const obj=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
+    const keys=(x,allowed)=>obj(x)&&Object.keys(x).every(k=>allowed.includes(k));
+    const range=(x,a,b)=>typeof x==='number'&&Number.isFinite(x)&&x>=a&&x<=b;
+    const strings=x=>Array.isArray(x)&&x.length<=128&&new Set(x).size===x.length&&x.every(v=>typeof v==='string'&&v.length>0&&v.length<=128);
+    const text=(x,max)=>typeof x==='string'&&x.length>0&&x.length<=max;
+    const p=asset.visual_profile,m=asset.material;
+    if(p!==undefined){
+      if(!keys(p,['schema','palette','palette_method','color_names'])||p.schema!=='smi-visual-profile/1'||!text(p.palette_method,64)||!strings(p.color_names)||!Array.isArray(p.palette)||p.palette.length<1||p.palette.length>16)fail();
+      if(p.palette.some(c=>!keys(c,['hex','weight_bp'])||!/^#[0-9a-f]{6}$/.test(c.hex)||!Number.isInteger(c.weight_bp)||!range(c.weight_bp,0,10000))||p.palette.reduce((n,c)=>n+c.weight_bp,0)!==10000||new Set(p.palette.map(c=>c.hex)).size!==p.palette.length)fail();
+    }
+    if(m===undefined)return;
+    if(asset.kind!=='region'||!texture||!keys(m,['schema','channels','role','repeat_intent','suggested_coverage_m','seam_screen','source','associations'])||m.schema!=='smi-surface-material/1'||!keys(m.channels,['base_color'])||m.channels.base_color!=='self'||!['surface','liquid_appearance','effect_appearance'].includes(m.role)||!Array.isArray(m.repeat_intent)||m.repeat_intent.length!==2||!m.repeat_intent.every(v=>['repeat','clamp','mirror'].includes(v)))fail();
+    if(m.suggested_coverage_m!==undefined&&(!Array.isArray(m.suggested_coverage_m)||m.suggested_coverage_m.length!==2||!m.suggested_coverage_m.every(x=>range(x,1e-6,1e6))))fail();
+    if(m.seam_screen!==undefined){const s=m.seam_screen;if(!keys(s,['method','x_mae','y_mae','x_ratio','y_ratio','screening'])||s.method!=='rgb-wrap-mae-v1'||!range(s.x_mae,0,1)||!range(s.y_mae,0,1)||!range(s.x_ratio,0,255)||!range(s.y_ratio,0,255)||!['low-discontinuity','review-required'].includes(s.screening))fail();}
+    if(m.source!==undefined){const s=m.source;if(!keys(s,['filename','sha256','width_px','height_px','encoding','processing'])||!text(s.filename,512)||!/^[a-f0-9]{64}$/.test(s.sha256)||!Number.isInteger(s.width_px)||!range(s.width_px,1,8192)||!Number.isInteger(s.height_px)||!range(s.height_px,1,8192)||!text(s.encoding,64)||!text(s.processing,128))fail();}
+    if(m.associations!==undefined){const s=m.associations;if(!keys(s,['environments','conditions'])||!strings(s.environments)||!strings(s.conditions))fail();}
+    // Only whole, neutral, untrimmed regions are qualified for the initial role.
+    if(asset.trim_offset_px||asset.nine_slice_px||!Array.isArray(asset.rect_px)||asset.rect_px.length!==4||asset.rect_px[0]!==0||asset.rect_px[1]!==0||asset.rect_px[2]!==texture.width_px||asset.rect_px[3]!==texture.height_px||asset.logical_size_px&&asset.logical_size_px.some((v,i)=>v!==asset.rect_px[i+2])||(texture.color_space!==undefined&&texture.color_space!=='srgb'))fail();
+  }
+  // Similarity is an optional discovery aid, never an asserted relationship,
+  // automatic substitution, or permission to load another archive.
+  function rankRelated(source,candidates,options={}){
+    const {limit=8,categoryPrefixes=[],requiredRole=null,weights={semantic:0.65,color:0.25,style:0.10}}=options;
+    if(!source||!Array.isArray(candidates)||!Number.isInteger(limit)||limit<1||limit>100||!Array.isArray(categoryPrefixes)||categoryPrefixes.some(x=>typeof x!=='string')||!['semantic','color','style'].every(k=>Number.isFinite(weights[k])&&weights[k]>=0)||weights.semantic+weights.color+weights.style<=0)throw Error('Invalid related-content query');
+    const ignored=new Set('material surface texture base color tileable candidate painterly fantasy world environment raster 2d ground floor organic black white gray grey red orange yellow brown olive green teal blue purple pink'.split(' '));
+    const tokens=a=>new Set([...(a.subjects||[]),...(a.tags||[]),...(a.aliases||[]),...(a.material?.associations?.environments||[]),...(a.material?.associations?.conditions||[])].flatMap(x=>String(x).toLowerCase().match(/[a-z0-9]+/g)||[]).filter(x=>x.length>2&&!ignored.has(x)));
+    const lab=hex=>{const [r,g,b]=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);const l=Math.cbrt(.4122214708*r+.5363325363*g+.0514459929*b),m=Math.cbrt(.2119034982*r+.6806995451*g+.1073969566*b),s=Math.cbrt(.0883024619*r+.2817188376*g+.6299787005*b);return [.2104542553*l+.793617785*m-.0040720468*s,1.9779984951*l-2.428592205*m+.4505937099*s,.0259040371*l+.7827717662*m-.808675766*s];};
+    const palette=a=>(a.visual_profile?.palette||[]).filter(c=>/^#[0-9a-f]{6}$/.test(c.hex)&&c.weight_bp>0).map(c=>({v:lab(c.hex),w:c.weight_bp/10000}));
+    const cost=(a,b)=>a.reduce((n,x)=>n+x.w*Math.min(...b.map(y=>Math.hypot(...x.v.map((v,i)=>v-y.v[i])))),0);
+    const t=tokens(source),p=palette(source),sum=weights.semantic+weights.color+weights.style;
+    return candidates.filter(a=>a&&a.id!==source.id&&!a.legacy&&a.discovery!=='hidden'&&(!requiredRole||a.material?.role===requiredRole)&&(!categoryPrefixes.length||categoryPrefixes.some(prefix=>(a.category_path||a.classification?.category_path||[]).some(v=>v===prefix||v.startsWith(prefix+'.'))))).map(a=>{
+      const v=tokens(a),shared=[...t].filter(k=>v.has(k)).sort(),semantic=shared.length/Math.max(1,new Set([...t,...v]).size),q=palette(a);
+      const color=p.length&&q.length?Math.max(0,1-(cost(p,q)+cost(q,p))/.7):null,style=source.style&&a.style?Number(source.style===a.style):null;
+      return {id:a.id,score:(semantic*weights.semantic+(color??0)*weights.color+(style??0)*weights.style)/sum,semantic,color,style,shared};
+    }).filter(r=>r.shared.length>0||weights.semantic===0&&r.color!==null).sort((a,b)=>b.score-a.score||(a.id<b.id?-1:a.id>b.id?1:0)).slice(0,limit);
+  }
   function resolveCollection(index,definitions,fallbackName='Imported collection'){
     // definitions: [{path,pack}] where every path is archive-relative and distinct.
     if(!Array.isArray(definitions)||!definitions.length||definitions.length>MAX_PACKS)throw Error('Collection must contain 1–'+MAX_PACKS+' pack manifests');
@@ -193,6 +233,7 @@
       for(const source of pack.assets){
         if(!source||typeof source.id!=='string'||!source.id||assetIds.has(source.id))throw Error('Duplicate or invalid asset ID: '+source?.id);
         assetIds.add(source.id);
+        validateMaterialProfiles(source,pack.textures[source.texture]);
         const a={...source};
         if(a.kind==='region'){
           if(typeof a.texture!=='string'||!Object.hasOwn(pack.textures,a.texture))throw Error('Missing texture declaration for '+a.id);
@@ -281,6 +322,8 @@
           mapping.set(a.texture,id);textures[id]={path,width_px:t.width_px,height_px:t.height_px};zip.file(path,t.blob);
         }
         a.texture=mapping.get(a.texture);
+        if(a.material)textures[a.texture].color_space='srgb';
+        validateMaterialProfiles(a,textures[a.texture]);
       }
       for(const ref of [...(a.implements||[]),...Object.values(a.slots||{}).map(s=>s.accepts)]){
         const def=getInterfaces(a)?.[ref];
@@ -312,5 +355,5 @@
     if(licenseText&&licenses.has('Apache-2.0')){const notice=await licenseText();if(notice)zip.file('LICENSES/Apache-2.0.txt',notice);}
     return manifest;
   }
-  return Object.freeze({safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,resolveDefaults,validateRuleRegistry,resolveContributors,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
+  return Object.freeze({validateMaterialProfiles,rankRelated,safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,resolveDefaults,validateRuleRegistry,resolveContributors,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
 });

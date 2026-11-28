@@ -1,0 +1,28 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.material.gflow.rock-minerals",
+  "name": "G Flow Materials — Rock and minerals",
+  "version": "1.0.0",
+  "entry_asset": "smi.material.gflow.34506818",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Rock and minerals"
+    }
+  ],
+  "classification": {
+    "category_path": [
+      "textures"
+    ],
+    "perspective": [
+      "perspective-neutral"
+    ],
+    "theme": [
+      "fantasy"
+    ],
+    "medium": [
+      "raster-2d"
+    ],
+    "family": "gflow-materials"
+  }
+}

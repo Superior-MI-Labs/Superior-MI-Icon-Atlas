@@ -188,6 +188,126 @@
       "rights": "CC0-1.0 (CC0 1.0 Universal), authorized by the contributor for artwork they control. Attribution to Superior MI Labs is appreciated but not required. No third-party rights are waived.",
       "expected_assets": 9,
       "visual_qa": "pending"
+    },
+    {
+      "path": "examples/gflow-materials-constructed-floors",
+      "expected_assets": 23,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-earth-soil",
+      "expected_assets": 25,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-forest-floor",
+      "expected_assets": 23,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-submerged-construction",
+      "expected_assets": 24,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-frozen-seabed",
+      "expected_assets": 24,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-aquatic-surfaces",
+      "expected_assets": 24,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-gravel-paths",
+      "expected_assets": 23,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-rock-minerals",
+      "expected_assets": 24,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-vegetation-ground",
+      "expected_assets": 24,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-fantasy-surfaces",
+      "expected_assets": 24,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-architecture",
+      "expected_assets": 24,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-wetlands",
+      "expected_assets": 10,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-winter",
+      "expected_assets": 11,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-desert",
+      "expected_assets": 10,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
+    },
+    {
+      "path": "examples/gflow-materials-grass",
+      "expected_assets": 9,
+      "visual_qa": "pending",
+      "published": "2026-11-28",
+      "approval": "Contributor authorized preview publication; automated metadata and integrity checks; artistic and host review pending.",
+      "rights": "Contributor explicitly confirmed ownership/control and authorized CC0-1.0 publication."
     }
   ]
 }

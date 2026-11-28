@@ -1,0 +1,3679 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.aquatic-surfaces",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-49fa0271": {
+      "path": "textures/ancient-fossil-sea-bed-49fa0271.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "0a86f8bec1c3e1c43198a5adfe970387377d919c66d1fd3e40ac9db3bd76b823",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-5972f26f": {
+      "path": "textures/aquamarine-sea-floor-5972f26f.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "1b8e7d8e607dadde168eeeb4b74c44e7c39df5eb3dc71a790528d9dd0571df82",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-067b74ef": {
+      "path": "textures/jellyfish-spore-sea-floor-067b74ef.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "fef2523a272336950da1357206dcd2d7f7fc3687685a0ce492ee6e2dedff60da",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ed7a008b": {
+      "path": "textures/celestial-stardust-underwater-reef-ed7a008b.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "b50100769adf298f31dbc88970f026b767e2f767df7940a47135de206d4e756e",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-6cadbd38": {
+      "path": "textures/mudflat-silt-with-burrows-6cadbd38.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "1b6f648e5b6e61e40d6a764584ebf0b79f18b1a24dabfdf13ca76b7e864d5f5c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-abd62327": {
+      "path": "textures/toxic-swamp-underwater-silt-abd62327.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "c4d47f3dab0e9b0c9f2d7c463c98192d1a9a577d39dab9b0572760f14f7f8d7d",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-66806e15": {
+      "path": "textures/red-seagrass-turf-66806e15.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "eee274680722a5a1a55869ec3d0c09e448c464563be6d82586c3b5f0d0758160",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-60e13c33": {
+      "path": "textures/golden-sand-with-ripples-60e13c33.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "c5a5d82308469032fb925190b615940360c820ca8c3f427b42b9d9bcc1678778",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-20693829": {
+      "path": "textures/kraken-lair-dark-sea-floor-20693829.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "277fe1e042c192d8ebf6f6d48b854984c5c7493088a5b7dda9b0d6d3099b16ee",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-6e5eaf48": {
+      "path": "textures/marble-tiles-with-sea-moss-6e5eaf48.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "098977fa30ccbbec86d80afab09e658b09bc86ff5dfafc9ee554c8139777e3cb",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-38277d2e": {
+      "path": "textures/mud-with-purple-spores-38277d2e.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "bfa8e0edb4f26301d39924cd006e60d54c9c994c520e19de18c891405e87be9c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-eee12b6b": {
+      "path": "textures/volcanic-underwater-basalt-reef-eee12b6b.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "c31928e5aced31dcf659016f2f7e48f055ac29d76d08e2d4f2105ca576f58ca8",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-752f6c5f": {
+      "path": "textures/sea-bottom-silt-752f6c5f.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "a80b8ef6effdae5904001d4b71230e589b632f08e49367e7714c2ff203a4f2be",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-5fa790f3": {
+      "path": "textures/coral-reef-sea-bed-5fa790f3.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "47a97c87fe8e722692016f1d7594c3fdee40cfaf025a3772e564a75996d9d7c2",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-7584730f": {
+      "path": "textures/dark-mud-with-glowing-jellyfish-7584730f.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "494d278d700802e2d660fc864e84478b0edd7957445dc0bf7d3d43d60e8cebef",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-0f47af35": {
+      "path": "textures/shipwreck-sand-with-gold-coins-0f47af35.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "9a52b990f81809f4ffa8124feaad8592130c0124d02b327514731bf52c78ad4f",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-63a053b8": {
+      "path": "textures/freshwater-riverbed-pebbles-63a053b8.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "89c6ed26aa29926900c23604b34994cb39ba1c45edea5936cb588d2589072c00",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-50eed193": {
+      "path": "textures/pink-coral-sand-50eed193.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "e2300f5046235639388b00242752c74a0813a1342f93ad6012c9b753e6a0a57c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-e3077998": {
+      "path": "textures/glowing-purple-sea-crystal-sand-e3077998.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "1ec6f21e734c6d67350bdfeea405f51fad249eb0d47b50ddac2f05d35e86d67f",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-e878db58": {
+      "path": "textures/underwater-petrified-wood-e878db58.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "a9b401ad699b890b6c67f82c72330c7fb1872ecd6fd6cdd5ee1f5aa0f53d3696",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-5e391b1e": {
+      "path": "textures/green-algae-covered-ocean-sand-5e391b1e.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "2c8dba24a634c4cb424aa919105da0ea66fd230b28883f431908124534f2c049",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-09565404": {
+      "path": "textures/tropical-lagoon-sand-with-sea-life-09565404.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "cb105cffae737824a647cb8bfb02859c173531b29d8a1ef256fb847054066e14",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-dfae112b": {
+      "path": "textures/bioluminescent-kelp-and-moss-dfae112b.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "255cafa0f718d5e5ded5ab2d3a10987bad8b9bcba37907d5ade5647d1e3d95b2",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-aafbf6b0": {
+      "path": "textures/frozen-arctic-seabed-ice-aafbf6b0.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "676bce2b649556115fe84c0b4a8a57c5dd2651abe4c0f7cccd37b34eebf0f800",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.49fa0271",
+      "kind": "region",
+      "name": "Ancient fossil sea bed",
+      "description": "Ancient fossil sea bed: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-49fa0271",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "bone",
+        "water",
+        "aquatic",
+        "weathered",
+        "ancient",
+        "fossil",
+        "sea",
+        "bed"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "bone",
+        "water",
+        "aquatic",
+        "weathered",
+        "ancient",
+        "fossil",
+        "sea",
+        "bed",
+        "black",
+        "green",
+        "teal",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#121f23",
+            "weight_bp": 1441
+          },
+          {
+            "hex": "#45544a",
+            "weight_bp": 1431
+          },
+          {
+            "hex": "#202e2e",
+            "weight_bp": 1314
+          },
+          {
+            "hex": "#243a3b",
+            "weight_bp": 1306
+          },
+          {
+            "hex": "#17292d",
+            "weight_bp": 1236
+          },
+          {
+            "hex": "#34403a",
+            "weight_bp": 1223
+          },
+          {
+            "hex": "#0a1419",
+            "weight_bp": 1053
+          },
+          {
+            "hex": "#7d856e",
+            "weight_bp": 996
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "green",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03494,
+          "y_mae": 0.04049,
+          "x_ratio": 1.0033,
+          "y_ratio": 1.2384,
+          "screening": "low-discontinuity"
+        },
+        "source": {
+          "filename": "Ancient_fossil_sea_bed_texture_49fa0271.jpg",
+          "sha256": "afa860a40dad5b514cb39236739b657accdd87491dad0cd310ed5343364b272b",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.5972f26f",
+      "kind": "region",
+      "name": "Aquamarine sea floor",
+      "description": "Aquamarine sea floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-5972f26f",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "aquatic",
+        "construction",
+        "aquamarine",
+        "sea"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "aquatic",
+        "construction",
+        "aquamarine",
+        "sea",
+        "blue",
+        "teal",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#0e475a",
+            "weight_bp": 1566
+          },
+          {
+            "hex": "#0f7b87",
+            "weight_bp": 1545
+          },
+          {
+            "hex": "#26989f",
+            "weight_bp": 1469
+          },
+          {
+            "hex": "#095d6e",
+            "weight_bp": 1351
+          },
+          {
+            "hex": "#30bcc0",
+            "weight_bp": 1083
+          },
+          {
+            "hex": "#093247",
+            "weight_bp": 1078
+          },
+          {
+            "hex": "#2d7d8a",
+            "weight_bp": 955
+          },
+          {
+            "hex": "#205e6f",
+            "weight_bp": 953
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03074,
+          "y_mae": 0.08572,
+          "x_ratio": 0.8212,
+          "y_ratio": 2.3392,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Aquamarine_sea_floor_texture_5972f26f.jpg",
+          "sha256": "bd3ce3c2a7fc95d65bc5b300757aa99987400d5c39cf5c08126efaa4e84015a1",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.067b74ef",
+      "kind": "region",
+      "name": "Jellyfish spore sea floor",
+      "description": "Jellyfish spore sea floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-067b74ef",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "fungi",
+        "water",
+        "aquatic",
+        "construction",
+        "jellyfish",
+        "spore",
+        "sea"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "fungi",
+        "water",
+        "aquatic",
+        "construction",
+        "jellyfish",
+        "spore",
+        "sea",
+        "blue",
+        "teal",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1b4862",
+            "weight_bp": 1464
+          },
+          {
+            "hex": "#16324c",
+            "weight_bp": 1422
+          },
+          {
+            "hex": "#34678b",
+            "weight_bp": 1410
+          },
+          {
+            "hex": "#192341",
+            "weight_bp": 1302
+          },
+          {
+            "hex": "#283459",
+            "weight_bp": 1172
+          },
+          {
+            "hex": "#0d1b30",
+            "weight_bp": 1149
+          },
+          {
+            "hex": "#42a4c2",
+            "weight_bp": 1125
+          },
+          {
+            "hex": "#364a73",
+            "weight_bp": 956
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04683,
+          "y_mae": 0.10743,
+          "x_ratio": 1.1223,
+          "y_ratio": 2.869,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Jellyfish_spore_sea_floor_texture_067b74ef.jpg",
+          "sha256": "ea3a19fce7bb125fad99e92f78df2f22f6f752bf5f8936e1fa5636b7e9c829ef",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ed7a008b",
+      "kind": "region",
+      "name": "Celestial stardust underwater reef",
+      "description": "Celestial stardust underwater reef: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ed7a008b",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "magic",
+        "aquatic",
+        "wet",
+        "glowing",
+        "celestial",
+        "stardust",
+        "underwater",
+        "reef"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "magic",
+        "aquatic",
+        "wet",
+        "glowing",
+        "celestial",
+        "stardust",
+        "underwater",
+        "reef",
+        "blue",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#27476c",
+            "weight_bp": 1690
+          },
+          {
+            "hex": "#262f5a",
+            "weight_bp": 1387
+          },
+          {
+            "hex": "#425b81",
+            "weight_bp": 1332
+          },
+          {
+            "hex": "#1a2b4f",
+            "weight_bp": 1239
+          },
+          {
+            "hex": "#121739",
+            "weight_bp": 1173
+          },
+          {
+            "hex": "#474878",
+            "weight_bp": 1121
+          },
+          {
+            "hex": "#5c8299",
+            "weight_bp": 1035
+          },
+          {
+            "hex": "#373465",
+            "weight_bp": 1023
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0516,
+          "y_mae": 0.08833,
+          "x_ratio": 1.4112,
+          "y_ratio": 2.443,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Celestial_stardust_underwater_re…_ed7a008b.jpg",
+          "sha256": "e6a73847bef291aea79f9fc0cec501ca92f90cec76e47ea512304864ee9ae550",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "wet",
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.6cadbd38",
+      "kind": "region",
+      "name": "Mudflat silt with burrows",
+      "description": "Mudflat silt with burrows: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-6cadbd38",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "water",
+        "wetland",
+        "wet",
+        "mudflat",
+        "silt",
+        "burrows"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "water",
+        "wetland",
+        "wet",
+        "mudflat",
+        "silt",
+        "burrows",
+        "brown",
+        "olive",
+        "black",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "marsh",
+        "swamp"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#493d28",
+            "weight_bp": 1624
+          },
+          {
+            "hex": "#5d5934",
+            "weight_bp": 1426
+          },
+          {
+            "hex": "#363020",
+            "weight_bp": 1343
+          },
+          {
+            "hex": "#5a4b30",
+            "weight_bp": 1312
+          },
+          {
+            "hex": "#3a3a23",
+            "weight_bp": 1312
+          },
+          {
+            "hex": "#454928",
+            "weight_bp": 1061
+          },
+          {
+            "hex": "#70754c",
+            "weight_bp": 996
+          },
+          {
+            "hex": "#282317",
+            "weight_bp": 926
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "olive",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03559,
+          "y_mae": 0.05829,
+          "x_ratio": 1.6081,
+          "y_ratio": 2.4586,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Mudflat_silt_texture_with_burrows_6cadbd38.jpg",
+          "sha256": "4cb3d5e95f6859ca56eb5535d40f58c1bf34df317d5c2dca17009026befa77ca",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "wetland"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.abd62327",
+      "kind": "region",
+      "name": "Toxic swamp underwater silt",
+      "description": "Toxic swamp underwater silt: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-abd62327",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "water",
+        "wetland",
+        "aquatic",
+        "wet",
+        "toxic",
+        "swamp",
+        "underwater",
+        "silt"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "water",
+        "wetland",
+        "aquatic",
+        "wet",
+        "toxic",
+        "swamp",
+        "underwater",
+        "silt",
+        "black",
+        "green",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "marsh",
+        "swamp",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#192812",
+            "weight_bp": 1514
+          },
+          {
+            "hex": "#353d18",
+            "weight_bp": 1437
+          },
+          {
+            "hex": "#59903e",
+            "weight_bp": 1340
+          },
+          {
+            "hex": "#84c856",
+            "weight_bp": 1185
+          },
+          {
+            "hex": "#2e5d2b",
+            "weight_bp": 1170
+          },
+          {
+            "hex": "#1e381c",
+            "weight_bp": 1141
+          },
+          {
+            "hex": "#0c190c",
+            "weight_bp": 1119
+          },
+          {
+            "hex": "#546224",
+            "weight_bp": 1094
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04046,
+          "y_mae": 0.06765,
+          "x_ratio": 1.4206,
+          "y_ratio": 2.3197,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Toxic_swamp_underwater_silt_texture_abd62327.jpg",
+          "sha256": "c912ec558a86c218dc4e17a5ccbe14f0310ef5876134a375f0f7209fda002f9f",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "wetland",
+            "aquatic"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.66806e15",
+      "kind": "region",
+      "name": "Red seagrass turf",
+      "description": "Red seagrass turf: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-66806e15",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "grass",
+        "vegetation",
+        "aquatic",
+        "organic",
+        "red",
+        "seagrass",
+        "turf"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "grass",
+        "vegetation",
+        "aquatic",
+        "organic",
+        "red",
+        "seagrass",
+        "turf",
+        "purple",
+        "black",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "grassy",
+        "ground cover",
+        "foliage",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#381e2d",
+            "weight_bp": 1749
+          },
+          {
+            "hex": "#781e2f",
+            "weight_bp": 1495
+          },
+          {
+            "hex": "#470d1f",
+            "weight_bp": 1406
+          },
+          {
+            "hex": "#1c0b1a",
+            "weight_bp": 1203
+          },
+          {
+            "hex": "#330b1b",
+            "weight_bp": 1195
+          },
+          {
+            "hex": "#641123",
+            "weight_bp": 1120
+          },
+          {
+            "hex": "#7b454f",
+            "weight_bp": 967
+          },
+          {
+            "hex": "#642b37",
+            "weight_bp": 865
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "purple",
+          "red",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05519,
+          "y_mae": 0.08957,
+          "x_ratio": 1.484,
+          "y_ratio": 2.6326,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Red_seagrass_turf_texture_66806e15.jpg",
+          "sha256": "268522056c7ed6aa7aedd61bd11a4459e178c13627c8ffeb718511fd3ec469be",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.60e13c33",
+      "kind": "region",
+      "name": "Golden sand with ripples",
+      "description": "Golden sand with ripples: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-60e13c33",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "golden",
+        "ripples"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "golden",
+        "ripples",
+        "orange",
+        "brown",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#e4c07d",
+            "weight_bp": 1512
+          },
+          {
+            "hex": "#bb8750",
+            "weight_bp": 1443
+          },
+          {
+            "hex": "#ce9d5c",
+            "weight_bp": 1439
+          },
+          {
+            "hex": "#ddb26d",
+            "weight_bp": 1227
+          },
+          {
+            "hex": "#f0d594",
+            "weight_bp": 1124
+          },
+          {
+            "hex": "#c3955c",
+            "weight_bp": 1106
+          },
+          {
+            "hex": "#d3aa6d",
+            "weight_bp": 1105
+          },
+          {
+            "hex": "#a97343",
+            "weight_bp": 1044
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "orange",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03986,
+          "y_mae": 0.05754,
+          "x_ratio": 1.8063,
+          "y_ratio": 2.3853,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Golden_sand_texture_with_ripples_60e13c33.jpg",
+          "sha256": "e9324d236e057fe80b9902bbe2128083e521177a0212e36369887290e91574b0",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.20693829",
+      "kind": "region",
+      "name": "Kraken lair dark sea floor",
+      "description": "Kraken lair dark sea floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-20693829",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "magic",
+        "aquatic",
+        "construction",
+        "kraken",
+        "lair",
+        "dark",
+        "sea"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "magic",
+        "aquatic",
+        "construction",
+        "kraken",
+        "lair",
+        "dark",
+        "sea",
+        "blue",
+        "black",
+        "teal",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3a4252",
+            "weight_bp": 1503
+          },
+          {
+            "hex": "#131320",
+            "weight_bp": 1453
+          },
+          {
+            "hex": "#211f2f",
+            "weight_bp": 1314
+          },
+          {
+            "hex": "#312e41",
+            "weight_bp": 1278
+          },
+          {
+            "hex": "#181b28",
+            "weight_bp": 1264
+          },
+          {
+            "hex": "#232a38",
+            "weight_bp": 1230
+          },
+          {
+            "hex": "#0b0a15",
+            "weight_bp": 1023
+          },
+          {
+            "hex": "#4d787a",
+            "weight_bp": 935
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04233,
+          "y_mae": 0.0902,
+          "x_ratio": 1.1719,
+          "y_ratio": 2.5916,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Kraken_lair_dark_sea_floor_20693829.jpg",
+          "sha256": "e43f5d23ac5bc0d5f0d817d810bd6f179afeff0d0d527526e589d76d68c61a0c",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.6e5eaf48",
+      "kind": "region",
+      "name": "Marble tiles with sea moss",
+      "description": "Marble tiles with sea moss: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-6e5eaf48",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "vegetation",
+        "tiles",
+        "water",
+        "aquatic",
+        "construction",
+        "patterned",
+        "organic",
+        "marble",
+        "sea",
+        "moss"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "vegetation",
+        "tiles",
+        "water",
+        "aquatic",
+        "construction",
+        "patterned",
+        "organic",
+        "marble",
+        "sea",
+        "moss",
+        "teal",
+        "green",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "foliage",
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#5e9789",
+            "weight_bp": 1468
+          },
+          {
+            "hex": "#193d3c",
+            "weight_bp": 1464
+          },
+          {
+            "hex": "#1a4d50",
+            "weight_bp": 1334
+          },
+          {
+            "hex": "#2e6b67",
+            "weight_bp": 1270
+          },
+          {
+            "hex": "#2e5245",
+            "weight_bp": 1163
+          },
+          {
+            "hex": "#0f2b2a",
+            "weight_bp": 1105
+          },
+          {
+            "hex": "#4c7665",
+            "weight_bp": 1104
+          },
+          {
+            "hex": "#9ac5b8",
+            "weight_bp": 1092
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06698,
+          "y_mae": 0.19478,
+          "x_ratio": 1.5048,
+          "y_ratio": 4.7044,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Marble_tiles_with_sea_moss_6e5eaf48.jpg",
+          "sha256": "68d971be135e05eef9754596456bc06b491c0d659142ca85a556faabb85ceaec",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.38277d2e",
+      "kind": "region",
+      "name": "Mud with purple spores",
+      "description": "Mud with purple spores: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-38277d2e",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "fungi",
+        "wet",
+        "mud",
+        "purple",
+        "spores"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "fungi",
+        "wet",
+        "mud",
+        "purple",
+        "spores",
+        "blue",
+        "black",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1b1c37",
+            "weight_bp": 1665
+          },
+          {
+            "hex": "#14132a",
+            "weight_bp": 1574
+          },
+          {
+            "hex": "#271e4e",
+            "weight_bp": 1378
+          },
+          {
+            "hex": "#31275d",
+            "weight_bp": 1326
+          },
+          {
+            "hex": "#0f0f22",
+            "weight_bp": 1282
+          },
+          {
+            "hex": "#64419d",
+            "weight_bp": 1090
+          },
+          {
+            "hex": "#090818",
+            "weight_bp": 876
+          },
+          {
+            "hex": "#1a1537",
+            "weight_bp": 809
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03611,
+          "y_mae": 0.06058,
+          "x_ratio": 1.4731,
+          "y_ratio": 2.5194,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Mud_texture_with_purple_spores_38277d2e.jpg",
+          "sha256": "28aa94802b472169e6cb9237349d5c720ae4f93bf702063cc0c1d85413750af4",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.eee12b6b",
+      "kind": "region",
+      "name": "Volcanic underwater basalt reef",
+      "description": "Volcanic underwater basalt reef: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-eee12b6b",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "water",
+        "lava",
+        "aquatic",
+        "wet",
+        "volcanic",
+        "underwater",
+        "basalt",
+        "reef"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "water",
+        "lava",
+        "aquatic",
+        "wet",
+        "volcanic",
+        "underwater",
+        "basalt",
+        "reef",
+        "blue",
+        "black",
+        "brown",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#0f2530",
+            "weight_bp": 1750
+          },
+          {
+            "hex": "#1d2d36",
+            "weight_bp": 1383
+          },
+          {
+            "hex": "#112c37",
+            "weight_bp": 1275
+          },
+          {
+            "hex": "#0b202a",
+            "weight_bp": 1260
+          },
+          {
+            "hex": "#09151e",
+            "weight_bp": 1185
+          },
+          {
+            "hex": "#231d20",
+            "weight_bp": 1135
+          },
+          {
+            "hex": "#131c24",
+            "weight_bp": 1069
+          },
+          {
+            "hex": "#3c322f",
+            "weight_bp": 943
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02283,
+          "y_mae": 0.03181,
+          "x_ratio": 1.2118,
+          "y_ratio": 1.6972,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Volcanic_underwater_basalt_reef_…_eee12b6b.jpg",
+          "sha256": "b2cba41b1a6570b7ba64914227bd76d785b9c5b77dbd8d7b19e8edee05c7e170",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.752f6c5f",
+      "kind": "region",
+      "name": "Sea bottom silt",
+      "description": "Sea bottom silt: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-752f6c5f",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "water",
+        "aquatic",
+        "wet",
+        "sea",
+        "bottom",
+        "silt"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "water",
+        "aquatic",
+        "wet",
+        "sea",
+        "bottom",
+        "silt",
+        "green",
+        "black",
+        "teal",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3f4e3e",
+            "weight_bp": 1653
+          },
+          {
+            "hex": "#152528",
+            "weight_bp": 1381
+          },
+          {
+            "hex": "#243d39",
+            "weight_bp": 1364
+          },
+          {
+            "hex": "#24302c",
+            "weight_bp": 1293
+          },
+          {
+            "hex": "#152e31",
+            "weight_bp": 1288
+          },
+          {
+            "hex": "#394133",
+            "weight_bp": 1179
+          },
+          {
+            "hex": "#0f1a21",
+            "weight_bp": 999
+          },
+          {
+            "hex": "#65735d",
+            "weight_bp": 843
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02086,
+          "y_mae": 0.03328,
+          "x_ratio": 0.9372,
+          "y_ratio": 1.4223,
+          "screening": "low-discontinuity"
+        },
+        "source": {
+          "filename": "Sea_bottom_silt_texture_752f6c5f.jpg",
+          "sha256": "30fe680275a22c6834bae8680340c753851088a5b7c499427149ad5313ce49cc",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.5fa790f3",
+      "kind": "region",
+      "name": "Coral reef sea bed",
+      "description": "Coral reef sea bed: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-5fa790f3",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "coral",
+        "aquatic",
+        "tropical",
+        "organic",
+        "reef",
+        "sea",
+        "bed"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "coral",
+        "aquatic",
+        "tropical",
+        "organic",
+        "reef",
+        "sea",
+        "bed",
+        "blue",
+        "purple",
+        "gray",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#385765",
+            "weight_bp": 2025
+          },
+          {
+            "hex": "#3a3c4e",
+            "weight_bp": 1530
+          },
+          {
+            "hex": "#87a3ba",
+            "weight_bp": 1228
+          },
+          {
+            "hex": "#191e34",
+            "weight_bp": 1187
+          },
+          {
+            "hex": "#865a6f",
+            "weight_bp": 1173
+          },
+          {
+            "hex": "#26394b",
+            "weight_bp": 1129
+          },
+          {
+            "hex": "#703857",
+            "weight_bp": 878
+          },
+          {
+            "hex": "#7c778c",
+            "weight_bp": 850
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "purple",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07261,
+          "y_mae": 0.15428,
+          "x_ratio": 1.5086,
+          "y_ratio": 3.2741,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Coral_reef_sea_bed_texture_5fa790f3.jpg",
+          "sha256": "88c1dd906223be9299602b71a404d563e691b4174f8299a770e56829cf7f36b4",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "tropical"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.7584730f",
+      "kind": "region",
+      "name": "Dark mud with glowing jellyfish",
+      "description": "Dark mud with glowing jellyfish: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-7584730f",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "magic",
+        "wet",
+        "glowing",
+        "dark",
+        "mud",
+        "jellyfish"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "magic",
+        "wet",
+        "glowing",
+        "dark",
+        "mud",
+        "jellyfish",
+        "blue",
+        "black",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#193b50",
+            "weight_bp": 1695
+          },
+          {
+            "hex": "#091222",
+            "weight_bp": 1375
+          },
+          {
+            "hex": "#121a2d",
+            "weight_bp": 1287
+          },
+          {
+            "hex": "#091929",
+            "weight_bp": 1261
+          },
+          {
+            "hex": "#0d2637",
+            "weight_bp": 1225
+          },
+          {
+            "hex": "#19283c",
+            "weight_bp": 1204
+          },
+          {
+            "hex": "#030918",
+            "weight_bp": 1028
+          },
+          {
+            "hex": "#2a6c88",
+            "weight_bp": 925
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02252,
+          "y_mae": 0.04321,
+          "x_ratio": 1.2772,
+          "y_ratio": 2.5708,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Dark_mud_with_glowing_jellyfish_7584730f.jpg",
+          "sha256": "518f6f11a500db70171a5f930ef37b9fba51fe6c157e56624b896d397d6af5de",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "wet",
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.0f47af35",
+      "kind": "region",
+      "name": "Shipwreck sand with gold coins",
+      "description": "Shipwreck sand with gold coins: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-0f47af35",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "aquatic",
+        "shipwreck",
+        "gold",
+        "coins"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "aquatic",
+        "shipwreck",
+        "gold",
+        "coins",
+        "green",
+        "black",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3d6554",
+            "weight_bp": 1457
+          },
+          {
+            "hex": "#6a805f",
+            "weight_bp": 1415
+          },
+          {
+            "hex": "#232e27",
+            "weight_bp": 1361
+          },
+          {
+            "hex": "#444b38",
+            "weight_bp": 1246
+          },
+          {
+            "hex": "#27443a",
+            "weight_bp": 1185
+          },
+          {
+            "hex": "#0f1f20",
+            "weight_bp": 1157
+          },
+          {
+            "hex": "#8ba174",
+            "weight_bp": 1104
+          },
+          {
+            "hex": "#646a4c",
+            "weight_bp": 1075
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06994,
+          "y_mae": 0.0936,
+          "x_ratio": 1.7051,
+          "y_ratio": 2.3314,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Shipwreck_sand_with_gold_coins_0f47af35.jpg",
+          "sha256": "60a3e31a857234061c13d9a013df7871191b579a90a8a6373b3d3e2841276d2a",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.63a053b8",
+      "kind": "region",
+      "name": "Freshwater riverbed pebbles",
+      "description": "Freshwater riverbed pebbles: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-63a053b8",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "water",
+        "aquatic",
+        "freshwater",
+        "riverbed",
+        "pebbles"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "water",
+        "aquatic",
+        "freshwater",
+        "riverbed",
+        "pebbles",
+        "green",
+        "black",
+        "olive",
+        "brown",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#203825",
+            "weight_bp": 1462
+          },
+          {
+            "hex": "#656f47",
+            "weight_bp": 1394
+          },
+          {
+            "hex": "#355133",
+            "weight_bp": 1343
+          },
+          {
+            "hex": "#0e1e18",
+            "weight_bp": 1321
+          },
+          {
+            "hex": "#3d3b2c",
+            "weight_bp": 1204
+          },
+          {
+            "hex": "#60563d",
+            "weight_bp": 1166
+          },
+          {
+            "hex": "#8a9b62",
+            "weight_bp": 1076
+          },
+          {
+            "hex": "#25261f",
+            "weight_bp": 1034
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black",
+          "olive",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03527,
+          "y_mae": 0.08205,
+          "x_ratio": 1.1929,
+          "y_ratio": 2.6768,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Freshwater_riverbed_pebbles_texture_63a053b8.jpg",
+          "sha256": "4061500ffd347dda9855c49b62ebdc707847dedb5c009df1cdea82305d69c09e",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.50eed193",
+      "kind": "region",
+      "name": "Pink coral sand",
+      "description": "Pink coral sand: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-50eed193",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "coral",
+        "aquatic",
+        "tropical",
+        "organic",
+        "pink"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "coral",
+        "aquatic",
+        "tropical",
+        "organic",
+        "pink",
+        "red",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#f5acb9",
+            "weight_bp": 1873
+          },
+          {
+            "hex": "#fbc2cb",
+            "weight_bp": 1490
+          },
+          {
+            "hex": "#df889d",
+            "weight_bp": 1482
+          },
+          {
+            "hex": "#ed9bab",
+            "weight_bp": 1442
+          },
+          {
+            "hex": "#e296aa",
+            "weight_bp": 1023
+          },
+          {
+            "hex": "#eba9b8",
+            "weight_bp": 1000
+          },
+          {
+            "hex": "#d17193",
+            "weight_bp": 916
+          },
+          {
+            "hex": "#edbdc8",
+            "weight_bp": 774
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "red",
+          "pink"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02969,
+          "y_mae": 0.06145,
+          "x_ratio": 1.5198,
+          "y_ratio": 3.0988,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Pink_coral_sand_texture_50eed193.jpg",
+          "sha256": "258f03483a5d98be64acc0d9cd0588d7663e288e96e8ea73b03d01bc090ec013",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "tropical"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.e3077998",
+      "kind": "region",
+      "name": "Glowing purple sea crystal sand",
+      "description": "Glowing purple sea crystal sand: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-e3077998",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "crystal",
+        "water",
+        "magic",
+        "aquatic",
+        "glowing",
+        "purple",
+        "sea"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "crystal",
+        "water",
+        "magic",
+        "aquatic",
+        "glowing",
+        "purple",
+        "sea",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#321658",
+            "weight_bp": 1664
+          },
+          {
+            "hex": "#25154f",
+            "weight_bp": 1387
+          },
+          {
+            "hex": "#623394",
+            "weight_bp": 1378
+          },
+          {
+            "hex": "#3b236d",
+            "weight_bp": 1200
+          },
+          {
+            "hex": "#5b247e",
+            "weight_bp": 1182
+          },
+          {
+            "hex": "#8a60c6",
+            "weight_bp": 1143
+          },
+          {
+            "hex": "#431967",
+            "weight_bp": 1080
+          },
+          {
+            "hex": "#190a37",
+            "weight_bp": 966
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "purple"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0447,
+          "y_mae": 0.06814,
+          "x_ratio": 1.3211,
+          "y_ratio": 2.0268,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Glowing_purple_sea_crystal_sand_e3077998.jpg",
+          "sha256": "91dfde1385b71a31c1b0de1f27fbef90c2862d0beb273fd46a14ea9a60e36ab2",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.e878db58",
+      "kind": "region",
+      "name": "Underwater petrified wood",
+      "description": "Underwater petrified wood: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-e878db58",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "water",
+        "aquatic",
+        "wet",
+        "organic",
+        "underwater",
+        "petrified"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "water",
+        "aquatic",
+        "wet",
+        "organic",
+        "underwater",
+        "petrified",
+        "teal",
+        "blue",
+        "black",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#386667",
+            "weight_bp": 1572
+          },
+          {
+            "hex": "#1a4955",
+            "weight_bp": 1571
+          },
+          {
+            "hex": "#102632",
+            "weight_bp": 1568
+          },
+          {
+            "hex": "#113340",
+            "weight_bp": 1276
+          },
+          {
+            "hex": "#0a1925",
+            "weight_bp": 1072
+          },
+          {
+            "hex": "#1f3740",
+            "weight_bp": 1019
+          },
+          {
+            "hex": "#65978b",
+            "weight_bp": 989
+          },
+          {
+            "hex": "#314e54",
+            "weight_bp": 933
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05086,
+          "y_mae": 0.08079,
+          "x_ratio": 1.5221,
+          "y_ratio": 2.7008,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Underwater_petrified_wood_texture_e878db58.jpg",
+          "sha256": "8a7580eaf5f8a9e451d726723288524084d16c9b025a67ec01042821de166d1c",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.5e391b1e",
+      "kind": "region",
+      "name": "Green algae-covered ocean sand",
+      "description": "Green algae-covered ocean sand: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-5e391b1e",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "vegetation",
+        "water",
+        "aquatic",
+        "wet",
+        "organic",
+        "green",
+        "algae",
+        "covered",
+        "ocean"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "vegetation",
+        "water",
+        "aquatic",
+        "wet",
+        "organic",
+        "green",
+        "algae",
+        "covered",
+        "ocean",
+        "black",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#0f321c",
+            "weight_bp": 1529
+          },
+          {
+            "hex": "#156034",
+            "weight_bp": 1374
+          },
+          {
+            "hex": "#2c4826",
+            "weight_bp": 1371
+          },
+          {
+            "hex": "#456331",
+            "weight_bp": 1348
+          },
+          {
+            "hex": "#5ba452",
+            "weight_bp": 1156
+          },
+          {
+            "hex": "#061f14",
+            "weight_bp": 1104
+          },
+          {
+            "hex": "#0c4526",
+            "weight_bp": 1102
+          },
+          {
+            "hex": "#3f8040",
+            "weight_bp": 1016
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05363,
+          "y_mae": 0.08032,
+          "x_ratio": 1.5429,
+          "y_ratio": 2.4474,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Green_algae-covered_ocean_sand_5e391b1e.jpg",
+          "sha256": "750e191f630a93e691292f9486e31e6f5cd1a1aab6e49aa76771636ff2c0ecdf",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.09565404",
+      "kind": "region",
+      "name": "Tropical lagoon sand with sea life",
+      "description": "Tropical lagoon sand with sea life: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-09565404",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "sand",
+        "water",
+        "aquatic",
+        "tropical",
+        "lagoon",
+        "sea",
+        "life"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "sand",
+        "water",
+        "aquatic",
+        "tropical",
+        "lagoon",
+        "sea",
+        "life",
+        "teal",
+        "white",
+        "green",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#53ced0",
+            "weight_bp": 2196
+          },
+          {
+            "hex": "#d4dec4",
+            "weight_bp": 1808
+          },
+          {
+            "hex": "#98e3d8",
+            "weight_bp": 1349
+          },
+          {
+            "hex": "#68dedb",
+            "weight_bp": 1177
+          },
+          {
+            "hex": "#a4cebe",
+            "weight_bp": 1063
+          },
+          {
+            "hex": "#d9f0dc",
+            "weight_bp": 1050
+          },
+          {
+            "hex": "#73c0bd",
+            "weight_bp": 861
+          },
+          {
+            "hex": "#7ba1a6",
+            "weight_bp": 496
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "white",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02658,
+          "y_mae": 0.07397,
+          "x_ratio": 1.6991,
+          "y_ratio": 4.5706,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Tropical_lagoon_sand_with_sea_09565404.jpg",
+          "sha256": "5b504569aa30c9e3c2f86e5fcac8814e9c8c9ef604ccafcfeac0e22f15fbdca3",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "tropical"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.dfae112b",
+      "kind": "region",
+      "name": "Bioluminescent kelp and moss",
+      "description": "Bioluminescent kelp and moss: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-dfae112b",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "water",
+        "magic",
+        "aquatic",
+        "glowing",
+        "organic",
+        "bioluminescent",
+        "kelp",
+        "moss"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "water",
+        "magic",
+        "aquatic",
+        "glowing",
+        "organic",
+        "bioluminescent",
+        "kelp",
+        "moss",
+        "teal",
+        "blue",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "fantasy",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#0e89a3",
+            "weight_bp": 1390
+          },
+          {
+            "hex": "#032242",
+            "weight_bp": 1330
+          },
+          {
+            "hex": "#043052",
+            "weight_bp": 1312
+          },
+          {
+            "hex": "#095576",
+            "weight_bp": 1277
+          },
+          {
+            "hex": "#0b6c8b",
+            "weight_bp": 1241
+          },
+          {
+            "hex": "#064163",
+            "weight_bp": 1208
+          },
+          {
+            "hex": "#10b9cc",
+            "weight_bp": 1140
+          },
+          {
+            "hex": "#020e2a",
+            "weight_bp": 1102
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05159,
+          "y_mae": 0.08544,
+          "x_ratio": 1.5726,
+          "y_ratio": 3.1367,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bioluminescent_kelp_and_moss_tex…_dfae112b.jpg",
+          "sha256": "3d0e35c2314b6547591115e27a41720b413c127954418ba8e9dca66f4787d617",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.aafbf6b0",
+      "kind": "region",
+      "name": "Frozen arctic seabed ice",
+      "description": "Frozen arctic seabed ice: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-aafbf6b0",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "frozen",
+        "arctic",
+        "seabed"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "water",
+        "ice",
+        "aquatic",
+        "cold",
+        "frozen",
+        "arctic",
+        "seabed",
+        "teal",
+        "blue",
+        "aquatic surfaces",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "frozen",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.ground"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#76bccb",
+            "weight_bp": 1430
+          },
+          {
+            "hex": "#1e4a60",
+            "weight_bp": 1398
+          },
+          {
+            "hex": "#488fa4",
+            "weight_bp": 1297
+          },
+          {
+            "hex": "#2a647a",
+            "weight_bp": 1205
+          },
+          {
+            "hex": "#669caf",
+            "weight_bp": 1195
+          },
+          {
+            "hex": "#427286",
+            "weight_bp": 1193
+          },
+          {
+            "hex": "#0d2d44",
+            "weight_bp": 1147
+          },
+          {
+            "hex": "#addce6",
+            "weight_bp": 1135
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06231,
+          "y_mae": 0.1368,
+          "x_ratio": 1.151,
+          "y_ratio": 2.6829,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Frozen_arctic_seabed_ice_texture_aafbf6b0.jpg",
+          "sha256": "0cdc7a13e5d4bd480b5d5f968c401b11cf72fa186bf66cfdbac82251eaea3e08",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    }
+  ]
+}

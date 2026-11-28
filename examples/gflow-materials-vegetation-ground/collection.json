@@ -1,0 +1,28 @@
+{
+  "schema": "smi-visual-collection/1",
+  "collection_id": "smi.material.gflow.vegetation-ground",
+  "name": "G Flow Materials — Vegetation ground",
+  "version": "1.0.0",
+  "entry_asset": "smi.material.gflow.540d5512",
+  "packs": [
+    {
+      "manifest": "manifest.json",
+      "label": "Vegetation ground"
+    }
+  ],
+  "classification": {
+    "category_path": [
+      "textures"
+    ],
+    "perspective": [
+      "perspective-neutral"
+    ],
+    "theme": [
+      "fantasy"
+    ],
+    "medium": [
+      "raster-2d"
+    ],
+    "family": "gflow-materials"
+  }
+}

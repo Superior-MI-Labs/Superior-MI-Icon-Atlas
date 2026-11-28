@@ -747,6 +747,235 @@
               "maxLength": 128
             }
           }
+        },
+        "visual_profile": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "schema": {
+              "const": "smi-visual-profile/1"
+            },
+            "palette": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "hex": {
+                    "type": "string",
+                    "pattern": "^#[0-9a-f]{6}$"
+                  },
+                  "weight_bp": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 10000
+                  }
+                },
+                "required": [
+                  "hex",
+                  "weight_bp"
+                ]
+              },
+              "minItems": 1,
+              "maxItems": 16
+            },
+            "palette_method": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64
+            },
+            "color_names": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              "minItems": 0,
+              "maxItems": 128,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "schema",
+            "palette",
+            "palette_method",
+            "color_names"
+          ]
+        },
+        "material": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "schema": {
+              "const": "smi-surface-material/1"
+            },
+            "channels": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "base_color": {
+                  "const": "self"
+                }
+              },
+              "required": [
+                "base_color"
+              ]
+            },
+            "role": {
+              "enum": [
+                "surface",
+                "liquid_appearance",
+                "effect_appearance"
+              ]
+            },
+            "repeat_intent": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "repeat",
+                  "clamp",
+                  "mirror"
+                ]
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "suggested_coverage_m": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 1e-06,
+                "maximum": 1000000.0
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "seam_screen": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "method": {
+                  "const": "rgb-wrap-mae-v1"
+                },
+                "x_mae": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "y_mae": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "x_ratio": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 255
+                },
+                "y_ratio": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 255
+                },
+                "screening": {
+                  "enum": [
+                    "low-discontinuity",
+                    "review-required"
+                  ]
+                }
+              },
+              "required": [
+                "method",
+                "x_mae",
+                "y_mae",
+                "x_ratio",
+                "y_ratio",
+                "screening"
+              ]
+            },
+            "source": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "filename": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 512
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "width_px": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 8192
+                },
+                "height_px": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 8192
+                },
+                "encoding": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 64
+                },
+                "processing": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 128
+                }
+              },
+              "required": [
+                "filename",
+                "sha256",
+                "width_px",
+                "height_px",
+                "encoding",
+                "processing"
+              ]
+            },
+            "associations": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "environments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  "minItems": 0,
+                  "maxItems": 128,
+                  "uniqueItems": true
+                },
+                "conditions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  "minItems": 0,
+                  "maxItems": 128,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "environments",
+                "conditions"
+              ]
+            }
+          },
+          "required": [
+            "schema",
+            "channels",
+            "role",
+            "repeat_intent"
+          ]
         }
       },
       "allOf": [

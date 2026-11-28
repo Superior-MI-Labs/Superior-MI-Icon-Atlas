@@ -1,0 +1,3532 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.rock-minerals",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-34506818": {
+      "path": "textures/cracked-granite-bedrock-34506818.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4a6530f4cf2e51f6e9c132a15683d4269f92b829627eca92924ebc9264d22a32",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ff368358": {
+      "path": "textures/ruined-ancient-temple-carved-slate-ff368358.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "93f0431ce4bb860d428d417b56e1c5650b81569ec68ca66e80decd27199fbcfe",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-4ff7201b": {
+      "path": "textures/white-quartz-marble-bedrock-4ff7201b.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "a2c3c5d77b342a321e8a8be2274f6a7e3a17f3303a37872ec4fb62fcddc0de5c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a177a090": {
+      "path": "textures/underwater-ocean-trench-basalt-a177a090.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d0bd35b0c3c4269b751fd9bc4591a31ac494ebacafe3c331a3551e6229bac778",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-2ea419e9": {
+      "path": "textures/green-limestone-ground-2ea419e9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "98ce5392536af51ced63471bec95953f506e5f8ec6071164ca0b767b79f22acb",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-95375144": {
+      "path": "textures/lightning-stone-with-embers-95375144.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4a9b7a990ee35ef6f57371e2c1a999eb8aab10de89f88c022fa9a0d9c33c9757",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-0c38cd90": {
+      "path": "textures/bloodstone-rock-ground-0c38cd90.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "713a1f7848c9aa78230c48a37615f6eae9b803b67dab1004a7c388101dec9421",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-fe5d9a57": {
+      "path": "textures/petrified-bone-bedrock-fe5d9a57.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "9a0ea28793bea78e435314d03655e04cc8175a47aea056086dd22adc214c0282",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-4ca9f058": {
+      "path": "textures/bioluminescent-blue-cave-stone-4ca9f058.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "ce1dc3642d342c34bbca5b018c1cc402541ed4d3b65dda1236d898f2962ac2f2",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-2126d608": {
+      "path": "textures/dwarven-mithril-ore-rock-2126d608.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "ad541ef2a7a7c68c593abf6dcf3330774d6a5f1c3bb168ee808ff5a07c651997",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ff7fef66": {
+      "path": "textures/red-canyon-sandstone-rock-face-ff7fef66.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4f3c93bcb22a0366220f2a35d273020c1c742725ae01f46518428abc7e3405a6",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-bb9b4417": {
+      "path": "textures/glowing-purple-amethyst-bb9b4417.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "3fb9663ba8e542071e17566c7c97825d7bb36d56c8a10fb830fec10ab5ab1bea",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ac9d015d": {
+      "path": "textures/volcanic-obsidian-rock-ac9d015d.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "38c73281a4cfb5ed0ff6237eccc78fb58d528d166335ef14c5c9cda1f2139de5",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-b3db5a63": {
+      "path": "textures/basalt-rock-with-magma-fissures-b3db5a63.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "6c8fd79710845712428d1d66d2e6816e539ffc4aae75fa405833be199b8f7ecf",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-41deea87": {
+      "path": "textures/green-serpentine-stone-floor-41deea87.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d8e20c7b3c4ddd66e725553146c82cc9ec6b858df4d1f1a15456997a3947bf37",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-53f362a2": {
+      "path": "textures/teal-crystal-bedrock-53f362a2.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "25efe46589f24f8a2f2ccb67810a19ac0a785f941cbd10533635350ce026e400",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-d8203f22": {
+      "path": "textures/mossy-limestone-rock-d8203f22.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "a5b127c61565cee8cb50a5d99976f88d0807a8c48aea8404fce6fb822327b3b0",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-697125db": {
+      "path": "textures/meteor-rock-bed-with-gold-697125db.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "509f0e7316504e964fcf329e8f6589ddf04a4f9eb12bf1c2f2a8631a384b0668",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-fa876896": {
+      "path": "textures/corrupted-shadow-stone-fa876896.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4b1a41226432b9ce0decdd8da07498db01573730c32619d1603f98ec352e3a76",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a67929f7": {
+      "path": "textures/ice-crusted-river-pebbles-a67929f7.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "8e8e4b065d06e67691d5fde65456d5c03a9072646d613fdaa23f8c89a6078625",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-fa4e92df": {
+      "path": "textures/slate-rock-with-rust-fa4e92df.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "bb112a2ed0965486a5f8386c79b280ae5f4fa6cc4dea5295645e41876c53c9f3",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-7c804438": {
+      "path": "textures/black-bedrock-with-runes-7c804438.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "434c87efb3ef719c58616f928aefeef6ea6e1f745d7acfbb4155b3615ad7ea18",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-2d26a0ce": {
+      "path": "textures/golden-sun-stone-bedrock-2d26a0ce.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "06b97d28d7905a2a3ac4378a4793b9114971d036134b930ebf18b21ccef18bd1",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-252e04c0": {
+      "path": "textures/fossilized-dragon-bone-bedrock-252e04c0.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "e5971b74f147fd45ec3d7847ffdc4e7decf422d208deaf694a47546f57e13876",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.34506818",
+      "kind": "region",
+      "name": "Cracked granite bedrock",
+      "description": "Cracked granite bedrock: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-34506818",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "dry",
+        "weathered",
+        "cracked",
+        "granite",
+        "bedrock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "dry",
+        "weathered",
+        "cracked",
+        "granite",
+        "bedrock",
+        "gray",
+        "brown",
+        "olive",
+        "black",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#6f6b60",
+            "weight_bp": 1537
+          },
+          {
+            "hex": "#8e816a",
+            "weight_bp": 1520
+          },
+          {
+            "hex": "#3c3430",
+            "weight_bp": 1326
+          },
+          {
+            "hex": "#695a4f",
+            "weight_bp": 1198
+          },
+          {
+            "hex": "#4f4b40",
+            "weight_bp": 1182
+          },
+          {
+            "hex": "#241c1e",
+            "weight_bp": 1145
+          },
+          {
+            "hex": "#877159",
+            "weight_bp": 1087
+          },
+          {
+            "hex": "#aba088",
+            "weight_bp": 1005
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "brown",
+          "olive",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03917,
+          "y_mae": 0.07571,
+          "x_ratio": 1.1427,
+          "y_ratio": 2.4338,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Cracked_granite_bedrock_texture_34506818.jpg",
+          "sha256": "3eaeac216b46f65d9166828deca1cedcd6afefaec59811c7e94a41ec3e4f6afa",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "dry",
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ff368358",
+      "kind": "region",
+      "name": "Ruined ancient temple carved slate",
+      "description": "Ruined ancient temple carved slate: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ff368358",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "weathered",
+        "patterned",
+        "ruined",
+        "ancient",
+        "temple",
+        "carved",
+        "slate"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "weathered",
+        "patterned",
+        "ruined",
+        "ancient",
+        "temple",
+        "carved",
+        "slate",
+        "teal",
+        "green",
+        "gray",
+        "black",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3f4d4a",
+            "weight_bp": 1558
+          },
+          {
+            "hex": "#2e3c3e",
+            "weight_bp": 1433
+          },
+          {
+            "hex": "#202928",
+            "weight_bp": 1341
+          },
+          {
+            "hex": "#2b3532",
+            "weight_bp": 1280
+          },
+          {
+            "hex": "#243031",
+            "weight_bp": 1254
+          },
+          {
+            "hex": "#37423e",
+            "weight_bp": 1153
+          },
+          {
+            "hex": "#566663",
+            "weight_bp": 1061
+          },
+          {
+            "hex": "#161c1a",
+            "weight_bp": 920
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "green",
+          "gray",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03989,
+          "y_mae": 0.06038,
+          "x_ratio": 1.0845,
+          "y_ratio": 1.7149,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Ruined_ancient_temple_carved_slate_ff368358.jpg",
+          "sha256": "e03e4bca403606f11c6f8b0ce66e2a3db39ade7a899ee4506492e971f1c041a9",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.4ff7201b",
+      "kind": "region",
+      "name": "White quartz marble bedrock",
+      "description": "White quartz marble bedrock: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-4ff7201b",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "crystal",
+        "white",
+        "quartz",
+        "marble",
+        "bedrock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "crystal",
+        "white",
+        "quartz",
+        "marble",
+        "bedrock",
+        "gray",
+        "brown",
+        "orange",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#e2e1d6",
+            "weight_bp": 1602
+          },
+          {
+            "hex": "#c8cbc3",
+            "weight_bp": 1457
+          },
+          {
+            "hex": "#9d9075",
+            "weight_bp": 1414
+          },
+          {
+            "hex": "#aba99d",
+            "weight_bp": 1255
+          },
+          {
+            "hex": "#f0f0e7",
+            "weight_bp": 1190
+          },
+          {
+            "hex": "#c1b79e",
+            "weight_bp": 1062
+          },
+          {
+            "hex": "#7a6341",
+            "weight_bp": 1061
+          },
+          {
+            "hex": "#d9d4c1",
+            "weight_bp": 959
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "white",
+          "gray",
+          "brown",
+          "orange"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04126,
+          "y_mae": 0.0785,
+          "x_ratio": 1.2166,
+          "y_ratio": 2.5501,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "White_quartz_marble_bedrock_texture_4ff7201b.jpg",
+          "sha256": "a4a7aa3f582f5d7791326c950f573ca50d4e7377e2b074b410ee7adcb9bd90c4",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a177a090",
+      "kind": "region",
+      "name": "Underwater ocean trench basalt",
+      "description": "Underwater ocean trench basalt: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a177a090",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "water",
+        "aquatic",
+        "wet",
+        "underwater",
+        "ocean",
+        "trench",
+        "basalt"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "water",
+        "aquatic",
+        "wet",
+        "underwater",
+        "ocean",
+        "trench",
+        "basalt",
+        "blue",
+        "black",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#293d4a",
+            "weight_bp": 1625
+          },
+          {
+            "hex": "#182029",
+            "weight_bp": 1449
+          },
+          {
+            "hex": "#0e131c",
+            "weight_bp": 1315
+          },
+          {
+            "hex": "#111c26",
+            "weight_bp": 1295
+          },
+          {
+            "hex": "#192a36",
+            "weight_bp": 1174
+          },
+          {
+            "hex": "#242f39",
+            "weight_bp": 1132
+          },
+          {
+            "hex": "#3c5c6b",
+            "weight_bp": 1014
+          },
+          {
+            "hex": "#060c14",
+            "weight_bp": 996
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0244,
+          "y_mae": 0.0585,
+          "x_ratio": 1.0105,
+          "y_ratio": 2.4916,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Underwater_ocean_trench_basalt_s…_a177a090.jpg",
+          "sha256": "e82b131a21d269e5005bfc34b84fe7563ef6dc9d53663a811d94ff762ea69b5a",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.2ea419e9",
+      "kind": "region",
+      "name": "Green limestone ground",
+      "description": "Green limestone ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-2ea419e9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "green",
+        "limestone"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "green",
+        "limestone",
+        "black",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#6a823e",
+            "weight_bp": 1372
+          },
+          {
+            "hex": "#374725",
+            "weight_bp": 1348
+          },
+          {
+            "hex": "#2e391f",
+            "weight_bp": 1315
+          },
+          {
+            "hex": "#5b693a",
+            "weight_bp": 1303
+          },
+          {
+            "hex": "#444f2e",
+            "weight_bp": 1301
+          },
+          {
+            "hex": "#485f2d",
+            "weight_bp": 1221
+          },
+          {
+            "hex": "#1c2413",
+            "weight_bp": 1098
+          },
+          {
+            "hex": "#97b451",
+            "weight_bp": 1042
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05304,
+          "y_mae": 0.07152,
+          "x_ratio": 1.3656,
+          "y_ratio": 1.95,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Green_limestone_ground_texture_2ea419e9.jpg",
+          "sha256": "dbd1f7a9efab6334f8a06f2fdf7cd05e83065d5d55d545ded5e83a6eb42a860e",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.95375144",
+      "kind": "region",
+      "name": "Lightning stone with embers",
+      "description": "Lightning stone with embers: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-95375144",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "lava",
+        "glowing",
+        "lightning",
+        "embers"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "lava",
+        "glowing",
+        "lightning",
+        "embers",
+        "blue",
+        "black",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#374b5d",
+            "weight_bp": 1587
+          },
+          {
+            "hex": "#1e2530",
+            "weight_bp": 1488
+          },
+          {
+            "hex": "#121822",
+            "weight_bp": 1483
+          },
+          {
+            "hex": "#2e3744",
+            "weight_bp": 1215
+          },
+          {
+            "hex": "#171f2c",
+            "weight_bp": 1165
+          },
+          {
+            "hex": "#213041",
+            "weight_bp": 1068
+          },
+          {
+            "hex": "#090d16",
+            "weight_bp": 1003
+          },
+          {
+            "hex": "#4c788f",
+            "weight_bp": 991
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.01471,
+          "y_mae": 0.02164,
+          "x_ratio": 0.6264,
+          "y_ratio": 0.8751,
+          "screening": "low-discontinuity"
+        },
+        "source": {
+          "filename": "Lightning_stone_texture_with_embers_95375144.jpg",
+          "sha256": "00ebf718e7d23233cac0656524e134ec5e530ba3ac8f668fe523afea37daaa69",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.0c38cd90",
+      "kind": "region",
+      "name": "Bloodstone rock ground",
+      "description": "Bloodstone rock ground: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-0c38cd90",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "crystal",
+        "bloodstone",
+        "rock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "crystal",
+        "bloodstone",
+        "rock",
+        "green",
+        "black",
+        "brown",
+        "olive",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#222a27",
+            "weight_bp": 1704
+          },
+          {
+            "hex": "#303a33",
+            "weight_bp": 1402
+          },
+          {
+            "hex": "#0b0b0e",
+            "weight_bp": 1312
+          },
+          {
+            "hex": "#27332d",
+            "weight_bp": 1275
+          },
+          {
+            "hex": "#1d1c1c",
+            "weight_bp": 1269
+          },
+          {
+            "hex": "#14191a",
+            "weight_bp": 1135
+          },
+          {
+            "hex": "#441515",
+            "weight_bp": 986
+          },
+          {
+            "hex": "#4b483e",
+            "weight_bp": 917
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black",
+          "brown",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03513,
+          "y_mae": 0.05648,
+          "x_ratio": 1.2411,
+          "y_ratio": 1.9983,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bloodstone_rock_ground_texture_0c38cd90.jpg",
+          "sha256": "b3576a1ad3120cb43e594e1cc5abe1c47671d3023fddf75da29793334231fbf7",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.fe5d9a57",
+      "kind": "region",
+      "name": "Petrified bone bedrock",
+      "description": "Petrified bone bedrock: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-fe5d9a57",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "bone",
+        "organic",
+        "petrified",
+        "bedrock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "bone",
+        "organic",
+        "petrified",
+        "bedrock",
+        "gray",
+        "black",
+        "brown",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#413b38",
+            "weight_bp": 1440
+          },
+          {
+            "hex": "#29272b",
+            "weight_bp": 1428
+          },
+          {
+            "hex": "#171519",
+            "weight_bp": 1336
+          },
+          {
+            "hex": "#332d2e",
+            "weight_bp": 1295
+          },
+          {
+            "hex": "#262023",
+            "weight_bp": 1262
+          },
+          {
+            "hex": "#1f1c20",
+            "weight_bp": 1253
+          },
+          {
+            "hex": "#766757",
+            "weight_bp": 1008
+          },
+          {
+            "hex": "#0c0a0e",
+            "weight_bp": 978
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "black",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05116,
+          "y_mae": 0.07739,
+          "x_ratio": 1.5354,
+          "y_ratio": 2.3912,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Petrified_bone_bedrock_texture_fe5d9a57.jpg",
+          "sha256": "11313b2bb445fcad1b4ecf99258f3a26dc2e7fa99c648bbf242e52ebf76ee163",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.4ca9f058",
+      "kind": "region",
+      "name": "Bioluminescent blue cave stone",
+      "description": "Bioluminescent blue cave stone: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-4ca9f058",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "magic",
+        "glowing",
+        "bioluminescent",
+        "blue",
+        "cave"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "magic",
+        "glowing",
+        "bioluminescent",
+        "blue",
+        "cave",
+        "black",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1d4b6c",
+            "weight_bp": 1393
+          },
+          {
+            "hex": "#1c2e40",
+            "weight_bp": 1379
+          },
+          {
+            "hex": "#1a3653",
+            "weight_bp": 1361
+          },
+          {
+            "hex": "#0f1a2c",
+            "weight_bp": 1289
+          },
+          {
+            "hex": "#152131",
+            "weight_bp": 1285
+          },
+          {
+            "hex": "#15253b",
+            "weight_bp": 1254
+          },
+          {
+            "hex": "#268cb3",
+            "weight_bp": 1028
+          },
+          {
+            "hex": "#070e1e",
+            "weight_bp": 1011
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02096,
+          "y_mae": 0.03572,
+          "x_ratio": 0.8465,
+          "y_ratio": 1.5722,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bioluminescent_blue_cave_stone_t…_4ca9f058.jpg",
+          "sha256": "cd4458db65801d6cedf49d81eafc244ffd7459d15d459053a9bd99150b6295c2",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.2126d608",
+      "kind": "region",
+      "name": "Dwarven mithril ore rock",
+      "description": "Dwarven mithril ore rock: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-2126d608",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "crystal",
+        "metal",
+        "magic",
+        "dwarven",
+        "mithril",
+        "ore",
+        "rock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "crystal",
+        "metal",
+        "magic",
+        "dwarven",
+        "mithril",
+        "ore",
+        "rock",
+        "blue",
+        "black",
+        "teal",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#394752",
+            "weight_bp": 1539
+          },
+          {
+            "hex": "#1e1f29",
+            "weight_bp": 1404
+          },
+          {
+            "hex": "#12131d",
+            "weight_bp": 1337
+          },
+          {
+            "hex": "#2c313c",
+            "weight_bp": 1324
+          },
+          {
+            "hex": "#222935",
+            "weight_bp": 1278
+          },
+          {
+            "hex": "#161a25",
+            "weight_bp": 1140
+          },
+          {
+            "hex": "#090b14",
+            "weight_bp": 1028
+          },
+          {
+            "hex": "#6f8b91",
+            "weight_bp": 950
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02983,
+          "y_mae": 0.04892,
+          "x_ratio": 0.8438,
+          "y_ratio": 1.4501,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Dwarven_mithril_ore_rock_texture_2126d608.jpg",
+          "sha256": "6dc110e8792547efd135c7e3214f84f972342d22e2f05829f4f694628a0e8841",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ff7fef66",
+      "kind": "region",
+      "name": "Red canyon sandstone rock face",
+      "description": "Red canyon sandstone rock face: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ff7fef66",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "desert",
+        "red",
+        "canyon",
+        "sandstone",
+        "rock",
+        "face"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "desert",
+        "red",
+        "canyon",
+        "sandstone",
+        "rock",
+        "face",
+        "orange",
+        "brown",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#c96d3e",
+            "weight_bp": 1464
+          },
+          {
+            "hex": "#662819",
+            "weight_bp": 1359
+          },
+          {
+            "hex": "#bf5f35",
+            "weight_bp": 1264
+          },
+          {
+            "hex": "#ab5733",
+            "weight_bp": 1261
+          },
+          {
+            "hex": "#81341e",
+            "weight_bp": 1214
+          },
+          {
+            "hex": "#994629",
+            "weight_bp": 1191
+          },
+          {
+            "hex": "#dc844c",
+            "weight_bp": 1131
+          },
+          {
+            "hex": "#46180f",
+            "weight_bp": 1116
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "orange",
+          "red",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04298,
+          "y_mae": 0.07036,
+          "x_ratio": 1.727,
+          "y_ratio": 2.4253,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Red_canyon_sandstone_rock_face_ff7fef66.jpg",
+          "sha256": "1ce8cc951ccdd7e342869928e1e05c80da93eb03dc8e450f86e62113317cf204",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "desert"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.bb9b4417",
+      "kind": "region",
+      "name": "Glowing purple amethyst",
+      "description": "Glowing purple amethyst: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-bb9b4417",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "crystal",
+        "magic",
+        "glowing",
+        "purple",
+        "amethyst"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "crystal",
+        "magic",
+        "glowing",
+        "purple",
+        "amethyst",
+        "black",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3a304e",
+            "weight_bp": 1852
+          },
+          {
+            "hex": "#281e3d",
+            "weight_bp": 1712
+          },
+          {
+            "hex": "#9b70b4",
+            "weight_bp": 1285
+          },
+          {
+            "hex": "#1d172f",
+            "weight_bp": 1265
+          },
+          {
+            "hex": "#694987",
+            "weight_bp": 1129
+          },
+          {
+            "hex": "#5d367f",
+            "weight_bp": 1093
+          },
+          {
+            "hex": "#120b24",
+            "weight_bp": 1077
+          },
+          {
+            "hex": "#401f62",
+            "weight_bp": 587
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "purple",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03924,
+          "y_mae": 0.10205,
+          "x_ratio": 1.0709,
+          "y_ratio": 3.1,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Glowing_purple_amethyst_texture_bb9b4417.jpg",
+          "sha256": "146084d25023f4f82fe580e40f1682a7abf0ca07acc92a35844f73975546a8e5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ac9d015d",
+      "kind": "region",
+      "name": "Volcanic obsidian rock",
+      "description": "Volcanic obsidian rock: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ac9d015d",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "lava",
+        "volcanic",
+        "obsidian",
+        "rock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "lava",
+        "volcanic",
+        "obsidian",
+        "rock",
+        "blue",
+        "black",
+        "brown",
+        "red",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#262530",
+            "weight_bp": 2071
+          },
+          {
+            "hex": "#1f151b",
+            "weight_bp": 1473
+          },
+          {
+            "hex": "#b77142",
+            "weight_bp": 1223
+          },
+          {
+            "hex": "#14121a",
+            "weight_bp": 1194
+          },
+          {
+            "hex": "#0b080e",
+            "weight_bp": 1133
+          },
+          {
+            "hex": "#683932",
+            "weight_bp": 1003
+          },
+          {
+            "hex": "#3c1614",
+            "weight_bp": 984
+          },
+          {
+            "hex": "#5c261e",
+            "weight_bp": 919
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "brown",
+          "red"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02534,
+          "y_mae": 0.06952,
+          "x_ratio": 0.9599,
+          "y_ratio": 2.7762,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Volcanic_obsidian_rock_texture_ac9d015d.jpg",
+          "sha256": "5b61e4c1f04e2aa52c3ed5c95f6f66d8659a05cd36064544c8cf0cb91e694847",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.b3db5a63",
+      "kind": "region",
+      "name": "Basalt rock with magma fissures",
+      "description": "Basalt rock with magma fissures: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-b3db5a63",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "lava",
+        "basalt",
+        "rock",
+        "magma",
+        "fissures"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "lava",
+        "basalt",
+        "rock",
+        "magma",
+        "fissures",
+        "gray",
+        "brown",
+        "black",
+        "red",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#302e33",
+            "weight_bp": 2528
+          },
+          {
+            "hex": "#2b2021",
+            "weight_bp": 1396
+          },
+          {
+            "hex": "#b0683b",
+            "weight_bp": 1229
+          },
+          {
+            "hex": "#120f11",
+            "weight_bp": 1145
+          },
+          {
+            "hex": "#1e1c20",
+            "weight_bp": 1145
+          },
+          {
+            "hex": "#642f24",
+            "weight_bp": 1011
+          },
+          {
+            "hex": "#581f17",
+            "weight_bp": 776
+          },
+          {
+            "hex": "#603b33",
+            "weight_bp": 770
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "brown",
+          "black",
+          "red"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0279,
+          "y_mae": 0.06805,
+          "x_ratio": 1.0708,
+          "y_ratio": 2.7756,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Basalt_rock_with_magma_fissures_b3db5a63.jpg",
+          "sha256": "5643e7941822e86c55143996c9b13fffc64b4a1afd4800cb1e5830a1cc86a9f9",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.41deea87",
+      "kind": "region",
+      "name": "Green serpentine stone floor",
+      "description": "Green serpentine stone floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-41deea87",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "green",
+        "serpentine"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "green",
+        "serpentine",
+        "black",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#5a7e64",
+            "weight_bp": 1503
+          },
+          {
+            "hex": "#3e6149",
+            "weight_bp": 1349
+          },
+          {
+            "hex": "#243d2c",
+            "weight_bp": 1323
+          },
+          {
+            "hex": "#4b6b54",
+            "weight_bp": 1297
+          },
+          {
+            "hex": "#37543f",
+            "weight_bp": 1271
+          },
+          {
+            "hex": "#2c4b38",
+            "weight_bp": 1234
+          },
+          {
+            "hex": "#7ca387",
+            "weight_bp": 1014
+          },
+          {
+            "hex": "#192718",
+            "weight_bp": 1009
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03013,
+          "y_mae": 0.06745,
+          "x_ratio": 1.0028,
+          "y_ratio": 2.2672,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Green_serpentine_stone_floor_tex…_41deea87.jpg",
+          "sha256": "a1a39c4de64cde918bbb18cde2600d4ca2c1a6f21a3c7e0e290455e9411bdb78",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.53f362a2",
+      "kind": "region",
+      "name": "Teal crystal bedrock",
+      "description": "Teal crystal bedrock: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-53f362a2",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "crystal",
+        "teal",
+        "bedrock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "crystal",
+        "teal",
+        "bedrock",
+        "blue",
+        "black",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#15242c",
+            "weight_bp": 1530
+          },
+          {
+            "hex": "#2a8385",
+            "weight_bp": 1432
+          },
+          {
+            "hex": "#283a3f",
+            "weight_bp": 1385
+          },
+          {
+            "hex": "#1b595e",
+            "weight_bp": 1194
+          },
+          {
+            "hex": "#39595b",
+            "weight_bp": 1135
+          },
+          {
+            "hex": "#16373f",
+            "weight_bp": 1117
+          },
+          {
+            "hex": "#0a131c",
+            "weight_bp": 1108
+          },
+          {
+            "hex": "#3bc6c1",
+            "weight_bp": 1099
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "teal",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06099,
+          "y_mae": 0.09123,
+          "x_ratio": 1.6343,
+          "y_ratio": 2.7458,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Teal_crystal_bedrock_texture_53f362a2.jpg",
+          "sha256": "900f64e5b6d3f9997ade1199bb176abb8222ce9022602b9ed8ee8d11d5cb46cd",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.d8203f22",
+      "kind": "region",
+      "name": "Mossy limestone rock",
+      "description": "Mossy limestone rock: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-d8203f22",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "mossy",
+        "limestone",
+        "rock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "mossy",
+        "limestone",
+        "rock",
+        "yellow",
+        "olive",
+        "black",
+        "brown",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#b5aa8c",
+            "weight_bp": 1694
+          },
+          {
+            "hex": "#494c1d",
+            "weight_bp": 1312
+          },
+          {
+            "hex": "#675f34",
+            "weight_bp": 1284
+          },
+          {
+            "hex": "#363716",
+            "weight_bp": 1282
+          },
+          {
+            "hex": "#1c1e0b",
+            "weight_bp": 1178
+          },
+          {
+            "hex": "#a89670",
+            "weight_bp": 1136
+          },
+          {
+            "hex": "#cbc1a4",
+            "weight_bp": 1081
+          },
+          {
+            "hex": "#868155",
+            "weight_bp": 1033
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "yellow",
+          "olive",
+          "black",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03888,
+          "y_mae": 0.07474,
+          "x_ratio": 1.0685,
+          "y_ratio": 2.1595,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Mossy_limestone_rock_texture_d8203f22.jpg",
+          "sha256": "dd323abb9a640a5960be7e27f35e1ee2ee5d4f3454501d6e7ce672acb2d2147c",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.697125db",
+      "kind": "region",
+      "name": "Meteor rock bed with gold",
+      "description": "Meteor rock bed with gold: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-697125db",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "meteor",
+        "rock",
+        "bed",
+        "gold"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "meteor",
+        "rock",
+        "bed",
+        "gold",
+        "blue",
+        "black",
+        "gray",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#474760",
+            "weight_bp": 1560
+          },
+          {
+            "hex": "#212132",
+            "weight_bp": 1318
+          },
+          {
+            "hex": "#121220",
+            "weight_bp": 1297
+          },
+          {
+            "hex": "#19192a",
+            "weight_bp": 1277
+          },
+          {
+            "hex": "#2a2b41",
+            "weight_bp": 1271
+          },
+          {
+            "hex": "#39364d",
+            "weight_bp": 1199
+          },
+          {
+            "hex": "#6a6b7f",
+            "weight_bp": 1039
+          },
+          {
+            "hex": "#090a15",
+            "weight_bp": 1039
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04976,
+          "y_mae": 0.07682,
+          "x_ratio": 1.3204,
+          "y_ratio": 2.0981,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Meteor_rock_bed_with_gold_697125db.jpg",
+          "sha256": "8ee7df5affa8dd69a1fbef0f59bae6f315a9db086ab1374e69aa8f3a1eeef524",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.fa876896",
+      "kind": "region",
+      "name": "Corrupted shadow stone",
+      "description": "Corrupted shadow stone: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-fa876896",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "magic",
+        "corrupted",
+        "shadow"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "magic",
+        "corrupted",
+        "shadow",
+        "black",
+        "blue",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#121222",
+            "weight_bp": 1393
+          },
+          {
+            "hex": "#2b3148",
+            "weight_bp": 1389
+          },
+          {
+            "hex": "#272941",
+            "weight_bp": 1381
+          },
+          {
+            "hex": "#18182b",
+            "weight_bp": 1321
+          },
+          {
+            "hex": "#202438",
+            "weight_bp": 1293
+          },
+          {
+            "hex": "#323d55",
+            "weight_bp": 1173
+          },
+          {
+            "hex": "#0a0916",
+            "weight_bp": 1063
+          },
+          {
+            "hex": "#201b33",
+            "weight_bp": 987
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02882,
+          "y_mae": 0.05384,
+          "x_ratio": 1.2109,
+          "y_ratio": 2.4932,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Corrupted_shadow_stone_texture_fa876896.jpg",
+          "sha256": "f7a0c6a72c72f8935ca5d52e4baf48291f13d9116f087e1b4fe69722e7ef04dd",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a67929f7",
+      "kind": "region",
+      "name": "Ice crusted river pebbles",
+      "description": "Ice crusted river pebbles: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a67929f7",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "ice",
+        "cold",
+        "crusted",
+        "river",
+        "pebbles"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "ice",
+        "cold",
+        "crusted",
+        "river",
+        "pebbles",
+        "blue",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles",
+        "frozen"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#90afbd",
+            "weight_bp": 1465
+          },
+          {
+            "hex": "#36444e",
+            "weight_bp": 1348
+          },
+          {
+            "hex": "#5c6c75",
+            "weight_bp": 1348
+          },
+          {
+            "hex": "#688696",
+            "weight_bp": 1196
+          },
+          {
+            "hex": "#7e949e",
+            "weight_bp": 1193
+          },
+          {
+            "hex": "#455c6a",
+            "weight_bp": 1180
+          },
+          {
+            "hex": "#b4d4df",
+            "weight_bp": 1142
+          },
+          {
+            "hex": "#1f2a34",
+            "weight_bp": 1128
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07871,
+          "y_mae": 0.11328,
+          "x_ratio": 1.5579,
+          "y_ratio": 2.3285,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Ice_crusted_river_pebbles_texture_a67929f7.jpg",
+          "sha256": "5d291ac4cd495a2441c6fc9598786fddff0999c05f367fafda6a2463a631fe45",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.fa4e92df",
+      "kind": "region",
+      "name": "Slate rock with rust",
+      "description": "Slate rock with rust: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-fa4e92df",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "weathered",
+        "slate",
+        "rock",
+        "rust"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "weathered",
+        "slate",
+        "rock",
+        "rust",
+        "gray",
+        "brown",
+        "black",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3e3d43",
+            "weight_bp": 1939
+          },
+          {
+            "hex": "#2e2a2f",
+            "weight_bp": 1358
+          },
+          {
+            "hex": "#604f46",
+            "weight_bp": 1287
+          },
+          {
+            "hex": "#141014",
+            "weight_bp": 1227
+          },
+          {
+            "hex": "#212027",
+            "weight_bp": 1182
+          },
+          {
+            "hex": "#5c4132",
+            "weight_bp": 1140
+          },
+          {
+            "hex": "#836c59",
+            "weight_bp": 1025
+          },
+          {
+            "hex": "#432e25",
+            "weight_bp": 842
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02726,
+          "y_mae": 0.04891,
+          "x_ratio": 1.0052,
+          "y_ratio": 1.6934,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Slate_rock_texture_with_rust_fa4e92df.jpg",
+          "sha256": "5d2bfec96643fb3e062e8e19a08508ebda1d9c9fc95d6bd1668cb4f94700785f",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.7c804438",
+      "kind": "region",
+      "name": "Black bedrock with runes",
+      "description": "Black bedrock with runes: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-7c804438",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "magic",
+        "patterned",
+        "black",
+        "bedrock",
+        "runes"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "magic",
+        "patterned",
+        "black",
+        "bedrock",
+        "runes",
+        "blue",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#10192a",
+            "weight_bp": 1695
+          },
+          {
+            "hex": "#0a0f1b",
+            "weight_bp": 1444
+          },
+          {
+            "hex": "#1a4369",
+            "weight_bp": 1391
+          },
+          {
+            "hex": "#0f1421",
+            "weight_bp": 1305
+          },
+          {
+            "hex": "#1a283c",
+            "weight_bp": 1204
+          },
+          {
+            "hex": "#2390b9",
+            "weight_bp": 1076
+          },
+          {
+            "hex": "#040711",
+            "weight_bp": 1010
+          },
+          {
+            "hex": "#12243d",
+            "weight_bp": 875
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02923,
+          "y_mae": 0.0404,
+          "x_ratio": 1.1401,
+          "y_ratio": 1.7289,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Black_bedrock_texture_with_runes_7c804438.jpg",
+          "sha256": "234d2663e51468c67d5dbfbf7bd965c406962bf48adafe3e62a94d8ac23adebe",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.2d26a0ce",
+      "kind": "region",
+      "name": "Golden sun-stone bedrock",
+      "description": "Golden sun-stone bedrock: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-2d26a0ce",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "golden",
+        "sun",
+        "bedrock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "golden",
+        "sun",
+        "bedrock",
+        "orange",
+        "brown",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#bf742a",
+            "weight_bp": 1521
+          },
+          {
+            "hex": "#592d14",
+            "weight_bp": 1325
+          },
+          {
+            "hex": "#88471d",
+            "weight_bp": 1303
+          },
+          {
+            "hex": "#af6020",
+            "weight_bp": 1296
+          },
+          {
+            "hex": "#793915",
+            "weight_bp": 1210
+          },
+          {
+            "hex": "#965623",
+            "weight_bp": 1208
+          },
+          {
+            "hex": "#361709",
+            "weight_bp": 1109
+          },
+          {
+            "hex": "#db9d3e",
+            "weight_bp": 1028
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "orange",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03864,
+          "y_mae": 0.0789,
+          "x_ratio": 1.267,
+          "y_ratio": 2.692,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Golden_sun-stone_bedrock_texture_2d26a0ce.jpg",
+          "sha256": "e224feede161d3cdd195f2c1baa5ebeb0cccd038eb1fdba18e1011b30201ec83",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.252e04c0",
+      "kind": "region",
+      "name": "Fossilized dragon-bone bedrock",
+      "description": "Fossilized dragon-bone bedrock: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-252e04c0",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "bone",
+        "magic",
+        "organic",
+        "fossilized",
+        "dragon",
+        "bedrock"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "bone",
+        "magic",
+        "organic",
+        "fossilized",
+        "dragon",
+        "bedrock",
+        "black",
+        "olive",
+        "gray",
+        "yellow",
+        "rock minerals",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.cliffs"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1d1e19",
+            "weight_bp": 1420
+          },
+          {
+            "hex": "#625d49",
+            "weight_bp": 1395
+          },
+          {
+            "hex": "#322f24",
+            "weight_bp": 1380
+          },
+          {
+            "hex": "#4d4835",
+            "weight_bp": 1307
+          },
+          {
+            "hex": "#252722",
+            "weight_bp": 1204
+          },
+          {
+            "hex": "#3c3c33",
+            "weight_bp": 1191
+          },
+          {
+            "hex": "#948c72",
+            "weight_bp": 1072
+          },
+          {
+            "hex": "#10110f",
+            "weight_bp": 1031
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "olive",
+          "gray",
+          "yellow"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07154,
+          "y_mae": 0.09,
+          "x_ratio": 1.4655,
+          "y_ratio": 1.9331,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Fossilized_dragon-bone_bedrock_t…_252e04c0.jpg",
+          "sha256": "43b6271e450723530191360b78a813406f251d9f514ebfed5d2aba266feb2c06",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    }
+  ]
+}
