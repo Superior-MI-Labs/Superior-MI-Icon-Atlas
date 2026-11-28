@@ -7,9 +7,12 @@ artifact is pruned. No second source-of-truth asset catalog is introduced.
 import json
 import re
 import shutil
+import sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from tools.retain_archives import approved_packs, digest_file
 
 def prune(site:Path):
     site=Path(site).resolve()
@@ -59,6 +62,9 @@ def prune(site:Path):
         if updated!=source:doc.write_text(updated,encoding='utf-8')
     for p in catalog['packs']:
         if p.get('zip') and not (site/p['zip']).is_file():raise ValueError('Required approved pack was removed')
+    for pack, loc in approved_packs(catalog):
+        if pack.get('immutable_zip') != loc or digest_file(site/loc) != pack['archive_sha256']:
+            raise ValueError('Missing or invalid immutable archive')
     for forbidden in ('catalog-data.js','featured-packs.json','manifest.json','demo/starter-pack.zip'):
         if (site/forbidden).exists():raise ValueError('Unapproved public file: '+forbidden)
     return len(allowed)

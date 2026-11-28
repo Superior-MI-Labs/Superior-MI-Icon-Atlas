@@ -1,0 +1,3442 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.gravel-paths",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-60a96774": {
+      "path": "textures/golden-starlight-crystal-gravel-60a96774.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "08a4a6914c0c0a95839c808b7f918f94d3d3065778c09a2937cdecb3bd22750c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-e1c35a1a": {
+      "path": "textures/dark-gravel-with-purple-glow-e1c35a1a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f77dc4e91b0c91360b1a8dec4a5a82ae1cff827a6b4eb2f52d033baa30845c3b",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-cddaf63e": {
+      "path": "textures/gold-inlaid-cobblestone-street-cddaf63e.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "5820292cb207eb816cf9ab0b5aba07ed196bf848ac69b4f2889987cad8c1a1ad",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-3c3952a2": {
+      "path": "textures/bloodstone-crushed-gravel-3c3952a2.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "110a06dcd40062b3fa80355cc0f4a05708d9f50c1d57c1da31bfffdc2db662a5",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ad0707d9": {
+      "path": "textures/ice-crusted-stone-pathway-ad0707d9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "2fe0fcfa39f92069d52461ef58c91c70246175cca220a0ce846c59744a31d3d1",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-5909b81a": {
+      "path": "textures/cracked-flagstone-pavers-5909b81a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "99b36ddedca0b1d533e06bae372695da03f712582a8598ed5e65355b645ccff2",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-21a672a2": {
+      "path": "textures/seashell-and-pebble-21a672a2.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f59bce7c74ebb20a9a69bf1fc27b26ca696407c5a8a8a285ece193061995cee3",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-73b74e27": {
+      "path": "textures/purple-crystal-gravel-73b74e27.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d64942c70c9b000f8c53d333ae5e8f1f2bf5523f9b697bd5368469a13a52380c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-ede18f97": {
+      "path": "textures/autumn-forest-dirt-trail-ede18f97.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "76dfa6e6db5a59bc01c831e3e75e4c445598bd5ff3c58c23ee044e9df5aeb8c0",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-4a9a2a98": {
+      "path": "textures/textured-green-stone-gravel-4a9a2a98.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "28613245bdf4b20b8aebec8de5548acb4676ab91b8a9301c6e811daad4215f0b",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-7f42dd70": {
+      "path": "textures/stardust-moonstone-pebble-path-7f42dd70.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "5c2da2553dbe8bfe9ebe2f614ab321f7f74bc7fed27b78d161063aeb85d6acc2",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-3a9509e5": {
+      "path": "textures/slate-stepping-stone-3a9509e5.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "bd4e945bdd0e6c4692b240f252fd0a141928bb9a36db7d78e0e28f27490f8f13",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-c1231cf6": {
+      "path": "textures/red-clay-brick-pathway-c1231cf6.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "6c4ef670fa8cf12b244c983ef53d2fb105d78e03444e3b83510c925364eed69e",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-f2a3a124": {
+      "path": "textures/volcanic-gravel-with-orange-embers-f2a3a124.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "839e3887eaff644d2ba7d26b7a8a81d298e52ba8caed3b7f2d634e32827c6bfd",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a05c8547": {
+      "path": "textures/golden-leaf-mosaic-a05c8547.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "9b0166fac95909d2e7dd6b9cbf6716c55900dd879397a8012418a8bae7638e09",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-9d3bfda2": {
+      "path": "textures/bone-fragment-gravel-path-9d3bfda2.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "c64fe4be378605ea983a0a3924055b253ed67df136e5040fd54bef423abd0ee5",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-4bddee91": {
+      "path": "textures/charred-black-ember-gravel-path-4bddee91.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "a53a71a5c1828009071602537b90a9a3b6bad29636d5e4cdaeec8ef4d4237ba0",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-bf488f8d": {
+      "path": "textures/pink-quartz-pebble-pathway-bf488f8d.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "ef709f438be7ab2800d0089119185cf61833dc31fbde4522a7874fea8812090c",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-21d1396a": {
+      "path": "textures/carved-runic-cobblestone-road-21d1396a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "47d1fcb32d2535141cf779a163d3f00d2c4a1a526e67bca44acdd10f10699dc9",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-d6841229": {
+      "path": "textures/overgrown-stone-walkway-d6841229.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "b3fedc0e4566e2e25819cd654602b83b4fbfc876ebbee22f1ce469b407f3a34a",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-13df786b": {
+      "path": "textures/mossy-cobblestone-road-13df786b.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "4fd0ec2db638b27f77c6534f8caae767744d6fbd5fa10f0e5fbd8328726a5499",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-107947a6": {
+      "path": "textures/rustic-river-gravel-pathway-107947a6.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "a4f87df1d9f8d867bff23a3143f5f4839bdb9f3252ce89b5206952d2be777c07",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-5fe73c0a": {
+      "path": "textures/crushed-white-marble-garden-pebbles-5fe73c0a.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "171bcb2284fad694d8db415fe55f98a8ccb41dac9c6bcd69a9c63e06775c3957",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.60a96774",
+      "kind": "region",
+      "name": "Golden starlight crystal gravel",
+      "description": "Golden starlight crystal gravel: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-60a96774",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "crystal",
+        "magic",
+        "glowing",
+        "golden",
+        "starlight"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "crystal",
+        "magic",
+        "glowing",
+        "golden",
+        "starlight",
+        "brown",
+        "black",
+        "purple",
+        "orange",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#ac7638",
+            "weight_bp": 1463
+          },
+          {
+            "hex": "#422420",
+            "weight_bp": 1394
+          },
+          {
+            "hex": "#8d5426",
+            "weight_bp": 1310
+          },
+          {
+            "hex": "#592f1d",
+            "weight_bp": 1276
+          },
+          {
+            "hex": "#1d0c18",
+            "weight_bp": 1251
+          },
+          {
+            "hex": "#2d1b26",
+            "weight_bp": 1179
+          },
+          {
+            "hex": "#684531",
+            "weight_bp": 1099
+          },
+          {
+            "hex": "#dcb45f",
+            "weight_bp": 1028
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black",
+          "purple",
+          "orange"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06125,
+          "y_mae": 0.08372,
+          "x_ratio": 1.2223,
+          "y_ratio": 1.7217,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Golden_starlight_crystal_gravel_…_60a96774.jpg",
+          "sha256": "02f21888321537b4a6ce220a4f5d3d652084831a461fadca0a688f8785d7969e",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.e1c35a1a",
+      "kind": "region",
+      "name": "Dark gravel with purple glow",
+      "description": "Dark gravel with purple glow: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-e1c35a1a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "dark",
+        "purple",
+        "glow"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "dark",
+        "purple",
+        "glow",
+        "blue",
+        "black",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2d294e",
+            "weight_bp": 1743
+          },
+          {
+            "hex": "#181434",
+            "weight_bp": 1517
+          },
+          {
+            "hex": "#44296f",
+            "weight_bp": 1280
+          },
+          {
+            "hex": "#100f2b",
+            "weight_bp": 1232
+          },
+          {
+            "hex": "#261f47",
+            "weight_bp": 1137
+          },
+          {
+            "hex": "#221843",
+            "weight_bp": 1069
+          },
+          {
+            "hex": "#5b3e87",
+            "weight_bp": 1012
+          },
+          {
+            "hex": "#080720",
+            "weight_bp": 1010
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "purple",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04311,
+          "y_mae": 0.05874,
+          "x_ratio": 1.128,
+          "y_ratio": 1.5578,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Dark_gravel_with_purple_glow_e1c35a1a.jpg",
+          "sha256": "f5843622c25d8bf0a8ffe31add4d9cfbc7c318827aad5c5671e6b06f0a4f9f19",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.cddaf63e",
+      "kind": "region",
+      "name": "Gold inlaid cobblestone street",
+      "description": "Gold inlaid cobblestone street: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-cddaf63e",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "path",
+        "patterned",
+        "gold",
+        "inlaid",
+        "cobblestone",
+        "street"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "path",
+        "patterned",
+        "gold",
+        "inlaid",
+        "cobblestone",
+        "street",
+        "blue",
+        "black",
+        "brown",
+        "gray",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#323648",
+            "weight_bp": 1547
+          },
+          {
+            "hex": "#1d1c27",
+            "weight_bp": 1381
+          },
+          {
+            "hex": "#544b41",
+            "weight_bp": 1364
+          },
+          {
+            "hex": "#232536",
+            "weight_bp": 1298
+          },
+          {
+            "hex": "#463a31",
+            "weight_bp": 1196
+          },
+          {
+            "hex": "#2e2a30",
+            "weight_bp": 1153
+          },
+          {
+            "hex": "#111119",
+            "weight_bp": 1065
+          },
+          {
+            "hex": "#7e6d4c",
+            "weight_bp": 996
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "brown",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03374,
+          "y_mae": 0.077,
+          "x_ratio": 0.7407,
+          "y_ratio": 1.6057,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Gold_inlaid_cobblestone_street_t…_cddaf63e.jpg",
+          "sha256": "3aea4ce344e54cea13f2fcac6a54cf117ca6b6b04f4c9fd604f4ce24d20c03c2",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.3c3952a2",
+      "kind": "region",
+      "name": "Bloodstone crushed gravel",
+      "description": "Bloodstone crushed gravel: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-3c3952a2",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "crystal",
+        "bloodstone",
+        "crushed"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "crystal",
+        "bloodstone",
+        "crushed",
+        "green",
+        "gray",
+        "black",
+        "brown",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#26342d",
+            "weight_bp": 1720
+          },
+          {
+            "hex": "#495045",
+            "weight_bp": 1434
+          },
+          {
+            "hex": "#251c18",
+            "weight_bp": 1416
+          },
+          {
+            "hex": "#0c0b09",
+            "weight_bp": 1218
+          },
+          {
+            "hex": "#141c18",
+            "weight_bp": 1218
+          },
+          {
+            "hex": "#657868",
+            "weight_bp": 1085
+          },
+          {
+            "hex": "#4e372f",
+            "weight_bp": 955
+          },
+          {
+            "hex": "#491e1a",
+            "weight_bp": 954
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "gray",
+          "black",
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06874,
+          "y_mae": 0.08713,
+          "x_ratio": 1.5762,
+          "y_ratio": 2.027,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bloodstone_crushed_gravel_texture_3c3952a2.jpg",
+          "sha256": "29ba364dcb2fb5560aebd8736f1efce23566bbfa023feefe6b8f18c8ccdf6697",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ad0707d9",
+      "kind": "region",
+      "name": "Ice-crusted stone pathway",
+      "description": "Ice-crusted stone pathway: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ad0707d9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "ice",
+        "construction",
+        "path",
+        "cold",
+        "crusted",
+        "pathway"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "ice",
+        "construction",
+        "path",
+        "cold",
+        "crusted",
+        "pathway",
+        "blue",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "frozen",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#6fa8cc",
+            "weight_bp": 1473
+          },
+          {
+            "hex": "#33608b",
+            "weight_bp": 1382
+          },
+          {
+            "hex": "#16365e",
+            "weight_bp": 1357
+          },
+          {
+            "hex": "#244b75",
+            "weight_bp": 1236
+          },
+          {
+            "hex": "#407aaa",
+            "weight_bp": 1178
+          },
+          {
+            "hex": "#5a89ad",
+            "weight_bp": 1170
+          },
+          {
+            "hex": "#092044",
+            "weight_bp": 1110
+          },
+          {
+            "hex": "#9fd3e9",
+            "weight_bp": 1094
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05871,
+          "y_mae": 0.11628,
+          "x_ratio": 1.2273,
+          "y_ratio": 2.5129,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Ice-crusted_stone_pathway_texture_ad0707d9.jpg",
+          "sha256": "0cebdf53eb68f3327bed4b8e27b85b1db0d841c528570a7c59e9f6fc7680618a",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction",
+            "cold"
+          ],
+          "conditions": [
+            "cold"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.5909b81a",
+      "kind": "region",
+      "name": "Cracked flagstone pavers",
+      "description": "Cracked flagstone pavers: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-5909b81a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "path",
+        "dry",
+        "weathered",
+        "cracked",
+        "flagstone",
+        "pavers"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "path",
+        "dry",
+        "weathered",
+        "cracked",
+        "flagstone",
+        "pavers",
+        "brown",
+        "gray",
+        "olive",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#7f735c",
+            "weight_bp": 1542
+          },
+          {
+            "hex": "#646358",
+            "weight_bp": 1541
+          },
+          {
+            "hex": "#413829",
+            "weight_bp": 1309
+          },
+          {
+            "hex": "#635541",
+            "weight_bp": 1179
+          },
+          {
+            "hex": "#78664b",
+            "weight_bp": 1167
+          },
+          {
+            "hex": "#2a2419",
+            "weight_bp": 1162
+          },
+          {
+            "hex": "#504d41",
+            "weight_bp": 1060
+          },
+          {
+            "hex": "#93886f",
+            "weight_bp": 1040
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "gray",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03549,
+          "y_mae": 0.06885,
+          "x_ratio": 1.0973,
+          "y_ratio": 2.0903,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Cracked_flagstone_pavers_texture_5909b81a.jpg",
+          "sha256": "a6270555fe1a838c03d0f5354f9ca9b0f146d2329fe7ee8342e36418b3d6b370",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": [
+            "dry",
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.21a672a2",
+      "kind": "region",
+      "name": "Seashell and pebble",
+      "description": "Seashell and pebble: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-21a672a2",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "coral",
+        "seashell",
+        "pebble"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "coral",
+        "seashell",
+        "pebble",
+        "brown",
+        "black",
+        "orange",
+        "teal",
+        "gray",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#61564c",
+            "weight_bp": 1392
+          },
+          {
+            "hex": "#937b6d",
+            "weight_bp": 1352
+          },
+          {
+            "hex": "#23201f",
+            "weight_bp": 1308
+          },
+          {
+            "hex": "#d1beaa",
+            "weight_bp": 1230
+          },
+          {
+            "hex": "#303e3c",
+            "weight_bp": 1229
+          },
+          {
+            "hex": "#5a736e",
+            "weight_bp": 1222
+          },
+          {
+            "hex": "#533d35",
+            "weight_bp": 1138
+          },
+          {
+            "hex": "#8aa49c",
+            "weight_bp": 1129
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "black",
+          "orange",
+          "teal",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05087,
+          "y_mae": 0.11492,
+          "x_ratio": 1.2016,
+          "y_ratio": 2.709,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Seashell_and_pebble_texture_21a672a2.jpg",
+          "sha256": "b31c96ce32dbc5a3f6450350e7a4db8d30bc91fd5c86cda0129e233485843536",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.73b74e27",
+      "kind": "region",
+      "name": "Purple crystal gravel",
+      "description": "Purple crystal gravel: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-73b74e27",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "crystal",
+        "purple"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "crystal",
+        "purple",
+        "blue",
+        "black",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1c1944",
+            "weight_bp": 1606
+          },
+          {
+            "hex": "#252658",
+            "weight_bp": 1336
+          },
+          {
+            "hex": "#46297a",
+            "weight_bp": 1297
+          },
+          {
+            "hex": "#51378c",
+            "weight_bp": 1273
+          },
+          {
+            "hex": "#121536",
+            "weight_bp": 1265
+          },
+          {
+            "hex": "#7a5bb8",
+            "weight_bp": 1172
+          },
+          {
+            "hex": "#0b0c27",
+            "weight_bp": 1143
+          },
+          {
+            "hex": "#2f1b5a",
+            "weight_bp": 908
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "purple",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03292,
+          "y_mae": 0.08573,
+          "x_ratio": 0.967,
+          "y_ratio": 2.658,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Purple_crystal_gravel_texture_73b74e27.jpg",
+          "sha256": "9991d697e34d7a16df7d71e8996ae2c00992d5402c380989792810c70e2afa2a",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.ede18f97",
+      "kind": "region",
+      "name": "Autumn forest dirt trail",
+      "description": "Autumn forest dirt trail: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-ede18f97",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "forest",
+        "path",
+        "autumn",
+        "dirt",
+        "trail"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "forest",
+        "path",
+        "autumn",
+        "dirt",
+        "trail",
+        "brown",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "woodland"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#5a3b21",
+            "weight_bp": 1641
+          },
+          {
+            "hex": "#4b2d18",
+            "weight_bp": 1627
+          },
+          {
+            "hex": "#7b4e25",
+            "weight_bp": 1505
+          },
+          {
+            "hex": "#3e2715",
+            "weight_bp": 1310
+          },
+          {
+            "hex": "#73411d",
+            "weight_bp": 1194
+          },
+          {
+            "hex": "#2f180d",
+            "weight_bp": 1069
+          },
+          {
+            "hex": "#a26c32",
+            "weight_bp": 992
+          },
+          {
+            "hex": "#662d15",
+            "weight_bp": 662
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07537,
+          "y_mae": 0.09301,
+          "x_ratio": 1.9822,
+          "y_ratio": 2.3951,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Autumn_forest_dirt_trail_texture_ede18f97.jpg",
+          "sha256": "f02b4a0cc4eb3a02280d2eadc4c071f535a2f0f7ec167fbbe277a0670c060041",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "forest"
+          ],
+          "conditions": [
+            "autumn"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.4a9a2a98",
+      "kind": "region",
+      "name": "Textured green stone gravel",
+      "description": "Textured green stone gravel: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-4a9a2a98",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "gravel",
+        "textured",
+        "green"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "gravel",
+        "textured",
+        "green",
+        "black",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "pebbles"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#63833f",
+            "weight_bp": 1465
+          },
+          {
+            "hex": "#182215",
+            "weight_bp": 1323
+          },
+          {
+            "hex": "#3c5c2d",
+            "weight_bp": 1304
+          },
+          {
+            "hex": "#22351d",
+            "weight_bp": 1253
+          },
+          {
+            "hex": "#54673a",
+            "weight_bp": 1222
+          },
+          {
+            "hex": "#334229",
+            "weight_bp": 1213
+          },
+          {
+            "hex": "#0a0f0a",
+            "weight_bp": 1164
+          },
+          {
+            "hex": "#87b241",
+            "weight_bp": 1056
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04423,
+          "y_mae": 0.10514,
+          "x_ratio": 1.2328,
+          "y_ratio": 3.0456,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Textured_green_stone_gravel_4a9a2a98.jpg",
+          "sha256": "35e389868daff57a62974abd81fdbf86d71c059709543b885fe57bb01578bbf9",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.7f42dd70",
+      "kind": "region",
+      "name": "Stardust moonstone pebble path",
+      "description": "Stardust moonstone pebble path: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-7f42dd70",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "crystal",
+        "magic",
+        "path",
+        "glowing",
+        "stardust",
+        "moonstone",
+        "pebble"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "crystal",
+        "magic",
+        "path",
+        "glowing",
+        "stardust",
+        "moonstone",
+        "pebble",
+        "blue",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles",
+        "fantasy"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1d1c43",
+            "weight_bp": 1396
+          },
+          {
+            "hex": "#9fa8ce",
+            "weight_bp": 1384
+          },
+          {
+            "hex": "#6b72a0",
+            "weight_bp": 1255
+          },
+          {
+            "hex": "#303056",
+            "weight_bp": 1236
+          },
+          {
+            "hex": "#8b8bb3",
+            "weight_bp": 1233
+          },
+          {
+            "hex": "#4f507a",
+            "weight_bp": 1202
+          },
+          {
+            "hex": "#bacee4",
+            "weight_bp": 1167
+          },
+          {
+            "hex": "#0d0c30",
+            "weight_bp": 1127
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04855,
+          "y_mae": 0.0842,
+          "x_ratio": 1.2705,
+          "y_ratio": 2.2142,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Stardust_moonstone_pebble_path_t…_7f42dd70.jpg",
+          "sha256": "e7c69147d9abdb3911d931def15064542437e2a290313d2fedc19ae5e1806ae4",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.3a9509e5",
+      "kind": "region",
+      "name": "Slate stepping stone",
+      "description": "Slate stepping stone: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-3a9509e5",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "path",
+        "slate",
+        "stepping"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "path",
+        "slate",
+        "stepping",
+        "brown",
+        "green",
+        "olive",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#555044",
+            "weight_bp": 2041
+          },
+          {
+            "hex": "#69604e",
+            "weight_bp": 1692
+          },
+          {
+            "hex": "#252919",
+            "weight_bp": 1282
+          },
+          {
+            "hex": "#373e28",
+            "weight_bp": 1123
+          },
+          {
+            "hex": "#3e4c2c",
+            "weight_bp": 1106
+          },
+          {
+            "hex": "#848951",
+            "weight_bp": 1021
+          },
+          {
+            "hex": "#6b6e4b",
+            "weight_bp": 935
+          },
+          {
+            "hex": "#4e5d35",
+            "weight_bp": 800
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "green",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0312,
+          "y_mae": 0.05245,
+          "x_ratio": 0.9382,
+          "y_ratio": 1.6448,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Slate_stepping_stone_texture_wit…_3a9509e5.jpg",
+          "sha256": "f69939e802e1a9eed940251f9d5f64a409a2f0bf2024fdb3d4104cd3b89d8255",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.c1231cf6",
+      "kind": "region",
+      "name": "Red clay brick pathway",
+      "description": "Red clay brick pathway: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-c1231cf6",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "soil",
+        "brick",
+        "construction",
+        "path",
+        "red",
+        "clay",
+        "pathway"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "soil",
+        "brick",
+        "construction",
+        "path",
+        "red",
+        "clay",
+        "pathway",
+        "orange",
+        "brown",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "dirt",
+        "earth",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#d58954",
+            "weight_bp": 1512
+          },
+          {
+            "hex": "#b05d35",
+            "weight_bp": 1353
+          },
+          {
+            "hex": "#80492f",
+            "weight_bp": 1292
+          },
+          {
+            "hex": "#d0743f",
+            "weight_bp": 1234
+          },
+          {
+            "hex": "#a24f2f",
+            "weight_bp": 1212
+          },
+          {
+            "hex": "#622e1d",
+            "weight_bp": 1191
+          },
+          {
+            "hex": "#e3a167",
+            "weight_bp": 1176
+          },
+          {
+            "hex": "#b16f45",
+            "weight_bp": 1030
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "orange",
+          "brown",
+          "red"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0589,
+          "y_mae": 0.09794,
+          "x_ratio": 1.9615,
+          "y_ratio": 2.7597,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Red_clay_brick_pathway_c1231cf6.jpg",
+          "sha256": "734a295333f2eeeb6646a7ea895dcbcecb3aff69cfd5187a0eaf04570672e21c",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.f2a3a124",
+      "kind": "region",
+      "name": "Volcanic gravel with orange embers",
+      "description": "Volcanic gravel with orange embers: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-f2a3a124",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "lava",
+        "glowing",
+        "volcanic",
+        "orange",
+        "embers"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "lava",
+        "glowing",
+        "volcanic",
+        "orange",
+        "embers",
+        "purple",
+        "brown",
+        "black",
+        "red",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#252029",
+            "weight_bp": 1773
+          },
+          {
+            "hex": "#4a373a",
+            "weight_bp": 1503
+          },
+          {
+            "hex": "#18121a",
+            "weight_bp": 1460
+          },
+          {
+            "hex": "#100d15",
+            "weight_bp": 1313
+          },
+          {
+            "hex": "#695451",
+            "weight_bp": 1127
+          },
+          {
+            "hex": "#08040a",
+            "weight_bp": 1030
+          },
+          {
+            "hex": "#412627",
+            "weight_bp": 927
+          },
+          {
+            "hex": "#2a1418",
+            "weight_bp": 867
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "purple",
+          "brown",
+          "black",
+          "red"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05778,
+          "y_mae": 0.08384,
+          "x_ratio": 1.4167,
+          "y_ratio": 2.0978,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Volcanic_gravel_with_orange_embers_f2a3a124.jpg",
+          "sha256": "4fd5a90281ed6f19f63efe9d48b05a7b1b1d1908d64e6c2e51b38bd2d4006a7a",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a05c8547",
+      "kind": "region",
+      "name": "Golden leaf mosaic",
+      "description": "Golden leaf mosaic: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a05c8547",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "tiles",
+        "construction",
+        "patterned",
+        "organic",
+        "golden",
+        "leaf",
+        "mosaic"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "tiles",
+        "construction",
+        "patterned",
+        "organic",
+        "golden",
+        "leaf",
+        "mosaic",
+        "brown",
+        "yellow",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#a7833a",
+            "weight_bp": 1512
+          },
+          {
+            "hex": "#785526",
+            "weight_bp": 1328
+          },
+          {
+            "hex": "#5f4c23",
+            "weight_bp": 1279
+          },
+          {
+            "hex": "#976f30",
+            "weight_bp": 1262
+          },
+          {
+            "hex": "#80662f",
+            "weight_bp": 1219
+          },
+          {
+            "hex": "#29200f",
+            "weight_bp": 1214
+          },
+          {
+            "hex": "#49381a",
+            "weight_bp": 1144
+          },
+          {
+            "hex": "#c9a74c",
+            "weight_bp": 1042
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "yellow"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0769,
+          "y_mae": 0.12677,
+          "x_ratio": 1.2928,
+          "y_ratio": 2.2477,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Golden_leaf_mosaic_texture_a05c8547.jpg",
+          "sha256": "66d3f7a7fe9e7a0b9fd0cfae4448d8b6d6346b80050fcac215379d691b4b9dee",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.9d3bfda2",
+      "kind": "region",
+      "name": "Bone fragment gravel path",
+      "description": "Bone fragment gravel path: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-9d3bfda2",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "bone",
+        "path",
+        "organic",
+        "fragment"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "bone",
+        "path",
+        "organic",
+        "fragment",
+        "olive",
+        "brown",
+        "gray",
+        "black",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2e2a1f",
+            "weight_bp": 1393
+          },
+          {
+            "hex": "#4b4536",
+            "weight_bp": 1315
+          },
+          {
+            "hex": "#736c5a",
+            "weight_bp": 1294
+          },
+          {
+            "hex": "#948c78",
+            "weight_bp": 1266
+          },
+          {
+            "hex": "#3c372a",
+            "weight_bp": 1262
+          },
+          {
+            "hex": "#5c5646",
+            "weight_bp": 1254
+          },
+          {
+            "hex": "#cac1aa",
+            "weight_bp": 1148
+          },
+          {
+            "hex": "#1a170f",
+            "weight_bp": 1068
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "brown",
+          "gray",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.09395,
+          "y_mae": 0.13375,
+          "x_ratio": 1.1464,
+          "y_ratio": 1.749,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bone_fragment_gravel_path_texture_9d3bfda2.jpg",
+          "sha256": "0ceeb50fc1cb32288f20d7ad6da2c20800a14afff335d5be83eb2396c146bac1",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.4bddee91",
+      "kind": "region",
+      "name": "Charred black ember gravel path",
+      "description": "Charred black ember gravel path: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-4bddee91",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "lava",
+        "path",
+        "glowing",
+        "charred",
+        "black",
+        "ember"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "lava",
+        "path",
+        "glowing",
+        "charred",
+        "black",
+        "ember",
+        "gray",
+        "brown",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2d2c2e",
+            "weight_bp": 1853
+          },
+          {
+            "hex": "#50413e",
+            "weight_bp": 1501
+          },
+          {
+            "hex": "#1f1b1c",
+            "weight_bp": 1459
+          },
+          {
+            "hex": "#151416",
+            "weight_bp": 1304
+          },
+          {
+            "hex": "#0a0809",
+            "weight_bp": 1102
+          },
+          {
+            "hex": "#6f5c53",
+            "weight_bp": 1038
+          },
+          {
+            "hex": "#4d312b",
+            "weight_bp": 957
+          },
+          {
+            "hex": "#341d19",
+            "weight_bp": 786
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04456,
+          "y_mae": 0.07573,
+          "x_ratio": 1.2633,
+          "y_ratio": 2.146,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Charred_black_ember_gravel_path_4bddee91.jpg",
+          "sha256": "f91ba399d195f21af8df979add81b5a770c0470ce7844f96bef35c2378afc987",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.bf488f8d",
+      "kind": "region",
+      "name": "Pink quartz pebble pathway",
+      "description": "Pink quartz pebble pathway: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-bf488f8d",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "crystal",
+        "construction",
+        "path",
+        "pink",
+        "quartz",
+        "pebble",
+        "pathway"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "crystal",
+        "construction",
+        "path",
+        "pink",
+        "quartz",
+        "pebble",
+        "pathway",
+        "purple",
+        "blue",
+        "white",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#c68fae",
+            "weight_bp": 1410
+          },
+          {
+            "hex": "#bc6d93",
+            "weight_bp": 1382
+          },
+          {
+            "hex": "#573660",
+            "weight_bp": 1325
+          },
+          {
+            "hex": "#302e53",
+            "weight_bp": 1317
+          },
+          {
+            "hex": "#23143a",
+            "weight_bp": 1269
+          },
+          {
+            "hex": "#874572",
+            "weight_bp": 1169
+          },
+          {
+            "hex": "#e1bed2",
+            "weight_bp": 1155
+          },
+          {
+            "hex": "#836389",
+            "weight_bp": 973
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "pink",
+          "purple",
+          "blue",
+          "white"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04506,
+          "y_mae": 0.12122,
+          "x_ratio": 1.1847,
+          "y_ratio": 3.3415,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Pink_quartz_pebble_pathway_texture_bf488f8d.jpg",
+          "sha256": "a2d03e85388597cec09c8537266febe43b29f2a31cf073ef70971c05bd4b7e61",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.21d1396a",
+      "kind": "region",
+      "name": "Carved runic cobblestone road",
+      "description": "Carved runic cobblestone road: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-21d1396a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "magic",
+        "construction",
+        "path",
+        "patterned",
+        "carved",
+        "runic",
+        "cobblestone",
+        "road"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "magic",
+        "construction",
+        "path",
+        "patterned",
+        "carved",
+        "runic",
+        "cobblestone",
+        "road",
+        "gray",
+        "black",
+        "olive",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "fantasy",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#4e4e43",
+            "weight_bp": 1658
+          },
+          {
+            "hex": "#3b3f39",
+            "weight_bp": 1363
+          },
+          {
+            "hex": "#36362e",
+            "weight_bp": 1345
+          },
+          {
+            "hex": "#21221c",
+            "weight_bp": 1279
+          },
+          {
+            "hex": "#454439",
+            "weight_bp": 1198
+          },
+          {
+            "hex": "#2c2e28",
+            "weight_bp": 1097
+          },
+          {
+            "hex": "#12130f",
+            "weight_bp": 1093
+          },
+          {
+            "hex": "#696859",
+            "weight_bp": 967
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "black",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03795,
+          "y_mae": 0.05717,
+          "x_ratio": 1.0198,
+          "y_ratio": 1.638,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Carved_runic_cobblestone_road_21d1396a.jpg",
+          "sha256": "7f8c4926c8d910e1e2d6d0222a4aad7cf8042056eb76fa502756be6d8a7d25bd",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.d6841229",
+      "kind": "region",
+      "name": "Overgrown stone walkway",
+      "description": "Overgrown stone walkway: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-d6841229",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "path",
+        "overgrown",
+        "walkway"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "path",
+        "overgrown",
+        "walkway",
+        "brown",
+        "green",
+        "olive",
+        "black",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#7f6c4d",
+            "weight_bp": 1461
+          },
+          {
+            "hex": "#3f4d2a",
+            "weight_bp": 1336
+          },
+          {
+            "hex": "#61543b",
+            "weight_bp": 1299
+          },
+          {
+            "hex": "#383820",
+            "weight_bp": 1298
+          },
+          {
+            "hex": "#8e995a",
+            "weight_bp": 1196
+          },
+          {
+            "hex": "#5a683e",
+            "weight_bp": 1193
+          },
+          {
+            "hex": "#252213",
+            "weight_bp": 1138
+          },
+          {
+            "hex": "#7d7d51",
+            "weight_bp": 1079
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "green",
+          "olive",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06204,
+          "y_mae": 0.11895,
+          "x_ratio": 1.4667,
+          "y_ratio": 2.8955,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Overgrown_stone_walkway_texture_d6841229.jpg",
+          "sha256": "1d5719ab8215188d2064bdad318b5cbf6819758079e14fb4fbdc66b05192df08",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.13df786b",
+      "kind": "region",
+      "name": "Mossy cobblestone road",
+      "description": "Mossy cobblestone road: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-13df786b",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "construction",
+        "path",
+        "mossy",
+        "cobblestone",
+        "road"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "construction",
+        "path",
+        "mossy",
+        "cobblestone",
+        "road",
+        "olive",
+        "green",
+        "black",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#71715c",
+            "weight_bp": 1544
+          },
+          {
+            "hex": "#2a2a1d",
+            "weight_bp": 1348
+          },
+          {
+            "hex": "#353926",
+            "weight_bp": 1310
+          },
+          {
+            "hex": "#46432f",
+            "weight_bp": 1293
+          },
+          {
+            "hex": "#66604a",
+            "weight_bp": 1161
+          },
+          {
+            "hex": "#1a1a11",
+            "weight_bp": 1135
+          },
+          {
+            "hex": "#515742",
+            "weight_bp": 1115
+          },
+          {
+            "hex": "#8c8b6f",
+            "weight_bp": 1094
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "green",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04676,
+          "y_mae": 0.06309,
+          "x_ratio": 1.3882,
+          "y_ratio": 1.9072,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Mossy_cobblestone_road_texture_13df786b.jpg",
+          "sha256": "cd0fe2e4bb9e706c760152f79d00e8832c68b9799668194d379067b1b6233ffa",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.107947a6",
+      "kind": "region",
+      "name": "Rustic river gravel pathway",
+      "description": "Rustic river gravel pathway: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-107947a6",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "gravel",
+        "construction",
+        "path",
+        "rustic",
+        "river",
+        "pathway"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "gravel",
+        "construction",
+        "path",
+        "rustic",
+        "river",
+        "pathway",
+        "brown",
+        "orange",
+        "olive",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "pebbles",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#8e6743",
+            "weight_bp": 1713
+          },
+          {
+            "hex": "#6e5136",
+            "weight_bp": 1354
+          },
+          {
+            "hex": "#bf9562",
+            "weight_bp": 1275
+          },
+          {
+            "hex": "#3c2a1d",
+            "weight_bp": 1275
+          },
+          {
+            "hex": "#64402a",
+            "weight_bp": 1224
+          },
+          {
+            "hex": "#42422e",
+            "weight_bp": 1190
+          },
+          {
+            "hex": "#646141",
+            "weight_bp": 1116
+          },
+          {
+            "hex": "#818059",
+            "weight_bp": 853
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "brown",
+          "orange",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0547,
+          "y_mae": 0.08279,
+          "x_ratio": 1.2286,
+          "y_ratio": 1.7702,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Rustic_river_gravel_pathway_texture_107947a6.jpg",
+          "sha256": "b7f16e64cc3cfe374b7a292fd923ba96fa6fbd80c7e86aad198e63e1a09c3d2e",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.5fe73c0a",
+      "kind": "region",
+      "name": "Crushed white marble garden pebbles",
+      "description": "Crushed white marble garden pebbles: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-5fe73c0a",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "gravel",
+        "crushed",
+        "white",
+        "marble",
+        "garden",
+        "pebbles"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "gravel",
+        "crushed",
+        "white",
+        "marble",
+        "garden",
+        "pebbles",
+        "gray",
+        "gravel paths",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "pebbles"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#e0dfd8",
+            "weight_bp": 1513
+          },
+          {
+            "hex": "#a7a5aa",
+            "weight_bp": 1317
+          },
+          {
+            "hex": "#626268",
+            "weight_bp": 1279
+          },
+          {
+            "hex": "#bdbec4",
+            "weight_bp": 1200
+          },
+          {
+            "hex": "#87868c",
+            "weight_bp": 1192
+          },
+          {
+            "hex": "#f0f1e9",
+            "weight_bp": 1189
+          },
+          {
+            "hex": "#3c3c40",
+            "weight_bp": 1172
+          },
+          {
+            "hex": "#d3cdc8",
+            "weight_bp": 1138
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "white",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03858,
+          "y_mae": 0.11989,
+          "x_ratio": 1.1427,
+          "y_ratio": 3.6795,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Crushed_white_marble_garden_pebbles_5fe73c0a.jpg",
+          "sha256": "2c2e01cd557b0b7d62886a318921bf63694d79896501f66b52eff5e02919ce73",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": []
+        }
+      }
+    }
+  ]
+}

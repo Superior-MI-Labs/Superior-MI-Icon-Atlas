@@ -44,13 +44,15 @@ for(const [query,token] of [['slider','Slider'],['sliders','Slider'],['healthbar
 }
 // New discovery dimensions preserve the old domain/pack contract.
 const world=Search.results(data.assets,{...params,category_path:'world'});
-assert.equal(world.length,53,'All seven world packs must be browseable without search');
+const expectedWorld=data.assets.filter(a=>!a.legacy&&a.discovery==='standalone'&&a.category_path?.includes('world')).length;
+assert.equal(world.length,expectedWorld,'All published world content must be browseable without search');
+assert.equal(data.assets.filter(a=>a.id.startsWith('smi.material.gflow.')).length,302);
 assert.equal(Search.results(data.assets,{...params,category_path:'world.props.containers.chests',perspective:'isometric',medium:'raster-2d'}).length,4);
 assert.equal(Search.results(data.assets,{...params,family:'painterly-fantasy'}).length,53);
 assert.ok(Search.results(data.assets,{...params,category_path:'gui',theme:'sci-fi',perspective:'screen-space'}).some(a=>a.pack==='minimal-white-tech'));
 assert.ok(Search.results(data.assets,{...params,category_path:'characters',perspective:'side-view'}).some(a=>a.pack==='sky-prototype'));
 assert.ok(Search.results(data.assets,{...params,review:'visual-pending'}).every(a=>!a.legacy&&a.visual_qa==='pending'));
-assert.equal(Search.directory(data.assets,{}).category_path.find(x=>x.value==='world').count,53);
+assert.equal(Search.directory(data.assets,{}).category_path.find(x=>x.value==='world').count,expectedWorld);
 for(const key of ['category_path','perspective','medium'])for(const {value,count} of Search.directory(data.assets,{})[key])assert.equal(Search.results(data.assets,{[key]:value,status:'published'}).length,count,'Directory count mismatch: '+key+' '+value);
 assert.ok(data.packs.every(p=>Number.isInteger(p.asset_count)&&Number.isInteger(p.listed_count)));
 const defaults=Search.results(data.assets,params);

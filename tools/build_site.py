@@ -16,6 +16,7 @@ from atlasctl import load,validate
 from tools.sprite_grids import build_sprite_grids
 from tools.browse_taxonomy import load_taxonomy, project_browse
 from tools.browse_previews import build_region_previews
+from tools.retain_archives import stage_current
 from tools.asset_inventory import audit as audit_assets, source_collections, read_collection, archive_payload
 
 
@@ -45,6 +46,7 @@ def visual_capabilities(asset, lookup, memo, active=None):
     if ident in active:raise ValueError('Cyclic published asset '+ident)
     active.add(ident)
     kind=asset['kind'];caps=set()
+    if asset.get('material'):caps.add('surface-material')
     if kind=='sequence' or asset.get('duration_ms'):caps.add('animated')
     if kind=='state_set':caps.add('states')
     if kind=='composition':
@@ -309,6 +311,8 @@ for(const texture of Object.values(pack.textures)){
                     'capabilities':capabilities,'interfaces':sorted(a.get('implements',[])),
                     **({'spatial':a['spatial']} if 'spatial' in a else {}),
                     **({'representation':a['representation']} if 'representation' in a else {}),
+                    **({'material':a['material']} if 'material' in a else {}),
+                    **({'visual_profile':a['visual_profile']} if 'visual_profile' in a else {}),
                     'slot_interfaces':sorted({v['accepts'] for v in a.get('slots',{}).values()}),
                     'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
                     **({'thumbnail':thumbnails[ident]} if ident in thumbnails else {}),
@@ -353,6 +357,7 @@ for(const texture of Object.values(pack.textures)){
         asset.update(concept_discovery(asset,public_concepts))
     browse=project_browse(public_assets,public_packs,browse_defaults,load_taxonomy())
     public_assets.sort(key=lambda a:(a['pack'],a['id']))
+    stage_current(dest, {'schema':'smi-public-catalog/1','packs':public_packs})
     (dest/'public-catalog.json').write_text(json.dumps({'schema':'smi-public-catalog/1',
         'assets':public_assets,'packs':public_packs,'concepts':sorted(public_concepts.values(),key=lambda c:c['id']),'browse':browse,
         'synonyms':m.get('search',{}).get('synonyms',{}),'styles':m.get('styles',{}),

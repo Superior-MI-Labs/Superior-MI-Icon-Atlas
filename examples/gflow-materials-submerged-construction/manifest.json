@@ -1,0 +1,3752 @@
+{
+  "schema": "smi-visual-pack/1",
+  "pack_id": "smi.material.gflow.submerged-construction",
+  "version": "1.0.0",
+  "description": "G Flow material collection; color-only, contributor-authorized CC0 preview; visual/host qualification pending.",
+  "license": "CC0-1.0",
+  "textures": {
+    "surface-0b0a0f94": {
+      "path": "textures/coral-brick-wall-flooring-0b0a0f94.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "f95d371ca91a99af78c0a5187cb088ba0847f3de3d5697615edbed4aa31aa6d0",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-72791b70": {
+      "path": "textures/stone-tiles-with-gold-dust-72791b70.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d246009c8c945bc5915a4b058d79aadf4f73009692e2cb07b56a482add37e629",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-a6914cb2": {
+      "path": "textures/golden-elven-wood-floor-tiles-a6914cb2.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "fb3126b7ac48ca609d32e4dc35488c4b5dd6d0c0b10ff4de6cf97cae718b863d",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-6b8eaddb": {
+      "path": "textures/volcanic-obsidian-brick-floor-6b8eaddb.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "85a67f35ca14d883738f6983e3c1ce63cc120f2beec4412c9eb619b80fbfff72",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-8d8f1709": {
+      "path": "textures/submerged-coral-cobblestone-road-8d8f1709.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "51f0cf154fca96cf9be3e7b890e4bdb457aad195ba7cc6969f7dd8b90b057c10",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-abd4b818": {
+      "path": "textures/waterlogged-teak-wood-flooring-abd4b818.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "c56f4a9b9bd846bcfe755e009b3700ea617ec3b9db7cb47a0c21d9b95c9ed506",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-5bb1e14b": {
+      "path": "textures/submerged-barnacle-encrusted-oak-5bb1e14b.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "80c887d4caf21ecf53fecf5e3b064bffa53a6a16efbe8d6a32f6a7c096b03699",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-edba046b": {
+      "path": "textures/sunken-temple-sandstone-bricks-edba046b.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "04003e668daae343906baba166545f657a92d5ea4230facd77b82399a7e83837",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-bb1024d1": {
+      "path": "textures/metal-floor-tiles-with-barnacles-bb1024d1.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "eadaa77e91c758fcfa17cc1f337b8c789ad40a701d54a79088899153abdac082",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-fe68bfc2": {
+      "path": "textures/water-eroded-granite-flagstone-fe68bfc2.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "90ef3694ee1e0d71e60b963f5990dc5a3e0ffb57dd5b0945795aa805a46c80aa",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-5df28732": {
+      "path": "textures/sunken-marble-tiles-with-moss-5df28732.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "ac230c83f59c045b331cec53637161330a5495765a62ea8726bf0aa5dd94ee02",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-b0d188da": {
+      "path": "textures/submerged-charred-wood-planks-b0d188da.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "ff1005a319117d2135d9566fbfcc5df5c7f5ab97d2163e2f587b53d25f521305",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-c5ae84bb": {
+      "path": "textures/bioluminescent-jellyfish-spore-floor-c5ae84bb.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "979faa0088798bc96b940dc55d2a51c0a989fa131e1f5f02572d3c66f5b6f134",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-18434c76": {
+      "path": "textures/underwater-stone-tiles-with-flora-18434c76.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "aaf6dabd4f73443518d45d760e46f111e24cf037fef6a59c9241da6eec36a5dc",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-1f816590": {
+      "path": "textures/iridescent-shell-tile-floor-1f816590.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "cc3eaf00b137bb3309b7ac9dc4561dbb6198995f7ffbac9d974468c82935b7cc",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-fcaac7c9": {
+      "path": "textures/gold-marble-floor-with-kelp-fcaac7c9.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "c3edd7842f5d6b76b08adf98f684e166cf74e5a6a7bfeee6808394eb04d683a6",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-89fa63eb": {
+      "path": "textures/rusty-iron-floor-grate-89fa63eb.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "c4ac489b73a7e9dcd67ec1430a25741ae4bf7adc78352c85252f65398ab22c3e",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-462b26e3": {
+      "path": "textures/underwater-moonstone-floor-tiles-462b26e3.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "abcf4fdeaf4560ba07446b73bcedcbacdd4b00d2c68d37aa7d3ac02c27f923fd",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-347e8883": {
+      "path": "textures/underwater-petrified-wood-parquet-347e8883.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "81042ee97ecad88e7328807bb8e361add6c54c23a68d793b60cde7e8d35ad357",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-945d7850": {
+      "path": "textures/sunken-cathedral-mosaic-floor-945d7850.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "0c57386322bcb1dfbff177e3f9f428b70f2a9e29b737911c6fd94110ac64b934",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-1f1c9dfc": {
+      "path": "textures/algae-covered-sunken-ship-deck-1f1c9dfc.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "d4641a0a9ddbded7bb192559f67833661c05d0bbe4d69b8929a9f17765f84285",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-01aad5e7": {
+      "path": "textures/blue-crystal-stone-floor-tiles-01aad5e7.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "cef61df0d9365308a6cbddc5e2a9252a66f98e8a0c4be9200d4b211c086122c4",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-8f10e3d1": {
+      "path": "textures/stone-floor-with-kelp-8f10e3d1.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "86e2af5ff5ae0793ec0d81f5a34fcf2586922539739851ac4e3a8a4fed2b9e98",
+      "alpha": "none",
+      "color_space": "srgb"
+    },
+    "surface-4b65def3": {
+      "path": "textures/submerged-herringbone-timber-wood-4b65def3.jpg",
+      "width_px": 1024,
+      "height_px": 1024,
+      "sha256": "c5d536f39b02c64f1c1ab6679597a8e69fe715eee67d93cef40d23a0c62704a1",
+      "alpha": "none",
+      "color_space": "srgb"
+    }
+  },
+  "assets": [
+    {
+      "id": "smi.material.gflow.0b0a0f94",
+      "kind": "region",
+      "name": "Coral brick wall flooring",
+      "description": "Coral brick wall flooring: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-0b0a0f94",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "brick",
+        "coral",
+        "aquatic",
+        "construction",
+        "tropical",
+        "organic",
+        "wall"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "brick",
+        "coral",
+        "aquatic",
+        "construction",
+        "tropical",
+        "organic",
+        "wall",
+        "pink",
+        "blue",
+        "purple",
+        "gray",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.structures.walls"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#ad667b",
+            "weight_bp": 1708
+          },
+          {
+            "hex": "#526474",
+            "weight_bp": 1568
+          },
+          {
+            "hex": "#5f4167",
+            "weight_bp": 1321
+          },
+          {
+            "hex": "#2c4854",
+            "weight_bp": 1311
+          },
+          {
+            "hex": "#1f2c3f",
+            "weight_bp": 1225
+          },
+          {
+            "hex": "#924967",
+            "weight_bp": 1163
+          },
+          {
+            "hex": "#9ea29e",
+            "weight_bp": 955
+          },
+          {
+            "hex": "#9a7d86",
+            "weight_bp": 749
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "pink",
+          "blue",
+          "purple",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07502,
+          "y_mae": 0.2794,
+          "x_ratio": 1.4092,
+          "y_ratio": 4.9763,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Coral_brick_wall_flooring_texture_0b0a0f94.jpg",
+          "sha256": "b9aa9e67d9578abf4791d08a88b03f440a031ab9504b0b62cbded9e9acfccce3",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction",
+            "tropical"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.72791b70",
+      "kind": "region",
+      "name": "Stone tiles with gold dust",
+      "description": "Stone tiles with gold dust: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-72791b70",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "sand",
+        "tiles",
+        "construction",
+        "patterned",
+        "gold",
+        "dust"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "sand",
+        "tiles",
+        "construction",
+        "patterned",
+        "gold",
+        "dust",
+        "green",
+        "teal",
+        "gray",
+        "black",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#4e645c",
+            "weight_bp": 1545
+          },
+          {
+            "hex": "#223132",
+            "weight_bp": 1506
+          },
+          {
+            "hex": "#335053",
+            "weight_bp": 1454
+          },
+          {
+            "hex": "#253c40",
+            "weight_bp": 1262
+          },
+          {
+            "hex": "#35403b",
+            "weight_bp": 1195
+          },
+          {
+            "hex": "#485449",
+            "weight_bp": 1037
+          },
+          {
+            "hex": "#162225",
+            "weight_bp": 1025
+          },
+          {
+            "hex": "#718370",
+            "weight_bp": 976
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "teal",
+          "gray",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03577,
+          "y_mae": 0.09525,
+          "x_ratio": 1.1307,
+          "y_ratio": 2.9337,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Stone_tiles_with_gold_dust_72791b70.jpg",
+          "sha256": "bf54026eac371570f47106f6e608037bb0bd5266542bb3da3f059470eb280392",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.a6914cb2",
+      "kind": "region",
+      "name": "Golden elven wood floor tiles",
+      "description": "Golden elven wood floor tiles: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-a6914cb2",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "tiles",
+        "magic",
+        "construction",
+        "patterned",
+        "organic",
+        "golden",
+        "elven"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "tiles",
+        "magic",
+        "construction",
+        "patterned",
+        "organic",
+        "golden",
+        "elven",
+        "olive",
+        "green",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#7d7948",
+            "weight_bp": 1519
+          },
+          {
+            "hex": "#504c2d",
+            "weight_bp": 1509
+          },
+          {
+            "hex": "#313928",
+            "weight_bp": 1422
+          },
+          {
+            "hex": "#716335",
+            "weight_bp": 1266
+          },
+          {
+            "hex": "#4f5d41",
+            "weight_bp": 1206
+          },
+          {
+            "hex": "#394633",
+            "weight_bp": 1129
+          },
+          {
+            "hex": "#1e2a21",
+            "weight_bp": 1084
+          },
+          {
+            "hex": "#81a678",
+            "weight_bp": 865
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04492,
+          "y_mae": 0.05735,
+          "x_ratio": 0.9498,
+          "y_ratio": 1.2769,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Golden_elven_wood_floor_tiles_a6914cb2.jpg",
+          "sha256": "5cb9b817ccce726a5df62438ae3b474f992ae001e7f80c87f78021c4ce1fb9e4",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.6b8eaddb",
+      "kind": "region",
+      "name": "Volcanic obsidian brick floor",
+      "description": "Volcanic obsidian brick floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-6b8eaddb",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "brick",
+        "lava",
+        "construction",
+        "volcanic",
+        "obsidian"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "brick",
+        "lava",
+        "construction",
+        "volcanic",
+        "obsidian",
+        "blue",
+        "purple",
+        "black",
+        "red",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#212434",
+            "weight_bp": 2323
+          },
+          {
+            "hex": "#422f3d",
+            "weight_bp": 1372
+          },
+          {
+            "hex": "#161927",
+            "weight_bp": 1318
+          },
+          {
+            "hex": "#1f1829",
+            "weight_bp": 1241
+          },
+          {
+            "hex": "#120f1c",
+            "weight_bp": 1194
+          },
+          {
+            "hex": "#795044",
+            "weight_bp": 1011
+          },
+          {
+            "hex": "#432533",
+            "weight_bp": 781
+          },
+          {
+            "hex": "#361a26",
+            "weight_bp": 760
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "purple",
+          "black",
+          "red"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.01395,
+          "y_mae": 0.0302,
+          "x_ratio": 0.8453,
+          "y_ratio": 1.6648,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Volcanic_obsidian_brick_floor_te…_6b8eaddb.jpg",
+          "sha256": "89de3403d035a3d155067dec6098a6e00f855009d0d3157ceb2a9e7f70c78105",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.8d8f1709",
+      "kind": "region",
+      "name": "Submerged coral cobblestone road",
+      "description": "Submerged coral cobblestone road: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-8d8f1709",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "water",
+        "coral",
+        "aquatic",
+        "construction",
+        "path",
+        "wet",
+        "tropical",
+        "organic",
+        "submerged",
+        "cobblestone",
+        "road"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "water",
+        "coral",
+        "aquatic",
+        "construction",
+        "path",
+        "wet",
+        "tropical",
+        "organic",
+        "submerged",
+        "cobblestone",
+        "road",
+        "teal",
+        "gray",
+        "blue",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures",
+          "world.terrain.paths"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1b686e",
+            "weight_bp": 1685
+          },
+          {
+            "hex": "#083644",
+            "weight_bp": 1330
+          },
+          {
+            "hex": "#0c505b",
+            "weight_bp": 1308
+          },
+          {
+            "hex": "#1c4a53",
+            "weight_bp": 1265
+          },
+          {
+            "hex": "#398684",
+            "weight_bp": 1244
+          },
+          {
+            "hex": "#596a69",
+            "weight_bp": 1200
+          },
+          {
+            "hex": "#7e9285",
+            "weight_bp": 1159
+          },
+          {
+            "hex": "#484d58",
+            "weight_bp": 809
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "gray",
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03206,
+          "y_mae": 0.06845,
+          "x_ratio": 0.8424,
+          "y_ratio": 1.9128,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Submerged_coral_cobblestone_road…_8d8f1709.jpg",
+          "sha256": "681c054f2f94a63e10efb118871fdfd7abdb12b01cb3e603ffe448d5692e4f9f",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction",
+            "tropical"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.abd4b818",
+      "kind": "region",
+      "name": "Waterlogged teak wood flooring",
+      "description": "Waterlogged teak wood flooring: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-abd4b818",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "construction",
+        "wet",
+        "weathered",
+        "organic",
+        "waterlogged",
+        "teak"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "construction",
+        "wet",
+        "weathered",
+        "organic",
+        "waterlogged",
+        "teak",
+        "green",
+        "olive",
+        "brown",
+        "black",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3f432d",
+            "weight_bp": 1449
+          },
+          {
+            "hex": "#615734",
+            "weight_bp": 1380
+          },
+          {
+            "hex": "#242a1b",
+            "weight_bp": 1358
+          },
+          {
+            "hex": "#5f4726",
+            "weight_bp": 1262
+          },
+          {
+            "hex": "#443721",
+            "weight_bp": 1220
+          },
+          {
+            "hex": "#1b180f",
+            "weight_bp": 1174
+          },
+          {
+            "hex": "#3b2a19",
+            "weight_bp": 1088
+          },
+          {
+            "hex": "#7f7349",
+            "weight_bp": 1069
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "olive",
+          "brown",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0296,
+          "y_mae": 0.11101,
+          "x_ratio": 1.0215,
+          "y_ratio": 2.2096,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Waterlogged_teak_wood_flooring_t…_abd4b818.jpg",
+          "sha256": "a0724844385f0c379127a01e4bc082199a5555de32ce639ca30c2c1e1ded44be",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": [
+            "wet",
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.5bb1e14b",
+      "kind": "region",
+      "name": "Submerged barnacle-encrusted oak",
+      "description": "Submerged barnacle-encrusted oak: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-5bb1e14b",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "water",
+        "coral",
+        "aquatic",
+        "wet",
+        "submerged",
+        "barnacle",
+        "encrusted",
+        "oak"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "water",
+        "coral",
+        "aquatic",
+        "wet",
+        "submerged",
+        "barnacle",
+        "encrusted",
+        "oak",
+        "green",
+        "teal",
+        "black",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#324f47",
+            "weight_bp": 1460
+          },
+          {
+            "hex": "#1a3e3f",
+            "weight_bp": 1436
+          },
+          {
+            "hex": "#103034",
+            "weight_bp": 1354
+          },
+          {
+            "hex": "#112726",
+            "weight_bp": 1346
+          },
+          {
+            "hex": "#2f4035",
+            "weight_bp": 1237
+          },
+          {
+            "hex": "#20322c",
+            "weight_bp": 1224
+          },
+          {
+            "hex": "#50736c",
+            "weight_bp": 978
+          },
+          {
+            "hex": "#0a181a",
+            "weight_bp": 965
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "teal",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06493,
+          "y_mae": 0.06762,
+          "x_ratio": 1.6773,
+          "y_ratio": 2.2651,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Submerged_barnacle-encrusted_oak…_5bb1e14b.jpg",
+          "sha256": "459a06fcaea2c022f76e73285a182ee203a22532069e8d7f4fb073670d1c13ff",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.edba046b",
+      "kind": "region",
+      "name": "Sunken temple sandstone bricks",
+      "description": "Sunken temple sandstone bricks: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-edba046b",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "brick",
+        "aquatic",
+        "construction",
+        "weathered",
+        "patterned",
+        "sunken",
+        "temple",
+        "sandstone",
+        "bricks"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "brick",
+        "aquatic",
+        "construction",
+        "weathered",
+        "patterned",
+        "sunken",
+        "temple",
+        "sandstone",
+        "bricks",
+        "black",
+        "green",
+        "olive",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#182818",
+            "weight_bp": 1362
+          },
+          {
+            "hex": "#354b2c",
+            "weight_bp": 1326
+          },
+          {
+            "hex": "#656339",
+            "weight_bp": 1306
+          },
+          {
+            "hex": "#303b21",
+            "weight_bp": 1286
+          },
+          {
+            "hex": "#1f3521",
+            "weight_bp": 1252
+          },
+          {
+            "hex": "#51532c",
+            "weight_bp": 1201
+          },
+          {
+            "hex": "#887b4a",
+            "weight_bp": 1163
+          },
+          {
+            "hex": "#0b1810",
+            "weight_bp": 1104
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "green",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02633,
+          "y_mae": 0.04723,
+          "x_ratio": 1.1246,
+          "y_ratio": 2.0265,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Sunken_temple_sandstone_bricks_t…_edba046b.jpg",
+          "sha256": "369cb90d118e9ab35aedd0a81685aa1d54559d7d4a5bcddc468fb88da0928ad7",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": [
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.bb1024d1",
+      "kind": "region",
+      "name": "Metal floor tiles with barnacles",
+      "description": "Metal floor tiles with barnacles: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-bb1024d1",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "metal",
+        "tiles",
+        "coral",
+        "construction",
+        "patterned",
+        "barnacles"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "metal",
+        "tiles",
+        "coral",
+        "construction",
+        "patterned",
+        "barnacles",
+        "olive",
+        "black",
+        "green",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#4d4f3f",
+            "weight_bp": 1500
+          },
+          {
+            "hex": "#2d2b21",
+            "weight_bp": 1348
+          },
+          {
+            "hex": "#171b16",
+            "weight_bp": 1341
+          },
+          {
+            "hex": "#2e3930",
+            "weight_bp": 1272
+          },
+          {
+            "hex": "#1e2721",
+            "weight_bp": 1269
+          },
+          {
+            "hex": "#423e2f",
+            "weight_bp": 1233
+          },
+          {
+            "hex": "#0b0e0c",
+            "weight_bp": 1056
+          },
+          {
+            "hex": "#6d7660",
+            "weight_bp": 981
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "olive",
+          "black",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.08037,
+          "y_mae": 0.07036,
+          "x_ratio": 1.7937,
+          "y_ratio": 1.6972,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Metal_floor_tiles_with_barnacles_bb1024d1.jpg",
+          "sha256": "e5deb32deba45b1700d9b09db9ca49c3da328035574d497e5174147e268ce822",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.fe68bfc2",
+      "kind": "region",
+      "name": "Water-eroded granite flagstone",
+      "description": "Water-eroded granite flagstone: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-fe68bfc2",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "water",
+        "weathered",
+        "eroded",
+        "granite",
+        "flagstone"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "water",
+        "weathered",
+        "eroded",
+        "granite",
+        "flagstone",
+        "gray",
+        "teal",
+        "black",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#66766c",
+            "weight_bp": 1398
+          },
+          {
+            "hex": "#142d2f",
+            "weight_bp": 1368
+          },
+          {
+            "hex": "#193f40",
+            "weight_bp": 1332
+          },
+          {
+            "hex": "#5f5f56",
+            "weight_bp": 1316
+          },
+          {
+            "hex": "#375a58",
+            "weight_bp": 1288
+          },
+          {
+            "hex": "#3c4540",
+            "weight_bp": 1135
+          },
+          {
+            "hex": "#081a1d",
+            "weight_bp": 1116
+          },
+          {
+            "hex": "#8ba092",
+            "weight_bp": 1047
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "gray",
+          "teal",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04741,
+          "y_mae": 0.08071,
+          "x_ratio": 1.5037,
+          "y_ratio": 2.4814,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Water-eroded_granite_flagstone_p…_fe68bfc2.jpg",
+          "sha256": "0c536b87788bc388aa6db2049135ef03f94fa6ef761c6b8b0f15643bc9c4fd16",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [],
+          "conditions": [
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.5df28732",
+      "kind": "region",
+      "name": "Sunken marble tiles with moss",
+      "description": "Sunken marble tiles with moss: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-5df28732",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "vegetation",
+        "tiles",
+        "aquatic",
+        "construction",
+        "weathered",
+        "patterned",
+        "organic",
+        "sunken",
+        "marble",
+        "moss"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "vegetation",
+        "tiles",
+        "aquatic",
+        "construction",
+        "weathered",
+        "patterned",
+        "organic",
+        "sunken",
+        "marble",
+        "moss",
+        "green",
+        "gray",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "foliage",
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#72967f",
+            "weight_bp": 1567
+          },
+          {
+            "hex": "#4c796a",
+            "weight_bp": 1475
+          },
+          {
+            "hex": "#375e54",
+            "weight_bp": 1340
+          },
+          {
+            "hex": "#334b37",
+            "weight_bp": 1281
+          },
+          {
+            "hex": "#516341",
+            "weight_bp": 1218
+          },
+          {
+            "hex": "#9bbaa6",
+            "weight_bp": 1123
+          },
+          {
+            "hex": "#21331f",
+            "weight_bp": 1099
+          },
+          {
+            "hex": "#6a7f5f",
+            "weight_bp": 897
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0966,
+          "y_mae": 0.15989,
+          "x_ratio": 1.6424,
+          "y_ratio": 2.9498,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Sunken_marble_tiles_with_moss_5df28732.jpg",
+          "sha256": "e05f09d9ef1c9e0eb9aa102732a3fd55857ef45a2642b43889bd61dee387b7d8",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": [
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.b0d188da",
+      "kind": "region",
+      "name": "Submerged charred wood planks",
+      "description": "Submerged charred wood planks: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-b0d188da",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "water",
+        "lava",
+        "aquatic",
+        "wet",
+        "patterned",
+        "organic",
+        "submerged",
+        "charred",
+        "planks"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "water",
+        "lava",
+        "aquatic",
+        "wet",
+        "patterned",
+        "organic",
+        "submerged",
+        "charred",
+        "planks",
+        "blue",
+        "black",
+        "teal",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#193d4a",
+            "weight_bp": 1631
+          },
+          {
+            "hex": "#0b161d",
+            "weight_bp": 1514
+          },
+          {
+            "hex": "#0a2d3c",
+            "weight_bp": 1397
+          },
+          {
+            "hex": "#152028",
+            "weight_bp": 1390
+          },
+          {
+            "hex": "#09202b",
+            "weight_bp": 1097
+          },
+          {
+            "hex": "#1c2d38",
+            "weight_bp": 1068
+          },
+          {
+            "hex": "#060e13",
+            "weight_bp": 1017
+          },
+          {
+            "hex": "#206474",
+            "weight_bp": 886
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02182,
+          "y_mae": 0.03909,
+          "x_ratio": 0.8344,
+          "y_ratio": 2.0528,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Submerged_charred_wood_planks_b0d188da.jpg",
+          "sha256": "5abe2aaff8fa97741fd3d7431f44b281dc6265de21855304fb4f47afb1a9d49b",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.c5ae84bb",
+      "kind": "region",
+      "name": "Bioluminescent jellyfish spore floor",
+      "description": "Bioluminescent jellyfish spore floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-c5ae84bb",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "fungi",
+        "magic",
+        "construction",
+        "glowing",
+        "bioluminescent",
+        "jellyfish",
+        "spore"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "fungi",
+        "magic",
+        "construction",
+        "glowing",
+        "bioluminescent",
+        "jellyfish",
+        "spore",
+        "blue",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "fantasy",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#2c6987",
+            "weight_bp": 1599
+          },
+          {
+            "hex": "#182f40",
+            "weight_bp": 1497
+          },
+          {
+            "hex": "#4783a5",
+            "weight_bp": 1411
+          },
+          {
+            "hex": "#2c4964",
+            "weight_bp": 1379
+          },
+          {
+            "hex": "#52afce",
+            "weight_bp": 1208
+          },
+          {
+            "hex": "#1e4a61",
+            "weight_bp": 988
+          },
+          {
+            "hex": "#546b91",
+            "weight_bp": 966
+          },
+          {
+            "hex": "#444f76",
+            "weight_bp": 952
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06562,
+          "y_mae": 0.09079,
+          "x_ratio": 1.6965,
+          "y_ratio": 2.4649,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Bioluminescent_jellyfish_spore_f…_c5ae84bb.jpg",
+          "sha256": "3eaa518a84270363e0b3ac8ee33a89b7242d83cbc140d89441a5e7a0962d40f6",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": [
+            "glowing"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.18434c76",
+      "kind": "region",
+      "name": "Underwater stone tiles with flora",
+      "description": "Underwater stone tiles with flora: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-18434c76",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "tiles",
+        "water",
+        "aquatic",
+        "construction",
+        "wet",
+        "patterned",
+        "underwater",
+        "flora"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "tiles",
+        "water",
+        "aquatic",
+        "construction",
+        "wet",
+        "patterned",
+        "underwater",
+        "flora",
+        "blue",
+        "black",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#151438",
+            "weight_bp": 1561
+          },
+          {
+            "hex": "#1d2548",
+            "weight_bp": 1473
+          },
+          {
+            "hex": "#1b1c40",
+            "weight_bp": 1407
+          },
+          {
+            "hex": "#0f1330",
+            "weight_bp": 1362
+          },
+          {
+            "hex": "#2f215b",
+            "weight_bp": 1303
+          },
+          {
+            "hex": "#38316b",
+            "weight_bp": 1165
+          },
+          {
+            "hex": "#090925",
+            "weight_bp": 912
+          },
+          {
+            "hex": "#211547",
+            "weight_bp": 817
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04377,
+          "y_mae": 0.06118,
+          "x_ratio": 2.2631,
+          "y_ratio": 3.5168,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Underwater_stone_tiles_with_flora_18434c76.jpg",
+          "sha256": "8fb23c137132500c142d310eeb1e510e67d77fa732d85ab4db3f91b3230507e4",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.1f816590",
+      "kind": "region",
+      "name": "Iridescent shell tile floor",
+      "description": "Iridescent shell tile floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-1f816590",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "tiles",
+        "coral",
+        "construction",
+        "iridescent",
+        "shell",
+        "tile"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "tiles",
+        "coral",
+        "construction",
+        "iridescent",
+        "shell",
+        "tile",
+        "teal",
+        "gray",
+        "white",
+        "green",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#76a2a7",
+            "weight_bp": 1502
+          },
+          {
+            "hex": "#627369",
+            "weight_bp": 1425
+          },
+          {
+            "hex": "#cad4d4",
+            "weight_bp": 1220
+          },
+          {
+            "hex": "#93c7c5",
+            "weight_bp": 1218
+          },
+          {
+            "hex": "#638588",
+            "weight_bp": 1213
+          },
+          {
+            "hex": "#9fa7a9",
+            "weight_bp": 1199
+          },
+          {
+            "hex": "#84897d",
+            "weight_bp": 1122
+          },
+          {
+            "hex": "#4f6057",
+            "weight_bp": 1101
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "gray",
+          "white",
+          "green"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05511,
+          "y_mae": 0.14051,
+          "x_ratio": 1.2568,
+          "y_ratio": 3.0538,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Iridescent_shell_tile_floor_texture_1f816590.jpg",
+          "sha256": "8f31daffce945f5348ead26f418019a4c97fa309f34b3d880f2a43e7b04f0121",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.fcaac7c9",
+      "kind": "region",
+      "name": "Gold marble floor with kelp",
+      "description": "Gold marble floor with kelp: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-fcaac7c9",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "vegetation",
+        "water",
+        "aquatic",
+        "construction",
+        "gold",
+        "marble",
+        "kelp"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "vegetation",
+        "water",
+        "aquatic",
+        "construction",
+        "gold",
+        "marble",
+        "kelp",
+        "green",
+        "white",
+        "gray",
+        "teal",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "foliage",
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#595e45",
+            "weight_bp": 1513
+          },
+          {
+            "hex": "#c1d4cc",
+            "weight_bp": 1331
+          },
+          {
+            "hex": "#819084",
+            "weight_bp": 1317
+          },
+          {
+            "hex": "#e1e3d4",
+            "weight_bp": 1298
+          },
+          {
+            "hex": "#aebdb2",
+            "weight_bp": 1253
+          },
+          {
+            "hex": "#6c745f",
+            "weight_bp": 1148
+          },
+          {
+            "hex": "#8fb0ae",
+            "weight_bp": 1093
+          },
+          {
+            "hex": "#3d4632",
+            "weight_bp": 1047
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "white",
+          "gray",
+          "teal"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.0688,
+          "y_mae": 0.18891,
+          "x_ratio": 1.3601,
+          "y_ratio": 3.9803,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Gold_marble_floor_with_kelp_fcaac7c9.jpg",
+          "sha256": "df0f80fcbd39dc21f79722e1065d72bf903f0afdf9cf9d99e25cbc2fc480640e",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.89fa63eb",
+      "kind": "region",
+      "name": "Rusty iron floor grate",
+      "description": "Rusty iron floor grate: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-89fa63eb",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "metal",
+        "construction",
+        "weathered",
+        "rusty",
+        "iron",
+        "grate"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "metal",
+        "construction",
+        "weathered",
+        "rusty",
+        "iron",
+        "grate",
+        "teal",
+        "brown",
+        "black",
+        "blue",
+        "gray",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#213637",
+            "weight_bp": 1811
+          },
+          {
+            "hex": "#55382e",
+            "weight_bp": 1362
+          },
+          {
+            "hex": "#0f262a",
+            "weight_bp": 1328
+          },
+          {
+            "hex": "#0b181d",
+            "weight_bp": 1245
+          },
+          {
+            "hex": "#202223",
+            "weight_bp": 1237
+          },
+          {
+            "hex": "#657187",
+            "weight_bp": 1080
+          },
+          {
+            "hex": "#3f2722",
+            "weight_bp": 1074
+          },
+          {
+            "hex": "#53494a",
+            "weight_bp": 863
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "brown",
+          "black",
+          "blue",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04764,
+          "y_mae": 0.04926,
+          "x_ratio": 1.5118,
+          "y_ratio": 1.59,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Rusty_iron_floor_grate_texture_89fa63eb.jpg",
+          "sha256": "a6924b50f8ada943abbe01ff7464ad5b19b6d9c7e64744fbc9670f18e3fd1018",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": [
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.462b26e3",
+      "kind": "region",
+      "name": "Underwater moonstone floor tiles",
+      "description": "Underwater moonstone floor tiles: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-462b26e3",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "crystal",
+        "tiles",
+        "water",
+        "aquatic",
+        "construction",
+        "wet",
+        "patterned",
+        "underwater",
+        "moonstone"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "crystal",
+        "tiles",
+        "water",
+        "aquatic",
+        "construction",
+        "wet",
+        "patterned",
+        "underwater",
+        "moonstone",
+        "teal",
+        "blue",
+        "white",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#254d57",
+            "weight_bp": 1430
+          },
+          {
+            "hex": "#5b8f99",
+            "weight_bp": 1287
+          },
+          {
+            "hex": "#819da7",
+            "weight_bp": 1286
+          },
+          {
+            "hex": "#8bbfc8",
+            "weight_bp": 1264
+          },
+          {
+            "hex": "#b8d5da",
+            "weight_bp": 1229
+          },
+          {
+            "hex": "#32636d",
+            "weight_bp": 1212
+          },
+          {
+            "hex": "#4f727b",
+            "weight_bp": 1203
+          },
+          {
+            "hex": "#133842",
+            "weight_bp": 1089
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue",
+          "white"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.03907,
+          "y_mae": 0.06281,
+          "x_ratio": 1.4134,
+          "y_ratio": 2.3662,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Underwater_moonstone_floor_tiles…_462b26e3.jpg",
+          "sha256": "10f92d458023c9688546b1698eee8a8d4c64f3da26c388de5b896f7f173a4cf5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.347e8883",
+      "kind": "region",
+      "name": "Underwater petrified wood parquet",
+      "description": "Underwater petrified wood parquet: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-347e8883",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "tiles",
+        "water",
+        "aquatic",
+        "construction",
+        "wet",
+        "patterned",
+        "organic",
+        "underwater",
+        "petrified",
+        "parquet"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "tiles",
+        "water",
+        "aquatic",
+        "construction",
+        "wet",
+        "patterned",
+        "organic",
+        "underwater",
+        "petrified",
+        "parquet",
+        "teal",
+        "blue",
+        "gray",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#326468",
+            "weight_bp": 1533
+          },
+          {
+            "hex": "#2f3b40",
+            "weight_bp": 1361
+          },
+          {
+            "hex": "#274c53",
+            "weight_bp": 1318
+          },
+          {
+            "hex": "#4d4e4e",
+            "weight_bp": 1234
+          },
+          {
+            "hex": "#5b7d78",
+            "weight_bp": 1219
+          },
+          {
+            "hex": "#626661",
+            "weight_bp": 1165
+          },
+          {
+            "hex": "#6e9f94",
+            "weight_bp": 1101
+          },
+          {
+            "hex": "#232a2f",
+            "weight_bp": 1069
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "blue",
+          "gray"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.07212,
+          "y_mae": 0.15724,
+          "x_ratio": 1.4667,
+          "y_ratio": 3.2933,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Underwater_petrified_wood_parque…_347e8883.jpg",
+          "sha256": "ad6aed14c8ad126411ee730892f0de22590d3e43e9c7756de7fa595abfbf5bc3",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.945d7850",
+      "kind": "region",
+      "name": "Sunken cathedral mosaic floor",
+      "description": "Sunken cathedral mosaic floor: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-945d7850",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "tiles",
+        "aquatic",
+        "construction",
+        "weathered",
+        "patterned",
+        "sunken",
+        "cathedral",
+        "mosaic"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "tiles",
+        "aquatic",
+        "construction",
+        "weathered",
+        "patterned",
+        "sunken",
+        "cathedral",
+        "mosaic",
+        "green",
+        "black",
+        "olive",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#395548",
+            "weight_bp": 1486
+          },
+          {
+            "hex": "#284034",
+            "weight_bp": 1401
+          },
+          {
+            "hex": "#636a53",
+            "weight_bp": 1391
+          },
+          {
+            "hex": "#142820",
+            "weight_bp": 1266
+          },
+          {
+            "hex": "#575a46",
+            "weight_bp": 1207
+          },
+          {
+            "hex": "#1c3a30",
+            "weight_bp": 1189
+          },
+          {
+            "hex": "#888464",
+            "weight_bp": 1085
+          },
+          {
+            "hex": "#3b4539",
+            "weight_bp": 975
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "black",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06472,
+          "y_mae": 0.12806,
+          "x_ratio": 1.2571,
+          "y_ratio": 2.5091,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Sunken_cathedral_mosaic_floor_te…_945d7850.jpg",
+          "sha256": "92a5bf04525695c97f131f301047acab10e7c4b73f6afecc4378f9b3b991d79e",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": [
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.1f1c9dfc",
+      "kind": "region",
+      "name": "Algae covered sunken ship deck",
+      "description": "Algae covered sunken ship deck: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-1f1c9dfc",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "vegetation",
+        "aquatic",
+        "wet",
+        "weathered",
+        "organic",
+        "algae",
+        "covered",
+        "sunken",
+        "ship",
+        "deck"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "vegetation",
+        "aquatic",
+        "wet",
+        "weathered",
+        "organic",
+        "algae",
+        "covered",
+        "sunken",
+        "ship",
+        "deck",
+        "black",
+        "green",
+        "olive",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "foliage",
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#151d15",
+            "weight_bp": 1437
+          },
+          {
+            "hex": "#454d2f",
+            "weight_bp": 1385
+          },
+          {
+            "hex": "#2a2b1d",
+            "weight_bp": 1368
+          },
+          {
+            "hex": "#253a25",
+            "weight_bp": 1308
+          },
+          {
+            "hex": "#413d26",
+            "weight_bp": 1212
+          },
+          {
+            "hex": "#16291b",
+            "weight_bp": 1161
+          },
+          {
+            "hex": "#5d6a42",
+            "weight_bp": 1074
+          },
+          {
+            "hex": "#0b100d",
+            "weight_bp": 1055
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "black",
+          "green",
+          "olive"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.02967,
+          "y_mae": 0.05555,
+          "x_ratio": 0.983,
+          "y_ratio": 1.2724,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Algae_covered_sunken_ship_deck_1f1c9dfc.jpg",
+          "sha256": "dd21c9c076f1ffd941dad52fbc523933cff92446a82652cb91dc027e0151be2d",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "wet",
+            "weathered"
+          ]
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.01aad5e7",
+      "kind": "region",
+      "name": "Blue crystal stone floor tiles",
+      "description": "Blue crystal stone floor tiles: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-01aad5e7",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "crystal",
+        "tiles",
+        "construction",
+        "patterned",
+        "blue"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "crystal",
+        "tiles",
+        "construction",
+        "patterned",
+        "blue",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1f3c53",
+            "weight_bp": 1755
+          },
+          {
+            "hex": "#2f7498",
+            "weight_bp": 1583
+          },
+          {
+            "hex": "#30607b",
+            "weight_bp": 1533
+          },
+          {
+            "hex": "#294c64",
+            "weight_bp": 1398
+          },
+          {
+            "hex": "#32a0c5",
+            "weight_bp": 1049
+          },
+          {
+            "hex": "#142c3f",
+            "weight_bp": 962
+          },
+          {
+            "hex": "#1e4a68",
+            "weight_bp": 867
+          },
+          {
+            "hex": "#225d84",
+            "weight_bp": 853
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "blue"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.05615,
+          "y_mae": 0.12891,
+          "x_ratio": 2.024,
+          "y_ratio": 4.7634,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Blue_crystal_stone_floor_tiles_01aad5e7.jpg",
+          "sha256": "9875a322106f1570de61098fd5cf0bc8129bba1bb906e9de4263e792c0c3a03c",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.8f10e3d1",
+      "kind": "region",
+      "name": "Stone floor with kelp",
+      "description": "Stone floor with kelp: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-8f10e3d1",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "stone",
+        "vegetation",
+        "water",
+        "aquatic",
+        "construction",
+        "kelp"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "stone",
+        "vegetation",
+        "water",
+        "aquatic",
+        "construction",
+        "kelp",
+        "teal",
+        "green",
+        "black",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "rock",
+        "mineral",
+        "foliage",
+        "underwater",
+        "seabed",
+        "building material",
+        "architecture"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#3d5e57",
+            "weight_bp": 1535
+          },
+          {
+            "hex": "#24484c",
+            "weight_bp": 1481
+          },
+          {
+            "hex": "#15292c",
+            "weight_bp": 1424
+          },
+          {
+            "hex": "#18343c",
+            "weight_bp": 1326
+          },
+          {
+            "hex": "#263833",
+            "weight_bp": 1121
+          },
+          {
+            "hex": "#527b71",
+            "weight_bp": 1072
+          },
+          {
+            "hex": "#0b1b22",
+            "weight_bp": 1070
+          },
+          {
+            "hex": "#384c40",
+            "weight_bp": 971
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "teal",
+          "green",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.06617,
+          "y_mae": 0.07477,
+          "x_ratio": 1.6974,
+          "y_ratio": 2.0805,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Stone_floor_texture_with_kelp_8f10e3d1.jpg",
+          "sha256": "afea651259349eb51cd8f2ab936f2c5293bed6a8e7d3621001a8fb698f7ba0c0",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic",
+            "construction"
+          ],
+          "conditions": []
+        }
+      }
+    },
+    {
+      "id": "smi.material.gflow.4b65def3",
+      "kind": "region",
+      "name": "Submerged herringbone timber wood",
+      "description": "Submerged herringbone timber wood: painterly fantasy surface texture. Imported 1024 x 1024 color artwork; repeat intent, not certified seamless or physically calibrated.",
+      "texture": "surface-4b65def3",
+      "rect_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "style": "painterly fantasy",
+      "domain": "textures-materials",
+      "subjects": [
+        "wood",
+        "water",
+        "aquatic",
+        "wet",
+        "patterned",
+        "organic",
+        "submerged",
+        "herringbone",
+        "timber"
+      ],
+      "tags": [
+        "material",
+        "surface texture",
+        "base color",
+        "tileable candidate",
+        "wood",
+        "water",
+        "aquatic",
+        "wet",
+        "patterned",
+        "organic",
+        "submerged",
+        "herringbone",
+        "timber",
+        "green",
+        "teal",
+        "black",
+        "submerged construction",
+        "painterly fantasy"
+      ],
+      "aliases": [
+        "underwater",
+        "seabed"
+      ],
+      "discovery": "standalone",
+      "classification": {
+        "category_path": [
+          "textures"
+        ],
+        "perspective": [
+          "perspective-neutral"
+        ],
+        "theme": [
+          "fantasy"
+        ],
+        "medium": [
+          "raster-2d"
+        ],
+        "family": "gflow-materials"
+      },
+      "visual_profile": {
+        "schema": "smi-visual-profile/1",
+        "palette": [
+          {
+            "hex": "#1d2e28",
+            "weight_bp": 1417
+          },
+          {
+            "hex": "#3a4233",
+            "weight_bp": 1409
+          },
+          {
+            "hex": "#4b6f56",
+            "weight_bp": 1380
+          },
+          {
+            "hex": "#2c5648",
+            "weight_bp": 1374
+          },
+          {
+            "hex": "#4f5841",
+            "weight_bp": 1221
+          },
+          {
+            "hex": "#1e3e37",
+            "weight_bp": 1133
+          },
+          {
+            "hex": "#0d1b1b",
+            "weight_bp": 1080
+          },
+          {
+            "hex": "#5d9a7d",
+            "weight_bp": 986
+          }
+        ],
+        "palette_method": "median-cut-rgb-128-v1",
+        "color_names": [
+          "green",
+          "teal",
+          "black"
+        ]
+      },
+      "material": {
+        "schema": "smi-surface-material/1",
+        "channels": {
+          "base_color": "self"
+        },
+        "role": "surface",
+        "repeat_intent": [
+          "repeat",
+          "repeat"
+        ],
+        "suggested_coverage_m": [
+          2,
+          2
+        ],
+        "seam_screen": {
+          "method": "rgb-wrap-mae-v1",
+          "x_mae": 0.04946,
+          "y_mae": 0.10781,
+          "x_ratio": 1.1208,
+          "y_ratio": 2.5447,
+          "screening": "review-required"
+        },
+        "source": {
+          "filename": "Submerged_herringbone_timber_woo…_4b65def3.jpg",
+          "sha256": "5253c2caec1fda9d06f3a2e695b6206c3a3bbddca237fa4fa18f3bd6c27beca5",
+          "width_px": 1024,
+          "height_px": 1024,
+          "encoding": "jpeg",
+          "processing": "jpeg-q90-420-optimize"
+        },
+        "associations": {
+          "environments": [
+            "aquatic"
+          ],
+          "conditions": [
+            "wet"
+          ]
+        }
+      }
+    }
+  ]
+}
