@@ -568,6 +568,107 @@
     }
     return Object.freeze({query,rankEligible,summary:()=>({subjects:subjects.size,offers:offers.size,excluded_assets:unavailable.size,...(localArchive?{archive_sha256:catalog_sha256,scope:'local-archive'}:{catalog_sha256})})});
   }
+  // A bounded presentation of the existing catalog, not a second registry.
+  // Static adjacency is derived once; dynamic discovery and similarity are
+  // evaluated only for the focused node. No archive or semantic traversal fetch.
+  function createRelationshipExplorer(catalog,discovery=null){
+    if(catalog?.schema!=='smi-public-catalog/1'||!Array.isArray(catalog.assets)||catalog.assets.length>50000||!Array.isArray(catalog.packs)||!Array.isArray(catalog.concepts??[]))throw Error('Invalid relationship catalog');
+    const key=r=>JSON.stringify([r.kind,r.id,r.archive_sha256??null]),compare=(a,b)=>a<b?-1:a>b?1:0;
+    const packs=new Map(catalog.packs.map(p=>[p.id,p])),assets=new Map(),concepts=new Map(),nodes=new Map(),adj=new Map(),edgeKeys=new Set();
+    function exact(kind,item){
+      const p=packs.get(item.pack);
+      return p&&!p.archived&&p.zip&&digestId(p.archive_sha256)?{kind,id:item.id,archive_sha256:p.archive_sha256}:null;
+    }
+    function addNode(ref,item=null){
+      const k=key(ref);
+      if(!nodes.has(k))nodes.set(k,{key:k,ref:{...ref},name:item?.name||ref.id,available:!!item,hidden:item?.discovery==='hidden',pack:item?.pack??null});
+      return k;
+    }
+    for(const a of catalog.assets){if(a.legacy)continue;const r=exact('asset',a);if(!r)continue;if(assets.has(a.id))throw Error('Duplicate graph asset');assets.set(a.id,{item:a,ref:r,key:addNode(r,a)});}
+    for(const c of catalog.concepts||[]){const r=exact('concept',c);if(!r)continue;if(concepts.has(c.id))throw Error('Duplicate graph concept');concepts.set(c.id,{item:c,ref:r,key:addNode(r,c)});}
+    function target(r){
+      if(!validRef(r))throw Error('Invalid graph reference');
+      const current=(r.kind==='asset'?assets:concepts).get(r.id);
+      if(current&&(!r.archive_sha256||r.archive_sha256===current.ref.archive_sha256))return current.key;
+      return addNode(r);
+    }
+    const edge=(from,to,type,label,evidence={})=>({from,to,type,label,evidence,key:JSON.stringify([from,to,type,label,evidence.offer_id??null])});
+    function staticEdge(from,to,type,label,evidence){
+      const e=edge(from,to,type,label,evidence);if(edgeKeys.has(e.key))return;edgeKeys.add(e.key);
+      for(const k of new Set([from,to])){if(!adj.has(k))adj.set(k,[]);adj.get(k).push(e);}
+    }
+    for(const a of assets.values()){
+      const c=concepts.get(a.item.concept_id);
+      if(c&&c.item.pack===a.item.pack)staticEdge(c.key,a.key,'representation',a.item.representation?.role||'represented_by',{selectors:a.item.representation?.when||{}});
+      for(const id of a.item.render_refs||[]){
+        // A bundled reference is to the source archive's member; the node is
+        // the canonical current catalog owner for navigation, not a replacement
+        // runtime locator. The exact source archive remains in the evidence.
+        staticEdge(a.key,target({kind:'asset',id}),'dependency','uses',{source_archive_sha256:a.ref.archive_sha256,member_id:id,note:'Source archive member; node navigates to current catalog owner.'});
+      }
+    }
+    for(const c of concepts.values())for(const r of c.item.relationships||[])staticEdge(c.key,target(r.target),'authored',r.kind,{target:r.target});
+    for(const list of adj.values())list.sort((a,b)=>compare(a.key,b.key));
+    function focus(ref,{depth=1,limit=28,types=['representation','dependency','authored','compatible','similarity']}={}){
+      if(!validRef(ref)||!Number.isInteger(depth)||depth<1||depth>2||!Number.isInteger(limit)||limit<2||limit>40||!Array.isArray(types)||types.some(t=>!['representation','dependency','authored','compatible','unknown','incompatible','similarity'].includes(t)))throw Error('Invalid relationship view');
+      const current=(ref.kind==='asset'?assets:concepts).get(ref.id);
+      if(!current||ref.archive_sha256&&ref.archive_sha256!==current.ref.archive_sha256)throw Error('Unavailable graph focus');
+      const root=current.key;
+      const base=nodes.get(root),active=new Set(types),dynamic=[],counts={},errors=[];
+      const recordMatch=(m,direction)=>{
+        const other=direction==='subject'?m.offer:m.subject;
+        const {offer_id,...owner}=other,otherKey=target(owner);
+        if(otherKey===root)return;
+        dynamic.push(edge(direction==='subject'?otherKey:root,direction==='subject'?root:otherKey,m.status,m.role,{offer_id:m.offer.offer_id,offer:m.offer,subject:m.subject,scopes:m.scopes,requirements:m.evidence,note:direction==='offer'&&base.ref.kind==='asset'?'Offer projected through the focused representation; authored owner is the concept.':undefined}));
+      };
+      const consume=(result,direction)=>{
+        for(const [status,g] of Object.entries(result.groups)){
+          counts[status]=(counts[status]||0)+g.total;
+          if(active.has(status))for(const m of g.matches)recordMatch(m,direction);
+        }
+      };
+      if(discovery&&base.ref.archive_sha256&&['compatible','unknown','incompatible'].some(t=>active.has(t))){
+        try{
+          consume(discovery.query({direction:'subject',ref:base.ref,limit:8}),'subject');
+          const concept=base.ref.kind==='concept'?concepts.get(base.ref.id):concepts.get(assets.get(base.ref.id)?.item.concept_id);
+          if(concept&&concept.item.pack===base.pack)for(const offer_id of Object.keys(concept.item.discovery_offers||{}).sort().slice(0,8)){
+            consume(discovery.query({direction:'offer',ref:{...concept.ref,offer_id},target_kind:'asset',limit:8}),'offer');
+          }
+        }catch(e){errors.push('Capability evidence unavailable: '+e.message);}
+      }
+      const source=base.ref.kind==='asset'?assets.get(base.ref.id)?.item:null;
+      if(source?.material&&active.has('similarity')){
+        for(const m of rankRelated(source,catalog.assets,{limit:6,categoryPrefixes:['textures','world.terrain','world.vegetation','world.props']})){
+          const t=assets.get(m.id);if(t&&t.key!==root)dynamic.push(edge(root,t.key,'similarity','suggested match',{score:m.score,shared:m.shared,color:m.color,style:m.style}));
+        }
+      }
+      const order=new Map([['representation',0],['authored',1],['compatible',2],['dependency',3],['similarity',4],['unknown',5],['incompatible',6]]);
+      const priority=(a,b)=>(order.get(a.type)-order.get(b.type))||compare(a.key,b.key);
+      const direct=[...(adj.get(root)||[]),...dynamic].filter(e=>active.has(e.type)).sort(priority);
+      const selected=new Map([[root,0]]),frontier=[];
+      const add=(e,origin,ring)=>{
+        const k=e.from===origin?e.to:e.from;if(selected.has(k)||selected.size>=limit)return;
+        selected.set(k,ring);if(nodes.get(k)?.available)frontier.push(k);
+      };
+      // Round-robin relationship groups prevents a large composition from
+      // consuming every visible node before semantic or compatible neighbors.
+      const buckets=new Map();for(const e of direct){if(!buckets.has(e.type))buckets.set(e.type,[]);buckets.get(e.type).push(e);}
+      while(selected.size<limit&&[...buckets.values()].some(b=>b.length)){
+        for(const b of buckets.values()){if(b.length)add(b.shift(),root,1);}
+      }
+      if(depth===2)for(const k of [...frontier]){
+        for(const e of (adj.get(k)||[]).filter(e=>active.has(e.type)).sort(priority)){if(selected.size>=limit)break;add(e,k,2);}
+        if(selected.size>=limit)break;
+      }
+      const edges=new Map();
+      for(const k of selected.keys())for(const e of adj.get(k)||[])if(active.has(e.type)&&selected.has(e.from)&&selected.has(e.to))edges.set(e.key,e);
+      for(const e of dynamic)if(selected.has(e.from)&&selected.has(e.to)&&active.has(e.type))edges.set(e.key,e);
+      const output=[...edges.values()].sort(priority);
+      const allDirect=new Set(direct.map(e=>e.from===root?e.to:e.from).filter(k=>k!==root));
+      return structuredClone({root,nodes:[...selected].map(([k,ring])=>({...nodes.get(k),ring})),edges:output.slice(0,160),omitted_edges:Math.max(0,output.length-160),omitted_neighbors:[...allDirect].filter(k=>!selected.has(k)).length,counts,errors});
+    }
+    return Object.freeze({focus});
+  }
   function resolveCollection(index,definitions,fallbackName='Imported collection'){
     // definitions: [{path,pack}] where every path is archive-relative and distinct.
     if(!Array.isArray(definitions)||!definitions.length||definitions.length>MAX_PACKS)throw Error('Collection must contain 1–'+MAX_PACKS+' pack manifests');
@@ -750,5 +851,5 @@
     if(licenseText&&licenses.has('Apache-2.0')){const notice=await licenseText();if(notice)zip.file('LICENSES/Apache-2.0.txt',notice);}
     return manifest;
   }
-  return Object.freeze({validateDiscoveryOffers,createDiscoveryIndex,createArchiveDiscoveryIndex,validateMaterialProfiles,rankRelated,safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,validateRepresentations,conceptGraph,projectStates,selectRepresentation,planConceptAction,resolveDefaults,validateRuleRegistry,resolveContributors,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
+  return Object.freeze({createRelationshipExplorer,validateDiscoveryOffers,createDiscoveryIndex,createArchiveDiscoveryIndex,validateMaterialProfiles,rankRelated,safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,validateRepresentations,conceptGraph,projectStates,selectRepresentation,planConceptAction,resolveDefaults,validateRuleRegistry,resolveContributors,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
 });

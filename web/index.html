@@ -77,11 +77,17 @@
 <dl id="detail-classification" aria-label="Asset classification"></dl>
 <div id="detail-tags" class="detail-tags" aria-label="Searchable keywords"></div>
 <div id="detail-showcases" class="detail-showcases" aria-label="Interactive demonstrations" hidden></div>
-<details id="detail-components" hidden><summary>Inspect dependencies and related assets</summary><div id="detail-related" class="detail-showcases"></div></details>
+<button type="button" class="primary" id="relationship-open" hidden>Explore relationship web</button><details id="detail-components" hidden><summary>Inspect dependencies and related assets</summary><div id="detail-related" class="detail-showcases"></div></details>
 <div class="detail-utilities"><button type="button" id="copy-id">Copy ID</button><button type="button" id="copy-link">Copy link</button></div>
 <label class="tint-control" id="tint-options" hidden><input id="tint-enabled" type="checkbox"> Recolor icon <input id="tint-color" type="color" value="#4b9cff" aria-label="Tint color"></label>
 <h3>Download</h3>
 <button id="download-png" type="button" class="primary" disabled>PNG (current frame)</button><button id="download-asset" type="button">This asset ZIP</button><a id="download-pack" href="#" download>Full collection ZIP</a>
 <a id="open-builder" href="builder.html">Open in full builder</a><p class="muted">An asset ZIP includes its manifest dependencies, required texture sheets and source license notices.</p></div></div>
 </dialog>
-<div class="notice" id="notice" hidden aria-live="polite"></div></body></html>
+<dialog id="relationship-dialog" class="relationship-dialog" aria-labelledby="relationship-title">
+<div class="relationship-heading"><div><p class="eyebrow">ATLAS RELATIONSHIP EXPLORER</p><h2 id="relationship-title">Relationship explorer</h2></div><button id="relationship-close" type="button">Close graph</button></div>
+<div class="relationship-toolbar"><button id="relationship-back" type="button">Back</button><button id="relationship-forward" type="button">Forward</button><label>Depth <select id="relationship-depth"><option value="1">Direct</option><option value="2">Two hops</option></select></label><button id="relationship-zoom-in" type="button" aria-label="Zoom in">+</button><button id="relationship-zoom-out" type="button" aria-label="Zoom out">−</button><button id="relationship-reset" type="button">Fit view</button></div>
+<div id="relationship-filters" class="relationship-filters" aria-label="Relationship types"></div>
+<p class="muted" id="relationship-status" role="status"></p><div class="relationship-layout"><div><svg id="relationship-svg" viewBox="0 0 1000 700" aria-label="Interactive relationship graph"></svg><p class="muted">Select a node to explore its neighborhood. Drag empty space to pan; use zoom controls or the wheel. Dashed links are suggestions or incomplete/contradicted evidence.</p><details><summary>Accessible node list</summary><div id="relationship-nodes" class="relationship-node-list"></div></details></div><aside id="relationship-evidence" aria-label="Focused node and relationship evidence"></aside></div>
+<p class="muted">Metadata navigation only. No actions, attachments, archive downloads or host behavior are authorized by graph links.</p>
+</dialog><div class="notice" id="notice" hidden aria-live="polite"></div></body></html>

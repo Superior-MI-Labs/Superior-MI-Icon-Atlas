@@ -488,6 +488,115 @@
     if(Object.values(result.groups).some(g=>g.total)||panel.children.length>2)list.append(panel);
   }
   // END capability discovery inspector
+  // Relationship explorer: an on-demand view of the shared resolver.
+  let relationshipExplorer=null,graphRef=null,graphHistory=[],graphPosition=-1,graphModel=null,graphView={x:0,y:0,w:1000,h:700},graphDrag=null;
+  const graphTypes={representation:['Representation','#60cbd2'],dependency:['Render dependency','#8da8ff'],authored:['Authored relationship','#d9a8ff'],compatible:['Declared match','#79d9a1'],similarity:['Similarity suggestion','#efc17d'],unknown:['Incomplete evidence','#9caac0'],incompatible:['Contradicted','#ef8991']};
+  const graphSVG=(tag,attrs={})=>{const n=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,String(v));return n;};
+  function graphViewport(){ $('relationship-svg').setAttribute('viewBox',[graphView.x,graphView.y,graphView.w,graphView.h].join(' ')); }
+  function graphReset(){graphView={x:0,y:0,w:1000,h:700};graphViewport();}
+  function graphZoom(factor){
+    const w=Math.min(3000,Math.max(250,graphView.w*factor)),h=w*.7;
+    graphView={x:graphView.x+(graphView.w-w)/2,y:graphView.y+(graphView.h-h)/2,w,h};graphViewport();
+  }
+  function graphEntry(node){
+    if(!node?.available||node.hidden)return null;
+    if(node.ref.kind==='asset'){
+      const entry=entryById.get(node.ref.id),r=entry&&discoveryRef('asset',entry.id,entry.pack);
+      return r?.archive_sha256===node.ref.archive_sha256?entry:null;
+    }
+    const concept=conceptIndex.get(node.ref.id);
+    if(!concept||discoveryRef('concept',concept.id,concept.pack)?.archive_sha256!==node.ref.archive_sha256)return null;
+    return entries.filter(a=>a.concept_id===concept.id&&a.pack===concept.pack&&!a.legacy&&a.discovery!=='hidden').sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0)[0]||null;
+  }
+  function graphFocus(ref,record=true){
+    if(record){graphHistory=graphHistory.slice(0,graphPosition+1);graphHistory.push(ref);if(graphHistory.length>100)graphHistory.shift();graphPosition=graphHistory.length-1;}
+    graphRef=ref;graphReset();renderGraph();
+  }
+  function graphNodeDetails(node){
+    const panel=$('relationship-evidence');panel.replaceChildren();
+    panel.append(discoveryElement('h3',node.name),discoveryElement('p',node.ref.kind+' · '+node.ref.id+' · '+(node.ring===0?'Focused node':node.ring===1?'Direct neighbor':'Two-hop neighbor')),discoveryElement('p',node.ref.archive_sha256?'Archive SHA-256: '+node.ref.archive_sha256:'No exact current archive identity'));
+    if(!node.available)panel.append(discoveryElement('p','Unresolved or historical reference. Not redirected to a different archive.'));
+    if(node.hidden)panel.append(discoveryElement('p','Hidden component; not a public navigation target.'));
+    const entry=graphEntry(node);
+    if(entry){const open=discoveryElement('button','Open asset preview');open.type='button';open.onclick=()=>{$('relationship-dialog').close();openDetail(entry);};panel.append(open);}
+    for(const e of graphModel.edges.filter(e=>e.from===node.key||e.to===node.key)){
+      const other=graphModel.nodes.find(n=>n.key===(e.from===node.key?e.to:e.from));
+      const d=discoveryElement('details');d.append(discoveryElement('summary',graphTypes[e.type][0]+' · '+e.label+' · '+(other?.name||'Unknown')));
+      d.append(discoveryElement('p',(e.from===node.key?'Outgoing':'Incoming')+' · '+e.label));
+      if(e.evidence.note)d.append(discoveryElement('p',e.evidence.note));
+      if(e.evidence.offer)d.append(discoveryElement('p','Offer owner: '+e.evidence.offer.id+' · '+e.evidence.offer.offer_id+' · '+e.evidence.offer.archive_sha256));
+      if(e.evidence.requirements)for(const r of e.evidence.requirements)d.append(discoveryElement('p',discoveryEvidenceText(r)));
+      if(e.type==='similarity')d.append(discoveryElement('p','Similarity score '+Number(e.evidence.score).toFixed(3)+'; not verified compatibility.'));
+      if(e.evidence.selectors&&Object.keys(e.evidence.selectors).length)d.append(discoveryElement('p',JSON.stringify(e.evidence.selectors)));
+      if(e.evidence.target?.archive_sha256)d.append(discoveryElement('p','Authored target pin: '+e.evidence.target.archive_sha256));
+      panel.append(d);
+    }
+  }
+  function renderGraph(){
+    if(!graphRef||!relationshipExplorer)return;
+    const svg=$('relationship-svg'),list=$('relationship-nodes'),status=$('relationship-status');svg.replaceChildren();list.replaceChildren();$('relationship-evidence').replaceChildren();
+    $('relationship-back').disabled=graphPosition<=0;$('relationship-forward').disabled=graphPosition>=graphHistory.length-1;
+    const types=[...$('relationship-filters').querySelectorAll('input:checked')].map(e=>e.value);
+    try{
+      graphModel=relationshipExplorer.focus(graphRef,{depth:Number($('relationship-depth').value),types,limit:32});
+      const root=graphModel.nodes.find(n=>n.key===graphModel.root),positions=new Map([[root.key,{x:500,y:350}]]);
+      $('relationship-title').textContent=root.name+' · relationship explorer';
+      const direct=graphModel.nodes.filter(n=>n.ring===1),outer=graphModel.nodes.filter(n=>n.ring===2);
+      // Spill dense direct neighborhoods into the outer display ring. The
+      // visual layout is not a claim about semantic distance.
+      const rings=[direct.slice(0,12),[...direct.slice(12),...outer]];
+      for(const ring of [1,2]){
+        const items=rings[ring-1],rx=ring===1?260:440,ry=ring===1?185:300;
+        for(let i=0;i<items.length;i++){const t=2*Math.PI*i/items.length-Math.PI/2+(ring===2?.16:0);positions.set(items[i].key,{x:500+rx*Math.cos(t),y:350+ry*Math.sin(t)});}
+      }
+      const lines=graphSVG('g',{'aria-hidden':'true'}),vertices=graphSVG('g');
+      for(const e of graphModel.edges){
+        const a=positions.get(e.from),b=positions.get(e.to),color=graphTypes[e.type][1];
+        const line=graphSVG('path',{d:e.from===e.to?'M '+a.x+' '+(a.y-15)+' c 34 -35 40 30 0 25':'M '+a.x+' '+a.y+' L '+b.x+' '+b.y,stroke:color,'stroke-width':e.type==='compatible'?2.8:1.6,opacity:.72,fill:'none','stroke-dasharray':['similarity','unknown','incompatible'].includes(e.type)?'5 5':'none'});
+        const title=graphSVG('title');title.textContent=e.label+' ('+graphTypes[e.type][0]+')';line.append(title);lines.append(line);
+      }
+      for(const n of graphModel.nodes){
+        const p=positions.get(n.key),isRoot=n.key===graphModel.root,canFocus=n.available&&!n.hidden;
+        const group=graphSVG('g',{transform:'translate('+p.x+' '+p.y+')',class:'relationship-node',tabindex:'0',role:'button','aria-label':n.name+(isRoot?' (focused)':''),'data-graph-kind':n.ref.kind});
+        const fill=isRoot?'#81d4f5':!n.available?'#697585':n.ref.kind==='concept'?'#d9a8ff':'#8cb9ed';
+        group.append(graphSVG('circle',{r:isRoot?25:14,fill,stroke:isRoot?'#f0fcff':'#263a54','stroke-width':isRoot?3:2,opacity:n.hidden?.5:1}));
+        const t=graphSVG('text',{y:isRoot?43:28,'text-anchor':'middle',class:'relationship-label','font-size':isRoot?15:11});const labelLimit=isRoot?34:18;t.textContent=n.name.length>labelLimit?n.name.slice(0,labelLimit-1)+'…':n.name;group.append(t);
+        const title=graphSVG('title');title.textContent=n.name+' · '+n.ref.kind;group.append(title);
+        const activate=()=>canFocus&&!isRoot?graphFocus(n.ref):graphNodeDetails(n);
+        group.addEventListener('click',activate);group.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();}});
+        vertices.append(group);
+        const btn=discoveryElement('button',(isRoot?'Focus · ':'')+n.name+(n.ref.kind==='concept'?' (concept)':'')+(!n.available?' (unresolved)':''));
+        btn.type='button';btn.dataset.graphNode=n.ref.id;btn.onclick=activate;list.append(btn);
+      }
+      svg.append(lines,vertices);
+      status.textContent=graphModel.nodes.length+' nodes · '+graphModel.edges.length+' links'+(graphModel.omitted_neighbors?' · '+graphModel.omitted_neighbors+' additional direct neighbors not shown':'')+(graphModel.omitted_edges?' · '+graphModel.omitted_edges+' links omitted':'')+(graphModel.errors.length?' · '+graphModel.errors.join('; '):'');
+      if(Object.keys(graphModel.counts).length)status.textContent+=' · Capability queries: '+Object.entries(graphModel.counts).map(([k,v])=>v+' '+k).join(', ')+' (bounded preview; counts may overlap)';
+      graphNodeDetails(root);
+    }catch(error){status.textContent='Relationship view unavailable: '+error.message;}
+  }
+  function openRelationshipExplorer(a){
+    if(!relationshipExplorer||!a)return;const ref=discoveryRef('asset',a.id,a.pack);if(!ref)return;
+    graphHistory=[];graphPosition=-1;graphRef=null;graphFocus(ref);
+    if(!$('relationship-dialog').open)$('relationship-dialog').showModal();
+  }
+  function wireGraph(){
+    const dialog=$('relationship-dialog'),svg=$('relationship-svg');
+    for(const [type,[label,color]] of Object.entries(graphTypes)){
+      const row=document.createElement('label'),input=document.createElement('input'),dot=document.createElement('span');
+      input.type='checkbox';input.value=type;input.checked=!['unknown','incompatible'].includes(type);input.addEventListener('change',renderGraph);dot.className='relationship-dot';dot.style.background=color;row.append(input,dot,document.createTextNode(label));$('relationship-filters').append(row);
+    }
+    $('relationship-open').onclick=()=>openRelationshipExplorer(current);
+    $('relationship-close').onclick=()=>dialog.close();
+    $('relationship-back').onclick=()=>{if(graphPosition>0)graphFocus(graphHistory[--graphPosition],false);};
+    $('relationship-forward').onclick=()=>{if(graphPosition<graphHistory.length-1)graphFocus(graphHistory[++graphPosition],false);};
+    $('relationship-depth').onchange=renderGraph;
+    $('relationship-reset').onclick=graphReset;$('relationship-zoom-in').onclick=()=>graphZoom(.8);$('relationship-zoom-out').onclick=()=>graphZoom(1.25);
+    svg.addEventListener('wheel',e=>{e.preventDefault();graphZoom(e.deltaY>0?1.12:.89);},{passive:false});
+    svg.addEventListener('pointerdown',e=>{if(e.target.closest('.relationship-node'))return;graphDrag={id:e.pointerId,x:e.clientX,y:e.clientY};svg.setPointerCapture(e.pointerId);});
+    svg.addEventListener('pointermove',e=>{if(graphDrag?.id!==e.pointerId)return;const r=svg.getBoundingClientRect(),scale=Math.max(graphView.w/r.width,graphView.h/r.height);graphView.x-=(e.clientX-graphDrag.x)*scale;graphView.y-=(e.clientY-graphDrag.y)*scale;graphDrag={id:e.pointerId,x:e.clientX,y:e.clientY};graphViewport();});
+    for(const ev of ['pointerup','pointercancel','lostpointercapture'])svg.addEventListener(ev,()=>{graphDrag=null;});
+    dialog.addEventListener('close',()=>{graphRef=null;graphModel=null;graphDrag=null;graphHistory=[];graphPosition=-1;svg.replaceChildren();$('relationship-nodes').replaceChildren();$('relationship-evidence').replaceChildren();});
+  }
   function relatedAssets(a){
     const panel=$('detail-components'),list=$('detail-related');list.replaceChildren();panel.open=false;
     const assets=context(a.pack).assets,root=assets.get(a.id);
@@ -529,13 +638,14 @@
       }
     }
     appendCapabilityDiscovery(a,list);
+    $('relationship-open').hidden=!relationshipExplorer||!discoveryRef('asset',a.id,a.pack)||a.legacy||a.discovery==='hidden';
     panel.hidden=!list.children.length;
   }
   async function openDetail(a){
     const token=++activePreview;current=null;clock=0;playing=true;preset=null;chosenState=null;controls={};slotChoices={};
     lastDetailSignature=null;$('play').textContent='Pause';$('time-value').textContent='0.0s';
     const canvas=$('detail-canvas');canvas.getContext('2d').clearRect(0,0,canvas.width,canvas.height);canvas.dataset.interactive='false';
-    $('controls').replaceChildren();$('detail-related').replaceChildren();$('detail-components').hidden=true;
+    $('controls').replaceChildren();$('detail-related').replaceChildren();$('detail-components').hidden=true;$('relationship-open').hidden=true;
     for(const id of ['download-png','download-asset','copy-id','copy-link'])$(id).disabled=true;
     $('detail-title').textContent=a.name;$('detail-type').textContent=a.kind.replace('_',' ').toUpperCase();$('detail-id').textContent=a.id;
     $('detail-pack').textContent=collections.get(a.pack)?.name||a.pack;
@@ -640,6 +750,7 @@
     const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Public catalog unavailable');const bytes=await response.arrayBuffer();const index=JSON.parse(new TextDecoder().decode(bytes));if(index.schema!=='smi-public-catalog/1')throw Error('Unsupported public catalog');
     entries=index.assets;if(!Array.isArray(entries)||!entries.length)throw Error('No assets in catalog');for(const entry of entries)entryById.set(entry.id,entry);for(const pack of index.packs)collections.set(pack.id,pack);for(const concept of index.concepts||[])conceptIndex.set(concept.id,concept);
     await prepareCapabilityDiscovery(index,bytes);
+    try{relationshipExplorer=Collections.createRelationshipExplorer(index,capabilityDiscovery?.resolver||null);}catch(error){console.warn('Relationship explorer unavailable',error.message);}
     synonyms=index.synonyms||{};styleLabels=index.styles||{};taxonomy=index.browse||taxonomy;
     renderDirectory();
     for(const pack of index.packs.filter(p=>p.zip)){
@@ -690,5 +801,5 @@
   $('step').onclick=()=>{clock+=1000/12;playing=false;$('play').textContent='Play'};
   $('download-png').onclick=()=>{if(!current)return;const id=current.id,canvas=$('detail-canvas');canvas.toBlob(b=>b?save(b,id+'.png'):notify('PNG unavailable'),'image/png')};
   $('download-asset').onclick=()=>downloadAsset().catch(e=>notify('ZIP unavailable: '+e.message));
-  requestAnimationFrame(tick);init().catch(e=>{$('browse-error').textContent=e.message;$('browse-error').hidden=false;$('count').textContent='Catalog unavailable';});
+  wireGraph();requestAnimationFrame(tick);init().catch(e=>{$('browse-error').textContent=e.message;$('browse-error').hidden=false;$('count').textContent='Catalog unavailable';});
 })();

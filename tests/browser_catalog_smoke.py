@@ -589,6 +589,65 @@ def check_authored_discovery(browser, url):
     print("Authored HUD discovery and private Builder provenance: PASS")
 
 
+def check_relationship_explorer(browser, url):
+    """Navigate the actual catalog relationship graph without fetching neighbors."""
+    fern = "smi.world.fantasy.woodland.seasonal-fern-20261125a"
+    context = browser.new_context(viewport={"width": 1440, "height": 1000})
+    page = context.new_page()
+    errors, requests = [], []
+    page.on("pageerror", lambda error: errors.append(str(error)))
+    page.on("request", lambda request: requests.append(request.url))
+    try:
+        page.goto(url + "?asset=" + fern + ".states", wait_until="domcontentloaded")
+        expect(page.locator("#download-png")).to_be_enabled(timeout=30000)
+        page.locator("#relationship-open").click()
+        dialog = page.locator("#relationship-dialog")
+        expect(dialog).to_be_visible()
+        expect(page.locator("#relationship-title")).to_contain_text("Seasonal appearances")
+        expect(page.locator("#relationship-svg .relationship-node")).to_have_count(6)
+        page.locator("#relationship-depth").select_option("2")
+        view = page.locator("#relationship-svg").get_attribute("viewBox")
+        page.locator("#relationship-zoom-in").click()
+        assert page.locator("#relationship-svg").get_attribute("viewBox") != view
+        page.locator("#relationship-reset").click()
+        expect(page.locator("#relationship-svg")).to_have_attribute("viewBox", "0 0 1000 700")
+        page.locator("#relationship-filters input[value=dependency]").uncheck()
+        page.locator("#relationship-depth").select_option("1")
+        expect(page.locator("#relationship-svg .relationship-node")).to_have_count(2)
+        page.locator("#relationship-filters input[value=dependency]").check()
+        before = list(requests)
+        page.locator("#relationship-svg g[role=button]").filter(has=page.locator("title", has_text="Woodland fern — Winter")).press("Enter")
+        expect(page.locator("#relationship-title")).to_contain_text("Winter")
+        page.locator("#relationship-back").click()
+        expect(page.locator("#relationship-title")).to_contain_text("Seasonal appearances")
+        page.locator("#relationship-forward").click()
+        expect(page.locator("#relationship-title")).to_contain_text("Winter")
+        assert not any(u.endswith(".zip") for u in requests[len(before):]), requests
+        page.locator("#relationship-evidence").get_by_role("button", name="Open asset preview").click()
+        expect(dialog).to_be_hidden()
+        expect(page.locator("#detail-id")).to_have_text(fern + ".winter")
+        page.goto(url + "?asset=smi.hud.royalforge02.bar.fill.mana", wait_until="domcontentloaded")
+        expect(page.locator("#download-png")).to_be_enabled(timeout=30000)
+        page.locator("#relationship-open").click()
+        expect(dialog).to_be_visible()
+        expect(page.locator("#relationship-evidence")).to_contain_text("Declared match")
+        expect(page.locator("#relationship-evidence")).to_contain_text("Royal Forge Configurable Resource Meter")
+        page.locator("#relationship-filters input[value=compatible]").uncheck()
+        expect(page.locator("#relationship-evidence")).not_to_contain_text("Declared match")
+        page.locator("#relationship-close").click()
+        expect(dialog).to_be_hidden()
+        page.set_viewport_size({"width":390,"height":844})
+        page.locator("#relationship-open").click()
+        expect(dialog).to_be_visible()
+        assert dialog.evaluate("(e)=>e.scrollWidth<=e.clientWidth+2"), "Graph overflows on mobile"
+        page.keyboard.press("Escape")
+        expect(dialog).to_be_hidden()
+        assert not errors, errors
+    finally:
+        context.close()
+    print("Relationship explorer: authored fern/HUD, filtering, navigation, no neighbor ZIP loads and mobile PASS")
+
+
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--published-only',action='store_true');args=parser.parse_args()
     assert (SITE / "public-catalog.json").exists(), "Build site before browser smoke"
@@ -605,6 +664,7 @@ def main():
                 print("Desktop:", check(page,args.published_only))
                 check_capability_discovery(browser, url)
                 check_authored_discovery(browser, url)
+                check_relationship_explorer(browser, url)
                 mobile = browser.new_page(viewport={"width": 390, "height": 844}, base_url=url)
                 mobile.goto(url, wait_until="networkidle")
                 expect(mobile.locator("#count")).to_have_text(published_matches(), timeout=20000)
