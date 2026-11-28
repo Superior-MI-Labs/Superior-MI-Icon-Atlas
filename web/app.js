@@ -3,7 +3,7 @@
 (()=>{
   const $=id=>document.getElementById(id);
   const {VisualAtlasRenderer:Renderer,VisualAtlasSlots:Slots,VisualAtlasTimeline:Timeline,VisualAtlasVisualCore:VisualCore,VisualAtlasInteraction:Interactions,VisualAtlasInputs:Inputs,VisualAtlasCollections:Collections}=window;
-  const legacyAssets=new Map(),collections=new Map(),pending=new Map(),loaded=new Map();
+  const legacyAssets=new Map(),collections=new Map(),conceptIndex=new Map(),pending=new Map(),loaded=new Map();
   const entryById=new Map();
   let entries=[],matches=[],shown=0,current=null,clock=0,playing=true,previous=0;
   let preset=null,chosenState=null,controls={},slotChoices={};
@@ -390,6 +390,28 @@
         link.title=id;link.onclick=()=>openDetail(entry);list.append(link);
       }
     }
+    // Concept associations are discovery links, not required render dependencies.
+    const concept=conceptIndex.get(a.concept_id);
+    if(concept&&!a.legacy){
+      const alternatives=entries.filter(x=>!x.legacy&&x.id!==a.id&&x.concept_id===concept.id);
+      const associations=(concept.relationships||[]).filter(e=>!e.target.archive_sha256);
+      const related=new Map(alternatives.map(x=>[x.id,{entry:x,label:'Representation'}]));
+      for(const relation of associations){
+        if(relation.target.kind==='asset'){
+          const entry=entryMap.get(relation.target.id);
+          if(entry&&entry.id!==a.id&&!entry.legacy)related.set(entry.id,{entry,label:relation.kind});
+        }else{
+          for(const entry of entries.filter(x=>!x.legacy&&x.concept_id===relation.target.id&&x.discovery!=='hidden').slice(0,8))
+            if(entry.id!==a.id&&!related.has(entry.id))related.set(entry.id,{entry,label:relation.kind});
+        }
+      }
+      if(related.size){
+        const title=document.createElement('strong');title.textContent='Concept associations ('+related.size+')';list.append(title);
+        for(const {entry,label} of [...related.values()].slice(0,40)){
+          const link=document.createElement('button');link.type='button';link.textContent=label+' · '+entry.name;link.title=entry.id;link.onclick=()=>openDetail(entry);list.append(link);
+        }
+      }
+    }
     panel.hidden=!list.children.length;
   }
   async function openDetail(a){
@@ -415,6 +437,14 @@
       const dt=document.createElement('dt'),dd=document.createElement('dd');
       dt.textContent=key==='family'?'Collection family':taxonomy.dimensions[key]?.label||human(key);
       dd.textContent=values.map(v=>facetLabel(key,v)).join(' · ');classification.append(dt,dd);
+    }
+    const concept=!a.legacy&&conceptIndex.get(a.concept_id);
+    if(concept){
+      for(const [label,value] of [['Concept',concept.name],['Declared functions',(concept.capabilities||[]).join(' · ')],['Ruleset defaults',(concept.rulesets||[]).join(' · ')],['State axes',(concept.state_axes||[]).join(' · ')],['Representation',a.representation?.role]]){
+        if(!value)continue;
+        const dt=document.createElement('dt'),dd=document.createElement('dd');
+        dt.textContent=label;dd.textContent=value;classification.append(dt,dd);
+      }
     }
     const tags=$('detail-tags');tags.replaceChildren();
     for(const tag of [...new Set([...(a.subjects||[]),...(a.tags||[])])].slice(0,18)){
@@ -490,7 +520,7 @@
   }
   async function init(){
     const response=await fetch('public-catalog.json');if(!response.ok)throw Error('Public catalog unavailable');const index=await response.json();if(index.schema!=='smi-public-catalog/1')throw Error('Unsupported public catalog');
-    entries=index.assets;if(!Array.isArray(entries)||!entries.length)throw Error('No assets in catalog');for(const entry of entries)entryById.set(entry.id,entry);for(const pack of index.packs)collections.set(pack.id,pack);
+    entries=index.assets;if(!Array.isArray(entries)||!entries.length)throw Error('No assets in catalog');for(const entry of entries)entryById.set(entry.id,entry);for(const pack of index.packs)collections.set(pack.id,pack);for(const concept of index.concepts||[])conceptIndex.set(concept.id,concept);
     synonyms=index.synonyms||{};styleLabels=index.styles||{};taxonomy=index.browse||taxonomy;
     renderDirectory();
     for(const pack of index.packs.filter(p=>p.zip)){

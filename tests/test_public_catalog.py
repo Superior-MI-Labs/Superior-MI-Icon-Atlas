@@ -5,12 +5,20 @@ import tempfile
 import unittest
 from pathlib import Path
 from zipfile import ZipFile
-from tools.build_site import build,ROOT
+from tools.build_site import build,ROOT,concept_discovery
 from tools.asset_inventory import read_collection
 from tools.prune_public_site import prune
 from tools.validate_visual_pack import check
 
 class PublicCatalogTests(unittest.TestCase):
+    def test_concept_discovery_is_optional_and_separate_from_visual_capabilities(self):
+        concepts={'test.sword':{'name':'Sword','capabilities':['repairable'],'rulesets':['smi.rules.d20/1']}}
+        asset={'id':'test.icon','concept_id':'test.sword','capabilities':['animated']}
+        self.assertEqual(concept_discovery(asset,concepts),{'concept_name':'Sword','concept_capabilities':['repairable'],'concept_rulesets':['smi.rules.d20/1']})
+        self.assertEqual(asset['capabilities'],['animated'])
+        self.assertEqual(concept_discovery({'concept_id':'unknown'},concepts),{})
+        self.assertEqual(concept_discovery({**asset,'legacy':True},concepts),{})
+
     def test_public_approval_and_manifest_derived_records(self):
         with tempfile.TemporaryDirectory() as temp:
             site=Path(temp);build(site)

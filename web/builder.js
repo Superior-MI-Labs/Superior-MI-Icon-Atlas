@@ -313,7 +313,8 @@
     const bag=bags.get(bagScope);
     const allowed=bag?new Set(bagGroup?bag.groups.find(g=>g.path===bagGroup)?.ids||[]:bag.assetIds):null;
     const candidates=[...library.values()].filter(a=>(!allowed||allowed.has(a.id))&&(!kind||a.kind===kind));
-    const found=Search.results(candidates,{query:q,scope:'all',sort:q?'recommended':'name'});
+    const searchable=candidates.map(a=>{const d=concepts.get(a.concept_id);return d?{...a,concept_name:d.name,concept_capabilities:d.capabilities,concept_rulesets:Object.keys(d.defaults||{})}:a;});
+    const found=Search.results(searchable,{query:q,scope:'all',sort:q?'recommended':'name'});
     const results=found.slice(0,listLimit);
     $('asset-count').textContent=results.length+' shown / '+found.length.toLocaleString()+' matching';
     $('asset-more').hidden=results.length>=found.length;

@@ -71,6 +71,15 @@ def visual_capabilities(asset, lookup, memo, active=None):
     active.remove(ident);memo[ident]=sorted(caps);return memo[ident]
 
 
+def concept_discovery(asset, concepts):
+    """Project only authored concept metadata; never infer functional support."""
+    concept=concepts.get(asset.get('concept_id'))
+    if not concept or asset.get('legacy'):return {}
+    return {'concept_capabilities':concept['capabilities'],
+            'concept_rulesets':concept['rulesets'],
+            'concept_name':concept['name']}
+
+
 def build_collection_archive(folder, archive, record, publications):
     """One deterministic runtime ZIP, shared by collection QA and site publication."""
     archive.parent.mkdir(parents=True, exist_ok=True)
@@ -340,6 +349,8 @@ for(const texture of Object.values(pack.textures)){
             'texture':icon['sheet'],'rect_px':[r['x'],r['y'],r['w'],r['h']]
         })
 
+    for asset in public_assets:
+        asset.update(concept_discovery(asset,public_concepts))
     browse=project_browse(public_assets,public_packs,browse_defaults,load_taxonomy())
     public_assets.sort(key=lambda a:(a['pack'],a['id']))
     (dest/'public-catalog.json').write_text(json.dumps({'schema':'smi-public-catalog/1',

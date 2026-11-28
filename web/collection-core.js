@@ -72,9 +72,12 @@
   function conceptGraph(concepts,assets){
     validateConcepts(concepts,assets);
     validateRepresentations(concepts,assets);
-    const edges=[],byConcept=new Set((concepts||[]).map(c=>c.id)),byAsset=new Set(assets.map(a=>a.id)),reverse=new Map();
+    const edges=[],edgeKeys=new Set(),byConcept=new Set((concepts||[]).map(c=>c.id)),byAsset=new Set(assets.map(a=>a.id)),reverse=new Map();
     const append=(source,kind,target)=>{
       const local=!target.archive_sha256&&(target.kind==='concept'?byConcept.has(target.id):byAsset.has(target.id));
+      const edgeKey=JSON.stringify([source.kind,source.id,kind,target.kind,target.id,target.archive_sha256??null]);
+      if(edgeKeys.has(edgeKey))return;
+      edgeKeys.add(edgeKey);
       const e={source,kind,target,available_locally:local};
       const key=JSON.stringify([target.kind,target.id,target.archive_sha256??null]);
       if(!reverse.has(key))reverse.set(key,[]);

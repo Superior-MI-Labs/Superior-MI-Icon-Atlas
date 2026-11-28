@@ -30,7 +30,7 @@
     const aliases=thesaurus(synonyms);
     const fields=[
       [asset.name,85],[asset.id,75],[asset.aliases,70],[asset.tags,45],[asset.description,25],
-      [asset.subjects,35],[asset.concept_id,35],[asset.domain,12],
+      [asset.subjects,35],[asset.concept_id,35],[asset.concept_name,30],[asset.concept_capabilities,25],[asset.concept_rulesets,12],[asset.representation?.role,15],[asset.domain,12],
       [asset.style,10],[asset.category_path,22],[asset.perspective,18],[asset.theme,15],[asset.medium,10],[asset.family,16],[asset.category,9],[asset.variant,7],[asset.capabilities,12],[asset.interfaces,12],[asset.slot_interfaces,12]
     ];
     let total=0;
