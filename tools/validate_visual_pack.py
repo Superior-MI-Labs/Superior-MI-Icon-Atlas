@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate an offline Visual Atlas ZIP (one or many manifests) without executing its contents."""
 from __future__ import annotations
+import re
 import argparse
 import io
 import json
@@ -16,6 +17,16 @@ ROOT = Path(__file__).resolve().parents[1]
 MAX_ARCHIVE_BYTES = 120 * 1024 * 1024
 MAX_TEXTURE_BYTES = 24 * 1024 * 1024
 MAX_TEXTURE_PIXELS = 8192 * 8192
+
+def discovery_offer_errors(concept):
+    """Cross-field constraints after the canonical JSON Schema gate."""
+    errors = []
+    for offer_id, offer in concept.get('discovery_offers', {}).items():
+        for requirement in offer['requirements']:
+            if requirement['op'] == 'quantity.range' and requirement['min'] > requirement['max']:
+                errors.append('Invalid discovery quantity range: ' + concept['id'] + '/' + offer_id)
+    return errors
+
 
 def safe_path(name):
     return isinstance(name, str) and 0 < len(name) < 512 and not name.startswith('/') and not any(x in name for x in ('\\', ':', '\x00')) and all(p not in ('', '.', '..') for p in name.split('/'))
@@ -328,14 +339,56 @@ def check(pack_path: Path):
                 errors.append(f'{asset["id"]}: repeat value must cover full capacity')
         # Legacy concept_id is a discovery hint; declared definitions are unique
         # and must be associated with artwork in the same archive.
-        concept_ids = set()
+        concept_defs = {}
         linked_concepts = {a.get('concept_id') for a in ids.values()}
         for pack in valid_packs:
             for concept in pack.get('concepts', []):
                 cid = concept['id']
-                if cid in concept_ids: errors.append('Duplicate concept ' + cid)
+                if cid in concept_defs: errors.append('Duplicate concept ' + cid)
                 if cid not in linked_concepts: errors.append('Unreferenced concept ' + cid)
-                concept_ids.add(cid)
+                concept_defs[cid] = concept
+                errors.extend(discovery_offer_errors(concept))
+                for axis, definition in concept.get('state_axes', {}).items():
+                    if definition['kind'] == 'enum':
+                        if 'default' in definition and definition['default'] not in definition['values']:
+                            errors.append('Invalid state default ' + cid + '/' + axis)
+                    else:
+                        bands = definition['bands']
+                        maxima = [band['max'] for band in bands]
+                        states = [band['state'] for band in bands]
+                        if (definition['current'] == definition['maximum'] or maxima[-1] != 1 or
+                                any(a >= b for a, b in zip(maxima, maxima[1:])) or len(states) != len(set(states))):
+                            errors.append('Invalid ratio state bands ' + cid + '/' + axis)
+                for action_id, action in concept.get('actions', {}).items():
+                    for op in [*action.get('requirements', []), *action['operations']]:
+                        value = op.get('magnitude')
+                        if value is not None and 'property' not in value:
+                            kind = value['kind']
+                            fixed = kind == 'quantity' and value['value'] >= 0
+                            effect = fixed or kind == 'dice' and value['count'] + value['modifier'] >= 0 or kind == 'proportion'
+                            if (op['op'] == 'stat.at_least' and not fixed or
+                                    op['op'] == 'stat.consume' and (not fixed or value['value'] <= 0) or
+                                    op['op'] == 'stat.change' and not effect):
+                                errors.append('Invalid action magnitude ' + cid + '/' + action_id)
+                        if op['op'] == 'state.set' and op['owner'] == 'subject':
+                            axis = concept.get('state_axes', {}).get(op['axis'])
+                            if not axis or axis['kind'] != 'enum' or op['value'] not in axis['values']:
+                                errors.append('Invalid subject state action ' + cid + '/' + action_id)
+                for relation in concept.get('relationships', []):
+                    target = relation['target']
+                    if target['kind'] == 'concept' and not re.fullmatch(r'[a-z][a-z0-9_.-]{0,127}', target['id']):
+                        errors.append('Invalid relationship concept ID ' + cid)
+        for asset in ids.values():
+            representation = asset.get('representation')
+            if representation is None: continue
+            concept = concept_defs.get(asset.get('concept_id'))
+            if concept is None:
+                errors.append('Missing representation concept ' + asset['id']); continue
+            axes = concept.get('state_axes', {})
+            for key, state in representation.get('when', {}).items():
+                axis = axes.get(key)
+                if not axis or state not in (axis['values'] if axis['kind'] == 'enum' else [b['state'] for b in axis['bands']]):
+                    errors.append('Invalid representation selector ' + asset['id'] + '/' + key)
         errors.extend(validate_stat_profiles(valid_packs, ids))
         errors.extend(validate_preview_profiles(valid_packs, ids))
         errors.extend(check_slots(valid_packs))

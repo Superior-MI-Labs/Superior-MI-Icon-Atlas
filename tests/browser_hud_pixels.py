@@ -9,7 +9,7 @@ from pathlib import Path
 import sys,tempfile
 from PIL import Image
 from io import BytesIO
-import base64,json,re
+import base64,hashlib,json,re
 root=Path(__file__).resolve().parents[1]
 outdir=Path(sys.argv[1]) if len(sys.argv)>1 else Path(tempfile.gettempdir())/'smi-hud-browser-qa'
 outdir.mkdir(parents=True,exist_ok=True)
@@ -20,19 +20,21 @@ with sync_playwright() as p:
     browser=p.chromium.launch(headless=True,executable_path='/usr/bin/chromium',args=['--no-sandbox'])
     page=browser.new_page(viewport={'width':1540,'height':1024},device_scale_factor=1)
     errors=[]; page.on('pageerror',lambda e:errors.append(str(e)))
-    page.set_content(stripped('builder.html'))
+    page.route('**/*', lambda route: route.fulfill(status=200, content_type='text/html', body=stripped('builder.html')) if route.request.url=='http://localhost/atlas/builder.html' else route.abort())
+    page.goto('http://localhost/atlas/builder.html',wait_until='domcontentloaded')
     page.add_style_tag(content=(site/'styles.css').read_text())
     page.add_style_tag(content=(site/'builder.css').read_text())
+    archive=(site/'demo/interactive-hud.zip').read_bytes()
     data={
-      'index':json.loads((site/'featured-packs.json').read_text()),
-      'zip':base64.b64encode((site/'demo/interactive-hud.zip').read_bytes()).decode()
+      'index':{'packs':[{'id':'interactive-hud','name':'Interactive HUD','zip':'demo/interactive-hud.zip','archive_sha256':hashlib.sha256(archive).hexdigest()}]},
+      'zip':base64.b64encode(archive).decode()
     }
     page.evaluate('''(data)=>{
       window.ICON_ATLAS_DATA={version:'QA',sheets:[],icons:[]};
       window.fetch=async url=>{
         const s=String(url);
-        if(s==='featured-packs.json')return new Response(JSON.stringify(data.index),{status:200});
-        if(s==='demo/interactive-hud.zip'){
+        if(s==='public-catalog.json')return new Response(JSON.stringify(data.index),{status:200});
+        if(s==='http://localhost/atlas/demo/interactive-hud.zip'){
           const raw=atob(data.zip),u=new Uint8Array(raw.length);
           for(let i=0;i<raw.length;i++)u[i]=raw.charCodeAt(i);
           return new Response(u,{status:200,headers:{'Content-Type':'application/zip'}});
@@ -40,9 +42,9 @@ with sync_playwright() as p:
         return new Response('',{status:404});
       };
     }''',data)
-    for name in ['vendor/jszip.min.js','timeline-core.js','visual-core.js','collection-core.js','bag-store.js','interaction-core.js','slot-core.js','asset-renderer.js','builder.js']:
+    for name in ['vendor/jszip.min.js','timeline-core.js','visual-core.js','input-core.js','collection-core.js','zip-core.js','bag-store.js','interaction-core.js','stat-core.js','slot-core.js','asset-renderer.js','public-search.js','builder.js']:
       src=(site/name).read_text()
-      if name=='builder.js':src=src.replace("new URLSearchParams(location.search).get('example')", "'interactive-hud.zip'").replace("fetch('public-catalog.json')","fetch('featured-packs.json')").replace("p.zip==='demo/'+requested","p.filename===requested")
+      if name=='builder.js':src=src.replace("new URLSearchParams(location.search).get('example')", "'interactive-hud.zip'")
       page.add_script_tag(content=src)
     page.locator('#builder-status').get_by_text('Opened interactive-hud.zip',exact=False).wait_for(timeout=20000)
     print('status:',page.locator('#builder-status').inner_text())

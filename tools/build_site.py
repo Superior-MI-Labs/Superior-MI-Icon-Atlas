@@ -73,6 +73,15 @@ def visual_capabilities(asset, lookup, memo, active=None):
     active.remove(ident);memo[ident]=sorted(caps);return memo[ident]
 
 
+def concept_discovery(asset, concepts):
+    """Project only authored concept metadata; never infer functional support."""
+    concept=concepts.get(asset.get('concept_id'))
+    if not concept or asset.get('legacy'):return {}
+    return {'concept_capabilities':concept['capabilities'],
+            'concept_rulesets':concept['rulesets'],
+            'concept_name':concept['name']}
+
+
 def build_collection_archive(folder, archive, record, publications):
     """One deterministic runtime ZIP, shared by collection QA and site publication."""
     archive.parent.mkdir(parents=True, exist_ok=True)
@@ -124,6 +133,8 @@ def build(dest:Path|None=None):
     (dest/'vendor').mkdir(exist_ok=True)
     shutil.copy2(vendor/'jszip.min.js',dest/'vendor'/'jszip.min.js')
     shutil.copy2(vendor/'JSZip-LICENSE.md',dest/'vendor'/'JSZip-LICENSE.md')
+    (dest/'rulesets').mkdir(exist_ok=True)
+    shutil.copy2(ROOT/'rulesets'/'smi-core-v1.json',dest/'rulesets'/'smi-core-v1.json')
     (dest/'schemas').mkdir(exist_ok=True)
     shutil.copy2(ROOT/'schemas'/'smi-visual-pack-v1.schema.json',dest/'schemas'/'smi-visual-pack-v1.schema.json')
     shutil.copy2(ROOT/'schemas'/'smi-visual-collection-v1.schema.json',dest/'schemas'/'smi-visual-collection-v1.schema.json')
@@ -238,7 +249,7 @@ for(const texture of Object.values(pack.textures)){
     inventory=audit_assets(ROOT)
     if inventory['errors']:raise ValueError('Asset inventory: '+'; '.join(inventory['errors'][:5]))
     (dest/'asset-inventory.json').write_text(json.dumps(inventory,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    public_assets=[];public_packs=[];seen_ids=set();seen_paths=set();browse_defaults={}
+    public_assets=[];public_packs=[];public_concepts={};seen_ids=set();seen_paths=set();browse_defaults={}
     if (dest/'previews').exists():shutil.rmtree(dest/'previews')
     for record in publication['collections']:
         folder=Path(record['path']); full=ROOT/folder
@@ -277,6 +288,18 @@ for(const texture of Object.values(pack.textures)){
         if cover:pubpack['cover_asset']=cover
         lookup={a['id']:a for pack in runtime_packs for a in pack['assets']};cap_memo={}
         for pack in manifests:
+            for concept in pack.get('concepts', []):
+                cid=concept['id']
+                if cid in public_concepts:
+                    raise ValueError('Duplicate published concept owner: '+cid)
+                public_concepts[cid]={'id':cid,'name':concept['name'],'pack':pack_name,
+                    'license':concept['license'],'description':concept.get('description',''),
+                    'capabilities':concept.get('capabilities',[]),
+                    'rulesets':sorted(concept.get('defaults',{})),
+                    'state_axes':sorted(concept.get('state_axes',{})),
+                    'actions':sorted(concept.get('actions',{})),
+                    'relationships':concept.get('relationships',[]),
+                    **({k:concept[k] for k in ('physical','discovery_offers') if k in concept})}
             # Inherit style only when every styled source region agrees.
             region_styles={a['style'] for a in pack['assets'] if a['kind']=='region' and a.get('style')}
             inherited_style=next(iter(region_styles)) if len(region_styles)==1 else ''
@@ -289,6 +312,7 @@ for(const texture of Object.values(pack.textures)){
                 public_assets.append({
                     'capabilities':capabilities,'interfaces':sorted(a.get('implements',[])),
                     **({'spatial':a['spatial']} if 'spatial' in a else {}),
+                    **({'representation':a['representation']} if 'representation' in a else {}),
                     **({'material':a['material']} if 'material' in a else {}),
                     **({'visual_profile':a['visual_profile']} if 'visual_profile' in a else {}),
                     'slot_interfaces':sorted({v['accepts'] for v in a.get('slots',{}).values()}),
@@ -331,11 +355,13 @@ for(const texture of Object.values(pack.textures)){
             'texture':icon['sheet'],'rect_px':[r['x'],r['y'],r['w'],r['h']]
         })
 
+    for asset in public_assets:
+        asset.update(concept_discovery(asset,public_concepts))
     browse=project_browse(public_assets,public_packs,browse_defaults,load_taxonomy())
     public_assets.sort(key=lambda a:(a['pack'],a['id']))
     stage_current(dest, {'schema':'smi-public-catalog/1','packs':public_packs})
     (dest/'public-catalog.json').write_text(json.dumps({'schema':'smi-public-catalog/1',
-        'assets':public_assets,'packs':public_packs,'browse':browse,
+        'assets':public_assets,'packs':public_packs,'concepts':sorted(public_concepts.values(),key=lambda c:c['id']),'browse':browse,
         'synonyms':m.get('search',{}).get('synonyms',{}),'styles':m.get('styles',{}),
         'approved_count':approved_count,'discoverable_count':sum(not a.get('legacy') and a.get('discovery','standalone')=='standalone' for a in public_assets),'legacy_count':len(m['icons'])},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 

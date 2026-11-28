@@ -8,7 +8,8 @@ from unittest.mock import patch
 from types import SimpleNamespace
 from pathlib import Path
 from zipfile import ZipFile
-from tools.build_site import build, ROOT
+from tools.build_site import ROOT
+from tests.site_fixture import shared_site
 from tools.validate_visual_pack import check
 from tools.qualify_asset_zip import scan
 
@@ -46,8 +47,7 @@ class AIRecipeLibraryTests(unittest.TestCase):
         self.assertIn('--visual-spec',(ROOT/'AGENTS.md').read_text())
 
     def test_example_zip_structure_and_visual_pixels(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            site=Path(tmp)/'site';build(site)
+        with tempfile.TemporaryDirectory() as tmp, shared_site() as site:
             for example in EXAMPLES:
                 path=site/'demo'/f'{example}.zip'
                 self.assertTrue(path.is_file(),example)
@@ -60,8 +60,7 @@ class AIRecipeLibraryTests(unittest.TestCase):
 
     def test_required_request_specific_acceptance_passes_and_rejects_wrong_preset(self):
         from tools.ai_acceptance import check_acceptance
-        with tempfile.TemporaryDirectory() as tmp:
-            site=Path(tmp);build(site)
+        with shared_site() as site:
             spec=json.loads((ROOT/'examples/acceptance/character.json').read_text())
             self.assertEqual(check_acceptance(site/'demo/character-animations.zip',spec),[])
             spec['checks'].append({'type':'state_contains','asset':'smi.example.robot.states','state':'fly'})
@@ -95,8 +94,7 @@ class AIRecipeLibraryTests(unittest.TestCase):
                 self.assertFalse(report.exists())
 
     def test_generated_featured_index_and_template_paths(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            site=Path(tmp);build(site)
+        with shared_site() as site:
             d=json.loads((site/'featured-packs.json').read_text())
             self.assertEqual(d['schema'],'smi-featured-packs/1')
             names={pack['filename'] for pack in d['packs']}
@@ -115,8 +113,7 @@ class AIRecipeLibraryTests(unittest.TestCase):
     def test_optional_showcase_is_derived_and_not_bundled_in_pack(self):
         folder=ROOT/'examples'/'fantasy-rpg-hud-wave1'
         if not (folder/'manifest.json').is_file(): self.skipTest('Approved Wave 1 pack not yet published')
-        with tempfile.TemporaryDirectory() as tmp:
-            site=Path(tmp);build(site)
+        with shared_site() as site:
             packs=json.loads((site/'featured-packs.json').read_text())['packs']
             item=next(p for p in packs if p['filename']=='fantasy-rpg-hud-wave1.zip')
             self.assertEqual(item['preview'],'showcase/fantasy-rpg-hud-wave1.png')
@@ -125,8 +122,7 @@ class AIRecipeLibraryTests(unittest.TestCase):
                 self.assertNotIn('preview.png',z.namelist())
 
     def test_local_ai_links_resolve_in_generated_site(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            site=Path(tmp);build(site)
+        with shared_site() as site:
             markdown=list((site/'ai').rglob('*.md'))
             self.assertGreaterEqual(len(markdown),10)
             failures=[]

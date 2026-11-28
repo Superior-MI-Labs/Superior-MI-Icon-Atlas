@@ -173,4 +173,16 @@ Optional collection/asset `classification` is discovery-only metadata. See [brow
 
 ### Optional concept definitions (first content milestone)
 
-Pack-level `concepts` are linked by the existing asset `concept_id`. They contain optional SI physical properties and typed, versioned ruleset defaults. Older unresolved concept IDs remain valid discovery hints. See [universal content architecture](UNIVERSAL-CONTENT.md) for the implemented subset and the remaining roadmap. No gameplay execution, ruleset registry, cross-archive graph or geometry support is implied by this metadata.
+Pack-level `concepts` are linked by the existing asset `concept_id`. They contain optional SI physical properties and typed, versioned ruleset defaults. Older unresolved concept IDs remain valid discovery hints. See [universal content architecture](UNIVERSAL-CONTENT.md) for the implemented subset and the remaining roadmap. No gameplay execution, cross-archive graph or geometry support is implied by this metadata. The optional host-selected typed registry is described below.
+
+### Typed ruleset registry and contributor resolution
+
+The optional `proportion` concept value specifies `fraction`, named `basis`, `rounding`, `unit` and optional `cap`. See [ruleset registry and source selection](RULESET-RESOLUTION.md). `resolveContributors` is an explicit, pure host-facing planner; it does not execute gameplay or silently combine overlapping values. The core registry is published at `rulesets/smi-core-v1.json`.
+
+### Optional concept graph and state projection
+
+See [content graph and state projection](CONTENT-GRAPH.md) for optional `capabilities`, `relationships`, `state_axes` and per-asset `representation` metadata. Semantic edges never extend render dependency closure automatically.
+
+### Optional concept action definitions
+
+See [declarative concept actions](CONCEPT-ACTIONS.md). The pure action planner resolves data, not gameplay state or permissions.

@@ -1,0 +1,191 @@
+{
+  "schema": "smi-ruleset-registry/1",
+  "id": "smi.rules.registry/1",
+  "properties": {
+    "health.restore": {
+      "unit": "hp",
+      "kinds": [
+        "quantity",
+        "dice",
+        "proportion"
+      ],
+      "operation": "base",
+      "min": 0,
+      "max": 1000000000
+    },
+    "attack.damage": {
+      "unit": "hp",
+      "kinds": [
+        "quantity",
+        "dice",
+        "proportion"
+      ],
+      "operation": "base",
+      "min": 0,
+      "max": 1000000000
+    },
+    "attack.damage.add": {
+      "unit": "hp",
+      "kinds": [
+        "quantity"
+      ],
+      "operation": "add",
+      "min": -1000000000,
+      "max": 1000000000
+    },
+    "attack.damage.multiplier": {
+      "unit": "ratio",
+      "kinds": [
+        "quantity"
+      ],
+      "operation": "multiply",
+      "min": 0,
+      "max": 10
+    },
+    "attack.duration": {
+      "unit": "s",
+      "kinds": [
+        "quantity"
+      ],
+      "operation": "base",
+      "min": 0,
+      "max": 1000000000
+    },
+    "use.duration": {
+      "unit": "s",
+      "kinds": [
+        "quantity"
+      ],
+      "operation": "base",
+      "min": 0,
+      "max": 1000000000
+    },
+    "use.cooldown": {
+      "unit": "s",
+      "kinds": [
+        "quantity"
+      ],
+      "operation": "base",
+      "min": 0,
+      "max": 1000000000
+    },
+    "action.bonus.cost": {
+      "unit": "count",
+      "kinds": [
+        "quantity"
+      ],
+      "operation": "base",
+      "min": 0,
+      "max": 1000000000,
+      "integer": true
+    },
+    "action.primary.cost": {
+      "unit": "count",
+      "kinds": [
+        "quantity"
+      ],
+      "operation": "base",
+      "min": 0,
+      "max": 1000000000,
+      "integer": true
+    },
+    "action.points.cost": {
+      "unit": "count",
+      "kinds": [
+        "quantity"
+      ],
+      "operation": "base",
+      "min": 0,
+      "max": 1000000000,
+      "integer": true
+    },
+    "consume.return_container": {
+      "kinds": [
+        "boolean"
+      ],
+      "operation": "policy"
+    },
+    "durability.max": {
+      "unit": "count",
+      "kinds": [
+        "quantity"
+      ],
+      "operation": "base",
+      "min": 1,
+      "max": 1000000000,
+      "integer": true
+    }
+  },
+  "modules": {
+    "smi.rules.d20/1": {
+      "health.restore": [
+        "dice"
+      ],
+      "attack.damage": [
+        "dice"
+      ]
+    },
+    "smi.rules.flat/1": {
+      "health.restore": [
+        "quantity"
+      ],
+      "attack.damage": [
+        "quantity"
+      ]
+    },
+    "smi.rules.proportion/1": {
+      "health.restore": [
+        "proportion"
+      ],
+      "attack.damage": [
+        "proportion"
+      ]
+    },
+    "smi.rules.action-economy/1": {
+      "action.bonus.cost": [
+        "quantity"
+      ],
+      "action.primary.cost": [
+        "quantity"
+      ]
+    },
+    "smi.rules.action-points/1": {
+      "action.points.cost": [
+        "quantity"
+      ]
+    },
+    "smi.rules.realtime/1": {
+      "attack.duration": [
+        "quantity"
+      ],
+      "use.duration": [
+        "quantity"
+      ],
+      "use.cooldown": [
+        "quantity"
+      ]
+    },
+    "smi.rules.modifiers/1": {
+      "attack.damage.add": [
+        "quantity"
+      ],
+      "attack.damage.multiplier": [
+        "quantity"
+      ]
+    },
+    "smi.rules.inventory/1": {
+      "consume.return_container": [
+        "boolean"
+      ]
+    },
+    "smi.rules.durability/1": {
+      "durability.max": [
+        "quantity"
+      ]
+    }
+  },
+  "bases": {
+    "target.health.max": "hp",
+    "actor.health.max": "hp"
+  }
+}

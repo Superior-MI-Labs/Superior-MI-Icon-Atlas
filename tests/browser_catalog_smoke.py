@@ -82,7 +82,8 @@ def check(page,published_only=False):
         card.scroll_into_view_if_needed()
         expect(card.locator('canvas')).to_have_attribute('data-preview','thumbnail')
         assert any('/previews/' in url for url in requests),requests
-        chest_zip='/demo/fantasy-recovered-chests-20261125.zip'
+        chest_pack=next(p for p in catalog['packs'] if p['zip']=='demo/fantasy-recovered-chests-20261125.zip')
+        chest_zip='/'+chest_pack.get('immutable_zip',chest_pack['zip'])
         assert not any(url.endswith(chest_zip) for url in requests),requests
         card.click()
         expect(preview_page.locator('#detail[open]')).to_be_visible()
@@ -178,7 +179,7 @@ def check(page,published_only=False):
     expect(page.locator("#detail-title")).to_have_text("Royal Forge Complete Gameplay HUD")
     page.locator("#detail[open]").wait_for(timeout=20000)
     expect(page.locator("#controls [data-input-key]")).to_have_count(28)
-    page.locator("#detail-components summary").click()
+    page.locator("#detail-components > summary").click()
     page.locator('#detail-related button[title="smi.hud.royalforge02.hud.adventurer"]').click()
     expect(page.locator("#controls [data-input-key]")).to_have_count(7)
     page.locator("#close").click()
@@ -463,6 +464,131 @@ def check(page,published_only=False):
     return page.locator("#count").inner_text()
 
 
+def check_capability_discovery(browser, url):
+    """Actual app and archive previews; only the catalog facts are synthetic.
+
+    Keep the production catalog and authored archives untouched. Intercept a
+    single page's catalog response to test newly introduced offers, missing
+    representation evidence and navigation against real published ZIPs.
+    """
+    catalog = json.loads((SITE / "public-catalog.json").read_text())
+    materials = [a for a in catalog["assets"] if a["id"].startswith("smi.material.gflow.")]
+    target = next(a for a in materials if a["name"] == "Fantasy meadow grass")
+    unknown = next(a for a in materials if a["pack"] == target["pack"] and a["id"] != target["id"])
+    offer = next(a for a in materials if a["pack"] != target["pack"])
+    # Isolate the fixture from any future real offers; do not modify the source file.
+    for concept in catalog.get("concepts", []):
+        concept.pop("discovery_offers", None)
+    target_concept = "test.browser.capability.surface"
+    offer_concept = "test.browser.capability.overlay"
+    assert not {target_concept, offer_concept} & {c["id"] for c in catalog.get("concepts", [])}
+    target["concept_id"] = unknown["concept_id"] = target_concept
+    offer["concept_id"] = offer_concept
+    # These are test-only declarations, not claims about the source artwork.
+    target["interfaces"] = ["test.browser.surface/1"]
+    unknown["interfaces"] = []
+    catalog.setdefault("concepts", []).extend([
+        {"id": target_concept, "name": "Fixture surface", "pack": target["pack"],
+         "capabilities": ["test.browser.surface"]},
+        {"id": offer_concept, "name": "Fixture overlay", "pack": offer["pack"],
+         "discovery_offers": {"apply": {"role": "overlay", "requirements": [
+             {"scope": "concept", "op": "capability.has", "key": "test.browser.surface"},
+             {"scope": "representation", "op": "interface.has", "key": "test.browser.surface/1"}
+         ]}}}
+    ])
+    owner = next(p for p in catalog["packs"] if p["id"] == offer["pack"])
+    offer_archive = "/" + owner["immutable_zip"]
+    context = browser.new_context(viewport={"width": 1440, "height": 1000})
+    page = context.new_page()
+    errors, requests = [], []
+    page.on("pageerror", lambda error: errors.append(str(error)))
+    page.on("request", lambda request: requests.append(request.url))
+    page.route("**/public-catalog.json", lambda route: route.fulfill(json=catalog))
+    try:
+        page.goto(url + "?asset=" + target["id"], wait_until="domcontentloaded")
+        expect(page.locator("#download-png")).to_be_enabled(timeout=30000)
+        page.locator("#detail-components > summary").click()
+        panel = page.locator("[data-discovery-section]")
+        matched = panel.locator('[data-discovery-group="compatible"]')
+        expect(matched).to_be_visible(timeout=20000)
+        expect(matched.locator("summary").first).to_have_text("Declared requirements matched (1)")
+        expect(matched.get_by_role("button", name=re.compile("Fixture overlay", re.I))).to_be_visible()
+        matched.get_by_text("Requirements and evidence", exact=True).click()
+        expect(matched).to_contain_text("representation · interface.has · test.browser.surface/1: compatible")
+        assert not any(u.endswith(offer_archive) for u in requests), requests
+        matched.get_by_role("button", name=re.compile("Fixture overlay", re.I)).click()
+        expect(page.locator("#detail-id")).to_have_text(offer["id"], timeout=20000)
+        expect(page.locator("#download-png")).to_be_enabled(timeout=30000)
+        assert any(u.endswith(offer_archive) for u in requests), requests
+        page.locator("#detail-components > summary").click()
+        reverse = page.locator('[data-discovery-offer="apply"]')
+        expect(reverse).to_be_visible()
+        expect(reverse.locator("[data-discovery-group]")).to_have_count(0)
+        reverse.locator("summary").first.click()
+        reverse_match = reverse.locator('[data-discovery-group="compatible"]')
+        expect(reverse_match.get_by_role("button", name=target["name"], exact=True)).to_be_visible(timeout=20000)
+        expect(reverse.locator('[data-discovery-group="unknown"]')).to_have_count(1)
+        reverse_match.get_by_role("button", name=target["name"], exact=True).click()
+        expect(page.locator("#detail-id")).to_have_text(target["id"], timeout=20000)
+        page.goto(url + "?asset=" + unknown["id"], wait_until="domcontentloaded")
+        expect(page.locator("#download-png")).to_be_enabled(timeout=30000)
+        page.locator("#detail-components > summary").click()
+        expect(page.locator('[data-discovery-group="compatible"]')).to_have_count(0)
+        expect(page.locator('[data-discovery-group="unknown"] > summary')).to_have_text("Incomplete evidence (1)")
+        assert not errors, errors
+    finally:
+        context.close()
+    print("Capability discovery Inspector with test-only catalog offers: PASS")
+
+
+def check_authored_discovery(browser, url):
+    """Actual authored HUD offers and Builder archive identity isolation."""
+    asset_id = "smi.hud.royalforge02.bar.fill.mana"
+    context = browser.new_context(viewport={"width": 1440, "height": 1000})
+    page = context.new_page()
+    errors = []
+    page.on("pageerror", lambda error: errors.append(str(error)))
+    try:
+        page.goto(url + "?asset=" + asset_id, wait_until="domcontentloaded")
+        expect(page.locator("#download-png")).to_be_enabled(timeout=30000)
+        page.locator("#detail-components > summary").click()
+        matched = page.locator('[data-discovery-section] [data-discovery-group="compatible"]')
+        expect(matched).to_be_visible(timeout=20000)
+        expect(matched.get_by_role("button", name=re.compile("Royal Forge Configurable Resource Meter", re.I))).to_be_visible()
+        page.goto(url + "builder.html?example=royal-forge-hud-resources.zip&asset=" + asset_id,
+                  wait_until="domcontentloaded")
+        expect(page.locator("#preview-name")).to_have_text("Bar Fill Mana", timeout=30000)
+        panel = page.locator("#builder-discovery")
+        expect(panel).to_be_visible(timeout=30000)
+        panel.locator("summary").first.click()
+        expect(panel).to_contain_text("Current public catalog")
+        expect(panel).to_contain_text("Declared requirements matched")
+        # A repacked private ZIP with unchanged IDs must not inherit the public
+        # identity. Its bytes differ even though all art and definitions agree.
+        with TemporaryDirectory() as temp:
+            private = Path(temp) / "private-resource.zip"
+            with ZipFile(SITE / "demo" / "royal-forge-hud-resources.zip") as original, ZipFile(private, "w") as archive:
+                for entry in original.infolist():
+                    archive.writestr(entry, original.read(entry.filename))
+                archive.comment = b"private test archive"
+            page.goto(url + "builder.html", wait_until="domcontentloaded")
+            page.locator("#upload").set_input_files(str(private))
+            expect(page.locator("#bag-count")).to_have_text("1 ZIP", timeout=30000)
+            page.locator("#asset-search").fill(asset_id)
+            page.locator('#asset-list [data-asset-id="' + asset_id + '"]').click()
+            expect(page.locator("#preview-name")).to_have_text("Bar Fill Mana")
+            panel = page.locator("#builder-discovery")
+            expect(panel).to_be_visible()
+            panel.locator("summary").first.click()
+            expect(panel).to_contain_text("This exact imported ZIP only")
+            expect(panel).to_contain_text("Declared requirements matched")
+            expect(panel).not_to_contain_text("Current public catalog")
+        assert not errors, errors
+    finally:
+        context.close()
+    print("Authored HUD discovery and private Builder provenance: PASS")
+
+
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--published-only',action='store_true');args=parser.parse_args()
     assert (SITE / "public-catalog.json").exists(), "Build site before browser smoke"
@@ -477,6 +603,8 @@ def main():
                 page = browser.new_page(viewport={"width": 1440, "height": 1000}, base_url=url)
                 page.goto(url, wait_until="networkidle")
                 print("Desktop:", check(page,args.published_only))
+                check_capability_discovery(browser, url)
+                check_authored_discovery(browser, url)
                 mobile = browser.new_page(viewport={"width": 390, "height": 844}, base_url=url)
                 mobile.goto(url, wait_until="networkidle")
                 expect(mobile.locator("#count")).to_have_text(published_matches(), timeout=20000)

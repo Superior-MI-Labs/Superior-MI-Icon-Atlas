@@ -3,7 +3,8 @@ import json
 import unittest
 from pathlib import Path
 from zipfile import ZipFile
-from tools.build_site import ROOT,build
+from tools.build_site import ROOT
+from tests.site_fixture import shared_site
 from tools.validate_visual_pack import check
 from tools.ai_acceptance import check_acceptance
 
@@ -31,9 +32,7 @@ class HUDChecks(unittest.TestCase):
             self.assertTrue(any('invalid min/max' in x for x in problems),problems)
 
     def test_generated_pack_and_request_specific_gate(self):
-        from tempfile import TemporaryDirectory
-        with TemporaryDirectory() as d:
-            dst=Path(d);build(dst)
+        with shared_site() as dst:
             archive=dst/'demo/interactive-hud.zip'
             self.assertEqual(check(archive),[])
             spec=json.loads((ROOT/'examples/acceptance/interactive-hud.json').read_text())

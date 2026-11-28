@@ -5,15 +5,23 @@ import tempfile
 import unittest
 from pathlib import Path
 from zipfile import ZipFile
-from tools.build_site import build,ROOT
+from tools.build_site import ROOT,concept_discovery
+from tests.site_fixture import shared_site, copied_site
 from tools.asset_inventory import read_collection
 from tools.prune_public_site import prune
 from tools.validate_visual_pack import check
 
 class PublicCatalogTests(unittest.TestCase):
+    def test_concept_discovery_is_optional_and_separate_from_visual_capabilities(self):
+        concepts={'test.sword':{'name':'Sword','capabilities':['repairable'],'rulesets':['smi.rules.d20/1']}}
+        asset={'id':'test.icon','concept_id':'test.sword','capabilities':['animated']}
+        self.assertEqual(concept_discovery(asset,concepts),{'concept_name':'Sword','concept_capabilities':['repairable'],'concept_rulesets':['smi.rules.d20/1']})
+        self.assertEqual(asset['capabilities'],['animated'])
+        self.assertEqual(concept_discovery({'concept_id':'unknown'},concepts),{})
+        self.assertEqual(concept_discovery({**asset,'legacy':True},concepts),{})
+
     def test_public_approval_and_manifest_derived_records(self):
-        with tempfile.TemporaryDirectory() as temp:
-            site=Path(temp);build(site)
+        with shared_site() as site:
             public=json.loads((site/'public-catalog.json').read_text())
             self.assertEqual(public['schema'],'smi-public-catalog/1')
             self.assertEqual(len(public['packs']),1+len(json.loads((ROOT/'publications.json').read_text())['collections']))
@@ -26,6 +34,23 @@ class PublicCatalogTests(unittest.TestCase):
             self.assertEqual({a['visual_qa'] for a in public['assets'] if not a.get('legacy')},{'reviewed','pending'})
             self.assertIn('pixel-fantasy-icons',{p['id'] for p in public['packs']})
             self.assertEqual(public['packs'][0]['id'],'fantasy-rpg-hud-wave1')
+            # The first authored pilots project only canonical data; no generated
+            # asset-to-asset associations are written to the public catalog.
+            concept_map={c['id']:c for c in public.get('concepts',[])}
+            self.assertEqual(len(concept_map),len(public.get('concepts',[])))
+            for folder in ('painterly-fantasy-seasonal-fern','royal-forge-hud-resources'):
+                manifest=json.loads((ROOT/'examples'/folder/'manifest.json').read_text())
+                for concept in manifest['concepts']:
+                    projected=concept_map[concept['id']]
+                    self.assertEqual(projected['pack'],folder)
+                    self.assertEqual(projected['capabilities'],concept.get('capabilities',[]))
+                    self.assertEqual(projected.get('discovery_offers'),concept.get('discovery_offers'))
+                entries={asset['id']:asset for asset in public['assets'] if asset['pack']==folder}
+                for asset in manifest['assets']:
+                    if asset.get('concept_id'):
+                        self.assertEqual(entries[asset['id']]['concept_id'],asset['concept_id'])
+                    if asset.get('representation'):
+                        self.assertEqual(entries[asset['id']]['representation'],asset['representation'])
             approved=set()
             for entry in publication['collections']:
                 folder=ROOT/entry['path']
@@ -193,8 +218,7 @@ class PublicCatalogTests(unittest.TestCase):
         self.assertGreaterEqual(region_count,1536)
 
     def test_deployed_site_excludes_old_public_files_and_starter_zips(self):
-        with tempfile.TemporaryDirectory() as temp:
-            site=Path(temp);build(site)
+        with copied_site() as site:
             self.assertEqual(prune(site),len(json.loads((ROOT/'publications.json').read_text())['collections']))
             self.assertTrue((site/'demo/fantasy-rpg-hud-wave1.zip').is_file())
             self.assertTrue((site/'demo/royal-forge-controls.zip').is_file())

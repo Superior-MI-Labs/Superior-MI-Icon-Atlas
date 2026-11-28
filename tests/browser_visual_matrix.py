@@ -225,16 +225,19 @@ def main():
                 page=browser.new_page(viewport={'width':1500,'height':1024},device_scale_factor=1)
                 errors=[]
                 page.on('pageerror',lambda e:errors.append(str(e)))
-                page.set_content(loaded_html(builder_root))
+                # Real secure-context SHA-256, but still a fully offline fixture.
+                page.route('**/*', lambda route: route.fulfill(status=200, content_type='text/html',
+                    body=loaded_html(builder_root)) if route.request.url == 'http://localhost/atlas/builder.html' else route.abort())
+                page.goto('http://localhost/atlas/builder.html', wait_until='domcontentloaded')
                 for css in ('styles.css','builder.css'):page.add_style_tag(content=(builder_root/css).read_text())
                 archive_bytes=archive.read_bytes()
-                payload={'registry':{'packs':[{'id':case['id'],'name':case['preview_name'],'zip':'demo/'+case['pack']}]},'zip':base64.b64encode(archive_bytes).decode()}
+                payload={'registry':{'packs':[{'id':case['id'],'name':case['preview_name'],'zip':'demo/'+case['pack'],'archive_sha256':hashlib.sha256(archive_bytes).hexdigest()}]},'zip':base64.b64encode(archive_bytes).decode()}
                 page.evaluate('''(data)=>{
                   window.ICON_ATLAS_DATA={version:'visual-QA',sheets:[],icons:[]};
                   window.fetch=async url=>{
                     const s=String(url);
                     if(s==='public-catalog.json')return new Response(JSON.stringify(data.registry),{status:200});
-                    if(s==='demo/'+data.filename){
+                    if(s==='http://localhost/atlas/demo/'+data.filename){
                       const raw=atob(data.zip),out=new Uint8Array(raw.length);
                       for(let i=0;i<raw.length;i++)out[i]=raw.charCodeAt(i);
                       return new Response(out,{status:200,headers:{'Content-Type':'application/zip'}});

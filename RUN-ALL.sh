@@ -84,9 +84,9 @@ if [[ "$MODE" == --collection || "$MODE" == --collection-regressions ]]; then
   exit 0
 fi
 "$PY" atlasctl.py validate
-"$PY" tools/build_site.py
-"$PY" atlasctl.py validate --deep
-"$PY" -m unittest discover -s tests -p 'test_*.py' -v
+time "$PY" atlasctl.py validate --deep
+# The Python runner builds the site once and shares that exact artifact.
+time "$PY" -m tests.run_qualification
 "$PY" tools/validate_visual_pack.py web/demo/starter-pack.zip
 "$PY" tools/validate_visual_pack.py web/demo/potions-collection.zip
 "$PY" tools/validate_visual_pack.py site/demo/interactive-hud.zip

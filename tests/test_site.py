@@ -4,7 +4,8 @@ import tempfile
 import unittest
 from pathlib import Path
 from PIL import Image
-from tools.build_site import build, build_one_collection, ROOT
+from tools.build_site import build_one_collection, ROOT
+from tests.site_fixture import shared_site, fixture
 from atlasctl import validate,load,search_icons
 
 class AtlasContractTests(unittest.TestCase):
@@ -57,9 +58,8 @@ class AtlasContractTests(unittest.TestCase):
         self.assertTrue(search_icons('keyboard',manifest=self.m,domain='hardware'))
 
     def test_site_generation(self):
-        with tempfile.TemporaryDirectory() as temp:
-            dest=Path(temp)
-            self.assertEqual(build(dest),2073)
+        with tempfile.TemporaryDirectory() as temp, shared_site() as dest:
+            self.assertEqual(fixture.build_count,2073)
             self.assertTrue((dest/'index.html').is_file())
             self.assertTrue((dest/'catalog-data.js').is_file())
             self.assertTrue((dest/'manifests/programming-00.json').is_file())
@@ -72,7 +72,7 @@ class AtlasContractTests(unittest.TestCase):
             # Single-collection mode must create the exact same bytes as Pages,
             # including bundled dependencies, without invoking the full build.
             for slug in ('painterly-fantasy-woodland','royal-forge-complete'):
-                target=dest/(slug+'.zip')
+                target=Path(temp)/(slug+'.zip')
                 build_one_collection(slug,target)
                 self.assertEqual(target.read_bytes(),(dest/'demo'/target.name).read_bytes())
 

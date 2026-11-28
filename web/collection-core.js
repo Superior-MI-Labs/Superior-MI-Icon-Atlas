@@ -20,21 +20,207 @@
   function validValue(v){
     if(v?.kind==='quantity')return only(v,['kind','value','unit'])&&bounded(v.value,-1e9,1e9)&&unitId(v.unit);
     if(v?.kind==='dice')return only(v,['kind','count','sides','modifier','unit'])&&Number.isInteger(v.count)&&bounded(v.count,1,100)&&Number.isInteger(v.sides)&&bounded(v.sides,2,1000)&&Number.isInteger(v.modifier)&&bounded(v.modifier,-1000000,1000000)&&unitId(v.unit);
+    if(v?.kind==='proportion')return only(v,['kind','fraction','basis','rounding','unit','cap'])&&bounded(v.fraction,0,10)&&conceptId(v.basis)&&['none','floor','ceil','nearest'].includes(v.rounding)&&unitId(v.unit)&&(v.cap===undefined||bounded(v.cap,0,1e9));
     if(v?.kind==='boolean')return only(v,['kind','value'])&&typeof v.value==='boolean';
     return false;
   }
   function validMap(v,allowEmpty=false){
     return record(v)&&Object.keys(v).length<129&&(allowEmpty||Object.keys(v).length>0)&&Object.entries(v).every(([k,x])=>conceptId(k)&&validValue(x));
   }
+  const relationKinds=['represented_by','compatible_with','requires','produces','transforms_into','unlocks','repairs','equips_to','applies_effect','triggers','harvested_from','uses_animation','uses_effect','uses_audio','contains'];
+  const assetId=v=>typeof v==='string'&&v.length>0&&v.length<=256;
+  const digestId=v=>typeof v==='string'&&/^[a-f0-9]{64}$/.test(v);
+  function validRef(v){
+    return only(v,['kind','id','archive_sha256'])&&['concept','asset'].includes(v.kind)&&(v.kind==='concept'?conceptId(v.id):assetId(v.id))&&(v.archive_sha256===undefined||digestId(v.archive_sha256));
+  }
+  const uniqueIds=(v,max)=>Array.isArray(v)&&v.length>0&&v.length<=max&&new Set(v).size===v.length&&v.every(conceptId);
+  function validAxis(a){
+    if(a?.kind==='enum')return only(a,['kind','values','default'])&&uniqueIds(a.values,32)&&(a.default===undefined||a.values.includes(a.default));
+    if(a?.kind!=='ratio'||!only(a,['kind','current','maximum','bands'])||!conceptId(a.current)||!conceptId(a.maximum)||a.current===a.maximum||!Array.isArray(a.bands)||a.bands.length<1||a.bands.length>32)return false;
+    let prev=-1;const seen=new Set();
+    for(const band of a.bands){
+      if(!only(band,['max','state'])||!bounded(band.max,0,1)||band.max<=prev||!conceptId(band.state)||seen.has(band.state))return false;
+      prev=band.max;seen.add(band.state);
+    }
+    return prev===1;
+  }
+  const axisValues=a=>a.kind==='enum'?a.values:a.bands.map(b=>b.state);
+  // Bounded action vocabulary. These are instructions for a host transaction,
+  // not executable code, an inventory store, or an authorization decision.
+  const roleId=v=>['actor','subject','target'].includes(v);
+  const positiveCount=v=>Number.isInteger(v)&&bounded(v,1,1000000);
+  const itemRef=v=>only(v,['id','archive_sha256'])&&conceptId(v.id)&&(v.archive_sha256===undefined||digestId(v.archive_sha256));
+  const actionMagnitude=v=>validValue(v)&&v.kind!=='boolean'||only(v,['property'])&&conceptId(v.property);
+  const actionGuard=v=>v===undefined||only(v,['property','equals'])&&conceptId(v.property)&&typeof v.equals==='boolean';
+  const fixedMagnitude=v=>v.kind==='quantity'&&v.value>=0;
+  const effectMagnitude=v=>v.kind==='quantity'?v.value>=0:v.kind==='dice'?v.count+v.modifier>=0:v.kind==='proportion';
+  function validRequirement(r){
+    if(!roleId(r?.owner))return false;
+    switch(r.op){
+      case 'inventory.has':return only(r,['op','owner','item','quantity'])&&itemRef(r.item)&&positiveCount(r.quantity);
+      case 'state.is':return only(r,['op','owner','axis','value'])&&conceptId(r.axis)&&conceptId(r.value);
+      case 'capability.has':return only(r,['op','owner','capability'])&&conceptId(r.capability);
+      case 'stat.at_least':return only(r,['op','owner','stat','magnitude'])&&conceptId(r.stat)&&actionMagnitude(r.magnitude)&&(r.magnitude.property!==undefined||fixedMagnitude(r.magnitude));
+      default:return false;
+    }
+  }
+  function validOperation(r){
+    if(!actionGuard(r?.when))return false;
+    if(r?.op==='event.emit')return only(r,['op','event','when'])&&conceptId(r.event);
+    if(!roleId(r?.owner))return false;
+    switch(r.op){
+      case 'inventory.consume':case 'inventory.produce':return only(r,['op','owner','item','quantity','when'])&&itemRef(r.item)&&positiveCount(r.quantity);
+      case 'stat.consume':return only(r,['op','owner','stat','magnitude','when'])&&conceptId(r.stat)&&actionMagnitude(r.magnitude)&&(r.magnitude.property!==undefined||fixedMagnitude(r.magnitude)&&r.magnitude.value>0);
+      case 'stat.change':return only(r,['op','owner','stat','direction','magnitude','when'])&&conceptId(r.stat)&&['increase','decrease'].includes(r.direction)&&actionMagnitude(r.magnitude)&&(r.magnitude.property!==undefined||effectMagnitude(r.magnitude));
+      case 'state.set':return only(r,['op','owner','axis','value','when'])&&conceptId(r.axis)&&conceptId(r.value);
+      default:return false;
+    }
+  }
+  function validateActions(concept){
+    if(concept.actions===undefined)return;
+    if(!record(concept.actions)||!Object.keys(concept.actions).length||Object.keys(concept.actions).length>64)throw Error('Invalid concept actions '+concept.id);
+    for(const [id,a] of Object.entries(concept.actions)){
+      if(!conceptId(id)||!only(a,['description','kind','requirements','operations'])||!conceptId(a.kind)||(a.description!==undefined&&(typeof a.description!=='string'||a.description.length>1000))||(a.requirements!==undefined&&(!Array.isArray(a.requirements)||a.requirements.length>64||a.requirements.some(r=>!validRequirement(r))))||!Array.isArray(a.operations)||!a.operations.length||a.operations.length>64||a.operations.some(r=>!validOperation(r)))throw Error('Invalid concept action '+concept.id+'/'+id);
+      // A subject cannot directly set its own derived axis. Other roles are
+      // checked against their actual host instance contracts before commit.
+      for(const o of a.operations)if(o.op==='state.set'&&o.owner==='subject'){
+        const axis=concept.state_axes?.[o.axis];
+        if(!axis||axis.kind!=='enum'||!axis.values.includes(o.value))throw Error('Invalid subject state action '+concept.id+'/'+id);
+      }
+    }
+  }
+  function planConceptAction(registry,concept,id,contributors,rulesets=[],selections={},overrides={}){
+    validateConcepts([concept]);
+    if(!conceptId(id)||!Object.hasOwn(concept.actions||{},id))throw Error('Unknown concept action '+id);
+    const resolved=resolveContributors(registry,contributors,rulesets,selections,overrides);
+    if(!resolved.ok)return {status:'conflict',conflicts:resolved.conflicts,plan:null,candidates:resolved.candidates};
+    const action=concept.actions[id],missing=new Set();
+    function valueFor(key){
+      if(!Object.hasOwn(resolved.values,key)){missing.add(key);return undefined;}
+      return resolved.values[key].value;
+    }
+    function prepare(o){
+      if(o.when){
+        const v=valueFor(o.when.property);
+        if(v===undefined)return null;
+        if(v.kind!=='boolean')throw Error('Action guard requires boolean '+o.when.property);
+        if(v.value!==o.when.equals)return null;
+      }
+      const out=structuredClone(o);delete out.when;
+      if(o.magnitude?.property!==undefined){
+        const v=valueFor(o.magnitude.property);
+        if(v===undefined)return null;
+        out.magnitude=structuredClone(v);
+        out.source_property=o.magnitude.property;
+      }
+      if(out.magnitude){
+        const v=out.magnitude;
+        if(o.op==='stat.at_least'&&!fixedMagnitude(v)||o.op==='stat.consume'&&(!fixedMagnitude(v)||v.value<=0)||o.op==='stat.change'&&!effectMagnitude(v))throw Error('Incompatible action magnitude '+o.op);
+      }
+      return out;
+    }
+    const requirements=(action.requirements||[]).map(prepare).filter(Boolean);
+    const operations=action.operations.map(prepare).filter(Boolean);
+    if(missing.size)return {status:'missing',missing:[...missing].sort(),plan:null};
+    if(!operations.length)return {status:'empty',plan:null};
+    // Nothing here reads or mutates game state. Even a ready plan can fail
+    // permissions, inventory, cooldown, targets or stale-state checks at host.
+    return structuredClone({status:'planned',plan:{concept:concept.id,action:id,kind:action.kind,requirements,operations,properties:resolved.values},unusedModules:resolved.unusedModules});
+  }
+  function checkConceptExtensions(item){
+    if(item.capabilities!==undefined&&!uniqueIds(item.capabilities,64))throw Error('Invalid concept capabilities '+item.id);
+    if(item.relationships!==undefined){
+      const seen=new Set();
+      if(!Array.isArray(item.relationships)||item.relationships.length<1||item.relationships.length>128)throw Error('Invalid concept relationships '+item.id);
+      for(const relation of item.relationships){
+        if(!only(relation,['kind','target'])||!relationKinds.includes(relation.kind)||!validRef(relation.target))throw Error('Invalid concept relationship '+item.id);
+        const key=JSON.stringify(canonical(relation));
+        if(seen.has(key))throw Error('Duplicate concept relationship '+item.id);
+        seen.add(key);
+      }
+    }
+    if(item.state_axes!==undefined&&(!record(item.state_axes)||Object.keys(item.state_axes).length<1||Object.keys(item.state_axes).length>16||Object.entries(item.state_axes).some(([key,a])=>!conceptId(key)||!validAxis(a))))throw Error('Invalid concept state axes '+item.id);
+    validateActions(item);
+    validateDiscoveryOffers(item.discovery_offers);
+  }
+  function validateRepresentations(concepts,assets){
+    const byId=new Map((concepts||[]).map(c=>[c.id,c]));
+    for(const a of assets){
+      if(a.representation===undefined)continue;
+      const d=byId.get(a.concept_id),p=a.representation;
+      if(!d||!only(p,['role','when'])||!conceptId(p.role)||p.when!==undefined&&(!record(p.when)||Object.keys(p.when).length>16||Object.entries(p.when).some(([key,val])=>!Object.hasOwn(d.state_axes||{},key)||!axisValues(d.state_axes[key]).includes(val))))throw Error('Invalid representation '+a.id);
+    }
+  }
+  // Semantic edges are discoverable, not render dependencies. References may
+  // intentionally point outside the current archive; never chase them on load.
+  function conceptGraph(concepts,assets){
+    validateConcepts(concepts,assets);
+    validateRepresentations(concepts,assets);
+    const edges=[],edgeKeys=new Set(),byConcept=new Set((concepts||[]).map(c=>c.id)),byAsset=new Set(assets.map(a=>a.id)),reverse=new Map();
+    const append=(source,kind,target)=>{
+      const local=!target.archive_sha256&&(target.kind==='concept'?byConcept.has(target.id):byAsset.has(target.id));
+      const edgeKey=JSON.stringify([source.kind,source.id,kind,target.kind,target.id,target.archive_sha256??null]);
+      if(edgeKeys.has(edgeKey))return;
+      edgeKeys.add(edgeKey);
+      const e={source,kind,target,available_locally:local};
+      const key=JSON.stringify([target.kind,target.id,target.archive_sha256??null]);
+      if(!reverse.has(key))reverse.set(key,[]);
+      reverse.get(key).push(e);edges.push(e);
+    };
+    for(const c of concepts||[])for(const e of c.relationships||[])append({kind:'concept',id:c.id},e.kind,e.target);
+    for(const a of assets)if(byConcept.has(a.concept_id))append({kind:'concept',id:a.concept_id},'represented_by',{kind:'asset',id:a.id});
+    // Derive reverse links on demand; graph cycles are legal.
+    return structuredClone({edges,reverse:[...reverse].map(([key,links])=>({target:JSON.parse(key),links}))});
+  }
+  function projectStates(concept,instance={}){
+    validateConcepts([concept]);
+    if(!only(instance,['states','stats'])||(instance.states!==undefined&&!record(instance.states))||(instance.stats!==undefined&&!record(instance.stats)))throw Error('Invalid instance state');
+    const axes=concept.state_axes||{},values=new Map(),missing=[];
+    for(const [key,v] of Object.entries(instance.states||{})){
+      if(!Object.hasOwn(axes,key)||axes[key].kind!=='enum'||!axes[key].values.includes(v))throw Error('Invalid explicit state '+key);
+    }
+    for(const [key,a] of Object.entries(axes)){
+      if(a.kind==='enum'){
+        const v=Object.hasOwn(instance.states||{},key)?instance.states[key]:a.default;
+        if(v===undefined)missing.push(key);else values.set(key,v);
+      }else{
+        const stats=instance.stats||{};
+        if(!Object.hasOwn(stats,a.current)||!Object.hasOwn(stats,a.maximum)){missing.push(key);continue;}
+        const current=stats[a.current],maximum=stats[a.maximum];
+        if(!bounded(maximum,0,1e9)||maximum===0||!bounded(current,0,maximum))throw Error('Invalid ratio state '+key);
+        values.set(key,a.bands.find(b=>current/maximum<=b.max).state);
+      }
+    }
+    return {states:Object.fromEntries(values),missing};
+  }
+  // Host chooses role and optional style; declared selector subsets match only
+  // known state. Most specific match wins; ties are reported, not guessed.
+  function selectRepresentation(concept,assets,{role,style,instance={},allowFallback=false}={}){
+    validateConcepts([concept]);
+    if(!conceptId(role)||(style!==undefined&&typeof style!=='string')||typeof allowFallback!=='boolean')throw Error('Invalid representation request');
+    const available=assets.filter(a=>a.concept_id===concept.id);
+    validateRepresentations([concept],available);
+    const {states,missing}=projectStates(concept,instance);
+    const candidates=available.filter(a=>a.representation?.role===role&&(style===undefined||a.style===style));
+    const matches=candidates.filter(a=>Object.entries(a.representation.when||{}).every(([key,v])=>Object.hasOwn(states,key)&&states[key]===v));
+    // An unconditional base is a fallback when there are known/unknown state
+    // dimensions. A conditional match may leave orthogonal axes unspecified.
+    const specific=matches.filter(a=>Object.keys(a.representation.when||{}).length>0);
+    const pool=specific.length?specific:(!Object.keys(concept.state_axes||{}).length||allowFallback?matches:[]);
+    const best=pool.length?Math.max(...pool.map(a=>Object.keys(a.representation.when||{}).length)):-1;
+    const ids=pool.filter(a=>Object.keys(a.representation.when||{}).length===best).map(a=>a.id).sort();
+    return {status:ids.length>1?'ambiguous':ids.length===0?'unavailable':best===0&&Object.keys(concept.state_axes||{}).length?'fallback':'matched',asset:ids.length===1?ids[0]:null,candidates:ids,states,missing};
+  }
   function validateConcepts(items,assets=null){
     if(items===undefined)return;
     if(!Array.isArray(items)||items.length>3000)throw Error('Invalid concept collection');
     const ids=new Set(),linked=assets===null?null:new Set(assets.map(a=>a.concept_id));
     for(const item of items){
-      if(!only(item,['schema','id','name','description','license','physical','defaults'])||item.schema!=='smi-concept/1'||!conceptId(item.id)||!shortString(item.name,160)||!shortString(item.license,128)||ids.has(item.id))throw Error('Invalid or duplicate concept '+item?.id);
+      if(!only(item,['schema','id','name','description','license','physical','defaults','capabilities','relationships','state_axes','actions','discovery_offers'])||item.schema!=='smi-concept/1'||!conceptId(item.id)||!shortString(item.name,160)||!shortString(item.license,128)||ids.has(item.id))throw Error('Invalid or duplicate concept '+item?.id);
       if(item.description!==undefined&&(typeof item.description!=='string'||item.description.length>4000))throw Error('Invalid concept description '+item.id);
       if(item.physical!==undefined&&(!only(item.physical,['width_m','depth_m','height_m','mass_kg','capacity_l'])||!Object.keys(item.physical).length||Object.values(item.physical).some(v=>!bounded(v,0,1e9)||v===0)))throw Error('Invalid physical properties '+item.id);
       if(item.defaults!==undefined&&(!record(item.defaults)||!Object.keys(item.defaults).length||Object.keys(item.defaults).length>32||Object.entries(item.defaults).some(([k,v])=>!ruleId(k)||!validMap(v))))throw Error('Invalid ruleset defaults '+item.id);
+      checkConceptExtensions(item);
       if(linked&&!linked.has(item.id))throw Error('Unreferenced concept '+item.id);
       ids.add(item.id);
     }
@@ -59,6 +245,79 @@
       result.set(key,value);
     }
     return structuredClone(Object.fromEntries(result));
+  }
+  // Versioned property vocabulary and source planning; never evaluate damage,
+  // roll randomness, tick clocks or mutate instances in the content resolver.
+  const kinds=['quantity','dice','proportion','boolean'];
+  const boundedRecord=(v,max)=>record(v)&&Object.keys(v).length<=max;
+  const own=(v,k)=>Object.hasOwn(v,k);
+  const distinctKinds=v=>Array.isArray(v)&&v.length>0&&v.length<=kinds.length&&new Set(v).size===v.length&&v.every(k=>kinds.includes(k));
+  function validateRuleRegistry(registry){
+    if(!only(registry,['schema','id','properties','modules','bases'])||registry.schema!=='smi-ruleset-registry/1'||!ruleId(registry.id)||!boundedRecord(registry.properties,512)||!boundedRecord(registry.modules,128)||!boundedRecord(registry.bases,128))throw Error('Invalid ruleset registry');
+    for(const [key,p] of Object.entries(registry.properties)){
+      if(!conceptId(key)||!only(p,['unit','kinds','operation','min','max','integer'])||!distinctKinds(p.kinds)||!['base','add','multiply','policy'].includes(p.operation)||
+        (p.kinds.includes('boolean')?(p.kinds.length!==1||p.unit!==undefined||p.operation!=='policy'||p.min!==undefined||p.max!==undefined||p.integer!==undefined):(!unitId(p.unit)||p.operation==='policy'))||
+        (p.operation==='multiply'&&(p.unit!=='ratio'||p.kinds.some(k=>k!=='quantity')||!(p.min>=0)))||
+        (p.min!==undefined&&!bounded(p.min,-1e9,1e9))||(p.max!==undefined&&!bounded(p.max,-1e9,1e9))||(p.min!==undefined&&p.max!==undefined&&p.min>p.max)||(p.integer!==undefined&&typeof p.integer!=='boolean'))throw Error('Invalid property contract '+key);
+    }
+    for(const [key,unit] of Object.entries(registry.bases))if(!conceptId(key)||!unitId(unit))throw Error('Invalid proportion basis '+key);
+    for(const [id,module] of Object.entries(registry.modules)){
+      if(!ruleId(id)||!boundedRecord(module,128)||!Object.keys(module).length)throw Error('Invalid module '+id);
+      for(const [key,allowed] of Object.entries(module))if(!own(registry.properties,key)||!distinctKinds(allowed)||allowed.some(k=>!registry.properties[key].kinds.includes(k)))throw Error('Invalid module property '+id+'/'+key);
+    }
+  }
+  function checkRegisteredValue(registry,key,value,allowed){
+    if(!own(registry.properties,key)||!validValue(value))throw Error('Unknown or invalid property '+key);
+    const p=registry.properties[key];
+    if(!(allowed||p.kinds).includes(value.kind)||value.unit!==p.unit)throw Error('Incompatible type/unit '+key);
+    if(value.kind==='proportion'&&(!own(registry.bases,value.basis)||registry.bases[value.basis]!==value.unit))throw Error('Incompatible proportion basis '+key);
+    const range=(v)=>v>=(p.min??-1e9)&&v<=(p.max??1e9);
+    if(value.kind==='quantity'&&(!range(value.value)||(p.integer&&!Number.isInteger(value.value))))throw Error('Property out of range '+key);
+    if(value.kind==='dice'&&(!range(value.count+value.modifier)||!range(value.count*value.sides+value.modifier)))throw Error('Dice outcomes out of range '+key);
+    if(value.kind==='proportion'&&((p.integer&&value.rounding==='none')||(value.cap!==undefined&&(!range(value.cap)||(p.integer&&!Number.isInteger(value.cap))))))throw Error('Invalid proportion cap/rounding '+key);
+  }
+  // One candidate per source/module/property. Explicit selection or override
+  // resolves collisions; even equal values keep distinct source provenance.
+  // Modifier properties are returned as data, not automatically applied.
+  function resolveContributors(registry,contributors,rulesets=[],selections={},overrides={}){
+    validateRuleRegistry(registry);
+    if(!Array.isArray(contributors)||contributors.length>128||!Array.isArray(rulesets)||rulesets.length>32||new Set(rulesets).size!==rulesets.length||!boundedRecord(selections,128)||!validMap(overrides,true))throw Error('Invalid contributor resolution request');
+    for(const id of rulesets)if(!ruleId(id)||!own(registry.modules,id))throw Error('Unknown ruleset '+id);
+    const sources=new Set(),usedModules=new Set(),candidates=new Map();
+    for(const source of contributors){
+      if(!only(source,['id','role','concept','archive_sha256'])||!conceptId(source.id)||!conceptId(source.role)||sources.has(source.id)||(source.archive_sha256!==undefined&&(typeof source.archive_sha256!=='string'||!/^[a-f0-9]{64}$/.test(source.archive_sha256))))throw Error('Invalid or duplicate contributor '+source?.id);
+      sources.add(source.id);validateConcepts([source.concept]);
+      for(const id of rulesets){
+        const profile=source.concept.defaults?.[id];if(!profile)continue;
+        usedModules.add(id);
+        for(const [key,value] of Object.entries(profile)){
+          const module=registry.modules[id];
+          if(!own(module,key))throw Error('Unsupported module property '+id+'/'+key);
+          checkRegisteredValue(registry,key,value,module[key]);
+          if(!candidates.has(key))candidates.set(key,[]);
+          candidates.get(key).push({source:source.id,role:source.role,concept:source.concept.id,module:id,...(source.archive_sha256?{archive_sha256:source.archive_sha256}:{}),value});
+        }
+      }
+    }
+    if(candidates.size>128)throw Error('Too many resolved properties');
+    for(const [key,selection] of Object.entries(selections)){
+      if(!candidates.has(key)||!only(selection,['source','module'])||!conceptId(selection.source)||!ruleId(selection.module)||!candidates.get(key).some(x=>x.source===selection.source&&x.module===selection.module)||own(overrides,key))throw Error('Invalid or conflicting source selection '+key);
+    }
+    for(const [key,value] of Object.entries(overrides)){
+      if(!candidates.has(key))throw Error('Unknown override '+key);
+      checkRegisteredValue(registry,key,value);
+    }
+    const conflicts=[],resolved=[];
+    for(const key of [...candidates.keys()].sort()){
+      const options=candidates.get(key).sort((a,b)=>a.source<b.source?-1:a.source>b.source?1:a.module<b.module?-1:a.module>b.module?1:0);
+      const selection=own(selections,key)?selections[key]:undefined;
+      const chosen=selection?options.find(x=>x.source===selection.source&&x.module===selection.module):options.length===1?options[0]:null;
+      if(own(overrides,key))resolved.push({key,operation:registry.properties[key].operation,value:overrides[key],origin:{role:'application_override'}});
+      else if(chosen){const {value,...origin}=chosen;resolved.push({key,operation:registry.properties[key].operation,value,origin});}
+      else conflicts.push(key);
+    }
+    // No partially resolved plan is returned on ambiguity.
+    return structuredClone({ok:conflicts.length===0,conflicts,values:conflicts.length?null:Object.fromEntries(resolved.map(({key,...v})=>[key,v])),candidates:Object.fromEntries([...candidates.entries()].sort(([a],[b])=>a<b?-1:a>b?1:0)),unusedModules:rulesets.filter(id=>!usedModules.has(id)).sort()});
   }
   // Optional visual and surface profiles. Region remains the renderable payload;
   // material channels never create an implicit dependency or an executable rule.
@@ -99,6 +358,215 @@
       const color=p.length&&q.length?Math.max(0,1-(cost(p,q)+cost(q,p))/.7):null,style=source.style&&a.style?Number(source.style===a.style):null;
       return {id:a.id,score:(semantic*weights.semantic+(color??0)*weights.color+(style??0)*weights.style)/sum,semantic,color,style,shared};
     }).filter(r=>r.shared.length>0||weights.semantic===0&&r.color!==null).sort((a,b)=>b.score-a.score||(a.id<b.id?-1:a.id>b.id?1:0)).slice(0,limit);
+  }
+  /* Optional capability offers. Insert into the existing collection core.
+   * Pure metadata matching; never retrieve archives, mutate state or activate offers. */
+  const discoveryScopes = ['concept', 'representation', 'context'];
+  const discoveryPhysicalUnits = Object.freeze({width_m:'m',depth_m:'m',height_m:'m',mass_kg:'kg',capacity_l:'l'});
+  const discoveryNumber = x => bounded(x,-1e9,1e9);
+  // The existing slot contract accepts bounded names ending in /1, not rule IDs.
+  const discoveryInterfaceId = x => shortString(x,160)&&x.endsWith('/1');
+  function discoveryValue(x) {
+    // Reuse the canonical typed quantity/boolean validator. Enum is a known
+    // discovery/context value, not a new gameplay magnitude kind.
+    return (x?.kind==='boolean'||x?.kind==='quantity') ? validValue(x) : x?.kind==='enum' && only(x,['kind','value']) && conceptId(x.value);
+  }
+  function compileDiscoveryRequirements(requirements) {
+    if (!Array.isArray(requirements) || requirements.length < 1 || requirements.length > 32) throw Error('Invalid discovery requirements');
+    return requirements.map(r => {
+      if (!record(r) || !discoveryScopes.includes(r.scope)) throw Error('Invalid discovery requirement scope');
+      let group, predicate;
+      if (r.op === 'capability.has') {
+        if (!only(r,['scope','op','key']) || !conceptId(r.key)) throw Error('Invalid capability requirement');
+        group='capabilities'; predicate=v=>v===true;
+      } else if (r.op === 'interface.has') {
+        if (!only(r,['scope','op','key']) || r.scope!=='representation' || !discoveryInterfaceId(r.key)) throw Error('Invalid interface requirement');
+        group='interfaces'; predicate=v=>v===true;
+      } else if (r.op === 'fact.equals') {
+        if (!only(r,['scope','op','key','expected']) || !conceptId(r.key) || !discoveryValue(r.expected)) throw Error('Invalid equality requirement');
+        group='properties'; predicate=v=>v.kind===r.expected.kind && v.value===r.expected.value && (v.kind!=='quantity'||v.unit===r.expected.unit);
+      } else if (r.op === 'quantity.range') {
+        if (!only(r,['scope','op','key','unit','min','max']) || !conceptId(r.key) || !unitId(r.unit) || !discoveryNumber(r.min)||!discoveryNumber(r.max)||r.min>r.max) throw Error('Invalid quantity range');
+        group='properties'; predicate=v=>v.kind==='quantity'&&v.unit===r.unit&&v.value>=r.min&&v.value<=r.max;
+      } else throw Error('Unsupported discovery requirement');
+      return {requirement:structuredClone(r),group,predicate};
+    });
+  }
+  function validateDiscoveryOffers(offers) {
+    if (offers===undefined) return;
+    if (!record(offers) || Object.keys(offers).length<1 || Object.keys(offers).length>32) throw Error('Invalid discovery offers');
+    for (const [id,offer] of Object.entries(offers)) {
+      if (!conceptId(id)||!only(offer,['role','requirements'])||!conceptId(offer.role)) throw Error('Invalid discovery offer '+id);
+      compileDiscoveryRequirements(offer.requirements);
+    }
+  }
+  function discoveryFact(value,source) {return {value,source};}
+  function discoveryBlank() {return {capabilities:new Map(),interfaces:new Map(),properties:new Map()};}
+  function discoveryConceptFacts(concept,ref) {
+    const facts=discoveryBlank();
+    if (!concept) return facts;
+    if (concept.capabilities!==undefined && (!Array.isArray(concept.capabilities)||concept.capabilities.length>64||new Set(concept.capabilities).size!==concept.capabilities.length||!concept.capabilities.every(conceptId))) throw Error('Invalid catalog concept capabilities');
+    for(const key of concept.capabilities||[]) facts.capabilities.set(key,discoveryFact(true,{ref,path:'capabilities'}));
+    if(concept.physical!==undefined && (!record(concept.physical)||!Object.keys(concept.physical).length)) throw Error('Invalid physical projection');
+    for(const [key,value] of Object.entries(concept.physical||{})) {
+      if(!Object.hasOwn(discoveryPhysicalUnits,key)||!discoveryNumber(value)||value<=0) throw Error('Invalid physical projection '+key);
+      facts.properties.set('physical.'+key,discoveryFact({kind:'quantity',value,unit:discoveryPhysicalUnits[key]},{ref,path:'physical.'+key}));
+    }
+    return facts;
+  }
+  function discoveryAssetFacts(asset,ref) {
+    const facts=discoveryBlank();
+    if(asset.interfaces!==undefined&&(!Array.isArray(asset.interfaces)||asset.interfaces.length>256||new Set(asset.interfaces).size!==asset.interfaces.length||!asset.interfaces.every(discoveryInterfaceId))) throw Error('Invalid catalog interfaces');
+    for(const key of asset.interfaces||[]) facts.interfaces.set(key,discoveryFact(true,{ref,path:'interfaces'}));
+    return facts;
+  }
+  function discoveryContextFacts(context) {
+    const facts=discoveryBlank();
+    if(context===undefined)return facts;
+    if(!only(context,['capabilities','properties']))throw Error('Invalid query context');
+    for(const group of ['capabilities','properties']) {
+      if(!Object.hasOwn(context,group))continue;
+      const values=context[group];
+      if(!record(values)||Object.keys(values).length>128)throw Error('Invalid context group');
+      for(const [key,value] of Object.entries(values)) {
+        if(!conceptId(key)||(group==='capabilities'?typeof value!=='boolean':!discoveryValue(value)))throw Error('Invalid context fact');
+        facts[group].set(key,discoveryFact(structuredClone(value),{kind:'query-context',path:group+'.'+key}));
+      }
+    }
+    return facts;
+  }
+  function evaluateCompiledDiscovery(facts,compiled) {
+    const evidence=compiled.map(({requirement:r,group,predicate})=>{
+      const entry=facts[r.scope][group].get(r.key);
+      return {requirement:r,status:!entry?'unknown':predicate(entry.value)?'compatible':'incompatible',evidence:entry||null};
+    });
+    const summary=rows=>!rows.length?'not-required':rows.some(x=>x.status==='incompatible')?'incompatible':rows.some(x=>x.status==='unknown')?'unknown':'compatible';
+    return {status:summary(evidence),scopes:Object.fromEntries(discoveryScopes.map(s=>[s,summary(evidence.filter(e=>e.requirement.scope===s))])),evidence};
+  }
+  /* Catalog data is assumed to have passed existing publication validation.
+   * Locators are claims, not verified bytes. Caller must use the exact provider
+   * for retrieval; catalog_sha256 identifies the caller's catalog snapshot. */
+  function createDiscoveryIndex(catalog,options={}) {
+    return buildDiscoveryIndex(catalog,options,false);
+  }
+  // An isolated validated archive projection is not a public catalog or a
+  // downloadable locator. Its identity is the digest of the actual ZIP bytes.
+  function createArchiveDiscoveryIndex(pack,archive_sha256) {
+    if(!digestId(archive_sha256)||!record(pack)||!shortString(pack.pack_id,256)||!Array.isArray(pack.assets))throw Error('Invalid archive discovery input');
+    validateConcepts(pack.concepts,pack.assets);
+    validateRepresentations(pack.concepts||[],pack.assets);
+    const owner=pack.pack_id;
+    const projection={schema:'smi-public-catalog/1',packs:[{id:owner,archive_sha256}],
+      concepts:(pack.concepts||[]).map(c=>({...c,pack:owner})),
+      assets:pack.assets.map(a=>({...a,pack:owner,interfaces:a.implements||[]}))};
+    return buildDiscoveryIndex(projection,{catalog_sha256:archive_sha256},true);
+  }
+  function buildDiscoveryIndex(catalog,{catalog_sha256}={},localArchive=false) {
+    const identity=(kind,id,archive_sha256)=>({kind,id,archive_sha256});
+    const exactRef=r=>validRef(r)&&digestId(r.archive_sha256);
+    const key=r=>JSON.stringify([r.kind,r.id,r.archive_sha256]);
+    const cmp=(a,b)=>a<b?-1:a>b?1:0;
+    if(!record(catalog)||catalog.schema!=='smi-public-catalog/1'||!digestId(catalog_sha256)||!Array.isArray(catalog.packs)||!Array.isArray(catalog.assets)||catalog.assets.length>50000||catalog.packs.length>4096||!Array.isArray(catalog.concepts??[])||(catalog.concepts??[]).length>20000) throw Error('Invalid discovery catalog');
+    const packs=new Map(),concepts=new Map(),subjects=new Map(),offers=new Map(),byRole=new Map(),byKind={concept:[],asset:[]},unavailable=new Set();
+    for(const p of catalog.packs) {
+      if(!record(p)||typeof p.id!=='string'||!p.id||packs.has(p.id))throw Error('Duplicate or invalid pack');
+      if(p.zip!=null&&!p.archived&&(!digestId(p.archive_sha256)||p.immutable_zip!==undefined&&p.immutable_zip!=='archives/sha256/'+p.archive_sha256+'.zip'))throw Error('Invalid pack locator');
+      packs.set(p.id,p);
+    }
+    const packRef=(kind,id,owner)=>{
+      const p=packs.get(owner);if(!p||p.archived||(!localArchive&&!p.zip)||!digestId(p.archive_sha256))return null;
+      return identity(kind,id,p.archive_sha256);
+    };
+    function insertSubject(s) {const k=key(s.ref);if(subjects.has(k))throw Error('Duplicate subject');subjects.set(k,s);byKind[s.ref.kind].push(s);}
+    for(const original of catalog.concepts||[]) {
+      const c=structuredClone(original);
+      if(!record(c)||!conceptId(c.id)||concepts.has(c.id))throw Error('Duplicate or invalid concept');
+      const ref=packRef('concept',c.id,c.pack);if(!ref)throw Error('Unresolved concept owner');
+      validateDiscoveryOffers(c.discovery_offers);
+      const facts=discoveryConceptFacts(c,ref),subject={ref,concept:facts,representation:discoveryBlank(),entry:c};
+      concepts.set(c.id,{owner:c.pack,subject});insertSubject(subject);
+      for(const [id,offer] of Object.entries(c.discovery_offers||{})) {
+        if(offers.size>=20000)throw Error('Too many discovery offers');
+        const o={ref:{...ref,offer_id:id},role:offer.role,compiled:compileDiscoveryRequirements(offer.requirements)};
+        const k=JSON.stringify([key(ref),id]);offers.set(k,o);if(!byRole.has(o.role))byRole.set(o.role,[]);byRole.get(o.role).push(o);
+      }
+    }
+    const seenAssets=new Set();
+    for(const original of catalog.assets) {
+      const a=structuredClone(original);
+      if(!record(a)||typeof a.id!=='string'||!a.id||a.id.length>256||seenAssets.has(a.id))throw Error('Duplicate or invalid asset');seenAssets.add(a.id);
+      if(a.legacy||a.discovery==='hidden'){unavailable.add(a.id);continue;}
+      const ref=packRef('asset',a.id,a.pack);
+      if(!ref){unavailable.add(a.id);continue;}
+      const c=concepts.get(a.concept_id);
+      // An unresolved or cross-pack concept_id is a hint, not proof of identity.
+      const facts=c&&c.owner===a.pack?c.subject.concept:discoveryBlank();
+      insertSubject({ref,concept:facts,representation:discoveryAssetFacts(a,ref),entry:a});
+    }
+    for(const group of Object.values(byKind))group.sort((a,b)=>cmp(key(a.ref),key(b.ref)));
+    for(const group of byRole.values())group.sort((a,b)=>cmp(JSON.stringify(a.ref),JSON.stringify(b.ref)));
+    const allOffers=[...offers.values()].sort((a,b)=>cmp(JSON.stringify(a.ref),JSON.stringify(b.ref)));
+    function offerLookup(ref) {
+      if(!only(ref,['kind','id','archive_sha256','offer_id'])||ref.kind!=='concept'||!conceptId(ref.offer_id))throw Error('Invalid offer reference');
+      const {offer_id,...owner}=ref;if(!exactRef(owner))throw Error('Invalid offer owner');return offers.get(JSON.stringify([key(owner),offer_id]));
+    }
+    function queryInternal(request,ranking=null) {
+      if(!only(request,['direction','ref','role','target_kind','context','limit'])||!['subject','offer'].includes(request.direction)||!Number.isInteger(request.limit)||request.limit<1||request.limit>100||request.role!==undefined&&!conceptId(request.role))throw Error('Invalid discovery query');
+      const forward=request.direction==='subject';
+      if(forward&&!exactRef(request.ref))throw Error('Invalid subject reference');
+      if(!forward&&!['concept','asset'].includes(request.target_kind))throw Error('Reverse query requires target kind');
+      if(forward&&request.target_kind!==undefined)throw Error('Target kind only applies to reverse queries');
+      const anchor=forward?subjects.get(key(request.ref)):offerLookup(request.ref);
+      if(!anchor)throw Error('Unknown exact discovery identity');
+      const context=discoveryContextFacts(request.context),others=forward?(request.role?byRole.get(request.role)||[]:allOffers):byKind[request.target_kind];
+      const groups=Object.fromEntries(['compatible','unknown','incompatible'].map(s=>[s,{total:0,matches:[]} ]));
+      const eligible=ranking?[]:null;
+      const match=(subject,offer,result)=>({origin:'derived',relation:'compatible_with',role:offer.role,subject:subject.ref,offer:offer.ref,...result});
+      for(const item of others) {
+        const subject=forward?anchor:item,offer=forward?item:anchor;
+        if(!forward&&request.role&&offer.role!==request.role)continue;
+        if(subject.ref.archive_sha256===offer.ref.archive_sha256&&(subject.ref.kind==='concept'&&subject.ref.id===offer.ref.id||subject.entry.concept_id===offer.ref.id&&subject.entry.pack===concepts.get(offer.ref.id)?.owner))continue;
+        const result=evaluateCompiledDiscovery({concept:subject.concept,representation:subject.representation,context},offer.compiled);
+        const group=groups[result.status];group.total++;
+        if(eligible&&result.status==='compatible')eligible.push(subject);
+        if(group.matches.length<request.limit)group.matches.push(match(subject,offer,result));
+      }
+      if(ranking) {
+        const weights=ranking.weights;
+        const candidates=eligible.map(s=>s.entry);
+        // Ranking is an optional preference over every already-eligible candidate,
+        // not a hard filter and not a materialized all-pairs graph.
+        const scores=rankRelated(ranking.source.entry,candidates,{weights,limit:request.limit});
+        const eligibleById=new Map(eligible.map(s=>[s.ref.id,s]));
+        const chosen=new Set();const rows=[];
+        const add=(subject,preference)=>{
+          chosen.add(subject.ref.id);
+          rows.push({...match(subject,anchor,evaluateCompiledDiscovery({concept:subject.concept,representation:subject.representation,context},anchor.compiled)),preference});
+        };
+        for(const score of scores) {
+          const subject=eligibleById.get(score.id);
+          if(!subject)throw Error('Preference score for ineligible candidate');
+          const dimensions=[...(score.shared.length?['semantic']:[]),...(score.color!==null?['color']:[]),...(score.style!==null?['style']:[])];
+          const coverage=dimensions.reduce((n,k)=>n+weights[k],0)/(weights.semantic+weights.color+weights.style);
+          add(subject,{...score,dimensions_with_evidence:dimensions,evidence_weight_fraction:coverage});
+        }
+        for(const subject of eligible) {if(rows.length>=request.limit)break;if(!chosen.has(subject.ref.id))add(subject,null);}
+        groups.compatible.matches=rows;
+      }
+      return structuredClone({...(localArchive?{archive_sha256:catalog_sha256,scope:'local-archive'}:{catalog_sha256}),contract:'smi-capability-discovery/1',...(ranking?{ranking_scope:'all-compatible-candidates'}:{}),groups});
+    }
+    function query(request) { return queryInternal(request); }
+    /* Reuse the current ranker; missing similarity signals do not disqualify an
+     * eligible candidate. The original score is retained with explicit evidence. */
+    function rankEligible(request,source,options={}) {
+      if(request?.direction!=='offer'||request.target_kind!=='asset'||!exactRef(source)||source.kind!=='asset'||!only(options,['weights']))throw Error('Invalid eligible ranking request');
+      const weights=options.weights??{semantic:0.65,color:0.25,style:0.10};
+      const names=['semantic','color','style'];
+      if(!only(weights,names)||!names.every(k=>Number.isFinite(weights[k])&&weights[k]>=0)||!Number.isFinite(names.reduce((n,k)=>n+weights[k],0))||names.reduce((n,k)=>n+weights[k],0)<=0)throw Error('Invalid preference weights');
+      const src=subjects.get(key(source));if(!src)throw Error('Unknown exact ranking source');
+      return queryInternal(request,{source:src,weights:structuredClone(weights)});
+    }
+    return Object.freeze({query,rankEligible,summary:()=>({subjects:subjects.size,offers:offers.size,excluded_assets:unavailable.size,...(localArchive?{archive_sha256:catalog_sha256,scope:'local-archive'}:{catalog_sha256})})});
   }
   function resolveCollection(index,definitions,fallbackName='Imported collection'){
     // definitions: [{path,pack}] where every path is archive-relative and distinct.
@@ -175,8 +643,8 @@
     }
     if(assets.length>MAX_ASSETS||Object.keys(textures).length>MAX_TEXTURES)throw Error('Collection exceeds asset or texture limit');
     // Legacy concept_id links may remain unresolved; authored definitions may not be orphaned.
-    const linked=new Set(assets.map(a=>a.concept_id));
-    for(const item of concepts)if(!linked.has(item.id))throw Error('Unreferenced concept '+item.id);
+    validateConcepts(concepts,assets);
+    validateRepresentations(concepts,assets);
     const exists=id=>assetIds.has(id);
     for(const profile of previewProfiles)if(!exists(profile.asset))throw Error('Unknown preview profile asset '+profile.asset);
     for(const profile of statProfiles)if(!exists(profile.asset))throw Error('Unknown stat profile asset '+profile.asset);
@@ -264,6 +732,7 @@
     const conceptLinks=new Set(chosen.map(a=>a.concept_id));
     const definitions=concepts.filter(item=>conceptLinks.has(item.id)).map(item=>{const copy=structuredClone(item);delete copy.ownerBag;return copy;});
     validateConcepts(definitions,chosen);
+    validateRepresentations(definitions,chosen);
     const licenses=new Set([...chosen.map(a=>a.license||'UNSPECIFIED'),...definitions.map(item=>item.license)]);
     const manifest={schema:'smi-visual-pack/1',pack_id:packId,version,description:'Portable asset: '+rootId,
       license:licenses.size===1?[...licenses][0]:'MIXED',interfaces,textures,assets:chosen,
@@ -281,5 +750,5 @@
     if(licenseText&&licenses.has('Apache-2.0')){const notice=await licenseText();if(notice)zip.file('LICENSES/Apache-2.0.txt',notice);}
     return manifest;
   }
-  return Object.freeze({validateMaterialProfiles,rankRelated,safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,resolveDefaults,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
+  return Object.freeze({validateDiscoveryOffers,createDiscoveryIndex,createArchiveDiscoveryIndex,validateMaterialProfiles,rankRelated,safePath,join,resolveCollection,dependencyClosure,writeSelection,equivalent,sameAsset,sameBytes,validateConcepts,validateRepresentations,conceptGraph,projectStates,selectRepresentation,planConceptAction,resolveDefaults,validateRuleRegistry,resolveContributors,MAX_PACKS,MAX_ASSETS,MAX_TEXTURES});
 });

@@ -1,0 +1,10 @@
+'use strict';
+const assert=require('node:assert/strict'),Search=require('../web/public-search.js');
+const sword={id:'example.art',name:'Blade',concept_name:'Iron longsword',concept_capabilities:['repairable'],concept_rulesets:['smi.rules.d20/1'],representation:{role:'inventory'},capabilities:['animated']};
+assert.equal(Search.results([sword],{query:'repairable'})[0].id,sword.id);
+assert.equal(Search.results([sword],{query:'iron longsword'})[0].id,sword.id);
+assert.equal(Search.results([sword],{query:'d20'})[0].id,sword.id);
+assert.equal(Search.results([sword],{query:'inventory'})[0].id,sword.id);
+assert.equal(Search.results([sword],{capability:'repairable'}).length,0);
+assert.equal(Search.results([sword],{capability:'animated'}).length,1);
+console.log('Concept discovery without false visual capabilities PASS');

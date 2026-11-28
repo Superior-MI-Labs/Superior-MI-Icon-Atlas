@@ -1,0 +1,499 @@
+[
+  {
+    "name": "capabilities",
+    "valid": true,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "typed interface",
+    "valid": true,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "representation",
+            "op": "interface.has",
+            "key": "smi.blade/1"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "existing interface naming convention",
+    "valid": true,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "representation",
+            "op": "interface.has",
+            "key": "Legacy.Interface/1"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "enum equality",
+    "valid": true,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "context",
+            "op": "fact.equals",
+            "key": "season",
+            "expected": {
+              "kind": "enum",
+              "value": "winter"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "boolean false",
+    "valid": true,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "context",
+            "op": "fact.equals",
+            "key": "enabled",
+            "expected": {
+              "kind": "boolean",
+              "value": false
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "zero quantity",
+    "valid": true,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "concept",
+            "op": "quantity.range",
+            "key": "physical.width_m",
+            "min": 0,
+            "max": 0,
+            "unit": "m"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "empty map",
+    "valid": false,
+    "offers": {}
+  },
+  {
+    "name": "empty requirements",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": []
+      }
+    }
+  },
+  {
+    "name": "oversized requirements",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          },
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "unknown operator",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "concept",
+            "op": "exec",
+            "key": "x"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "wrong interface scope",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "concept",
+            "op": "interface.has",
+            "key": "smi.blade/1"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "unversioned interface",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "representation",
+            "op": "interface.has",
+            "key": "smi.blade"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "interface trailing newline",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "representation",
+            "op": "interface.has",
+            "key": "smi.blade/1\n"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "bad range order",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "concept",
+            "op": "quantity.range",
+            "key": "physical.width_m",
+            "min": 5,
+            "max": 2,
+            "unit": "m"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "wrong unit format",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "concept",
+            "op": "quantity.range",
+            "key": "physical.width_m",
+            "min": 1,
+            "max": 2,
+            "unit": "M"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "dice equality unsupported",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "context",
+            "op": "fact.equals",
+            "key": "damage",
+            "expected": {
+              "kind": "dice",
+              "count": 1,
+              "sides": 8,
+              "modifier": 0,
+              "unit": "hp"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "bad boolean type",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "context",
+            "op": "fact.equals",
+            "key": "enabled",
+            "expected": {
+              "kind": "boolean",
+              "value": 0
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "extra offer field",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          }
+        ],
+        "script": "bad"
+      }
+    }
+  },
+  {
+    "name": "bad role",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "Bad Role",
+        "requirements": [
+          {
+            "scope": "concept",
+            "op": "capability.has",
+            "key": "enchantable"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "bad scope",
+    "valid": false,
+    "offers": {
+      "apply": {
+        "role": "enhancement",
+        "requirements": [
+          {
+            "scope": "host",
+            "op": "capability.has",
+            "key": "enchantable"
+          }
+        ]
+      }
+    }
+  }
+]

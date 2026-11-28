@@ -1,7 +1,7 @@
 {
   "schema": "smi-visual-pack/1",
   "pack_id": "smi.hud.royalforge02.resources",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Royal Forge fantasy RPG resource systems: bars, partial hearts, pips, orbs, vials, boss bars, and discrete radial gauges. Original vector artwork.",
   "license": "CC0-1.0",
   "textures": {
@@ -18005,7 +18005,8 @@
           ],
           "slot": "emblem"
         }
-      ]
+      ],
+      "concept_id": "smi.hud.royalforge02.widget.resource-meter.concept"
     },
     {
       "id": "smi.hud.royalforge02.hud.adventurer",
@@ -18543,6 +18544,60 @@
             "shield": 100,
             "charges": 6
           }
+        }
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "schema": "smi-concept/1",
+      "id": "smi.hud.royalforge02.widget.resource-meter.concept",
+      "name": "Royal Forge Configurable Resource Meter",
+      "license": "CC0-1.0",
+      "description": "Discover candidates for the existing authored meter interfaces. Existing slot options and geometry remain authoritative; a match does not expand the active option list or bind host resources.",
+      "capabilities": [
+        "configurable-resource-meter"
+      ],
+      "discovery_offers": {
+        "base": {
+          "role": "slot.base.candidate",
+          "requirements": [
+            {
+              "scope": "representation",
+              "op": "interface.has",
+              "key": "smi.hud.royalforge02.interface.bar.base/1"
+            }
+          ]
+        },
+        "rim": {
+          "role": "slot.rim.candidate",
+          "requirements": [
+            {
+              "scope": "representation",
+              "op": "interface.has",
+              "key": "smi.hud.royalforge02.interface.bar.rim/1"
+            }
+          ]
+        },
+        "fill": {
+          "role": "slot.fill.candidate",
+          "requirements": [
+            {
+              "scope": "representation",
+              "op": "interface.has",
+              "key": "smi.hud.royalforge02.interface.bar.fill/1"
+            }
+          ]
+        },
+        "emblem": {
+          "role": "slot.emblem.candidate",
+          "requirements": [
+            {
+              "scope": "representation",
+              "op": "interface.has",
+              "key": "smi.hud.royalforge02.interface.bar.emblem/1"
+            }
+          ]
         }
       }
     }
