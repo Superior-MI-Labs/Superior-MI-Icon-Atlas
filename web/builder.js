@@ -112,6 +112,7 @@
     const statProblems=Stats.validate(pack.stat_profiles,id=>ids.get(id)||library.get(id));
     if(statProblems.length)throw Error('Invalid stat profile: '+statProblems[0]);
     Collections.validateConcepts(pack.concepts,pack.assets);
+    Collections.validateRepresentations(pack.concepts,pack.assets);
     for(const [profiles,known] of [[pack.preview_profiles||[],previewProfiles],[pack.stat_profiles||[],statProfiles],[pack.concepts||[],concepts]]){
       for(const p of profiles)if(known.has(p.id)){
         const {ownerBag:previousOwner,...old}=known.get(p.id);

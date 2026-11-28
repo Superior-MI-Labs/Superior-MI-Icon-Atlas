@@ -36,3 +36,7 @@ The shared collection resolver preserves declared concepts across multiple manif
 
 ## Delivery order
 First contract and import/export tests; then provider retention and registry; then transaction/relationship slice; then spatial pilot and host qualification. Keep full repository CI and existing asset QA. Each milestone gets one cohesive tested candidate; do not bulk-add speculative metadata. The first milestone does NOT implement gameplay, a public concept index, recipe execution, geometry ingestion, or automatic Hex World bindings.
+
+## Patch C/D candidate: semantic graph and state projection
+
+See [content graph](CONTENT-GRAPH.md). Typed semantic links and reverse discovery, concept summaries, independent enum/ratio state axes and role-based visual selection reuse the existing collection core. This is not yet a cross-archive loader, gameplay transaction engine, or spatial assembly format. Source definitions stay canonical, and missing art does not invalidate gameplay state.

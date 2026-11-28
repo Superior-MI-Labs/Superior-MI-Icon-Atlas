@@ -178,3 +178,7 @@ Pack-level `concepts` are linked by the existing asset `concept_id`. They contai
 ### Typed ruleset registry and contributor resolution
 
 The optional `proportion` concept value specifies `fraction`, named `basis`, `rounding`, `unit` and optional `cap`. See [ruleset registry and source selection](RULESET-RESOLUTION.md). `resolveContributors` is an explicit, pure host-facing planner; it does not execute gameplay or silently combine overlapping values. The core registry is published at `rulesets/smi-core-v1.json`.
+
+### Optional concept graph and state projection
+
+See [content graph and state projection](CONTENT-GRAPH.md) for optional `capabilities`, `relationships`, `state_axes` and per-asset `representation` metadata. Semantic edges never extend render dependency closure automatically.

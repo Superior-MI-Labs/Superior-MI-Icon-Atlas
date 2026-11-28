@@ -747,6 +747,31 @@
               "maxLength": 128
             }
           }
+        },
+        "representation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "role": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+            },
+            "when": {
+              "type": "object",
+              "maxProperties": 16,
+              "propertyNames": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+              },
+              "additionalProperties": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+              }
+            }
+          },
+          "required": [
+            "role"
+          ]
         }
       },
       "allOf": [
@@ -1689,6 +1714,164 @@
             "additionalProperties": {
               "$ref": "#/$defs/concept_value"
             }
+          }
+        },
+        "capabilities": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+          }
+        },
+        "relationships": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 128,
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "enum": [
+                  "represented_by",
+                  "compatible_with",
+                  "requires",
+                  "produces",
+                  "transforms_into",
+                  "unlocks",
+                  "repairs",
+                  "equips_to",
+                  "applies_effect",
+                  "triggers",
+                  "harvested_from",
+                  "uses_animation",
+                  "uses_effect",
+                  "uses_audio",
+                  "contains"
+                ]
+              },
+              "target": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      "concept",
+                      "asset"
+                    ]
+                  },
+                  "id": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 256
+                  },
+                  "archive_sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                },
+                "required": [
+                  "kind",
+                  "id"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "target"
+            ]
+          }
+        },
+        "state_axes": {
+          "type": "object",
+          "minProperties": 1,
+          "maxProperties": 16,
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+          },
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "kind": {
+                    "const": "enum"
+                  },
+                  "values": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 32,
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                    }
+                  },
+                  "default": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                  }
+                },
+                "required": [
+                  "kind",
+                  "values"
+                ]
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "kind": {
+                    "const": "ratio"
+                  },
+                  "current": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                  },
+                  "maximum": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                  },
+                  "bands": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 32,
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "max": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1
+                        },
+                        "state": {
+                          "type": "string",
+                          "pattern": "^[a-z][a-z0-9_.-]{0,127}$"
+                        }
+                      },
+                      "required": [
+                        "max",
+                        "state"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "kind",
+                  "current",
+                  "maximum",
+                  "bands"
+                ]
+              }
+            ]
           }
         }
       }

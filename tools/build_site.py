@@ -238,7 +238,7 @@ for(const texture of Object.values(pack.textures)){
     inventory=audit_assets(ROOT)
     if inventory['errors']:raise ValueError('Asset inventory: '+'; '.join(inventory['errors'][:5]))
     (dest/'asset-inventory.json').write_text(json.dumps(inventory,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    public_assets=[];public_packs=[];seen_ids=set();seen_paths=set();browse_defaults={}
+    public_assets=[];public_packs=[];public_concepts={};seen_ids=set();seen_paths=set();browse_defaults={}
     if (dest/'previews').exists():shutil.rmtree(dest/'previews')
     for record in publication['collections']:
         folder=Path(record['path']); full=ROOT/folder
@@ -277,6 +277,16 @@ for(const texture of Object.values(pack.textures)){
         if cover:pubpack['cover_asset']=cover
         lookup={a['id']:a for pack in runtime_packs for a in pack['assets']};cap_memo={}
         for pack in manifests:
+            for concept in pack.get('concepts', []):
+                cid=concept['id']
+                if cid in public_concepts:
+                    raise ValueError('Duplicate published concept owner: '+cid)
+                public_concepts[cid]={'id':cid,'name':concept['name'],'pack':pack_name,
+                    'license':concept['license'],'description':concept.get('description',''),
+                    'capabilities':concept.get('capabilities',[]),
+                    'rulesets':sorted(concept.get('defaults',{})),
+                    'state_axes':sorted(concept.get('state_axes',{})),
+                    'relationships':concept.get('relationships',[])}
             # Inherit style only when every styled source region agrees.
             region_styles={a['style'] for a in pack['assets'] if a['kind']=='region' and a.get('style')}
             inherited_style=next(iter(region_styles)) if len(region_styles)==1 else ''
@@ -289,6 +299,7 @@ for(const texture of Object.values(pack.textures)){
                 public_assets.append({
                     'capabilities':capabilities,'interfaces':sorted(a.get('implements',[])),
                     **({'spatial':a['spatial']} if 'spatial' in a else {}),
+                    **({'representation':a['representation']} if 'representation' in a else {}),
                     'slot_interfaces':sorted({v['accepts'] for v in a.get('slots',{}).values()}),
                     'id':ident,'name':a.get('name',ident.rsplit('.',1)[-1]),
                     **({'thumbnail':thumbnails[ident]} if ident in thumbnails else {}),
@@ -332,7 +343,7 @@ for(const texture of Object.values(pack.textures)){
     browse=project_browse(public_assets,public_packs,browse_defaults,load_taxonomy())
     public_assets.sort(key=lambda a:(a['pack'],a['id']))
     (dest/'public-catalog.json').write_text(json.dumps({'schema':'smi-public-catalog/1',
-        'assets':public_assets,'packs':public_packs,'browse':browse,
+        'assets':public_assets,'packs':public_packs,'concepts':sorted(public_concepts.values(),key=lambda c:c['id']),'browse':browse,
         'synonyms':m.get('search',{}).get('synonyms',{}),'styles':m.get('styles',{}),
         'approved_count':approved_count,'discoverable_count':sum(not a.get('legacy') and a.get('discovery','standalone')=='standalone' for a in public_assets),'legacy_count':len(m['icons'])},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
